@@ -28,10 +28,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Documentation.** `REPRISE.md` et ce journal.
 - **Lecture fluide.** Effets lourds réservés à l'export, recadrage quand un personnage se lève, lampe de chevet, plans côte à côte sur le lit.
 - **Charte d'écriture.** `CHARTE_SCRIPTS.md`, utilisable par n'importe qui. Premières phrases cultes dans les épisodes 1 et 3.
+- **Identité et parcours.** Base du site de l'auteur (Fraunces, Inter, fond sombre, filets), jaune de Nox comme couleur d'action. Choisir un épisode l'ouvre et le lance ; les réglages sont repliés dans la fiche ; un seul bouton crée la vidéo. Chaque script porte un `# Pitch :`.
 
 ## À faire
 
-1. Recevoir la charte graphique officielle et remplir le bloc `CHARTE GRAPHIQUE`.
+1. Faire valider l'identité du Studio (bloc `CHARTE GRAPHIQUE`).
 2. Préciser l'expérience voulue dans le Studio (l'auteur reviendra dessus).
 3. Améliorer le modèle de Tobi : visage, tissu du sweat, peau.
 4. Améliorer les éléments de la chambre : ordinateurs, placards qui s'ouvrent, textures.

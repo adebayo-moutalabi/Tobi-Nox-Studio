@@ -1,4 +1,5 @@
 # JUSTE UN SITE VITRINE
+# Pitch : Un site à 150 € devient un chatbot, une appli et 94 heures de travail.
 # Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
 
 AMBIANCE soir

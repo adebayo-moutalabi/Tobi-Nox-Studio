@@ -1,4 +1,5 @@
 # 42 VIDÉOS BUSINESS
+# Pitch : Tobi a regardé 42 vidéos sur la discipline. C'est tout ce qu'il a fait.
 # Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
 
 AMBIANCE soir

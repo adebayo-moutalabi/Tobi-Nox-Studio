@@ -1,13 +1,13 @@
 <title>{{TITLE}}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
 <style>
 /* Scène plein cadre, régie à droite comme un pupitre d'animation ; en colonne sur téléphone. */
 :root {
   --bg: #e4e3df; --panel: #f4f3ef; --ink: #27272a; --muted: #66645e; --line: #d2d0c9;
   --accent: #e8a33d; --accent-ink: #2a2015; --chip: #e9e7e1; --chip-hover: #dedbd2; --sole: #b95c1c;
-  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
   --body: "Figtree", "Segoe UI", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
@@ -61,7 +61,7 @@ button.main:hover { background: var(--accent); filter: brightness(1.06); }
 .panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel[data-tab="film"] > .back, .panel:not([data-tab]) > .atelier, .panel:not([data-tab]) > .back { display: none; }
 .panel[data-tab="jouer"] > #storyBox { display: none; }
 .app:has(.panel[data-tab="film"]) .hint, .app:has(.panel[data-tab="film"]) .views { display: none; }
-.cap { position: absolute; left: 4%; right: 4%; top: 75.5%; transform: translateY(-50%); text-align: center; font: 800 2.9cqh "Bricolage Grotesque", "Trebuchet MS", sans-serif; color: #fff; pointer-events: none; text-shadow: 0 0 .22em #08071a, 0 0 .22em #08071a; }
+.cap { position: absolute; left: 4%; right: 4%; top: 75.5%; transform: translateY(-50%); text-align: center; font: 800 2.9cqh "Inter", "Segoe UI", sans-serif; color: #fff; pointer-events: none; text-shadow: 0 0 .22em #08071a, 0 0 .22em #08071a; }
 .cap b { font-weight: 800; color: #17132c; background: var(--w, #ffd27a); border-radius: .2em; padding: .03em .2em; text-shadow: none; }
 .curtain { position: absolute; inset: 0; background: #0e0f12; opacity: 0; pointer-events: none; }
 select { font: inherit; font-size: 13px; padding: 6px; border-radius: 7px; border: 1px solid var(--line); background: var(--chip); color: var(--ink); }
@@ -93,116 +93,103 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
   .hint { display: none; }
 }
 
-/* Style inspiré des interfaces Apple : groupes arrondis, interrupteurs, contrôles segmentés, ressorts doux */
-:root { --spring: cubic-bezier(.32, .72, 0, 1); --tint: #0a84ff; --group: #fff; --hair: rgba(60, 60, 67, .16); --panel: #f2f2f7; --ink: #1c1c1e; --muted: #6e6e73; --chip: rgba(118, 118, 128, .12); --chip-hover: rgba(118, 118, 128, .2); --line: rgba(60, 60, 67, .16); --accent: var(--tint); --accent-ink: #fff; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --group: #1c1c1e; --hair: rgba(84, 84, 88, .55); --panel: #000; --ink: #f5f5f7; --muted: #98989d; --chip: rgba(118, 118, 128, .24); --chip-hover: rgba(118, 118, 128, .34); --line: rgba(84, 84, 88, .55); } }
-:root[data-theme="dark"] { --group: #1c1c1e; --hair: rgba(84, 84, 88, .55); --panel: #000; --ink: #f5f5f7; --muted: #98989d; --chip: rgba(118, 118, 128, .24); --chip-hover: rgba(118, 118, 128, .34); --line: rgba(84, 84, 88, .55); }
-body, button, select, input { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-h1 { font-family: inherit; font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
-h2 { font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
-.panel { background: var(--panel); border-left: 0; gap: 16px; }
-.sub { font-size: 13px; }
-button { border-radius: 10px; font-weight: 500; font-size: 14px; padding: 8px 12px; background: var(--chip); transition: transform .28s var(--spring), background .2s, opacity .2s, filter .2s; }
-button:active:not(:disabled) { transform: scale(.965); transition-duration: .08s; }
-button.main { width: 100%; background: var(--tint); color: #fff; font-size: 15px; font-weight: 600; padding: 12px; border-radius: 12px; }
-button.main:hover { background: var(--tint); filter: brightness(1.08); }
-button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid color-mix(in srgb, var(--tint) 45%, transparent); outline-offset: 1px; }
-.step { background: var(--group); border: 0; border-radius: 14px; padding: 14px; gap: 10px; box-shadow: 0 .5px 0 var(--hair); transition: transform .4s var(--spring); }
-.step h2 span { background: var(--chip); color: var(--ink); font-weight: 600; transition: background .3s, color .3s; }
-.step.done h2 span { background: #30d158; color: #fff; }
-.step select, input[type="password"] { appearance: none; -webkit-appearance: none; font-size: 15px; padding: 10px 34px 10px 12px; border: 0; border-radius: 10px; background: var(--chip); color: var(--ink); }
-.step select { background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%, var(--muted) 62%, transparent 62%), linear-gradient(-45deg, transparent 50%, var(--muted) 50%, var(--muted) 62%, transparent 62%); background-size: 7px 7px; background-position: right 17px center, right 12px center; background-repeat: no-repeat; }
-input[type="password"] { padding-right: 12px; }
-.row button:not(.main) { padding-inline: 16px; border-radius: 12px; }
-.seg { display: flex; gap: 2px; padding: 2px; border-radius: 10px; background: var(--chip); }
-.seg button { flex: 1; min-width: 0; padding: 6px 8px; font-size: 13px; font-weight: 500; background: transparent; border-radius: 8px; transition: background .28s var(--spring), box-shadow .28s var(--spring), transform .28s var(--spring); }
-.seg button[aria-pressed="true"], .tabs button[aria-pressed="true"] { background: var(--group); color: var(--ink); font-weight: 600; box-shadow: 0 2px 6px rgba(0, 0, 0, .14), 0 0 0 .5px rgba(0, 0, 0, .05); }
-.stack { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-.sw { display: flex !important; justify-content: space-between; align-items: center; font-size: 14px; padding: 3px 0; }
-.sw input { appearance: none; -webkit-appearance: none; position: relative; width: 46px !important; height: 28px !important; flex: none; margin: 0; border-radius: 14px; background: var(--chip); cursor: pointer; transition: background .25s; }
-.sw input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, .25); transition: transform .3s var(--spring); }
-.sw input:checked { background: #30d158; }
-.sw input:checked::after { transform: translateX(18px); }
-.file { display: flex !important; justify-content: center; padding: 9px 12px; border-radius: 10px; background: var(--chip); font-size: 14px; font-weight: 500; cursor: pointer; transition: background .2s, transform .28s var(--spring); }
-.file:hover { background: var(--chip-hover); }
-.file:active { transform: scale(.975); }
-.file input { position: absolute; width: 1px !important; height: 1px !important; opacity: 0; }
-summary { list-style: none; display: flex; align-items: center; justify-content: space-between; color: var(--tint); font-size: 14px; font-weight: 500; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: ""; width: 7px; height: 7px; margin-right: 4px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .3s var(--spring); }
-details[open] > summary::after { transform: rotate(45deg); }
-details::details-content { block-size: 0; overflow: clip; opacity: 0; transition: block-size .34s var(--spring), opacity .24s, content-visibility .34s allow-discrete; }
-details[open]::details-content { block-size: auto; opacity: 1; }
-@supports (interpolate-size: allow-keywords) { :root { interpolate-size: allow-keywords; } }
-.bar { height: 4px; border-radius: 2px; background: var(--chip); overflow: hidden; }
-.bar i { display: block; height: 100%; width: 2%; border-radius: 2px; background: var(--tint); transition: width .5s var(--spring); }
-#elLines button { border-radius: 8px; }
-.voice { flex: 1; justify-content: space-between; font-size: 14px; }
-.panel > section:not(#storyBox) { background: var(--group); border-radius: 14px; padding: 14px; }
-.panel[data-tab] { animation: rise .4s var(--spring); }
-@keyframes rise { from { opacity: .4; transform: translateY(6px); } }
-@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
-
 /* ===== CHARTE GRAPHIQUE =====
-   Toute l'identité de l'interface est ici. Pour appliquer la charte officielle, ne changer que ces valeurs.
-   Couleurs provisoires, tirées de l'univers de la série en attendant la charte. */
+   Toute l'identité est ici. Base : le site adebayo-moutalabi.github.io (fond, polices, filets, boutons ronds).
+   Couleur d'action : le jaune de Nox. Pour changer d'identité, ne modifier que ce bloc. */
 :root {
-  --brand-night: #0b0a18;      /* fond */
-  --brand-surface: #16152b;    /* panneaux */
-  --brand-line: rgba(255, 255, 255, .1);
-  --brand-text: #f5f2ea;
-  --brand-soft: #9b99c9;
-  --brand-tobi: #ffb26b;       /* couleur d'action */
-  --brand-nox: #8feaff;        /* couleur de mise en avant */
-  --brand-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-  --brand-body: "Figtree", -apple-system, "Segoe UI", sans-serif;
+  --brand-ground: #0d0e10;
+  --brand-surface: #16181c;
+  --brand-raise: #1e2126;
+  --brand-ink: #f4f1ec;
+  --brand-soft: #a8a49c;
+  --brand-hair: rgba(244, 241, 236, .09);
+  --brand-nox: #f2b92e;        /* jaune de Nox */
+  --brand-on-nox: #15171a;
+  --brand-ok: #3fd18f;
+  --brand-display: "Fraunces", Georgia, serif;
+  --brand-body: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --ease: cubic-bezier(.22, 1, .36, 1);
 }
 /* ===== fin de la charte ===== */
-:root, :root[data-theme="dark"], :root[data-theme="light"] { --tint: var(--brand-tobi); --group: var(--brand-surface); --panel: var(--brand-night); --bg: var(--brand-night); --ink: var(--brand-text); --muted: var(--brand-soft); --chip: rgba(255, 255, 255, .08); --chip-hover: rgba(255, 255, 255, .14); --line: var(--brand-line); --hair: var(--brand-line); --accent: var(--brand-tobi); --accent-ink: var(--brand-night); color-scheme: dark; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --group: var(--brand-surface); --panel: var(--brand-night); --ink: var(--brand-text); --muted: var(--brand-soft); --chip: rgba(255, 255, 255, .08); --chip-hover: rgba(255, 255, 255, .14); --line: var(--brand-line); --hair: var(--brand-line); } }
+:root, :root[data-theme="dark"], :root[data-theme="light"] { --panel: var(--brand-ground); --bg: var(--brand-ground); --ink: var(--brand-ink); --muted: var(--brand-soft); --chip: rgba(244, 241, 236, .07); --chip-hover: rgba(244, 241, 236, .13); --line: var(--brand-hair); --accent: var(--brand-nox); --accent-ink: var(--brand-on-nox); --sole: var(--brand-nox); color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --panel: var(--brand-ground); --bg: var(--brand-ground); --ink: var(--brand-ink); --muted: var(--brand-soft); --chip: rgba(244, 241, 236, .07); --chip-hover: rgba(244, 241, 236, .13); --line: var(--brand-hair); } }
 body, button, select, input { font-family: var(--brand-body); }
-body { background: var(--brand-night); color: var(--brand-text); }
-.app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(340px, 34vw); }
-.panel { position: relative; padding: 28px 28px 0; gap: 18px; }
-.panel > header { position: relative; }
-h1 { font-family: var(--brand-display); font-size: clamp(34px, 3.4vw, 52px); line-height: .98; letter-spacing: -.03em; }
+body { background: var(--brand-ground); color: var(--brand-ink); -webkit-font-smoothing: antialiased; }
+.app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(360px, 36vw); }
+.panel { padding: 30px 30px 0; gap: 20px; background: var(--brand-ground); border-left: 1px solid var(--brand-hair); }
+h1 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(36px, 3.6vw, 56px); line-height: 1; letter-spacing: -.02em; margin: 0; }
+h1 em { font-style: italic; color: var(--brand-nox); }
 .panel > header .sub { display: none; }
-.gear { position: absolute; top: 2px; right: 0; width: 40px; height: 40px; padding: 0; display: grid; place-items: center; border-radius: 50%; background: transparent; color: var(--brand-text); }
-.gear:hover { background: var(--chip); }
-#storyBox { min-height: 0; flex: 1; gap: 0; }
-.eps { list-style: none; margin: 0 -28px; padding: 0; flex: 1; overflow-y: auto; }
-.eps button { position: relative; display: flex; align-items: baseline; gap: 16px; width: 100%; padding: 15px 28px; border-radius: 0; border-top: 1px solid var(--brand-line); background: transparent; color: var(--brand-soft); text-align: left; font-family: var(--brand-display); font-size: clamp(18px, 1.5vw, 23px); font-weight: 500; letter-spacing: -.01em; transition: color .3s, padding .45s var(--spring); }
-.eps button span { font-family: var(--brand-body); font-size: 12px; font-variant-numeric: tabular-nums; opacity: .7; min-width: 18px; }
-.eps button:hover { color: var(--brand-text); padding-left: 38px; background: transparent; }
+.caps { margin: 0; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--brand-soft); }
+button { border-radius: 999px; font-weight: 500; font-size: 14px; padding: 9px 14px; background: var(--chip); color: var(--brand-ink); transition: transform .3s var(--ease), background .2s, opacity .2s; }
+button:hover { background: var(--chip-hover); }
+button:active:not(:disabled) { transform: scale(.97); }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--brand-nox); outline-offset: 2px; }
+button.main { width: 100%; min-height: 52px; background: var(--brand-nox); color: var(--brand-on-nox); font-size: 16px; font-weight: 600; }
+button.main:hover { background: var(--brand-nox); transform: scale(1.015); }
+button.link { align-self: flex-start; padding: 6px 0; background: none; color: var(--brand-soft); }
+button.link:hover { background: none; color: var(--brand-ink); }
+#storyBox { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+#storyBox[hidden], #lib[hidden], #ep[hidden] { display: none; }
+#lib, #ep { display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 14px; animation: enter .55s var(--ease); }
+@keyframes enter { from { opacity: 0; transform: translateX(14px); } }
+.eps { list-style: none; margin: 0 -30px; padding: 0; flex: 1; overflow-y: auto; }
+.eps button { display: flex; align-items: baseline; gap: 16px; width: 100%; padding: 15px 30px; border-radius: 0; border-top: 1px solid var(--brand-hair); background: transparent; color: var(--brand-ink); text-align: left; font-family: var(--brand-display); font-weight: 300; font-size: clamp(19px, 1.7vw, 25px); letter-spacing: -.01em; transition: color .3s, padding .5s var(--ease); }
+.eps button span { font-family: var(--brand-body); font-size: 11px; letter-spacing: .1em; color: var(--brand-soft); min-width: 20px; }
+.eps button:hover { background: transparent; color: var(--brand-nox); padding-left: 42px; }
 .eps button:active { transform: none; }
-.eps button[aria-pressed="true"] { color: var(--brand-tobi); padding-left: 38px; }
-.dock { position: sticky; bottom: 0; margin: 0 -28px; padding: 16px 28px 22px; display: flex; flex-direction: column; gap: 10px; background: linear-gradient(transparent, var(--brand-night) 22%); }
-.dock .sub:empty { display: none; }
-.dock .row { gap: 8px; }
-.dock #storyPlay, .dock #storyStop { flex: 0 0 auto; padding: 14px 20px; border-radius: 999px; font-weight: 600; }
-.dock #storyPlay:disabled, .dock #storyStop:disabled { display: none; }
-button.main { flex: 1; background: var(--brand-tobi); color: var(--brand-night); border-radius: 999px; padding: 14px 20px; font-weight: 700; }
-button.main:hover { background: var(--brand-tobi); }
-.bar i { background: var(--brand-tobi); }
-.sheet { position: fixed; inset: 0 0 0 auto; height: 100dvh; max-height: none; width: min(420px, 100vw); margin: 0; padding: 26px 24px; border: 0; border-left: 1px solid var(--brand-line); background: var(--brand-surface); color: var(--brand-text); overflow-y: auto; transform: translateX(100%); transition: transform .5s var(--spring), overlay .5s allow-discrete, display .5s allow-discrete; }
-.sheet[open] { transform: none; }
-@starting-style { .sheet[open] { transform: translateX(100%); } }
-.sheet::backdrop { background: rgba(6, 5, 16, .5); backdrop-filter: blur(4px); }
-.sheet header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.sheet h2 { font-family: var(--brand-display); font-size: 24px; margin: 0; }
-.sheet details { padding: 14px 0; border-top: 1px solid var(--brand-line); }
-.sheet summary { color: var(--brand-text); font-size: 15px; font-weight: 600; }
-.sheet .close { width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 20px; line-height: 1; }
-.sheet .wide, .back { width: 100%; margin-top: 8px; padding: 12px; border-radius: 999px; }
+#ep h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(30px, 3vw, 44px); line-height: 1.04; letter-spacing: -.02em; margin: 0; }
+#epPitch { margin: 0; color: var(--brand-soft); font-size: 15px; line-height: 1.5; }
+.rows { flex: 1; overflow-y: auto; margin: 4px -30px 0; padding: 0 30px; }
+.rows details { border-top: 1px solid var(--brand-hair); }
+.rows details:last-child { border-bottom: 1px solid var(--brand-hair); }
+.rows summary { list-style: none; display: flex; align-items: center; gap: 12px; padding: 14px 0; color: var(--brand-ink); font-size: 15px; font-weight: 500; cursor: pointer; margin: 0; }
+.rows summary::-webkit-details-marker { display: none; }
+.rows summary b { margin-left: auto; font-weight: 400; font-size: 13px; color: var(--brand-soft); }
+.rows summary b.ok { color: var(--brand-ok); }
+.rows summary b.todo { color: var(--brand-nox); }
+.rows summary::after { content: ""; flex: none; width: 7px; height: 7px; border-right: 1.5px solid var(--brand-soft); border-bottom: 1.5px solid var(--brand-soft); transform: rotate(-45deg); transition: transform .4s var(--ease); }
+.rows details[open] summary::after { transform: rotate(45deg); }
+.rows details > div { display: flex; flex-direction: column; gap: 10px; padding-bottom: 16px; }
+details::details-content { block-size: 0; overflow: clip; opacity: 0; transition: block-size .45s var(--ease), opacity .3s, content-visibility .45s allow-discrete; }
+details[open]::details-content { block-size: auto; opacity: 1; }
+:root { interpolate-size: allow-keywords; }
+.foot { position: sticky; bottom: 0; display: flex; flex-direction: column; gap: 8px; margin: 0 -30px; padding: 14px 30px 24px; background: linear-gradient(transparent, var(--brand-ground) 20%); }
+.foot .sub { font-size: 13px; }
+.foot .sub:empty { display: none; }
+.bar { height: 3px; border-radius: 2px; background: var(--chip); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 2%; background: var(--brand-nox); transition: width .5s var(--ease); }
+.transport { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); display: flex; gap: 6px; padding: 5px; border-radius: 999px; background: rgba(22, 24, 28, .72); backdrop-filter: blur(14px); border: 1px solid var(--brand-hair); z-index: 3; }
+.transport button { background: transparent; padding: 8px 16px; }
+.transport button:disabled { display: none; }
+.transport[hidden] { display: none; }
+.seg { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: var(--chip); }
+.seg button { flex: 1; min-width: 0; padding: 7px 8px; font-size: 13px; background: transparent; }
+.seg button[aria-pressed="true"] { background: var(--brand-nox); color: var(--brand-on-nox); font-weight: 600; }
+.sw { display: flex !important; justify-content: space-between; align-items: center; font-size: 14px; cursor: pointer; }
+.sw input { appearance: none; -webkit-appearance: none; position: relative; width: 44px !important; height: 26px !important; flex: none; margin: 0; border-radius: 13px; background: var(--chip-hover); cursor: pointer; transition: background .25s; }
+.sw input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--brand-ink); transition: transform .35s var(--ease); }
+.sw input:checked { background: var(--brand-nox); }
+.sw input:checked::after { transform: translateX(18px); background: var(--brand-on-nox); }
+.file { display: flex !important; justify-content: center; padding: 9px 12px; border-radius: 999px; background: var(--chip); font-size: 14px; cursor: pointer; }
+.file:hover { background: var(--chip-hover); }
+.file input { position: absolute; width: 1px !important; height: 1px !important; opacity: 0; }
+.rows input[type="password"], .rows select { font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
+.rows select option { color: #111; }
+.rows textarea { background: var(--brand-surface); color: var(--brand-ink); border: 1px solid var(--brand-hair); border-radius: 12px; margin: 0; }
+.voice { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; flex: 1; }
+.pair { display: flex; gap: 10px; }
+#elLines { margin: 0; padding: 0 0 0 20px; font-size: 13px; max-height: 220px; overflow-y: auto; }
+#elLines:empty { display: none; }
+#elLines li { margin-bottom: 8px; }
+#elLines span { display: block; margin-bottom: 4px; }
+#elLines button { padding: 3px 10px; font-size: 12px; margin-right: 4px; }
 .back { flex: none; }
-.sheet input[type="password"], .sheet select { background: var(--chip); color: var(--brand-text); border: 0; border-radius: 10px; padding: 9px 10px; }
-.sheet select option { color: #111; }
-.sheet textarea { background: var(--brand-night); color: var(--brand-text); border: 1px solid var(--brand-line); }
-.seg button[aria-pressed="true"] { background: var(--brand-tobi); color: var(--brand-night); }
-.sw input:checked { background: var(--brand-tobi); }
-.panel > section:not(#storyBox) { background: transparent; border-top: 1px solid var(--brand-line); border-radius: 0; padding: 14px 0; }
-.panel[data-tab] { animation: none; }
-@media (max-width: 760px) { .app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr); } .panel { padding: 18px 16px 0; } .eps, .dock { margin-inline: -16px; } .eps button, .dock { padding-inline: 16px; } }
+.panel > section:not(#storyBox) { border-top: 1px solid var(--brand-hair); padding-top: 14px; }
+.cap { font-family: var(--brand-body); }
+.cap b { color: var(--brand-on-nox); }
+@media (max-width: 760px) { .app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr); } .panel { padding: 18px 16px 0; } .eps, .rows, .foot { margin-inline: -16px; } .eps button, .rows, .foot { padding-inline: 16px; } }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
 <div class="app">
   <main class="stage" id="stage">
@@ -211,46 +198,55 @@ button.main:hover { background: var(--brand-tobi); }
     <div class="curtain" id="curtain"></div>
     <div class="card" id="card" hidden></div>
     <div class="cap" id="cap" hidden></div>
+    <div class="transport" id="transport" hidden><button type="button" id="storyPlay">Revoir</button><button type="button" id="storyStop" disabled>Arrêter</button></div>
     <p class="hint"><kbd>Clic au sol</kbd> pour l'envoyer · <kbd>ZQSD</kbd> ou <kbd>flèches</kbd> pour marcher · <kbd>Maj</kbd> pour courir · glisser pour tourner</p>
   </main>
   <aside class="panel">
     <header>
       <h1>{{H1}}</h1>
-      <button type="button" class="gear" id="gear" hidden aria-label="Réglages"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></button>
       <p class="sub">{{SUB}}</p>
     </header>
     <section id="storyBox" hidden>
-      <ol class="eps" id="eps"></ol>
       <select id="storyPick" hidden aria-label="Choisir un script"></select>
-      <div class="dock">
-        <p class="sub" id="storyNow" aria-live="polite"></p>
-        <div class="bar" id="storyBar" hidden><i></i></div>
-        <div class="row">
-          <button type="button" id="storyPlay">Regarder</button>
-          <button type="button" id="storyStop" disabled>Arrêter</button>
+      <div id="lib">
+        <p class="caps">Saison 1 · choisis un épisode</p>
+        <ol class="eps" id="eps"></ol>
+        <button type="button" class="link" data-tab="jouer">Essayer des gestes dans l'atelier</button>
+      </div>
+      <div id="ep" hidden>
+        <button type="button" class="link" id="epBack">← Tous les épisodes</button>
+        <p class="caps" id="epNum"></p>
+        <h2 id="epTitle"></h2>
+        <p id="epPitch"></p>
+        <div class="rows">
+          <details name="ep" id="elSetup"><summary>Voix <b id="rowVoice"></b></summary><div>
+            <div class="grid"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Valider</button></div>
+            <label class="sw">Garder la clé sur cet ordinateur <input type="checkbox" id="elKeep"></label>
+            <div class="pair" hidden><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
+            <label class="voice">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
+            <p class="sub" id="elNow" aria-live="polite"></p>
+            <button type="button" id="elGo" disabled>Écouter les voix avant la vidéo</button>
+            <ol id="elLines"></ol>
+            <label class="file">Importer mes propres voix<input type="file" id="storyVoices" multiple accept="audio/*"></label>
+          </div></details>
+          <details name="ep"><summary>Vidéo <b id="rowVideo"></b></summary><div>
+            <select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select>
+            <select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select>
+            <select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select>
+            <label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label>
+            <label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label>
+            <label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label>
+          </div></details>
+          <details name="ep"><summary>Script <b id="rowScript"></b></summary><div><textarea id="storyText" rows="12" spellcheck="false" aria-label="Script de l'épisode"></textarea></div></details>
+        </div>
+        <div class="foot">
+          <p class="sub" id="storyNow" aria-live="polite"></p>
+          <div class="bar" id="storyBar" hidden><i></i></div>
           <button type="button" class="main" id="storyExport">Créer la vidéo</button>
         </div>
       </div>
     </section>
-    <dialog class="sheet" id="sheet">
-      <header><h2>Réglages</h2><button type="button" class="close" id="sheetClose" aria-label="Fermer">×</button></header>
-      <details open id="elSetup"><summary>Voix</summary>
-        <div class="grid" style="margin-top:10px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger</button></div>
-        <div class="opts" style="margin-top:10px"><label class="sw">Garder la clé ici <input type="checkbox" id="elKeep"></label></div>
-        <div class="grid" style="margin-top:10px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
-        <label class="voice" style="margin-top:10px">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
-        <p class="sub" id="elNow" aria-live="polite"></p>
-        <button type="button" id="elGo" disabled style="margin-top:10px">Générer les voix maintenant</button>
-        <ol id="elLines"></ol>
-      </details>
-      <details><summary>Vidéo</summary>
-        <div class="stack"><select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select><select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
-        <div class="opts" style="margin-top:10px"><label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label><label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label><label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label><label class="file">Importer mes voix<input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
-      </details>
-      <details><summary>Script de l'épisode</summary><textarea id="storyText" rows="14" spellcheck="false" aria-label="Script de l'histoire"></textarea></details>
-      <button type="button" class="wide" data-tab="jouer">Ouvrir l'atelier</button>
-    </dialog>
-    <button type="button" class="back" data-tab="film">← Retour aux épisodes</button>
+    <button type="button" class="link back" data-tab="film">← Retour aux épisodes</button>
     <p class="sub atelier">Essaie un geste ou un objet avant de l'écrire dans un script.</p>
     <section id="castBox" hidden><h2>Piloter</h2><div class="grid" id="cast"></div></section>
     <section id="roomBox" hidden><h2>Dans la chambre</h2><div class="grid" id="roomActs"></div><div class="grid held" id="roomSwitch"></div></section>

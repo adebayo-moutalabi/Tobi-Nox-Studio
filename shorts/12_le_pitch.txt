@@ -1,4 +1,5 @@
 # LE PITCH DEBOUT
+# Pitch : Tobi pitche debout une appli qui te dit quand manger.
 # Tobi marche et pitche dans la chambre, Nox juge depuis le lit, puis se lève.
 
 AMBIANCE soir

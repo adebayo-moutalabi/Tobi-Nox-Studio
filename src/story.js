@@ -263,7 +263,7 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#ffb26b' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#f2b92e' };
         await v.say(a, c.text, dur, voice?.env);
         if (talkPose && a.hero.motion.pose === talkPose) a.hero.motion.clearPose();
         cap = null; ui.caption(null);
@@ -380,15 +380,11 @@ export function createPlayer(v, ui) {
 export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
+  let voices = null;
   const pick = el('storyPick'), panel = document.querySelector('.panel');
-  const sheet = el('sheet');
-  const showTab = (name) => { panel.dataset.tab = name; sheet.close(); };
-  document.querySelectorAll('button[data-tab]').forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
+  const showTab = (name) => { panel.dataset.tab = name; };
+  document.querySelectorAll('button[data-tab]').forEach((b) => b.addEventListener('click', () => { if (b.dataset.tab === 'jouer') player.stop(); showTab(b.dataset.tab); }));
   showTab('film');
-  el('gear').hidden = false;
-  el('gear').addEventListener('click', () => sheet.showModal());
-  el('sheetClose').addEventListener('click', () => sheet.close());
-  sheet.addEventListener('click', (e) => { if (e.target === sheet) sheet.close(); });
   // Listes courtes affichées en contrôle segmenté
   for (const id of ['storyFormat', 'storyFps', 'storyQuality']) {
     const sel = el(id), seg = document.createElement('div'); seg.className = 'seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', sel.getAttribute('aria-label'));
@@ -402,21 +398,47 @@ export function mountStory(v, stories) {
   }
   for (const k of Object.keys(stories)) pick.add(new Option(k, k));
   el('storyText').value = stories[pick.value];
-  const paintEps = () => [...el('eps').querySelectorAll('button')].forEach((b) => b.setAttribute('aria-pressed', b.dataset.k === pick.value));
-  pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; paintEps(); });
-  el('eps').replaceChildren(...Object.keys(stories).map((k) => { // la liste des épisodes remplace le menu déroulant
+  // Parcours : choisir un épisode l'ouvre et le lance tout de suite. Tout est déjà réglé, il ne reste qu'à créer la vidéo.
+  const refresh = () => {
+    const c = parseStory(el('storyText').value).filter((x) => x.verb === 'dit');
+    const secs = Math.round(c.reduce((n, x) => n + x.text.length * 0.078 + 0.35, 0));
+    const voice = voices?.state() || 'none';
+    const row = el('rowVoice');
+    row.textContent = { ready: 'Prêtes', auto: 'Créées avec la vidéo', none: 'Clé à ajouter' }[voice];
+    row.className = voice === 'ready' ? 'ok' : voice === 'none' ? 'todo' : '';
+    el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${el('storyQuality').value === 'hd' ? '1080p' : '720p'}`;
+    el('rowScript').textContent = `${c.length} répliques · environ ${secs} s`;
+  };
+  const replay = async () => {
+    if (player.running) { player.stop(); for (let i = 0; i < 200 && player.running; i++) await new Promise((r) => setTimeout(r, 30)); }
+    player.play(el('storyText').value);
+  };
+  const openEp = (k) => {
+    pick.value = k; pick.dispatchEvent(new Event('change'));
+    const m = /^(\d+)\.\s*(.*)$/.exec(k), text = stories[k];
+    el('epNum').textContent = m ? `Épisode ${m[1]}` : 'Hors saison';
+    el('epTitle').textContent = m ? m[2] : k;
+    el('epPitch').textContent = (/^#\s*Pitch\s*:\s*(.*)$/mi.exec(text) || [])[1] || '';
+    el('lib').hidden = true; el('ep').hidden = false; el('transport').hidden = false;
+    el('storyNow').textContent = ''; refresh(); replay();
+  };
+  pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
+  el('epBack').addEventListener('click', () => { player.stop(); el('ep').hidden = true; el('lib').hidden = false; el('transport').hidden = true; });
+  el('storyText').addEventListener('input', refresh);
+  ['storyFormat', 'storyQuality'].forEach((id) => el(id).addEventListener('change', refresh));
+  el('eps').replaceChildren(...Object.keys(stories).map((k) => {
     const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
-    b.type = 'button'; b.dataset.k = k; n.textContent = m ? m[1].padStart(2, '0') : '—';
+    b.type = 'button'; n.textContent = m ? m[1].padStart(2, '0') : '—';
     b.append(n, m ? m[2] : k);
-    b.addEventListener('click', () => { pick.value = k; pick.dispatchEvent(new Event('change')); });
+    b.addEventListener('click', () => openEp(k));
     li.append(b);
     return li;
   }));
-  paintEps();
   const short = () => el('storyFormat').value === 'short';
   const format = () => document.querySelector('.app').classList.toggle('portrait', short());
   el('storyFormat').addEventListener('change', format); format();
   const st = { alpha: 0, target: 0, card: '' };
+  let exporting = false;
   const ui = {
     state2: st,
     curtain: (on, instant) => { st.target = on ? 1 : 0; if (instant) st.alpha = st.target; el('curtain').style.opacity = st.alpha; },
@@ -429,14 +451,14 @@ export function mountStory(v, stories) {
       box.replaceChildren(...c.words.flatMap((w, i) => { const n = document.createElement(i === c.active ? 'b' : 'span'); n.textContent = w; return [n, ' ']; }));
     },
     card: (t) => { st.card = t; el('card').textContent = t; el('card').hidden = !t; },
-    line: (t) => { el('storyNow').textContent = t; },
-    state: (on) => { el('storyPlay').disabled = on; el('storyStop').disabled = !on; el('storyExport').disabled = on; },
+    line: (t) => { const n = el('storyNow'); n.dataset.line = t; if (!/^(Ligne|Fin de|Lecture)/.test(t)) n.textContent = t; }, // pas de jargon à l'écran
+    state: (on) => { el('storyPlay').disabled = on; el('storyStop').disabled = !on; el('storyExport').disabled = exporting; },
     tick: (dt) => { const d = st.target - st.alpha; if (d) { st.alpha += Math.sign(d) * Math.min(Math.abs(d), dt / 0.7); el('curtain').style.opacity = st.alpha; } },
   };
   const player = createPlayer(v, ui);
-  el('storyPlay').addEventListener('click', () => player.play(el('storyText').value));
+  el('storyPlay').addEventListener('click', replay);
   el('storyStop').addEventListener('click', () => player.stop());
-  let musicFile = null, voices = null;
+  let musicFile = null, warned = false;
   el('storyMusicFile').addEventListener('change', async (e) => {
     const f = e.target.files[0];
     musicFile = f ? await new AudioContext().decodeAudioData(await f.arrayBuffer()) : null;
@@ -444,9 +466,15 @@ export function mountStory(v, stories) {
   });
   el('storyExport').addEventListener('click', async () => {
     try {
-      if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); }
-      if (!player.voices.length && !voices.ready()) ui.line('Sans voix : ajoute ta clé dans les réglages pour en générer.');
+      if (!player.voices.length && !voices.ready() && !warned) { // une seule alerte, puis on laisse exporter sans voix
+        warned = true; el('elSetup').open = true;
+        ui.line('Il manque ta clé ElevenLabs. Ajoute-la ici, ou clique encore pour créer une vidéo muette.');
+        return;
+      }
+      if (player.running) { player.stop(); for (let i = 0; i < 200 && player.running; i++) await new Promise((r) => setTimeout(r, 30)); }
+      if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
       const fps = Number(el('storyFps').value);
+      exporting = true; el('storyExport').disabled = true;
       const big = el('storyQuality').value === 'hd' ? 1080 : 720, long = Math.round((big * 16) / 9 / 2) * 2;
       const size = short() ? { width: big, height: long } : { width: long, height: big };
       const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length || 1;
@@ -454,9 +482,10 @@ export function mountStory(v, stories) {
       const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, music: el('storyMusic').checked ? { file: musicFile } : null, onProgress: (s) => { ui.line(`Export en cours : ${s.toFixed(0)} s de vidéo`); el('storyBar').firstElementChild.style.width = `${Math.min(98, (player.done / lines) * 100)}%`; } });
       el('storyBar').hidden = true;
       save(out.blob, 'histoire.mp4'); save(new Blob([out.srt], { type: 'text/plain' }), 'histoire.srt');
-      ui.line(`Vidéo prête : ${out.seconds.toFixed(1)} s, ${(out.blob.size / 1048576).toFixed(1)} Mo. Si rien ne se télécharge, ouvre studio.html sur ton ordinateur.`);
+      ui.line(`Ta vidéo est prête : ${out.seconds.toFixed(0)} s, dans tes téléchargements.`);
       v.lastExport = out;
     } catch (e) { el('storyBar').hidden = true; ui.line(`Export impossible : ${e.message}`); }
+    exporting = false; el('storyExport').disabled = false;
   });
   v.story = player;
   el('storyVoices').addEventListener('change', async (e) => {
@@ -467,6 +496,7 @@ export function mountStory(v, stories) {
     const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length;
     ui.line(`${list.length} voix importées pour ${lines} répliques.${list.length !== lines ? ' Attention : le nombre ne correspond pas.' : ''}`);
   });
-  voices = mountVoices({ el, player, parseStory });
+  voices = mountVoices({ el, player, parseStory, onChange: refresh });
+  refresh();
   v.exportVideo = (t, o) => exportVideo(v, player, t, o);
 }

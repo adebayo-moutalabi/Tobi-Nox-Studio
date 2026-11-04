@@ -7,7 +7,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 const NIGHT = '#0b0a18';
-const FONT = '"Bricolage Grotesque", "Trebuchet MS", sans-serif';
+const FONT = '"Inter", "Segoe UI", sans-serif', DISPLAY = '"Fraunces", Georgia, serif', NOX = '#f2b92e';
 const ease = (t) => { const c = 1.7, u = t - 1; return 1 + (c + 1) * u * u * u + c * u * u; };
 
 function canvasTexture(w, h) {
@@ -83,18 +83,18 @@ export function createLook(v) {
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#16152b'; ctx.strokeStyle = '#3d3a6b'; ctx.lineWidth = 4;
+    ctx.fillStyle = '#16181c'; ctx.strokeStyle = 'rgba(244,241,236,.14)'; ctx.lineWidth = 4;
     ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.fill(); ctx.stroke();
-    ctx.fillStyle = '#23213f'; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, 120, [44, 44, 0, 0]); ctx.fill();
+    ctx.fillStyle = '#1e2126'; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, 120, [44, 44, 0, 0]); ctx.fill();
     for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(68 + i * 44, 70, 13, 0, 7); ctx.fill(); }
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = '#c7c5e8'; ctx.font = `700 62px ${FONT}`; ctx.fillText(I.title, W / 2, 262);
+    ctx.fillStyle = '#f4f1ec'; ctx.font = `500 58px ${FONT}`; ctx.fillText(I.title, W / 2, 262);
     let big = I.big;
     if (I.value) big = `${I.value.head}${Math.round(I.value.n * Math.min(1, f))}${I.value.tail}`;
     const size = Math.min(210, Math.floor((W - 90) / Math.max(1, big.length) * 1.75));
-    ctx.fillStyle = I.value?.head.includes('-') || I.value?.head.includes('−') ? '#ff7a6b' : '#ffd27a';
-    ctx.font = `800 ${size}px ${FONT}`; ctx.fillText(big, W / 2, 560);
-    ctx.fillStyle = '#9b99c9'; ctx.font = `600 56px ${FONT}`; ctx.fillText(I.small, W / 2, 850);
+    ctx.fillStyle = I.value?.head.includes('-') || I.value?.head.includes('−') ? '#ff7a6b' : NOX;
+    ctx.font = `400 ${size}px ${DISPLAY}`; ctx.fillText(big, W / 2, 560);
+    ctx.fillStyle = '#a8a49c'; ctx.font = `500 50px ${FONT}`; ctx.fillText(I.small, W / 2, 850);
     tex.needsUpdate = true;
   }
 

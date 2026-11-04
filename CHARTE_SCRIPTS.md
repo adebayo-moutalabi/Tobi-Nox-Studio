@@ -72,6 +72,7 @@ Une ligne = une instruction. Les lignes qui commencent par `#` sont des notes.
 
 ```text
 # TITRE DE L'ÉPISODE
+# Pitch : L'histoire en une phrase, affichée dans le Studio.
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille

@@ -1,4 +1,5 @@
 # SHORT 01 : CINQ MINUTES
+# Pitch : Tobi va réviser. Juste après une petite pause.
 # Durée visée : 35 à 40 s. Format vertical. La fin relance le début (boucle).
 # DIRECT devant une ligne = l'action se fait hors champ, sans temps mort.
 

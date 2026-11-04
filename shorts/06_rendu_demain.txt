@@ -1,4 +1,5 @@
 # MON RENDU EST DEMAIN
+# Pitch : Rendu demain, 3 pages sur 60. Tobi compte sur son IA.
 # Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
 
 AMBIANCE soir

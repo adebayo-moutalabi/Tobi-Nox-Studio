@@ -35,26 +35,16 @@ Un autre mot en anglais, comme `(laughs)`, est transmis tel quel à ElevenLabs. 
 - `BRUIT ding`, `BRUIT pop`, `BRUIT whoosh` : un bruitage précis.
 
 ## De A à Z : sortir un Short
-Sur ordinateur, avec Chrome ou Edge. Exemple avec le pilote, qui est déjà scripté : commence à l'étape 4.
+Sur ordinateur, avec Chrome ou Edge.
 
-1. **Écrire** le sketch en langage normal : accroche, 6 temps de la bible, chute.
-2. **Scripter** dans le Studio : choisir un script, ouvrir « Modifier le script », écrire. Mettre `DIRECT` devant toute action qui ralentit.
-   Copier ensuite le texte dans `shorts/NN_titre.txt`, car le Studio ne l'enregistre pas.
-3. **Répéter :** puis « Regarder ». Couper tout ce qui traîne.
-4. **Clé ElevenLabs, une seule fois :** sur elevenlabs.io, menu de gauche **Developers**, onglet **API Keys**, puis créer une clé. Laisser la restriction active et autoriser **Text to Speech** et **Voices** en lecture. Copier la clé tout de suite : elle ne s'affiche en entier qu'une fois.
-   La coller dans « Réglages des voix », puis « Charger mes voix ». Ne jamais la mettre dans le dépôt ni l'envoyer à quelqu'un.
-5. **Générer les voix :** choisir le script, ta voix clonée pour Tobi et une autre pour Nox dans « Réglages des voix », puis « Générer les voix ».
-   Le Studio crée toutes les répliques et les cale sur le script. Écouter : « Refaire » relance une seule réplique si le ton est faux.
-   Une réplique inchangée ne coûte pas de crédit une seconde fois sur cet ordinateur.
-6. **Exporter :** laisser « Sous-titres dans la vidéo » coché, garder 30 i/s, cliquer « Exporter en MP4 ».
-   Laisser l'onglet ouvert au premier plan pendant le calcul. Le Studio télécharge `histoire.mp4` et `histoire.srt`.
-7. **Regarder la vidéo en entier** sur ton téléphone, avec et sans le son. Si une réplique tombe mal, corriger le script ou la voix et réexporter.
-8. **Montage facultatif :** clavier, chiffres et musique discrète sont déjà dans le MP4. CapCut ou DaVinci Resolve ne servent plus qu'aux retouches. La musique générée peut être décochée ou remplacée dans « Réglages de la vidéo ».
-9. **Publier sur YouTube**, sur ordinateur ou depuis l'application :
-   - Titre : `Tobi fait X (emoji) | Tobi & Nox #1`, avec un numéro d'épisode.
-   - Description : 3 lignes qui teasent la situation sans donner la chute, puis 3 à 5 hashtags.
-   - Vérifier l'option « contenu modifié ou synthétique » selon la règle YouTube du moment.
-10. **Analyser à 48 h :** noter vues et rétention dans le tableau ci-dessous, et l'endroit où les gens partent. Le sujet suivant part de ce qui a marché.
+1. **Une fois :** créer une clé ElevenLabs (Developers, API Keys, droits Text to Speech et Voices) et la coller dans la ligne « Voix » d'un épisode, puis choisir les voix de Tobi et Nox.
+2. **Choisir un épisode :** il s'ouvre et se joue tout de suite. « Revoir » le relance.
+3. **Cliquer sur « Créer la vidéo » :** les voix sont créées si besoin, puis le MP4 arrive dans les téléchargements. Rien d'autre à régler.
+4. **Regarder la vidéo** sur téléphone, avec et sans le son.
+5. **Publier :** titre « Tobi fait X (emoji) | Tobi & Nox #1 », 3 lignes qui teasent sans donner la chute, 3 à 5 hashtags. Vérifier l'option « contenu modifié ou synthétique ».
+6. **Analyser à 48 h** et noter le résultat ci-dessous.
+
+Pour un nouvel épisode : écrire le script selon `CHARTE_SCRIPTS.md`, puis l'ajouter dans `src/studio-app.js`, ou le coller dans la ligne « Script » d'un épisode existant.
 
 ## Avant de publier
 - La première seconde donne-t-elle envie de rester ?

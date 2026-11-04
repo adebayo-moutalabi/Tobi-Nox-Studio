@@ -44,7 +44,7 @@ async function explain(res) {
   return `ElevenLabs a répondu ${res.status}${msg ? ` : ${msg}` : ''}.`;
 }
 
-export function mountVoices({ el, player, parseStory }) {
+export function mountVoices({ el, player, parseStory, onChange }) {
   const cache = audioCache();
   const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
   let rows = [], ctx = null, busy = false;
@@ -77,7 +77,9 @@ export function mountVoices({ el, player, parseStory }) {
       }
       if (!mine.some((x) => x.voice_id === saved.nox) && mine.length > 1) pick.nox.selectedIndex = 1;
       remember();
-      say(`${mine.length} voix trouvées. Vérifie Tobi et Nox, puis génère.`);
+      el('elTobi').closest('.pair').hidden = false;
+      say(`${mine.length} voix trouvées. Vérifie Tobi et Nox.`);
+      onChange?.();
     } catch (e) { say(e.message); }
     lock(false);
   };
@@ -133,13 +135,14 @@ export function mountVoices({ el, player, parseStory }) {
       publish();
       say(`${rows.length} voix prêtes pour ${rows.length} répliques, dont ${paid} nouvelles. Tu peux lire ou exporter.`);
     } catch (e) { say(`${e.message} Relance ensuite : les voix déjà faites ne seront pas refacturées.`); }
-    lock(false); show();
+    lock(false); show(); onChange?.();
   };
 
   const forget = () => {
     if (!rows.length) return;
     rows = []; player.voices = []; list.replaceChildren();
-    say('Script changé : relance « Générer les voix ». Les répliques inchangées ne coûtent rien.');
+    say('');
+    onChange?.();
   };
 
   key.value = read(KEY);
@@ -152,5 +155,5 @@ export function mountVoices({ el, player, parseStory }) {
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();
-  return { generate, ready: () => !!key.value.trim() && !!pick.tobi.value };
+  return { generate, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
 }

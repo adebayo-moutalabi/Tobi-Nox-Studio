@@ -17,7 +17,7 @@ export const tick = (() => { // laisse les promesses de l'histoire avancer, sans
 // Sous-titre discret : une ligne, le mot prononcé surligné.
 function drawCaption(ctx, c, w, h) {
   const s = Math.round(h * (h > w ? 0.029 : 0.05)), y = h * (h > w ? 0.755 : 0.86), padX = s * 0.2, padY = s * 0.13;
-  ctx.font = `800 ${s}px "Bricolage Grotesque", "Trebuchet MS", sans-serif`;
+  ctx.font = `800 ${s}px "Inter", "Segoe UI", sans-serif`;
   ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
   const gap = ctx.measureText(' ').width * 1.15, ws = c.words.map((x) => ctx.measureText(x).width);
   let x = (w - ws.reduce((n, a) => n + a, 0) - gap * (ws.length - 1)) / 2;
