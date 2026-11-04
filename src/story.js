@@ -6,6 +6,8 @@ import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
 import { TONS } from './tones.js';
 import { envelope } from './talk.js';
+import { createLook } from './look.js';
+import { playSfx } from './sound.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -27,11 +29,23 @@ const PLANS = {
   porte: [[0, 1.5, -0.9], [0, 1.0, 3], 44],
   miroir: [[0.72, 1.7, -0.4], [-0.7, 1.15, -1.5], 54],
   dessus: [[-4.2, 6.6, 6.6], [0, 0.6, 0.3], 26],
-  clavier: [[0.7, 1.14, -0.7], [0.94, 0.76, -1.05], 46],
+  clavier: [[0.66, 1.2, -1.5], [1.0, 0.8, -1.02], 42],
   ecran: [[0.8, 1.02, -0.66], [1.1, 0.92, -1.05], 44],
   tableau: [[0.34, 1.32, -1.06], [0.42, 1.08, -1.84], 38],
 };
 const plain = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+// Découpe une réplique en lignes courtes, sans jamais dépasser le cadre.
+function chunk(text) {
+  const words = text.split(/\s+/), groups = [];
+  let start = 0, size = 0;
+  words.forEach((w, i) => {
+    if (i > start && (size + w.length > 24 || /[.?!…]$/.test(words[i - 1]))) { groups.push([start, i]); start = i; size = 0; }
+    size += w.length + 1;
+  });
+  groups.push([start, words.length]);
+  return { words, groups, chars: text.length + 1 };
+}
 
 export function parseStory(text) {
   const out = [];
@@ -57,7 +71,13 @@ export function createPlayer(v, ui) {
   const actor = (id) => v.actors.find((a) => a.id === id);
   const room = v.room;
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
-  const subtitles = [], clips = [];
+  const subtitles = [], clips = [], sfxList = [];
+  const look = createLook(v);
+  const sfx = (type) => {
+    if (ffing) return;
+    sfxList.push({ type, start: v.simTime - playT0 });
+    if (!offline) { audioCtx ||= new AudioContext(); playSfx(audioCtx, audioCtx.destination, type, audioCtx.currentTime + 0.005); }
+  };
   let voices = [], lineIdx = 0, offline = false, ffing = false, cap = null, audioCtx = null;
   const lens = () => (v.camera.aspect < 1 ? 1.3 : 1); // en vertical, on ouvre un peu le cadre
   async function fast(c) { // joue une action sans la montrer : le temps de la vidéo ne bouge pas
@@ -83,26 +103,50 @@ export function createPlayer(v, ui) {
   function aim(pos, target, fov) {
     v.camera.fov = fov * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1; v.controls.target.copy(target); v.camera.position.copy(pos); v.controls.update();
-    drift = 0.045;
+    drift = 0.07;
   }
-  function closeUp(a) { // gros plan de face : réaction, chute
-    const H = eyes(a), f = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0).normalize();
-    aim(H.clone().addScaledVector(f, a.id === 'tobi' ? 0.9 : 0.55).add(new THREE.Vector3(0, 0.02, 0)), H.clone().add(new THREE.Vector3(0, -0.05, 0)), 34);
-  }
-  function talkShot(a) {
-    const b = v.actors.find((x) => x !== a), H = eyes(a), big = a.id === 'tobi';
+  // Cadrage : la tête garde toujours de l'air au-dessus d'elle. Les murs sont traversables pour reculer.
+  const room2 = (c) => c.x > -3.4 && c.x < 3.4 && c.z > -3.6 && c.z < 4.4 && c.y > 0.3 && c.y < 2.4;
+  const seen = (c, p) => { const d = p.clone().sub(c), L = d.length(); ray.set(c, d.normalize()); ray.far = L - 0.12; return ray.intersectObjects(room.solid, false).length === 0; };
+  const blocks = (b, c, p) => { // l'autre personnage ne doit pas passer devant l'objectif
+    if (!b.hero.root.visible) return false;
+    const line = new THREE.Line3(c, p), o = new THREE.Vector3();
+    return [eyes(b), eyes(b).setY(eyes(b).y - 0.35), eyes(b).setY(eyes(b).y - 0.7)].some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < 0.3; });
+  };
+  function frame(a, tight) {
+    const b = v.actors.find((x) => x !== a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
-    const to = near ? eyes(b).sub(H).setY(0) : new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
-    to.normalize();
-    const sign = big ? 1 : -1, up = new THREE.Vector3(0, 1, 0);
-    for (const ang of [0.36, 0.5, 0.68, -0.4, -0.62, 0.9, -0.9, 1.2, -1.2]) {
-      for (const dist of big ? [1.5, 1.2, 0.95] : [0.95, 0.75, 0.6]) {
-        const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang * sign), dist);
-        c.y = big ? (near ? H.y + (eyes(b).y - H.y) * 0.5 : H.y - 0.05) : H.y + 0.1; // à hauteur de regard de celui qui écoute
-        if (inside(c) && clear(H, c)) { aim(c, H.clone().add(new THREE.Vector3(0, big ? -0.14 : -0.06, 0)), dist < 1.1 && big ? 50 : 38); if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z); return; }
+    const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
+    const to = (near && !a.hero.seat ? eyes(b).sub(H).setY(0) : fwd).normalize();
+    a.look = null; // seul dans le cadre, il parle vers la caméra, comme au théâtre
+    const top = H.y + (big ? 0.24 : 0.2), fov = 32;
+    const span = tight ? (big ? 0.9 : 0.72) : (big ? 1.4 : 1.02);
+    for (const k of [1, 0.85, 0.72]) {
+      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = top + sp * 0.13 - sp / 2;
+      for (const ang of [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
+        const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
+        const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.27); // les bords du cadre restent dégagés aussi
+        if (room2(c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && !blocks(b, c, H)) {
+          aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
+          if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
+          return;
+        }
       }
     }
-    closeUp(a);
+    cut('large');
+  }
+  const closeUp = (a) => frame(a, true);
+  const talkShot = (a) => frame(a, false);
+  function duo() { // les deux dans le cadre
+    v.actors[0].look = v.actors[1]; v.actors[1].look = v.actors[0];
+    const [p, q] = v.actors.map((x) => eyes(x)), m = p.clone().lerp(q, 0.5);
+    const side = q.clone().sub(p).setY(0).normalize(), n = new THREE.Vector3(-side.z, 0, side.x);
+    const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(v.actors[0].hero.root.quaternion);
+    for (const s of n.dot(fwd) > 0 ? [1, -1] : [-1, 1]) { // du côté où Tobi regarde
+      const c = m.clone().addScaledVector(n, 2.3 * s); c.y = 1.15;
+      if (room2(c) && seen(c, p) && seen(c, q)) { aim(c, new THREE.Vector3(m.x, 0.92, m.z), 38 / lens()); return; }
+    }
+    cut('large');
   }
   const ANCHORS = [[0.1, 1.75, 2.7], [0.6, 1.95, -1.7], [-0.35, 1.9, -1.7], [0.2, 1.8, 1.35], [-0.35, 1.8, 0.75]].map((p) => new THREE.Vector3(...p));
   function follow(a) {
@@ -113,10 +157,13 @@ export function createPlayer(v, ui) {
   }
   v.onFrame = (dt) => {
     ui.tick?.(dt);
-    if (cap) { // sous-titres par groupes de trois mots
-      const f = Math.min(0.999, (v.simTime - cap.t0) / cap.dur), n = Math.ceil(cap.words.length / 3), k = Math.floor(f * n);
-      ui.state2.caption = cap.words.slice(k * 3, k * 3 + 3).join(' ').toUpperCase();
-      ui.state2.captionColor = cap.color;
+    look.update(dt);
+    if (cap) { // sous-titres : une ligne courte, le mot prononcé surligné
+      const f = Math.min(0.999, (v.simTime - cap.t0) / cap.dur) * cap.chars;
+      let i = 0, n = 0;
+      while (i < cap.words.length - 1 && n + cap.words[i].length + 1 <= f) { n += cap.words[i].length + 1; i++; }
+      const g = cap.groups.find((x) => i >= x[0] && i < x[1]);
+      ui.caption({ words: cap.words.slice(g[0], g[1]), active: i - g[0], color: cap.color });
     }
     if (drift && running && !track) { // lent travelling avant : l'image n'est jamais figée
       const d = v.controls.target.clone().sub(v.camera.position).normalize();
@@ -157,10 +204,19 @@ export function createPlayer(v, ui) {
     switch (c.verb) {
       case 'plan': {
         const k = plain(c.args[0] || 'large'); auto = k === 'auto'; track = null;
+        look.hideInsert();
+        if (k === 'duo') { auto = false; duo(); return undefined; }
         if (k === 'gros') { auto = false; closeUp(actor(plain(c.args[1] || 'tobi'))); return undefined; }
         if (!auto) cut(k);
         return undefined;
       }
+      case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
+      case 'insert': {
+        const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
+        look.insert(title, big, small); sfx(/[€$]/.test(big) ? 'ding' : 'pop');
+        return undefined;
+      }
+      case 'bruit': sfx(plain(c.args[0] || 'pop')); return undefined;
       case 'attendre': return v.wait(parseFloat(c.args[0]) || 1);
       case 'fondu': {
         const k = plain(c.args[0] || '');
@@ -176,7 +232,7 @@ export function createPlayer(v, ui) {
         track = null;
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
-          if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { a.look = b; b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.35); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.3); }
+          if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.08); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.08); }
           talkShot(a);
         }
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
@@ -186,17 +242,17 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { words: c.text.split(/\s+/), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#ffd27a' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#ffb26b' };
         await v.say(a, c.text, dur, voice?.env);
-        cap = null; ui.state2.caption = '';
+        cap = null; ui.caption(null);
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
         return undefined;
       }
       case 'tape': { // les lettres apparaissent à l'écran, au rythme des doigts
         for (const ch of c.text.replace(/\\n/g, '\n')) {
           if (stopped) break;
-          room.laptop.type(ch);
-          await v.wait(/[.,;:!?\n]/.test(ch) ? 0.28 : 0.05 + Math.random() * 0.075);
+          a?.hero.tap?.(room.laptop.type(ch)); sfx('key');
+          await v.wait(/[.,;:!?\n]/.test(ch) ? 0.1 : 0.03 + Math.random() * 0.035);
         }
         return undefined;
       }
@@ -239,6 +295,7 @@ export function createPlayer(v, ui) {
         await v.glide(a, new THREE.Vector3(0.05, 0, 3.6), 0, 1.0);
         return undefined;
       }
+      case 'pivote': return v.turn(a, plain(c.args[0] || 'chambre') !== 'bureau');
       case 'travaille': a.look = null; if (auto) follow(a); await v.acts.desk(a); track = null; return undefined;
       case 'assis': return v.acts.edge(a);
       case 'dort': return v.acts.sleep(a);
@@ -263,10 +320,10 @@ export function createPlayer(v, ui) {
     get ffing() { return ffing; },
     get voices() { return voices; },
     set voices(l) { voices = l; },
-    subtitles, clips,
+    subtitles, clips, sfx: sfxList,
     async play(text, opts = {}) {
       if (running) return;
-      subtitles.length = 0; clips.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.state2.caption = '';
+      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); v.quiet = true; look.hideInsert(); look.setMood('jour');
       const list = parseStory(text);
       running = true; stopped = false; ui.state(true); v.locked = true;
       ui.curtain(true, true);
@@ -288,7 +345,7 @@ export function createPlayer(v, ui) {
       ui.curtain(false, true);
       v.camera.fov = 26; v.camera.updateProjectionMatrix();
       v.actors.forEach((a) => { a.hero.root.visible = true; });
-      v.locked = false; track = null; auto = false;
+      v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(); look.setMood('jour'); ui.caption(null);
       v.actors.forEach((a) => { a.look = null; });
       v.setView('chambre', true);
       running = false; closing = false; ui.state(false);
@@ -311,6 +368,14 @@ export function mountStory(v, stories) {
   const ui = {
     state2: st,
     curtain: (on, instant) => { st.target = on ? 1 : 0; if (instant) st.alpha = st.target; el('curtain').style.opacity = st.alpha; },
+    caption: (c) => {
+      st.caption = c;
+      const box = el('cap');
+      box.hidden = !c || !el('storyCaps').checked;
+      if (box.hidden) return;
+      box.style.setProperty('--w', c.color);
+      box.replaceChildren(...c.words.flatMap((w, i) => { const n = document.createElement(i === c.active ? 'b' : 'span'); n.textContent = w; return [n, ' ']; }));
+    },
     card: (t) => { st.card = t; el('card').textContent = t; el('card').hidden = !t; },
     line: (t) => { el('storyNow').textContent = t; },
     state: (on) => { el('storyPlay').disabled = on; el('storyStop').disabled = !on; el('storyExport').disabled = on; },
@@ -319,11 +384,17 @@ export function mountStory(v, stories) {
   const player = createPlayer(v, ui);
   el('storyPlay').addEventListener('click', () => player.play(el('storyText').value));
   el('storyStop').addEventListener('click', () => player.stop());
+  let musicFile = null;
+  el('storyMusicFile').addEventListener('change', async (e) => {
+    const f = e.target.files[0];
+    musicFile = f ? await new AudioContext().decodeAudioData(await f.arrayBuffer()) : null;
+    ui.line(f ? `Musique importée : ${f.name}` : 'Musique générée par le Studio.');
+  });
   el('storyExport').addEventListener('click', async () => {
     try {
       const fps = Number(el('storyFps').value);
       const size = short() ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 };
-      const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, onProgress: (s) => ui.line(`Export : ${s.toFixed(1)} s de vidéo rendues…`) });
+      const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, music: el('storyMusic').checked ? { file: musicFile } : null, onProgress: (s) => ui.line(`Export : ${s.toFixed(1)} s de vidéo rendues…`) });
       save(out.blob, 'histoire.mp4'); save(new Blob([out.srt], { type: 'text/plain' }), 'histoire.srt');
       ui.line(`Vidéo prête : ${out.seconds.toFixed(1)} s, ${(out.blob.size / 1048576).toFixed(1)} Mo. Si rien ne se télécharge, ouvre studio.html sur ton ordinateur.`);
       v.lastExport = out;

@@ -1,56 +1,64 @@
 # PILOTE : MON SERVEUR COÛTE PLUS CHER QUE MON LOYER
-# Cible : 45 à 60 s. Format vertical.
+# Cible : 40 à 50 s. Format vertical. Un plan toutes les 1 à 3 secondes.
 # Mécanique : ambition sincère, surenchère technique, réalité, punchline.
 # Le ton entre parenthèses règle la voix, le visage, le geste et la réaction de l'autre.
 
+AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
 ECRAN boulangerie.txt
 TABLEAU Boulangerie Martin | Site en ligne ! | 3 clusters | Projet n° 16
 FONDU direct
-PLAN auto
 
 # 1. La situation, 2. l'annonce
-TOBI dit (fier) Le site de la boulangerie est en ligne. Sur trois clusters.
+PLAN auto
+TOBI dit (fier) Le site de la boulangerie est en ligne !
+NOX dit (curieux) Sur quoi ?
+TOBI dit (fier) Trois clusters.
+INSERT Boulangerie Martin | 3 clusters | Haute disponibilité
 
 # 3. La question simple
-PLAN gros NOX
-NOX dit (curieux) Trois clusters. Combien de visiteurs ?
+NOX dit (curieux) Combien de visiteurs ?
 PLAN auto
 TOBI dit (fier) Douze.
 PLAN gros NOX
 NOX dit (ironique) Par seconde ?
-PLAN auto
+PLAN gros TOBI
 TOBI dit (gene) Au total.
+INSERT Visiteurs | 12 | Depuis le lancement
 
 # 4. Il justifie l'absurde
 PLAN auto
 TOBI dit (excite) Mais s'ils passent au JT, on est prêts.
 PLAN gros NOX
-NOX dit (sec) C'est une boulangerie, Tobi.
+NOX dit (sec) C'est une boulangerie.
+NOX dit (sec) Ouvre la facture.
 
 # 5. La réalité, puis le roast
 PLAN clavier
-NOX dit (sec) Ouvre la facture.
-TOBI tape Facture cloud : 847 euros
-PLAN ecran
-ATTENDRE 0.6
-PLAN gros NOX
-NOX dit (calme) Et le client te paie combien ?
-PLAN auto
-TOBI dit (gene) Cent cinquante euros.
-PLAN ecran
-TOBI tape \nDevis client : 150 euros
+TOBI pivote bureau
+TOBI tape Facture cloud
+INSERT Facture cloud | 847 € | Ce mois-ci
+TOBI pivote
 ATTENDRE 0.4
 PLAN gros NOX
+NOX dit (calme) Le client te paie combien ?
+PLAN gros TOBI
+TOBI dit (gene) Cent cinquante euros.
+INSERT Ton bilan | -697 € | Par mois
 NOX dit (constat) Donc tu paies pour travailler.
 PLAN auto
 TOBI dit (mauvaisefoi) C'est un investissement.
 PLAN gros NOX
-NOX dit (punchline) Oui. Dans les baguettes. Tu vas en manger pendant trois ans.
+NOX dit (punchline) Oui. Dans les baguettes.
+PLAN auto
+NOX dit (punchline) Tu vas en manger pendant trois ans.
 
 # 6. L'ouverture
-PLAN auto
+PLAN gros TOBI
 TOBI dit (illumine) Attends... et si je facturais en baguettes ?
 PLAN gros NOX
 NOX dit (resigne) J'appelle tes parents.
+ATTENDRE 0.4

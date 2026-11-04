@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
-import { createTalk, stepTalk, talkShape } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, addRot, clearRot } from './talk.js';
 
 export const PALETTE = {
   skin: '#8b6a53', skinDeep: '#6c5243', neck: '#655044',
@@ -572,9 +572,10 @@ export function createCharacter() {
   // État animé
   const faceMeshes = [headMesh, eyeMesh];
   const weights = Object.fromEntries(MORPHS.map((m) => [m, 0]));
+  const tapBones = [bones.head, bones.chest, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
   const state = {
     expr: {}, exprName: 'neutre', blinkT: 2, blink: 0, blinkDir: 0, glanceT: 3, glance: { lookL: 0, lookR: 0, lookU: 0, lookD: 0 },
-    talk: null, viseme: {}, current: null, loco: 'idle', gesture: null,
+    talk: null, viseme: {}, current: null, loco: 'idle', gesture: null, taps: { L: 0, R: 0 }, tapF: { L: 1, R: 2 },
     spring: { v: 0, x: 0, vz: 0, z: 0, lastPos: V(0, 0, 0), lastVel: V(0, 0, 0) },
   };
 
@@ -603,8 +604,18 @@ export function createCharacter() {
     },
     setGlasses(on) { glasses.visible = on; },
     setMorphs(obj) { Object.assign(weights, obj); faceApply(weights); },
+    tap(side) { state.taps[side] = 1; state.tapF[side] = (state.tapF[side] + 1 + (side === 'L' ? 0 : 1)) % 4; },
     update(dt) {
+      clearRot(tapBones);
       motion.update(dt);
+      talkBody(state, dt, bones.head, bones.chest);
+      for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
+        const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);
+        if (p > 0) {
+          addRot(bones[`forearm_${n}`], 0.1 * p, 0, 0); addRot(bones[`hand_${n}`], 0.34 * p, 0, 0);
+          for (let i = 0; i < 4; i++) addRot(bones[`f${i}a_${n}`], 0.5 * p * (i === state.tapF[n] ? 1 : 0.2), 0, 0);
+        }
+      }
       // Clignement automatique
       state.blinkT -= dt;
       if (state.blinkT <= 0 && !state.blinkDir) { state.blinkDir = 1; state.blinkT = 2.2 + Math.random() * 3.2; }

@@ -2,17 +2,35 @@
 import * as THREE from 'three';
 
 const P = (x, z) => new THREE.Vector3(x, 0, z);
-const EAST = Math.PI / 2, WEST = -Math.PI / 2, NORTH = Math.PI;
+const ROOM = 0.45, EAST = Math.PI / 2, WEST = -Math.PI / 2, NORTH = Math.PI;
 
 export function roomActions(v, room) {
   const big = (a) => a.id === 'tobi';
   const arrive = async (a, p, yaw) => { await v.leave(a); await v.walkTo(a, p); a.faceYaw = yaw; await v.wait(0.45); };
 
   const other = (a) => v.actors.find((b) => b !== a);
+  // Chaise pivotante : Tobi se tourne vers la pièce pour parler, comme sur un plateau de sitcom.
+  function swivel(a, yaw, now) {
+    const C = room.chair.position, set = (y) => {
+      room.chair.rotation.y = y; a.hero.root.rotation.y = y;
+      a.hero.root.position.set(C.x + 0.3 * Math.sin(y), 0, C.z + 0.3 * Math.cos(y));
+    };
+    const from = a.hero.root.rotation.y;
+    if (now) { set(yaw); return undefined; }
+    return (async () => { for (let k = 1; k <= 7; k++) { const u = k / 7; set(from + (yaw - from) * u * (2 - u)); await v.wait(1 / 30); } })();
+  }
+  v.turn = turn;
+  async function turn(a, toRoom) {
+    if (big(a)) {
+      if (toRoom) a.hero.motion.clearPose();
+      await swivel(a, toRoom ? ROOM : EAST);
+      if (!toRoom) a.hero.motion.togglePose('type');
+    } else a.hero.root.rotation.y = toRoom ? -0.75 : Math.atan2(-0.3, -0.3);
+  }
   async function desk(a) {
     if (big(a)) {
       await arrive(a, P(0.72, -1.05), EAST);
-      a.spot = { exit: async () => { a.hero.motion.clearPose(); await v.stand(a); } };
+      a.spot = { exit: async () => { swivel(a, EAST, true); a.hero.motion.clearPose(); await v.stand(a); } };
       await v.sit(a, 'chair', true);
       a.hero.motion.togglePose('type');
     } else {

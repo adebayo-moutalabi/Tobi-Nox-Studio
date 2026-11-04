@@ -376,7 +376,7 @@ export function createRoom({ Reflector } = {}) {
 
   const rect = [[-0.42, 0.72, -1.6, 1.58], [-0.42, 0.42, 1.58, 2.8]];
   const room = {
-    group, lamp, fridgeDoor, entryDoor, shutter, chair, sillBag, laptop, board, walls: wm, solid: group.userData.solid,
+    group, lamp, sky, fridgeDoor, entryDoor, shutter, chair, sillBag, laptop, board, walls: wm, solid: group.userData.solid,
     update(dt) { laptop.update(dt); },
     surfaceNear(q, from) { return from.x > 0.2 && from.z < 0 ? { x: 0.92, y: 0.745, z: Math.min(-0.3, Math.max(-0.7, q.z)) } : null; },
     center: V(0, 0.7, 0.3),

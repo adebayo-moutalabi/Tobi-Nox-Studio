@@ -1,4 +1,6 @@
 // Parole : la bouche suit le volume réel de la voix, partagé par Tobi et Nox.
+import * as THREE from 'three';
+
 const RATE = 50;
 
 // Volume de la voix, 50 fois par seconde. `cum` dit quelle part de la phrase est déjà dite.
@@ -50,4 +52,30 @@ export function talkShape(viseme, T) {
   if (!T.env) return viseme;
   const k = Math.min(1.1, T.level * 1.25);
   return Object.fromEntries(Object.entries(viseme).map(([m, w]) => [m, w * k]));
+}
+
+// Petits mouvements ajoutés par-dessus l'animation, retirés à l'image suivante.
+const euler = new THREE.Euler(), q = new THREE.Quaternion();
+export function addRot(bone, x, y, z) {
+  if (!bone) return;
+  q.setFromEuler(euler.set(x, y, z));
+  bone.quaternion.multiply(q);
+  (bone.userData.off ||= new THREE.Quaternion()).multiply(q);
+}
+export function clearRot(bones) {
+  for (const b of bones) {
+    if (!b?.userData.off) continue;
+    b.quaternion.multiply(b.userData.off.invert());
+    b.userData.off = null;
+  }
+}
+// Le corps accompagne la voix : la tête ponctue, le buste suit.
+export function talkBody(state, dt, head, chest, gain = 1) {
+  const T = state.talk, target = T ? (T.env ? T.level : 0.7) : 0;
+  state.beat = (state.beat || 0) + (target - (state.beat || 0)) * (1 - Math.exp(-dt * 12));
+  state.beatT = (state.beatT || 0) + dt;
+  const b = state.beat * gain, t = state.beatT;
+  if (b < 0.01) return;
+  addRot(head, -0.03 * b - 0.075 * b * Math.sin(t * 8.5), 0.06 * b * Math.sin(t * 3.7), 0.04 * b * Math.sin(t * 2.9));
+  addRot(chest, 0.02 * b * Math.sin(t * 4.2), 0.03 * b * Math.sin(t * 2.3), 0);
 }

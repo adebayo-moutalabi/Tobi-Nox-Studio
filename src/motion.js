@@ -11,6 +11,8 @@ const SEATS = {
   lie: ['lie_down', 'lying', 'get_up'],
 };
 
+const PACE = 1.45;
+
 class Layer {
   constructor(bones) { this.bones = bones; this.clip = null; this.w = 0; this.target = 0; this.t = 0; this.q = new THREE.Quaternion(); }
   play(clip) {
@@ -37,6 +39,13 @@ class Layer {
 }
 
 export function createMotion(root, bones, clips) {
+  // Rythme de la série : les gestes et transitions sont joués plus vite que leur tracé d'origine.
+  for (const c of clips) {
+    if (c.userData.loop || c.userData.fast) continue;
+    c.userData.fast = true;
+    for (const tr of c.tracks) tr.times = tr.times.map((t) => t / PACE);
+    c.duration /= PACE;
+  }
   const mixer = new THREE.AnimationMixer(root);
   const actions = {};
   const byName = Object.fromEntries(clips.map((c) => [c.name, c]));

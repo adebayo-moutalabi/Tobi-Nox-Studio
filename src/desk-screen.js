@@ -24,9 +24,16 @@ export function createLaptop() {
   }
   base.push([0, 0.0195, -0.08 + rows * (kw + gap), 5.6]); // barre d'espace
   const heat = new Float32Array(base.length);
+  const LAYOUT = ['1234567890', 'azertyuiop', 'qsdfghjklm', 'wxcvbn,;:!'];
+  const keyOf = (ch) => { // la touche enfoncée est la vraie, disposition AZERTY
+    if (ch === ' ' || ch === '\n') return base.length - 1;
+    const c = ch.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const r = LAYOUT.findIndex((l) => l.includes(c));
+    return r < 0 ? 2 * cols + 6 : r * cols + 1 + LAYOUT[r].indexOf(c);
+  };
   const put = (i) => {
     const [x, y, z, sx] = base[i], t = heat[i];
-    m.makeScale(sx, 1, 1).setPosition(x, y - 0.0028 * Math.min(1, t * 2), z);
+    m.makeScale(sx, 1, 1).setPosition(x, y - 0.0036 * Math.min(1, t * 2), z);
     keys.setMatrixAt(i, m);
     keys.setColorAt(i, col.set('#3f4146').lerp(col.clone().set('#ffd27a'), Math.min(1, t * 1.3)));
   };
@@ -50,7 +57,7 @@ export function createLaptop() {
     ctx.fillStyle = '#2d3342'; ctx.fillRect(0, 0, W, 54);
     for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(30 + i * 28, 27, 9, 0, 7); ctx.fill(); }
     ctx.fillStyle = '#c9cfdd'; ctx.font = '26px Consolas, "Courier New", monospace'; ctx.textBaseline = 'middle'; ctx.fillText(S.title, 130, 28);
-    ctx.fillStyle = '#eef1f7'; ctx.font = '40px Consolas, "Courier New", monospace'; ctx.textBaseline = 'top';
+    ctx.fillStyle = '#eef1f7'; ctx.font = '60px Consolas, "Courier New", monospace'; ctx.textBaseline = 'top';
     const lines = [];
     for (const para of S.text.split('\n')) {
       let cur = '';
@@ -59,10 +66,10 @@ export function createLaptop() {
       }
       lines.push(cur);
     }
-    const show = lines.slice(-8);
-    show.forEach((l, i) => ctx.fillText(l, 34, 78 + i * 52));
+    const show = lines.slice(-6);
+    show.forEach((l, i) => ctx.fillText(l, 34, 84 + i * 76));
     const last = show[show.length - 1] || '';
-    if (S.caret < 0.5) { ctx.fillStyle = '#ffd27a'; ctx.fillRect(38 + ctx.measureText(last).width, 80 + (show.length - 1) * 52, 20, 40); }
+    if (S.caret < 0.5) { ctx.fillStyle = '#ffd27a'; ctx.fillRect(38 + ctx.measureText(last).width, 86 + (show.length - 1) * 76, 28, 58); }
     tex.needsUpdate = true;
   }
   if (hasDom) {
@@ -76,14 +83,15 @@ export function createLaptop() {
     group,
     type(ch) {
       if (ch === '\b') S.text = S.text.slice(0, -1); else S.text += ch;
-      const i = ch === ' ' ? base.length - 1 : Math.floor(Math.random() * (base.length - 1));
+      const i = keyOf(ch);
       heat[i] = 1;
       S.caret = 0; draw();
+      return base[i][0] < 0 ? 'L' : 'R';
     },
     clear(title) { S.text = ''; if (title) S.title = title; draw(); },
     update(dt) {
       let dirty = false;
-      for (let i = 0; i < heat.length; i++) if (heat[i] > 0) { heat[i] = Math.max(0, heat[i] - dt * 7); put(i); dirty = true; }
+      for (let i = 0; i < heat.length; i++) if (heat[i] > 0) { heat[i] = Math.max(0, heat[i] - dt * 9); put(i); dirty = true; }
       if (dirty) { keys.instanceMatrix.needsUpdate = true; if (keys.instanceColor) keys.instanceColor.needsUpdate = true; }
       const c = S.caret; S.caret = (S.caret + dt) % 1;
       if ((c < 0.5) !== (S.caret < 0.5)) draw();

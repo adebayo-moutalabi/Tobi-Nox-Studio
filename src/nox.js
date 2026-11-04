@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { V, clamp, lerp, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
 import { buildNoxClips } from './nox-clips.js';
 import { createMotion } from './motion.js';
-import { createTalk, stepTalk, talkShape } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, clearRot } from './talk.js';
 
 export const NOX_HEIGHT = 0.45;
 
@@ -354,7 +354,9 @@ export function createNox() {
     },
     setMorphs(obj) { Object.assign(weights, obj); apply(weights); },
     update(dt) {
+      clearRot([bones.head]);
       motion.update(dt);
+      talkBody(state, dt, bones.head, null, 1.5);
       state.time += dt;
       state.blinkT -= dt;
       if (state.blinkT <= 0 && !state.blinkDir) { state.blinkDir = 1; state.blinkT = 2.4 + Math.random() * 3.4; }

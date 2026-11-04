@@ -1,6 +1,7 @@
 // Export vidéo image par image : le temps de l'histoire avance d'exactement 1/fps par image,
 // donc la vidéo est parfaitement fluide, même sur un ordinateur lent.
 import { Muxer, ArrayBufferTarget } from 'mp4-muxer';
+import { playSfx, addMusic } from './sound.js';
 
 const RATE = 48000;
 const pad = (n, l = 2) => String(n).padStart(l, '0');
@@ -13,12 +14,31 @@ export const tick = (() => { // laisse les promesses de l'histoire avancer, sans
   return () => new Promise((r) => { q.push(r); ch.port2.postMessage(0); });
 })();
 
-export async function exportVideo(v, player, text, { width = 1080, height = 1920, fps = 30, captions = true, onProgress, maxSeconds = 600 } = {}) {
+// Sous-titre discret : une ligne, le mot prononcé surligné.
+function drawCaption(ctx, c, w, h) {
+  const s = Math.round(h * (h > w ? 0.029 : 0.05)), y = h * (h > w ? 0.755 : 0.86), padX = s * 0.2, padY = s * 0.13;
+  ctx.font = `800 ${s}px "Bricolage Grotesque", "Trebuchet MS", sans-serif`;
+  ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
+  const gap = ctx.measureText(' ').width * 1.15, ws = c.words.map((x) => ctx.measureText(x).width);
+  let x = (w - ws.reduce((n, a) => n + a, 0) - gap * (ws.length - 1)) / 2;
+  c.words.forEach((word, i) => {
+    if (i === c.active) {
+      ctx.fillStyle = c.color; ctx.beginPath(); ctx.roundRect(x - padX, y - s / 2 - padY, ws[i] + padX * 2, s + padY * 2, s * 0.2); ctx.fill();
+      ctx.fillStyle = '#17132c'; ctx.fillText(word, x, y);
+    } else {
+      ctx.lineWidth = s * 0.2; ctx.strokeStyle = 'rgba(8,7,20,.9)'; ctx.strokeText(word, x, y);
+      ctx.fillStyle = '#fff'; ctx.fillText(word, x, y);
+    }
+    x += ws[i] + gap;
+  });
+}
+
+export async function exportVideo(v, player, text, { width = 1080, height = 1920, fps = 30, captions = true, music = null, onProgress, maxSeconds = 600 } = {}) {
   if (typeof VideoEncoder === 'undefined') throw new Error("Ce navigateur ne sait pas encoder la vidéo : utilise Chrome ou Edge.");
   const config = { codec: 'avc1.640028', width, height, bitrate: 14_000_000, framerate: fps };
   if (!(await VideoEncoder.isConfigSupported(config)).supported) throw new Error('Encodage H.264 indisponible sur cet ordinateur.');
   const target = new ArrayBufferTarget();
-  const withAudio = player.voices.length > 0 && typeof AudioEncoder !== 'undefined';
+  const withAudio = typeof AudioEncoder !== 'undefined';
   const muxer = new Muxer({ target, video: { codec: 'avc', width, height, frameRate: fps }, ...(withAudio ? { audio: { codec: 'aac', numberOfChannels: 2, sampleRate: RATE } } : {}), fastStart: 'in-memory' });
   let fail = null;
   const enc = new VideoEncoder({ output: (c, m) => muxer.addVideoChunk(c, m), error: (e) => { fail = e; } });
@@ -43,14 +63,7 @@ export async function exportVideo(v, player, text, { width = 1080, height = 1920
         ctx.fillStyle = '#f6f1e6'; ctx.font = `700 ${Math.round(height * 0.06)}px "Bricolage Grotesque", "Trebuchet MS", sans-serif`;
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(o.card, width / 2, height / 2);
       }
-      if (captions && o.caption) {
-        const s = Math.round(height * (height > width ? 0.05 : 0.07));
-        ctx.font = `800 ${s}px "Bricolage Grotesque", "Trebuchet MS", sans-serif`;
-        ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
-        ctx.lineWidth = s * 0.22; ctx.strokeStyle = '#111';
-        ctx.strokeText(o.caption, width / 2, height * 0.72);
-        ctx.fillStyle = o.captionColor || '#fff'; ctx.fillText(o.caption, width / 2, height * 0.72);
-      }
+      if (captions && o.caption) drawCaption(ctx, o.caption, width, height);
       const frame = new VideoFrame(comp, { timestamp: Math.round((i * 1e6) / fps), duration: Math.round(1e6 / fps) });
       enc.encode(frame, { keyFrame: i % (fps * 2) === 0 });
       frame.close();
@@ -61,7 +74,7 @@ export async function exportVideo(v, player, text, { width = 1080, height = 1920
     if (fail) throw fail;
     if (i === 0) throw new Error('Rien à exporter : attends la fin de la lecture en cours.');
     await enc.flush();
-    if (withAudio && i > 0) await encodeAudio(muxer, player.clips, i / fps);
+    if (withAudio && i > 0) await encodeAudio(muxer, player, i / fps, music);
     muxer.finalize();
   } finally {
     player.stop();
@@ -71,9 +84,12 @@ export async function exportVideo(v, player, text, { width = 1080, height = 1920
   return { blob: new Blob([target.buffer], { type: 'video/mp4' }), srt: toSrt(player.subtitles), seconds: i / fps };
 }
 
-async function encodeAudio(muxer, clips, seconds) { // mixe les voix à leur place, puis les encode en AAC
+async function encodeAudio(muxer, player, seconds, music) {
+  const clips = player.clips;
   const off = new OfflineAudioContext(2, Math.ceil(seconds * RATE), RATE);
   for (const c of clips) { const s = off.createBufferSource(); s.buffer = c.buffer; s.connect(off.destination); s.start(c.start); }
+  for (const e of player.sfx) if (e.start < seconds) playSfx(off, off.destination, e.type, e.start);
+  if (music) addMusic(off, off.destination, seconds, clips, music.file);
   const mix = await off.startRendering();
   let fail = null;
   const enc = new AudioEncoder({ output: (c, m) => muxer.addAudioChunk(c, m), error: (e) => { fail = e; } });

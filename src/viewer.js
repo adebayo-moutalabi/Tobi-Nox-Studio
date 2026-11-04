@@ -103,7 +103,9 @@ export function startViewer(cfg) {
     if (instant) { camera.position.copy(p); controls.target.copy(tgt); controls.update(); camTween = null; return; }
     camTween = { p0: camera.position.clone(), t0: controls.target.clone(), p1: p, t1: tgt, t: 0 };
   }
+  let paused = false;
   function resize() {
+    if (paused) return; // pendant l'export, la taille de la vidéo ne bouge pas
     const w = stage.clientWidth, h = stage.clientHeight;
     renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix();
   }
@@ -492,7 +494,7 @@ export function startViewer(cfg) {
   });
   function say(a, text, duration, env) {
     return new Promise((res) => {
-      bubble.textContent = text; bubble.hidden = false; speaker = a;
+      bubble.textContent = text; bubble.hidden = !!api.quiet; speaker = a;
       a.hero.say(text, () => { bubble.hidden = true; speaker = null; res(); }, duration, env);
     });
   }
@@ -503,7 +505,7 @@ export function startViewer(cfg) {
   spin.addEventListener('change', () => { controls.autoRotate = spin.checked; });
   controls.autoRotateSpeed = 2.2;
 
-  const api = { actors, scene, room, camera, controls, renderer, putAt, sink, leave, hop, glide, swing, stash, wait, walkTo, face, sit, stand, take, drop, give, attach, item, useHeld, say, setView, ahead, pos, get active() { return A; }, sync: () => syncChips() };
+  const api = { lights: { key, hemi, fill: fillLight }, actors, scene, room, camera, controls, renderer, putAt, sink, leave, hop, glide, swing, stash, wait, walkTo, face, sit, stand, take, drop, give, attach, item, useHeld, say, setView, ahead, pos, get active() { return A; }, sync: () => syncChips() };
 
   if (actors.length > 1) {
     el('castBox').hidden = false;
@@ -569,7 +571,7 @@ export function startViewer(cfg) {
       bubble.style.top = `${(-headWorld.y * 0.5 + 0.5) * stage.clientHeight}px`;
     }
   }
-  let paused = false, qFrames = 0, qTime = 0, qLevel = 0;
+  let qFrames = 0, qTime = 0, qLevel = 0;
   function adapt(dt) { // sur une machine sans carte graphique, on allège le rendu
     qFrames++; qTime += dt;
     if (qTime < 2 || qLevel > 1) return;
@@ -583,9 +585,10 @@ export function startViewer(cfg) {
   Object.defineProperty(api, 'simTime', { get: () => simT });
   api.beginOffline = (w, h) => { // rendu image par image à la taille de la vidéo
     paused = true;
+    const ratio = renderer.getPixelRatio();
     renderer.setPixelRatio(1); renderer.setSize(w, h, false);
     camera.aspect = w / h; camera.updateProjectionMatrix();
-    return { end() { paused = false; resize(); } };
+    return { end() { paused = false; renderer.setPixelRatio(ratio); resize(); } };
   };
   renderer.setAnimationLoop(() => {
     if (paused || api.hold) return;
