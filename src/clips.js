@@ -3,6 +3,7 @@
 //  - bras : rz = +s*a écarte, rx < 0 vers l'avant ; avant-bras rx < 0 plie le coude
 //  - jambe : rx < 0 vers l'avant ; genou rx > 0 plie
 //  - tête / buste : rx > 0 penche en avant, ry tourne
+import { mocapClips } from './mocap.js';
 import * as THREE from 'three';
 
 const TAU = Math.PI * 2;
@@ -555,6 +556,7 @@ export function sample(name, dur, fn, loop, boneMap, names = bonesList()) {
 }
 
 export function buildClips(bones) {
+  const recorded = mocapClips();
   for (const n of ['L', 'R']) {
     const S = bones[`arm_${n}`].getWorldPosition(new THREE.Vector3());
     const E = bones[`forearm_${n}`].getWorldPosition(new THREE.Vector3());
@@ -565,5 +567,11 @@ export function buildClips(bones) {
   for (const [k, [d, fn]] of Object.entries(loops)) out.push(sample(k, d, fn, true, bones));
   for (const [k, [d, fn]] of Object.entries(gestures)) out.push(sample(k, d, fn, false, bones));
   for (const c of out) if (UPPER.has(c.name)) c.userData.layer = 'upper';
+  // Les mouvements de base viennent de vrais enregistrements
+  for (const r of recorded) {
+    const i = out.findIndex((c) => c.name === r.name);
+    if (r.name.startsWith('talk_')) { r.userData.layer = 'upper'; r.userData.weight = 0.6; }
+    if (i >= 0) out[i] = r; else out.push(r);
+  }
   return out;
 }

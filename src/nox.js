@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { V, clamp, lerp, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
 import { buildNoxClips } from './nox-clips.js';
 import { createMotion } from './motion.js';
-import { createTalk, stepTalk, talkShape, talkBody, lifeBody, clearRot } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot } from './talk.js';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const NOX_HEIGHT = 0.45;
@@ -228,17 +228,19 @@ const EXPRESSIONS = {
   sourire: { smile: 0.85 },
   joie: { happy: 1, open: 0.55, smile: 0.55 },
   surprise: { wide: 1, round: 1, lookU: 0.2 },
-  colere: { angry: 1, frown: 0.8, flat: 0.2 },
-  tristesse: { sad: 1, frown: 1, lookD: 0.45 },
-  doute: { blinkR: 0.42, smirk: 0.9, lookL: 0.5, lookU: 0.3 },
-  peur: { wide: 0.8, sad: 0.45, frown: 0.8, round: 0.3 },
+  colere: { angry: 0.45, frown: 0.7, flat: 0.2 },
+  tristesse: { sad: 0.22, frown: 0.7, lookD: 0.5 },
+  doute: { flat: 0.55, lookL: 0.45, lookU: 0.25 },
+  peur: { wide: 0.5, frown: 0.7, round: 0.3 },
   clin: { blinkR: 1, smile: 0.9, smirk: 0.2 },
   amour: { heart: 1, smile: 0.75 },
   sommeil: { blinkL: 0.96, blinkR: 0.96, flat: 0.5 },
   dort: { blinkL: 0.96, blinkR: 0.96, flat: 0.5 },
 };
 // Part de l'expression gardée sur la bouche pendant la parole
-const TALK_EASE = { smirk: 0.12, smile: 0.5, frown: 0.5 };
+const TALK_EASE = { smirk: 0.1, smile: 0.35, frown: 0.3 };
+// Le doute et la tristesse passent par la tête : les yeux restent ronds.
+const TILT = { doute: [0.03, 0, 0.15], tristesse: [0.14, 0, -0.05], peur: [-0.06, 0, 0] };
 const VISEMES = {
   a: { open: 0.72 }, e: { open: 0.32, flat: 0.5 }, i: { open: 0.14, flat: 0.8 }, o: { round: 0.9, open: 0.15 }, u: { round: 0.65 },
   m: { flat: 0.2 }, f: { open: 0.12 }, t: { open: 0.24 }, s: { open: 0.1, flat: 0.5 }, r: { open: 0.22, round: 0.25 }, ' ': {},
@@ -359,6 +361,9 @@ export function createNox() {
       motion.update(dt);
       lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.head });
       talkBody(state, dt, bones.head, null, 1.5);
+      const tilt = TILT[state.exprName] || [0, 0, 0], kt = 1 - Math.exp(-dt * 7);
+      state.tilt = (state.tilt || [0, 0, 0]).map((x, i) => x + (tilt[i] - x) * kt);
+      addRot(bones.head, ...state.tilt);
       state.time += dt;
       state.blinkT -= dt;
       if (state.blinkT <= 0 && !state.blinkDir) { state.blinkDir = 1; state.blinkT = 2.4 + Math.random() * 3.4; }

@@ -64,3 +64,6 @@ node export-glb.mjs objets
 2. Fiche de projet, nouveaux décors, nouveaux personnages.
 3. Les Aînés, Chat et Claude pour l'instant : personnages originaux, sans logos (marques déposées).
 4. Test d'un export complet en 1080p.
+
+## Crédits
+Mouvements de base de Tobi : [Universal Animation Library](https://quaternius.com/packs/universalanimationlibrary.html) de Quaternius (CC0), transposés avec `tools/mocap.mjs`.

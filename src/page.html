@@ -58,7 +58,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--sole); outl
 .row .main { flex: 1; }
 button.main { background: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 10px 12px; }
 button.main:hover { background: var(--accent); filter: brightness(1.06); }
-.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec { display: none; }
+.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel:not([data-tab]) > .atelier { display: none; }
 .panel[data-tab="jouer"] > #storyBox { display: none; }
 .app:has(.panel[data-tab="film"]) .hint, .app:has(.panel[data-tab="film"]) .views { display: none; }
 .cap { position: absolute; left: 4%; right: 4%; top: 75.5%; transform: translateY(-50%); text-align: center; font: 800 2.9cqh "Bricolage Grotesque", "Trebuchet MS", sans-serif; color: #fff; pointer-events: none; text-shadow: 0 0 .22em #08071a, 0 0 .22em #08071a; }
@@ -92,6 +92,56 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
   h1 { font-size: 21px; }
   .hint { display: none; }
 }
+
+/* Style inspiré des interfaces Apple : groupes arrondis, interrupteurs, contrôles segmentés, ressorts doux */
+:root { --spring: cubic-bezier(.32, .72, 0, 1); --tint: #0a84ff; --group: #fff; --hair: rgba(60, 60, 67, .16); --panel: #f2f2f7; --ink: #1c1c1e; --muted: #6e6e73; --chip: rgba(118, 118, 128, .12); --chip-hover: rgba(118, 118, 128, .2); --line: rgba(60, 60, 67, .16); --accent: var(--tint); --accent-ink: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --group: #1c1c1e; --hair: rgba(84, 84, 88, .55); --panel: #000; --ink: #f5f5f7; --muted: #98989d; --chip: rgba(118, 118, 128, .24); --chip-hover: rgba(118, 118, 128, .34); --line: rgba(84, 84, 88, .55); } }
+:root[data-theme="dark"] { --group: #1c1c1e; --hair: rgba(84, 84, 88, .55); --panel: #000; --ink: #f5f5f7; --muted: #98989d; --chip: rgba(118, 118, 128, .24); --chip-hover: rgba(118, 118, 128, .34); --line: rgba(84, 84, 88, .55); }
+body, button, select, input { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+h1 { font-family: inherit; font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
+h2 { font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
+.panel { background: var(--panel); border-left: 0; gap: 16px; }
+.sub { font-size: 13px; }
+button { border-radius: 10px; font-weight: 500; font-size: 14px; padding: 8px 12px; background: var(--chip); transition: transform .28s var(--spring), background .2s, opacity .2s, filter .2s; }
+button:active:not(:disabled) { transform: scale(.965); transition-duration: .08s; }
+button.main { width: 100%; background: var(--tint); color: #fff; font-size: 15px; font-weight: 600; padding: 12px; border-radius: 12px; }
+button.main:hover { background: var(--tint); filter: brightness(1.08); }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid color-mix(in srgb, var(--tint) 45%, transparent); outline-offset: 1px; }
+.step { background: var(--group); border: 0; border-radius: 14px; padding: 14px; gap: 10px; box-shadow: 0 .5px 0 var(--hair); transition: transform .4s var(--spring); }
+.step h2 span { background: var(--chip); color: var(--ink); font-weight: 600; transition: background .3s, color .3s; }
+.step.done h2 span { background: #30d158; color: #fff; }
+.step select, input[type="password"] { appearance: none; -webkit-appearance: none; font-size: 15px; padding: 10px 34px 10px 12px; border: 0; border-radius: 10px; background: var(--chip); color: var(--ink); }
+.step select { background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%, var(--muted) 62%, transparent 62%), linear-gradient(-45deg, transparent 50%, var(--muted) 50%, var(--muted) 62%, transparent 62%); background-size: 7px 7px; background-position: right 17px center, right 12px center; background-repeat: no-repeat; }
+input[type="password"] { padding-right: 12px; }
+.row button:not(.main) { padding-inline: 16px; border-radius: 12px; }
+.seg { display: flex; gap: 2px; padding: 2px; border-radius: 10px; background: var(--chip); }
+.seg button { flex: 1; min-width: 0; padding: 6px 8px; font-size: 13px; font-weight: 500; background: transparent; border-radius: 8px; transition: background .28s var(--spring), box-shadow .28s var(--spring), transform .28s var(--spring); }
+.seg button[aria-pressed="true"], .tabs button[aria-pressed="true"] { background: var(--group); color: var(--ink); font-weight: 600; box-shadow: 0 2px 6px rgba(0, 0, 0, .14), 0 0 0 .5px rgba(0, 0, 0, .05); }
+.stack { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.sw { display: flex !important; justify-content: space-between; align-items: center; font-size: 14px; padding: 3px 0; }
+.sw input { appearance: none; -webkit-appearance: none; position: relative; width: 46px !important; height: 28px !important; flex: none; margin: 0; border-radius: 14px; background: var(--chip); cursor: pointer; transition: background .25s; }
+.sw input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, .25); transition: transform .3s var(--spring); }
+.sw input:checked { background: #30d158; }
+.sw input:checked::after { transform: translateX(18px); }
+.file { display: flex !important; justify-content: center; padding: 9px 12px; border-radius: 10px; background: var(--chip); font-size: 14px; font-weight: 500; cursor: pointer; transition: background .2s, transform .28s var(--spring); }
+.file:hover { background: var(--chip-hover); }
+.file:active { transform: scale(.975); }
+.file input { position: absolute; width: 1px !important; height: 1px !important; opacity: 0; }
+summary { list-style: none; display: flex; align-items: center; justify-content: space-between; color: var(--tint); font-size: 14px; font-weight: 500; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; width: 7px; height: 7px; margin-right: 4px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .3s var(--spring); }
+details[open] > summary::after { transform: rotate(45deg); }
+details::details-content { block-size: 0; overflow: clip; opacity: 0; transition: block-size .34s var(--spring), opacity .24s, content-visibility .34s allow-discrete; }
+details[open]::details-content { block-size: auto; opacity: 1; }
+@supports (interpolate-size: allow-keywords) { :root { interpolate-size: allow-keywords; } }
+.bar { height: 4px; border-radius: 2px; background: var(--chip); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 2%; border-radius: 2px; background: var(--tint); transition: width .5s var(--spring); }
+#elLines button { border-radius: 8px; }
+.voice { flex: 1; justify-content: space-between; font-size: 14px; }
+.panel > section:not(#storyBox) { background: var(--group); border-radius: 14px; padding: 14px; }
+.panel[data-tab] { animation: rise .4s var(--spring); }
+@keyframes rise { from { opacity: .4; transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
 <div class="app">
   <main class="stage" id="stage">
@@ -107,9 +157,9 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
       <h1>{{H1}}</h1>
       <p class="sub">{{SUB}}</p>
     </header>
-    <nav class="tabs" id="tabs" hidden aria-label="Mode">
+    <nav class="tabs seg" id="tabs" hidden aria-label="Mode">
       <button type="button" data-tab="film" aria-pressed="true">Créer un Short</button>
-      <button type="button" data-tab="jouer" aria-pressed="false">Jouer librement</button>
+      <button type="button" data-tab="jouer" aria-pressed="false">Atelier</button>
     </nav>
     <section id="storyBox" hidden>
       <div class="step">
@@ -125,7 +175,7 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
         <ol id="elLines"></ol>
         <details id="elSetup"><summary>Réglages des voix</summary>
           <div class="grid" style="margin-top:8px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger mes voix</button></div>
-          <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="elKeep"> Garder la clé sur cet ordinateur</label></div>
+          <div class="opts" style="margin-top:8px"><label class="sw">Garder la clé ici <input type="checkbox" id="elKeep"></label></div>
           <div class="grid" style="margin-top:8px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
           <label class="voice" style="margin-top:8px">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
         </details>
@@ -133,13 +183,15 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
       <div class="step">
         <h2><span>3</span> Exporter la vidéo</h2>
         <button type="button" class="main" id="storyExport">Exporter en MP4</button>
+        <div class="bar" id="storyBar" hidden><i></i></div>
         <p class="sub" id="storyNow" aria-live="polite"></p>
         <details><summary>Réglages de la vidéo</summary>
-          <div class="grid" style="margin-top:8px"><select id="storyFormat" aria-label="Format"><option value="short">Short 9:16</option><option value="wide">YouTube 16:9</option></select><select id="storyFps" aria-label="Images par seconde"><option value="30">30 images/s</option><option value="60">60 images/s</option></select></div>
-          <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="storyCaps" checked> Sous-titres</label><label><input type="checkbox" id="storyMusic" checked> Musique de fond</label><label>Ma musique : <input type="file" id="storyMusicFile" accept="audio/*"></label><label>Mes voix, dans l'ordre : <input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
+          <div class="stack"><select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select><select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
+          <div class="opts" style="margin-top:8px"><label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label><label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label><label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label><label class="file">Importer mes voix<input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
         </details>
       </div>
     </section>
+    <p class="sub atelier">Essaie un geste ou un objet avant de l'écrire dans un script.</p>
     <section id="castBox" hidden><h2>Piloter</h2><div class="grid" id="cast"></div></section>
     <section id="roomBox" hidden><h2>Dans la chambre</h2><div class="grid" id="roomActs"></div><div class="grid held" id="roomSwitch"></div></section>
     <section id="scenesBox" hidden><h2>Scènes à deux</h2><div class="grid" id="scenes"></div></section>

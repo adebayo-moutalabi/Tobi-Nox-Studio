@@ -24,7 +24,7 @@ function createPost({ renderer, scene, camera }) {
   composer.setPixelRatio(1); composer.setSize(size.x, size.y);
   composer.addPass(new RenderPass(scene, camera));
   const ao = new GTAOPass(scene, camera, size.x, size.y);
-  ao.updateGtaoMaterial({ radius: 0.2, distanceExponent: 1.3, thickness: 1, scale: 1.1, samples: 12, distanceFallOff: 1, screenSpaceRadius: false });
+  ao.updateGtaoMaterial({ radius: 0.2, distanceExponent: 1.3, thickness: 1, scale: 1.1, samples: 8, distanceFallOff: 1, screenSpaceRadius: false });
   ao.blendIntensity = 0.85;
   composer.addPass(ao);
   composer.addPass(new UnrealBloomPass(size.clone(), 0.28, 0.55, 0.82));
@@ -108,6 +108,7 @@ export function createLook(v) {
       L.hemi.color.set(on ? '#4d3f6e' : day.hc); L.hemi.groundColor.set(on ? '#17132c' : day.hg);
       scene.environmentIntensity = on ? 0.06 : day.env;
       L.key.intensity = on ? 0 : day.key; L.fill.intensity = on ? 0 : day.fill;
+      L.key.visible = !on; L.fill.visible = !on; // pas d'ombre de soleil à calculer la nuit
     },
     insert(title, big, small) {
       Object.assign(I, { on: true, t: 0, title, big, small, done: false });

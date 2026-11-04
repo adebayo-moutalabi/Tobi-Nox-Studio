@@ -268,7 +268,6 @@ function buildDeskItems(p) {
   for (let i = 0; i < b2.p.length; i += 3) { const v = V(b2.p[i], b2.p[i + 1], b2.p[i + 2]).applyMatrix4(m2); p.p.push(v.x, v.y, v.z); }
   p.c.push(...b2.c);
   box(p, [1.2, y + 0.045, -0.45], [0.13, 0.09, 0.24], '#c9dfe0'); box(p, [1.2, y + 0.11, -0.45], [0.05, 0.05, 0.09], '#faf8f3');
-  box(p, [0.95, y + 0.012, -0.5], [0.08, 0.024, 0.17], '#3f4fa8'); box(p, [0.93, y + 0.03, -0.6], [0.06, 0.012, 0.06], '#d09a4e');
   // Post-it
   for (const [z, yy] of [[-1.2, 1.1], [-1.1, 1.1], [-0.88, 1.11], [-0.78, 1.11], [-0.8, 0.99]]) box(p, [1.367, yy, z], [0.004, 0.075, 0.075], '#f0d84c', { vary: 0.05 });
   // Détecteur de fumée

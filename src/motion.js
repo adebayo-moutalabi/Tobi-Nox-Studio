@@ -16,7 +16,7 @@ const PACE = 1.45;
 class Layer {
   constructor(bones) { this.bones = bones; this.clip = null; this.w = 0; this.target = 0; this.t = 0; this.q = new THREE.Quaternion(); }
   play(clip) {
-    this.clip = clip; this.t = 0; this.target = 1;
+    this.clip = clip; this.t = 0; this.target = clip.userData.weight ?? 1; this.top = this.target;
     this.w = this.w > 0.5 ? 0.5 : this.w;
     this.loop = !!clip.userData.loop;
     this.tracks = clip.userData.moved;
