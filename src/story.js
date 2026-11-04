@@ -100,9 +100,20 @@ export function createPlayer(v, ui) {
   const ray = new THREE.Raycaster();
   // Les visées de caméra testent la chambre des dizaines de fois par plan : sans cet index, chaque plan bloquait l'image plusieurs secondes.
   // Tout objet de la chambre peut cacher un personnage : tableau, portes, chaise, frigo, volet...
-  const blockers = [];
-  room.group.traverse((m) => { if (m.isMesh && !m.isInstancedMesh && m.name !== 'dehors' && m.name !== 'miroir') blockers.push(m); });
-  for (const m of blockers) { if (!m.geometry.index && !m.geometry.attributes.position) continue; m.geometry.computeBoundsTree = computeBoundsTree; m.geometry.computeBoundsTree({ indirect: true }); m.raycast = acceleratedRaycast; }
+  let blockers = [];
+  function findBlockers() { // relevé au début de chaque lecture : les objets posés au sol comptent aussi
+    const skip = new Set(v.actors.map((x) => x.hero.root)); skip.add(v.camera);
+    blockers = [];
+    const walk = (o) => {
+      if (skip.has(o) || o.visible === false) return;
+      if (o.isMesh && !o.isInstancedMesh && !o.isSkinnedMesh && o.name !== 'dehors' && o.name !== 'miroir' && o.geometry?.attributes.position) {
+        if (!o.geometry.boundsTree) { o.geometry.computeBoundsTree = computeBoundsTree; o.geometry.computeBoundsTree({ indirect: true }); }
+        o.raycast = acceleratedRaycast; blockers.push(o);
+      }
+      o.children.forEach(walk);
+    };
+    walk(v.scene);
+  }
   const eyes = (a) => { const h = a.hero.bones.head.getWorldPosition(new THREE.Vector3()); h.y += a.eyeUp; return h; };
   const clear = (from, to) => {
     const d = to.clone().sub(from), L = d.length();
@@ -130,7 +141,7 @@ export function createPlayer(v, ui) {
     shoot(pos, target);
   }
   // Cadrage : la tête garde toujours de l'air au-dessus d'elle. Les murs sont traversables pour reculer.
-  const room2 = (c) => c.x > -3.4 && c.x < 3.4 && c.z > -3.6 && c.z < 4.4 && c.y > 0.14 && c.y < 2.4;
+  const room2 = (c) => c.x > -1.32 && c.x < 1.32 && c.z > -1.8 && c.z < 2.85 && c.y > 0.14 && c.y < 2.4; // toujours dans la pièce : à travers un mur, on voyait l'envers du décor
   const seen = (c, p) => { const d = p.clone().sub(c), L = d.length(); ray.set(c, d.normalize()); ray.far = L - 0.12; return ray.intersectObjects(blockers, false).length === 0; };
   const blocks = (b, c, p) => { // l'autre personnage ne doit pas passer devant l'objectif
     if (!b.hero.root.visible) return false;
@@ -144,9 +155,9 @@ export function createPlayer(v, ui) {
     const toB = eyes(b).sub(H).setY(0).normalize(), across = near && fwd.clone().normalize().dot(toB) > 0.35; // face à face, ou côte à côte ?
     const to = (across ? toB : fwd).normalize();
     a.look = across ? b : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
-    const top = H.y + (big ? 0.24 : 0.2), fov = 32;
+    const top = H.y + (big ? 0.24 : 0.2);
     const span = tight ? (big ? 0.9 : 0.72) : (big ? 1.4 : 1.02);
-    for (const k of [1, 0.85, 0.72]) {
+    for (const [fov, k] of [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = top + sp * 0.13 - sp / 2;
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
@@ -324,7 +335,7 @@ export function createPlayer(v, ui) {
       }
       case 'pivote': return v.turn(a, plain(c.args[0] || 'chambre') !== 'bureau');
       case 'travaille': a.look = null; if (auto) follow(a); await v.acts.desk(a); track = null; return undefined;
-      case 'assis': return v.acts.edge(a);
+      case 'assis': a.look = null; if (auto) follow(a); await v.acts.edge(a); track = null; if (auto) talkShot(a); return undefined;
       case 'dort': return v.acts.sleep(a);
       case 'frigo': a.look = null; if (auto) { track = null; cut('frigo'); } return v.acts.fridge(a);
       case 'remet': a.look = null; if (auto) { track = null; cut('frigo'); } return v.acts.fridgeBack(a);
@@ -352,6 +363,7 @@ export function createPlayer(v, ui) {
     subtitles, clips, sfx: sfxList,
     async play(text, opts = {}) {
       if (running) return;
+      findBlockers();
       subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); v.quiet = true; look.hideInsert(); look.setMood('soir');
       const list = parseStory(text);
       running = true; stopped = false; ui.state(true); v.locked = true;

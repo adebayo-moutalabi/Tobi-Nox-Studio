@@ -38,6 +38,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Nouveaux épisodes.** 13, 14 et 15 : Tobi entre par la porte. L'ambiance se choisit par script ; les épisodes 11, 12 et 15 passent de jour.
 - **Réglages et navigation.** Plus de débordement horizontal, navigation réduite à quatre icônes discrètes.
 - **Caméra.** Tous les objets de la chambre comptent comme obstacles (tableau, portes, chaise, frigo). Les personnages suivent du regard celui qui marche.
+- **Assise.** Tobi s'arrête devant le lit et s'assoit dessus (`setLift`), arrive face à la chaise tournée vers lui, puis pivote vers le bureau.
 
 ## À faire
 

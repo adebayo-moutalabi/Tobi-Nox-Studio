@@ -573,10 +573,10 @@ export function createCharacter() {
   // État animé
   const faceMeshes = [headMesh, eyeMesh];
   const weights = Object.fromEntries(MORPHS.map((m) => [m, 0]));
-  const tapBones = [bones.head, bones.chest, bones.spine, bones.neck, bones.arm_L, bones.arm_R, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
+  const tapBones = [bones.head, bones.chest, bones.spine, bones.neck, bones.arm_L, bones.arm_R, bones.upleg_L, bones.upleg_R, bones.leg_L, bones.leg_R, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
   const state = {
     expr: {}, exprName: 'neutre', blinkT: 2, blink: 0, blinkDir: 0, glanceT: 3, glance: { lookL: 0, lookR: 0, lookU: 0, lookD: 0 },
-    talk: null, viseme: {}, current: null, loco: 'idle', gesture: null, taps: { L: 0, R: 0 }, tapF: { L: 1, R: 2 },
+    talk: null, viseme: {}, current: null, loco: 'idle', gesture: null, taps: { L: 0, R: 0 }, tapF: { L: 1, R: 2 }, lift: 0, liftTo: 0,
     spring: { v: 0, x: 0, vz: 0, z: 0, lastPos: V(0, 0, 0), lastVel: V(0, 0, 0) },
   };
 
@@ -605,11 +605,19 @@ export function createCharacter() {
     },
     setGlasses(on) { glasses.visible = on; },
     setMorphs(obj) { Object.assign(weights, obj); faceApply(weights); },
+    setLift(h) { state.liftTo = h; },
     tap(side) { state.taps[side] = 1; state.tapF[side] = (state.tapF[side] + 1 + (side === 'L' ? 0 : 1)) % 4; },
     update(dt) {
       clearRot(tapBones);
       motion.update(dt);
       lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.neck, armL: bones.arm_L, armR: bones.arm_R });
+      if (state.lift || state.liftTo) { // assis plus haut : le bassin monte, les pieds restent au sol
+        state.lift += (state.liftTo - state.lift) * (1 - Math.exp(-dt * 7));
+        if (Math.abs(state.lift) < 0.001 && !state.liftTo) state.lift = 0;
+        root.position.y = state.lift;
+        const k = state.lift / 0.09;
+        for (const n of ['L', 'R']) { addRot(bones[`upleg_${n}`], 0.24 * k, 0, 0); addRot(bones[`leg_${n}`], -0.28 * k, 0, 0); }
+      }
       talkBody(state, dt, bones.head, bones.chest, 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R] : null);
       if (motion.handsFree) keepHandsApart(root, bones);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main

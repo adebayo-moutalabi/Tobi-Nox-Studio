@@ -29,9 +29,12 @@ export function roomActions(v, room) {
   }
   async function desk(a) {
     if (big(a)) {
-      await arrive(a, P(0.72, -1.05), EAST);
-      a.spot = { exit: async () => { swivel(a, EAST, true); a.hero.motion.clearPose(); await v.stand(a); } };
+      // Il arrive devant la chaise tournée vers lui, s'assoit, puis pivote vers le bureau : il ne traverse rien.
+      room.chair.rotation.y = ROOM;
+      await arrive(a, P(0.42 + 0.3 * Math.sin(ROOM), -1.05 + 0.3 * Math.cos(ROOM)), ROOM);
+      a.spot = { exit: async () => { swivel(a, ROOM, true); a.hero.motion.clearPose(); await v.stand(a); room.chair.rotation.y = EAST; } };
       await v.sit(a, 'chair', true);
+      await swivel(a, EAST);
       a.hero.motion.togglePose('type');
     } else {
       await arrive(a, P(0.48, -0.28), EAST);
@@ -43,8 +46,9 @@ export function roomActions(v, room) {
   }
   async function bedEdge(a) {
     if (big(a)) {
-      await arrive(a, P(-0.42, -0.2), EAST);
-      a.spot = { exit: () => v.stand(a) };
+      await arrive(a, P(-0.3, -0.2), EAST); // il s'arrête devant le lit, sans y entrer
+      a.spot = { exit: async () => { a.hero.setLift(0); await v.stand(a); } };
+      a.hero.setLift(0.09); // le matelas est plus haut qu'une chaise : il s'assoit dessus, pas dedans
       await v.sit(a, 'chair', true);
     } else {
       const z = 0.28; // Nox garde sa place : Tobi peut toujours s'asseoir à côté
