@@ -3,7 +3,8 @@
 Ce document s'adresse à toute personne ou IA qui reprend le projet. Il dit ce qui existe, où c'est, et comment le changer.
 
 - `BIBLE.md` : la série, ses personnages et sa saison.
-- `SHORTS.md` : comment fabriquer un épisode, et le langage des scripts.
+- `SHORTS.md` : comment fabriquer un épisode.
+- `CHARTE_SCRIPTS.md` : comment écrire un script, pour une personne ou une IA.
 - `JOURNAL.md` : ce qui a été fait, dans l'ordre, et pourquoi.
 - Ce fichier : le fonctionnement technique.
 

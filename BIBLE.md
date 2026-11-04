@@ -36,6 +36,10 @@ Deux IA plus expérimentées, inspirées de Claude et ChatGPT. Elles viennent pa
 ### Rôles ponctuels
 Client, prof, parent, ami, recruteur. Voix ou personnages simples, qui mettent Tobi face au réel : rendu, budget, client exigeant, pression familiale.
 
+## Les phrases de la série
+
+Proposées dans `CHARTE_SCRIPTS.md`, à valider : « Nox. Aie la vision. » pour Tobi, « J'appelle ta mère. » pour Nox, et le compteur « Projet numéro dix-huit. ».
+
 ## Le décor
 La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêtre, cloison rouge. Un décor reconnaissable, rapide à réutiliser, qui peut évoluer avec Tobi : post-it, tableau, objets.
 

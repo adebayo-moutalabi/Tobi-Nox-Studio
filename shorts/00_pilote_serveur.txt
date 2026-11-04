@@ -31,7 +31,7 @@ INSERT Visiteurs | 12 | Depuis le lancement
 
 # 4. Il justifie l'absurde
 PLAN auto
-TOBI dit (excite) Mais s'ils passent au JT, on est prêts.
+TOBI dit (excite) Nox. Aie la vision. S'ils passent au JT, on est prêts.
 PLAN gros NOX
 NOX dit (sec) C'est une boulangerie.
 NOX dit (sec) Ouvre la facture.
@@ -60,5 +60,5 @@ NOX dit (punchline) Tu vas en manger pendant trois ans.
 PLAN gros TOBI
 TOBI dit (illumine) Attends... et si je facturais en baguettes ?
 PLAN gros NOX
-NOX dit (resigne) J'appelle tes parents.
+NOX dit (resigne) J'appelle ta mère.
 ATTENDRE 0.4

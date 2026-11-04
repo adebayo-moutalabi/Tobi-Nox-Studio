@@ -23,7 +23,7 @@ TOBI dit (fier) Un site de rencontre pour les plantes.
 PLAN gros NOX
 NOX dit (curieux) Pour quoi faire ?
 PLAN gros TOBI
-TOBI dit (excite) Elles se rencontrent. Elles matchent.
+TOBI dit (excite) Nox. Aie la vision. Elles matchent.
 PLAN auto
 NOX dit (sec) Les plantes ne bougent pas.
 PLAN auto
@@ -41,5 +41,5 @@ NOX dit (punchline) Comme tes dix-sept projets.
 PLAN gros TOBI
 TOBI dit (illumine) Attends... un site de rencontre pour les projets ?
 PLAN auto
-NOX dit (resigne) Dix-huit.
+NOX dit (resigne) Projet numéro dix-huit.
 ATTENDRE 0.4

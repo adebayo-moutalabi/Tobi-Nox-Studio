@@ -11,7 +11,7 @@ Le Studio génère ces répliques tout seul : section « Voix ElevenLabs », pui
 | `05_tobi.mp3` | Tobi | Douze. | fier |
 | `06_nox.mp3` | Nox | Par seconde ? | ironique |
 | `07_tobi.mp3` | Tobi | Au total. | gene |
-| `08_tobi.mp3` | Tobi | Mais s'ils passent au JT, on est prêts. | excite |
+| `08_tobi.mp3` | Tobi | Nox. Aie la vision. S'ils passent au JT, on est prêts. | excite |
 | `09_nox.mp3` | Nox | C'est une boulangerie. | sec |
 | `10_nox.mp3` | Nox | Ouvre la facture. | sec |
 | `11_nox.mp3` | Nox | Le client te paie combien ? | calme |
@@ -21,7 +21,7 @@ Le Studio génère ces répliques tout seul : section « Voix ElevenLabs », pui
 | `15_nox.mp3` | Nox | Oui. Dans les baguettes. | punchline |
 | `16_nox.mp3` | Nox | Tu vas en manger pendant trois ans. | punchline |
 | `17_tobi.mp3` | Tobi | Attends... et si je facturais en baguettes ? | illumine |
-| `18_nox.mp3` | Nox | J'appelle tes parents. | resigne |
+| `18_nox.mp3` | Nox | J'appelle ta mère. | resigne |
 
 **Bruitages et musique :** ajoutés automatiquement à l'export (clavier, apparition des chiffres, musique discrète qui baisse sous les voix).
 **Titre proposé :** Mon serveur coûte plus cher que mon loyer

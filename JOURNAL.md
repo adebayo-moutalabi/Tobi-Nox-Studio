@@ -26,6 +26,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Trois épisodes en mouvement.** 9 (sur le lit), 11 (réveil, miroir, bureau), 12 (pitch debout). Nox se pose à côté de Tobi sur le lit.
 - **Interface simplifiée.** Liste d'épisodes, deux actions (Regarder, Créer la vidéo), réglages dans un panneau latéral, atelier dans ce panneau. Identité isolée dans le bloc `CHARTE GRAPHIQUE`, avec des couleurs provisoires.
 - **Documentation.** `REPRISE.md` et ce journal.
+- **Lecture fluide.** Effets lourds réservés à l'export, recadrage quand un personnage se lève, lampe de chevet, plans côte à côte sur le lit.
+- **Charte d'écriture.** `CHARTE_SCRIPTS.md`, utilisable par n'importe qui. Premières phrases cultes dans les épisodes 1 et 3.
 
 ## À faire
 
