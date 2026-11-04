@@ -57,12 +57,9 @@ export function createLook(v) {
   const wash = new THREE.PointLight('#6a48e0', 1.5, 7, 1.4); wash.position.set(-0.9, 1.9, 0.9);
   const back = new THREE.PointLight('#4d38d8', 0.9, 4, 1.5); back.position.set(0.1, 1.5, -1.6);
   const screen = new THREE.PointLight('#a9cfff', 0.7, 1.7, 1.5); screen.position.set(1.0, 1.02, -1.0);
-  const strip = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.012, 1.25), new THREE.MeshBasicMaterial({ color: '#b48cff', toneMapped: false }));
-  strip.position.set(0.56, 0.69, -1.02);
-  const stripGlow = new THREE.PointLight('#a06bff', 1.2, 1.6, 1.5); stripGlow.position.set(0.5, 0.45, -1.0);
   const face = new THREE.PointLight('#ffcfa8', 2.6, 6, 1.1); face.position.set(0.25, 0.1, 0.1); camera.add(face); face.visible = false;
   const bedside = new THREE.PointLight('#ffb27a', 1.8, 3.2, 1.4); bedside.position.set(-0.55, 1.5, 0.75); // lampe de chevet : le lit reste lisible
-  soir.add(lamp, lamp.target, wash, back, screen, strip, stripGlow, bedside);
+  soir.add(lamp, lamp.target, wash, back, screen, bedside);
   const day = { bg: scene.background, hemi: lights.hemi.intensity, hc: lights.hemi.color.clone(), hg: lights.hemi.groundColor.clone(), env: scene.environmentIntensity, key: lights.key.intensity, fill: lights.fill.intensity };
 
   // Vignettage : les bords s'assombrissent, le regard reste au centre
