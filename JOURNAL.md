@@ -33,6 +33,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Export fiabilisé.** Encodage logiciel (433 ms contre 15 ms par image au test), arrêt immédiat de la lecture avant un export ou un nouveau lancement.
 - **Navigation et écriture.** Quatre espaces (Épisodes, Écrire, Coulisses, Réglages), barres de défilement masquées. Espace Écrire : brouillon écrit ou dicté, analyse et scénarios par Claude (`src/writer.js`), script à valider, puis animation. Sans clé Claude, la consigne se copie vers une autre IA.
 - **Néon retiré.** La bande lumineuse du bureau semblait traverser Tobi quand il s'assoit.
+- **Mains séparées.** `keepHandsApart()` dans `src/talk.js` empêche les mains de se traverser ou d'entrer dans le buste, hors gestes voulus (applaudir, clavier, objets).
 
 ## À faire
 

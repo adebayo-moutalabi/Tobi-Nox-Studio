@@ -70,7 +70,7 @@ export function clearRot(bones) {
   }
 }
 // Le corps accompagne la voix : la tête ponctue, le buste suit.
-export function talkBody(state, dt, head, chest, gain = 1) {
+export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   const T = state.talk, target = T ? (T.env ? T.level : 0.7) : 0;
   state.beat = (state.beat || 0) + (target - (state.beat || 0)) * (1 - Math.exp(-dt * 12));
   state.beatT = (state.beatT || 0) + dt;
@@ -78,6 +78,10 @@ export function talkBody(state, dt, head, chest, gain = 1) {
   if (b < 0.01) return;
   addRot(head, -0.03 * b - 0.075 * b * Math.sin(t * 8.5), 0.06 * b * Math.sin(t * 3.7), 0.04 * b * Math.sin(t * 2.9));
   addRot(chest, 0.02 * b * Math.sin(t * 4.2), 0.03 * b * Math.sin(t * 2.3), 0);
+  if (arms) { // les mains ponctuent la phrase, l'une après l'autre
+    addRot(arms[0], -0.42 * b * Math.max(0, Math.sin(t * 2.3)), 0, 0);
+    addRot(arms[1], -0.42 * b * Math.max(0, Math.sin(t * 1.9 + 2.2)), 0, 0);
+  }
 }
 
 // Corps au repos : respiration et transferts de poids lents, jamais répétitifs.
@@ -90,4 +94,27 @@ export function lifeBody(state, dt, b) {
   addRot(b.neck, 0.014 * calm * drift(t, 0.43, 0.79), 0.028 * calm * drift(t, 0.29, 0.67), 0.01 * calm * drift(t, 0.51, 0.37));
   addRot(b.armL, 0.012 * air, 0, 0.01 * drift(t, 0.33, 0.71));
   addRot(b.armR, 0.012 * air, 0, -0.01 * drift(t, 0.27, 0.59));
+}
+
+// Garde-fou pour tous les mouvements libres : une main ne passe ni dans l'autre, ni dans le buste.
+// La correction pivote le haut du bras, elle reste donc continue et invisible quand rien ne se touche.
+const hand = new THREE.Vector3(), shoulder = new THREE.Vector3(), from = new THREE.Vector3(), to = new THREE.Vector3(), turnBy = new THREE.Quaternion();
+const MIDDLE = 0.15, TORSO_X = 0.17, TORSO_FRONT = 0.17;
+export function keepHandsApart(root, bones) {
+  root.updateMatrixWorld(true);
+  for (const [n, s] of [['L', 1], ['R', -1]]) {
+    const arm = bones[`arm_${n}`], parent = arm.parent;
+    bones[`hand_${n}`].getWorldPosition(hand); arm.getWorldPosition(shoulder);
+    bones.chest.worldToLocal(hand);
+    let dx = Math.max(0, MIDDLE - s * hand.x), dz = 0;
+    if (Math.abs(hand.x) < TORSO_X && hand.y > -0.34 && hand.y < 0.2) dz = Math.max(0, TORSO_FRONT - hand.z);
+    if (!dx && !dz) continue;
+    hand.x += s * dx; hand.z += dz;
+    bones.chest.localToWorld(hand); // position voulue
+    to.copy(hand); parent.worldToLocal(to);
+    bones[`hand_${n}`].getWorldPosition(from); parent.worldToLocal(from);
+    parent.worldToLocal(shoulder);
+    from.sub(shoulder).normalize(); to.sub(shoulder).normalize();
+    arm.quaternion.premultiply(turnBy.setFromUnitVectors(from, to));
+  }
 }

@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
-import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart } from './talk.js';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const PALETTE = {
@@ -610,7 +610,8 @@ export function createCharacter() {
       clearRot(tapBones);
       motion.update(dt);
       lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.neck, armL: bones.arm_L, armR: bones.arm_R });
-      talkBody(state, dt, bones.head, bones.chest);
+      talkBody(state, dt, bones.head, bones.chest, 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R] : null);
+      if (motion.handsFree) keepHandsApart(root, bones);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
         const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);
         if (p > 0) {

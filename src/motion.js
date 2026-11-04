@@ -96,6 +96,7 @@ export function createMotion(root, bones, clips) {
     get sitting() { return !!s.seat && !s.full; },
     get gesture() { return s.full; },
     get pose() { return s.poseName; },
+    get handsFree() { return !s.full && !layers.gesture.clip && !layers.hold.clip && (!s.poseName || s.poseName.startsWith('talk')); }, // aucun geste voulu où les mains se touchent
     has: (name) => !!byName[name],
     setLocomotion(name) {
       if (s.seat || s.loco === name) return;
