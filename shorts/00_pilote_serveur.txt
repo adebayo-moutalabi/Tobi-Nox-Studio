@@ -1,0 +1,61 @@
+# PILOTE : MON SERVEUR COÛTE PLUS CHER QUE MON LOYER
+# Cible : 45 à 60 s. Format vertical.
+# Mécanique : ambition sincère, surenchère technique, réalité, punchline.
+
+DIRECT TOBI travaille
+DIRECT NOX travaille
+ECRAN boulangerie.txt
+TABLEAU Boulangerie Martin | Site en ligne ! | 3 clusters | Projet n° 16
+FONDU direct
+PLAN auto
+
+# 1. La situation, 2. l'annonce
+TOBI mimique joie
+TOBI dit Le site de la boulangerie est en ligne. Sur trois clusters.
+
+# 3. La question simple
+NOX mimique doute
+NOX dit Trois clusters. Combien de visiteurs ?
+TOBI mimique sourire
+TOBI dit Douze.
+NOX dit Par seconde ?
+TOBI mimique doute
+TOBI dit Au total.
+
+# 4. Il justifie l'absurde
+TOBI mimique joie
+TOBI dit Mais s'ils passent au JT, on est prêts.
+NOX mimique neutre
+NOX dit C'est une boulangerie, Tobi.
+
+# 5. La réalité, puis le roast
+PLAN clavier
+NOX dit Ouvre la facture.
+TOBI tape Facture cloud : 847 euros
+PLAN ecran
+ATTENDRE 0.6
+PLAN auto
+NOX dit Et le client te paie combien ?
+TOBI mimique peur
+TOBI dit Cent cinquante euros.
+PLAN ecran
+TOBI tape \nDevis client : 150 euros
+ATTENDRE 0.4
+PLAN gros NOX
+NOX mimique doute
+NOX dit Donc tu paies pour travailler.
+PLAN auto
+TOBI mimique sourire
+TOBI dit C'est un investissement.
+PLAN gros NOX
+NOX mimique sourire
+NOX dit Oui. Dans les baguettes. Tu vas en manger pendant trois ans.
+
+# 6. L'ouverture
+PLAN auto
+TOBI mimique doute
+TOBI geste reflechir &
+TOBI dit Attends... et si je facturais en baguettes ?
+PLAN gros NOX
+NOX mimique tristesse
+NOX dit J'appelle tes parents.

@@ -1,6 +1,6 @@
 # Tobi et Nox
 
-Série de sketchs 3D pour YouTube Shorts (40 s à 1 min 30, vertical), avec un étudiant attachant (Tobi) et sa mascotte robot (Nox).
+Mini-sitcom 3D verticale pour YouTube Shorts (45 à 75 s). Tobi, étudiant qui cherche sa voie, et Nox, son IA sarcastique. Voir `BIBLE.md`.
 Tout tourne dans le navigateur, sans logiciel 3D à installer.
 
 ## Où en est le projet
@@ -30,6 +30,7 @@ Tout tourne dans le navigateur, sans logiciel 3D à installer.
 | `studio.html` | Le Studio complet. À ouvrir dans Chrome ou Edge pour exporter en MP4 |
 | `tobi.html`, `nox.html` | Chaque personnage seul |
 | `histoire.txt` | Le script en cours, avec la liste des instructions en tête |
+| `BIBLE.md` | L'univers, les personnages, la structure et la saison 1 |
 | `SHORTS.md` | Le format, les règles d'écriture, le workflow et le suivi des Shorts |
 | `shorts/` | Les scripts et les répliques de chaque Short |
 | `WORKFLOW.md` | Le déroulé à suivre pour chaque vidéo |
@@ -59,7 +60,7 @@ node export-glb.mjs objets
 
 ## À venir
 
-1. Publier le Short 01, puis lire sa courbe de rétention.
+1. Publier le pilote, puis lire sa courbe de rétention.
 2. Fiche de projet, nouveaux décors, nouveaux personnages.
-3. Pour les personnages inspirés de Claude et ChatGPT : créer des designs originaux, sans logos (marques déposées).
+3. Les Aînés, inspirés de Claude et ChatGPT : personnages originaux, sans logos (marques déposées).
 4. Test d'un export complet en 1080p.

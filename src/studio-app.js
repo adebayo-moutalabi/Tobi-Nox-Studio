@@ -6,9 +6,10 @@ import { createRoom } from './room.js';
 import { roomActions } from './room-actions.js';
 import { mountStory } from './story.js';
 import HISTOIRE from '../histoire.txt';
+import PILOTE from '../shorts/00_pilote_serveur.txt';
 import SHORT01 from '../shorts/01_cinq_minutes.txt';
 
 startViewer({
   cast: [tobi(), nox()], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
-  room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, { 'Short 01 : Cinq minutes': SHORT01, "Le matin de l'examen": HISTOIRE }),
+  room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, { 'Pilote : Mon serveur': PILOTE, 'Je révise juste 5 minutes': SHORT01, "Le matin de l'examen": HISTOIRE }),
 });

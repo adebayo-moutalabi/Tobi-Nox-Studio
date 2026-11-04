@@ -1,20 +1,22 @@
 # Fabriquer un Short Tobi et Nox
 
 ## Le format
-- **Durée :** 40 s à 1 min 30. Premier Short : 35 à 40 s.
+- **Durée :** cible 45 à 75 s, limite 40 s à 1 min 30. Un test peut durer 30 à 40 s.
 - **Image :** vertical 9:16, 1080 × 1920, export depuis le Studio.
-- **Rythme :** jamais lent. Un changement de plan toutes les 2 à 4 secondes, aucune marche ni attente inutile.
+- **Rythme :** jamais lent. Nouveau plan, zoom, geste ou réaction toutes les 2 à 3 secondes, aucune marche ni attente inutile.
 
 ## Les références
 À compléter avec les noms des chaînes ou des Shorts qui servent de modèle :
 - ...
 
 ## Les règles d'écriture
+La série, les personnages et la structure en 6 temps sont dans `BIBLE.md`.
+
 1. **Une seule idée** par sketch, une situation d'étudiant que tout le monde reconnaît.
 2. **Accroche dès la première phrase**, sans introduction. On écrit l'accroche et la chute en premier.
-3. **La chute arrive tard**, et la dernière réplique relance la première pour que la vidéo boucle.
+3. **La chute arrive tard**, suivie d'une petite ouverture vers l'épisode suivant, ou d'une boucle vers le début.
 4. **Répliques courtes :** 10 mots maximum, un seul gag par réplique.
-5. **Tobi rate, Nox a raison.** Nox est lucide et tendre, Tobi est de mauvaise foi mais attachant.
+5. **Tobi s'emballe, Nox casse l'illusion.** Nox est sec mais loyal, Tobi est de mauvaise foi mais attachant.
 6. **Un gag visuel** par sketch, lisible sans le son. Les sous-titres sont incrustés.
 
 ## Les 7 étapes
@@ -40,4 +42,5 @@
 ## Suivi des Shorts
 | N° | Titre | Durée | Date | Vues à 48 h | Rétention | Note |
 |---|---|---|---|---|---|---|
-| 01 | Cinq minutes | | | | | |
+| Pilote | Mon serveur coûte plus cher que mon loyer | | | | | |
+| 7 | Je révise juste 5 minutes | | | | | |
