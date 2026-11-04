@@ -247,7 +247,8 @@ export function createPlayer(v, ui) {
           talkShot(a);
         }
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
-        const talkPose = a.id === 'tobi' && !a.hero.motion.pose ? (a.hero.seat ? 'talk_sit' : 'talk_stand') : null; // gestuelle enregistrée
+        const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
+        const talkPose = a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
         if (tone?.geste && !talkPose) a.hero.play(GESTES[tone.geste]); // le geste part avec la voix
         if (voice) {

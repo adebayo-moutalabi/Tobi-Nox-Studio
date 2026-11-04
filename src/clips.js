@@ -4,6 +4,7 @@
 //  - jambe : rx < 0 vers l'avant ; genou rx > 0 plie
 //  - tête / buste : rx > 0 penche en avant, ry tourne
 import { mocapClips } from './mocap.js';
+import { RECORDED_MOTION } from './config.js';
 import * as THREE from 'three';
 
 const TAU = Math.PI * 2;
@@ -556,7 +557,7 @@ export function sample(name, dur, fn, loop, boneMap, names = bonesList()) {
 }
 
 export function buildClips(bones) {
-  const recorded = mocapClips();
+  const recorded = RECORDED_MOTION ? mocapClips() : [];
   for (const n of ['L', 'R']) {
     const S = bones[`arm_${n}`].getWorldPosition(new THREE.Vector3());
     const E = bones[`forearm_${n}`].getWorldPosition(new THREE.Vector3());
