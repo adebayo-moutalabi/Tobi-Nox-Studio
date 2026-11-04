@@ -99,12 +99,15 @@ export function createPlayer(v, ui) {
   // --- Réalisateur : champ-contrechamp quand ils parlent, panoramique quand ils marchent
   const ray = new THREE.Raycaster();
   // Les visées de caméra testent la chambre des dizaines de fois par plan : sans cet index, chaque plan bloquait l'image plusieurs secondes.
-  for (const m of room.solid) { m.geometry.computeBoundsTree = computeBoundsTree; m.geometry.computeBoundsTree({ indirect: true }); m.raycast = acceleratedRaycast; }
+  // Tout objet de la chambre peut cacher un personnage : tableau, portes, chaise, frigo, volet...
+  const blockers = [];
+  room.group.traverse((m) => { if (m.isMesh && !m.isInstancedMesh && m.name !== 'dehors' && m.name !== 'miroir') blockers.push(m); });
+  for (const m of blockers) { if (!m.geometry.index && !m.geometry.attributes.position) continue; m.geometry.computeBoundsTree = computeBoundsTree; m.geometry.computeBoundsTree({ indirect: true }); m.raycast = acceleratedRaycast; }
   const eyes = (a) => { const h = a.hero.bones.head.getWorldPosition(new THREE.Vector3()); h.y += a.eyeUp; return h; };
   const clear = (from, to) => {
     const d = to.clone().sub(from), L = d.length();
     ray.set(from, d.normalize()); ray.far = L;
-    return ray.intersectObjects(room.solid, false).length === 0;
+    return ray.intersectObjects(blockers, false).length === 0;
   };
   const inside = (c) => c.x > -1.34 && c.x < 1.34 && c.z > -1.84 && c.z < 2.9 && c.y > 0.25 && c.y < 2.42;
   // Caméra vivante : arrivée en douceur, léger arc, avancée lente et souffle de caméra à l'épaule.
@@ -127,8 +130,8 @@ export function createPlayer(v, ui) {
     shoot(pos, target);
   }
   // Cadrage : la tête garde toujours de l'air au-dessus d'elle. Les murs sont traversables pour reculer.
-  const room2 = (c) => c.x > -3.4 && c.x < 3.4 && c.z > -3.6 && c.z < 4.4 && c.y > 0.3 && c.y < 2.4;
-  const seen = (c, p) => { const d = p.clone().sub(c), L = d.length(); ray.set(c, d.normalize()); ray.far = L - 0.12; return ray.intersectObjects(room.solid, false).length === 0; };
+  const room2 = (c) => c.x > -3.4 && c.x < 3.4 && c.z > -3.6 && c.z < 4.4 && c.y > 0.14 && c.y < 2.4;
+  const seen = (c, p) => { const d = p.clone().sub(c), L = d.length(); ray.set(c, d.normalize()); ray.far = L - 0.12; return ray.intersectObjects(blockers, false).length === 0; };
   const blocks = (b, c, p) => { // l'autre personnage ne doit pas passer devant l'objectif
     if (!b.hero.root.visible) return false;
     const line = new THREE.Line3(c, p), o = new THREE.Vector3();
@@ -148,7 +151,7 @@ export function createPlayer(v, ui) {
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.36); // les bords du cadre restent dégagés aussi
-        if (room2(c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && !blocks(b, c, H)) {
+        if (room2(c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !blocks(b, c, H)) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;
@@ -292,6 +295,7 @@ export function createPlayer(v, ui) {
         if (!l) throw new Error(`lieu inconnu : ${c.args[0]}`);
         await v.leave(a);
         a.look = null;
+        for (const b of v.actors) if (b !== a && b.hero.root.visible) b.look = a; // les autres le suivent des yeux
         if (auto) follow(a);
         return v.walkTo(a, new THREE.Vector3(l[0], 0, l[1]), c.verb === 'court').then(() => { if (track === a) track = null; });
       }
