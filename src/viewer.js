@@ -561,7 +561,7 @@ export function startViewer(cfg) {
     }
     controls.update();
     placeLights();
-    room?.mirrorLive(actors.some((a) => pos(a).distanceTo(MIRROR) < 1.5));
+    room?.mirrorLive(actors.some((a) => pos(a).distanceTo(MIRROR) < 0.8)); // reflet réel seulement devant le miroir : il coûte cher
     if (skipRender) return;
     if (api.render) api.render(); else renderer.render(scene, camera);
     if (!bubble.hidden && speaker) {

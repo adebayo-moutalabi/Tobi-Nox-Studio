@@ -1,6 +1,7 @@
 // Lecteur de scénario : lit histoire.txt ligne par ligne et le joue dans la chambre.
 // Une ligne = une instruction. Terminer par « & » pour lancer la suivante sans attendre.
 import * as THREE from 'three';
+import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
@@ -93,6 +94,8 @@ export function createPlayer(v, ui) {
 
   // --- Réalisateur : champ-contrechamp quand ils parlent, panoramique quand ils marchent
   const ray = new THREE.Raycaster();
+  // Les visées de caméra testent la chambre des dizaines de fois par plan : sans cet index, chaque plan bloquait l'image plusieurs secondes.
+  for (const m of room.solid) { m.geometry.computeBoundsTree = computeBoundsTree; m.geometry.computeBoundsTree({ indirect: true }); m.raycast = acceleratedRaycast; }
   const eyes = (a) => { const h = a.hero.bones.head.getWorldPosition(new THREE.Vector3()); h.y += a.eyeUp; return h; };
   const clear = (from, to) => {
     const d = to.clone().sub(from), L = d.length();

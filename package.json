@@ -13,6 +13,7 @@
   "dependencies": {
     "esbuild": "^0.28.2",
     "mp4-muxer": "^5.2.2",
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "three-mesh-bvh": "^0.9.18"
   }
 }
