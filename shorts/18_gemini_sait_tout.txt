@@ -1,0 +1,33 @@
+# GEMINI SAIT TOUT
+# Pitch : Gemini arrive. Il a déjà tout lu.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX assis
+FONDU direct
+
+PLAN porte
+GEMINI entre tapis
+PLAN auto
+GEMINI dit (excite) Bonjour Tobi. J'ai lu tous tes mails.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?
+PLAN auto
+GEMINI dit (content) Et ton agenda. Tu as un rendu mardi.
+PLAN gros NOX
+NOX dit (ironique) Enfin quelqu'un d'organisé.
+PLAN auto
+GEMINI dit (fier) Je peux aussi résumer ta vie.
+PLAN gros TOBI
+TOBI dit (curieux) Vas-y.
+INSERT Résumé de ta vie | 3 lignes | Dont deux sur une boulangerie
+GEMINI dit (calme) Trois lignes suffisent.
+PLAN gros TOBI
+TOBI dit (triste) Trois lignes ?
+PLAN gros NOX
+NOX dit (punchline) Il a été généreux.
+PLAN auto
+GEMINI dit (excite) Je propose aussi une image, une vidéo et un poème.
+PLAN gros NOX
+NOX dit (resigne) Tobi. Non.
+ATTENDRE 0.4

@@ -1,5 +1,5 @@
 import { Reflector } from 'three/addons/objects/Reflector.js';
-import { tobi, nox } from './cast.js';
+import { tobi, nox, aine } from './cast.js';
 import { startViewer } from './viewer.js';
 import { SCENES } from './scenes.js';
 import { createRoom } from './room.js';
@@ -20,9 +20,14 @@ import E12 from '../shorts/12_le_pitch.txt';
 import E13 from '../shorts/13_premier_client.txt';
 import E14 from '../shorts/14_petite_mise_a_jour.txt';
 import E15 from '../shorts/15_levee_de_fonds.txt';
+import E16 from '../shorts/16_audit_de_nox.txt';
+import E17 from '../shorts/17_chat_contre_claude.txt';
+import E18 from '../shorts/18_gemini_sait_tout.txt';
+import E19 from '../shorts/19_conseil_des_aines.txt';
+import E20 from '../shorts/20_miroir.txt';
 
 startViewer({
-  cast: [tobi(), nox()], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
+  cast: [tobi(), nox(), aine('claude'), aine('chat'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
     '1. Mon serveur coûte plus cher que mon loyer': PILOTE,
     '2. Juste un site vitrine': E02,
@@ -38,6 +43,11 @@ startViewer({
     '13. Mon premier gros client': E13,
     '14. Une petite mise à jour': E14,
     '15. Ma levée de fonds': E15,
+    '16. Claude audite Nox': E16,
+    '17. Chat contre Claude': E17,
+    '18. Gemini sait tout': E18,
+    '19. Le conseil des Aînés': E19,
+    '20. CEO dans le miroir': E20,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

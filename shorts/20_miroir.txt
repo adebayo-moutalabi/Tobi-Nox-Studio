@@ -1,0 +1,30 @@
+# CEO DANS LE MIROIR
+# Pitch : Tobi répète son discours de CEO devant le miroir. Nox l'écoute depuis le lit.
+
+AMBIANCE jour
+DIRECT NOX assis
+DIRECT TOBI miroir
+FONDU direct
+
+PLAN miroir
+TOBI dit (fier) Bonjour. Je suis Tobi, CEO.
+PLAN gros NOX
+NOX dit (curieux) CEO de quoi ?
+PLAN miroir
+TOBI dit (mauvaisefoi) De plusieurs choses.
+PLAN gros NOX
+NOX dit (curieux) Combien d'employés ?
+PLAN miroir
+TOBI dit (fier) Deux.
+PLAN gros NOX
+NOX dit (sec) Moi et ton reflet.
+TOBI marche tapis
+PLAN auto
+TOBI dit (excite) Nox. Aie la vision. Bientôt, on sera trois.
+PLAN gros NOX
+NOX dit (ironique) Tu as acheté un deuxième miroir ?
+PLAN auto
+TOBI dit (gene) Il arrive jeudi.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

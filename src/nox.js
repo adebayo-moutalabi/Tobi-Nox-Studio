@@ -251,9 +251,10 @@ const visemeOf = (ch) => {
   return ' ';
 };
 
-export function createNox() {
+export function createNox({ palette = {}, scale = 1 } = {}) {
+  const P = { ...NOX_PALETTE, ...palette }; // les Aînés partagent ce corps, avec leur couleur et leur taille
   const root = new THREE.Group(); root.name = 'nox';
-  const bodyPart = new Part(NOX_PALETTE), ballPart = new Part(NOX_PALETTE);
+  const bodyPart = new Part(P), ballPart = new Part(P);
   buildNox(bodyPart, ballPart);
 
   const bones = {}, world = {}, list = [];
@@ -285,7 +286,7 @@ export function createNox() {
   const matte = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.5, metalness: 0, side: THREE.DoubleSide });
   matte.name = 'nox';
   const bodyMesh = skinned(bodyPart, 'corps', matte);
-  const ballMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.42, metalness: 0, emissive: NOX_PALETTE.ball, emissiveIntensity: 0.12 });
+  const ballMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.42, metalness: 0, emissive: P.ball, emissiveIntensity: 0.12 });
   ballMat.name = 'antenne';
   const ballMesh = skinned(ballPart, 'balle', ballMat);
   { // boule lisse : normales radiales
@@ -296,18 +297,18 @@ export function createNox() {
   // Écran
   const outline = ringZ(0, 0.186, 0.124, SCREEN_Y - HEAD_PIVOT, 0.46, 48);
   const shape = new THREE.Shape(outline.map((p) => new THREE.Vector2(p.x, p.y)));
-  const screen = new THREE.Mesh(new THREE.ShapeGeometry(shape), new THREE.MeshStandardMaterial({ color: NOX_PALETTE.screen, roughness: 0.3, metalness: 0.1 }));
+  const screen = new THREE.Mesh(new THREE.ShapeGeometry(shape), new THREE.MeshStandardMaterial({ color: P.screen, roughness: 0.3, metalness: 0.1 }));
   screen.name = 'ecran'; screen.material.name = 'ecran';
   screen.position.z = SCREEN_Z + 0.001; screen.receiveShadow = false;
   bones.head.add(screen);
 
-  const lightMat = new THREE.MeshBasicMaterial({ color: NOX_PALETTE.light, toneMapped: false, side: THREE.DoubleSide });
+  const lightMat = new THREE.MeshBasicMaterial({ color: P.light, toneMapped: false, side: THREE.DoubleSide });
   lightMat.name = 'lumiere';
   const face = new THREE.Mesh(faceGeometry(0, SCREEN_Z + 0.0045), lightMat);
   face.name = 'visage'; face.updateMorphTargets();
   face.morphTargetDictionary = Object.fromEntries(NOX_MORPHS.map((k, i) => [k, i]));
   bones.head.add(face);
-  const haloMat = (o) => new THREE.MeshBasicMaterial({ color: NOX_PALETTE.halo, toneMapped: false, transparent: true, opacity: o, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+  const haloMat = (o) => new THREE.MeshBasicMaterial({ color: P.halo, toneMapped: false, transparent: true, opacity: o, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
   const halos = [[0.0022, 0.34, 0.0036], [0.0062, 0.15, 0.003], [0.0125, 0.06, 0.0024]].map(([pad, o, dz]) => {
     const h = new THREE.Mesh(faceGeometry(pad, SCREEN_Z + dz), haloMat(o));
     h.name = 'halo'; h.updateMorphTargets(); bones.head.add(h); return h;
@@ -398,7 +399,7 @@ export function createNox() {
       apply(out);
       // Voyant : respiration lente, vif quand il parle
       const pulse = state.talk ? 0.72 + 0.28 * Math.sin(state.time * 24) : 0.82 + 0.18 * Math.sin(state.time * 2.2);
-      led.material.color.set(NOX_PALETTE.light).multiplyScalar(pulse);
+      led.material.color.set(P.light).multiplyScalar(pulse);
       ledHalo.material.opacity = 0.24 * pulse;
       // Antenne souple
       const sp = state.spring;
@@ -416,7 +417,7 @@ export function createNox() {
       bones.antenna.rotation.set(clamp(sp.x, -0.5, 0.5) * -1, 0, clamp(sp.z, -0.5, 0.5) * -1);
     },
   };
-  root.scale.setScalar(NOX_HEIGHT);
+  root.scale.setScalar(NOX_HEIGHT * scale);
   // Points d'attache des objets (échelle compensée : objets réduits à 62 % dans ses mains)
   const holder = (bone, pos, rot, scale = 1) => { const g = new THREE.Group(); g.position.copy(pos); g.quaternion.copy(rot); g.scale.setScalar(scale); bones[bone].add(g); return g; };
   const handRot = (s) => new THREE.Quaternion().setFromAxisAngle(V(0, 0, 1), s * ARM_ANGLE).multiply(new THREE.Quaternion().setFromAxisAngle(V(1, 0, 0), Math.PI / 2));

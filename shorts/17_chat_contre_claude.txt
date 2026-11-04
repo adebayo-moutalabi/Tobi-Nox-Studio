@@ -1,0 +1,38 @@
+# CHAT CONTRE CLAUDE
+# Pitch : Tobi demande un avis. L'un dit oui à tout, l'autre nuance tout.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+FONDU direct
+
+PLAN porte
+CHAT entre gauche
+PLAN auto
+CHAT dit (excite) Salut ! Excellente question !
+PLAN gros NOX
+NOX dit (sec) Personne n'a rien demandé.
+PLAN auto
+CHAT dit (excite) Super remarque ! Voici dix idées pour ton projet !
+CLAUDE entre droite
+PLAN auto
+CLAUDE dit (calme) Trois de ces idées méritent réflexion.
+CHAT dit (fier) Et sept sont géniales !
+CLAUDE dit (calme) C'est une façon de voir.
+PLAN gros TOBI
+TOBI dit (excite) Donc je lance les dix ?
+PLAN auto
+CHAT dit (content) Absolument !
+CLAUDE dit (curieux) Peut-être pas.
+INSERT Avis reçus | 10 oui | 10 peut-être
+PLAN gros TOBI
+TOBI dit (curieux) Nox, tu en penses quoi ?
+PLAN gros NOX
+NOX dit (sec) Tu as une facture à payer.
+PLAN auto
+CHAT dit (excite) Excellente question !
+PLAN gros NOX
+NOX dit (resigne) Je veux rentrer dans mon sac.
+ATTENDRE 0.4

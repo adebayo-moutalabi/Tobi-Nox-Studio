@@ -17,6 +17,7 @@ const GESTES = {
 };
 const OBJETS = { papier: 'paper', livre: 'book', gourde: 'bottle', tasse: 'mug', telephone: 'phone', sac: 'bag' };
 const LIEUX = {
+  gauche: [-0.24, 0.05], milieu: [0.08, 0.4], droite: [0.38, 0.05], // places pour plusieurs petits robots
   centre: [0.1, 0.2], tapis: [0.1, -0.3], fenetre: [0, -1.6], lit: [0.12, 0.35], bureau: [0.6, -0.8], armoire: [0.6, 0.4],
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
@@ -59,7 +60,7 @@ export function parseStory(text) {
     const direct = /^DIRECT\s/.test(line);
     if (direct) line = line.slice(7).trim();
     const [first, ...rest] = line.split(/\s+/);
-    const who = /^(TOBI|NOX)$/.test(first) ? first.toLowerCase() : null;
+    const who = /^(TOBI|NOX|CLAUDE|CHAT|GEMINI)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
     let text = rest.join(' '), tone = null;
     const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
@@ -71,6 +72,13 @@ export function parseStory(text) {
 
 export function createPlayer(v, ui) {
   const actor = (id) => v.actors.find((a) => a.id === id);
+  // Avec qui parle-t-il ? Le dernier qui a parlé, sinon le plus proche.
+  let lastTalk = null;
+  const partner = (a) => {
+    if (lastTalk && lastTalk !== a && lastTalk.hero.root.visible) return lastTalk;
+    const near = v.actors.filter((x) => x !== a && x.hero.root.visible).sort((p, q) => v.pos(p).distanceTo(v.pos(a)) - v.pos(q).distanceTo(v.pos(a)));
+    return near[0] || v.actors.find((x) => x !== a);
+  };
   const room = v.room;
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
@@ -146,10 +154,11 @@ export function createPlayer(v, ui) {
   const blocks = (b, c, p) => { // l'autre personnage ne doit pas passer devant l'objectif
     if (!b.hero.root.visible) return false;
     const line = new THREE.Line3(c, p), o = new THREE.Vector3();
-    return [eyes(b), eyes(b).setY(eyes(b).y - 0.35), eyes(b).setY(eyes(b).y - 0.7)].some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < 0.3; });
+    const big = b.id === 'tobi', e = eyes(b), r = big ? 0.3 : 0.17;
+    return (big ? [0, 0.35, 0.7, 1.05, 1.4].map((d) => e.clone().setY(Math.max(0.08, e.y - d))).concat(v.pos(b).clone().setY(0.1)) : [e, e.clone().setY(e.y - 0.16)]).some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < r; });
   };
   function frame(a, tight) {
-    const b = v.actors.find((x) => x !== a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0);
+    const b = partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
     const toB = eyes(b).sub(H).setY(0).normalize(), across = near && fwd.clone().normalize().dot(toB) > 0.35; // face à face, ou côte à côte ?
@@ -162,7 +171,7 @@ export function createPlayer(v, ui) {
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.36); // les bords du cadre restent dégagés aussi
-        if (room2(c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !blocks(b, c, H)) {
+        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;
@@ -231,6 +240,8 @@ export function createPlayer(v, ui) {
     room.entryDoor.rotation.y = 0; room.fridgeDoor.rotation.y = 0;
     place(actor('tobi'), [0, 0.2]); place(actor('nox'), [0.3, 0.5]);
     actor('tobi').hero.root.visible = true; actor('nox').hero.root.visible = true;
+    for (const a of v.actors) if (a.extra) { a.hero.root.visible = false; place(a, [0, 2.4]); }
+    lastTalk = null;
   }
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
@@ -261,7 +272,7 @@ export function createPlayer(v, ui) {
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
       case 'porte': return v.swing(room.entryDoor, plain(c.args[0] || '') === 'ouverte' ? -1.5 : 0, 0.8);
       case 'dit': {
-        const b = v.actors.find((x) => x !== a), tone = TONS[c.tone];
+        const b = partner(a), tone = TONS[c.tone];
         track = null;
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
@@ -278,10 +289,10 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#f2b92e' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#ffb98c', chat: '#7ff0cb', gemini: '#b4c6ff' }[a.id] || '#f2b92e' };
         await v.say(a, c.text, dur, voice?.env);
         if (talkPose && a.hero.motion.pose === talkPose) a.hero.motion.clearPose();
-        cap = null; ui.caption(null);
+        cap = null; ui.caption(null); lastTalk = a;
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
         return undefined;
       }
@@ -301,6 +312,18 @@ export function createPlayer(v, ui) {
         return v.wait(d || 0.2);
       }
       case 'danse': a.baseLoco = 'dance'; a.hero.motion.setLocomotion('dance'); return v.wait(parseFloat(c.args[0]) || 3).then(() => { a.baseLoco = 'idle'; a.hero.motion.setLocomotion('idle'); });
+      case 'apparait': { // déjà là, sans marcher
+        const l = LIEUX[plain(c.args[0] || 'tapis')];
+        place(a, l); a.hero.root.visible = true; return undefined;
+      }
+      case 'entre': { // arrive par la porte
+        const l = LIEUX[plain(c.args[0] || 'tapis')];
+        place(a, LIEUX.couloir); a.hero.root.visible = true; a.look = null;
+        for (const b of v.actors) if (b !== a && b.hero.root.visible) b.look = a;
+        if (auto) follow(a);
+        await v.walkTo(a, new THREE.Vector3(l[0], 0, l[1])); if (track === a) track = null;
+        return undefined;
+      }
       case 'marche': case 'court': {
         const l = LIEUX[plain(c.args[0] || '')];
         if (!l) throw new Error(`lieu inconnu : ${c.args[0]}`);
@@ -385,7 +408,7 @@ export function createPlayer(v, ui) {
       await reset();
       ui.curtain(false, true);
       v.camera.fov = 26; v.camera.updateProjectionMatrix();
-      v.actors.forEach((a) => { a.hero.root.visible = true; });
+      v.actors.forEach((a) => { a.hero.root.visible = !a.extra; });
       v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(); look.setMood('soir'); ui.caption(null);
       v.actors.forEach((a) => { a.look = null; });
       v.setView('chambre', true);

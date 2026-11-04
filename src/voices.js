@@ -46,7 +46,7 @@ async function explain(res) {
 
 export function mountVoices({ el, player, parseStory, onChange }) {
   const cache = audioCache();
-  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
+  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), chat: el('elChat'), gemini: el('elGemini') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
   let rows = [], ctx = null, busy = false;
   const say = (t) => { el('elNow').textContent = t; };
   const call = async (path, init = {}) => {
@@ -60,7 +60,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   const lock = (on) => { busy = on; go.disabled = on || !pick.tobi.value; load.disabled = on; list.querySelectorAll('button[data-redo]').forEach((b) => { b.disabled = on; }); };
   const remember = () => {
     write(KEY, keep.checked ? key.value.trim() : '');
-    write(PICK, JSON.stringify({ tobi: pick.tobi.value, nox: pick.nox.value }));
+    write(PICK, JSON.stringify(Object.fromEntries(Object.entries(pick).map(([who, x]) => [who, x.value]))));
   };
 
   const loadVoices = async () => {
@@ -75,7 +75,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
         s.replaceChildren(...mine.map((x) => new Option(x.category === 'cloned' ? `${x.name} (clonée)` : x.name, x.voice_id)));
         if (mine.some((x) => x.voice_id === saved[who])) s.value = saved[who];
       }
-      if (!mine.some((x) => x.voice_id === saved.nox) && mine.length > 1) pick.nox.selectedIndex = 1;
+      Object.entries(pick).forEach(([who, x], i) => { if (!mine.some((m) => m.voice_id === saved[who])) x.selectedIndex = i % mine.length; });
       remember();
       el('elTobi').closest('.pair').hidden = false;
       say(`${mine.length} voix trouvées. Vérifie Tobi et Nox.`);
@@ -108,7 +108,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   const show = () => {
     list.replaceChildren(...rows.map((r, i) => {
       const li = document.createElement('li'), text = document.createElement('span'), hear = document.createElement('button'), redo = document.createElement('button');
-      text.textContent = `${r.who === 'nox' ? 'Nox' : 'Tobi'}${r.tone ? ` (${r.tone})` : ''} : ${r.text}`;
+      text.textContent = `${r.who[0].toUpperCase()}${r.who.slice(1)}${r.tone ? ` (${r.tone})` : ''} : ${r.text}`;
       hear.type = 'button'; hear.textContent = 'Écouter'; hear.disabled = !r.url;
       hear.addEventListener('click', () => new Audio(r.url).play());
       redo.type = 'button'; redo.textContent = 'Refaire'; redo.dataset.redo = '1'; redo.disabled = busy || !pick.tobi.value;

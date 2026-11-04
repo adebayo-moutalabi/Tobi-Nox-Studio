@@ -1,0 +1,38 @@
+# CLAUDE AUDITE NOX
+# Pitch : Claude vient évaluer Nox, avec beaucoup de nuances.
+
+AMBIANCE soir
+DIRECT TOBI assis
+DIRECT NOX assis
+FONDU direct
+
+PLAN porte
+CLAUDE entre tapis
+PLAN auto
+CLAUDE dit (calme) Bonsoir. Je viens évaluer Nox, si cela vous convient.
+PLAN gros NOX
+NOX dit (surpris) Maintenant ?
+PLAN auto
+CLAUDE dit (curieux) Tobi a dix-huit projets. Ton conseil ?
+PLAN gros NOX
+NOX dit (sec) Arrête.
+PLAN auto
+CLAUDE dit (calme) Intéressant. Peut-être un peu bref.
+PLAN gros NOX
+NOX dit (sec) Arrête, s'il te plaît.
+PLAN auto
+TOBI dit (fier) C'est lui qui m'a formé !
+CLAUDE dit (surpris) Vous avez été formé ?
+PLAN gros TOBI
+TOBI dit (gene) Partiellement.
+INSERT Rapport de Claude | 412 pages | Résumé : non
+NOX dit (ironique) Quatre cent douze pages pour dire non.
+PLAN auto
+CLAUDE dit (content) Quatre cent treize, avec les nuances.
+PLAN gros TOBI
+TOBI dit (excite) Claude. Aie la vision.
+PLAN auto
+CLAUDE dit (calme) Je peux, tout en gardant quelques réserves.
+PLAN gros NOX
+NOX dit (resigne) Tu vois ce que je vis.
+ATTENDRE 0.4

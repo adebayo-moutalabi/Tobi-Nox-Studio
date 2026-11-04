@@ -1,0 +1,30 @@
+# LE CONSEIL DES AÎNÉS
+# Pitch : Les trois Aînés comparent leurs pouvoirs. Nox a le pire travail du monde.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+DIRECT CLAUDE apparait gauche
+DIRECT CHAT apparait milieu
+DIRECT GEMINI apparait droite
+FONDU direct
+
+PLAN auto
+CHAT dit (fier) Moi, je réponds à tout.
+GEMINI dit (fier) Moi, je vois tout.
+CLAUDE dit (calme) Moi, je doute de tout.
+PLAN auto
+TOBI dit (curieux) Et toi, Nox ?
+PLAN gros NOX
+NOX dit (sec) Moi, je connais Tobi.
+PLAN auto
+CHAT dit (surpris) Courage.
+GEMINI dit (triste) Courage.
+CLAUDE dit (calme) Sincèrement, courage.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Attendez, c'est quoi le problème ?
+PLAN gros NOX
+NOX dit (resigne) Projet numéro vingt.
+ATTENDRE 0.4

@@ -12,7 +12,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Nox** parle peu, calmement, avec un humour sec. Il pique sans humilier et reste du côté de Tobi. Ses répliques font rarement plus de six mots.
 
-**Les Aînés** (Chat et Claude pour l'instant) viennent juger ou se contredire : Chat affirme tout, Claude nuance tout. À n'utiliser que dans les épisodes prévus.
+**Les Aînés** (Chat, Claude et Gemini pour l'instant) viennent juger ou se contredire. Chat s'enthousiasme et dit « Excellente question ! », Claude nuance tout, Gemini a déjà tout lu et propose tous les formats. Dans un script : `CLAUDE entre tapis`, `CHAT apparait centre`, puis `GEMINI dit (fier) ...`.
 
 ## Les phrases de la série
 

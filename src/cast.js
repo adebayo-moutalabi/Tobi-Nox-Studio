@@ -42,3 +42,14 @@ export function nox() {
     ],
   };
 }
+
+// Les Aînés : des personnages originaux de la famille de Nox, un peu plus grands. Ils n'apparaissent que si un script les fait entrer.
+const AINES = {
+  claude: { name: 'Claude', scale: 1.14, palette: { body: '#c56a48', bezel: '#8f4a30', ball: '#efb08e', light: '#ffe6d2', halo: '#ffb98c' } },
+  chat: { name: 'Chat', scale: 1.2, palette: { body: '#2e9c7f', bezel: '#1d6f59', ball: '#9df0d4', light: '#d6fff1', halo: '#6ff0c6' } },
+  gemini: { name: 'Gemini', scale: 1.08, palette: { body: '#4b6fe2', bezel: '#3149a5', ball: '#b48cff', light: '#d8e4ff', halo: '#9fb8ff' } },
+};
+export function aine(id) {
+  const base = nox(), a = AINES[id], hero = createNox({ palette: a.palette, scale: a.scale });
+  return { ...base, id, name: a.name, hero, extra: true, eyeUp: base.eyeUp * a.scale, reach: base.reach * a.scale };
+}

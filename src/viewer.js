@@ -78,7 +78,7 @@ export function startViewer(cfg) {
   // ---- Distribution ---------------------------------------------------------
   const actors = cfg.cast.map((c) => ({ ...c, goal: null, run: false, arrive: null, held: null, bag: null, faceYaw: null, follow: null, carried: false, seatObj: null, carrying: null }));
   let A = actors[0];
-  actors.forEach((a) => scene.add(a.hero.root));
+  actors.forEach((a) => { scene.add(a.hero.root); if (a.extra) a.hero.root.visible = false; });
   if (actors.length > 1) { actors[0].hero.root.position.set(-0.2, 0, 0.1); actors[1].hero.root.position.set(0.32, 0, 0.3); actors[0].hero.root.rotation.y = 0.35; actors[1].hero.root.rotation.y = -0.35; }
   const pos = (a) => a.hero.root.position;
   const other = (a) => actors.find((b) => b !== a);
@@ -509,7 +509,7 @@ export function startViewer(cfg) {
 
   if (actors.length > 1) {
     el('castBox').hidden = false;
-    fill('cast', actors.map((a) => [a.id, a.name]), (k) => setActive(actors.find((a) => a.id === k)));
+    fill('cast', actors.filter((a) => !a.extra).map((a) => [a.id, a.name]), (k) => setActive(actors.find((a) => a.id === k)));
     mark(el('cast'), A.id);
   }
   if (room) {
