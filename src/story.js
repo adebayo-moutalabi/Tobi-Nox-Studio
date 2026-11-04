@@ -4,6 +4,8 @@ import * as THREE from 'three';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
+import { TONS } from './tones.js';
+import { envelope } from './talk.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -43,7 +45,10 @@ export function parseStory(text) {
     const [first, ...rest] = line.split(/\s+/);
     const who = /^(TOBI|NOX)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
-    out.push({ n: i + 1, who, verb, args: rest, text: rest.join(' '), free, direct, raw: line });
+    let text = rest.join(' '), tone = null;
+    const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
+    if (t) { tone = plain(t[1]).replace(/[\s-]/g, ''); text = t[2]; }
+    out.push({ n: i + 1, who, verb, args: rest, text, tone, free, direct, raw: line });
   });
   return out;
 }
@@ -167,19 +172,22 @@ export function createPlayer(v, ui) {
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
       case 'porte': return v.swing(room.entryDoor, plain(c.args[0] || '') === 'ouverte' ? -1.5 : 0, 0.8);
       case 'dit': {
-        const b = v.actors.find((x) => x !== a);
+        const b = v.actors.find((x) => x !== a), tone = TONS[c.tone];
         track = null;
+        if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { a.look = b; b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.35); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.3); }
           talkShot(a);
         }
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
+        if (tone?.geste) a.hero.play(GESTES[tone.geste]); // le geste part avec la voix
         if (voice) {
+          voice.env ||= envelope(voice.buffer);
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
         cap = { words: c.text.split(/\s+/), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#ffd27a' };
-        await v.say(a, c.text, dur);
+        await v.say(a, c.text, dur, voice?.env);
         cap = null; ui.state2.caption = '';
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
         return undefined;

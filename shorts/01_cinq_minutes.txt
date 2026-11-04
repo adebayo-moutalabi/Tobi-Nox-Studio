@@ -9,19 +9,19 @@ TABLEAU Examen demain ! | Tout réviser | ce soir, promis
 FONDU direct
 PLAN auto
 TOBI mimique joie
-TOBI dit Ce soir, je révise TOUT le programme.
+TOBI dit (fier) Ce soir, je révise TOUT le programme.
 NOX mimique doute
-NOX dit Tu as dit ça hier.
-TOBI dit Oui, mais ce soir, j'ai un plan.
+NOX dit (ironique) Tu as dit ça hier.
+TOBI dit (mauvaisefoi) Oui, mais ce soir, j'ai un plan.
 PLAN clavier
 TOBI tape Chapitre 1 :
 PLAN ecran
 ATTENDRE 0.5
 PLAN auto
 TOBI mimique sourire
-TOBI dit Bon. Petite pause, je l'ai méritée.
+TOBI dit (content) Bon. Petite pause, je l'ai méritée.
 NOX mimique surprise
-NOX dit Tu as écrit deux mots.
+NOX dit (surpris) Tu as écrit deux mots.
 DIRECT TOBI frigo
 PLAN frigo
 TOBI utilise
@@ -29,11 +29,11 @@ DIRECT TOBI remet
 DIRECT TOBI assis
 PLAN lit
 TOBI mimique sourire
-TOBI dit Je ferme juste les yeux cinq minutes.
+TOBI dit (content) Je ferme juste les yeux cinq minutes.
 DIRECT TOBI dort
 PLAN auto
 NOX mimique doute
-NOX dit Cinq minutes.
+NOX dit (ironique) Cinq minutes.
 FONDU noir
 DIRECT NOX marche lit
 VOLET ouvert
@@ -41,15 +41,15 @@ TITRE Huit heures plus tard
 FONDU ouvert
 PLAN auto
 NOX mimique surprise
-NOX dit Tobi ! L'examen, c'était à huit heures !
+NOX dit (panique) Tobi ! L'examen, c'était à huit heures !
 PLAN lit
 TOBI mimique peur
 DIRECT TOBI leve
 PLAN gros TOBI
-TOBI dit QUOI ?!
+TOBI dit (panique) QUOI ?!
 PLAN auto
 TOBI court porte
 TOBI sort
 NOX regarde rien
 NOX mimique sourire
-NOX dit Et ce soir, il va dire...
+NOX dit (punchline) Et ce soir, il va dire...

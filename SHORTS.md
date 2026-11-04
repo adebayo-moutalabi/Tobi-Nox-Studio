@@ -19,6 +19,14 @@ La série, les personnages et la structure en 6 temps sont dans `BIBLE.md`.
 5. **Tobi s'emballe, Nox casse l'illusion.** Nox est sec mais loyal, Tobi est de mauvaise foi mais attachant.
 6. **Un gag visuel** par sketch, lisible sans le son. Les sous-titres sont incrustés.
 
+## Le ton de chaque réplique
+Le ton s'écrit entre parenthèses, juste après `dit`. Il règle ensemble la voix, le visage, le geste et la réaction de l'autre :
+
+`NOX dit (sec) C'est une boulangerie, Tobi.`
+
+Tons disponibles : `neutre`, `calme`, `curieux`, `fier`, `content`, `excite`, `illumine`, `ironique`, `sec`, `constat`, `punchline`, `gene`, `mauvaisefoi`, `resigne`, `triste`, `colere`, `surpris`, `panique`, `chuchote`.
+Un autre mot en anglais, comme `(laughs)`, est transmis tel quel à ElevenLabs. `mimique` reste utile pour une réaction sans parole.
+
 ## De A à Z : sortir un Short
 Sur ordinateur, avec Chrome ou Edge. Exemple avec le pilote, qui est déjà scripté : commence à l'étape 4.
 
@@ -26,7 +34,8 @@ Sur ordinateur, avec Chrome ou Edge. Exemple avec le pilote, qui est déjà scri
 2. **Scripter** dans le Studio : choisir un script, ouvrir « Modifier le script », écrire. Mettre `DIRECT` devant toute action qui ralentit.
    Copier ensuite le texte dans `shorts/NN_titre.txt`, car le Studio ne l'enregistre pas.
 3. **Répéter :** format « Short 9:16 », puis « Lire l'histoire ». Couper tout ce qui traîne.
-4. **Clé ElevenLabs, une seule fois :** sur ElevenLabs, créer une clé API avec les droits Text to Speech et Voices. La coller dans le Studio, section « Voix ElevenLabs », puis « Charger mes voix ». Ne jamais la mettre dans le dépôt ni l'envoyer à quelqu'un.
+4. **Clé ElevenLabs, une seule fois :** sur elevenlabs.io, menu de gauche **Developers**, onglet **API Keys**, puis créer une clé. Laisser la restriction active et autoriser **Text to Speech** et **Voices** en lecture. Copier la clé tout de suite : elle ne s'affiche en entier qu'une fois.
+   La coller dans le Studio, section « Voix ElevenLabs », puis « Charger mes voix ». Ne jamais la mettre dans le dépôt ni l'envoyer à quelqu'un.
 5. **Générer les voix :** choisir le script, ta voix clonée pour Tobi, une autre voix pour Nox, puis « Générer les voix ».
    Le Studio crée toutes les répliques et les cale sur le script. Écouter : « Refaire » relance une seule réplique si le ton est faux.
    Une réplique inchangée ne coûte pas de crédit une seconde fois sur cet ordinateur.

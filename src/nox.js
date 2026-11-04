@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { V, clamp, lerp, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
 import { buildNoxClips } from './nox-clips.js';
 import { createMotion } from './motion.js';
+import { createTalk, stepTalk, talkShape } from './talk.js';
 
 export const NOX_HEIGHT = 0.45;
 
@@ -229,11 +230,14 @@ const EXPRESSIONS = {
   colere: { angry: 1, frown: 0.8, flat: 0.2 },
   tristesse: { sad: 1, frown: 1, lookD: 0.45 },
   doute: { blinkR: 0.42, smirk: 0.9, lookL: 0.5, lookU: 0.3 },
+  peur: { wide: 0.8, sad: 0.45, frown: 0.8, round: 0.3 },
   clin: { blinkR: 1, smile: 0.9, smirk: 0.2 },
   amour: { heart: 1, smile: 0.75 },
   sommeil: { blinkL: 0.96, blinkR: 0.96, flat: 0.5 },
   dort: { blinkL: 0.96, blinkR: 0.96, flat: 0.5 },
 };
+// Part de l'expression gardée sur la bouche pendant la parole
+const TALK_EASE = { smirk: 0.12, smile: 0.5, frown: 0.5 };
 const VISEMES = {
   a: { open: 0.72 }, e: { open: 0.32, flat: 0.5 }, i: { open: 0.14, flat: 0.8 }, o: { round: 0.9, open: 0.15 }, u: { round: 0.65 },
   m: { flat: 0.2 }, f: { open: 0.12 }, t: { open: 0.24 }, s: { open: 0.1, flat: 0.5 }, r: { open: 0.22, round: 0.25 }, ' ': {},
@@ -339,15 +343,14 @@ export function createNox() {
     setLocomotion: motion.setLocomotion,
     play: motion.play,
     setExpression(name) { state.exprName = name; state.expr = EXPRESSIONS[name] || {}; },
-    say(text, onEnd, duration) {
+    say(text, onEnd, duration, env) {
       const seq = [];
       for (const ch of text) {
         const v = visemeOf(ch), punct = /[.,;:!?]/.test(ch);
         seq.push({ v: punct ? ' ' : v, d: punct ? 0.24 : (v === ' ' ? 0.07 : 0.078) });
       }
       seq.push({ v: ' ', d: 0.1 });
-      if (duration) { const k = duration / seq.reduce((n, x) => n + x.d, 0); seq.forEach((x) => { x.d *= k; }); } // la bouche suit la durée de la voix
-      state.talk = { seq, i: 0, t: 0, onEnd };
+      state.talk = createTalk(seq, onEnd, duration, env);
     },
     setMorphs(obj) { Object.assign(weights, obj); apply(weights); },
     update(dt) {
@@ -369,9 +372,7 @@ export function createNox() {
       state.viseme = {};
       if (state.talk) {
         const T = state.talk;
-        T.t += dt;
-        while (T.i < T.seq.length && T.t > T.seq[T.i].d) { T.t -= T.seq[T.i].d; T.i++; }
-        if (T.i >= T.seq.length) { const f = T.onEnd; state.talk = null; f?.(); } else state.viseme = VISEMES[T.seq[T.i].v] || {};
+        if (stepTalk(T, dt)) { const f = T.onEnd; state.talk = null; f?.(); } else state.viseme = talkShape(VISEMES[T.seq[T.i].v] || {}, T);
       }
       const k = 1 - Math.exp(-dt * 9), kv = 1 - Math.exp(-dt * 20);
       const mouth = ['open', 'round', 'flat'];
@@ -380,6 +381,7 @@ export function createNox() {
         let target = state.expr[m] || 0;
         if (m in state.glance && !sleeping) target += state.glance[m];
         if (state.talk && mouth.includes(m)) target = target * 0.15 + (state.viseme[m] || 0);
+        else if (state.talk && m in TALK_EASE) target *= TALK_EASE[m]; // la bouche reste centrée quand il parle
         weights[m] += (target - weights[m]) * (state.talk ? kv : k);
       }
       const out = { ...weights };

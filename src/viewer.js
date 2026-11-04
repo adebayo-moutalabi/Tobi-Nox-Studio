@@ -490,10 +490,10 @@ export function startViewer(cfg) {
     if (text) say(A, text);
     el('sayText').blur();
   });
-  function say(a, text, duration) {
+  function say(a, text, duration, env) {
     return new Promise((res) => {
       bubble.textContent = text; bubble.hidden = false; speaker = a;
-      a.hero.say(text, () => { bubble.hidden = true; speaker = null; res(); }, duration);
+      a.hero.say(text, () => { bubble.hidden = true; speaker = null; res(); }, duration, env);
     });
   }
 

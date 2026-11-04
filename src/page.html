@@ -93,7 +93,7 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
         <div class="grid" style="margin-top:8px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger mes voix</button></div>
         <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="elKeep"> Garder la clé sur cet ordinateur</label></div>
         <div class="grid" style="margin-top:8px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
-        <div class="grid" style="margin-top:8px"><button type="button" id="elGo" disabled>Générer les voix</button></div>
+        <div class="grid" style="margin-top:8px"><select id="elModel" aria-label="Modèle de voix"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select><button type="button" id="elGo" disabled>Générer les voix</button></div>
         <p class="sub" id="elNow" aria-live="polite"></p>
         <ol id="elLines"></ol>
         <details><summary>Importer mes propres fichiers</summary><div class="opts" style="margin-top:8px"><label>Fichiers dans l'ordre : <input type="file" id="storyVoices" multiple accept="audio/*"></label></div></details>

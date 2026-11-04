@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
+import { createTalk, stepTalk, talkShape } from './talk.js';
 
 export const PALETTE = {
   skin: '#8b6a53', skinDeep: '#6c5243', neck: '#655044',
@@ -590,7 +591,7 @@ export function createCharacter() {
       state.exprName = name;
       state.expr = EXPRESSIONS[name] || {};
     },
-    say(text, onEnd, duration) {
+    say(text, onEnd, duration, env) {
       const seq = [];
       for (const ch of text) {
         const v = VISEME_OF(ch);
@@ -598,8 +599,7 @@ export function createCharacter() {
         seq.push({ v: punct ? ' ' : v, d: punct ? 0.24 : (v === ' ' ? 0.07 : 0.078) });
       }
       seq.push({ v: ' ', d: 0.1 });
-      if (duration) { const k = duration / seq.reduce((n, x) => n + x.d, 0); seq.forEach((x) => { x.d *= k; }); } // la bouche suit la durée de la voix
-      state.talk = { seq, i: 0, t: 0, onEnd };
+      state.talk = createTalk(seq, onEnd, duration, env);
     },
     setGlasses(on) { glasses.visible = on; },
     setMorphs(obj) { Object.assign(weights, obj); faceApply(weights); },
@@ -624,10 +624,8 @@ export function createCharacter() {
       state.viseme = {};
       if (state.talk) {
         const T = state.talk;
-        T.t += dt;
-        while (T.i < T.seq.length && T.t > T.seq[T.i].d) { T.t -= T.seq[T.i].d; T.i++; }
-        if (T.i >= T.seq.length) { const f = T.onEnd; state.talk = null; f?.(); }
-        else state.viseme = VISEMES[T.seq[T.i].v] || {};
+        if (stepTalk(T, dt)) { const f = T.onEnd; state.talk = null; f?.(); }
+        else state.viseme = talkShape(VISEMES[T.seq[T.i].v] || {}, T);
       }
       const k = 1 - Math.exp(-dt * 8), kv = 1 - Math.exp(-dt * 18);
       for (const m of MORPHS) {
@@ -635,6 +633,7 @@ export function createCharacter() {
         if (m in state.glance) target += state.glance[m];
         if (state.talk) {
           if (m === 'jawOpen' || m === 'pucker' || m === 'wide' || m === 'press') target = target * 0.2 + (state.viseme[m] || 0);
+          else if (m === 'smileL' || m === 'smileR' || m === 'sneer') target *= 0.6; // la bouche reste droite quand il parle
         }
         weights[m] += (target - weights[m]) * (state.talk ? kv : k);
       }

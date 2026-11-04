@@ -1,7 +1,9 @@
 // Voix automatiques : le Studio demande chaque réplique à ElevenLabs avec la clé de l'utilisateur.
 // La clé ne quitte ce navigateur que vers api.elevenlabs.io. Elle n'est jamais dans le code.
+import { voiceTag } from './tones.js';
+
 const API = 'https://api.elevenlabs.io/v1';
-const MODEL = 'eleven_multilingual_v2';
+const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
 const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices';
 
 const read = (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } };
@@ -44,7 +46,7 @@ async function explain(res) {
 
 export function mountVoices({ el, player, parseStory }) {
   const cache = audioCache();
-  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep');
+  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
   let rows = [], ctx = null, busy = false;
   const say = (t) => { el('elNow').textContent = t; };
   const call = async (path, init = {}) => {
@@ -81,11 +83,12 @@ export function mountVoices({ el, player, parseStory }) {
   };
 
   const makeLine = async (i, force) => {
-    const r = rows[i], voice = pick[r.who].value, id = [voice, MODEL, r.text].join('|');
+    const r = rows[i], voice = pick[r.who].value, tag = voiceTag(r.tone), plain = model.value === STABLE;
+    const text = tag && !plain ? `[${tag}] ${r.text}` : r.text, id = [voice, model.value, text].join('|');
     let buf = force ? null : await cache.get(id);
     const fresh = !buf;
     if (fresh) {
-      const body = { text: r.text, model_id: MODEL, previous_text: rows[i - 1]?.text, next_text: rows[i + 1]?.text };
+      const body = { text, model_id: model.value, ...(plain ? { previous_text: rows[i - 1]?.text, next_text: rows[i + 1]?.text } : {}) };
       buf = await (await call(`/text-to-speech/${encodeURIComponent(voice)}?output_format=mp3_44100_128`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })).arrayBuffer();
       await cache.put(id, buf);
     }
@@ -103,7 +106,7 @@ export function mountVoices({ el, player, parseStory }) {
   const show = () => {
     list.replaceChildren(...rows.map((r, i) => {
       const li = document.createElement('li'), text = document.createElement('span'), hear = document.createElement('button'), redo = document.createElement('button');
-      text.textContent = `${r.who === 'nox' ? 'Nox' : 'Tobi'} : ${r.text}`;
+      text.textContent = `${r.who === 'nox' ? 'Nox' : 'Tobi'}${r.tone ? ` (${r.tone})` : ''} : ${r.text}`;
       hear.type = 'button'; hear.textContent = 'Écouter'; hear.disabled = !r.url;
       hear.addEventListener('click', () => new Audio(r.url).play());
       redo.type = 'button'; redo.textContent = 'Refaire'; redo.dataset.redo = '1'; redo.disabled = busy || !pick.tobi.value;
@@ -118,7 +121,7 @@ export function mountVoices({ el, player, parseStory }) {
   };
 
   const generate = async () => {
-    rows = parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text }));
+    rows = parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text, tone: c.tone }));
     if (!rows.length) { say('Ce script ne contient aucune réplique.'); return; }
     remember(); player.voices = []; lock(true);
     let paid = 0;
