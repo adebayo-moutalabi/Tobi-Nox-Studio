@@ -1,0 +1,38 @@
+# UNE PETITE MISE À JOUR
+# Pitch : Tobi rentre et le site est en panne. Nox, au bureau, a une mauvaise nouvelle.
+# Tobi entre et rejoint Nox, assis sur la table à côté de l'ordinateur.
+
+AMBIANCE soir
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT TOBI marche porte
+ECRAN erreur_500.txt
+TABLEAU Boulangerie Martin | Site en panne | 12 visiteurs perdus
+FONDU direct
+
+PLAN porte
+PORTE ouverte
+TOBI marche couloir
+PORTE fermee
+PLAN auto
+TOBI dit (curieux) Pourquoi le site est en panne ?
+TOBI marche centre
+PLAN gros NOX
+NOX dit (calme) J'ai une mauvaise nouvelle.
+PLAN auto
+TOBI dit (panique) Nox, qu'est-ce que tu as fait ?
+PLAN gros NOX
+NOX dit (sec) Moi, rien. Toi, tu as fait une mise à jour.
+PLAN auto
+TOBI dit (mauvaisefoi) Une toute petite mise à jour.
+INSERT Visiteurs perdus | 12 | Sur 12
+NOX dit (constat) Douze visiteurs. Tous partis.
+PLAN auto
+TOBI dit (illumine) Donc zéro bug signalé.
+PLAN gros NOX
+NOX dit (ironique) Et zéro client.
+PLAN auto
+TOBI dit (excite) Nox. Aie la vision. Zéro client, zéro problème.
+PLAN gros NOX
+NOX dit (resigne) Projet numéro dix-neuf.
+ATTENDRE 0.4

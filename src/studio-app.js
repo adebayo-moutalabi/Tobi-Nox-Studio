@@ -17,6 +17,9 @@ import E08 from '../shorts/08_vie_automatisee.txt';
 import E09 from '../shorts/09_capable_de_tout.txt';
 import E11 from '../shorts/11_je_commence_demain.txt';
 import E12 from '../shorts/12_le_pitch.txt';
+import E13 from '../shorts/13_premier_client.txt';
+import E14 from '../shorts/14_petite_mise_a_jour.txt';
+import E15 from '../shorts/15_levee_de_fonds.txt';
 
 startViewer({
   cast: [tobi(), nox()], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
@@ -32,6 +35,9 @@ startViewer({
     '9. Capable de tout': E09,
     '11. Je commence demain': E11,
     '12. Le pitch': E12,
+    '13. Mon premier gros client': E13,
+    '14. Une petite mise à jour': E14,
+    '15. Ma levée de fonds': E15,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

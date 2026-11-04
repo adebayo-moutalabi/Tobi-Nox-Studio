@@ -35,6 +35,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Néon retiré.** La bande lumineuse du bureau semblait traverser Tobi quand il s'assoit.
 - **Mains séparées.** `keepHandsApart()` dans `src/talk.js` empêche les mains de se traverser ou d'entrer dans le buste, hors gestes voulus (applaudir, clavier, objets).
 - **Choix de l'IA.** L'espace Écrire accepte une clé Claude, OpenAI ou Gemini. Modèles dans le haut de `src/writer.js`.
+- **Nouveaux épisodes.** 13, 14 et 15 : Tobi entre par la porte. L'ambiance se choisit par script ; les épisodes 11, 12 et 15 passent de jour.
+- **Réglages et navigation.** Plus de débordement horizontal, navigation réduite à quatre icônes discrètes.
 
 ## À faire
 
@@ -46,3 +48,4 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 6. Modéliser les Aînés et écrire l'épisode 10.
 7. Remonter l'épisode 7 au format actuel.
 8. Tester avec les vraies voix ElevenLabs.
+9. **Faire du projet un framework réutilisable :** à la fin, documenter comment quelqu'un d'autre crée sa propre série (personnages, lieux, charte, histoires) sur cette base.

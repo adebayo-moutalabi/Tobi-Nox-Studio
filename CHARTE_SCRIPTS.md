@@ -66,6 +66,10 @@ Règles : jamais plus de deux phrases cultes par épisode, et jamais deux fois l
 
 Un épisode ne reste pas assis du début à la fin. Prévoir au moins un déplacement ou une action : se lever, aller au frigo, au miroir, à la fenêtre, s'asseoir sur le lit, taper au clavier. L'action doit servir le gag.
 
+## Le moment de la journée
+
+Chaque script choisit son ambiance dès la première ligne : `AMBIANCE jour` ou `AMBIANCE soir`. Elle doit servir l'histoire : un réveil se passe le jour, une nuit blanche le soir. Il est possible d'en changer en cours d'épisode.
+
 ## Le format du fichier
 
 Une ligne = une instruction. Les lignes qui commencent par `#` sont des notes.

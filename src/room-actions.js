@@ -47,7 +47,7 @@ export function roomActions(v, room) {
       a.spot = { exit: () => v.stand(a) };
       await v.sit(a, 'chair', true);
     } else {
-      const z = other(a).spot ? 0.28 : -0.2; // si Tobi est déjà assis, Nox se pose à côté de lui
+      const z = 0.28; // Nox garde sa place : Tobi peut toujours s'asseoir à côté
       await arrive(a, P(-0.42, z), WEST);
       await v.hop(a, new THREE.Vector3(-0.72, 0.55, z), EAST);
       a.spot = { exit: async () => { await v.stand(a); await v.hop(a, P(-0.42, z), EAST); } };

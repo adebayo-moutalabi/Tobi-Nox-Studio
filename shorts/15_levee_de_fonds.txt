@@ -1,0 +1,35 @@
+# MA LEVÉE DE FONDS
+# Pitch : Tobi rentre d'un rendez-vous avec un investisseur. C'était le boulanger.
+# Tobi entre, traverse la chambre, va au frigo pendant que Nox le suit à pied.
+
+AMBIANCE jour
+DIRECT NOX marche armoire
+DIRECT TOBI marche porte
+TABLEAU Levée de fonds | Objectif : 1 million | Reçu : ?
+FONDU direct
+
+PLAN porte
+PORTE ouverte
+TOBI marche couloir
+PORTE fermee
+PLAN auto
+TOBI dit (fier) Aujourd'hui, j'ai rencontré un investisseur.
+NOX dit (curieux) Il a dit quoi ?
+TOBI frigo
+PLAN auto
+TOBI dit (gene) Il a dit bonjour.
+PLAN gros NOX
+NOX dit (sec) C'était qui ?
+PLAN auto
+TOBI dit (mauvaisefoi) Le boulanger.
+PLAN gros NOX
+NOX dit (ironique) Il a investi combien ?
+PLAN auto
+TOBI dit (fier) Une baguette.
+INSERT Levée de fonds | 1 | Baguette
+NOX dit (constat) C'est ta première levée de fonds.
+PLAN auto
+TOBI dit (excite) Nox. Aie la vision. Valorisation : deux baguettes.
+PLAN gros NOX
+NOX dit (resigne) Tobi. Non.
+ATTENDRE 0.4

@@ -2,7 +2,7 @@
 # Pitch : Tobi pitche debout une appli qui te dit quand manger.
 # Tobi marche et pitche dans la chambre, Nox juge depuis le lit, puis se lève.
 
-AMBIANCE soir
+AMBIANCE jour
 DIRECT NOX assis
 DIRECT TOBI marche tapis
 TABLEAU Grande idée | Une appli | Pour manger
@@ -15,7 +15,7 @@ TOBI marche centre
 TOBI dit (excite) Une appli qui te dit quand manger.
 PLAN gros NOX
 NOX dit (sec) Ça s'appelle avoir faim.
-TOBI marche fenetre
+TOBI marche lit
 PLAN auto
 TOBI dit (mauvaisefoi) Oui, mais avec un abonnement.
 INSERT Abonnement | 19 € | Par mois
