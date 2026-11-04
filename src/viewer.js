@@ -584,11 +584,11 @@ export function startViewer(cfg) {
   api.step = (dt, skip) => frame(dt, skip);
   Object.defineProperty(api, 'simTime', { get: () => simT });
   api.beginOffline = (w, h) => { // rendu image par image à la taille de la vidéo
-    paused = true;
+    paused = true; api.offline = true;
     const ratio = renderer.getPixelRatio();
     renderer.setPixelRatio(1); renderer.setSize(w, h, false);
     camera.aspect = w / h; camera.updateProjectionMatrix();
-    return { end() { paused = false; renderer.setPixelRatio(ratio); resize(); } };
+    return { end() { paused = false; api.offline = false; renderer.setPixelRatio(ratio); resize(); } };
   };
   renderer.setAnimationLoop(() => {
     if (paused || api.hold) return;

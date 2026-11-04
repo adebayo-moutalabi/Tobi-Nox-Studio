@@ -31,6 +31,7 @@
 #   VOLET ouvert|ferme   LAMPE allumee|eteinte   PORTE ouverte|fermee
 
 # --- Scène 1 : le réveil ---
+AMBIANCE jour
 TOBI dort
 NOX marche fenetre
 PLAN lit

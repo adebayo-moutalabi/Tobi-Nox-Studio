@@ -2,6 +2,7 @@
 # Durée visée : 35 à 40 s. Format vertical. La fin relance le début (boucle).
 # DIRECT devant une ligne = l'action se fait hors champ, sans temps mort.
 
+AMBIANCE jour
 DIRECT TOBI travaille
 DIRECT NOX travaille
 ECRAN revisions.txt

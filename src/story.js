@@ -74,6 +74,9 @@ export function createPlayer(v, ui) {
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
   const look = createLook(v);
+  // Le soir est l'ambiance par défaut : ses effets sont préparés dès l'ouverture, pas pendant l'export.
+  look.setMood('soir');
+  v.renderer.compileAsync(v.scene, v.camera).catch(() => {});
   const sfx = (type) => {
     if (ffing) return;
     sfxList.push({ type, start: v.simTime - playT0 });
@@ -134,13 +137,14 @@ export function createPlayer(v, ui) {
     const b = v.actors.find((x) => x !== a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
-    const to = (near ? eyes(b).sub(H).setY(0) : fwd).normalize();
-    if (near) { a.look = b; b.look = a; } // ils se regardent ; la caméra se place de trois quarts sur ce regard
+    const toB = eyes(b).sub(H).setY(0).normalize(), across = near && fwd.clone().normalize().dot(toB) > 0.35; // face à face, ou côte à côte ?
+    const to = (across ? toB : fwd).normalize();
+    a.look = across ? b : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
     const top = H.y + (big ? 0.24 : 0.2), fov = 32;
     const span = tight ? (big ? 0.9 : 0.72) : (big ? 1.4 : 1.02);
     for (const k of [1, 0.85, 0.72]) {
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = top + sp * 0.13 - sp / 2;
-      for (const ang of near ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
+      for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.36); // les bords du cadre restent dégagés aussi
         if (room2(c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && !blocks(b, c, H)) {
@@ -321,7 +325,7 @@ export function createPlayer(v, ui) {
       case 'remet': a.look = null; if (auto) { track = null; cut('frigo'); } return v.acts.fridgeBack(a);
       case 'miroir': a.look = null; if (auto) { track = null; cut('miroir'); } return v.acts.mirror(a);
       case 'fenetre': return v.acts.window(a);
-      case 'leve': a.look = null; a.hero.motion.clearPose(); return v.leave(a);
+      case 'leve': a.look = null; a.hero.motion.clearPose(); await v.leave(a); if (auto) talkShot(a); return undefined; // recadre : debout, la tête sortirait du plan
       case 'prend': a.look = null; if (auto) follow(a); await v.take(a, OBJETS[plain(c.args[0] || '')]); track = null; return undefined;
       case 'pose': return v.drop(a);
       case 'utilise': v.useHeld(a); return v.wait(a.held?.def.use === 'drink' ? 3 : 0.3);
@@ -342,7 +346,7 @@ export function createPlayer(v, ui) {
     subtitles, clips, sfx: sfxList,
     async play(text, opts = {}) {
       if (running) return;
-      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); v.quiet = true; look.hideInsert(); look.setMood('jour');
+      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); v.quiet = true; look.hideInsert(); look.setMood('soir');
       const list = parseStory(text);
       running = true; stopped = false; ui.state(true); v.locked = true;
       ui.curtain(true, true);
@@ -364,7 +368,7 @@ export function createPlayer(v, ui) {
       ui.curtain(false, true);
       v.camera.fov = 26; v.camera.updateProjectionMatrix();
       v.actors.forEach((a) => { a.hero.root.visible = true; });
-      v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(); look.setMood('jour'); ui.caption(null);
+      v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(); look.setMood('soir'); ui.caption(null);
       v.actors.forEach((a) => { a.look = null; });
       v.setView('chambre', true);
       running = false; closing = false; ui.state(false);

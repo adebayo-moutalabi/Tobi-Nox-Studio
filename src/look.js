@@ -18,7 +18,8 @@ function canvasTexture(w, h) {
 const overlay = (map, order) => new THREE.MeshBasicMaterial({ map, transparent: true, depthTest: false, depthWrite: false, toneMapped: false, fog: false });
 
 // Ombres de contact (les objets se posent vraiment) et halo des écrans.
-function createPost({ renderer, scene, camera }) {
+function createPost(v) {
+  const { renderer, scene, camera } = v;
   const size = renderer.getDrawingBufferSize(new THREE.Vector2()), now = new THREE.Vector2();
   const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: 4 }));
   composer.setPixelRatio(1); composer.setSize(size.x, size.y);
@@ -29,6 +30,7 @@ function createPost({ renderer, scene, camera }) {
   composer.addPass(ao);
   composer.addPass(new UnrealBloomPass(size.clone(), 0.28, 0.55, 0.82));
   composer.addPass(new OutputPass());
+
   return () => {
     renderer.getDrawingBufferSize(now);
     if (!now.equals(size)) { size.copy(now); composer.setPixelRatio(1); composer.setSize(size.x, size.y); }
@@ -42,7 +44,7 @@ export function createLook(v) {
   const ui = new THREE.Scene(), uiCam = new THREE.PerspectiveCamera(40, 1, 0.01, 10); // calque posé sur l'image finale
   let post = null, polish = false;
   v.render = () => {
-    if (polish) { post ||= createPost(v); post(); } else renderer.render(scene, camera);
+    if (polish && v.offline) { post ||= createPost(v); post(); } else renderer.render(scene, camera); // les passes coûteuses sont réservées à l'export : la lecture reste fluide
     renderer.autoClear = false; renderer.render(ui, uiCam); renderer.autoClear = true;
   };
 
@@ -57,8 +59,9 @@ export function createLook(v) {
   const strip = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.012, 1.25), new THREE.MeshBasicMaterial({ color: '#b48cff', toneMapped: false }));
   strip.position.set(0.56, 0.69, -1.02);
   const stripGlow = new THREE.PointLight('#a06bff', 1.2, 1.6, 1.5); stripGlow.position.set(0.5, 0.45, -1.0);
-  const face = new THREE.PointLight('#ffcfa8', 2.1, 2.3, 1.4); face.position.set(0.25, 0.1, 0.1); camera.add(face); face.visible = false;
-  soir.add(lamp, lamp.target, wash, back, screen, strip, stripGlow);
+  const face = new THREE.PointLight('#ffcfa8', 2.6, 6, 1.1); face.position.set(0.25, 0.1, 0.1); camera.add(face); face.visible = false;
+  const bedside = new THREE.PointLight('#ffb27a', 1.8, 3.2, 1.4); bedside.position.set(-0.55, 1.5, 0.75); // lampe de chevet : le lit reste lisible
+  soir.add(lamp, lamp.target, wash, back, screen, strip, stripGlow, bedside);
   const day = { bg: scene.background, hemi: lights.hemi.intensity, hc: lights.hemi.color.clone(), hg: lights.hemi.groundColor.clone(), env: scene.environmentIntensity, key: lights.key.intensity, fill: lights.fill.intensity };
 
   // Vignettage : les bords s'assombrissent, le regard reste au centre
