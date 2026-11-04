@@ -1,6 +1,6 @@
 # Pilote : Mon serveur coûte plus cher que mon loyer, les voix
 
-Une réplique = un fichier ElevenLabs, nommé exactement comme ci-dessous.
+Le Studio génère ces répliques tout seul : section « Voix ElevenLabs », puis « Générer les voix ». Les noms de fichiers ne servent que pour un import manuel.
 Tobi : ta voix clonée, jeune et vivante. Nox : posé, légèrement mécanique, humour sec.
 
 | Fichier | Qui | Texte | Ton |

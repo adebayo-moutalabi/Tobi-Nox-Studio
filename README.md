@@ -13,7 +13,7 @@ Tout tourne dans le navigateur, sans logiciel 3D à installer.
 | Objets | Papier, livre, gourde, tasse, téléphone, sac à dos noir, chaise, pouf |
 | Script | `histoire.txt`, joué par le Studio avec caméra automatique |
 | Vidéo | Export MP4 vertical ou 16:9, image par image, sous-titres incrustés et `.srt` |
-| Voix | Import ElevenLabs, durée et bouche calées sur chaque réplique, son inclus dans le MP4 |
+| Voix | Génération ElevenLabs depuis le Studio avec ta clé, durée et bouche calées sur chaque réplique, son inclus dans le MP4 |
 | Autres décors et personnages | À faire, selon la fiche de projet |
 
 ## Liens

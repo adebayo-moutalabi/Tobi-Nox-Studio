@@ -49,6 +49,14 @@ summary { cursor: pointer; color: var(--muted); margin-top: 8px; }
 button:disabled { opacity: .45; cursor: default; }
 .app.portrait .stage { aspect-ratio: 9 / 16; height: 100%; max-width: 100%; justify-self: center; }
 form { display: flex; gap: 6px; }
+input[type="password"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); }
+.voice { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.voice select { max-width: 130px; }
+#elLines { margin: 8px 0 0; padding: 0 0 0 20px; font-size: 12.5px; }
+#elLines:empty { display: none; }
+#elLines li { margin-bottom: 6px; }
+#elLines span { display: block; margin-bottom: 3px; }
+#elLines button { padding: 3px 7px; font-size: 12px; margin-right: 4px; }
 input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); }
 .send { background: var(--ink); color: var(--panel); }
 .send:hover { background: var(--ink); opacity: .86; }
@@ -80,7 +88,16 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
       <h2>Histoire</h2>
       <div class="grid"><select id="storyPick" aria-label="Choisir un script"></select><select id="storyFormat" aria-label="Format"><option value="short">Short 9:16</option><option value="wide">YouTube 16:9</option></select></div>
       <div class="grid" style="margin-top:6px"><button type="button" id="storyPlay">Lire l'histoire</button><button type="button" id="storyStop" disabled>Arrêter</button><button type="button" id="storyExport">Exporter en MP4</button><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
-      <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="storyCaps" checked> Sous-titres dans la vidéo</label><label>Voix ElevenLabs, dans l'ordre : <input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
+      <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="storyCaps" checked> Sous-titres dans la vidéo</label></div>
+      <details id="elBox" open><summary>Voix ElevenLabs</summary>
+        <div class="grid" style="margin-top:8px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger mes voix</button></div>
+        <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="elKeep"> Garder la clé sur cet ordinateur</label></div>
+        <div class="grid" style="margin-top:8px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
+        <div class="grid" style="margin-top:8px"><button type="button" id="elGo" disabled>Générer les voix</button></div>
+        <p class="sub" id="elNow" aria-live="polite"></p>
+        <ol id="elLines"></ol>
+        <details><summary>Importer mes propres fichiers</summary><div class="opts" style="margin-top:8px"><label>Fichiers dans l'ordre : <input type="file" id="storyVoices" multiple accept="audio/*"></label></div></details>
+      </details>
       <p class="sub" id="storyNow" aria-live="polite"></p>
       <details><summary>Modifier le script</summary><textarea id="storyText" rows="14" spellcheck="false" aria-label="Script de l'histoire"></textarea></details>
     </section>

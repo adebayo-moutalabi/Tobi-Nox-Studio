@@ -3,6 +3,7 @@
 import * as THREE from 'three';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
+import { mountVoices } from './voices.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -329,5 +330,6 @@ export function mountStory(v, stories) {
     const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length;
     ui.line(`${list.length} voix importées pour ${lines} répliques.${list.length !== lines ? ' Attention : le nombre ne correspond pas.' : ''}`);
   });
+  mountVoices({ el, player, parseStory });
   v.exportVideo = (t, o) => exportVideo(v, player, t, o);
 }

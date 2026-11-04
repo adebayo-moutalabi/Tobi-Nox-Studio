@@ -26,14 +26,10 @@ Sur ordinateur, avec Chrome ou Edge. Exemple avec le pilote, qui est déjà scri
 2. **Scripter** dans le Studio : choisir un script, ouvrir « Modifier le script », écrire. Mettre `DIRECT` devant toute action qui ralentit.
    Copier ensuite le texte dans `shorts/NN_titre.txt`, car le Studio ne l'enregistre pas.
 3. **Répéter :** format « Short 9:16 », puis « Lire l'histoire ». Couper tout ce qui traîne.
-4. **Voix sur ElevenLabs**, dans Text to Speech :
-   - Choisir ta voix clonée pour Tobi, une autre voix pour Nox. Noter les réglages et ne plus les changer.
-   - Coller une seule réplique, générer, écouter, recommencer si le ton est faux.
-   - Télécharger en MP3 et renommer dans l'ordre du script : `01_tobi.mp3`, `02_nox.mp3`, `03_tobi.mp3`...
-   - Ranger les fichiers dans un dossier par épisode.
-5. **Importer dans le Studio :** ouvrir le Studio sur le site, choisir le script, format « Short 9:16 ».
-   Dans « Voix ElevenLabs, dans l'ordre », sélectionner tous les fichiers d'un coup.
-   Le Studio doit afficher « 15 voix importées pour 15 répliques » (le nombre dépend de l'épisode). S'il affiche « Attention », il manque un fichier.
+4. **Clé ElevenLabs, une seule fois :** sur ElevenLabs, créer une clé API avec les droits Text to Speech et Voices. La coller dans le Studio, section « Voix ElevenLabs », puis « Charger mes voix ». Ne jamais la mettre dans le dépôt ni l'envoyer à quelqu'un.
+5. **Générer les voix :** choisir le script, ta voix clonée pour Tobi, une autre voix pour Nox, puis « Générer les voix ».
+   Le Studio crée toutes les répliques et les cale sur le script. Écouter : « Refaire » relance une seule réplique si le ton est faux.
+   Une réplique inchangée ne coûte pas de crédit une seconde fois sur cet ordinateur.
 6. **Exporter :** laisser « Sous-titres dans la vidéo » coché, choisir 30 i/s, cliquer « Exporter en MP4 ».
    Laisser l'onglet ouvert au premier plan pendant le calcul. Le Studio télécharge `histoire.mp4` et `histoire.srt`.
 7. **Regarder la vidéo en entier** sur ton téléphone, avec et sans le son. Si une réplique tombe mal, corriger le script ou la voix et réexporter.
