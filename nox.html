@@ -273,8 +273,9 @@ details[open]::details-content { block-size: auto; opacity: 1; }
             <label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label>
             <label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label>
           </div></details>
-          <details open><summary>Écriture <b>Claude</b></summary><div>
-            <input type="password" id="wrKey" placeholder="Clé API Claude (facultative)" autocomplete="off" spellcheck="false" aria-label="Clé API Claude">
+          <details open><summary>Écriture <b id="rowAI">Claude</b></summary><div>
+            <label class="voice">IA <select id="wrProvider"><option value="claude">Claude</option><option value="openai">ChatGPT</option><option value="gemini">Gemini</option></select></label>
+            <input type="password" id="wrKey" placeholder="Clé API Claude (facultative)" autocomplete="off" spellcheck="false" aria-label="Clé API de l'IA">
             <p class="sub">Elle permet d'analyser tes brouillons ici. Sans clé, le Studio copie la consigne pour l'IA de ton choix.</p>
           </div></details>
         </div>

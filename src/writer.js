@@ -1,11 +1,14 @@
 // Espace d'écriture : un brouillon écrit ou dicté devient des idées, puis un script jouable.
-// Avec une clé Claude, tout se fait ici. Sans clé, la consigne se copie vers n'importe quelle IA.
+// Avec une clé Claude, ChatGPT ou Gemini, tout se fait ici. Sans clé, la consigne se copie vers n'importe quelle IA.
 import Anthropic from '@anthropic-ai/sdk';
 import CHARTE from '../CHARTE_SCRIPTS.md';
 import BIBLE from '../BIBLE.md';
 
 const MODEL = 'claude-opus-5-5';
-const KEY = 'tobinox.claude.key', DRAFT = 'tobinox.brouillon';
+// Pour changer de modèle OpenAI ou Gemini, modifier ces deux lignes.
+const OPENAI_MODEL = 'gpt-6-astra', GEMINI_MODEL = 'gemini-4-argon';
+const PROVIDERS = { claude: 'Clé API Claude', openai: 'Clé API OpenAI', gemini: 'Clé API Gemini' };
+const KEY = (p) => (p === 'claude' ? 'tobinox.claude.key' : `tobinox.${p}.key`), PROVIDER = 'tobinox.ia', DRAFT = 'tobinox.brouillon';
 const read = (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } };
 const write = (k, val) => { try { if (val) localStorage.setItem(k, val); else localStorage.removeItem(k); } catch { /* navigation privée */ } };
 
@@ -19,13 +22,38 @@ const ideasPrompt = (draft) => `Voici mon brouillon, écrit ou dicté vite fait 
 const scriptPrompt = (draft, idea, note) => `Brouillon de départ :\n\n${draft}\n\nÉcris le script complet de ce scénario : ${idea}.${note ? `\nConsigne de l'auteur : ${note}` : ''}\nLe champ script contient uniquement le fichier au format de la charte, avec au moins un déplacement ou une action.`;
 
 export function mountWriter({ el, parseStory, onTry, goSettings }) {
-  const draft = el('wrDraft'), key = el('wrKey'), out = el('wrOut'), script = el('wrScript'), go = el('wrGo');
+  const provider = el('wrProvider'), draft = el('wrDraft'), key = el('wrKey'), out = el('wrOut'), script = el('wrScript'), go = el('wrGo');
   let idea = '', meta = { titre: '', pitch: '' };
   const say = (t) => { el('wrNow').textContent = t; };
   const ready = () => !!key.value.trim();
   const showScript = (on) => { el('wrScriptBox').hidden = !on; };
 
+  const failed = (status) => (status === 401 || status === 403 ? 'Clé refusée. Vérifie-la dans les réglages.' : status === 429 ? 'Limite atteinte. Réessaie dans une minute ou vérifie ton crédit.' : `L'IA a répondu ${status}.`);
+  const post = async (url, headers, body) => {
+    let res;
+    try { res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(body) }); } catch { throw new Error('Impossible de joindre l\'IA. Vérifie ta connexion.'); }
+    if (!res.ok) throw new Error(failed(res.status));
+    return res.json();
+  };
+  async function askOpenAI(prompt, schema) {
+    const r = await post('https://api.openai.com/v1/chat/completions', { Authorization: `Bearer ${key.value.trim()}` }, {
+      model: OPENAI_MODEL,
+      messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: prompt }],
+      response_format: { type: 'json_schema', json_schema: { name: 'reponse', strict: true, schema } },
+    });
+    return JSON.parse(r.choices[0].message.content);
+  }
+  async function askGemini(prompt, schema) {
+    const r = await post(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, { 'x-goog-api-key': key.value.trim() }, {
+      systemInstruction: { parts: [{ text: SYSTEM }] },
+      contents: [{ role: 'user', parts: [{ text: `${prompt}\nRéponds uniquement en JSON avec ce schéma : ${JSON.stringify(schema)}` }] }],
+      generationConfig: { responseMimeType: 'application/json' },
+    });
+    return JSON.parse(r.candidates[0].content.parts.map((p) => p.text || '').join(''));
+  }
   async function ask(prompt, schema) {
+    if (provider.value === 'openai') return askOpenAI(prompt, schema);
+    if (provider.value === 'gemini') return askGemini(prompt, schema);
     const client = new Anthropic({ apiKey: key.value.trim(), dangerouslyAllowBrowser: true });
     const res = await client.beta.messages.create({
       model: MODEL, max_tokens: 16000,
@@ -39,7 +67,7 @@ export function mountWriter({ el, parseStory, onTry, goSettings }) {
     return JSON.parse(res.content.find((b) => b.type === 'text').text);
   }
   const explain = (e) => {
-    if (e instanceof Anthropic.AuthenticationError) return 'Clé Claude refusée. Vérifie-la dans les réglages.';
+    if (e instanceof Anthropic.AuthenticationError) return 'Clé refusée. Vérifie-la dans les réglages.';
     if (e instanceof Anthropic.RateLimitError) return 'Claude est occupé. Réessaie dans une minute.';
     if (e instanceof Anthropic.APIConnectionError) return 'Impossible de joindre Claude. Vérifie ta connexion.';
     if (e instanceof Anthropic.APIError) return `Claude a répondu ${e.status}. Vérifie ton crédit API.`;
@@ -105,6 +133,9 @@ export function mountWriter({ el, parseStory, onTry, goSettings }) {
 
   draft.value = read(DRAFT);
   draft.addEventListener('input', () => write(DRAFT, draft.value));
-  key.value = read(KEY);
-  key.addEventListener('change', () => write(KEY, key.value.trim()));
+  const showKey = () => { key.value = read(KEY(provider.value)); key.placeholder = `${PROVIDERS[provider.value]} (facultative)`; el('rowAI').textContent = provider.selectedOptions[0].text; };
+  provider.value = read(PROVIDER) || 'claude';
+  showKey();
+  provider.addEventListener('change', () => { write(PROVIDER, provider.value); showKey(); });
+  key.addEventListener('change', () => write(KEY(provider.value), key.value.trim()));
 }
