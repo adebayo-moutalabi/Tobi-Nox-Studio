@@ -30,6 +30,8 @@ Tout tourne dans le navigateur, sans logiciel 3D à installer.
 | `studio.html` | Le Studio complet. À ouvrir dans Chrome ou Edge pour exporter en MP4 |
 | `tobi.html`, `nox.html` | Chaque personnage seul |
 | `histoire.txt` | Le script en cours, avec la liste des instructions en tête |
+| `REPRISE.md` | Pour reprendre le projet : fonctionnement, dépendances, où changer quoi |
+| `JOURNAL.md` | Tout ce qui a été fait, commit par commit, et ce qu'il reste à faire |
 | `BIBLE.md` | L'univers, les personnages, la structure et la saison 1 |
 | `SHORTS.md` | Le format, les règles d'écriture, le workflow et le suivi des Shorts |
 | `shorts/` | Les scripts et les répliques de chaque Short |

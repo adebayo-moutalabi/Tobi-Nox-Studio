@@ -1,0 +1,39 @@
+# Journal du projet
+
+Une entrée par modification, la plus récente en bas. Le code entre crochets est le commit : `git show <code>` montre ce qui a changé, `git revert <code>` l'annule.
+
+Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un même commit. Depuis, chaque modification a le sien.
+
+## Fondations
+
+- **[11b3e1e] Studio de base.** Tobi et Nox modélisés en code, chambre fidèle aux photos, langage de script, export vidéo. Décisions : style low-poly généré par code pour rester identique d'un plan à l'autre ; Nox mesure 45 cm ; Tobi sans barbe.
+- **[e05b66b] Format Short.** Vertical, import des voix ElevenLabs, sous-titres, premier sketch.
+- **[e2b8663] Bible.** Plan de série retravaillé, pilote « Mon serveur ». Nox sec mais loyal, Aînés en personnages originaux.
+- **[676b3b2] Guide d'un Short.** Noms des Aînés (Chat et Claude pour l'instant), coiffure : tresses plaquées du modèle. Les références restent privées, hors du dépôt.
+- **[b5bbfe8] Voix automatiques.** Le Studio génère les voix avec la clé de l'auteur.
+- **[0f1a199] Synchro.** Bouche calée sur le volume réel de la voix ; un mot de ton règle voix, visage, geste et réaction.
+
+## Rendu et rythme
+
+- **[8d66339] Rendu proche des références.** Ambiance du soir, cadrage avec de l'air au-dessus de la tête, sous-titres plus petits avec mot surligné, écrans plein cadre, gestes plus vifs, frappe clavier réaliste, bruitages et musique. Correction d'un flou à l'export si la fenêtre changeait de taille.
+- **[1d04b67] Six épisodes et rendu adouci.** Épisodes 2 à 6 et 8, volumes arrondis, ombres de contact, halo, respiration et transferts de poids.
+- **[ede4a2c] Mouvements enregistrés.** Tobi utilise des animations CC0 pour le repos, la marche et la parole. Regards croisés (Nox déplacé au coin du bureau), caméra vivante, visage de Nox stabilisé, chocolat retiré, export plus rapide, réglage 720p.
+
+## Indépendance, nouveaux épisodes, documentation
+
+- **[ce21d44] Mouvements optionnels.** `RECORDED_MOTION` dans `src/config.js` : l'auteur ne veut pas dépendre d'animations téléchargées.
+- **Blocages de caméra supprimés.** Les visées de caméra testaient toute la chambre, ce qui figeait l'image à chaque plan. Index `three-mesh-bvh`, reflet réel du miroir limité à 80 cm.
+- **Trois épisodes en mouvement.** 9 (sur le lit), 11 (réveil, miroir, bureau), 12 (pitch debout). Nox se pose à côté de Tobi sur le lit.
+- **Interface simplifiée.** Liste d'épisodes, deux actions (Regarder, Créer la vidéo), réglages dans un panneau latéral, atelier dans ce panneau. Identité isolée dans le bloc `CHARTE GRAPHIQUE`, avec des couleurs provisoires.
+- **Documentation.** `REPRISE.md` et ce journal.
+
+## À faire
+
+1. Recevoir la charte graphique officielle et remplir le bloc `CHARTE GRAPHIQUE`.
+2. Préciser l'expérience voulue dans le Studio (l'auteur reviendra dessus).
+3. Améliorer le modèle de Tobi : visage, tissu du sweat, peau.
+4. Améliorer les éléments de la chambre : ordinateurs, placards qui s'ouvrent, textures.
+5. Ajouter d'autres lieux (voir `REPRISE.md`).
+6. Modéliser les Aînés et écrire l'épisode 10.
+7. Remonter l'épisode 7 au format actuel.
+8. Tester avec les vraies voix ElevenLabs.
