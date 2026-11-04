@@ -146,7 +146,6 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   };
 
   key.value = read(KEY);
-  el('elSetup').open = !key.value;
   say(key.value ? '' : 'Colle ta clé ElevenLabs pour créer les voix.');
   keep.checked = !!key.value || !read(PICK);
   load.addEventListener('click', loadVoices);

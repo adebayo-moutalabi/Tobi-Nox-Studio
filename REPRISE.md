@@ -44,6 +44,7 @@ Pour tester, ouvrir `studio.html` en local ou via un petit serveur. L'export vid
 | `src/exporter.js` | Export MP4 image par image, mixage, dessin des sous-titres. |
 | `src/sound.js` | Bruitages synthétisés et musique générée. |
 | `src/voices.js` | Génération des voix ElevenLabs. |
+| `src/writer.js` | Espace Écrire : dictée, analyse par Claude, script à valider. Reçoit `BIBLE.md` et `CHARTE_SCRIPTS.md` comme consigne. |
 | `src/tones.js` | Les tons : voix, visage, geste et réaction d'un seul mot. |
 | `src/talk.js` | Bouche calée sur le son, mouvements du corps qui parle et qui respire. |
 | `src/character.js`, `src/clips.js` | Tobi : modèle et animations écrites en code. |
@@ -64,6 +65,7 @@ Pour tester, ouvrir `studio.html` en local ou via un petit serveur. L'export vid
 | `three` | npm | MIT | Base du projet, non remplaçable simplement. |
 | `three-mesh-bvh` | npm | MIT | Accélère les tests de visée de la caméra. Sans lui, retirer deux lignes dans `src/story.js` : les plans se figent quelques secondes. |
 | `mp4-muxer` | npm | MIT | Écriture du fichier MP4. |
+| `@anthropic-ai/sdk` | npm | MIT | Espace Écrire seulement. Sans lui, retirer `src/writer.js` et garder la copie de consigne. |
 | Polices | Google Fonts | Libres | Changer le bloc `CHARTE GRAPHIQUE`. |
 | Voix | ElevenLabs, avec la clé de l'auteur | Compte de l'auteur | Importer ses propres fichiers audio dans « Réglages ». |
 

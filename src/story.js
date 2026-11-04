@@ -5,6 +5,7 @@ import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
+import { mountWriter } from './writer.js';
 import { TONS } from './tones.js';
 import { envelope } from './talk.js';
 import { createLook } from './look.js';
@@ -383,9 +384,19 @@ export function mountStory(v, stories) {
   el('storyBox').hidden = false;
   let voices = null;
   const pick = el('storyPick'), panel = document.querySelector('.panel');
-  const showTab = (name) => { panel.dataset.tab = name; };
-  document.querySelectorAll('button[data-tab]').forEach((b) => b.addEventListener('click', () => { if (b.dataset.tab === 'jouer') player.stop(); showTab(b.dataset.tab); }));
-  showTab('film');
+  // Navigation : quatre espaces toujours accessibles
+  const go = (name) => {
+    if (name !== 'ep') player.stop();
+    for (const id of ['lib', 'ep', 'write', 'settings']) el(id).hidden = id !== name;
+    panel.dataset.tab = name === 'coulisses' ? 'jouer' : 'film';
+    el('transport').hidden = name !== 'ep';
+    el('nav').querySelectorAll('button').forEach((b) => b.setAttribute('aria-current', b.dataset.go === (name === 'ep' ? 'lib' : name)));
+    if (name !== 'ep' && name !== 'lib') refresh();
+  };
+  el('nav').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => go(b.dataset.go)));
+  el('nav').hidden = false;
+  panel.dataset.tab = 'film';
+  el('nav').querySelector('button').setAttribute('aria-current', 'true');
   // Listes courtes affichées en contrôle segmenté
   for (const id of ['storyFormat', 'storyFps', 'storyQuality']) {
     const sel = el(id), seg = document.createElement('div'); seg.className = 'seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', sel.getAttribute('aria-label'));
@@ -409,6 +420,7 @@ export function mountStory(v, stories) {
     row.className = voice === 'ready' ? 'ok' : voice === 'none' ? 'todo' : '';
     el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${el('storyQuality').value === 'hd' ? '1080p' : '720p'}`;
     el('rowScript').textContent = `${c.length} répliques · environ ${secs} s`;
+    el('epStatus').textContent = `Voix : ${row.textContent.toLowerCase()} · ${el('rowVideo').textContent} · Réglages →`;
   };
   const halt = async () => { // arrête la lecture et remet tout en place sans attendre les animations
     if (!player.busy) return;
@@ -422,17 +434,17 @@ export function mountStory(v, stories) {
   const openEp = (k) => {
     pick.value = k; pick.dispatchEvent(new Event('change'));
     const m = /^(\d+)\.\s*(.*)$/.exec(k), text = stories[k];
-    el('epNum').textContent = m ? `Épisode ${m[1]}` : 'Hors saison';
-    el('epTitle').textContent = m ? m[2] : k;
+    el('epNum').textContent = m ? `Épisode ${m[1]}` : k.startsWith('Mon script') ? 'Mon script' : 'Hors saison';
+    el('epTitle').textContent = m ? m[2] : k.replace(/^Mon script : /, '');
     el('epPitch').textContent = (/^#\s*Pitch\s*:\s*(.*)$/mi.exec(text) || [])[1] || '';
-    el('lib').hidden = true; el('ep').hidden = false; el('transport').hidden = false;
-    el('storyNow').textContent = ''; refresh(); replay();
+    go('ep'); el('storyNow').textContent = ''; refresh(); replay();
   };
   pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
-  el('epBack').addEventListener('click', () => { player.stop(); el('ep').hidden = true; el('lib').hidden = false; el('transport').hidden = true; });
+  el('epBack').addEventListener('click', () => go('lib'));
+  el('epStatus').addEventListener('click', () => go('settings'));
   el('storyText').addEventListener('input', refresh);
   ['storyFormat', 'storyQuality'].forEach((id) => el(id).addEventListener('change', refresh));
-  el('eps').replaceChildren(...Object.keys(stories).map((k) => {
+  const renderEps = () => el('eps').replaceChildren(...Object.keys(stories).map((k) => {
     const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
     b.type = 'button'; n.textContent = m ? m[1].padStart(2, '0') : '—';
     b.append(n, m ? m[2] : k);
@@ -440,6 +452,19 @@ export function mountStory(v, stories) {
     li.append(b);
     return li;
   }));
+  // Les scripts écrits ici restent dans ce navigateur et rejoignent la liste
+  const MINE = 'tobinox.scripts';
+  const loadMine = () => { try { return JSON.parse(localStorage.getItem(MINE) || '{}'); } catch { return {}; } };
+  Object.assign(stories, loadMine());
+  for (const k of Object.keys(stories)) if (![...pick.options].some((o) => o.value === k)) pick.add(new Option(k, k));
+  renderEps();
+  mountWriter({ el, parseStory, goSettings: () => go('settings'), onTry: (title, pitch, text) => {
+    const k = `Mon script : ${title}`, body = /^#\s*Pitch\s*:/mi.test(text) || !pitch ? text : `# Pitch : ${pitch}\n${text}`;
+    stories[k] = body;
+    try { localStorage.setItem(MINE, JSON.stringify({ ...loadMine(), [k]: body })); } catch { /* navigation privée */ }
+    if (![...pick.options].some((o) => o.value === k)) pick.add(new Option(k, k));
+    renderEps(); openEp(k);
+  } });
   const short = () => el('storyFormat').value === 'short';
   const format = () => document.querySelector('.app').classList.toggle('portrait', short());
   el('storyFormat').addEventListener('change', format); format();
@@ -473,8 +498,8 @@ export function mountStory(v, stories) {
   el('storyExport').addEventListener('click', async () => {
     try {
       if (!player.voices.length && !voices.ready() && !warned) { // une seule alerte, puis on laisse exporter sans voix
-        warned = true; el('elSetup').open = true;
-        ui.line('Il manque ta clé ElevenLabs. Ajoute-la ici, ou clique encore pour créer une vidéo muette.');
+        warned = true;
+        ui.line('Il manque ta clé ElevenLabs. Ajoute-la dans Réglages, ou clique encore pour créer une vidéo muette.');
         return;
       }
       await halt();

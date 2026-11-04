@@ -58,7 +58,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--sole); outl
 .row .main { flex: 1; }
 button.main { background: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 10px 12px; }
 button.main:hover { background: var(--accent); filter: brightness(1.06); }
-.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel[data-tab="film"] > .back, .panel:not([data-tab]) > .atelier, .panel:not([data-tab]) > .back { display: none; }
+.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel:not([data-tab]) > .atelier, .panel:not([data-tab]) > .atelier { display: none; }
 .panel[data-tab="jouer"] > #storyBox { display: none; }
 .app:has(.panel[data-tab="film"]) .hint, .app:has(.panel[data-tab="film"]) .views { display: none; }
 .cap { position: absolute; left: 4%; right: 4%; top: 75.5%; transform: translateY(-50%); text-align: center; font: 800 2.9cqh "Inter", "Segoe UI", sans-serif; color: #fff; pointer-events: none; text-shadow: 0 0 .22em #08071a, 0 0 .22em #08071a; }
@@ -131,6 +131,7 @@ button.link { align-self: flex-start; padding: 6px 0; background: none; color: v
 button.link:hover { background: none; color: var(--brand-ink); }
 #storyBox { display: flex; flex-direction: column; flex: 1; min-height: 0; }
 #storyBox[hidden], #lib[hidden], #ep[hidden] { display: none; }
+.panel[data-tab="jouer"] > #storyBox { display: none; }
 #lib, #ep { display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 14px; animation: enter .55s var(--ease); }
 @keyframes enter { from { opacity: 0; transform: translateX(14px); } }
 .eps { list-style: none; margin: 0 -30px; padding: 0; flex: 1; overflow-y: auto; }
@@ -188,6 +189,29 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 .panel > section:not(#storyBox) { border-top: 1px solid var(--brand-hair); padding-top: 14px; }
 .cap { font-family: var(--brand-body); }
 .cap b { color: var(--brand-on-nox); }
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+.nav { display: flex; gap: 18px; margin: -6px 0 -4px; }
+.nav[hidden] { display: none; }
+.nav button { padding: 4px 0; border-radius: 0; background: none; color: var(--brand-soft); font-size: 14px; border-bottom: 1.5px solid transparent; }
+.nav button:hover { background: none; color: var(--brand-ink); }
+.nav button[aria-current="true"] { color: var(--brand-ink); border-bottom-color: var(--brand-nox); }
+#write, #settings { display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 12px; overflow-y: auto; padding-bottom: 24px; animation: enter .55s var(--ease); }
+#write[hidden], #settings[hidden], #wrOut[hidden], #wrScriptBox[hidden] { display: none; }
+#write h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.06; letter-spacing: -.02em; margin: 0; }
+#write textarea { flex: none; margin: 0; background: var(--brand-surface); color: var(--brand-ink); border: 1px solid var(--brand-hair); border-radius: 14px; padding: 12px; font: 15px/1.5 var(--brand-body); }
+#wrScript { font: 12.5px/1.5 ui-monospace, Consolas, monospace !important; }
+#write .row { display: flex; gap: 8px; align-items: stretch; }
+#write .row button:not(.main) { flex: none; padding-inline: 18px; }
+#wrMic[aria-pressed="true"] { background: var(--brand-nox); color: var(--brand-on-nox); }
+#wrNote { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--brand-hair); border-radius: 999px; background: var(--brand-surface); color: var(--brand-ink); font: 14px var(--brand-body); }
+#wrOut, #wrScriptBox { display: flex; flex-direction: column; gap: 10px; }
+.ideas { list-style: none; margin: 0; padding: 0; }
+.ideas button { display: block; width: 100%; padding: 14px 0; border-radius: 0; border-top: 1px solid var(--brand-hair); background: none; text-align: left; font-family: var(--brand-display); font-weight: 300; font-size: 20px; transition: color .3s, padding .5s var(--ease); }
+.ideas button:hover { background: none; color: var(--brand-nox); padding-left: 10px; }
+.ideas small { display: block; margin-top: 3px; font: 400 13px/1.45 var(--brand-body); color: var(--brand-soft); }
+.status { align-self: flex-start; padding: 0; border-radius: 0; background: none; color: var(--brand-soft); font-size: 13px; }
+.status:hover { background: none; color: var(--brand-nox); }
 @media (max-width: 760px) { .app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr); } .panel { padding: 18px 16px 0; } .eps, .rows, .foot { margin-inline: -16px; } .eps button, .rows, .foot { padding-inline: 16px; } }
 @media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
@@ -206,20 +230,32 @@ details[open]::details-content { block-size: auto; opacity: 1; }
       <h1>{{H1}}</h1>
       <p class="sub">{{SUB}}</p>
     </header>
+    <nav class="nav" id="nav" hidden aria-label="Studio">
+      <button type="button" data-go="lib">Épisodes</button><button type="button" data-go="write">Écrire</button><button type="button" data-go="coulisses">Coulisses</button><button type="button" data-go="settings">Réglages</button>
+    </nav>
     <section id="storyBox" hidden>
       <select id="storyPick" hidden aria-label="Choisir un script"></select>
       <div id="lib">
         <p class="caps">Saison 1 · choisis un épisode</p>
         <ol class="eps" id="eps"></ol>
-        <button type="button" class="link" data-tab="jouer">Essayer des gestes dans l'atelier</button>
       </div>
-      <div id="ep" hidden>
-        <button type="button" class="link" id="epBack">← Tous les épisodes</button>
-        <p class="caps" id="epNum"></p>
-        <h2 id="epTitle"></h2>
-        <p id="epPitch"></p>
+      <div id="write" hidden>
+        <p class="caps">Écrire · du brouillon à l'animation</p>
+        <h2>Raconte ton idée, même en vrac.</h2>
+        <textarea id="wrDraft" rows="7" placeholder="Tobi veut vendre de l'eau en NFT, Nox lui demande qui va la boire…" aria-label="Ton brouillon"></textarea>
+        <div class="row"><button type="button" id="wrMic" aria-pressed="false">Dicter</button><button type="button" class="main" id="wrGo">Travailler mon idée</button></div>
+        <p class="sub" id="wrNow" aria-live="polite"></p>
+        <div id="wrOut" hidden><p class="sub" id="wrAnalyse"></p><ol class="ideas" id="wrIdeas"></ol></div>
+        <div id="wrScriptBox" hidden>
+          <textarea id="wrScript" rows="12" spellcheck="false" aria-label="Script proposé"></textarea>
+          <div class="row"><input type="text" id="wrNote" placeholder="Ce que tu veux changer" aria-label="Ce que tu veux changer"><button type="button" id="wrRedo">Retravailler</button></div>
+          <button type="button" class="main" id="wrTry">Voir en animation</button>
+        </div>
+      </div>
+      <div id="settings" hidden>
+        <p class="caps">Réglages</p>
         <div class="rows">
-          <details name="ep" id="elSetup"><summary>Voix <b id="rowVoice"></b></summary><div>
+          <details open id="elSetup"><summary>Voix <b id="rowVoice"></b></summary><div>
             <div class="grid"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Valider</button></div>
             <label class="sw">Garder la clé sur cet ordinateur <input type="checkbox" id="elKeep"></label>
             <div class="pair" hidden><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
@@ -229,7 +265,7 @@ details[open]::details-content { block-size: auto; opacity: 1; }
             <ol id="elLines"></ol>
             <label class="file">Importer mes propres voix<input type="file" id="storyVoices" multiple accept="audio/*"></label>
           </div></details>
-          <details name="ep"><summary>Vidéo <b id="rowVideo"></b></summary><div>
+          <details><summary>Vidéo <b id="rowVideo"></b></summary><div>
             <select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select>
             <select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select>
             <select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select>
@@ -237,6 +273,19 @@ details[open]::details-content { block-size: auto; opacity: 1; }
             <label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label>
             <label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label>
           </div></details>
+          <details open><summary>Écriture <b>Claude</b></summary><div>
+            <input type="password" id="wrKey" placeholder="Clé API Claude (facultative)" autocomplete="off" spellcheck="false" aria-label="Clé API Claude">
+            <p class="sub">Elle permet d'analyser tes brouillons ici. Sans clé, le Studio copie la consigne pour l'IA de ton choix.</p>
+          </div></details>
+        </div>
+      </div>
+      <div id="ep" hidden>
+        <button type="button" class="link" id="epBack">← Tous les épisodes</button>
+        <p class="caps" id="epNum"></p>
+        <h2 id="epTitle"></h2>
+        <p id="epPitch"></p>
+        <button type="button" class="status" id="epStatus"></button>
+        <div class="rows">
           <details name="ep"><summary>Script <b id="rowScript"></b></summary><div><textarea id="storyText" rows="12" spellcheck="false" aria-label="Script de l'épisode"></textarea></div></details>
         </div>
         <div class="foot">
@@ -246,8 +295,7 @@ details[open]::details-content { block-size: auto; opacity: 1; }
         </div>
       </div>
     </section>
-    <button type="button" class="link back" data-tab="film">← Retour aux épisodes</button>
-    <p class="sub atelier">Essaie un geste ou un objet avant de l'écrire dans un script.</p>
+    <p class="sub atelier">Les personnages, objets et gestes, pour essayer un mouvement avant de l'écrire.</p>
     <section id="castBox" hidden><h2>Piloter</h2><div class="grid" id="cast"></div></section>
     <section id="roomBox" hidden><h2>Dans la chambre</h2><div class="grid" id="roomActs"></div><div class="grid held" id="roomSwitch"></div></section>
     <section id="scenesBox" hidden><h2>Scènes à deux</h2><div class="grid" id="scenes"></div></section>

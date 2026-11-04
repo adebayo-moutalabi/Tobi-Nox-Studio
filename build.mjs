@@ -16,7 +16,7 @@ const PAGES = [
 ];
 const template = readFileSync('src/page.html', 'utf8');
 for (const p of PAGES) {
-  const r = await build({ entryPoints: [p.entry], bundle: true, format: 'esm', write: false, minify: true, target: 'es2020', loader: { '.txt': 'text' } });
+  const r = await build({ entryPoints: [p.entry], bundle: true, format: 'esm', write: false, minify: true, target: 'es2020', loader: { '.txt': 'text', '.md': 'text' } });
   const js = r.outputFiles[0].text.replace(/<\/script/g, '<\\/script');
   let page = template;
   for (const k of ['TITLE', 'H1', 'SUB', 'SAY', 'OPTS']) page = page.replace(`{{${k}}}`, () => (k === 'SAY' ? p[k].replace(/"/g, '&quot;') : p[k]));
