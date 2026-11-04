@@ -62,5 +62,5 @@ node export-glb.mjs objets
 
 1. Publier le pilote, puis lire sa courbe de rétention.
 2. Fiche de projet, nouveaux décors, nouveaux personnages.
-3. Les Aînés, inspirés de Claude et ChatGPT : personnages originaux, sans logos (marques déposées).
+3. Les Aînés, Chat et Claude pour l'instant : personnages originaux, sans logos (marques déposées).
 4. Test d'un export complet en 1080p.

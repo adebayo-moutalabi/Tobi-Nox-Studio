@@ -16,6 +16,7 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 ### Tobi
 - **Qui :** héros, ambitieux, attachant, imaginatif, désorganisé. Il sur-construit et reporte l'essentiel.
 - **Fonction :** il lance des idées grandioses et se fait démasquer.
+- **Coiffure :** tresses plaquées, celles du modèle 3D. C'est la référence.
 - **Voix :** jeune, vivante, naturelle. Ta voix clonée.
 - **Règle :** il est de mauvaise foi, jamais bête. Il croit sincèrement à ce qu'il dit, et il progresse d'un épisode à l'autre.
 
@@ -28,9 +29,9 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 ### Les Aînés
 Deux IA plus expérimentées, inspirées de Claude et ChatGPT. Elles viennent parfois évaluer ou former Nox, avec des conseils contradictoires. Rôle : caméos, rivalités, jugements sur Tobi et Nox.
 
-**Règle de création :** ce sont des personnages originaux qui évoquent ces deux IA, sans leur logo, leur nom exact ni leur identité visuelle, car ce sont des marques déposées et la série est publique.
+**Noms pour l'instant :** **Chat** (enthousiaste, répond à tout, très sûr de lui) et **Claude** (posé, nuancé, pèse chaque mot). Leur opposition fait le gag : l'un affirme, l'autre hésite, Nox subit les deux.
 
-Pistes de noms à valider : **Maître Clo** (posé, nuancé, pèse chaque mot) et **Gépéto** (enthousiaste, répond à tout, très sûr de lui). Leur opposition fait le gag : l'un hésite, l'autre affirme, Nox subit les deux.
+**Règle de création :** ils restent des personnages originaux, sans logo ni identité visuelle de ces deux IA. Ces noms sont des marques : à revérifier avant de les montrer en vidéo.
 
 ### Rôles ponctuels
 Client, prof, parent, ami, recruteur. Voix ou personnages simples, qui mettent Tobi face au réel : rendu, budget, client exigeant, pression familiale.
@@ -46,7 +47,7 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 5. Nox le roast avec une punchline.
 6. Une petite ouverture vers l'épisode suivant.
 
-**Durée :** cible 45 à 75 s, limite 40 s à 1 min 30. Un test peut durer 30 à 40 s.
+**Durée :** cible 45 à 75 s, limite 40 s à 1 min 30. Pour démarrer, viser 40 à 50 s. Un test peut durer 30 à 40 s.
 **Rythme :** nouveau plan, zoom, geste ou réaction toutes les 2 à 3 s. Dialogues courts, sous-titres dynamiques.
 
 ## Le fil rouge
@@ -71,6 +72,4 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 
 ## À décider
 - Le titre de la série.
-- Les noms et l'apparence des Aînés.
-- Les chaînes ou Shorts de référence.
-- La coiffure : la bible dit « dreadlocks courtes », le modèle suit tes images, avec des tresses plaquées.
+- L'apparence des Aînés.
