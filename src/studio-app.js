@@ -14,6 +14,9 @@ import E04 from '../shorts/04_logo_avant_idee.txt';
 import E05 from '../shorts/05_quarante_deux_videos.txt';
 import E06 from '../shorts/06_rendu_demain.txt';
 import E08 from '../shorts/08_vie_automatisee.txt';
+import E09 from '../shorts/09_capable_de_tout.txt';
+import E11 from '../shorts/11_je_commence_demain.txt';
+import E12 from '../shorts/12_le_pitch.txt';
 
 startViewer({
   cast: [tobi(), nox()], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
@@ -26,6 +29,9 @@ startViewer({
     '6. Mon rendu est demain': E06,
     '7. Je révise juste 5 minutes': SHORT01,
     '8. Ma vie automatisée': E08,
+    '9. Capable de tout': E09,
+    '11. Je commence demain': E11,
+    '12. Le pitch': E12,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

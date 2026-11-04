@@ -47,9 +47,10 @@ export function roomActions(v, room) {
       a.spot = { exit: () => v.stand(a) };
       await v.sit(a, 'chair', true);
     } else {
-      await arrive(a, P(-0.42, -0.2), WEST);
-      await v.hop(a, new THREE.Vector3(-0.72, 0.55, -0.2), EAST);
-      a.spot = { exit: async () => { await v.stand(a); await v.hop(a, P(-0.42, -0.2), EAST); } };
+      const z = other(a).spot ? 0.28 : -0.2; // si Tobi est déjà assis, Nox se pose à côté de lui
+      await arrive(a, P(-0.42, z), WEST);
+      await v.hop(a, new THREE.Vector3(-0.72, 0.55, z), EAST);
+      a.spot = { exit: async () => { await v.stand(a); await v.hop(a, P(-0.42, z), EAST); } };
       await v.sit(a, 'floor');
     }
   }

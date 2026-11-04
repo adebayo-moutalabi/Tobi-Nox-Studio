@@ -1,0 +1,30 @@
+# MON IA CROIT QUE JE SUIS CAPABLE DE TOUT
+# Sur le lit, puis debout. Moment sincère du duo.
+
+AMBIANCE soir
+DIRECT TOBI assis
+TABLEAU Cette semaine | 3 refus | Projet n° 16 en pause
+FONDU direct
+
+PLAN auto
+TOBI dit (triste) Trois refus aujourd'hui.
+NOX assis
+NOX dit (calme) Et alors ?
+TOBI dit (triste) Je crois que je ne suis pas fait pour ça.
+PLAN gros NOX
+NOX dit (sec) Tu as lancé seize projets.
+PLAN gros TOBI
+TOBI dit (gene) Et seize échecs.
+PLAN gros NOX
+NOX dit (calme) Seize fois, tu as recommencé.
+INSERT Taux de retour | 100 % | Tobi revient toujours
+TOBI dit (surpris) Tu le penses vraiment ?
+PLAN auto
+NOX dit (content) Je le calcule.
+TOBI leve
+TOBI marche tapis
+TOBI dit (excite) Alors je lance le dix-septième !
+NOX leve
+PLAN gros NOX
+NOX dit (resigne) J'aurais dû me taire.
+ATTENDRE 0.4

@@ -1,0 +1,31 @@
+# JE COMMENCE DEMAIN
+# Tobi au lit, il se lève, passe au miroir, finit au bureau. Fin de saison.
+
+AMBIANCE soir
+DIRECT TOBI dort
+DIRECT NOX marche lit
+TABLEAU Résolutions | Se lever tôt | Commencer aujourd'hui
+FONDU direct
+
+PLAN lit
+NOX dit (sec) Il est midi.
+TOBI dit (triste) Cinq minutes.
+NOX dit (ironique) Hier, tu as dit demain.
+TOBI leve
+PLAN auto
+TOBI dit (fier) Aujourd'hui, je commence.
+TOBI miroir
+PLAN auto
+TOBI dit (excite) Regarde cet entrepreneur.
+NOX dit (ironique) Ton sweat est à l'envers.
+TOBI travaille
+TOBI pivote
+PLAN auto
+TOBI dit (fier) Voilà. Je suis au bureau.
+PLAN gros NOX
+NOX dit (curieux) Et maintenant ?
+PLAN gros TOBI
+TOBI dit (gene) Je commence demain.
+PLAN gros NOX
+NOX dit (resigne) Je le savais.
+ATTENDRE 0.4

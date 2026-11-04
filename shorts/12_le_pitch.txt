@@ -1,0 +1,36 @@
+# LE PITCH DEBOUT
+# Tobi marche et pitche dans la chambre, Nox juge depuis le lit, puis se lève.
+
+AMBIANCE soir
+DIRECT NOX assis
+DIRECT TOBI marche tapis
+TABLEAU Grande idée | Une appli | Pour manger
+FONDU direct
+
+PLAN auto
+TOBI dit (fier) Mesdames et messieurs, le futur.
+NOX dit (ironique) Il n'y a que moi.
+TOBI marche centre
+TOBI dit (excite) Une appli qui te dit quand manger.
+PLAN gros NOX
+NOX dit (sec) Ça s'appelle avoir faim.
+TOBI marche fenetre
+PLAN auto
+TOBI dit (mauvaisefoi) Oui, mais avec un abonnement.
+INSERT Abonnement | 19 € | Par mois
+NOX dit (curieux) Et si je n'ai pas faim ?
+TOBI court tapis
+PLAN auto
+TOBI dit (excite) On t'envoie une notification !
+PLAN gros NOX
+NOX dit (constat) Donc je paie pour avoir faim.
+PLAN gros TOBI
+TOBI dit (fier) Exactement.
+NOX leve
+NOX marche tapis
+PLAN auto
+NOX dit (punchline) Tu as mangé ce soir ?
+TOBI dit (gene) Non.
+NOX dit (resigne) Va au frigo.
+TOBI frigo
+ATTENDRE 0.3
