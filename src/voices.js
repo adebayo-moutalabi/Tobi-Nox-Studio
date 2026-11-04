@@ -131,7 +131,6 @@ export function mountVoices({ el, player, parseStory }) {
         if (await makeLine(i, false)) paid++;
       }
       publish();
-      el('elGo').closest('.step').classList.add('done');
       say(`${rows.length} voix prêtes pour ${rows.length} répliques, dont ${paid} nouvelles. Tu peux lire ou exporter.`);
     } catch (e) { say(`${e.message} Relance ensuite : les voix déjà faites ne seront pas refacturées.`); }
     lock(false); show();
@@ -140,13 +139,12 @@ export function mountVoices({ el, player, parseStory }) {
   const forget = () => {
     if (!rows.length) return;
     rows = []; player.voices = []; list.replaceChildren();
-    el('elGo').closest('.step').classList.remove('done');
     say('Script changé : relance « Générer les voix ». Les répliques inchangées ne coûtent rien.');
   };
 
   key.value = read(KEY);
   el('elSetup').open = !key.value;
-  say(key.value ? '' : 'Colle ta clé ElevenLabs dans les réglages ci-dessous.');
+  say(key.value ? '' : 'Colle ta clé ElevenLabs pour créer les voix.');
   keep.checked = !!key.value || !read(PICK);
   load.addEventListener('click', loadVoices);
   go.addEventListener('click', generate);
@@ -154,4 +152,5 @@ export function mountVoices({ el, player, parseStory }) {
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();
+  return { generate, ready: () => !!key.value.trim() && !!pick.tobi.value };
 }

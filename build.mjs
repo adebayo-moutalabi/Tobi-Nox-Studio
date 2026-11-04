@@ -10,7 +10,7 @@ const PAGES = [
   { entry: 'src/nox-app.js', out: 'nox.html', TITLE: 'Nox', H1: 'Nox',
     SUB: 'La mascotte, 45 cm. Son écran affiche ses émotions : combine geste, objet et mimique.', SAY: 'Bonjour, je suis Nox !',
     OPTS: NIGHT(true) },
-  { entry: 'src/studio-app.js', out: 'studio.html', TITLE: 'Studio Tobi et Nox', H1: 'Studio Tobi et Nox',
+  { entry: 'src/studio-app.js', out: 'studio.html', TITLE: 'Studio Tobi et Nox', H1: 'Tobi & Nox',
     SUB: 'Trois étapes pour sortir un Short.', SAY: 'On tourne ?',
     OPTS: '      <label><input type="checkbox" id="glasses" checked> Lunettes de Tobi</label>\n' + NIGHT(false) },
 ];

@@ -377,10 +377,14 @@ export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
   const pick = el('storyPick'), panel = document.querySelector('.panel');
-  const tabs = [...el('tabs').querySelectorAll('button')];
-  const showTab = (name) => { panel.dataset.tab = name; tabs.forEach((b) => b.setAttribute('aria-pressed', b.dataset.tab === name)); };
-  tabs.forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
-  el('tabs').hidden = false; showTab('film');
+  const sheet = el('sheet');
+  const showTab = (name) => { panel.dataset.tab = name; sheet.close(); };
+  document.querySelectorAll('button[data-tab]').forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
+  showTab('film');
+  el('gear').hidden = false;
+  el('gear').addEventListener('click', () => sheet.showModal());
+  el('sheetClose').addEventListener('click', () => sheet.close());
+  sheet.addEventListener('click', (e) => { if (e.target === sheet) sheet.close(); });
   // Listes courtes affichées en contrôle segmenté
   for (const id of ['storyFormat', 'storyFps', 'storyQuality']) {
     const sel = el(id), seg = document.createElement('div'); seg.className = 'seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', sel.getAttribute('aria-label'));
@@ -394,7 +398,17 @@ export function mountStory(v, stories) {
   }
   for (const k of Object.keys(stories)) pick.add(new Option(k, k));
   el('storyText').value = stories[pick.value];
-  pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
+  const paintEps = () => [...el('eps').querySelectorAll('button')].forEach((b) => b.setAttribute('aria-pressed', b.dataset.k === pick.value));
+  pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; paintEps(); });
+  el('eps').replaceChildren(...Object.keys(stories).map((k) => { // la liste des épisodes remplace le menu déroulant
+    const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
+    b.type = 'button'; b.dataset.k = k; n.textContent = m ? m[1].padStart(2, '0') : '—';
+    b.append(n, m ? m[2] : k);
+    b.addEventListener('click', () => { pick.value = k; pick.dispatchEvent(new Event('change')); });
+    li.append(b);
+    return li;
+  }));
+  paintEps();
   const short = () => el('storyFormat').value === 'short';
   const format = () => document.querySelector('.app').classList.toggle('portrait', short());
   el('storyFormat').addEventListener('change', format); format();
@@ -418,7 +432,7 @@ export function mountStory(v, stories) {
   const player = createPlayer(v, ui);
   el('storyPlay').addEventListener('click', () => player.play(el('storyText').value));
   el('storyStop').addEventListener('click', () => player.stop());
-  let musicFile = null;
+  let musicFile = null, voices = null;
   el('storyMusicFile').addEventListener('change', async (e) => {
     const f = e.target.files[0];
     musicFile = f ? await new AudioContext().decodeAudioData(await f.arrayBuffer()) : null;
@@ -426,6 +440,8 @@ export function mountStory(v, stories) {
   });
   el('storyExport').addEventListener('click', async () => {
     try {
+      if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); }
+      if (!player.voices.length && !voices.ready()) ui.line('Sans voix : ajoute ta clé dans les réglages pour en générer.');
       const fps = Number(el('storyFps').value);
       const big = el('storyQuality').value === 'hd' ? 1080 : 720, long = Math.round((big * 16) / 9 / 2) * 2;
       const size = short() ? { width: big, height: long } : { width: long, height: big };
@@ -447,6 +463,6 @@ export function mountStory(v, stories) {
     const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length;
     ui.line(`${list.length} voix importées pour ${lines} répliques.${list.length !== lines ? ' Attention : le nombre ne correspond pas.' : ''}`);
   });
-  mountVoices({ el, player, parseStory });
+  voices = mountVoices({ el, player, parseStory });
   v.exportVideo = (t, o) => exportVideo(v, player, t, o);
 }

@@ -58,7 +58,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--sole); outl
 .row .main { flex: 1; }
 button.main { background: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 10px 12px; }
 button.main:hover { background: var(--accent); filter: brightness(1.06); }
-.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel:not([data-tab]) > .atelier { display: none; }
+.panel[data-tab="film"] > section:not(#storyBox), .panel[data-tab="film"] > .spec, .panel[data-tab="film"] > .atelier, .panel[data-tab="film"] > .back, .panel:not([data-tab]) > .atelier, .panel:not([data-tab]) > .back { display: none; }
 .panel[data-tab="jouer"] > #storyBox { display: none; }
 .app:has(.panel[data-tab="film"]) .hint, .app:has(.panel[data-tab="film"]) .views { display: none; }
 .cap { position: absolute; left: 4%; right: 4%; top: 75.5%; transform: translateY(-50%); text-align: center; font: 800 2.9cqh "Bricolage Grotesque", "Trebuchet MS", sans-serif; color: #fff; pointer-events: none; text-shadow: 0 0 .22em #08071a, 0 0 .22em #08071a; }
@@ -142,6 +142,67 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 .panel[data-tab] { animation: rise .4s var(--spring); }
 @keyframes rise { from { opacity: .4; transform: translateY(6px); } }
 @media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* ===== CHARTE GRAPHIQUE =====
+   Toute l'identité de l'interface est ici. Pour appliquer la charte officielle, ne changer que ces valeurs.
+   Couleurs provisoires, tirées de l'univers de la série en attendant la charte. */
+:root {
+  --brand-night: #0b0a18;      /* fond */
+  --brand-surface: #16152b;    /* panneaux */
+  --brand-line: rgba(255, 255, 255, .1);
+  --brand-text: #f5f2ea;
+  --brand-soft: #9b99c9;
+  --brand-tobi: #ffb26b;       /* couleur d'action */
+  --brand-nox: #8feaff;        /* couleur de mise en avant */
+  --brand-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --brand-body: "Figtree", -apple-system, "Segoe UI", sans-serif;
+}
+/* ===== fin de la charte ===== */
+:root, :root[data-theme="dark"], :root[data-theme="light"] { --tint: var(--brand-tobi); --group: var(--brand-surface); --panel: var(--brand-night); --bg: var(--brand-night); --ink: var(--brand-text); --muted: var(--brand-soft); --chip: rgba(255, 255, 255, .08); --chip-hover: rgba(255, 255, 255, .14); --line: var(--brand-line); --hair: var(--brand-line); --accent: var(--brand-tobi); --accent-ink: var(--brand-night); color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --group: var(--brand-surface); --panel: var(--brand-night); --ink: var(--brand-text); --muted: var(--brand-soft); --chip: rgba(255, 255, 255, .08); --chip-hover: rgba(255, 255, 255, .14); --line: var(--brand-line); --hair: var(--brand-line); } }
+body, button, select, input { font-family: var(--brand-body); }
+body { background: var(--brand-night); color: var(--brand-text); }
+.app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(340px, 34vw); }
+.panel { position: relative; padding: 28px 28px 0; gap: 18px; }
+.panel > header { position: relative; }
+h1 { font-family: var(--brand-display); font-size: clamp(34px, 3.4vw, 52px); line-height: .98; letter-spacing: -.03em; }
+.panel > header .sub { display: none; }
+.gear { position: absolute; top: 2px; right: 0; width: 40px; height: 40px; padding: 0; display: grid; place-items: center; border-radius: 50%; background: transparent; color: var(--brand-text); }
+.gear:hover { background: var(--chip); }
+#storyBox { min-height: 0; flex: 1; gap: 0; }
+.eps { list-style: none; margin: 0 -28px; padding: 0; flex: 1; overflow-y: auto; }
+.eps button { position: relative; display: flex; align-items: baseline; gap: 16px; width: 100%; padding: 15px 28px; border-radius: 0; border-top: 1px solid var(--brand-line); background: transparent; color: var(--brand-soft); text-align: left; font-family: var(--brand-display); font-size: clamp(18px, 1.5vw, 23px); font-weight: 500; letter-spacing: -.01em; transition: color .3s, padding .45s var(--spring); }
+.eps button span { font-family: var(--brand-body); font-size: 12px; font-variant-numeric: tabular-nums; opacity: .7; min-width: 18px; }
+.eps button:hover { color: var(--brand-text); padding-left: 38px; background: transparent; }
+.eps button:active { transform: none; }
+.eps button[aria-pressed="true"] { color: var(--brand-tobi); padding-left: 38px; }
+.dock { position: sticky; bottom: 0; margin: 0 -28px; padding: 16px 28px 22px; display: flex; flex-direction: column; gap: 10px; background: linear-gradient(transparent, var(--brand-night) 22%); }
+.dock .sub:empty { display: none; }
+.dock .row { gap: 8px; }
+.dock #storyPlay, .dock #storyStop { flex: 0 0 auto; padding: 14px 20px; border-radius: 999px; font-weight: 600; }
+.dock #storyPlay:disabled, .dock #storyStop:disabled { display: none; }
+button.main { flex: 1; background: var(--brand-tobi); color: var(--brand-night); border-radius: 999px; padding: 14px 20px; font-weight: 700; }
+button.main:hover { background: var(--brand-tobi); }
+.bar i { background: var(--brand-tobi); }
+.sheet { position: fixed; inset: 0 0 0 auto; height: 100dvh; max-height: none; width: min(420px, 100vw); margin: 0; padding: 26px 24px; border: 0; border-left: 1px solid var(--brand-line); background: var(--brand-surface); color: var(--brand-text); overflow-y: auto; transform: translateX(100%); transition: transform .5s var(--spring), overlay .5s allow-discrete, display .5s allow-discrete; }
+.sheet[open] { transform: none; }
+@starting-style { .sheet[open] { transform: translateX(100%); } }
+.sheet::backdrop { background: rgba(6, 5, 16, .5); backdrop-filter: blur(4px); }
+.sheet header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.sheet h2 { font-family: var(--brand-display); font-size: 24px; margin: 0; }
+.sheet details { padding: 14px 0; border-top: 1px solid var(--brand-line); }
+.sheet summary { color: var(--brand-text); font-size: 15px; font-weight: 600; }
+.sheet .close { width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 20px; line-height: 1; }
+.sheet .wide, .back { width: 100%; margin-top: 8px; padding: 12px; border-radius: 999px; }
+.back { flex: none; }
+.sheet input[type="password"], .sheet select { background: var(--chip); color: var(--brand-text); border: 0; border-radius: 10px; padding: 9px 10px; }
+.sheet select option { color: #111; }
+.sheet textarea { background: var(--brand-night); color: var(--brand-text); border: 1px solid var(--brand-line); }
+.seg button[aria-pressed="true"] { background: var(--brand-tobi); color: var(--brand-night); }
+.sw input:checked { background: var(--brand-tobi); }
+.panel > section:not(#storyBox) { background: transparent; border-top: 1px solid var(--brand-line); border-radius: 0; padding: 14px 0; }
+.panel[data-tab] { animation: none; }
+@media (max-width: 760px) { .app:has(#storyBox:not([hidden])) { grid-template-columns: minmax(0, 1fr); } .panel { padding: 18px 16px 0; } .eps, .dock { margin-inline: -16px; } .eps button, .dock { padding-inline: 16px; } }
 </style>
 <div class="app">
   <main class="stage" id="stage">
@@ -155,42 +216,41 @@ details[open]::details-content { block-size: auto; opacity: 1; }
   <aside class="panel">
     <header>
       <h1>{{H1}}</h1>
+      <button type="button" class="gear" id="gear" hidden aria-label="Réglages"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></button>
       <p class="sub">{{SUB}}</p>
     </header>
-    <nav class="tabs seg" id="tabs" hidden aria-label="Mode">
-      <button type="button" data-tab="film" aria-pressed="true">Créer un Short</button>
-      <button type="button" data-tab="jouer" aria-pressed="false">Atelier</button>
-    </nav>
     <section id="storyBox" hidden>
-      <div class="step">
-        <h2><span>1</span> Choisir l'histoire</h2>
-        <select id="storyPick" aria-label="Choisir un script"></select>
-        <div class="row"><button type="button" class="main" id="storyPlay">Regarder</button><button type="button" id="storyStop" disabled>Arrêter</button></div>
-        <details><summary>Modifier le script</summary><textarea id="storyText" rows="14" spellcheck="false" aria-label="Script de l'histoire"></textarea></details>
-      </div>
-      <div class="step">
-        <h2><span>2</span> Créer les voix</h2>
-        <button type="button" class="main" id="elGo" disabled>Générer les voix</button>
-        <p class="sub" id="elNow" aria-live="polite"></p>
-        <ol id="elLines"></ol>
-        <details id="elSetup"><summary>Réglages des voix</summary>
-          <div class="grid" style="margin-top:8px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger mes voix</button></div>
-          <div class="opts" style="margin-top:8px"><label class="sw">Garder la clé ici <input type="checkbox" id="elKeep"></label></div>
-          <div class="grid" style="margin-top:8px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
-          <label class="voice" style="margin-top:8px">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
-        </details>
-      </div>
-      <div class="step">
-        <h2><span>3</span> Exporter la vidéo</h2>
-        <button type="button" class="main" id="storyExport">Exporter en MP4</button>
-        <div class="bar" id="storyBar" hidden><i></i></div>
+      <ol class="eps" id="eps"></ol>
+      <select id="storyPick" hidden aria-label="Choisir un script"></select>
+      <div class="dock">
         <p class="sub" id="storyNow" aria-live="polite"></p>
-        <details><summary>Réglages de la vidéo</summary>
-          <div class="stack"><select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select><select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
-          <div class="opts" style="margin-top:8px"><label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label><label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label><label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label><label class="file">Importer mes voix<input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
-        </details>
+        <div class="bar" id="storyBar" hidden><i></i></div>
+        <div class="row">
+          <button type="button" id="storyPlay">Regarder</button>
+          <button type="button" id="storyStop" disabled>Arrêter</button>
+          <button type="button" class="main" id="storyExport">Créer la vidéo</button>
+        </div>
       </div>
     </section>
+    <dialog class="sheet" id="sheet">
+      <header><h2>Réglages</h2><button type="button" class="close" id="sheetClose" aria-label="Fermer">×</button></header>
+      <details open id="elSetup"><summary>Voix</summary>
+        <div class="grid" style="margin-top:10px"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Charger</button></div>
+        <div class="opts" style="margin-top:10px"><label class="sw">Garder la clé ici <input type="checkbox" id="elKeep"></label></div>
+        <div class="grid" style="margin-top:10px"><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label></div>
+        <label class="voice" style="margin-top:10px">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
+        <p class="sub" id="elNow" aria-live="polite"></p>
+        <button type="button" id="elGo" disabled style="margin-top:10px">Générer les voix maintenant</button>
+        <ol id="elLines"></ol>
+      </details>
+      <details><summary>Vidéo</summary>
+        <div class="stack"><select id="storyFormat" aria-label="Format"><option value="short">Short</option><option value="wide">YouTube</option></select><select id="storyQuality" aria-label="Qualité"><option value="hd">1080p</option><option value="fast">720p rapide</option></select><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
+        <div class="opts" style="margin-top:10px"><label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label><label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label><label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label><label class="file">Importer mes voix<input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
+      </details>
+      <details><summary>Script de l'épisode</summary><textarea id="storyText" rows="14" spellcheck="false" aria-label="Script de l'histoire"></textarea></details>
+      <button type="button" class="wide" data-tab="jouer">Ouvrir l'atelier</button>
+    </dialog>
+    <button type="button" class="back" data-tab="film">← Retour aux épisodes</button>
     <p class="sub atelier">Essaie un geste ou un objet avant de l'écrire dans un script.</p>
     <section id="castBox" hidden><h2>Piloter</h2><div class="grid" id="cast"></div></section>
     <section id="roomBox" hidden><h2>Dans la chambre</h2><div class="grid" id="roomActs"></div><div class="grid held" id="roomSwitch"></div></section>
