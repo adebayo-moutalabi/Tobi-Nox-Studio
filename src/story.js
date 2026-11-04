@@ -76,7 +76,7 @@ export function createPlayer(v, ui) {
   const look = createLook(v);
   // Le soir est l'ambiance par défaut : ses effets sont préparés dès l'ouverture, pas pendant l'export.
   look.setMood('soir');
-  v.renderer.compileAsync(v.scene, v.camera).catch(() => {});
+  look.warm();
   const sfx = (type) => {
     if (ffing) return;
     sfxList.push({ type, start: v.simTime - playT0 });
@@ -338,6 +338,7 @@ export function createPlayer(v, ui) {
   }
   return {
     get running() { return running && !closing; },
+    get busy() { return running; }, // vrai aussi pendant la remise en place de fin
     get overlay() { return ui.state2; },
     get done() { return lineIdx; },
     get ffing() { return ffing; },
@@ -409,8 +410,13 @@ export function mountStory(v, stories) {
     el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${el('storyQuality').value === 'hd' ? '1080p' : '720p'}`;
     el('rowScript').textContent = `${c.length} répliques · environ ${secs} s`;
   };
+  const halt = async () => { // arrête la lecture et remet tout en place sans attendre les animations
+    if (!player.busy) return;
+    player.stop();
+    for (let i = 0; i < 6000 && player.busy; i++) { v.step(1 / 30, true); await tick(); }
+  };
   const replay = async () => {
-    if (player.running) { player.stop(); for (let i = 0; i < 200 && player.running; i++) await new Promise((r) => setTimeout(r, 30)); }
+    await halt();
     player.play(el('storyText').value);
   };
   const openEp = (k) => {
@@ -471,7 +477,7 @@ export function mountStory(v, stories) {
         ui.line('Il manque ta clé ElevenLabs. Ajoute-la ici, ou clique encore pour créer une vidéo muette.');
         return;
       }
-      if (player.running) { player.stop(); for (let i = 0; i < 200 && player.running; i++) await new Promise((r) => setTimeout(r, 30)); }
+      await halt();
       if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
       const fps = Number(el('storyFps').value);
       exporting = true; el('storyExport').disabled = true;

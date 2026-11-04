@@ -29,6 +29,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Lecture fluide.** Effets lourds réservés à l'export, recadrage quand un personnage se lève, lampe de chevet, plans côte à côte sur le lit.
 - **Charte d'écriture.** `CHARTE_SCRIPTS.md`, utilisable par n'importe qui. Premières phrases cultes dans les épisodes 1 et 3.
 - **Identité et parcours.** Base du site de l'auteur (Fraunces, Inter, fond sombre, filets), jaune de Nox comme couleur d'action. Choisir un épisode l'ouvre et le lance ; les réglages sont repliés dans la fiche ; un seul bouton crée la vidéo. Chaque script porte un `# Pitch :`.
+- **Préparation des effets.** Les variantes d'export des matériaux sont compilées à l'ouverture, en parallèle (`look.warm()`).
+- **Export fiabilisé.** Encodage logiciel (433 ms contre 15 ms par image au test), arrêt immédiat de la lecture avant un export ou un nouveau lancement.
 
 ## À faire
 

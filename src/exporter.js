@@ -35,7 +35,7 @@ function drawCaption(ctx, c, w, h) {
 
 export async function exportVideo(v, player, text, { width = 1080, height = 1920, fps = 30, captions = true, music = null, onProgress, maxSeconds = 600 } = {}) {
   if (typeof VideoEncoder === 'undefined') throw new Error("Ce navigateur ne sait pas encoder la vidéo : utilise Chrome ou Edge.");
-  const config = { codec: 'avc1.640028', width, height, bitrate: width * height > 1e6 ? 14_000_000 : 8_000_000, framerate: fps, hardwareAcceleration: 'prefer-hardware' };
+  const config = { codec: 'avc1.640028', width, height, bitrate: width * height > 1e6 ? 14_000_000 : 8_000_000, framerate: fps, hardwareAcceleration: 'prefer-software' };
   if (!(await VideoEncoder.isConfigSupported(config)).supported) throw new Error('Encodage H.264 indisponible sur cet ordinateur.');
   const target = new ArrayBufferTarget();
   const withAudio = typeof AudioEncoder !== 'undefined';

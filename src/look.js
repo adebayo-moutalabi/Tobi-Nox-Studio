@@ -31,6 +31,7 @@ function createPost(v) {
   composer.addPass(new UnrealBloomPass(size.clone(), 0.28, 0.55, 0.82));
   composer.addPass(new OutputPass());
 
+  v.composer = composer;
   return () => {
     renderer.getDrawingBufferSize(now);
     if (!now.equals(size)) { size.copy(now); composer.setPixelRatio(1); composer.setSize(size.x, size.y); }
@@ -99,6 +100,14 @@ export function createLook(v) {
   }
 
   const look = {
+    // Prépare à l'avance les effets de la lecture et de l'export, en parallèle : sinon le premier export se fige longuement.
+    warm() {
+      renderer.compileAsync(scene, camera).catch(() => {});
+      post ||= createPost(v);
+      renderer.setRenderTarget(v.composer.renderTarget1);
+      renderer.compileAsync(scene, camera).catch(() => {});
+      renderer.setRenderTarget(null);
+    },
     setMood(name) {
       const on = name === 'soir';
       soir.visible = on; vignette.visible = on; face.visible = on; v.mood = name; polish = on;

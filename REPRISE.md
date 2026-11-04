@@ -105,6 +105,8 @@ Pour un deuxième lieu : créer `src/lieux/<nom>.js` qui renvoie ces mêmes él�
 - **Fenêtre masquée :** dans un onglet caché, les animations du navigateur s'arrêtent. L'export doit rester au premier plan.
 - **Miroir :** son reflet réel coûte cher. Il ne s'active que tout près du miroir.
 - **Premier plan du soir :** la compilation des effets fige l'image quelques secondes une seule fois.
+- **Mesurer la vitesse d'export :** le navigateur de test intégré peut donner des chiffres très variables. Même une ancienne version y est tombée à moins d'une image par seconde. Mesurer dans Chrome ou Edge, onglet au premier plan.
+- **Encodeur :** rester en `prefer-software` ; l'encodeur matériel s'est montré 30 fois plus lent au test.
 - **Envoi sur GitHub :** il peut demander une connexion Windows à l'auteur.
 
 ## À faire
