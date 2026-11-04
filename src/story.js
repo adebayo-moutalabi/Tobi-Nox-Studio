@@ -2,7 +2,7 @@
 // Une ligne = une instruction. Terminer par « & » pour lancer la suivante sans attendre.
 import * as THREE from 'three';
 import { mount, putDown } from './scenes.js';
-import { exportVideo, save } from './exporter.js';
+import { exportVideo, save, tick } from './exporter.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -17,7 +17,7 @@ const LIEUX = {
 const PLANS = {
   large: [[0.05, 1.55, 2.75], [0, 0.9, -1.9], 58],
   bureau: [[-0.3, 1.55, -1.72], [0.85, 0.92, -0.75], 62],
-  lit: [[0.72, 1.95, -1.6], [-0.7, 0.62, 0.2], 66],
+  lit: [[0.1, 2.15, -1.7], [-0.75, 0.62, 0.25], 62],
   fenetre: [[0.1, 1.3, 0.7], [0, 0.95, -1.9], 52],
   frigo: [[-0.35, 1.95, 1.3], [0.9, 0.6, 1.2], 62],
   sortie: [[-0.1, 1.55, 0.95], [0.05, 1.1, 3], 46],
@@ -25,7 +25,7 @@ const PLANS = {
   miroir: [[0.72, 1.7, -0.4], [-0.7, 1.15, -1.5], 54],
   dessus: [[-4.2, 6.6, 6.6], [0, 0.6, 0.3], 26],
   clavier: [[0.7, 1.14, -0.7], [0.94, 0.76, -1.05], 46],
-  ecran: [[0.74, 0.99, -1.05], [1.12, 0.93, -1.05], 36],
+  ecran: [[0.8, 1.02, -0.66], [1.1, 0.92, -1.05], 44],
   tableau: [[0.34, 1.32, -1.06], [0.42, 1.08, -1.84], 38],
 };
 const plain = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -37,10 +37,12 @@ export function parseStory(text) {
     if (!line || line.startsWith('#')) return;
     const free = line.endsWith('&');
     if (free) line = line.slice(0, -1).trim();
+    const direct = /^DIRECT\s/.test(line);
+    if (direct) line = line.slice(7).trim();
     const [first, ...rest] = line.split(/\s+/);
     const who = /^(TOBI|NOX)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
-    out.push({ n: i + 1, who, verb, args: rest, text: rest.join(' '), free, raw: line });
+    out.push({ n: i + 1, who, verb, args: rest, text: rest.join(' '), free, direct, raw: line });
   });
   return out;
 }
@@ -49,7 +51,18 @@ export function createPlayer(v, ui) {
   const actor = (id) => v.actors.find((a) => a.id === id);
   const room = v.room;
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
-  const subtitles = [];
+  const subtitles = [], clips = [];
+  let voices = [], lineIdx = 0, offline = false, ffing = false, cap = null, audioCtx = null;
+  const lens = () => (v.camera.aspect < 1 ? 1.3 : 1); // en vertical, on ouvre un peu le cadre
+  async function fast(c) { // joue une action sans la montrer : le temps de la vidéo ne bouge pas
+    ffing = true; v.hold = true;
+    const t0 = v.simTime; let done = false, err = null;
+    Promise.resolve().then(() => run(c)).catch((e) => { err = e; }).finally(() => { done = true; });
+    for (let n = 0; !done && n < 4000; n++) { v.step(1 / 30, true); await tick(); }
+    track = null; playT0 += v.simTime - t0;
+    ffing = false; v.hold = false;
+    if (err) throw err;
+  }
   const pending = new Set();
 
   // --- Réalisateur : champ-contrechamp quand ils parlent, panoramique quand ils marchent
@@ -62,13 +75,17 @@ export function createPlayer(v, ui) {
   };
   const inside = (c) => c.x > -1.34 && c.x < 1.34 && c.z > -1.84 && c.z < 2.9 && c.y > 0.25 && c.y < 2.42;
   function aim(pos, target, fov) {
-    v.camera.fov = fov; v.camera.updateProjectionMatrix();
+    v.camera.fov = fov * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1; v.controls.target.copy(target); v.camera.position.copy(pos); v.controls.update();
     drift = 0.045;
   }
+  function closeUp(a) { // gros plan de face : réaction, chute
+    const H = eyes(a), f = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0).normalize();
+    aim(H.clone().addScaledVector(f, a.id === 'tobi' ? 0.9 : 0.55).add(new THREE.Vector3(0, 0.02, 0)), H.clone().add(new THREE.Vector3(0, -0.05, 0)), 34);
+  }
   function talkShot(a) {
     const b = v.actors.find((x) => x !== a), H = eyes(a), big = a.id === 'tobi';
-    const near = !a.carried && !b.carried && eyes(b).sub(H).setY(0).length() > 0.3;
+    const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
     const to = near ? eyes(b).sub(H).setY(0) : new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
     to.normalize();
     const sign = big ? 1 : -1, up = new THREE.Vector3(0, 1, 0);
@@ -76,9 +93,10 @@ export function createPlayer(v, ui) {
       for (const dist of big ? [1.5, 1.2, 0.95] : [0.95, 0.75, 0.6]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang * sign), dist);
         c.y = big ? (near ? H.y + (eyes(b).y - H.y) * 0.5 : H.y - 0.05) : H.y + 0.1; // à hauteur de regard de celui qui écoute
-        if (inside(c) && clear(H, c)) { aim(c, H.clone().add(new THREE.Vector3(0, big ? -0.14 : -0.06, 0)), dist < 1.1 && big ? 50 : 38); return; }
+        if (inside(c) && clear(H, c)) { aim(c, H.clone().add(new THREE.Vector3(0, big ? -0.14 : -0.06, 0)), dist < 1.1 && big ? 50 : 38); if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z); return; }
       }
     }
+    closeUp(a);
   }
   const ANCHORS = [[0.1, 1.75, 2.7], [0.6, 1.95, -1.7], [-0.35, 1.9, -1.7], [0.2, 1.8, 1.35], [-0.35, 1.8, 0.75]].map((p) => new THREE.Vector3(...p));
   function follow(a) {
@@ -89,6 +107,11 @@ export function createPlayer(v, ui) {
   }
   v.onFrame = (dt) => {
     ui.tick?.(dt);
+    if (cap) { // sous-titres par groupes de trois mots
+      const f = Math.min(0.999, (v.simTime - cap.t0) / cap.dur), n = Math.ceil(cap.words.length / 3), k = Math.floor(f * n);
+      ui.state2.caption = cap.words.slice(k * 3, k * 3 + 3).join(' ').toUpperCase();
+      ui.state2.captionColor = cap.color;
+    }
     if (drift && running && !track) { // lent travelling avant : l'image n'est jamais figée
       const d = v.controls.target.clone().sub(v.camera.position).normalize();
       v.camera.position.addScaledVector(d, drift * dt);
@@ -102,7 +125,7 @@ export function createPlayer(v, ui) {
 
   function cut(name) {
     const p = PLANS[name] || PLANS.large;
-    v.camera.fov = p[2]; v.camera.updateProjectionMatrix();
+    v.camera.fov = p[2] * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1;
     v.controls.target.set(...p[1]); v.camera.position.set(...p[0]);
     v.controls.update();
@@ -128,11 +151,16 @@ export function createPlayer(v, ui) {
     switch (c.verb) {
       case 'plan': {
         const k = plain(c.args[0] || 'large'); auto = k === 'auto'; track = null;
+        if (k === 'gros') { auto = false; closeUp(actor(plain(c.args[1] || 'tobi'))); return undefined; }
         if (!auto) cut(k);
         return undefined;
       }
       case 'attendre': return v.wait(parseFloat(c.args[0]) || 1);
-      case 'fondu': ui.curtain(plain(c.args[0] || '') === 'noir'); return v.wait(0.8);
+      case 'fondu': {
+        const k = plain(c.args[0] || '');
+        if (k === 'direct') { ui.curtain(false, true); return undefined; }
+        ui.curtain(k === 'noir'); return v.wait(0.8);
+      }
       case 'titre': ui.card(c.text); await v.wait(2.2); ui.card(''); return undefined;
       case 'volet': return room.setShutter(plain(c.args[0] || '') === 'ouvert');
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
@@ -141,11 +169,17 @@ export function createPlayer(v, ui) {
         const b = v.actors.find((x) => x !== a);
         track = null;
         if (auto) {
-          if (!a.carried && !b.carried && v.pos(a).distanceTo(v.pos(b)) > 0.4) { a.look = b; b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.6); }
+          if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { a.look = b; b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.35); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.3); }
           talkShot(a);
         }
-        const t0 = v.simTime;
-        await v.say(a, c.text);
+        const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
+        if (voice) {
+          clips.push({ buffer: voice.buffer, start: t0 - playT0 });
+          if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
+        }
+        cap = { words: c.text.split(/\s+/), t0, dur: dur || c.text.length * 0.078 + 0.1, color: a.id === 'nox' ? '#8feaff' : '#ffd27a' };
+        await v.say(a, c.text, dur);
+        cap = null; ui.state2.caption = '';
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
         return undefined;
       }
@@ -217,10 +251,13 @@ export function createPlayer(v, ui) {
   return {
     get running() { return running && !closing; },
     get overlay() { return ui.state2; },
-    subtitles,
-    async play(text) {
+    get ffing() { return ffing; },
+    get voices() { return voices; },
+    set voices(l) { voices = l; },
+    subtitles, clips,
+    async play(text, opts = {}) {
       if (running) return;
-      subtitles.length = 0;
+      subtitles.length = 0; clips.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.state2.caption = '';
       const list = parseStory(text);
       running = true; stopped = false; ui.state(true); v.locked = true;
       ui.curtain(true, true);
@@ -231,7 +268,7 @@ export function createPlayer(v, ui) {
         for (const c of list) {
           if (stopped) break;
           ui.line(`Ligne ${c.n} : ${c.raw}`);
-          const t = run(c);
+          const t = c.direct ? fast(c) : run(c);
           if (c.free) { const q = Promise.resolve(t).finally(() => pending.delete(q)); pending.add(q); } else await t;
         }
         await Promise.allSettled([...pending]);
@@ -251,10 +288,16 @@ export function createPlayer(v, ui) {
   };
 }
 
-export function mountStory(v, text) {
+export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
-  el('storyText').value = text;
+  const pick = el('storyPick');
+  for (const k of Object.keys(stories)) pick.add(new Option(k, k));
+  el('storyText').value = stories[pick.value];
+  pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
+  const short = () => el('storyFormat').value === 'short';
+  const format = () => document.querySelector('.app').classList.toggle('portrait', short());
+  el('storyFormat').addEventListener('change', format); format();
   const st = { alpha: 0, target: 0, card: '' };
   const ui = {
     state2: st,
@@ -270,12 +313,21 @@ export function mountStory(v, text) {
   el('storyExport').addEventListener('click', async () => {
     try {
       const fps = Number(el('storyFps').value);
-      const out = await exportVideo(v, player, el('storyText').value, { fps, onProgress: (s) => ui.line(`Export : ${s.toFixed(1)} s de vidéo rendues…`) });
+      const size = short() ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 };
+      const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, onProgress: (s) => ui.line(`Export : ${s.toFixed(1)} s de vidéo rendues…`) });
       save(out.blob, 'histoire.mp4'); save(new Blob([out.srt], { type: 'text/plain' }), 'histoire.srt');
       ui.line(`Vidéo prête : ${out.seconds.toFixed(1)} s, ${(out.blob.size / 1048576).toFixed(1)} Mo. Si rien ne se télécharge, ouvre studio.html sur ton ordinateur.`);
       v.lastExport = out;
     } catch (e) { ui.line(`Export impossible : ${e.message}`); }
   });
   v.story = player;
+  el('storyVoices').addEventListener('change', async (e) => {
+    const files = [...e.target.files].sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+    const ctx = new AudioContext(), list = [];
+    for (const f of files) list.push({ name: f.name, buffer: await ctx.decodeAudioData(await f.arrayBuffer()) });
+    player.voices = list;
+    const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length;
+    ui.line(`${list.length} voix importées pour ${lines} répliques.${list.length !== lines ? ' Attention : le nombre ne correspond pas.' : ''}`);
+  });
   v.exportVideo = (t, o) => exportVideo(v, player, t, o);
 }

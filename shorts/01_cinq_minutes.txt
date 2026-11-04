@@ -1,0 +1,55 @@
+# SHORT 01 : CINQ MINUTES
+# Durée visée : 35 à 40 s. Format vertical. La fin relance le début (boucle).
+# DIRECT devant une ligne = l'action se fait hors champ, sans temps mort.
+
+DIRECT TOBI travaille
+DIRECT NOX travaille
+ECRAN revisions.txt
+TABLEAU Examen demain ! | Tout réviser | ce soir, promis
+FONDU direct
+PLAN auto
+TOBI mimique joie
+TOBI dit Ce soir, je révise TOUT le programme.
+NOX mimique doute
+NOX dit Tu as dit ça hier.
+TOBI dit Oui, mais ce soir, j'ai un plan.
+PLAN clavier
+TOBI tape Chapitre 1 :
+PLAN ecran
+ATTENDRE 0.5
+PLAN auto
+TOBI mimique sourire
+TOBI dit Bon. Petite pause, je l'ai méritée.
+NOX mimique surprise
+NOX dit Tu as écrit deux mots.
+DIRECT TOBI frigo
+PLAN frigo
+TOBI utilise
+DIRECT TOBI remet
+DIRECT TOBI assis
+PLAN lit
+TOBI mimique sourire
+TOBI dit Je ferme juste les yeux cinq minutes.
+DIRECT TOBI dort
+PLAN auto
+NOX mimique doute
+NOX dit Cinq minutes.
+FONDU noir
+DIRECT NOX marche lit
+VOLET ouvert
+TITRE Huit heures plus tard
+FONDU ouvert
+PLAN auto
+NOX mimique surprise
+NOX dit Tobi ! L'examen, c'était à huit heures !
+PLAN lit
+TOBI mimique peur
+DIRECT TOBI leve
+PLAN gros TOBI
+TOBI dit QUOI ?!
+PLAN auto
+TOBI court porte
+TOBI sort
+NOX regarde rien
+NOX mimique sourire
+NOX dit Et ce soir, il va dire...

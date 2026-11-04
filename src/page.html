@@ -47,6 +47,7 @@ select { font: inherit; font-size: 13px; padding: 6px; border-radius: 7px; borde
 textarea { width: 100%; box-sizing: border-box; margin-top: 8px; font: 12.5px/1.45 ui-monospace, Consolas, monospace; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 7px; padding: 8px; resize: vertical; }
 summary { cursor: pointer; color: var(--muted); margin-top: 8px; }
 button:disabled { opacity: .45; cursor: default; }
+.app.portrait .stage { aspect-ratio: 9 / 16; height: 100%; max-width: 100%; justify-self: center; }
 form { display: flex; gap: 6px; }
 input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); }
 .send { background: var(--ink); color: var(--panel); }
@@ -77,7 +78,9 @@ input[type="text"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; bo
     </header>
     <section id="storyBox" hidden>
       <h2>Histoire</h2>
-      <div class="grid"><button type="button" id="storyPlay">Lire l'histoire</button><button type="button" id="storyStop" disabled>Arrêter</button><button type="button" id="storyExport">Exporter en MP4</button><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
+      <div class="grid"><select id="storyPick" aria-label="Choisir un script"></select><select id="storyFormat" aria-label="Format"><option value="short">Short 9:16</option><option value="wide">YouTube 16:9</option></select></div>
+      <div class="grid" style="margin-top:6px"><button type="button" id="storyPlay">Lire l'histoire</button><button type="button" id="storyStop" disabled>Arrêter</button><button type="button" id="storyExport">Exporter en MP4</button><select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select></div>
+      <div class="opts" style="margin-top:8px"><label><input type="checkbox" id="storyCaps" checked> Sous-titres dans la vidéo</label><label>Voix ElevenLabs, dans l'ordre : <input type="file" id="storyVoices" multiple accept="audio/*"></label></div>
       <p class="sub" id="storyNow" aria-live="polite"></p>
       <details><summary>Modifier le script</summary><textarea id="storyText" rows="14" spellcheck="false" aria-label="Script de l'histoire"></textarea></details>
     </section>

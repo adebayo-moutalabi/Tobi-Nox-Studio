@@ -23,6 +23,9 @@
 # Mise en scène :
 #   PLAN auto             caméra automatique : suit qui parle et qui marche
 #   PLAN large|bureau|lit|fenetre|frigo|porte|miroir|clavier|ecran|tableau|dessus   plans fixes
+#   PLAN gros TOBI|NOX   gros plan de face, pour une réaction ou une chute
+#   DIRECT <ligne>       l'action se fait hors champ, sans temps mort
+#   FONDU direct         ouvre l'image d'un coup, pour une accroche immédiate
 #   ECRAN <nom du fichier>|efface       TABLEAU ligne 1 | ligne 2 | ligne 3
 #   FONDU noir|ouvert    TITRE <texte>        ATTENDRE <secondes>
 #   VOLET ouvert|ferme   LAMPE allumee|eteinte   PORTE ouverte|fermee

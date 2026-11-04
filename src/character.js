@@ -590,7 +590,7 @@ export function createCharacter() {
       state.exprName = name;
       state.expr = EXPRESSIONS[name] || {};
     },
-    say(text, onEnd) {
+    say(text, onEnd, duration) {
       const seq = [];
       for (const ch of text) {
         const v = VISEME_OF(ch);
@@ -598,6 +598,7 @@ export function createCharacter() {
         seq.push({ v: punct ? ' ' : v, d: punct ? 0.24 : (v === ' ' ? 0.07 : 0.078) });
       }
       seq.push({ v: ' ', d: 0.1 });
+      if (duration) { const k = duration / seq.reduce((n, x) => n + x.d, 0); seq.forEach((x) => { x.d *= k; }); } // la bouche suit la durée de la voix
       state.talk = { seq, i: 0, t: 0, onEnd };
     },
     setGlasses(on) { glasses.visible = on; },

@@ -1,6 +1,6 @@
 # Tobi et Nox : comment on fabrique une vidéo
 
-Document de travail, à compléter avec la fiche de projet.
+Document de travail, à compléter avec la fiche de projet. Pour les Shorts, suivre `SHORTS.md`.
 
 ## Ce qui existe
 - **Personnages** : Tobi (1,80 m), Nox (45 cm), identiques à chaque plan.
@@ -40,5 +40,5 @@ TOBI sortie                   # va à la porte, tient la poignée, sort
 - Une banque de sons libres de droits, en vérifiant chaque licence pour YouTube.
 
 ## Limites actuelles
-- La bouche suit le texte, pas encore la voix enregistrée.
+- La bouche suit le texte et la durée de la voix, pas chaque syllabe.
 - Les fichiers `.glb` contiennent les modèles, pas la mise en scène du Studio.

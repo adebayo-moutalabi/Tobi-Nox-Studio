@@ -490,10 +490,10 @@ export function startViewer(cfg) {
     if (text) say(A, text);
     el('sayText').blur();
   });
-  function say(a, text) {
+  function say(a, text, duration) {
     return new Promise((res) => {
       bubble.textContent = text; bubble.hidden = false; speaker = a;
-      a.hero.say(text, () => { bubble.hidden = true; speaker = null; res(); });
+      a.hero.say(text, () => { bubble.hidden = true; speaker = null; res(); }, duration);
     });
   }
 
@@ -588,7 +588,7 @@ export function startViewer(cfg) {
     return { end() { paused = false; resize(); } };
   };
   renderer.setAnimationLoop(() => {
-    if (paused) return;
+    if (paused || api.hold) return;
     const raw = clock.getDelta();
     adapt(raw);
     frame(Math.min(raw, 0.25));
