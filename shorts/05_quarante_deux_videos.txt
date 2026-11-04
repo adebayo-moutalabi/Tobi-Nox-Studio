@@ -1,0 +1,43 @@
+# 42 VIDÉOS BUSINESS
+# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+ECRAN plan_de_vie.txt
+TABLEAU Routine des grands | Lever 5 h | Discipline | Commencer demain
+FONDU direct
+
+PLAN auto
+NOX dit (curieux) Tu as travaillé ce soir ?
+PLAN auto
+TOBI dit (fier) J'ai étudié les plus grands.
+INSERT Aujourd'hui | 42 | Vidéos business
+NOX dit (sec) Quarante-deux vidéos.
+PLAN gros TOBI
+TOBI dit (excite) Je sais tout sur la discipline, maintenant.
+PLAN gros NOX
+NOX dit (curieux) Et tu as appliqué quoi ?
+PLAN auto
+TOBI dit (mauvaisefoi) Je me lève à cinq heures.
+PLAN auto
+NOX dit (ironique) Il est vingt-trois heures quarante-sept.
+PLAN gros TOBI
+TOBI dit (gene) Demain.
+PLAN gros NOX
+NOX dit (ironique) Et aujourd'hui ?
+PLAN auto
+TOBI dit (mauvaisefoi) C'était de la préparation mentale.
+INSERT Travail réel | 0 h | Préparation mentale : 9 h
+NOX dit (constat) Neuf heures pour ne rien faire.
+PLAN gros TOBI
+TOBI dit (fier) Les grands appellent ça la vision.
+PLAN auto
+NOX dit (punchline) Les grands ont des clients.
+PLAN auto
+TOBI dit (illumine) Attends... il y a une vidéo là-dessus !
+PLAN gros NOX
+NOX dit (resigne) Quarante-trois.
+ATTENDRE 0.4

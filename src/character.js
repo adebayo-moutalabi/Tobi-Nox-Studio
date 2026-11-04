@@ -5,7 +5,8 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
-import { createTalk, stepTalk, talkShape, talkBody, addRot, clearRot } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot } from './talk.js';
+import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const PALETTE = {
   skin: '#8b6a53', skinDeep: '#6c5243', neck: '#655044',
@@ -547,12 +548,12 @@ export function createCharacter() {
   const skeleton = new THREE.Skeleton(list);
   const index = Object.fromEntries(list.map((b, i) => [b.name, i]));
 
-  const matte = new THREE.MeshStandardMaterial({ vertexColors: true, flatShading: true, roughness: 0.82, metalness: 0, side: THREE.DoubleSide });
+  const matte = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.74, metalness: 0, side: THREE.DoubleSide });
   matte.name = 'mat';
   const gloss = new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.DoubleSide });
   gloss.name = 'eyes';
   const make = (part, name, mat, morph) => {
-    const g = toGeometry(part, index, morph, lids);
+    const g = toCreasedNormals(toGeometry(part, index, morph, lids), 0.85); // volumes arrondis, arêtes franches conservées
     const m = new THREE.SkinnedMesh(g, mat);
     m.name = name; m.frustumCulled = false; m.castShadow = true; m.receiveShadow = true;
     root.add(m); m.bind(skeleton);
@@ -572,7 +573,7 @@ export function createCharacter() {
   // État animé
   const faceMeshes = [headMesh, eyeMesh];
   const weights = Object.fromEntries(MORPHS.map((m) => [m, 0]));
-  const tapBones = [bones.head, bones.chest, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
+  const tapBones = [bones.head, bones.chest, bones.spine, bones.neck, bones.arm_L, bones.arm_R, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
   const state = {
     expr: {}, exprName: 'neutre', blinkT: 2, blink: 0, blinkDir: 0, glanceT: 3, glance: { lookL: 0, lookR: 0, lookU: 0, lookD: 0 },
     talk: null, viseme: {}, current: null, loco: 'idle', gesture: null, taps: { L: 0, R: 0 }, tapF: { L: 1, R: 2 },
@@ -608,6 +609,7 @@ export function createCharacter() {
     update(dt) {
       clearRot(tapBones);
       motion.update(dt);
+      lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.neck, armL: bones.arm_L, armR: bones.arm_R });
       talkBody(state, dt, bones.head, bones.chest);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
         const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);

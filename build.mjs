@@ -11,7 +11,7 @@ const PAGES = [
     SUB: 'La mascotte, 45 cm. Son écran affiche ses émotions : combine geste, objet et mimique.', SAY: 'Bonjour, je suis Nox !',
     OPTS: NIGHT(true) },
   { entry: 'src/studio-app.js', out: 'studio.html', TITLE: 'Studio Tobi et Nox', H1: 'Studio Tobi et Nox',
-    SUB: 'La chambre de Tobi et Nox. Choisis qui tu pilotes, ou lance une scène à deux.', SAY: 'On tourne ?',
+    SUB: 'Trois étapes pour sortir un Short.', SAY: 'On tourne ?',
     OPTS: '      <label><input type="checkbox" id="glasses" checked> Lunettes de Tobi</label>\n' + NIGHT(false) },
 ];
 const template = readFileSync('src/page.html', 'utf8');

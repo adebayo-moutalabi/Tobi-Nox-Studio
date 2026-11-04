@@ -77,7 +77,7 @@ export function mountVoices({ el, player, parseStory }) {
       }
       if (!mine.some((x) => x.voice_id === saved.nox) && mine.length > 1) pick.nox.selectedIndex = 1;
       remember();
-      say(`${mine.length} voix trouvées. Choisis Tobi et Nox, puis génère.`);
+      say(`${mine.length} voix trouvées. Vérifie Tobi et Nox, puis génère.`);
     } catch (e) { say(e.message); }
     lock(false);
   };
@@ -143,6 +143,8 @@ export function mountVoices({ el, player, parseStory }) {
   };
 
   key.value = read(KEY);
+  el('elSetup').open = !key.value;
+  say(key.value ? '' : 'Colle ta clé ElevenLabs dans les réglages ci-dessous.');
   keep.checked = !!key.value || !read(PICK);
   load.addEventListener('click', loadVoices);
   go.addEventListener('click', generate);

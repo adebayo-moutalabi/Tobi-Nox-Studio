@@ -79,3 +79,15 @@ export function talkBody(state, dt, head, chest, gain = 1) {
   addRot(head, -0.03 * b - 0.075 * b * Math.sin(t * 8.5), 0.06 * b * Math.sin(t * 3.7), 0.04 * b * Math.sin(t * 2.9));
   addRot(chest, 0.02 * b * Math.sin(t * 4.2), 0.03 * b * Math.sin(t * 2.3), 0);
 }
+
+// Corps au repos : respiration et transferts de poids lents, jamais répétitifs.
+const drift = (t, a, b) => Math.sin(t * a) + 0.6 * Math.sin(t * b + 1.3);
+export function lifeBody(state, dt, b) {
+  state.lifeT = (state.lifeT || Math.random() * 40) + dt;
+  const t = state.lifeT, air = Math.sin(t * 1.7), calm = state.talk ? 0.6 : 1;
+  addRot(b.chest, 0.014 * air, 0, 0);
+  addRot(b.spine, 0.012 * calm * drift(t, 0.37, 0.61), 0.016 * calm * drift(t, 0.23, 0.53), 0.012 * calm * drift(t, 0.31, 0.47));
+  addRot(b.neck, 0.014 * calm * drift(t, 0.43, 0.79), 0.028 * calm * drift(t, 0.29, 0.67), 0.01 * calm * drift(t, 0.51, 0.37));
+  addRot(b.armL, 0.012 * air, 0, 0.01 * drift(t, 0.33, 0.71));
+  addRot(b.armR, 0.012 * air, 0, -0.01 * drift(t, 0.27, 0.59));
+}

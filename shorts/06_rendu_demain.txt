@@ -1,0 +1,45 @@
+# MON RENDU EST DEMAIN
+# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+ECRAN memoire_final_v9.txt
+TABLEAU Master | Rendu demain 8 h | 3 pages sur 60 | Ne pas paniquer
+FONDU direct
+
+PLAN auto
+NOX dit (calme) Ton rendu de master, c'est quand ?
+PLAN auto
+TOBI dit (calme) Demain.
+PLAN gros NOX
+NOX dit (curieux) Demain quand ?
+PLAN gros TOBI
+TOBI dit (gene) Huit heures.
+INSERT Il te reste | 8 h | Pages écrites : 3 sur 60
+NOX dit (sec) Trois pages.
+PLAN auto
+TOBI dit (mauvaisefoi) Trois excellentes pages.
+PLAN gros TOBI
+TOBI dit (illumine) Mais j'ai un plan. Une IA écrit tout.
+PLAN auto
+NOX dit (sec) Je suis ton IA.
+PLAN auto
+TOBI dit (excite) Parfait. Vas-y.
+PLAN gros NOX
+NOX dit (constat) Non.
+PLAN gros TOBI
+TOBI dit (panique) Comment ça, non ?
+PLAN auto
+NOX dit (punchline) Toi, tu écris. Moi, je corrige.
+PLAN auto
+TOBI dit (triste) Tu es censé être de mon côté.
+PLAN gros NOX
+NOX dit (content) Je le suis. Ouvre le fichier.
+PLAN clavier
+TOBI pivote bureau
+TOBI tape Introduction
+ATTENDRE 0.5
+ATTENDRE 0.4

@@ -1,0 +1,43 @@
+# JUSTE UN SITE VITRINE
+# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+ECRAN devis.txt
+TABLEAU Boulangerie Martin | Site vitrine | 150 euros | Projet n° 16
+FONDU direct
+
+PLAN auto
+TOBI dit (fier) Le boulanger veut juste un site vitrine.
+PLAN auto
+NOX dit (curieux) Donc cinq pages.
+PLAN gros TOBI
+TOBI dit (excite) Cinq pages, un chatbot et une appli.
+INSERT Devis signé | 150 € | Site vitrine
+NOX dit (sec) Il a demandé un chatbot ?
+PLAN auto
+TOBI dit (mauvaisefoi) Il ne sait pas encore qu'il en a besoin.
+PLAN gros NOX
+NOX dit (curieux) Et il dit quoi, ton chatbot ?
+PLAN gros TOBI
+TOBI dit (fier) Bonjour, je suis Croustillant.
+PLAN auto
+NOX dit (ironique) Et après ?
+PLAN auto
+TOBI dit (gene) Il ne connaît que le prix du pain.
+PLAN gros NOX
+NOX dit (constat) Comme le panneau dans la vitrine.
+INSERT Temps passé | 94 h | Pour 150 €
+NOX dit (constat) Ça te fait un euro soixante de l'heure.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est de la visibilité.
+PLAN auto
+NOX dit (punchline) Tu as douze visiteurs.
+PLAN auto
+TOBI dit (illumine) Treize. Le boulanger est revenu.
+PLAN gros NOX
+NOX dit (resigne) Pour se faire rembourser.
+ATTENDRE 0.4

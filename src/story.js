@@ -357,7 +357,11 @@ export function createPlayer(v, ui) {
 export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
-  const pick = el('storyPick');
+  const pick = el('storyPick'), panel = document.querySelector('.panel');
+  const tabs = [...el('tabs').querySelectorAll('button')];
+  const showTab = (name) => { panel.dataset.tab = name; tabs.forEach((b) => b.setAttribute('aria-pressed', b.dataset.tab === name)); };
+  tabs.forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
+  el('tabs').hidden = false; showTab('film');
   for (const k of Object.keys(stories)) pick.add(new Option(k, k));
   el('storyText').value = stories[pick.value];
   pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });

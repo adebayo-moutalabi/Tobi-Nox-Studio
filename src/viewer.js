@@ -563,7 +563,7 @@ export function startViewer(cfg) {
     placeLights();
     room?.mirrorLive(actors.some((a) => pos(a).distanceTo(MIRROR) < 1.5));
     if (skipRender) return;
-    renderer.render(scene, camera);
+    if (api.render) api.render(); else renderer.render(scene, camera);
     if (!bubble.hidden && speaker) {
       speaker.hero.bones.head.getWorldPosition(headWorld); headWorld.y += speaker.bubbleY;
       headWorld.project(camera);

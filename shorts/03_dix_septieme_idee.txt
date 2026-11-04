@@ -1,0 +1,45 @@
+# MA 17E IDÉE DE LA SEMAINE
+# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+ECRAN idees.txt
+TABLEAU Idées de la semaine | 16 barrées | Une seule survit | Projet n° 17
+FONDU direct
+
+PLAN auto
+TOBI dit (excite) J'ai l'idée du siècle.
+PLAN auto
+NOX dit (ironique) Celle de ce matin ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Non, celle de ce matin était nulle.
+INSERT Idées cette semaine | 17 | Nous sommes mardi
+NOX dit (sec) On est mardi.
+PLAN auto
+TOBI dit (fier) Un site de rencontre pour les plantes.
+PLAN gros NOX
+NOX dit (curieux) Pour quoi faire ?
+PLAN gros TOBI
+TOBI dit (excite) Elles se rencontrent. Elles matchent.
+PLAN auto
+NOX dit (sec) Les plantes ne bougent pas.
+PLAN auto
+TOBI dit (illumine) D'où l'abonnement premium.
+PLAN gros NOX
+NOX dit (curieux) Tu as combien de plantes ?
+PLAN gros TOBI
+TOBI dit (gene) Une.
+PLAN auto
+NOX dit (constat) Elle est morte en mars.
+PLAN auto
+TOBI dit (mauvaisefoi) Elle est en pause.
+PLAN gros NOX
+NOX dit (punchline) Comme tes dix-sept projets.
+PLAN gros TOBI
+TOBI dit (illumine) Attends... un site de rencontre pour les projets ?
+PLAN auto
+NOX dit (resigne) Dix-huit.
+ATTENDRE 0.4

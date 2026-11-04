@@ -4,7 +4,8 @@ import * as THREE from 'three';
 import { V, clamp, lerp, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
 import { buildNoxClips } from './nox-clips.js';
 import { createMotion } from './motion.js';
-import { createTalk, stepTalk, talkShape, talkBody, clearRot } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, clearRot } from './talk.js';
+import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const NOX_HEIGHT = 0.45;
 
@@ -275,11 +276,11 @@ export function createNox() {
     return g;
   };
   const skinned = (part, name, mat) => {
-    const m = new THREE.SkinnedMesh(toGeo(part), mat);
+    const m = new THREE.SkinnedMesh(toCreasedNormals(toGeo(part), 0.85), mat);
     m.name = name; m.frustumCulled = false; m.castShadow = true; m.receiveShadow = true;
     root.add(m); m.bind(skeleton); return m;
   };
-  const matte = new THREE.MeshStandardMaterial({ vertexColors: true, flatShading: true, roughness: 0.72, metalness: 0, side: THREE.DoubleSide });
+  const matte = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.5, metalness: 0, side: THREE.DoubleSide });
   matte.name = 'nox';
   const bodyMesh = skinned(bodyPart, 'corps', matte);
   const ballMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.42, metalness: 0, emissive: NOX_PALETTE.ball, emissiveIntensity: 0.12 });
@@ -354,8 +355,9 @@ export function createNox() {
     },
     setMorphs(obj) { Object.assign(weights, obj); apply(weights); },
     update(dt) {
-      clearRot([bones.head]);
+      clearRot([bones.head, bones.chest, bones.spine]);
       motion.update(dt);
+      lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.head });
       talkBody(state, dt, bones.head, null, 1.5);
       state.time += dt;
       state.blinkT -= dt;
