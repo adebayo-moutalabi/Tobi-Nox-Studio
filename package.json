@@ -1,0 +1,18 @@
+{
+  "name": "scratch-2026-11-04-ade4c0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "mp4-muxer": "^5.2.2",
+    "three": "^0.170.0"
+  }
+}

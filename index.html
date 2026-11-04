@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tobi et Nox</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root { --bg: #f1ece2; --ink: #27272a; --muted: #66645e; --line: #d8d1c3; --accent: #d98d24; --red: #b8222a; --card: #fbf8f1; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1b2030; --ink: #eceae4; --muted: #a6a59f; --line: #363d52; --card: #222839; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Figtree", "Segoe UI", system-ui, sans-serif; line-height: 1.5; }
+main { max-width: 760px; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 36px; }
+h1 { font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif; font-size: clamp(38px, 8vw, 60px); line-height: 1.02; margin: 0 0 10px; }
+h2 { font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif; font-size: 20px; margin: 0 0 4px; }
+p { margin: 0; color: var(--muted); }
+.main { display: block; padding: 22px 24px; background: var(--accent); color: #2a2015; border-radius: 12px; text-decoration: none; }
+.main h2 { font-size: 26px; }
+.main p { color: #2a2015; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.row a { display: block; padding: 16px 18px; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; }
+a:hover { filter: brightness(1.04); }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.small { font-size: 14px; }
+.small a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Tobi et Nox</h1>
+    <p>Un étudiant, sa mascotte robot, et leur chambre en 3D. Tout se joue dans le navigateur.</p>
+  </header>
+  <a class="main" href="studio.html">
+    <h2>Ouvrir le Studio</h2>
+    <p>Pilote les personnages, joue l'histoire, modifie le script, exporte en MP4.</p>
+  </a>
+  <div class="row">
+    <a href="tobi.html"><h2>Tobi</h2><p>Gestes, objets et mimiques.</p></a>
+    <a href="nox.html"><h2>Nox</h2><p>La mascotte et son écran.</p></a>
+  </div>
+  <p class="small">Pour l'export vidéo, utilise Chrome ou Edge sur ordinateur. Le code et les modèles 3D sont sur <a href="https://github.com/adebayo-moutalabi/Tobi-Nox-Studio">GitHub</a>.</p>
+</main>
+</body>
+</html>

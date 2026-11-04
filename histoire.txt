@@ -1,0 +1,95 @@
+# LE MATIN DE L'EXAMEN
+# Script joué par le Studio. Une ligne = une instruction.
+# Finir une ligne par & lance la suivante sans attendre.
+#
+# Personnages : TOBI, NOX
+#   dit <texte>          mimique <nom>        geste <nom>
+#   marche <lieu>        court <lieu>         regarde <TOBI|NOX|rien>
+#   travaille            assis                dort
+#   frigo                miroir               fenetre
+#   leve                 prend <objet>        pose
+#   utilise              donne <TOBI|NOX>     suit <TOBI|NOX>
+#   seul                 sort                 danse <secondes>
+#   monte <bras|epaule|sac>   descend         sortie (va à la porte, tient la poignée, sort)
+#   remet (remet la gourde au frigo)     tape <texte> (s'affiche à l'écran, \n = à la ligne)
+# Pour Nox, « travaille » = s'installer sur la table à côté de l'ordinateur.
+# Lieux : centre tapis fenetre lit bureau armoire frigo miroir couloir porte
+# Objets : papier livre gourde tasse telephone sac
+# Gestes : saluer oui non epaules reflechir montrer applaudir pouce viens
+#          stop gratter consterne regarder etirer saluerbas sauter victoire
+# Mimiques Tobi : neutre sourire joie surprise colere tristesse doute clin degout peur dort
+# Mimiques Nox  : neutre sourire joie surprise colere tristesse doute clin amour sommeil
+#
+# Mise en scène :
+#   PLAN auto             caméra automatique : suit qui parle et qui marche
+#   PLAN large|bureau|lit|fenetre|frigo|porte|miroir|clavier|ecran|tableau|dessus   plans fixes
+#   ECRAN <nom du fichier>|efface       TABLEAU ligne 1 | ligne 2 | ligne 3
+#   FONDU noir|ouvert    TITRE <texte>        ATTENDRE <secondes>
+#   VOLET ouvert|ferme   LAMPE allumee|eteinte   PORTE ouverte|fermee
+
+# --- Scène 1 : le réveil ---
+TOBI dort
+NOX marche fenetre
+PLAN lit
+TITRE Le matin de l'examen
+FONDU ouvert
+ATTENDRE 1.5
+PLAN auto
+NOX mimique sourire
+VOLET ouvert
+NOX dit Il est sept heures !
+NOX marche lit
+NOX dit Tobi, debout ! C'est le jour de l'examen !
+NOX geste sauter
+TOBI mimique surprise
+PLAN lit
+TOBI leve
+PLAN auto
+TOBI mimique peur
+TOBI dit Quoi ? Déjà ?
+
+# --- Scène 2 : la gourde ---
+TOBI geste etirer
+TOBI mimique doute
+TOBI dit J'ai la gorge sèche...
+TOBI frigo
+TOBI mimique sourire
+TOBI utilise
+TOBI remet
+
+# --- Scène 3 : au bureau ---
+PLAN tableau
+ATTENDRE 2
+PLAN auto
+TOBI travaille
+ECRAN revisions.txt
+PLAN clavier
+TOBI tape Chapitre 4 : les
+PLAN ecran
+TOBI tape ... euh...
+TOBI mimique doute
+ATTENDRE 1.2
+NOX travaille
+PLAN auto
+TOBI dit Je ne me souviens plus de rien.
+NOX mimique sourire
+NOX dit Respire. Tu as tout révisé hier soir.
+TOBI mimique sourire
+TOBI dit Tu as raison.
+NOX mimique amour
+NOX dit Je viens avec toi !
+
+# --- Scène 4 : le départ ---
+TOBI leve
+NOX leve
+TOBI miroir
+TOBI mimique clin
+ATTENDRE 1.6
+TOBI prend sac
+TOBI mimique joie
+TOBI dit Allez, monte !
+NOX monte sac
+TOBI dit C'est parti !
+TOBI sortie
+FONDU noir
+TITRE À suivre...
