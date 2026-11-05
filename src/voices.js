@@ -149,6 +149,12 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   say(key.value ? '' : 'Colle ta clé ElevenLabs pour créer les voix.');
   keep.checked = !!key.value || !read(PICK);
   load.addEventListener('click', loadVoices);
+  // La liste à coller dans VOIX.md : on garde ainsi la trace des voix réellement utilisées.
+  el('elCopy').addEventListener('click', async () => {
+    const line = (who, s) => `${who} : ${s.selectedOptions[0]?.textContent || 'non choisie'}`;
+    const text = [...Object.entries({ Tobi: pick.tobi, Nox: pick.nox, 'Claude Code': pick.claude, Codex: pick.codex, Gemini: pick.gemini }).map(([w, s]) => line(w, s)), `Modèle : ${model.selectedOptions[0]?.textContent}`].join('\n');
+    try { await navigator.clipboard.writeText(text); say('Liste copiée.'); } catch { say(text); }
+  });
   go.addEventListener('click', generate);
   keep.addEventListener('change', remember);
   el('storyText').addEventListener('input', forget);
