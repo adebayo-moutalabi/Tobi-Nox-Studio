@@ -26,7 +26,7 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 
 ## La prononciation
 
-La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la vision ». `src/prononciation.js` envoie à la voix une écriture phonétique, sans toucher au sous-titre. Cas isolé : `[affiché|prononcé]` dans le script. Ces réglages restent à confirmer à l'écoute.
+La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la vision ». `src/prononciation.js` envoie à la voix une écriture phonétique, sans toucher au sous-titre. « Aie » est envoyé sous la forme « Haie », un mot courant qui se dit « è » ; l'écriture se change et s'écoute dans Réglages, Voix. Cas isolé : `[affiché|prononcé]` dans le script. Ces réglages restent à confirmer à l'écoute.
 
 ## Historique
 
@@ -35,3 +35,11 @@ La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la
 | 5 novembre 2026 | Prononciation corrigée pour « Aie la vision » et les sigles, « annales » retiré du script. |
 | 5 novembre 2026 | Chat est remplacé par Codex : sa voix est à choisir de nouveau. |
 | Novembre 2026 | Demande de l'auteur : des voix françaises pro, adaptées à la personnalité de chacun. |
+
+## Ne plus dépendre d'ElevenLabs
+
+1. **Garder les fichiers :** les vidéos publiées et les répliques déjà créées restent utilisables, sous réserve des conditions du compte. Les répliques ne vivent que dans le navigateur : il faut les sauvegarder à part.
+2. **Posséder la source :** pour garder une voix sans le service, il faut une voix dont on a les droits, comme des enregistrements de l'auteur ou d'un comédien sous contrat.
+3. **Passer à un modèle local :** tester un modèle ouvert au clonage, comme Chatterbox, avec ces enregistrements. Vérifier sa licence et sa qualité en français avant de changer.
+4. **Vérifier les conditions :** ne pas entraîner un modèle sur des sorties ElevenLabs sans avoir relu leurs conditions à jour.
+5. **Brancher le Studio :** « Importer mes propres voix » accepte déjà des fichiers audio, réplique par réplique.

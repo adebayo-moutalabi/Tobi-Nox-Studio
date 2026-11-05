@@ -82,6 +82,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 5 nov. 2026 | Mascotte Tobi & Nox, mignonne et souriante | Version 2 retenue : Tobi lève les bras, Nox a les yeux rieurs. Avatar, emblème et filigrane conservés hors du dépôt |
 | 5 nov. 2026 | Logo personnel final | Direction Orbite choisie par l'auteur, fournie dans son archive Logo-Adebayo-Moutalabi, conservée hors du dépôt |
 | 5 nov. 2026 | Publier les meilleures vidéos dès le matin, avec fiches par plateforme | Ordre retenu : épisodes 46, 50, 51, puis 47 en réserve. Fiches dans une page privée, hors du dépôt |
+| 5 nov. 2026 | Vidéos floues sur YouTube et fichiers nommés « histoire » | Export 1440p par défaut, débit relevé, fichier au nom de l'épisode |
+| 5 nov. 2026 | « Aie » doit se dire « è » | Écriture « Haie » envoyée à la voix, réglable et testable dans Réglages. À confirmer à l'écoute |
+| 5 nov. 2026 | Écouter l'histoire avant de télécharger | Voix d'essai gratuites du navigateur, vraies voix rejouées sans crédit si elles existent |
+| 5 nov. 2026 | Navigation fluide et flèches cachées dans les réglages | Retour à l'épisode, épisode précédent et suivant, liste qui garde sa position, débordement corrigé |
+| 5 nov. 2026 | Voir ce qui est publié et étudier les résultats | Espace Publications du Studio, avec titres, textes, statut par plateforme, chiffres et sauvegarde |
+| 5 nov. 2026 | Meilleurs titres et hashtags | Titres retravaillés pour la recherche, hashtags IA, robot, Claude ou entrepreneuriat quand ils sont justes |
+| 5 nov. 2026 | Ne plus dépendre d'ElevenLabs plus tard | Marche à suivre dans `VOIX.md` |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

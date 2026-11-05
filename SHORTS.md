@@ -39,10 +39,11 @@ Sur ordinateur, avec Chrome ou Edge.
 
 1. **Une fois :** créer une clé ElevenLabs (Developers, API Keys, droits Text to Speech et Voices) et la coller dans la ligne « Voix » d'un épisode, puis choisir les voix de Tobi et Nox.
 2. **Choisir un épisode :** il s'ouvre et se joue tout de suite. « Revoir » le relance.
-3. **Cliquer sur « Créer la vidéo » :** les voix sont créées si besoin, puis le MP4 arrive dans les téléchargements. Rien d'autre à régler.
-4. **Regarder la vidéo** sur téléphone, avec et sans le son.
-5. **Publier :** titre « Tobi fait X (emoji) | Tobi & Nox #1 », 3 lignes qui teasent sans donner la chute, 3 à 5 hashtags. Vérifier l'option « contenu modifié ou synthétique ».
-6. **Analyser à 48 h** et noter le résultat ci-dessous.
+3. **Écouter :** l'épisode se joue avec des voix d'essai gratuites du navigateur, ou avec les vraies voix si elles existent déjà. « Écouter avec les vraies voix » les crée une seule fois.
+4. **Cliquer sur « Créer la vidéo » :** le MP4 arrive dans les téléchargements, en 1440p, avec le titre de l'épisode comme nom de fichier.
+5. **Regarder la vidéo** sur téléphone, avec et sans le son.
+6. **Publier :** copier le titre, le texte et le commentaire depuis l'espace Publications du Studio. Vérifier l'option « contenu modifié ou synthétique ». Cocher ensuite les plateformes.
+7. **Analyser à 48 h** et noter les chiffres dans l'espace Publications.
 
 Pour un nouvel épisode : écrire le script selon `CHARTE_SCRIPTS.md`, puis l'ajouter dans `src/studio-app.js`, ou le coller dans la ligne « Script » d'un épisode existant.
 

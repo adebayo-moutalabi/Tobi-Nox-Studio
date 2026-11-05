@@ -44,7 +44,10 @@ Pour tester, ouvrir `studio.html` en local ou via un petit serveur. L'export vid
 | `src/look.js` | Ambiance du soir, passes d'image, vignettage, écrans plein cadre (`INSERT`). |
 | `src/exporter.js` | Export MP4 image par image, mixage, dessin des sous-titres. |
 | `src/sound.js` | Bruitages synthétisés et musique générée. |
-| `src/voices.js` | Génération des voix ElevenLabs. |
+| `src/voices.js` | Génération des voix ElevenLabs et reprise des voix déjà créées. |
+| `src/voix-essai.js` | Voix d'essai gratuites du navigateur, pour écouter sans clé. Jamais utilisées dans la vidéo. |
+| `src/publications.js` | Titres, textes, hashtags, ordre de sortie et nom du fichier vidéo. |
+| `src/publications-ui.js` | Espace Publications : suivi et chiffres, gardés dans le navigateur, avec sauvegarde en fichier. |
 | `src/writer.js` | Espace Écrire : dictée, analyse par Claude, script à valider. Reçoit `BIBLE.md` et `CHARTE_SCRIPTS.md` comme consigne. |
 | `src/tones.js` | Les tons : voix, visage, geste et réaction d'un seul mot. |
 | `src/talk.js` | Bouche calée sur le son, mouvements du corps qui parle et qui respire. |
@@ -85,8 +88,9 @@ Tout le reste (personnages, chambre, objets, visages, musique, bruitages) est é
 | Les voix des personnages | `VOIX.md` |
 | L'historique des demandes de l'auteur | Section « Demandes de l'auteur » de `JOURNAL.md` |
 | Ajouter un épisode | Créer le fichier, l'importer et l'ajouter dans `src/studio-app.js` |
+| Le titre, le texte ou l'ordre de sortie d'une vidéo | `src/publications.js` |
 | Un ton | `src/tones.js` |
-| La prononciation d'un mot | `src/prononciation.js` |
+| La prononciation d'un mot | `src/prononciation.js`. « Aie » se règle aussi dans Réglages, Voix |
 | Le visage de Nox | `EXPRESSIONS` et `TILT` dans `src/nox.js` |
 | Le visage de Tobi | `EXPRESSIONS` dans `src/character.js` |
 | Un Aîné (forme, visage, animation) | Sa forme dans `src/logos.js`, sa taille dans `AINES` de `src/cast.js` |
