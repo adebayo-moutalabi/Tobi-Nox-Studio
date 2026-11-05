@@ -22,7 +22,7 @@ const LIEUX = {
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
 // Places en hauteur pour les Aînés, avec apparait : x, y, z
-const PERCHOIRS = { bureau: [0.98, 0.745, -0.42], chaise: [0.42, 0.5, -1.05], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
+const PERCHOIRS = { bureau: [0.96, 0.745, -0.6], chaise: [0.42, 0.5, -1.05], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
 // position caméra, cible, focale
 const PLANS = {
   large: [[0.05, 1.55, 2.75], [0, 0.9, -1.9], 58],
@@ -67,7 +67,9 @@ export function parseStory(text) {
     let text = rest.join(' '), tone = null;
     const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
     if (t) { tone = plain(t[1]).replace(/[\s-]/g, ''); text = t[2]; }
-    out.push({ n: i + 1, who, verb, args: rest, text, tone, free, direct, raw: line });
+    const spoken = text.replace(/\[([^|\]]+)\|([^\]]+)\]/g, '$2'); // [affiché|prononcé]
+    text = text.replace(/\[([^|\]]+)\|([^\]]+)\]/g, '$1');
+    out.push({ n: i + 1, who, verb, args: rest, text, spoken, tone, free, direct, raw: line });
   });
   return out;
 }
@@ -185,6 +187,15 @@ export function createPlayer(v, ui) {
       }
     }
     if (a.extra && !front) { frame(a, tight, true); return; } // pas de place côté partenaire : on filme le logo de face
+    // Dernier recours : celui qui parle doit être à l'image. On tourne autour de lui jusqu'à trouver une vue dégagée, avant tout plan large.
+    for (const [fov, k, strict] of [[54, 1, true], [66, 1, true], [66, 0.85, true], [74, 0.8, true], [66, 1, false], [74, 0.8, false]]) {
+      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = Math.max(a.extra ? H.y + 0.02 : top + sp * 0.13 - sp / 2, 0.3);
+      for (let i = 0; i < 16; i++) {
+        const c = H.clone().addScaledVector(fwd.clone().normalize().applyAxisAngle(up, ((i % 2 ? 1 : -1) * Math.ceil(i / 2) * Math.PI) / 8), dist); c.y = mid + 0.03;
+        const edge = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(0.16);
+        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().add(edge)) && seen(c, H.clone().sub(edge)) && seen(c, H.clone().setY(H.y - 0.1)) && !(strict && others.some((x) => blocks(x, c, H)))) { aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens()); return; }
+      }
+    }
     cut('large');
   }
   const closeUp = (a) => frame(a, true);
