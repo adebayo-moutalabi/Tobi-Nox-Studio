@@ -72,6 +72,7 @@ button:disabled { opacity: .45; cursor: default; }
 .app.portrait .stage { aspect-ratio: 9 / 16; height: 100%; max-width: 100%; justify-self: center; }
 form { display: flex; gap: 6px; }
 input[type="password"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); }
+#settings input[type="text"] { flex: 0 1 62%; width: 62%; font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
 .voice { display: flex; align-items: center; gap: 6px; font-size: 13px; }
 .voice select { max-width: 130px; }
 #elLines { margin: 0; padding: 0 0 0 20px; font-size: 12.5px; max-height: 220px; overflow-y: auto; }
@@ -178,6 +179,7 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 .rows input[type="password"], .rows select { font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
 .rows select option { color: #111; }
 .rows textarea { background: var(--brand-surface); color: var(--brand-ink); border: 1px solid var(--brand-hair); border-radius: 12px; margin: 0; }
+#settings input[type="text"] { flex: 0 1 62%; width: 62%; font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
 .voice { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; flex: 1; }
 .pair { display: flex; gap: 10px; }
 #elLines { margin: 0; padding: 0 0 0 20px; font-size: 13px; max-height: 220px; overflow-y: auto; }
@@ -277,6 +279,9 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <button type="button" id="elGo" disabled>Écouter les voix avant la vidéo</button>
             <button type="button" id="elCopy">Copier la liste de mes voix</button>
             <ol id="elLines"></ol>
+            <label class="voice">« Aie » se dit <input type="text" id="elAie" spellcheck="false" aria-label="Écriture envoyée à la voix pour Aie"></label>
+            <button type="button" id="elAieTest">Écouter « Aie la vision »</button>
+            <label class="sw">Voix d'essai gratuites dans le navigateur <input type="checkbox" id="storyTrial" checked></label>
             <label class="file">Importer mes propres voix<input type="file" id="storyVoices" multiple accept="audio/*"></label>
           </div></details>
           <details><summary>Vidéo <b id="rowVideo"></b></summary><div>
@@ -306,6 +311,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         <div class="foot">
           <p class="sub" id="storyNow" aria-live="polite"></p>
           <div class="bar" id="storyBar" hidden><i></i></div>
+          <button type="button" id="epVoices" hidden>Écouter avec les vraies voix</button>
           <button type="button" class="main" id="storyExport">Créer la vidéo</button>
         </div>
       </div>

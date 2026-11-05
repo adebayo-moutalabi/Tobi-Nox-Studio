@@ -6,6 +6,8 @@ import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
 import { nomFichier } from './publications.js';
+import { prononce } from './prononciation.js';
+import { voixEssai } from './voix-essai.js';
 import { mountWriter } from './writer.js';
 import { TONS } from './tones.js';
 import { envelope } from './talk.js';
@@ -314,7 +316,9 @@ export function createPlayer(v, ui) {
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
         cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff' }[a.id] || '#f2b92e' };
+        const essai = !voice && !offline && ui.trial?.() ? voixEssai.dit(a.id, prononce(c.spoken || c.text)) : null;
         await v.say(a, c.text, dur, voice?.env);
+        if (essai) await essai;
         if (talkPose && a.hero.motion.pose === talkPose) a.hero.motion.clearPose();
         cap = null; ui.caption(null); lastTalk = a;
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
@@ -439,7 +443,7 @@ export function createPlayer(v, ui) {
       v.setView('chambre', true);
       running = false; closing = false; ui.state(false);
     },
-    stop() { stopped = true; },
+    stop() { stopped = true; voixEssai.stop(); },
   };
 }
 
@@ -486,6 +490,7 @@ export function mountStory(v, stories) {
     row.className = voice === 'ready' ? 'ok' : voice === 'none' ? 'todo' : '';
     el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${QUALITE[el('storyQuality').value]}p`;
     el('rowScript').textContent = `${c.length} répliques · environ ${secs} s`;
+    el('epVoices').hidden = voice === 'ready';
     el('epStatus').textContent = `Voix : ${row.textContent.toLowerCase()} · ${el('rowVideo').textContent} · Réglages →`;
   };
   const halt = async () => { // arrête la lecture et remet tout en place sans attendre les animations
@@ -497,13 +502,16 @@ export function mountStory(v, stories) {
     await halt();
     player.play(el('storyText').value);
   };
+  let opening = 0;
   const openEp = (k) => {
     pick.value = k; pick.dispatchEvent(new Event('change'));
     const m = /^(\d+)\.\s*(.*)$/.exec(k), text = stories[k];
     el('epNum').textContent = m ? `Épisode ${m[1]}` : k.startsWith('Mon script') ? 'Mon script' : 'Hors saison';
     el('epTitle').textContent = m ? m[2] : k.replace(/^Mon script : /, '');
     el('epPitch').textContent = (/^#\s*Pitch\s*:\s*(.*)$/mi.exec(text) || [])[1] || '';
-    go('ep'); el('storyNow').textContent = ''; refresh(); replay();
+    go('ep'); el('storyNow').textContent = ''; refresh();
+    const me = ++opening;
+    (voices?.warm() || Promise.resolve()).catch(() => {}).then(() => { if (me === opening) { refresh(); replay(); } });
   };
   pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
   el('epBack').addEventListener('click', () => go('lib'));
@@ -552,9 +560,18 @@ export function mountStory(v, stories) {
     state: (on) => { el('storyPlay').disabled = on; el('storyStop').disabled = !on; el('storyExport').disabled = exporting; },
     tick: (dt) => { const d = st.target - st.alpha; if (d) { st.alpha += Math.sign(d) * Math.min(Math.abs(d), dt / 0.7); el('curtain').style.opacity = st.alpha; } },
   };
+  ui.trial = () => el('storyTrial').checked;
   const player = createPlayer(v, ui);
   el('storyPlay').addEventListener('click', replay);
   el('storyStop').addEventListener('click', () => player.stop());
+  el('epVoices').addEventListener('click', async () => {
+    if (!voices.ready()) { go('settings'); return; }
+    await halt();
+    ui.line('Création des vraies voix…');
+    await voices.generate();
+    refresh();
+    if (player.voices.length) { ui.line(''); replay(); } else ui.line(el('elNow').textContent);
+  });
   let musicFile = null, warned = false;
   el('storyMusicFile').addEventListener('change', async (e) => {
     const f = e.target.files[0];

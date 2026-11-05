@@ -1,7 +1,7 @@
 // Voix automatiques : le Studio demande chaque réplique à ElevenLabs avec la clé de l'utilisateur.
 // La clé ne quitte ce navigateur que vers api.elevenlabs.io. Elle n'est jamais dans le code.
 import { voiceTag } from './tones.js';
-import { prononce } from './prononciation.js';
+import { prononce, sonAie, changeAie } from './prononciation.js';
 
 const API = 'https://api.elevenlabs.io/v1';
 const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
@@ -85,9 +85,13 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     lock(false);
   };
 
+  const lineId = (r) => {
+    const tag = voiceTag(r.tone), plain = model.value === STABLE, said = prononce(r.spoken), text = tag && !plain ? `[${tag}] ${said}` : said;
+    return { voice: pick[r.who].value, plain, text, id: [pick[r.who].value, model.value, text].join('|') };
+  };
+
   const makeLine = async (i, force) => {
-    const r = rows[i], voice = pick[r.who].value, tag = voiceTag(r.tone), plain = model.value === STABLE;
-    const said = prononce(r.spoken), text = tag && !plain ? `[${tag}] ${said}` : said, id = [voice, model.value, text].join('|');
+    const r = rows[i], { voice, plain, text, id } = lineId(r);
     let buf = force ? null : await cache.get(id);
     const fresh = !buf;
     if (fresh) {
@@ -123,8 +127,22 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     }));
   };
 
+  const readLines = () => parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text, spoken: c.spoken, tone: c.tone }));
+
+  // Si tout l'épisode a déjà été créé, on le rejoue avec les vraies voix, sans dépenser de crédit.
+  const warm = async () => {
+    if (!pick.tobi.value) return false;
+    const next = readLines();
+    if (!next.length) return false;
+    for (const r of next) if (!(await cache.get(lineId(r).id))) return false;
+    rows = next;
+    for (let i = 0; i < rows.length; i++) await makeLine(i, false);
+    publish(); show(); onChange?.();
+    return true;
+  };
+
   const generate = async () => {
-    rows = parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text, spoken: c.spoken, tone: c.tone }));
+    rows = readLines();
     if (!rows.length) { say('Ce script ne contient aucune réplique.'); return; }
     remember(); player.voices = []; lock(true);
     let paid = 0;
@@ -157,9 +175,21 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     try { await navigator.clipboard.writeText(text); say('Liste copiée.'); } catch { say(text); }
   });
   go.addEventListener('click', generate);
+  const aie = el('elAie');
+  aie.value = sonAie();
+  aie.addEventListener('change', () => { changeAie(aie.value); aie.value = sonAie(); forget(); });
+  el('elAieTest').addEventListener('click', async () => {
+    if (!pick.tobi.value) { say('Valide d\'abord ta clé pour écouter la voix de Tobi.'); return; }
+    changeAie(aie.value); forget(); say('Essai de la prononciation…');
+    try {
+      const buf = await (await call(`/text-to-speech/${encodeURIComponent(pick.tobi.value)}?output_format=mp3_44100_128`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: prononce('Nox. Aie la vision.'), model_id: model.value }) })).arrayBuffer();
+      new Audio(URL.createObjectURL(new Blob([buf], { type: 'audio/mpeg' }))).play();
+      say('');
+    } catch (e) { say(e.message); }
+  });
   keep.addEventListener('change', remember);
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();
-  return { generate, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
+  return { generate, warm, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
 }
