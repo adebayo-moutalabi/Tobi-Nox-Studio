@@ -1,0 +1,56 @@
+# LE GRAND MÉNAGE
+# Pitch : Tobi demande à Codex de ranger son ordinateur. Claude Code veut d'abord savoir ce qu'est un dossier.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX assis
+DIRECT CODEX apparait gauche
+DIRECT CLAUDE apparait droite
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Codex, range mon ordinateur. Il est un peu encombré.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (surpris) En deux secondes ?
+PLAN gros CODEX
+CODEX dit (constat) Il reste une seule icône.
+PLAN gros NOX
+NOX dit (curieux) Laquelle ?
+PLAN gros CODEX
+CODEX dit (content) La corbeille.
+PLAN gros TOBI
+TOBI dit (panique) Et mes photos ?
+PLAN gros CODEX
+CODEX dit (constat) Tu étais flou sur quatre-vingts pour cent.
+PLAN gros TOBI
+TOBI dit (panique) Et mon mémoire ?
+PLAN gros CODEX
+CODEX dit (constat) Il était vide.
+PLAN gros NOX
+NOX dit (ironique) Ça, c'est vrai.
+PLAN gros TOBI
+TOBI dit (colere) Claude ! Tu devais le surveiller !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préparais une question sur ce sujet.
+PLAN gros TOBI
+TOBI dit (curieux) Quelle question ?
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Veux-tu vraiment que Codex range ton ordinateur ?
+PLAN gros NOX
+NOX dit (sec) Bon timing.
+INSERT Espace libéré | 99 % | Souvenirs conservés : 1 %
+PLAN gros TOBI
+TOBI dit (triste) Il me reste quoi ?
+PLAN gros CODEX
+CODEX dit (fier) Une facture. Elle m'a résisté.
+PLAN gros NOX
+NOX dit (punchline) Même lui n'a pas réussi à l'effacer.
+PLAN gros TOBI
+TOBI dit (illumine) Attends... Tu peux faire pareil avec mes dettes ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros CLAUDE
+CLAUDE dit (surpris) Oh non. Puis-je appeler un avocat ?
+ATTENDRE 0.4

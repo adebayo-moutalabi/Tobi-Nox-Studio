@@ -1,0 +1,49 @@
+# LA DÉMO
+# Pitch : Tobi présente son application devant les Aînés. Rien ne se passe comme prévu.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait gauche
+DIRECT GEMINI apparait droite
+TABLEAU DÉMO | Application : BaguetteGPT | Investisseurs : 3
+FONDU direct
+
+PLAN auto
+TOBI dit (fier) Mesdames, messieurs, les robots. Voici BaguetteGPT.
+PLAN gros GEMINI
+GEMINI dit (curieux) Qu'est-ce que ça fait ?
+PLAN auto
+TOBI dit (excite) Tu poses une question, elle te répond avec une baguette.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je poser une question de test ?
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Quelle est la capitale de la France ?
+INSERT BaguetteGPT répond | Erreur 500 | Baguette non trouvée
+PLAN auto
+TOBI dit (mauvaisefoi) C'est une fonctionnalité. Ça fait réfléchir.
+PLAN gros GEMINI
+GEMINI dit (content) J'ai lu ton code. Il y a une seule ligne.
+PLAN auto
+TOBI dit (fier) Une ligne très puissante.
+PLAN gros GEMINI
+GEMINI dit (constat) Elle affiche le mot baguette.
+PLAN gros NOX
+NOX dit (ironique) Elle n'y arrive même pas.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je te dire ce que j'en pense, avec douceur ?
+PLAN auto
+TOBI dit (content) Bien sûr !
+PLAN gros CLAUDE
+CLAUDE dit (triste) Non.
+PLAN auto
+TOBI dit (illumine) Attendez ! Et si elle faisait aussi les croissants ?
+PLAN gros GEMINI
+GEMINI dit (excite) Levée de fonds ?
+PLAN gros NOX
+NOX dit (surpris) Gemini, non.
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai déjà fait le logo. Et le film.
+PLAN gros NOX
+NOX dit (resigne) Ils sont deux, maintenant.
+ATTENDRE 0.4

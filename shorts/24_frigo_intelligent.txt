@@ -1,0 +1,45 @@
+# LE FRIGO INTELLIGENT
+# Pitch : Tobi veut mettre de l'IA dans son frigo. Il ne reste qu'un yaourt.
+
+AMBIANCE soir
+DIRECT NOX assis
+DIRECT TOBI frigo
+FONDU direct
+
+PLAN frigo
+TOBI dit (illumine) Nox. Je viens d'avoir l'idée du siècle.
+PLAN gros NOX
+NOX dit (resigne) Projet numéro vingt et un.
+PLAN frigo
+TOBI dit (excite) Un frigo intelligent ! Il sait ce qui manque.
+PLAN gros NOX
+NOX dit (curieux) Il y a quoi dedans ?
+PLAN frigo
+TOBI dit (fier) Un yaourt.
+PLAN gros NOX
+NOX dit (sec) Tout manque.
+PLAN frigo
+TOBI dit (mauvaisefoi) Justement ! C'est là que l'IA devient utile.
+TOBI dit (excite) Capteurs, caméra, application, abonnement à neuf euros.
+PLAN gros NOX
+NOX dit (ironique) Pour surveiller un yaourt.
+PLAN frigo
+TOBI dit (fier) Il te prévient quand il expire.
+PLAN gros NOX
+NOX dit (constat) Il a expiré en mars.
+INSERT Budget du frigo intelligent | 4 200 € | Budget des courses : 12 €
+TOBI remet
+TOBI marche centre
+PLAN auto
+TOBI dit (fier) C'est un investissement.
+PLAN gros NOX
+NOX dit (curieux) Tu as mangé aujourd'hui ?
+PLAN auto
+TOBI dit (gene) J'ai mangé le concept.
+PLAN gros NOX
+NOX dit (calme) Mange le yaourt, Tobi.
+PLAN auto
+TOBI dit (illumine) Et si le yaourt devenait notre premier client ?
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

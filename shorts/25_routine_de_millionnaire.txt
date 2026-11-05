@@ -1,0 +1,48 @@
+# LA ROUTINE DE MILLIONNAIRE
+# Pitch : Tobi veut se lever à cinq heures comme les millionnaires. Il tient onze minutes.
+
+AMBIANCE jour
+DIRECT TOBI dort
+DIRECT NOX travaille
+DIRECT NOX pivote
+TABLEAU 5 h 00 : réveil | 5 h 10 : bain glacé | 5 h 30 : empire
+FONDU direct
+
+BRUIT ding
+PLAN gros NOX
+NOX dit (sec) Tobi. Il est cinq heures.
+PLAN lit
+TOBI dit (chuchote) Les millionnaires se lèvent à cinq heures.
+PLAN gros NOX
+NOX dit (curieux) Donc tu te lèves ?
+PLAN lit
+TOBI dit (mauvaisefoi) Je me lève mentalement.
+PLAN gros NOX
+NOX dit (ironique) Ton empire aussi.
+TOBI leve
+PLAN auto
+TOBI dit (fier) Voilà ! Debout ! Étape un : gratitude.
+TOBI marche miroir
+PLAN miroir
+TOBI dit (excite) Merci à moi d'être aussi discipliné.
+PLAN gros NOX
+NOX dit (curieux) Étape deux ?
+PLAN miroir
+TOBI dit (fier) Bain glacé. Dix minutes. Comme les champions.
+PLAN gros NOX
+NOX dit (sec) Tu n'as pas de baignoire.
+PLAN miroir
+TOBI dit (mauvaisefoi) Alors étape trois : visualiser le succès.
+TOBI marche lit
+TOBI assis
+PLAN auto
+TOBI dit (calme) Je ferme les yeux. Je vois des voitures. Et un oreiller.
+INSERT Routine de millionnaire | 11 minutes | Record personnel
+TOBI dort
+PLAN gros NOX
+NOX dit (sec) Tobi, il est cinq heures onze.
+PLAN lit
+TOBI dit (chuchote) Les vrais millionnaires délèguent. Lève-toi pour moi.
+PLAN gros NOX
+NOX dit (resigne) Je suis le seul à bosser ici.
+ATTENDRE 0.4

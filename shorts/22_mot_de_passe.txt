@@ -1,0 +1,54 @@
+# LE MOT DE PASSE
+# Pitch : Tobi se croit protégé des pirates. Nox devine son mot de passe du premier coup.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX assis
+TABLEAU Sécurité | Niveau : expert | Selon Tobi
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Nox, je viens de tout sécuriser. Personne ne peut entrer.
+PLAN gros NOX
+NOX dit (curieux) Ton mot de passe, c'est quoi ?
+PLAN gros TOBI
+TOBI dit (ironique) Je ne vais pas te le dire.
+PLAN gros NOX
+NOX dit (sec) Tobi123.
+PLAN gros TOBI
+TOBI dit (surpris) Comment tu...
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Non. J'ai changé. Il y a un point d'exclamation.
+PLAN gros NOX
+NOX dit (sec) Tobi123, point d'exclamation.
+PLAN gros TOBI
+TOBI dit (fier) Et il y a une majuscule !
+PLAN gros NOX
+NOX dit (ironique) Au début. Comme ton prénom.
+PLAN gros TOBI
+TOBI dit (gene) Personne ne connaît mon prénom.
+PLAN gros NOX
+NOX dit (constat) Il est sur ton sweat.
+PLAN gros TOBI
+TOBI dit (panique) Il est sur mon sweat ?
+PLAN gros NOX
+NOX dit (sec) Et sur ta boîte aux lettres.
+INSERT Temps pour trouver ton mot de passe | 0,4 s | Dont 0,3 s de pitié
+PLAN gros TOBI
+TOBI dit (illumine) Attends. J'ai la solution ultime.
+TOBI leve
+PLAN auto
+TOBI dit (fier) Je le note sur un papier, et je le cache.
+PLAN gros NOX
+NOX dit (curieux) Où ça ?
+PLAN gros TOBI
+TOBI dit (fier) Sous le clavier. Personne ne regarde sous un clavier.
+PLAN gros NOX
+NOX dit (sec) Tout le monde regarde sous un clavier.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Pas si le papier s'appelle : pas mon mot de passe.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+PLAN gros TOBI
+TOBI dit (surpris) Elle a le même !
+ATTENDRE 0.4

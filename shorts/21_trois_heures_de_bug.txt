@@ -1,0 +1,53 @@
+# TROIS HEURES DE BUG
+# Pitch : Tobi cherche un bug depuis trois heures. Nox le voit en une seconde, mais attend qu'on lui demande.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+ECRAN site_boulangerie.js
+FONDU direct
+
+PLAN clavier
+TOBI tape ça marche pas ça marche pas ça marche pas
+PLAN gros TOBI
+TOBI dit (colere) Trois heures ! Trois heures sur la même ligne !
+PLAN gros NOX
+NOX dit (curieux) Tu veux de l'aide ?
+PLAN gros TOBI
+TOBI dit (fier) Non. Un vrai développeur trouve seul.
+PLAN gros NOX
+NOX dit (sec) D'accord.
+PLAN clavier
+TOBI tape peut-être le serveur
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est sûrement le serveur. Ou le cloud.
+PLAN gros NOX
+NOX dit (ironique) Ou la météo.
+PLAN gros TOBI
+TOBI dit (panique) La météo peut casser un site ?
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros TOBI
+TOBI dit (excite) Je vais tout réécrire. En Rust. Ce soir.
+PLAN gros NOX
+NOX dit (curieux) Tu connais Rust ?
+PLAN gros TOBI
+TOBI dit (fier) Je connais le logo.
+PLAN gros NOX
+NOX dit (calme) Tobi. Ligne quarante-deux.
+INSERT Ligne 42 | ; | Il manquait un point-virgule
+PLAN gros TOBI
+TOBI dit (surpris) Tu le savais depuis quand ?
+PLAN gros NOX
+NOX dit (constat) Trois heures.
+PLAN gros TOBI
+TOBI dit (colere) Et tu n'as rien dit ?
+PLAN gros NOX
+NOX dit (sec) Un vrai développeur trouve seul.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était un test. Tu l'as réussi.
+PLAN gros NOX
+NOX dit (ironique) Et toi ?
+PLAN gros TOBI
+TOBI dit (gene) Je passe au rattrapage.
+ATTENDRE 0.4

@@ -1,0 +1,48 @@
+# LE LOYER EN ACTIONS
+# Pitch : Tobi n'a pas de quoi payer son loyer. Il propose des parts de sa start-up à sa propriétaire.
+
+AMBIANCE soir
+DIRECT TOBI marche fenetre
+DIRECT NOX marche centre
+TABLEAU Loyer : 480 € | Compte : 11,32 € | Date limite : ce soir
+FONDU direct
+
+PLAN gros NOX
+NOX dit (sec) Tobi. Le loyer.
+PLAN fenetre
+TOBI dit (calme) Regarde cette ville, Nox. Bientôt, elle sera à nous.
+PLAN gros NOX
+NOX dit (sec) Pour l'instant, elle veut quatre cent quatre-vingts euros.
+PLAN fenetre
+TOBI dit (fier) Ne t'inquiète pas. J'ai parlé à madame Lemoine.
+PLAN gros NOX
+NOX dit (curieux) Tu lui as dit quoi ?
+TOBI marche tapis
+PLAN auto
+TOBI dit (excite) Je lui ai proposé cinq pour cent de la boîte.
+PLAN gros NOX
+NOX dit (surpris) Quelle boîte ?
+PLAN auto
+TOBI dit (fier) La mienne. Ma start-up. Valorisée à trois millions.
+PLAN gros NOX
+NOX dit (curieux) Selon qui ?
+PLAN auto
+TOBI dit (mauvaisefoi) Selon un tableur que j'ai fait.
+INSERT Valorisation de la start-up | 3 000 000 € | Chiffre d'affaires : 12 €
+PLAN auto
+TOBI dit (fier) Mais je l'ai convaincue ! On a signé un accord.
+PLAN gros NOX
+NOX dit (curieux) Quel accord ?
+PLAN auto
+TOBI dit (gene) À partir de demain, je tonds sa pelouse.
+PLAN gros NOX
+NOX dit (curieux) Elle a une pelouse ?
+PLAN auto
+TOBI dit (fier) Elle a quatre hectares.
+PLAN gros NOX
+NOX dit (punchline) Félicitations. Tu es enfin salarié.
+PLAN auto
+TOBI dit (illumine) Nox. Aie la vision. Une tondeuse pilotée par l'IA !
+PLAN gros NOX
+NOX dit (resigne) Tobi. Non.
+ATTENDRE 0.4

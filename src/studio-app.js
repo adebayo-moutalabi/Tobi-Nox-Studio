@@ -25,6 +25,15 @@ import E17 from '../shorts/17_codex_contre_claude.txt';
 import E18 from '../shorts/18_gemini_sait_tout.txt';
 import E19 from '../shorts/19_conseil_des_aines.txt';
 import E20 from '../shorts/20_miroir.txt';
+import E21 from '../shorts/21_trois_heures_de_bug.txt';
+import E22 from '../shorts/22_mot_de_passe.txt';
+import E23 from '../shorts/23_entretien_en_visio.txt';
+import E24 from '../shorts/24_frigo_intelligent.txt';
+import E25 from '../shorts/25_routine_de_millionnaire.txt';
+import E26 from '../shorts/26_le_loyer.txt';
+import E27 from '../shorts/27_grand_menage.txt';
+import E28 from '../shorts/28_mail_a_maman.txt';
+import E29 from '../shorts/29_la_demo.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
@@ -48,6 +57,15 @@ startViewer({
     '18. Gemini sait tout': E18,
     '19. Le conseil des Aînés': E19,
     '20. CEO dans le miroir': E20,
+    '21. Trois heures de bug': E21,
+    '22. Le mot de passe': E22,
+    "23. L'entretien en visio": E23,
+    '24. Le frigo intelligent': E24,
+    '25. La routine de millionnaire': E25,
+    '26. Le loyer en actions': E26,
+    '27. Le grand ménage': E27,
+    '28. Un mail à maman': E28,
+    '29. La démo': E29,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

@@ -1,0 +1,55 @@
+# UN MAIL À MAMAN
+# Pitch : Tobi demande de l'aide pour écrire un simple mail à sa mère. Les trois Aînés s'en mêlent.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+DIRECT CLAUDE apparait gauche
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+ECRAN mail_maman.txt
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Écrivez à ma mère que tout va bien. Trois mots.
+PLAN gros CODEX
+CODEX dit (fier) C'est envoyé.
+PLAN gros TOBI
+TOBI dit (surpris) Tu as écrit quoi ?
+PLAN gros CODEX
+CODEX dit (constat) Tout va bien. Fin du message. Ne pas répondre.
+PLAN gros NOX
+NOX dit (sec) Elle va adorer.
+PLAN gros GEMINI
+GEMINI dit (excite) J'ai ajouté ton relevé de compte en pièce jointe.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?
+PLAN gros GEMINI
+GEMINI dit (content) Et un résumé de tes dépenses. En podcast.
+PLAN gros TOBI
+TOBI dit (colere) Claude, dis quelque chose !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je suggérer que tout ne va pas si bien ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ce n'est pas la question !
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai donc ajouté quelques nuances. Douze pages.
+INSERT Message reçu par maman | 12 pages | Et un podcast de 40 minutes
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Elle a déjà répondu.
+PLAN gros TOBI
+TOBI dit (panique) Elle dit quoi ?
+PLAN gros GEMINI
+GEMINI dit (calme) Je résume : Tobi, décroche.
+PLAN gros CODEX
+CODEX dit (fier) J'ai décroché pour toi.
+PLAN gros TOBI
+TOBI dit (panique) Tu as fait quoi ?
+PLAN gros CODEX
+CODEX dit (content) Elle arrive. J'ai réservé son train.
+PLAN gros NOX
+NOX dit (content) Pour une fois, je n'ai pas eu à l'appeler.
+ATTENDRE 0.4
