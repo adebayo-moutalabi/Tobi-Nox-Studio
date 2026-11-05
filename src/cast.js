@@ -46,9 +46,9 @@ export function nox() {
 
 // Les Aînés : chaque logo est un personnage (logos.js). Ils n'apparaissent que si un script les place dans la scène.
 const AINES = {
-  claude: { name: 'Claude Code', scale: 1, form: CLAUDE_CODE },
-  codex: { name: 'Codex', scale: 1.08, form: CODEX },
-  gemini: { name: 'Gemini', scale: 1, form: GEMINI },
+  claude: { name: 'Claude Code', scale: 0.74, form: CLAUDE_CODE },
+  codex: { name: 'Codex', scale: 0.76, form: CODEX },
+  gemini: { name: 'Gemini', scale: 0.74, form: GEMINI },
 };
 export function aine(id) {
   const base = nox(), a = AINES[id], hero = createNox({ scale: a.scale, form: a.form });

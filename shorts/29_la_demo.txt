@@ -1,11 +1,11 @@
-# LA DÉMO
+# J'AI PRÉSENTÉ BAGUETTEGPT À DES IA
 # Pitch : Tobi présente son application devant les Aînés. Rien ne se passe comme prévu.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait gauche
-DIRECT GEMINI apparait droite
+DIRECT CLAUDE apparait bureau
+DIRECT GEMINI apparait lit
 TABLEAU DÉMO | Application : BaguetteGPT | Investisseurs : 3
 FONDU direct
 

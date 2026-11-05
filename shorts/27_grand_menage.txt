@@ -1,11 +1,11 @@
-# LE GRAND MÉNAGE
+# J'AI DEMANDÉ À CODEX DE RANGER MON PC
 # Pitch : Tobi demande à Codex de ranger son ordinateur. Claude Code veut d'abord savoir ce qu'est un dossier.
 
 AMBIANCE jour
 DIRECT TOBI assis
 DIRECT NOX assis
-DIRECT CODEX apparait gauche
-DIRECT CLAUDE apparait droite
+DIRECT CODEX apparait bureau
+DIRECT CLAUDE apparait milieu
 FONDU direct
 
 PLAN gros TOBI

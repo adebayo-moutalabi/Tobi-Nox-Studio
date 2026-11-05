@@ -217,12 +217,12 @@ export function startViewer(cfg) {
   const yawTo = (a, b) => Math.atan2(pos(b).x - pos(a).x, pos(b).z - pos(a).z);
   function face(a, b, exact) { a.faceYaw = yawTo(a, b) * (exact ? 1 : 0.68); } // légèrement ouverts vers la caméra, comme au théâtre
 
-  // Un logo est plat : vu de profil, on ne le reconnaît plus. À l'arrêt, il reste donc tourné vers l'objectif.
+  // Un logo est plat : vu de profil, on ne le reconnaît plus. Il se tourne vers celui qui parle, sans jamais montrer sa tranche.
   function showLogo(a) {
     if (a.goal) return;
     const to = Math.atan2(camera.position.x - pos(a).x, camera.position.z - pos(a).z);
     const off = Math.atan2(Math.sin(a.hero.root.rotation.y - to), Math.cos(a.hero.root.rotation.y - to));
-    a.hero.root.rotation.y = to + Math.max(-0.42, Math.min(0.42, off));
+    a.hero.root.rotation.y = to + Math.max(-0.65, Math.min(0.65, off));
   }
 
   // ---- Regards : la tête vise les yeux de l'autre ---------------------------
@@ -230,6 +230,7 @@ export function startViewer(cfg) {
   function applyLook(a, dt) {
     a.lookW = (a.lookW || 0) + ((a.look ? 1 : 0) - (a.lookW || 0)) * (1 - Math.exp(-dt * 7));
     if (a.look) a.lastLook = a.look;
+    a.hero.gaze = null;
     if (a.lookW < 0.01 || !a.lastLook) return;
     const b = a.lastLook, head = a.hero.bones.head;
     a.hero.root.updateMatrixWorld(true); b.hero.root.updateMatrixWorld(true);
@@ -242,12 +243,17 @@ export function startViewer(cfg) {
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
     lq.d.setFromUnitVectors(lq.f, lq.t);
     const ang = 2 * Math.acos(Math.min(1, Math.abs(lq.d.w)));
-    const most = a.extra ? 0.32 : 1.05;
+    const most = a.extra ? 0.2 : 1.05;
     if (ang > most) lq.d.slerp(lq.id, 1 - most / ang);
     lq.d.multiply(lq.w);
     head.parent.getWorldQuaternion(lq.p);
     lq.p.invert().multiply(lq.d);
     head.quaternion.slerp(lq.p, a.lookW * 0.92);
+    if (a.extra) {
+      head.updateWorldMatrix(true, false); head.getWorldQuaternion(lq.w);
+      lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); // la cible, vue depuis le logo
+      a.hero.gaze = [Math.max(-1, Math.min(1, lq.f.x * 1.6)) * a.lookW, Math.max(-1, Math.min(1, lq.f.y * 1.6)) * a.lookW];
+    }
   }
 
   // ---- Sièges ---------------------------------------------------------------

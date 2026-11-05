@@ -403,6 +403,10 @@ export function createNox({ scale = 1, form = null } = {}) {
       }
       const out = { ...weights };
       out.blinkL = Math.max(out.blinkL, state.blink); out.blinkR = Math.max(out.blinkR, state.blink);
+      if (rig && api.gaze) { // un logo tourne moins la tête que Nox : ses yeux finissent de viser celui qui parle
+        const [gx, gy] = api.gaze;
+        out.lookL = Math.max(0, gx); out.lookR = Math.max(0, -gx); out.lookU = Math.max(0, gy); out.lookD = Math.max(0, -gy);
+      }
       apply(out);
       if (rig) { rig.update(dt, { talking: !!state.talk, level: state.beat || 0, time: state.time }); return; }
       // Voyant : respiration lente, vif quand il parle

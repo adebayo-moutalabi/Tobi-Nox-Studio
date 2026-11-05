@@ -1,10 +1,10 @@
-# CLAUDE CODE AUDITE NOX
+# UNE IA A AUDITÉ MON IA : 412 PAGES
 # Pitch : Claude Code vient évaluer Nox. Il demande la permission pour tout.
 
 AMBIANCE soir
 DIRECT TOBI assis
 DIRECT NOX assis
-DIRECT CLAUDE apparait milieu
+DIRECT CLAUDE apparait bureau
 FONDU direct
 
 PLAN gros CLAUDE

@@ -1,4 +1,4 @@
-# CODEX CONTRE CLAUDE CODE
+# CODEX A SUPPRIMÉ TOUS MES CLIENTS
 # Pitch : Tobi veut corriger une faute. L'un demande la permission, l'autre a déjà tout changé.
 
 AMBIANCE soir
@@ -6,8 +6,8 @@ DIRECT TOBI travaille
 DIRECT NOX travaille
 DIRECT TOBI pivote
 DIRECT NOX pivote
-DIRECT CLAUDE apparait gauche
-DIRECT CODEX apparait droite
+DIRECT CLAUDE apparait lit
+DIRECT CODEX apparait milieu
 ECRAN boulangerie_martin.html
 FONDU direct
 
