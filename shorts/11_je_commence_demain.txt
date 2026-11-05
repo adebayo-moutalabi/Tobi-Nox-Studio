@@ -1,30 +1,48 @@
 # JE COMMENCE DEMAIN, PROMIS
-# Pitch : Midi. Tobi se lève enfin pour commencer. Presque.
-# Tobi au lit, il se lève, passe au miroir, finit au bureau. Fin de saison.
+# Pitch : Midi, partiels dans une semaine. Tobi se lève enfin pour commencer. Presque.
 
 AMBIANCE jour
 DIRECT TOBI dort
-DIRECT NOX marche lit
-TABLEAU Résolutions | Se lever tôt | Commencer aujourd'hui
+DIRECT NOX travaille
+DIRECT NOX pivote
+TABLEAU Résolutions | Se lever tôt | Réviser | Commencer aujourd'hui
 FONDU direct
 
+PLAN gros NOX
+NOX dit (sec) Tobi. Il est midi.
 PLAN lit
-NOX dit (sec) Il est midi.
-TOBI dit (triste) Cinq minutes.
-NOX dit (ironique) Hier, tu as dit demain.
+TOBI dit (chuchote) Cinq minutes.
+PLAN gros NOX
+NOX dit (ironique) Tes partiels sont dans sept jours.
+PLAN lit
+TOBI dit (chuchote) Donc j'ai le temps.
+PLAN gros NOX
+NOX dit (sec) Hier, tu as dit demain.
 TOBI leve
 PLAN auto
-TOBI dit (fier) Aujourd'hui, je commence.
-TOBI miroir
-PLAN auto
-TOBI dit (excite) Regarde cet entrepreneur.
+TOBI dit (fier) Eh bien nous sommes demain. Aujourd'hui, je commence.
+TOBI marche miroir
+PLAN miroir
+TOBI dit (excite) Regarde ce futur diplômé.
+PLAN gros NOX
 NOX dit (ironique) Ton sweat est à l'envers.
+PLAN miroir
+TOBI dit (mauvaisefoi) C'est un choix. Ça montre que je pense différemment.
 TOBI travaille
 TOBI pivote
-PLAN auto
-TOBI dit (fier) Voilà. Je suis au bureau.
+PLAN gros TOBI
+TOBI dit (fier) Voilà. Je suis au bureau. Ça, c'est de la discipline.
 PLAN gros NOX
 NOX dit (curieux) Et maintenant ?
+PLAN gros TOBI
+TOBI dit (fier) D'abord, je range le bureau.
+PLAN gros NOX
+NOX dit (curieux) Ensuite ?
+PLAN gros TOBI
+TOBI dit (fier) Je fais un planning de révisions, avec des couleurs.
+INSERT Planning de révisions | 3 h | Révisions faites : 0 h
+PLAN gros NOX
+NOX dit (sec) Il est dix-sept heures.
 PLAN gros TOBI
 TOBI dit (gene) Je commence demain.
 PLAN gros NOX

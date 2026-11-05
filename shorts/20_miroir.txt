@@ -1,13 +1,18 @@
 # JE SUIS CEO DE MON MIROIR
-# Pitch : Tobi répète son discours de CEO devant le miroir. Nox l'écoute depuis le lit.
+# Pitch : Tobi répète son discours de CEO pour un oral de fac. Nox l'écoute depuis le lit.
 
 AMBIANCE jour
 DIRECT NOX assis
 DIRECT TOBI miroir
+TABLEAU Oral de lundi | Présentation personnelle | 3 minutes
 FONDU direct
 
 PLAN miroir
 TOBI dit (fier) Bonjour. Je suis Tobi, CEO.
+PLAN gros NOX
+NOX dit (curieux) C'est un oral de licence.
+PLAN miroir
+TOBI dit (mauvaisefoi) Il faut marquer les esprits.
 PLAN gros NOX
 NOX dit (curieux) CEO de quoi ?
 PLAN miroir
@@ -18,6 +23,10 @@ PLAN miroir
 TOBI dit (fier) Deux.
 PLAN gros NOX
 NOX dit (sec) Moi et ton reflet.
+PLAN miroir
+TOBI dit (fier) Mon reflet est très investi.
+PLAN gros NOX
+NOX dit (ironique) Il arrive en retard aussi ?
 TOBI marche tapis
 PLAN auto
 TOBI dit (excite) Nox. Aie la vision. Bientôt, on sera trois.
@@ -25,6 +34,14 @@ PLAN gros NOX
 NOX dit (ironique) Tu as acheté un deuxième miroir ?
 PLAN auto
 TOBI dit (gene) Il arrive jeudi.
+PLAN gros NOX
+NOX dit (curieux) Avec quel argent ?
+PLAN auto
+TOBI dit (fier) Celui de la cantine.
+PLAN gros NOX
+NOX dit (sec) Tu vas manger quoi ?
+PLAN auto
+TOBI dit (fier) De la vision.
 PLAN gros NOX
 NOX dit (resigne) J'appelle ta mère.
 ATTENDRE 0.4

@@ -1,22 +1,16 @@
 # J'AI DÉPENSÉ L'ARGENT DE MON PREMIER CLIENT
-# Pitch : Tobi rentre, fier d'un contrat. Nox, sur le lit, regarde ce qui est vraiment encaissé.
-# Tobi entre par la porte, Nox l'attend sur le lit.
+# Pitch : Tobi fête un contrat à 2 000 € avec une dépense de plus. Nox regarde ce qui est vraiment encaissé.
 
 AMBIANCE soir
 DIRECT NOX assis
-DIRECT TOBI marche porte
+DIRECT TOBI marche centre
 TABLEAU Clients | Boulangerie Martin | Nouveau : ?
 FONDU direct
 
-PLAN porte
-PORTE ouverte
-TOBI marche couloir
-PORTE fermee
 PLAN auto
 TOBI dit (excite) Nox ! J'ai signé mon premier gros client !
 PLAN gros NOX
 NOX dit (curieux) Combien ?
-TOBI marche tapis
 PLAN auto
 TOBI dit (fier) Deux mille euros.
 PLAN gros NOX
@@ -24,17 +18,31 @@ NOX dit (surpris) C'est bien.
 PLAN auto
 TOBI dit (fier) Je sais. Du coup, j'ai commandé un bureau debout.
 INSERT Bureau debout | 1200 € | Déjà payé
+PLAN gros NOX
 NOX dit (curieux) Tu as encaissé combien ?
 PLAN auto
 TOBI dit (gene) Pour l'instant, zéro.
 INSERT Encaissé | 0 € | Facture à 60 jours
-NOX dit (constat) Donc tu as dépensé l'argent que tu n'as pas.
+PLAN gros NOX
+NOX dit (constat) Tu as dépensé l'argent que tu n'as pas.
 PLAN auto
 TOBI dit (mauvaisefoi) Nox. Aie la vision.
 PLAN gros NOX
-NOX dit (punchline) Tu travailles assis sur ton lit.
+NOX dit (curieux) Et avec quoi tu l'as payé ?
 PLAN auto
+TOBI dit (gene) Ma bourse du mois.
+PLAN gros NOX
+NOX dit (sec) Et le loyer du CROUS ?
+PLAN auto
+TOBI dit (mauvaisefoi) Le CROUS peut attendre soixante jours.
+PLAN gros NOX
+NOX dit (ironique) Il va tenir où, ton bureau ?
+PLAN auto
+TOBI dit (fier) Là, à la place de la chaise.
+PLAN gros NOX
+NOX dit (punchline) Tu travailles assis sur ton lit.
 TOBI assis
+PLAN gros TOBI
 TOBI dit (gene) C'est temporaire.
 PLAN gros NOX
 NOX dit (resigne) J'appelle ta mère.

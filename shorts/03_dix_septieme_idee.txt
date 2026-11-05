@@ -1,46 +1,48 @@
 # J'AI EU 17 IDÉES AVANT MARDI
-# Pitch : Mardi, déjà dix-sept idées. La dernière : un site de rencontre pour plantes.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Mardi, en plein partiels, déjà dix-sept idées. La dernière : un site de rencontre pour plantes.
 
 AMBIANCE soir
-DIRECT TOBI travaille
-DIRECT NOX travaille
-DIRECT TOBI pivote
-DIRECT NOX pivote
-ECRAN idees.txt
+DIRECT TOBI marche tapis
+DIRECT NOX assis
 TABLEAU Idées de la semaine | 16 barrées | Une seule survit | Projet n° 17
 FONDU direct
 
 PLAN auto
-TOBI dit (excite) J'ai l'idée du siècle.
-PLAN auto
+TOBI dit (excite) Nox, pose tes fiches. J'ai l'idée du siècle.
+PLAN gros NOX
 NOX dit (ironique) Celle de ce matin ?
-PLAN gros TOBI
+PLAN auto
 TOBI dit (mauvaisefoi) Non, celle de ce matin était nulle.
 INSERT Idées cette semaine | 17 | Nous sommes mardi
-NOX dit (sec) On est mardi.
+PLAN gros NOX
+NOX dit (sec) Tu as un partiel jeudi.
 PLAN auto
 TOBI dit (fier) Un site de rencontre pour les plantes.
 PLAN gros NOX
 NOX dit (curieux) Pour quoi faire ?
-PLAN gros TOBI
-TOBI dit (excite) Nox. Aie la vision. Elles matchent.
 PLAN auto
+TOBI dit (excite) Nox. Aie la vision. Elles matchent.
+PLAN gros NOX
 NOX dit (sec) Les plantes ne bougent pas.
 PLAN auto
-TOBI dit (illumine) D'où l'abonnement premium.
+TOBI dit (illumine) D'où l'abonnement premium. Le livreur les déplace.
 PLAN gros NOX
 NOX dit (curieux) Tu as combien de plantes ?
-PLAN gros TOBI
-TOBI dit (gene) Une.
 PLAN auto
+TOBI dit (gene) Une.
+PLAN gros NOX
 NOX dit (constat) Elle est morte en mars.
 PLAN auto
 TOBI dit (mauvaisefoi) Elle est en pause.
 PLAN gros NOX
 NOX dit (punchline) Comme tes dix-sept projets.
-PLAN gros TOBI
-TOBI dit (illumine) Attends... un site de rencontre pour les projets ?
-PLAN auto
+TOBI marche fenetre
+PLAN fenetre
+TOBI dit (calme) Tu sais ce qui manque au monde ?
+PLAN gros NOX
+NOX dit (sec) Tes révisions.
+PLAN fenetre
+TOBI dit (illumine) Un site de rencontre pour les projets !
+PLAN gros NOX
 NOX dit (resigne) Projet numéro dix-huit.
 ATTENDRE 0.4

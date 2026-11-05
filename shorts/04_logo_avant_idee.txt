@@ -1,42 +1,46 @@
 # J'AI FAIT LE LOGO AVANT D'AVOIR UNE IDÉE
-# Pitch : Le logo est fini. Il manque le nom, le produit et l'idée.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Le logo est fini. Il manque le nom, le produit, l'idée et le devoir de marketing à rendre.
 
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille
-DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN logo_v32.txt
 TABLEAU Nouvelle marque | Logo : fini | Nom : ? | Produit : ?
 FONDU direct
 
-PLAN auto
-TOBI dit (fier) Regarde ce logo.
-PLAN auto
+PLAN gros TOBI
+TOBI dit (fier) Nox, regarde ce logo. Sois honnête.
+PLAN gros NOX
 NOX dit (curieux) C'est pour quoi ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Pour l'instant, c'est pour la marque.
 PLAN gros NOX
 NOX dit (curieux) Quelle marque ?
-PLAN auto
+PLAN gros TOBI
 TOBI dit (gene) On n'a pas encore le nom.
 INSERT Temps sur le logo | 11 h | Sur le produit : 0 h
+PLAN gros NOX
 NOX dit (constat) Onze heures.
 PLAN gros TOBI
 TOBI dit (fier) Trente-deux nuances de bleu.
-PLAN auto
-NOX dit (ironique) Et le produit ?
-PLAN auto
-TOBI dit (excite) Il sera bleu.
 PLAN gros NOX
-NOX dit (sec) Il fait quoi ?
+NOX dit (ironique) Et ton devoir de marketing ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Il inspire confiance.
-PLAN auto
+TOBI dit (fier) Justement, c'est de la pratique.
+PLAN gros NOX
+NOX dit (sec) Le sujet, c'était le prix du lait.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le lait aussi mérite un bon logo.
+PLAN gros NOX
+NOX dit (curieux) Le produit fait quoi ?
+PLAN gros TOBI
+TOBI dit (excite) Il inspire confiance.
+PLAN gros NOX
 NOX dit (punchline) Donc tu vends de la confiance bleue.
-PLAN auto
+PLAN gros TOBI
 TOBI dit (illumine) Attends... c'est pas mal, ça !
+TOBI tape Confiance Bleue
 PLAN gros NOX
 NOX dit (resigne) Je n'aurais pas dû parler.
 ATTENDRE 0.4

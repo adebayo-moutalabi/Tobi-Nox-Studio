@@ -1,6 +1,5 @@
 # RENDU DEMAIN, 3 PAGES SUR 60
-# Pitch : Rendu demain, 3 pages sur 60. Tobi compte sur son IA.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Mémoire à rendre demain à 8 h, trois pages écrites. Tobi compte sur son IA, qui a d'autres plans.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -11,36 +10,46 @@ ECRAN memoire_final_v9.txt
 TABLEAU Master | Rendu demain 8 h | 3 pages sur 60 | Ne pas paniquer
 FONDU direct
 
-PLAN auto
-NOX dit (calme) Ton rendu de master, c'est quand ?
-PLAN auto
+PLAN gros NOX
+NOX dit (calme) Ton mémoire, c'est pour quand ?
+PLAN gros TOBI
 TOBI dit (calme) Demain.
 PLAN gros NOX
 NOX dit (curieux) Demain quand ?
 PLAN gros TOBI
 TOBI dit (gene) Huit heures.
 INSERT Il te reste | 8 h | Pages écrites : 3 sur 60
+PLAN gros NOX
 NOX dit (sec) Trois pages.
-PLAN auto
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Trois excellentes pages.
+PLAN gros NOX
+NOX dit (ironique) La page de garde compte ?
+PLAN gros TOBI
+TOBI dit (gene) Et le sommaire.
+PLAN gros NOX
+NOX dit (constat) Donc une page.
 PLAN gros TOBI
 TOBI dit (illumine) Mais j'ai un plan. Une IA écrit tout.
-PLAN auto
+PLAN gros NOX
 NOX dit (sec) Je suis ton IA.
-PLAN auto
+PLAN gros TOBI
 TOBI dit (excite) Parfait. Vas-y.
 PLAN gros NOX
 NOX dit (constat) Non.
 PLAN gros TOBI
 TOBI dit (panique) Comment ça, non ?
-PLAN auto
+PLAN gros NOX
 NOX dit (punchline) Toi, tu écris. Moi, je corrige.
-PLAN auto
+PLAN gros TOBI
 TOBI dit (triste) Tu es censé être de mon côté.
 PLAN gros NOX
 NOX dit (content) Je le suis. Ouvre le fichier.
-PLAN clavier
 TOBI pivote bureau
+PLAN clavier
 TOBI tape Introduction
-ATTENDRE 0.5
+PLAN gros TOBI
+TOBI dit (fier) Et voilà ! Une pause bien méritée ?
+PLAN gros NOX
+NOX dit (resigne) Il reste cinquante-sept pages.
 ATTENDRE 0.4

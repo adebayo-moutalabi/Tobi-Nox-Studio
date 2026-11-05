@@ -1,6 +1,5 @@
 # UN SITE À 150 € M'A COÛTÉ 94 HEURES
-# Pitch : Un site à 150 € devient un chatbot, une appli et 94 heures de travail.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Tobi devait faire cinq pages pour le boulanger. Il a révisé zéro partiel et créé Croustillant.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -11,33 +10,39 @@ ECRAN devis.txt
 TABLEAU Boulangerie Martin | Site vitrine | 150 euros | Projet n° 16
 FONDU direct
 
-PLAN auto
+PLAN gros TOBI
 TOBI dit (fier) Le boulanger veut juste un site vitrine.
-PLAN auto
+PLAN gros NOX
 NOX dit (curieux) Donc cinq pages.
 PLAN gros TOBI
 TOBI dit (excite) Cinq pages, un chatbot et une appli.
 INSERT Devis signé | 150 € | Site vitrine
+PLAN gros NOX
 NOX dit (sec) Il a demandé un chatbot ?
-PLAN auto
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Il ne sait pas encore qu'il en a besoin.
 PLAN gros NOX
 NOX dit (curieux) Et il dit quoi, ton chatbot ?
 PLAN gros TOBI
 TOBI dit (fier) Bonjour, je suis Croustillant.
-PLAN auto
+PLAN gros NOX
 NOX dit (ironique) Et après ?
-PLAN auto
+PLAN gros TOBI
 TOBI dit (gene) Il ne connaît que le prix du pain.
 PLAN gros NOX
 NOX dit (constat) Comme le panneau dans la vitrine.
-INSERT Temps passé | 94 h | Pour 150 €
-NOX dit (constat) Ça te fait un euro soixante de l'heure.
+PLAN gros TOBI
+TOBI dit (fier) Oui, mais lui, il parle à trois heures du matin.
+PLAN gros NOX
+NOX dit (sec) La boulangerie ouvre à sept heures.
+INSERT Temps passé | 94 h | Partiels révisés : 0
+PLAN gros NOX
+NOX dit (constat) Un euro soixante de l'heure.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est de la visibilité.
-PLAN auto
+PLAN gros NOX
 NOX dit (punchline) Tu as douze visiteurs.
-PLAN auto
+PLAN gros TOBI
 TOBI dit (illumine) Treize. Le boulanger est revenu.
 PLAN gros NOX
 NOX dit (resigne) Pour se faire rembourser.

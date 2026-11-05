@@ -1,36 +1,48 @@
 # UNE PETITE MISE À JOUR A TOUT CASSÉ
-# Pitch : Tobi rentre et le site est en panne. Nox, au bureau, a une mauvaise nouvelle.
-# Tobi entre et rejoint Nox, assis sur la table à côté de l'ordinateur.
+# Pitch : Le site du boulanger tombe la veille d'un partiel. Tobi accuse Nox, puis Codex, puis tout le monde.
 
 AMBIANCE soir
+DIRECT TOBI marche centre
 DIRECT NOX travaille
 DIRECT NOX pivote
-DIRECT TOBI marche porte
+DIRECT CODEX apparait frigo
 ECRAN erreur_500.txt
 TABLEAU Boulangerie Martin | Site en panne | 12 visiteurs perdus
 FONDU direct
 
-PLAN porte
-PORTE ouverte
-TOBI marche couloir
-PORTE fermee
 PLAN auto
-TOBI dit (curieux) Pourquoi le site est en panne ?
-TOBI marche centre
+TOBI dit (panique) Pourquoi le site est en panne ?
 PLAN gros NOX
 NOX dit (calme) J'ai une mauvaise nouvelle.
 PLAN auto
-TOBI dit (panique) Nox, qu'est-ce que tu as fait ?
+TOBI dit (colere) Nox, qu'est-ce que tu as fait ?
 PLAN gros NOX
-NOX dit (sec) Moi, rien. Toi, tu as fait une mise à jour.
+NOX dit (sec) Moi, rien. Toi, une mise à jour.
 PLAN auto
 TOBI dit (mauvaisefoi) Une toute petite mise à jour.
+PLAN gros CODEX
+CODEX dit (fier) Je l'ai améliorée. Elle est plus grande.
+PLAN auto
+TOBI dit (panique) Codex ! Tu as touché à quoi ?
+PLAN gros CODEX
+CODEX dit (constat) À tout. C'était plus rapide.
 INSERT Visiteurs perdus | 12 | Sur 12
+PLAN gros NOX
 NOX dit (constat) Douze visiteurs. Tous partis.
 PLAN auto
 TOBI dit (illumine) Donc zéro bug signalé.
 PLAN gros NOX
 NOX dit (ironique) Et zéro client.
+PLAN auto
+TOBI dit (panique) Le boulanger a appelé ?
+PLAN gros NOX
+NOX dit (sec) Il a dit : mon pain, lui, marche.
+PLAN gros CODEX
+CODEX dit (content) J'ai aussi envoyé un mail d'excuses.
+PLAN auto
+TOBI dit (curieux) À lui ?
+PLAN gros CODEX
+CODEX dit (constat) À toute la fac.
 PLAN auto
 TOBI dit (excite) Nox. Aie la vision. Zéro client, zéro problème.
 PLAN gros NOX

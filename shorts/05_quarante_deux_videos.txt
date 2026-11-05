@@ -1,42 +1,45 @@
 # 42 VIDÉOS SUR LA DISCIPLINE, ZÉRO ACTION
-# Pitch : Tobi a regardé 42 vidéos sur la discipline. C'est tout ce qu'il a fait.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Tobi a regardé 42 vidéos sur la discipline au lieu de réviser. C'est tout ce qu'il a fait.
 
 AMBIANCE soir
-DIRECT TOBI travaille
+DIRECT TOBI assis
 DIRECT NOX travaille
-DIRECT TOBI pivote
 DIRECT NOX pivote
-ECRAN plan_de_vie.txt
 TABLEAU Routine des grands | Lever 5 h | Discipline | Commencer demain
 FONDU direct
 
+PLAN gros NOX
+NOX dit (curieux) Tu as révisé, ce soir ?
 PLAN auto
-NOX dit (curieux) Tu as travaillé ce soir ?
-PLAN auto
-TOBI dit (fier) J'ai étudié les plus grands.
-INSERT Aujourd'hui | 42 | Vidéos business
+TOBI dit (fier) Mieux. J'ai étudié les plus grands.
+INSERT Aujourd'hui | 42 | Vidéos sur la discipline
+PLAN gros NOX
 NOX dit (sec) Quarante-deux vidéos.
-PLAN gros TOBI
+PLAN auto
 TOBI dit (excite) Je sais tout sur la discipline, maintenant.
 PLAN gros NOX
 NOX dit (curieux) Et tu as appliqué quoi ?
 PLAN auto
 TOBI dit (mauvaisefoi) Je me lève à cinq heures.
-PLAN auto
+PLAN gros NOX
 NOX dit (ironique) Il est vingt-trois heures quarante-sept.
-PLAN gros TOBI
+PLAN auto
 TOBI dit (gene) Demain.
 PLAN gros NOX
-NOX dit (ironique) Et aujourd'hui ?
+NOX dit (ironique) Tu t'es levé à onze heures.
 PLAN auto
 TOBI dit (mauvaisefoi) C'était de la préparation mentale.
 INSERT Travail réel | 0 h | Préparation mentale : 9 h
+PLAN gros NOX
 NOX dit (constat) Neuf heures pour ne rien faire.
-PLAN gros TOBI
-TOBI dit (fier) Les grands appellent ça la vision.
 PLAN auto
-NOX dit (punchline) Les grands ont des clients.
+TOBI dit (fier) Les grands appellent ça la vision.
+PLAN gros NOX
+NOX dit (punchline) Les grands ont validé leur semestre.
+PLAN auto
+TOBI dit (triste) C'est dur, ce que tu dis.
+PLAN gros NOX
+NOX dit (calme) Ouvre ton cours. Dix minutes.
 PLAN auto
 TOBI dit (illumine) Attends... il y a une vidéo là-dessus !
 PLAN gros NOX

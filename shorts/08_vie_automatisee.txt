@@ -1,42 +1,50 @@
 # J'AI AUTOMATISÉ MA MÈRE
-# Pitch : Tobi a tout automatisé, y compris sa mère et 40 kilos de riz.
-# Cible : 30 à 45 s. Format vertical. Un plan toutes les 1 à 3 secondes.
+# Pitch : Tobi a tout automatisé dans sa chambre CROUS, y compris sa mère et 40 kilos de riz.
 
 AMBIANCE soir
-DIRECT TOBI travaille
-DIRECT NOX travaille
-DIRECT TOBI pivote
-DIRECT NOX pivote
-ECRAN automatisations.txt
-TABLEAU Ma vie, version 2 | 23 automatisations | Réveil, mails, courses | Tout est sous contrôle
+DIRECT TOBI frigo
+DIRECT NOX assis
+TABLEAU Ma vie, version 2 | 23 automatisations | Tout est sous contrôle
 FONDU direct
 
-PLAN auto
-TOBI dit (excite) J'ai automatisé ma vie.
-PLAN auto
+PLAN frigo
+TOBI dit (excite) Nox, j'ai automatisé ma vie.
+PLAN gros NOX
 NOX dit (curieux) Toute ta vie ?
-PLAN gros TOBI
+PLAN frigo
 TOBI dit (fier) Réveil, mails, courses, réponses à ma mère.
 PLAN gros NOX
 NOX dit (sec) Réponses à ta mère.
 INSERT Automatisations | 23 | Actives ce soir
+PLAN frigo
 TOBI dit (fier) Elle reçoit un cœur toutes les six heures.
-PLAN auto
+PLAN gros NOX
 NOX dit (ironique) Elle a appelé.
-PLAN auto
+PLAN frigo
 TOBI dit (gene) Quand ?
 PLAN gros NOX
 NOX dit (constat) Quatre fois.
+PLAN frigo
+TOBI dit (mauvaisefoi) Elle est contente, alors. Elle a eu un cœur.
+PLAN gros NOX
+NOX dit (sec) Elle a demandé si tu étais vivant.
+PLAN frigo
+TOBI dit (fier) Et ma réponse automatique ?
+PLAN gros NOX
+NOX dit (constat) Un cœur.
 INSERT Courses livrées | 40 kg | De riz
-TOBI dit (panique) Pourquoi quarante kilos de riz ?
+TOBI remet
+TOBI marche centre
 PLAN auto
+TOBI dit (panique) Pourquoi quarante kilos de riz ?
+PLAN gros NOX
 NOX dit (sec) Ton script tourne en boucle.
-PLAN gros TOBI
+PLAN auto
 TOBI dit (mauvaisefoi) C'est de l'anticipation.
 PLAN gros NOX
 NOX dit (punchline) Ta chambre fait neuf mètres carrés.
 PLAN auto
-TOBI dit (illumine) Attends... je peux revendre le riz !
-PLAN auto
+TOBI dit (illumine) Attends... je peux revendre le riz à l'étage !
+PLAN gros NOX
 NOX dit (resigne) Je te laisse prévenir ta mère.
 ATTENDRE 0.4
