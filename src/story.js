@@ -583,6 +583,7 @@ export function mountStory(v, stories) {
   el('storyStop').addEventListener('click', () => player.stop());
   el('epVoices').addEventListener('click', async () => {
     if (!voices.ready()) { go('settings'); return; }
+    if (!(await voices.allow(ui.line))) return;
     await halt();
     ui.line('Création des vraies voix…');
     await voices.generate();
@@ -602,6 +603,7 @@ export function mountStory(v, stories) {
         ui.line('Il manque ta clé ElevenLabs. Ajoute-la dans Réglages, ou clique encore pour créer une vidéo muette.');
         return;
       }
+      if (!player.voices.length && voices.ready() && !(await voices.allow(ui.line))) return;
       await halt();
       if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
       const fps = Number(el('storyFps').value);

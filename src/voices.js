@@ -64,6 +64,16 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     write(PICK, JSON.stringify(Object.fromEntries(Object.entries(pick).map(([who, x]) => [who, x.value]))));
   };
 
+  // Solde du compte. La clé doit avoir le droit de lecture « User » : sinon le Studio continue sans afficher le solde.
+  const credits = async () => {
+    const box = el('elCredits');
+    try {
+      const s = await (await call('/user/subscription')).json(), left = s.character_limit - s.character_count;
+      box.textContent = `Crédits restants : ${left.toLocaleString('fr-FR')} sur ${s.character_limit.toLocaleString('fr-FR')}`;
+      return left;
+    } catch { box.textContent = 'Solde non lisible : autorise la lecture « User » sur ta clé ElevenLabs.'; return null; }
+  };
+
   const loadVoices = async () => {
     if (!key.value.trim()) { say('Colle d\'abord ta clé ElevenLabs.'); return; }
     lock(true); say('Chargement de tes voix…');
@@ -80,6 +90,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
       remember();
       el('elTobi').closest('.pair').hidden = false;
       say(`${mine.length} voix trouvées. Vérifie Tobi et Nox.`);
+      credits();
       onChange?.();
     } catch (e) { say(e.message); }
     lock(false);
@@ -116,7 +127,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
       text.textContent = `${r.who[0].toUpperCase()}${r.who.slice(1)}${r.tone ? ` (${r.tone})` : ''} : ${r.text}`;
       hear.type = 'button'; hear.textContent = 'Écouter'; hear.disabled = !r.url;
       hear.addEventListener('click', () => new Audio(r.url).play());
-      redo.type = 'button'; redo.textContent = 'Refaire'; redo.dataset.redo = '1'; redo.disabled = busy || !pick.tobi.value;
+      redo.type = 'button'; redo.textContent = 'Refaire'; redo.title = 'Consomme des crédits'; redo.dataset.redo = '1'; redo.disabled = busy || !pick.tobi.value;
       redo.addEventListener('click', async () => {
         lock(true); say(`Nouvelle prise de la réplique ${i + 1}…`);
         try { await makeLine(i, true); publish(); say(`Réplique ${i + 1} refaite.`); } catch (e) { say(e.message); }
@@ -141,6 +152,21 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     return true;
   };
 
+  // Rien n'est dépensé sans accord : le premier clic annonce le coût, le second confirme.
+  let accord = '';
+  const allow = async (tell) => {
+    let chars = 0, lines = 0;
+    for (const r of readLines()) { const { id, text } = lineId(r); if (!(await cache.get(id))) { chars += text.length; lines++; } }
+    if (!chars) return true;
+    const left = await credits(), n = chars.toLocaleString('fr-FR');
+    if (left != null && chars > left) { tell(`Il faut environ ${n} crédits, et il t'en reste ${left.toLocaleString('fr-FR')}.`); return false; }
+    const sign = [el('storyText').value, model.value, ...Object.values(pick).map((x) => x.value)].join('|');
+    if (accord === sign) { accord = ''; return true; }
+    accord = sign;
+    tell(`${lines} répliques à créer : environ ${n} crédits${left != null ? ` sur ${left.toLocaleString('fr-FR')}` : ''}. Clique encore pour confirmer.`);
+    return false;
+  };
+
   const generate = async () => {
     rows = readLines();
     if (!rows.length) { say('Ce script ne contient aucune réplique.'); return; }
@@ -154,7 +180,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
       publish();
       say(`${rows.length} voix prêtes pour ${rows.length} répliques, dont ${paid} nouvelles. Tu peux lire ou exporter.`);
     } catch (e) { say(`${e.message} Relance ensuite : les voix déjà faites ne seront pas refacturées.`); }
-    lock(false); show(); onChange?.();
+    lock(false); show(); onChange?.(); credits();
   };
 
   const forget = () => {
@@ -174,7 +200,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     const text = [...Object.entries({ Tobi: pick.tobi, Nox: pick.nox, 'Claude Code': pick.claude, Codex: pick.codex, Gemini: pick.gemini }).map(([w, s]) => line(w, s)), `Modèle : ${model.selectedOptions[0]?.textContent}`].join('\n');
     try { await navigator.clipboard.writeText(text); say('Liste copiée.'); } catch { say(text); }
   });
-  go.addEventListener('click', generate);
+  go.addEventListener('click', async () => { if (await allow(say)) generate(); });
   const aie = el('elAie');
   aie.value = sonAie();
   aie.addEventListener('change', () => { changeAie(aie.value); aie.value = sonAie(); forget(); });
@@ -191,5 +217,5 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();
-  return { generate, warm, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
+  return { generate, warm, allow, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
 }
