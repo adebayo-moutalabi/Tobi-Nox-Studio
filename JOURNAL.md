@@ -44,6 +44,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Départ immédiat et épisodes plus longs.** Les Aînés sont en place dès la première image, les épisodes 16 à 19 sont réécrits, les épisodes 21 à 29 ajoutés. Durées mesurées sans voix : 46 à 60 s.
 - **Aînés plus petits et mieux placés.** Environ un quart plus petits. Ils regardent celui qui parle, en gardant leur logo lisible, et se posent sur le bureau, le lit ou le rebord (`PERCHOIRS` dans `src/story.js`).
 - **Épisodes 30 à 37 et nouveaux titres.** Un, deux ou trois Aînés selon l'épisode. Tous les titres sont réécrits pour accrocher.
+- **Bureau corrigé.** Le bandeau rouge scintillait parce que la tablette avait une face confondue avec lui. Nox s'assoit désormais vraiment sur le plateau, loin du bord.
+- **Anciens épisodes réécrits et épisodes 38 à 45.** Les épisodes 2 à 6, 8, 9, 11 à 15 et 20 sont allongés et replacés dans la vie étudiante, avec moins d'entrées par la porte. Huit histoires étudiantes s'ajoutent.
 
 ## À faire
 

@@ -31,7 +31,7 @@ Trois IA plus expérimentées, sous la forme de leurs logos animés. Elles vienn
 
 **Claude Code** (le petit crabe en pixels, prudent, demande la permission pour tout), **Codex** (le nuage à l'invite `>_`, agit tout de suite et va trop loin) et **Gemini** (l'étoile à quatre branches, en lévitation, a déjà tout lu et propose tous les formats). Le traitement est parodique : ces marques appartiennent à leurs propriétaires.
 
-**Règle de création :** ils restent des personnages originaux, sans logo ni identité visuelle de ces deux IA. Ces noms sont des marques : à revérifier avant de les montrer en vidéo.
+**Règle de présence :** un ou deux Aînés dans un épisode le plus souvent. Les études restent le cœur de la série : partiels, CROUS, stage, fin de mois.
 
 ### Rôles ponctuels
 Client, prof, parent, ami, recruteur. Voix ou personnages simples, qui mettent Tobi face au réel : rendu, budget, client exigeant, pression familiale.

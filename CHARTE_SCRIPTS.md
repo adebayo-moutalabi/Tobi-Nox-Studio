@@ -21,7 +21,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
 - **Places au sol :** `gauche`, `milieu`, `droite`.
-- **Places en hauteur :** `bureau`, `ecran`, `lit`, `rebord` (la fenêtre). À préférer souvent au sol.
+- **Places en hauteur :** `bureau`, `frigo`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
 - **Combien par épisode :** un ou deux le plus souvent. Les trois ensemble restent un événement.
 
 ## Les phrases de la série
@@ -77,6 +77,10 @@ Le titre vend la situation, à la première personne si possible, en moins de 45
 - **La logique retournée :** « Donc je paie pour avoir faim. »
 - **Le rebond absurde :** « Et si je facturais en baguettes ? »
 - **Le rappel :** une phrase du début revient à la fin avec un autre sens.
+
+## Rester sur la vie étudiante
+
+Tobi est d'abord un étudiant en chambre CROUS. Chaque histoire part d'un souci réel : partiels, rendu, stage, APL, bourse, fin de mois, projet de groupe, resto U. La tech et les projets viennent par-dessus.
 
 ## Démarrer vite et varier
 
@@ -143,6 +147,7 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] Au moins un mouvement ou une action.
 - [ ] Un ton sur chaque réplique.
 - [ ] Personnages déjà en place, dialogue dès la première image.
+- [ ] Personne l'un dans l'autre, assis sur un meuble ou à côté d'un personnage debout : vérifier chaque place à l'image.
 - [ ] Durée mesurée entre 40 et 60 s.
 
 ## Consigne à donner à une autre IA
