@@ -5,7 +5,8 @@ const TIMBRES = {
   codex: { pitch: 0.8, rate: 1.25 }, gemini: { pitch: 1.4, rate: 1.15 },
 };
 const synth = typeof speechSynthesis === 'undefined' ? null : speechSynthesis;
-const francaises = () => synth?.getVoices().filter((x) => x.lang.toLowerCase().startsWith('fr')) || [];
+const homme = (x) => /Paul|Thomas|Henri|Claude|Remy|Rémy|Nicolas/i.test(x.name);
+const francaises = () => (synth?.getVoices().filter((x) => x.lang.toLowerCase().startsWith('fr')) || []).sort((a, b) => homme(b) - homme(a));
 
 export const voixEssai = {
   dit(who, text) {

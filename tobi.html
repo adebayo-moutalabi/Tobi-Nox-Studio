@@ -138,6 +138,7 @@ button.link:hover { background: none; color: var(--brand-ink); }
 .eps { list-style: none; margin: 0 -30px; padding: 0; flex: 1; overflow-y: auto; }
 .eps button { display: flex; align-items: baseline; gap: 16px; width: 100%; padding: 15px 30px; border-radius: 0; border-top: 1px solid var(--brand-hair); background: transparent; color: var(--brand-ink); text-align: left; font-family: var(--brand-display); font-weight: 300; font-size: clamp(19px, 1.7vw, 25px); letter-spacing: -.01em; transition: color .3s, padding .5s var(--ease); }
 .eps button span { font-family: var(--brand-body); font-size: 11px; letter-spacing: .1em; color: var(--brand-soft); min-width: 20px; }
+.eps button small { margin-left: auto; flex: none; font: 600 11px var(--brand-body); letter-spacing: 0; color: var(--brand-nox); }
 .eps button:hover { background: transparent; color: var(--brand-nox); padding-left: 42px; }
 .eps button:active { transform: none; }
 #ep h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(30px, 3vw, 44px); line-height: 1.04; letter-spacing: -.02em; margin: 0; }
@@ -195,6 +196,34 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 *::-webkit-scrollbar { display: none; }
 .nav[hidden] { display: none; }
 #write, #settings { display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 12px; overflow-y: auto; padding-bottom: 24px; animation: enter .55s var(--ease); }
+#pubs { display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 12px; overflow-x: hidden; overflow-y: auto; padding-bottom: 24px; animation: enter .55s var(--ease); }
+#pubs[hidden], #pubEmpty[hidden] { display: none; }
+#settings, #write { overflow-x: hidden; }
+#settings summary, #pubs summary { padding-right: 4px; }
+.epNav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.epNav span { display: flex; gap: 2px; }
+.epNav span button { align-self: auto; min-width: 34px; padding: 2px 8px; font-size: 22px; line-height: 1; }
+.epNav span button:disabled { opacity: .3; }
+.pubSum { margin: 0; font-size: 15px; color: var(--brand-ink); }
+#pubBest:empty { display: none; }
+#pubs .rows { margin: 0; padding: 0; flex: none; overflow: visible; }
+#pubs *, #pubs { min-width: 0; box-sizing: border-box; }
+#pubs summary small { flex: none; font-size: 11px; letter-spacing: .1em; color: var(--brand-soft); }
+#pubs summary > span:not(.pubDots) { flex: 1; font-size: 15px; line-height: 1.3; }
+.pubDots { display: flex; flex: none; gap: 3px; }
+.pubDots i { padding: 2px 6px; border-radius: 999px; background: var(--brand-nox); color: var(--brand-on-nox); font: 600 11px var(--brand-body); }
+.pubDots i.made { background: var(--chip); color: var(--brand-soft); }
+.pubBody { display: flex; flex-direction: column; gap: 12px; padding-bottom: 16px; }
+.pubField { display: grid; gap: 4px; }
+.pubField > div { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--brand-soft); }
+.pubField button { padding: 3px 10px; font-size: 12px; }
+.pubField pre { margin: 0; padding: 9px 11px; border: 1px solid var(--brand-hair); border-radius: 10px; background: var(--brand-surface); color: var(--brand-ink); font: 13.5px/1.45 var(--brand-body); white-space: pre-wrap; overflow-wrap: anywhere; }
+.pubCases { display: grid; gap: 8px; }
+.pubNums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.pubNums label { display: grid; gap: 4px; font-size: 12px; color: var(--brand-soft); }
+.pubBody input[type="number"], .pubBody input[type="url"], .pubBody textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--brand-hair); border-radius: 10px; background: var(--brand-surface); color: var(--brand-ink); font: 14px var(--brand-body); margin: 0; }
+.pubTools { display: flex; gap: 8px; flex-wrap: wrap; }
+.pubTools > * { flex: 1 1 140px; }
 #write[hidden], #settings[hidden], #wrOut[hidden], #wrScriptBox[hidden] { display: none; }
 #write h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.06; letter-spacing: -.02em; margin: 0; }
 #write textarea { flex: none; margin: 0; background: var(--brand-surface); color: var(--brand-ink); border: 1px solid var(--brand-hair); border-radius: 14px; padding: 12px; font: 15px/1.5 var(--brand-body); }
@@ -244,6 +273,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
     </header>
     <nav class="nav" id="nav" hidden aria-label="Studio">
       <button type="button" data-go="lib" aria-label="Épisodes" title="Épisodes"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
+      <button type="button" data-go="pubs" aria-label="Publications" title="Publications"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg></button>
       <button type="button" data-go="write" aria-label="Écrire" title="Écrire"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3"/></svg></button>
       <button type="button" data-go="coulisses" aria-label="Coulisses" title="Coulisses"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg></button>
       <button type="button" data-go="settings" aria-label="Réglages" title="Réglages"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></button>
@@ -267,7 +297,18 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
           <button type="button" class="main" id="wrTry">Voir en animation</button>
         </div>
       </div>
+      <div id="pubs" hidden>
+        <button type="button" class="link" data-back>← Retour</button>
+        <p class="caps">Publications</p>
+        <p class="pubSum" id="pubSum"></p>
+        <p class="sub" id="pubBest"></p>
+        <div class="seg" id="pubFilter" role="group" aria-label="Filtrer les vidéos"><button type="button" data-f="todo">À publier</button><button type="button" data-f="done">Publiées</button><button type="button" data-f="all">Toutes</button></div>
+        <div class="rows pubList" id="pubList"></div>
+        <p class="sub" id="pubEmpty" hidden>Aucune vidéo ici pour l'instant.</p>
+        <div class="pubTools"><button type="button" id="pubExport">Sauvegarder mon suivi</button><label class="file">Restaurer<input type="file" id="pubImport" accept="application/json"></label></div>
+      </div>
       <div id="settings" hidden>
+        <button type="button" class="link" data-back>← Retour</button>
         <p class="caps">Réglages</p>
         <div class="rows">
           <details open id="elSetup"><summary>Voix <b id="rowVoice"></b></summary><div>
@@ -300,7 +341,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         </div>
       </div>
       <div id="ep" hidden>
-        <button type="button" class="link" id="epBack">← Tous les épisodes</button>
+        <div class="epNav"><button type="button" class="link" id="epBack">← Tous les épisodes</button><span><button type="button" class="link" id="epPrev" aria-label="Épisode précédent">‹</button><button type="button" class="link" id="epNext" aria-label="Épisode suivant">›</button></span></div>
         <p class="caps" id="epNum"></p>
         <h2 id="epTitle"></h2>
         <p id="epPitch"></p>
@@ -311,6 +352,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         <div class="foot">
           <p class="sub" id="storyNow" aria-live="polite"></p>
           <div class="bar" id="storyBar" hidden><i></i></div>
+          <button type="button" class="link" id="epPub">Voir la fiche de publication</button>
           <button type="button" id="epVoices" hidden>Écouter avec les vraies voix</button>
           <button type="button" class="main" id="storyExport">Créer la vidéo</button>
         </div>

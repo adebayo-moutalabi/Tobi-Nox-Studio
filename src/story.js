@@ -6,6 +6,7 @@ import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
 import { nomFichier } from './publications.js';
+import { mountPublications } from './publications-ui.js';
 import { prononce } from './prononciation.js';
 import { voixEssai } from './voix-essai.js';
 import { mountWriter } from './writer.js';
@@ -452,18 +453,25 @@ const QUALITE = { max: 1440, hd: 1080, fast: 720 };
 export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
-  let voices = null;
+  let voices = null, pubs = null;
   const pick = el('storyPick'), panel = document.querySelector('.panel');
   // Navigation : quatre espaces toujours accessibles
+  let here = 'lib', before = 'lib', listTop = 0;
   const go = (name) => {
     if (name !== 'ep') player.stop();
-    for (const id of ['lib', 'ep', 'write', 'settings']) el(id).hidden = id !== name;
+    if (name === 'pubs') pubs.render();
+    if (here === 'lib') listTop = el('eps').scrollTop;
+    if (name !== here) { before = here; here = name; }
+    for (const id of ['lib', 'ep', 'write', 'settings', 'pubs']) el(id).hidden = id !== name;
+    if (name === 'lib') { renderEps(); el('eps').scrollTop = listTop; }
+    document.querySelectorAll('[data-back]').forEach((b) => { b.textContent = before === 'ep' ? '← Retour à l\'épisode' : '← Tous les épisodes'; });
     panel.dataset.tab = name === 'coulisses' ? 'jouer' : 'film';
     el('transport').hidden = name !== 'ep';
     el('nav').querySelectorAll('button').forEach((b) => b.setAttribute('aria-current', b.dataset.go === (name === 'ep' ? 'lib' : name)));
     if (name !== 'ep' && name !== 'lib') refresh();
   };
   el('nav').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => go(b.dataset.go)));
+  document.querySelectorAll('[data-back]').forEach((b) => b.addEventListener('click', () => go(before === 'ep' ? 'ep' : 'lib')));
   el('nav').hidden = false;
   panel.dataset.tab = 'film';
   el('nav').querySelector('button').setAttribute('aria-current', 'true');
@@ -509,12 +517,19 @@ export function mountStory(v, stories) {
     el('epNum').textContent = m ? `Épisode ${m[1]}` : k.startsWith('Mon script') ? 'Mon script' : 'Hors saison';
     el('epTitle').textContent = m ? m[2] : k.replace(/^Mon script : /, '');
     el('epPitch').textContent = (/^#\s*Pitch\s*:\s*(.*)$/mi.exec(text) || [])[1] || '';
+    const list = episodeKeys(), at = list.indexOf(k);
+    el('epPrev').disabled = at <= 0; el('epNext').disabled = at < 0 || at === list.length - 1;
     go('ep'); el('storyNow').textContent = ''; refresh();
     const me = ++opening;
     (voices?.warm() || Promise.resolve()).catch(() => {}).then(() => { if (me === opening) { refresh(); replay(); } });
   };
   pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
+  const episodeKeys = () => Object.keys(stories);
+  const step = (d) => { const list = episodeKeys(), k = list[list.indexOf(pick.value) + d]; if (k) openEp(k); };
   el('epBack').addEventListener('click', () => go('lib'));
+  el('epPrev').addEventListener('click', () => step(-1));
+  el('epNext').addEventListener('click', () => step(1));
+  el('epPub').addEventListener('click', () => { go('pubs'); pubs.show(pick.value); });
   el('epStatus').addEventListener('click', () => go('settings'));
   el('storyText').addEventListener('input', refresh);
   ['storyFormat', 'storyQuality'].forEach((id) => el(id).addEventListener('change', refresh));
@@ -522,6 +537,7 @@ export function mountStory(v, stories) {
     const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
     b.type = 'button'; n.textContent = m ? m[1].padStart(2, '0') : '—';
     b.append(n, m ? m[2] : k);
+    if (pubs?.published(k)) { const tag = document.createElement('small'); tag.textContent = 'Publiée'; b.append(tag); }
     b.addEventListener('click', () => openEp(k));
     li.append(b);
     return li;
@@ -531,6 +547,7 @@ export function mountStory(v, stories) {
   const loadMine = () => { try { return JSON.parse(localStorage.getItem(MINE) || '{}'); } catch { return {}; } };
   Object.assign(stories, loadMine());
   for (const k of Object.keys(stories)) if (![...pick.options].some((o) => o.value === k)) pick.add(new Option(k, k));
+  pubs = mountPublications({ el, stories, open: (k) => openEp(k), save, onChange: () => renderEps() });
   renderEps();
   mountWriter({ el, parseStory, goSettings: () => go('settings'), onTry: (title, pitch, text) => {
     const k = `Mon script : ${title}`, body = /^#\s*Pitch\s*:/mi.test(text) || !pitch ? text : `# Pitch : ${pitch}\n${text}`;
@@ -598,7 +615,7 @@ export function mountStory(v, stories) {
       const nom = nomFichier(pick.value, el('storyText').value);
       save(out.blob, `${nom}.mp4`); save(new Blob([out.srt], { type: 'text/plain' }), `${nom}.srt`);
       ui.line(`Ta vidéo est prête : ${out.seconds.toFixed(0)} s, dans tes téléchargements.`);
-      v.lastExport = out;
+      v.lastExport = out; pubs.markVideo(pick.value);
     } catch (e) { el('storyBar').hidden = true; ui.line(`Export impossible : ${e.message}`); }
     exporting = false; el('storyExport').disabled = false;
   });
