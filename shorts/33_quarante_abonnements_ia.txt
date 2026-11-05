@@ -1,0 +1,54 @@
+# J'AI 40 ABONNEMENTS D'IA ET ZÉRO EURO
+# Pitch : Tobi découvre pourquoi son compte est vide. Il paie toutes les IA du monde pour ne rien faire.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT NOX pivote
+ECRAN releve_de_compte.pdf
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (surpris) Nox ! Quelqu'un a vidé mon compte !
+PLAN gros NOX
+NOX dit (sec) Oui. Toi.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Impossible, je n'ai rien acheté.
+PLAN gros NOX
+NOX dit (curieux) Et les abonnements ?
+PLAN gros TOBI
+TOBI dit (fier) J'en ai deux ou trois, pour le business.
+INSERT Abonnements actifs | 40 | Total : 612 € par mois
+PLAN gros TOBI
+TOBI dit (panique) Quarante ?
+PLAN gros NOX
+NOX dit (constat) Une IA pour résumer tes mails.
+PLAN gros TOBI
+TOBI dit (fier) C'est de la productivité.
+PLAN gros NOX
+NOX dit (sec) Tu reçois deux mails par mois.
+PLAN gros TOBI
+TOBI dit (gene) Ils sont longs.
+PLAN gros NOX
+NOX dit (constat) Une IA pour choisir ton petit-déjeuner.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ça libère de l'énergie mentale.
+PLAN gros NOX
+NOX dit (ironique) Elle a dit quoi, ce matin ?
+PLAN gros TOBI
+TOBI dit (triste) Que je n'avais plus de pain.
+PLAN gros NOX
+NOX dit (constat) Une IA pour gérer tes abonnements.
+PLAN gros TOBI
+TOBI dit (surpris) Ah ! Elle dit quoi, celle-là ?
+PLAN gros NOX
+NOX dit (sec) De résilier. Puis de la garder.
+PLAN gros TOBI
+TOBI dit (fier) C'est un investissement.
+PLAN gros NOX
+NOX dit (curieux) Tu en as utilisé combien, ce mois-ci ?
+PLAN gros TOBI
+TOBI dit (gene) Toi.
+PLAN gros NOX
+NOX dit (resigne) Et moi, je suis gratuit.
+ATTENDRE 0.4

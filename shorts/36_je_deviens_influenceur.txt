@@ -1,0 +1,53 @@
+# JE SUIS INFLUENCEUR AVEC 12 ABONNÉS
+# Pitch : Tobi filme sa première vidéo. Nox lit les statistiques en direct.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Objectif | 1 million d'abonnés | Pour vendredi
+FONDU direct
+
+PLAN auto
+TOBI dit (excite) Salut la team ! Bienvenue sur ma chaîne !
+PLAN gros NOX
+NOX dit (curieux) Quelle team ?
+PLAN auto
+TOBI dit (fier) Mes abonnés. Ma communauté. Ma famille.
+PLAN gros NOX
+NOX dit (constat) Tu as douze abonnés.
+PLAN auto
+TOBI dit (mauvaisefoi) Douze personnes très engagées.
+PLAN gros NOX
+NOX dit (sec) Dont ta mère, sur trois comptes.
+PLAN auto
+TOBI dit (fier) Aujourd'hui, je vous révèle mon secret de réussite.
+PLAN gros NOX
+NOX dit (curieux) Tu as réussi quoi ?
+PLAN auto
+TOBI dit (gene) Je vous révèle mon secret pour bientôt réussir.
+PLAN gros NOX
+NOX dit (ironique) C'est plus honnête.
+PLAN auto
+TOBI dit (excite) N'oubliez pas de liker et de partager !
+INSERT Statistiques en direct | 3 vues | Durée moyenne : 2 secondes
+PLAN auto
+TOBI dit (surpris) Deux secondes ?
+PLAN gros NOX
+NOX dit (sec) C'est le temps de dire salut la team.
+PLAN auto
+TOBI dit (illumine) Il faut une accroche choc ! Je vais me raser la tête.
+PLAN gros NOX
+NOX dit (curieux) Et ça parlerait de quoi ?
+PLAN auto
+TOBI dit (fier) De cloud.
+PLAN gros NOX
+NOX dit (sec) Personne ne va regarder ça.
+PLAN auto
+TOBI dit (curieux) Il y a un commentaire ! Il dit quoi ?
+PLAN gros NOX
+NOX dit (constat) Le robot est drôle.
+PLAN auto
+TOBI dit (triste) Et moi ?
+PLAN gros NOX
+NOX dit (content) Je pense que tu es mon assistant.
+ATTENDRE 0.4

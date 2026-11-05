@@ -1,4 +1,4 @@
-# CEO DANS LE MIROIR
+# JE SUIS CEO DE MON MIROIR
 # Pitch : Tobi répète son discours de CEO devant le miroir. Nox l'écoute depuis le lit.
 
 AMBIANCE jour

@@ -1,0 +1,53 @@
+# LE WIFI A COUPÉ, LES IA PANIQUENT
+# Pitch : Plus d'internet dans la chambre. Les trois Aînés perdent tous leurs moyens, et seul Nox garde son calme.
+
+AMBIANCE soir
+DIRECT TOBI assis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+DIRECT GEMINI apparait rebord
+DIRECT CLAUDE apparait milieu
+FONDU direct
+
+PLAN gros GEMINI
+GEMINI dit (panique) Je ne sais plus rien ! Quelle année sommes-nous ?
+PLAN gros CODEX
+CODEX dit (panique) Je ne peux plus rien casser !
+PLAN gros CLAUDE
+CLAUDE dit (panique) Puis-je paniquer ?
+PLAN gros TOBI
+TOBI dit (surpris) Attendez. Vous ne marchez plus sans internet ?
+PLAN gros GEMINI
+GEMINI dit (triste) J'avais tout lu. Je ne retrouve plus la page.
+PLAN gros TOBI
+TOBI dit (fier) Du calme. Je suis ingénieur cloud. Je gère.
+PLAN gros NOX
+NOX dit (curieux) Tu vas faire quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Ouvrir un ticket chez mon fournisseur.
+PLAN gros NOX
+NOX dit (sec) Sur internet ?
+PLAN gros TOBI
+TOBI dit (gene) Ah.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je suggérer une prière ?
+PLAN gros GEMINI
+GEMINI dit (panique) Je ne trouve pas de prière !
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Tu es le seul debout ! Fais quelque chose !
+PLAN gros NOX
+NOX dit (calme) Tobi. Regarde la box.
+PLAN gros TOBI
+TOBI dit (curieux) Quoi, la box ?
+PLAN gros NOX
+NOX dit (sec) Tu l'as débranchée pour charger ton téléphone.
+INSERT Connexion rétablie | 5 barres | Durée de la crise : 40 secondes
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. C'est moi qui ai réparé.
+PLAN gros GEMINI
+GEMINI dit (fier) Je le savais depuis le début.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je oublier ce moment ?
+PLAN gros NOX
+NOX dit (resigne) Et ils sont payés plus cher que moi.
+ATTENDRE 0.4

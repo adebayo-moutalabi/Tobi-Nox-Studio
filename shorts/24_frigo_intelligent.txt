@@ -1,4 +1,4 @@
-# LE FRIGO INTELLIGENT
+# MON FRIGO INTELLIGENT CONTIENT UN YAOURT
 # Pitch : Tobi veut mettre de l'IA dans son frigo. Il ne reste qu'un yaourt.
 
 AMBIANCE soir

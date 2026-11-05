@@ -34,38 +34,54 @@ import E26 from '../shorts/26_le_loyer.txt';
 import E27 from '../shorts/27_grand_menage.txt';
 import E28 from '../shorts/28_mail_a_maman.txt';
 import E29 from '../shorts/29_la_demo.txt';
+import E30 from '../shorts/30_claude_refuse_mon_devoir.txt';
+import E31 from '../shorts/31_codex_a_repondu_au_prof.txt';
+import E32 from '../shorts/32_gemini_prepare_mon_rencard.txt';
+import E33 from '../shorts/33_quarante_abonnements_ia.txt';
+import E34 from '../shorts/34_ma_mere_a_vu_mon_linkedin.txt';
+import E35 from '../shorts/35_reunion_sans_moi.txt';
+import E36 from '../shorts/36_je_deviens_influenceur.txt';
+import E37 from '../shorts/37_le_wifi_a_coupe.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
     '1. Mon serveur coûte plus cher que mon loyer': PILOTE,
-    '2. Juste un site vitrine': E02,
-    '3. Ma 17e idée de la semaine': E03,
-    "4. Le logo avant l'idée": E04,
-    '5. 42 vidéos business': E05,
-    '6. Mon rendu est demain': E06,
-    '7. Je révise juste 5 minutes': SHORT01,
-    '8. Ma vie automatisée': E08,
-    '9. Capable de tout': E09,
-    '11. Je commence demain': E11,
-    '12. Le pitch': E12,
-    '13. Mon premier gros client': E13,
-    '14. Une petite mise à jour': E14,
-    '15. Ma levée de fonds': E15,
-    '16. Claude Code audite Nox': E16,
-    '17. Codex contre Claude Code': E17,
-    '18. Gemini sait tout': E18,
-    '19. Le conseil des Aînés': E19,
-    '20. CEO dans le miroir': E20,
-    '21. Trois heures de bug': E21,
-    '22. Le mot de passe': E22,
-    "23. L'entretien en visio": E23,
-    '24. Le frigo intelligent': E24,
-    '25. La routine de millionnaire': E25,
-    '26. Le loyer en actions': E26,
-    '27. Le grand ménage': E27,
-    '28. Un mail à maman': E28,
-    '29. La démo': E29,
+    "2. Un site à 150 € m'a coûté 94 heures": E02,
+    "3. J'ai eu 17 idées avant mardi": E03,
+    "4. J'ai fait le logo avant d'avoir une idée": E04,
+    '5. 42 vidéos sur la discipline, zéro action': E05,
+    '6. Rendu demain, 3 pages sur 60': E06,
+    "7. « Juste 5 minutes », le mensonge de l'étudiant": SHORT01,
+    "8. J'ai automatisé ma mère": E08,
+    "9. Mon IA croit en moi, chiffres à l'appui": E09,
+    '11. Je commence demain, promis': E11,
+    "12. L'appli qui te dit quand manger": E12,
+    "13. J'ai dépensé l'argent de mon premier client": E13,
+    '14. Une petite mise à jour a tout cassé': E14,
+    "15. Mon investisseur, c'était le boulanger": E15,
+    '16. Une IA a audité mon IA : 412 pages': E16,
+    '17. Codex a supprimé tous mes clients': E17,
+    '18. Gemini a lu tous mes mails': E18,
+    '19. Trois IA ont jugé ma vie': E19,
+    '20. Je suis CEO de mon miroir': E20,
+    '21. Trois heures pour un point-virgule': E21,
+    '22. Mon IA a trouvé mon mot de passe en 0,4 s': E22,
+    '23. Entretien de stage en caleçon': E23,
+    '24. Mon frigo intelligent contient un yaourt': E24,
+    "25. Routine de millionnaire : j'ai tenu 11 minutes": E25,
+    "26. J'ai voulu payer mon loyer en actions": E26,
+    "27. J'ai demandé à Codex de ranger mon PC": E27,
+    '28. Une IA a écrit à ma mère': E28,
+    "29. J'ai présenté BaguetteGPT à des IA": E29,
+    "30. Claude Code veut la permission de m'aider": E30,
+    '31. Codex a répondu à mon prof': E31,
+    '32. Gemini a préparé mon rencard': E32,
+    "33. J'ai 40 abonnements d'IA et zéro euro": E33,
+    '34. Ma mère a vu mon LinkedIn': E34,
+    '35. Mes IA ont fait une réunion sans moi': E35,
+    '36. Je suis influenceur avec 12 abonnés': E36,
+    '37. Le wifi a coupé, les IA paniquent': E37,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

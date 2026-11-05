@@ -1,0 +1,47 @@
+# GEMINI A PRÉPARÉ MON RENCARD
+# Pitch : Tobi a un premier rendez-vous. Gemini a tout lu sur elle, et il aurait mieux valu s'abstenir.
+
+AMBIANCE soir
+DIRECT TOBI miroir
+DIRECT NOX assis
+DIRECT GEMINI apparait lit
+FONDU direct
+
+PLAN miroir
+TOBI dit (fier) Ce soir, premier rendez-vous avec Léa. Je suis prêt.
+PLAN gros GEMINI
+GEMINI dit (excite) Moi aussi. J'ai préparé quatre cents pages sur elle.
+PLAN miroir
+TOBI dit (surpris) Sur Léa ?
+PLAN gros GEMINI
+GEMINI dit (content) Elle aime les chats, le jazz et les gens ponctuels.
+PLAN miroir
+TOBI marche tapis
+PLAN auto
+TOBI dit (curieux) Je lui dis quoi pour commencer ?
+PLAN gros GEMINI
+GEMINI dit (fier) Ta phrase d'ouverture a quatre-vingt-douze pour cent de réussite.
+PLAN auto
+TOBI dit (excite) Vas-y, donne-la-moi !
+PLAN gros GEMINI
+GEMINI dit (calme) Bonjour.
+PLAN gros NOX
+NOX dit (ironique) Il a tout lu pour ça.
+PLAN auto
+TOBI dit (curieux) Et après bonjour ?
+PLAN gros GEMINI
+GEMINI dit (constat) Après, tu l'écoutes.
+PLAN auto
+TOBI dit (surpris) Pendant combien de temps ?
+PLAN gros GEMINI
+GEMINI dit (constat) Tout le repas.
+INSERT Chances de deuxième rendez-vous | 4 % | Si tu parles de ta start-up
+PLAN auto
+TOBI dit (mauvaisefoi) Elle voudra forcément entendre parler de ma start-up.
+PLAN gros GEMINI
+GEMINI dit (excite) J'ai fait une présentation au cas où. Soixante diapositives.
+PLAN auto
+TOBI dit (illumine) Nox. Aie la vision. J'arrive avec un projecteur !
+PLAN gros NOX
+NOX dit (resigne) Quatre pour cent, c'était généreux.
+ATTENDRE 0.4

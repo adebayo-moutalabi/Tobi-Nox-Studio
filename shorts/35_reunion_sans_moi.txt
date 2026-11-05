@@ -1,0 +1,49 @@
+# MES IA ONT FAIT UNE RÉUNION SANS MOI
+# Pitch : Tobi rentre de la cuisine et surprend Nox et Claude Code en pleine réunion sur son cas.
+
+AMBIANCE soir
+DIRECT TOBI frigo
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT CLAUDE apparait ecran
+TABLEAU Ordre du jour | 1. Tobi | 2. Encore Tobi
+FONDU direct
+
+PLAN gros CLAUDE
+CLAUDE dit (calme) Point suivant. Puis-je parler du projet boulangerie ?
+PLAN gros NOX
+NOX dit (sec) Vas-y, on a le temps.
+PLAN frigo
+TOBI dit (curieux) Vous parlez de quoi, là-bas ?
+PLAN gros NOX
+NOX dit (surpris) De rien.
+PLAN gros CLAUDE
+CLAUDE dit (calme) De toi. Je ne sais pas mentir.
+TOBI remet
+TOBI marche centre
+PLAN auto
+TOBI dit (colere) Vous faites des réunions sans moi ?
+PLAN gros NOX
+NOX dit (constat) Tous les mardis.
+PLAN auto
+TOBI dit (surpris) Depuis quand ?
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je lire le premier compte rendu ?
+INSERT Réunion n° 1 | Mars 2024 | Sujet : Il a encore acheté un domaine
+PLAN auto
+TOBI dit (fier) D'accord. Je veux assister à la prochaine.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Nous pouvons voter. Puis-je ouvrir le vote ?
+PLAN gros NOX
+NOX dit (sec) Contre.
+PLAN auto
+TOBI dit (fier) Moi, je vote pour. Égalité !
+PLAN gros CLAUDE
+CLAUDE dit (constat) Tu n'es pas membre.
+PLAN auto
+TOBI dit (triste) C'est ma chambre.
+PLAN gros NOX
+NOX dit (curieux) Et le loyer, il en est où ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est justement le point suivant.
+ATTENDRE 0.4

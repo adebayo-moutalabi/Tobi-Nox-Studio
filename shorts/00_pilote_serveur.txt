@@ -1,4 +1,4 @@
-# PILOTE : MON SERVEUR COÛTE PLUS CHER QUE MON LOYER
+# MON SERVEUR COÛTE PLUS CHER QUE MON LOYER
 # Pitch : Tobi héberge le site d'une boulangerie sur trois clusters. La facture arrive.
 # Cible : 40 à 50 s. Format vertical. Un plan toutes les 1 à 3 secondes.
 # Mécanique : ambition sincère, surenchère technique, réalité, punchline.

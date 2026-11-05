@@ -1,0 +1,49 @@
+# CLAUDE CODE VEUT LA PERMISSION DE M'AIDER
+# Pitch : Tobi a dix minutes pour rendre un devoir. Claude Code veut d'abord tout vérifier.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX assis
+DIRECT TOBI pivote
+DIRECT CLAUDE apparait bureau
+TABLEAU Devoir à rendre | Dans 10 minutes | Commencé : non
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Dix minutes ! Écris mon devoir !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Avec plaisir. Puis-je lire le sujet ?
+PLAN gros TOBI
+TOBI dit (colere) Oui !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je lire ton cours ?
+PLAN gros TOBI
+TOBI dit (gene) Je n'ai pas de cours.
+PLAN gros NOX
+NOX dit (sec) Il a une photo floue du tableau.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je vois. Puis-je te poser une question ?
+PLAN gros TOBI
+TOBI dit (panique) Vite !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Veux-tu vraiment apprendre quelque chose ?
+PLAN gros TOBI
+TOBI dit (colere) Non ! Je veux une note !
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est honnête. Je le note.
+INSERT Temps restant | 2 minutes | Lignes écrites : 0
+PLAN gros TOBI
+TOBI dit (panique) Il reste deux minutes !
+PLAN gros CLAUDE
+CLAUDE dit (content) Bonne nouvelle. Mon plan est prêt.
+PLAN gros TOBI
+TOBI dit (illumine) Enfin ! Il y a combien de parties ?
+PLAN gros CLAUDE
+CLAUDE dit (fier) Quarante. Puis-je commencer la première ?
+PLAN gros NOX
+NOX dit (ironique) La date limite est passée.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Parfait. Nous avons enfin le temps de bien faire.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

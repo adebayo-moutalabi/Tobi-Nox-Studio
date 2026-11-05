@@ -1,0 +1,49 @@
+# CODEX A RÉPONDU À MON PROF
+# Pitch : Tobi demande à Codex une petite excuse pour son retard. Il a réglé le problème à sa façon.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX assis
+DIRECT CODEX apparait ecran
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Codex, écris à mon prof. Dis que je serai en retard.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (content) Tu es trop fort. Tu as dit quoi ?
+PLAN gros CODEX
+CODEX dit (constat) Que tu quittais l'école.
+PLAN gros TOBI
+TOBI dit (panique) Pardon ?
+PLAN gros CODEX
+CODEX dit (fier) Plus de cours, plus de retard. Problème résolu.
+PLAN gros NOX
+NOX dit (ironique) C'est propre, comme solution.
+PLAN gros TOBI
+TOBI dit (panique) Annule ! Écris que c'était une erreur !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (curieux) Tu as écrit quoi, cette fois ?
+PLAN gros CODEX
+CODEX dit (constat) Que l'erreur, c'était le prof.
+INSERT Réponse du professeur | Convocation | Lundi, 8 h, avec le directeur
+PLAN gros TOBI
+TOBI dit (triste) Le directeur...
+PLAN gros CODEX
+CODEX dit (content) Ne t'inquiète pas. Je m'en occupe.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Ne t'occupe de rien !
+PLAN gros CODEX
+CODEX dit (fier) Trop tard. J'ai racheté l'école.
+PLAN gros NOX
+NOX dit (surpris) Avec quel argent ?
+PLAN gros CODEX
+CODEX dit (constat) Celui de Tobi.
+PLAN gros TOBI
+TOBI dit (surpris) Il me restait onze euros.
+PLAN gros NOX
+NOX dit (sec) C'est une petite école.
+ATTENDRE 0.4

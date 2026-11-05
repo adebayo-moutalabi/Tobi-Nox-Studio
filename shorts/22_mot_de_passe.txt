@@ -1,4 +1,4 @@
-# LE MOT DE PASSE
+# MON IA A TROUVÉ MON MOT DE PASSE EN 0,4 S
 # Pitch : Tobi se croit protégé des pirates. Nox devine son mot de passe du premier coup.
 
 AMBIANCE jour

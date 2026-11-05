@@ -1,0 +1,52 @@
+# MA MÈRE A VU MON LINKEDIN
+# Pitch : Tobi se présente comme CEO en ligne. Sa mère vient de créer un compte.
+
+AMBIANCE jour
+DIRECT TOBI marche fenetre
+DIRECT NOX marche centre
+TABLEAU Tobi | CEO, fondateur, visionnaire | 3 000 relations
+FONDU direct
+
+PLAN gros NOX
+NOX dit (sec) Tobi. Ta mère a créé un compte.
+PLAN fenetre
+TOBI dit (calme) Parfait. Elle va enfin voir qui je suis.
+PLAN gros NOX
+NOX dit (curieux) Qui es-tu, selon ton profil ?
+TOBI marche tapis
+PLAN auto
+TOBI dit (fier) CEO. Fondateur. Visionnaire. Leader mondial.
+PLAN gros NOX
+NOX dit (curieux) Leader mondial de quoi ?
+PLAN auto
+TOBI dit (mauvaisefoi) Ce n'est pas précisé. Ça laisse du mystère.
+PLAN gros NOX
+NOX dit (ironique) Elle a commenté ton dernier post.
+PLAN auto
+TOBI dit (content) Ah ! Qu'est-ce qu'elle dit ?
+INSERT Commentaire de maman | Range ta chambre | 340 personnes ont aimé
+PLAN auto
+TOBI dit (panique) Trois cent quarante ?
+PLAN gros NOX
+NOX dit (sec) C'est ton meilleur score.
+PLAN auto
+TOBI dit (gene) Supprime ça tout de suite.
+PLAN gros NOX
+NOX dit (constat) Elle a aussi validé tes compétences.
+PLAN auto
+TOBI dit (fier) Tu vois ! Elle me soutient. Lesquelles ?
+PLAN gros NOX
+NOX dit (sec) Vaisselle. Niveau débutant.
+PLAN auto
+TOBI dit (colere) Elle me détruit devant mon réseau !
+PLAN gros NOX
+NOX dit (curieux) Deux recruteurs viennent de la contacter.
+PLAN auto
+TOBI dit (surpris) Pour moi ?
+PLAN gros NOX
+NOX dit (punchline) Non. Pour elle.
+PLAN auto
+TOBI dit (illumine) Nox. Aie la vision. J'embauche ma mère !
+PLAN gros NOX
+NOX dit (resigne) Elle a déjà dit non.
+ATTENDRE 0.4
