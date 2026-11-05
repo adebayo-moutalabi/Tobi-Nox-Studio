@@ -40,6 +40,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Caméra.** Tous les objets de la chambre comptent comme obstacles (tableau, portes, chaise, frigo). Les personnages suivent du regard celui qui marche.
 - **Assise.** Tobi s'arrête devant le lit et s'assoit dessus (`setLift`), arrive face à la chaise tournée vers lui, puis pivote vers le bureau.
 - **Les Aînés.** Claude, Chat et Gemini : même corps que Nox, couleur et taille propres (`aine()` dans `src/cast.js`), commandes `entre` et `apparait`, une voix réglable chacun. Épisodes 16 à 20.
+- **Aînés en logos.** Claude Code (crabe en pixels), Codex (nuage `>_`) et Gemini (étoile en lévitation) remplacent les Nox recolorés. Les tracés viennent des logos, le squelette et les gestes de ceux de Nox (`src/logos.js`). À l'arrêt, un logo reste tourné vers la caméra pour rester reconnaissable. Codex remplace Chat.
+- **Départ immédiat et épisodes plus longs.** Les Aînés sont en place dès la première image, les épisodes 16 à 19 sont réécrits, les épisodes 21 à 29 ajoutés. Durées mesurées sans voix : 46 à 60 s.
 
 ## À faire
 
@@ -48,7 +50,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 3. Améliorer le modèle de Tobi : visage, tissu du sweat, peau.
 4. Améliorer les éléments de la chambre : ordinateurs, placards qui s'ouvrent, textures.
 5. Ajouter d'autres lieux (voir `REPRISE.md`).
-6. Modéliser les Aînés et écrire l'épisode 10.
+6. Écrire l'épisode 10.
 7. Remonter l'épisode 7 au format actuel.
 8. Tester avec les vraies voix ElevenLabs.
 9. **Faire du projet un framework réutilisable :** à la fin, documenter comment quelqu'un d'autre crée sa propre série (personnages, lieux, charte, histoires) sur cette base.

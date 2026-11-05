@@ -12,7 +12,13 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Nox** parle peu, calmement, avec un humour sec. Il pique sans humilier et reste du côté de Tobi. Ses répliques font rarement plus de six mots.
 
-**Les Aînés** (Chat, Claude et Gemini pour l'instant) viennent juger ou se contredire. Chat s'enthousiasme et dit « Excellente question ! », Claude nuance tout, Gemini a déjà tout lu et propose tous les formats. Dans un script : `CLAUDE entre tapis`, `CHAT apparait centre`, puis `GEMINI dit (fier) ...`.
+**Les Aînés** sont les logos de Claude Code, Codex et Gemini, animés comme des personnages. Ils viennent juger Tobi ou se contredire.
+
+- **Claude Code** demande la permission pour tout : « Puis-je ouvrir le fichier ? »
+- **Codex** agit avant la fin de la phrase : « C'est fait. » Il va toujours trop loin.
+- **Gemini** a déjà tout lu et propose tous les formats : « J'ai aussi fait un podcast. »
+
+Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait gauche`, `DIRECT CODEX apparait milieu`, `DIRECT GEMINI apparait droite`, puis `GEMINI dit (fier) ...`.
 
 ## Les phrases de la série
 
@@ -29,6 +35,8 @@ Ce sont les rendez-vous du public. À valider par l'auteur.
 Règles : jamais plus de deux phrases cultes par épisode, et jamais deux fois la même chute d'affilée. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox.
 
 ## La structure, en 40 à 60 secondes
+
+Compter environ 100 à 120 mots de dialogue et une vingtaine de répliques. Vérifier la durée en lançant l'épisode : les déplacements et les écrans plein cadre comptent aussi.
 
 1. **Accroche, 0 à 3 s.** Une phrase qui donne envie de rester, sans introduction.
 2. **La question simple de Nox.**
@@ -61,6 +69,12 @@ Règles : jamais plus de deux phrases cultes par épisode, et jamais deux fois l
 - **La logique retournée :** « Donc je paie pour avoir faim. »
 - **Le rebond absurde :** « Et si je facturais en baguettes ? »
 - **Le rappel :** une phrase du début revient à la fin avec un autre sens.
+
+## Démarrer vite et varier
+
+Les personnages sont déjà en place quand l'épisode commence, et la discussion démarre sur la première image. Une entrée par la porte coûte plusieurs secondes : la réserver aux rares épisodes où elle sert le gag, environ un sur cinq.
+
+D'un épisode à l'autre, changer le lieu de départ, l'heure, le personnage qui ouvre et la chute.
 
 ## La mise en mouvement
 
@@ -106,7 +120,7 @@ NOX dit (resigne) J'appelle ta mère.
 
 ## Les interdits
 
-- Citer une vraie marque, chaîne ou personne en dehors de ce qui est prévu dans la bible.
+- Citer une vraie marque, chaîne ou personne en dehors de ce qui est prévu dans la bible. Les Aînés sont une parodie : rester sur des gags de caractère, sans affirmer de faits sur les vrais produits ou les entreprises.
 - Humilier Tobi ou faire de lui un idiot.
 - Expliquer une blague.
 - Reprendre un gag ou un sujet d'une autre chaîne.
@@ -120,7 +134,8 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] Une phrase culte, deux au maximum.
 - [ ] Au moins un mouvement ou une action.
 - [ ] Un ton sur chaque réplique.
-- [ ] Durée estimée entre 40 et 60 s (environ 2,5 mots par seconde).
+- [ ] Personnages déjà en place, dialogue dès la première image.
+- [ ] Durée mesurée entre 40 et 60 s.
 
 ## Consigne à donner à une autre IA
 

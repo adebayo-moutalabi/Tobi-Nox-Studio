@@ -40,6 +40,7 @@ Pour tester, ouvrir `studio.html` en local ou via un petit serveur. L'export vid
 | `src/studio-app.js` | Point d'entrée du Studio et liste des épisodes. |
 | `src/story.js` | Lecteur de script, réalisation (cadrage, caméra), sous-titres, boutons du Studio. |
 | `src/viewer.js` | Moteur 3D : rendu, déplacements, sièges, regard. |
+| `src/logos.js` | Les Aînés : tracés des logos, volumes, visages et façon de vivre de chacun. |
 | `src/look.js` | Ambiance du soir, passes d'image, vignettage, écrans plein cadre (`INSERT`). |
 | `src/exporter.js` | Export MP4 image par image, mixage, dessin des sous-titres. |
 | `src/sound.js` | Bruitages synthétisés et musique générée. |
@@ -83,6 +84,7 @@ Tout le reste (personnages, chambre, objets, visages, musique, bruitages) est é
 | Un ton | `src/tones.js` |
 | Le visage de Nox | `EXPRESSIONS` et `TILT` dans `src/nox.js` |
 | Le visage de Tobi | `EXPRESSIONS` dans `src/character.js` |
+| Un Aîné (forme, visage, animation) | Sa forme dans `src/logos.js`, sa taille dans `AINES` de `src/cast.js` |
 | Vitesse des gestes | `PACE` dans `src/motion.js` |
 | Cadrage | `frame()` dans `src/story.js` |
 | Mouvement de caméra pendant un plan | `moveShot()` dans `src/story.js` |

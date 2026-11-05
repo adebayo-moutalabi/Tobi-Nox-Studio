@@ -27,9 +27,9 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 - **Règle :** il pique, il n'humilie pas. Il reste toujours du côté de Tobi.
 
 ### Les Aînés
-Deux IA plus expérimentées, inspirées de Claude et ChatGPT. Elles viennent parfois évaluer ou former Nox, avec des conseils contradictoires. Rôle : caméos, rivalités, jugements sur Tobi et Nox.
+Trois IA plus expérimentées, sous la forme de leurs logos animés. Elles viennent parfois évaluer ou former Nox, avec des conseils contradictoires. Rôle : caméos, rivalités, jugements sur Tobi et Nox.
 
-**Noms pour l'instant :** **Chat** (enthousiaste, répond à tout, très sûr de lui), **Claude** (posé, nuancé, pèse chaque mot) et **Gemini** (rapide, a déjà tout lu, propose tous les formats). Ce sont de petits robots de la famille de Nox, un peu plus grands que lui, et ils se charrient sur leurs capacités.
+**Claude Code** (le petit crabe en pixels, prudent, demande la permission pour tout), **Codex** (le nuage à l'invite `>_`, agit tout de suite et va trop loin) et **Gemini** (l'étoile à quatre branches, en lévitation, a déjà tout lu et propose tous les formats). Le traitement est parodique : ces marques appartiennent à leurs propriétaires.
 
 **Règle de création :** ils restent des personnages originaux, sans logo ni identité visuelle de ces deux IA. Ces noms sont des marques : à revérifier avant de les montrer en vidéo.
 
