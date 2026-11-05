@@ -1,0 +1,61 @@
+# J'AI FILMÉ LE VOLEUR DE MES YAOURTS
+# Pitch : Quelqu'un vide le frigo de Tobi la nuit. Il pose une caméra pour le démasquer.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Yaourts | Lundi : 6 | Ce matin : 1
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Quelqu'un vole mes yaourts !
+PLAN gros NOX
+NOX dit (curieux) La porte était fermée ?
+PLAN gros TOBI
+TOBI dit (colere) À clé. On n'est que deux ici.
+PLAN gros NOX
+NOX dit (sec) Je n'ai pas de bouche.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est ce que dirait un voleur.
+PLAN gros NOX
+NOX dit (resigne) Pose une caméra.
+INSERT Le lendemain | 7 h | Yaourts : 0
+PLAN gros TOBI
+TOBI dit (excite) Il est revenu ! Mets la vidéo !
+INSERT Caméra du frigo | 3 h 12 | Un suspect arrive
+PLAN gros NOX
+NOX dit (constat) Il porte un sweat moutarde.
+PLAN gros TOBI
+TOBI dit (colere) Comme le mien ! Il m'a copié !
+PLAN gros NOX
+NOX dit (constat) Il a tes tresses.
+PLAN gros TOBI
+TOBI dit (surpris) Il me ressemble beaucoup.
+PLAN gros NOX
+NOX dit (sec) C'est toi.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Impossible. Je dormais.
+PLAN gros NOX
+NOX dit (sec) Lui aussi.
+INSERT Caméra du frigo | 3 h 13 | Il mange debout, les yeux fermés
+PLAN gros TOBI
+TOBI dit (panique) Je me vole moi-même ?
+PLAN gros NOX
+NOX dit (constat) Depuis trois semaines.
+TOBI marche frigo
+PLAN gros TOBI
+TOBI dit (fier) Très bien. J'ai mis un cadenas au frigo.
+PLAN gros NOX
+NOX dit (curieux) Avec quel code ?
+PLAN gros TOBI
+TOBI dit (fier) Un code que lui seul ne connaît pas.
+INSERT Le lendemain | 3 h 12 | Le suspect ouvre le cadenas
+PLAN gros TOBI
+TOBI dit (panique) Il a le code ! Comment il a le code ?
+PLAN gros NOX
+NOX dit (sec) C'est toi.
+PLAN gros TOBI
+TOBI dit (surpris) En plus, il s'est levé à trois heures. Sans réveil.
+PLAN gros NOX
+NOX dit (sec) Lui, au moins, il se lève.
+ATTENDRE 0.4

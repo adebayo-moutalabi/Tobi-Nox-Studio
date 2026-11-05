@@ -56,10 +56,18 @@ import E48 from '../shorts/48_j_ai_vendu_mon_sweat_en_ligne.txt';
 import E49 from '../shorts/49_j_ai_loue_mon_compte_de_films.txt';
 import E50 from '../shorts/50_claude_devait_me_reveiller.txt';
 import E51 from '../shorts/51_codex_a_eu_mon_stage.txt';
+import E52 from '../shorts/52_ma_grand_mere_est_morte_quatre_fois.txt';
+import E53 from '../shorts/53_ma_banque_me_facture_d_etre_pauvre.txt';
+import E54 from '../shorts/54_codex_a_recupere_mes_5_euros.txt';
+import E55 from '../shorts/55_j_ai_filme_le_voleur_de_mes_yaourts.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    '52. Ma grand-mère est morte quatre fois': E52,
+    "53. Ma banque me facture d'être pauvre": E53,
+    '54. Codex a récupéré mes 5 €': E54,
+    "55. J'ai filmé le voleur de mes yaourts": E55,
     '1. Mon serveur coûte plus cher que mon loyer': PILOTE,
     "2. Un site à 150 € m'a coûté 94 heures": E02,
     "3. J'ai eu 17 idées avant mardi": E03,

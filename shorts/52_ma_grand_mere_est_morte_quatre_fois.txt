@@ -1,0 +1,66 @@
+# MA GRAND-MÈRE EST MORTE QUATRE FOIS
+# Pitch : Tobi rate encore son TD et ressort son excuse préférée. Sa famille finit par l'apprendre.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+TABLEAU TD de droit | Absences : 4 | Justificatif demandé
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Il me faut une excuse pour le TD.
+PLAN gros NOX
+NOX dit (curieux) La même ?
+PLAN gros TOBI
+TOBI dit (fier) Ma grand-mère est morte.
+PLAN gros NOX
+NOX dit (sec) Encore.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est une excuse solide.
+PLAN gros NOX
+NOX dit (constat) Elle est morte en septembre.
+PLAN gros TOBI
+TOBI dit (gene) C'était l'autre.
+PLAN gros NOX
+NOX dit (constat) L'autre, en octobre.
+PLAN gros TOBI
+TOBI dit (triste) Un automne très dur.
+INSERT Grands-mères mortes | 4 | Grands-mères au total : 2
+PLAN gros NOX
+NOX dit (sec) Tu les as tuées deux fois.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Une arrière-grand-mère !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Ton prof a répondu.
+PLAN gros TOBI
+TOBI dit (surpris) Déjà ?
+PLAN gros NOX
+NOX dit (constat) Sincères condoléances.
+PLAN gros TOBI
+TOBI dit (excite) Ça passe ! Ça passe toujours !
+PLAN gros NOX
+NOX dit (constat) La fac a envoyé des fleurs.
+PLAN gros TOBI
+TOBI dit (content) C'est gentil. À qui ?
+PLAN gros NOX
+NOX dit (sec) À ta famille.
+PLAN gros TOBI
+TOBI dit (surpris) Ma famille ?
+BRUIT ding
+INSERT Message de ta mère | Mamie a reçu les fleurs | « À la mémoire de Mamie »
+PLAN gros TOBI
+TOBI dit (panique) Elle l'a mal pris ?
+PLAN gros NOX
+NOX dit (constat) Elle veut te voir. Demain.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Dis-lui que je ne peux pas.
+PLAN gros NOX
+NOX dit (curieux) Quelle excuse ?
+ATTENDRE 0.5
+PLAN gros TOBI
+TOBI dit (gene) Ma grand-mère est morte.
+ATTENDRE 0.5

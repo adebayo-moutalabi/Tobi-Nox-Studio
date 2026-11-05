@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : les meilleurs épisodes d'abord, puis le reste dans l'ordre de la série.
-const ORDRE = [46, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
+const ORDRE = [52, 53, 54, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -21,7 +21,8 @@ const TITRES = {
   41: 'Je mange des pâtes depuis 9 jours 🍝', 42: "Mon prof a détecté l'IA dans mon devoir 🕵️", 43: "Mon stage à 0 € m'a fait Head of Growth 📈",
   44: "J'ai caché un serveur sous mon lit 🛏️", 45: 'Gemini a fait mon exposé en 400 diapos 📽️', 46: "J'ai dépensé 340 € en pâtes livrées 🍝",
   47: "J'ai contesté mon 4 sur 20 avec Claude 📉", 48: "J'ai vendu mon sweat en ligne 🧥", 49: "J'ai loué mon compte de films à 400 personnes 🎬",
-  50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱',
+  50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱', 52: 'Ma grand-mère est morte quatre fois 🪦',
+  53: "Ma banque me facture d'être pauvre 💸", 54: 'Codex a récupéré mes 5 € 😱', 55: "J'ai filmé le voleur de mes yaourts 🎥",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -38,6 +39,10 @@ const ACCROCHES = {
   49: 'Tobi loue quelques places sur le compte familial. Puis Codex passe à l\'échelle…',
   50: 'Partiel à 8 h. Tobi confie son réveil à une IA très polie. Elle ne voudrait surtout pas le déranger…',
   51: 'Tobi demande à Codex d\'envoyer une seule lettre de motivation. Une seule…',
+  52: 'Tobi rate encore son TD et ressort son excuse préférée. Cette fois, sa famille est prévenue…',
+  53: 'Tobi n\'a plus d\'argent. Sa banque lui en prend quand même…',
+  54: 'Karim doit cinq euros à Tobi. Codex s\'en occupe, beaucoup trop bien…',
+  55: 'Quelqu\'un vide le frigo de Tobi la nuit. Il pose une caméra pour le démasquer…',
 };
 
 const QUESTIONS = {
@@ -45,10 +50,11 @@ const QUESTIONS = {
   22: 'Sois honnête, ton mot de passe contient ton prénom ?', 26: 'Tu aurais vendu quoi en premier ?', 45: 'Le pire exposé que tu aies vu ?',
   46: 'Tu as déjà commandé un plat que tu avais dans ton frigo ?', 47: "Ta pire note, c'était combien ?", 48: "Identifie quelqu'un qui ferait ça pour toi.",
   49: 'Tu partages ton compte avec combien de personnes ?', 50: 'Tu lui aurais fait confiance pour ton réveil ?', 51: 'Combien de refus de stage as-tu reçus ?',
+  52: 'Ta pire excuse pour rater un cours, c\'était quoi ?', 53: 'Ta banque t\'a déjà fait ce coup-là ?', 54: 'Combien on te doit encore ?', 55: 'Qui vole ta nourriture chez toi ?',
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.
-const ENTREPRENEURIAT = new Set([1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51]);
+const ENTREPRENEURIAT = new Set([1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
 
 const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };

@@ -1,0 +1,72 @@
+# MA BANQUE ME FACTURE D'ÊTRE PAUVRE
+# Pitch : Tobi n'a plus d'argent. Sa banque lui en prend quand même.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Compte de Tobi | Solde : -3 € | Bourse dans 12 jours
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Nox ! La banque m'a pris huit euros !
+PLAN gros NOX
+NOX dit (calme) Tu étais à découvert.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) De trois euros !
+PLAN gros NOX
+NOX dit (constat) Donc, ils te facturent.
+PLAN gros TOBI
+TOBI dit (surpris) Parce que je n'ai pas d'argent ?
+PLAN gros NOX
+NOX dit (constat) Exactement.
+PLAN gros TOBI
+TOBI dit (colere) Je n'en ai pas, et ils m'en prennent ?
+PLAN gros NOX
+NOX dit (sec) C'est un métier.
+INSERT Solde | -11 € | Après les frais
+PLAN gros TOBI
+TOBI dit (panique) Moins onze ?
+PLAN gros NOX
+NOX dit (constat) Demain, nouveaux frais.
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi ?
+PLAN gros NOX
+NOX dit (sec) Tu es plus pauvre.
+PLAN gros TOBI
+TOBI dit (colere) À cause de leurs frais !
+PLAN gros NOX
+NOX dit (constat) Oui.
+PLAN gros TOBI
+TOBI dit (fier) Très bien. Je ferme le compte.
+PLAN gros NOX
+NOX dit (calme) Il faut d'abord le remettre à zéro.
+PLAN gros TOBI
+TOBI dit (curieux) Avec quel argent ?
+PLAN gros NOX
+NOX dit (constat) Un prêt.
+PLAN gros TOBI
+TOBI dit (curieux) Chez qui ?
+PLAN gros NOX
+NOX dit (sec) Eux.
+TOBI marche fenetre
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. J'ouvre une banque !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (excite) Je facture les gens qui n'ont rien !
+PLAN gros NOX
+NOX dit (curieux) Ils ont zéro euro.
+PLAN gros TOBI
+TOBI dit (fier) C'est ça, le produit.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Ta banque t'écrit.
+PLAN gros TOBI
+TOBI dit (content) Ils s'excusent ?
+INSERT Offre réservée | Carte Premium | 9 € par mois
+PLAN gros TOBI
+TOBI dit (fier) Tu vois ? Ils croient en moi.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4
