@@ -22,7 +22,7 @@ const LIEUX = {
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
 // Places en hauteur pour les Aînés, avec apparait : x, y, z
-const PERCHOIRS = { bureau: [0.98, 0.745, -0.42], frigo: [1.08, 0.89, 1.24], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
+const PERCHOIRS = { bureau: [0.98, 0.745, -0.42], chaise: [0.42, 0.5, -1.05], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
 // position caméra, cible, focale
 const PLANS = {
   large: [[0.05, 1.55, 2.75], [0, 0.9, -1.9], 58],
@@ -156,7 +156,7 @@ export function createPlayer(v, ui) {
   const blocks = (b, c, p) => { // l'autre personnage ne doit pas passer devant l'objectif
     if (!b.hero.root.visible) return false;
     const line = new THREE.Line3(c, p), o = new THREE.Vector3();
-    const big = b.id === 'tobi', e = eyes(b), r = big ? 0.3 : 0.17;
+    const big = b.id === 'tobi', e = eyes(b), r = big ? 0.3 : b.extra ? 0.3 : 0.17;
     return (big ? [0, 0.35, 0.7, 1.05, 1.4].map((d) => e.clone().setY(Math.max(0.08, e.y - d))).concat(v.pos(b).clone().setY(0.1)) : [e, e.clone().setY(e.y - 0.16)]).some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < r; });
   };
   function frame(a, tight, front) {
@@ -166,15 +166,18 @@ export function createPlayer(v, ui) {
     if (a.extra) fwd.set(0, 0, 1); // sans partenaire, un logo se filme côté porte, là où il y a du recul
     const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
     const to = (across ? toB : fwd).normalize();
-    a.look = across ? b : a.extra ? a.look : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
+    a.look = near ? b : a.extra ? a.look : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
     const top = H.y + (big ? 0.24 : 0.2);
-    const span = tight ? (big ? 0.9 : a.extra ? 0.9 : 0.72) : (big ? 1.4 : a.extra ? 1.2 : 1.02); // les logos sont plus larges que hauts : le cadre vertical doit les contenir
-    for (const [fov, k] of [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
-      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.26) : top + sp * 0.13 - sp / 2; // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
+    // En vertical, le cadre est étroit : la largeur vaut 0,56 fois la hauteur. On recule pour garder le corps entier, les gestes et un peu de décor.
+    const tall = v.camera.aspect < 1;
+    const span = tall ? (tight ? (big ? 1.55 : a.extra ? 1.2 : 1.05) : (big ? 1.95 : a.extra ? 1.55 : 1.4)) : tight ? (big ? 0.9 : a.extra ? 0.9 : 0.72) : (big ? 1.4 : a.extra ? 1.2 : 1.02); // les logos sont plus larges que hauts : le cadre vertical doit les contenir
+    for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
+      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.3) : Math.max(top + sp * 0.13 - sp / 2, 0.3); // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
-        const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
-        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
+        const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (tall ? 0.26 : a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
+        const low = Math.max(0.2, mid - sp * 0.3), corner = (s) => H.clone().addScaledVector(side, s).setY(low); // et le bas de l'image, où un meuble passerait devant
+        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;
@@ -278,13 +281,11 @@ export function createPlayer(v, ui) {
       case 'dit': {
         const b = partner(a), tone = TONS[c.tone];
         track = null;
-        if (v.actors.some((x) => x.extra && x.hero.root.visible)) { // avec les Aînés, tout le monde regarde celui qui parle
-          for (const x of v.actors) {
-            if (x === a || !x.hero.root.visible || x.hero.seat === 'lie') continue;
-            x.look = a; if (x.extra) v.face(x, a, true);
-          }
-          if (a.extra && b.hero.root.visible) { a.look = b; v.face(a, b, true); }
+        for (const x of v.actors) { // tout le monde regarde celui qui parle, et il parle à quelqu'un
+          if (x === a || !x.hero.root.visible || x.carried || x.hero.seat === 'lie') continue;
+          x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.face(x, a, true);
         }
+        if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.08); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.08); }
