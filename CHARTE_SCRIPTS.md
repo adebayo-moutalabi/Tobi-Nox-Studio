@@ -21,7 +21,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
 - **Places au sol :** `gauche`, `milieu`, `droite`.
-- **Places en hauteur :** `bureau`, `frigo`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
+- **Places en hauteur :** `bureau`, `chaise`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
 - **Combien par épisode :** un ou deux le plus souvent. Les trois ensemble restent un événement.
 
 ## Les phrases de la série
@@ -30,13 +30,12 @@ Ce sont les rendez-vous du public. À valider par l'auteur.
 
 | Qui | Phrase | Quand | Fréquence |
 |---|---|---|---|
-| Tobi | **« Nox. Aie la vision. »** | Quand il est coincé et veut convaincre | Presque chaque épisode |
-| Nox | **« J'appelle ta mère. »** | Chute, quand Tobi va trop loin | Un épisode sur deux ou trois |
-| Nox | **« Projet numéro dix-huit. »** | Dès qu'une nouvelle idée arrive, le numéro monte | Quand Tobi lance une idée |
+| Tobi | **« Nox. Aie la vision. »** | Quand il est coincé et veut convaincre | Un épisode sur six environ |
+| Nox | **« J'appelle ta mère. »** | Chute, quand Tobi dépense ou met sa vie en danger | Un épisode sur dix environ |
 | Tobi | **« C'est un investissement. »** | Pour justifier une dépense | De temps en temps |
 | Nox | **« Tobi. Non. »** | Avant même la fin d'une idée | De temps en temps |
 
-Règles : jamais plus de deux phrases cultes par épisode, et jamais deux fois la même chute d'affilée. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox.
+Règles : une phrase culte par épisode au maximum, jamais deux fois la même chute à la suite, et jamais une phrase qui ne découle pas de l'histoire. Un spectateur qui découvre la série doit tout comprendre sans explication. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox.
 
 ## La structure, en 40 à 60 secondes
 
@@ -80,7 +79,7 @@ Le titre vend la situation, à la première personne si possible, en moins de 45
 
 ## Rester sur la vie étudiante
 
-Tobi est d'abord un étudiant en chambre CROUS. Chaque histoire part d'un souci réel : partiels, rendu, stage, APL, bourse, fin de mois, projet de groupe, resto U. La tech et les projets viennent par-dessus.
+Tobi est un étudiant en galère, en licence 3, en chambre CROUS. Les sommes restent à sa mesure : il compte en dizaines d'euros, pas en milliers. Chaque histoire part d'un souci réel : partiels, rendu, stage, APL, bourse, fin de mois, projet de groupe, resto U. La tech et les projets viennent par-dessus.
 
 ## Démarrer vite et varier
 
@@ -143,7 +142,8 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] L'accroche fonctionne sans contexte.
 - [ ] Chaque réplique répond à la précédente.
 - [ ] Au moins quatre punchlines.
-- [ ] Une phrase culte, deux au maximum.
+- [ ] Au plus une phrase culte, et elle découle de l'histoire.
+- [ ] Celui qui parle est tourné vers la pièce : `pivote` au bureau, frigo refermé, jamais de dos pendant une réplique.
 - [ ] Au moins un mouvement ou une action.
 - [ ] Un ton sur chaque réplique.
 - [ ] Personnages déjà en place, dialogue dès la première image.

@@ -80,6 +80,7 @@ Tout le reste (personnages, chambre, objets, visages, musique, bruitages) est é
 |---|---|
 | Couleurs et polices de l'interface | Bloc `CHARTE GRAPHIQUE` de `src/page.html` |
 | Un épisode | `shorts/NN_titre.txt` |
+| Le suivi des gags et des fils de l'histoire | `SUIVI_GAGS.md` |
 | Ajouter un épisode | Créer le fichier, l'importer et l'ajouter dans `src/studio-app.js` |
 | Un ton | `src/tones.js` |
 | Le visage de Nox | `EXPRESSIONS` et `TILT` dans `src/nox.js` |

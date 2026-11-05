@@ -16,6 +16,7 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 ### Tobi
 - **Qui :** héros, ambitieux, attachant, imaginatif, désorganisé. Il sur-construit et reporte l'essentiel.
 - **Fonction :** il lance des idées grandioses et se fait démasquer.
+- **Situation :** étudiant en galère, en licence 3. Boursier, chambre CROUS, peu d'argent. Les sommes des épisodes restent à sa mesure.
 - **Coiffure :** tresses plaquées, celles du modèle 3D. C'est la référence.
 - **Voix :** jeune, vivante, naturelle. Ta voix clonée.
 - **Règle :** il est de mauvaise foi, jamais bête. Il croit sincèrement à ce qu'il dit, et il progresse d'un épisode à l'autre.
@@ -33,12 +34,17 @@ Trois IA plus expérimentées, sous la forme de leurs logos animés. Elles vienn
 
 **Règle de présence :** un ou deux Aînés dans un épisode le plus souvent. Les études restent le cœur de la série : partiels, CROUS, stage, fin de mois.
 
+### Léa
+- **Qui :** camarade de promo de Tobi et son crush. Bosseuse, inspirante, elle finit ce qu'elle commence et elle a de l'avenir.
+- **Fonction :** elle montre à Tobi ce qu'il pourrait devenir s'il s'y mettait vraiment.
+- **Pour l'instant :** elle n'existe que dans les conversations, pas encore à l'écran.
+
 ### Rôles ponctuels
 Client, prof, parent, ami, recruteur. Voix ou personnages simples, qui mettent Tobi face au réel : rendu, budget, client exigeant, pression familiale.
 
 ## Les phrases de la série
 
-Proposées dans `CHARTE_SCRIPTS.md`, à valider : « Nox. Aie la vision. » pour Tobi, « J'appelle ta mère. » pour Nox, et le compteur « Projet numéro dix-huit. ».
+Elles sont listées dans `CHARTE_SCRIPTS.md` et restent rares : une phrase n'est utilisée que si elle a un sens dans l'histoire.
 
 ## Le décor
 La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêtre, cloison rouge. Un décor reconnaissable, rapide à réutiliser, qui peut évoluer avec Tobi : post-it, tableau, objets.
@@ -57,7 +63,6 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 ## Le fil rouge
 - **Continuité :** ce qui arrive dans un épisode reste vrai ensuite (dette cloud, client perdu, nouveau post-it).
 - **Le tableau** de la chambre change à chaque épisode et montre l'état des projets.
-- **Le gag récurrent :** Nox tient le compte (« Projet n° 17 »).
 
 ## Saison 1 proposée
 | N° | Épisode | Rôle dans l'arc |

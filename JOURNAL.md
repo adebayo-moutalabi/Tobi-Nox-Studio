@@ -46,6 +46,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Épisodes 30 à 37 et nouveaux titres.** Un, deux ou trois Aînés selon l'épisode. Tous les titres sont réécrits pour accrocher.
 - **Bureau corrigé.** Le bandeau rouge scintillait parce que la tablette avait une face confondue avec lui. Nox s'assoit désormais vraiment sur le plateau, loin du bord.
 - **Anciens épisodes réécrits et épisodes 38 à 45.** Les épisodes 2 à 6, 8, 9, 11 à 15 et 20 sont allongés et replacés dans la vie étudiante, avec moins d'entrées par la porte. Huit histoires étudiantes s'ajoutent.
+- **Cadrage vertical.** Le cadre d'un Short est étroit : les plans reculent pour garder le corps, les gestes et un peu de décor, sans changer la version horizontale. Celui qui parle s'adresse à son interlocuteur dans tous les épisodes.
+- **Logique et répétitions.** Le compteur de projets ne reste que dans l'épisode 3, les chutes répétées sont remplacées, Tobi est partout en licence 3, Léa est définie dans la Bible.
 
 ## À faire
 
