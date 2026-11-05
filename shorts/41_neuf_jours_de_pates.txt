@@ -43,7 +43,7 @@ TOBI dit (calme) Je pourrais y faire du réseautage.
 PLAN gros NOX
 NOX dit (sec) Voilà. Du réseautage.
 PLAN gros TOBI
-TOBI dit (illumine) Une appli pour partager son plateau !
+TOBI dit (illumine) Nox. Aie la vision. Une appli pour partager son plateau !
 PLAN gros NOX
-NOX dit (sec) Mange d'abord.
+NOX dit (resigne) J'appelle ta mère.
 ATTENDRE 0.4

@@ -43,5 +43,5 @@ NOX dit (sec) Tu vas manger quoi ?
 PLAN auto
 TOBI dit (fier) De la vision.
 PLAN gros NOX
-NOX dit (resigne) Ça ne se mange pas.
+NOX dit (resigne) J'appelle ta mère.
 ATTENDRE 0.4

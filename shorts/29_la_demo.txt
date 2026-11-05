@@ -38,6 +38,8 @@ PLAN gros CLAUDE
 CLAUDE dit (triste) Non.
 PLAN auto
 TOBI dit (illumine) Attendez ! Et si elle faisait aussi les croissants ?
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
 PLAN gros GEMINI
 GEMINI dit (excite) Levée de fonds ?
 PLAN gros NOX

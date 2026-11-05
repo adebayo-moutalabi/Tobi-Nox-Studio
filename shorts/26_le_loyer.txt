@@ -34,7 +34,7 @@ TOBI dit (fier) Et il y a mon vélo.
 PLAN gros NOX
 NOX dit (sec) On te l'a volé en octobre.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Il me reste l'antivol. Il est comme neuf.
+TOBI dit (mauvaisefoi) Nox. Aie la vision. Sans vélo, plus de vol.
 PLAN gros NOX
 NOX dit (calme) La pizzeria cherche un livreur.
 PLAN gros TOBI

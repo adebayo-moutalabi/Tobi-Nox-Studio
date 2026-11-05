@@ -35,7 +35,7 @@ CLAUDE dit (calme) Puis-je te prendre dans mes bras ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Attendez, c'est quoi le problème avec moi ?
 PLAN gros CODEX
-CODEX dit (constat) Dix-huit projets. Zéro fini.
+CODEX dit (constat) Dix-huit projets. Tous au placard.
 PLAN gros GEMINI
 GEMINI dit (constat) Quarante abonnements. Un seul utilisé.
 PLAN gros CLAUDE

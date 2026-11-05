@@ -46,7 +46,7 @@ TOBI dit (fier) Je connais des gens.
 PLAN gros NOX
 NOX dit (sec) Ce ne sont pas ces réseaux.
 PLAN auto
-TOBI dit (illumine) Je leur vends mes fiches !
+TOBI dit (illumine) Nox. Aie la vision. Je leur vends mes fiches !
 PLAN gros NOX
 NOX dit (resigne) Elles ont un an de retard.
 ATTENDRE 0.4

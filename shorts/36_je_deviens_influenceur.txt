@@ -25,8 +25,6 @@ PLAN gros NOX
 NOX dit (curieux) Tu as réussi quoi ?
 PLAN auto
 TOBI dit (gene) Je vous révèle mon secret pour bientôt réussir.
-PLAN gros NOX
-NOX dit (ironique) C'est plus honnête.
 PLAN auto
 TOBI dit (excite) N'oubliez pas de liker et de partager !
 INSERT Statistiques en direct | 3 vues | Durée moyenne : 2 secondes
@@ -37,9 +35,9 @@ NOX dit (sec) C'est le temps de dire salut la team.
 PLAN auto
 TOBI dit (illumine) Il faut une accroche choc ! Je vais me raser la tête.
 PLAN gros NOX
-NOX dit (curieux) Et ça parlerait de quoi ?
+NOX dit (sec) Tobi. Non.
 PLAN auto
-TOBI dit (fier) De cloud.
+TOBI dit (fier) Et je parle de cloud pendant que ça repousse.
 PLAN gros NOX
 NOX dit (sec) Personne ne va regarder ça.
 PLAN auto

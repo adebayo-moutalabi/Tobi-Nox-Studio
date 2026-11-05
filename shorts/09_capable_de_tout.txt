@@ -22,7 +22,7 @@ NOX assis
 PLAN gros NOX
 NOX dit (sec) Tu as lancé seize projets.
 PLAN gros TOBI
-TOBI dit (gene) Et seize échecs.
+TOBI dit (gene) Et seize projets au placard.
 PLAN gros NOX
 NOX dit (calme) Seize fois, tu as recommencé.
 INSERT Taux de retour | 100 % | Tobi revient toujours

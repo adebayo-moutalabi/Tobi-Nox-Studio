@@ -40,4 +40,6 @@ PLAN auto
 TOBI dit (illumine) Et si le yaourt devenait notre premier client ?
 PLAN gros NOX
 NOX dit (sec) Il est mort en mars, Tobi.
+PLAN auto
+TOBI dit (triste) Au placard, alors.
 ATTENDRE 0.4

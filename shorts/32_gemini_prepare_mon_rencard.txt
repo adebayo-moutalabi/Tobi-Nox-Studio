@@ -41,7 +41,7 @@ TOBI dit (mauvaisefoi) Elle voudra forcément entendre parler de ma start-up.
 PLAN gros GEMINI
 GEMINI dit (excite) J'ai fait une présentation au cas où. Soixante diapositives.
 PLAN auto
-TOBI dit (illumine) J'arrive avec un projecteur !
+TOBI dit (illumine) Nox. Aie la vision. J'arrive avec un projecteur !
 PLAN gros NOX
 NOX dit (resigne) Quatre pour cent, c'était généreux.
 ATTENDRE 0.4

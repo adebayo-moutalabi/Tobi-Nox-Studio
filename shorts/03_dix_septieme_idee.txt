@@ -4,7 +4,7 @@
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-TABLEAU Idées de la semaine | 16 barrées | Une seule survit
+TABLEAU Placard à projets | 16 idées rangées | Place restante : peu
 FONDU direct
 
 PLAN auto
@@ -36,6 +36,8 @@ PLAN auto
 TOBI dit (mauvaisefoi) Elle est en pause.
 PLAN gros NOX
 NOX dit (punchline) Comme tes dix-sept projets.
+PLAN auto
+TOBI dit (mauvaisefoi) Ils ne sont pas morts. Ils sont au placard.
 TOBI marche fenetre
 PLAN fenetre
 TOBI dit (calme) Tu sais ce qui manque au monde ?
@@ -44,5 +46,5 @@ NOX dit (sec) Tes révisions.
 PLAN fenetre
 TOBI dit (illumine) Un site de rencontre pour les projets !
 PLAN gros NOX
-NOX dit (resigne) Projet numéro dix-huit.
+NOX dit (resigne) Dix-huit. Au placard.
 ATTENDRE 0.4

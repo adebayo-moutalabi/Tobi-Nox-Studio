@@ -43,7 +43,7 @@ NOX dit (ironique) Il a mis ta photo ?
 PLAN gros CODEX
 CODEX dit (fier) En haute disponibilité.
 PLAN auto
-TOBI dit (fier) On appelle ça un data center.
+TOBI dit (fier) Nox. Aie la vision. On appelle ça un data center.
 PLAN gros NOX
 NOX dit (sec) Ils appellent ça une expulsion.
 ATTENDRE 0.4

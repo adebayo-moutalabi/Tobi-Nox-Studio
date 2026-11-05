@@ -44,7 +44,7 @@ TOBI dit (curieux) À lui ?
 PLAN gros CODEX
 CODEX dit (constat) À toute la fac.
 PLAN auto
-TOBI dit (excite) Zéro client, zéro problème.
+TOBI dit (excite) Nox. Aie la vision. Zéro client, zéro problème.
 PLAN gros NOX
 NOX dit (sec) Va répondre, c'est le boulanger.
 ATTENDRE 0.4
