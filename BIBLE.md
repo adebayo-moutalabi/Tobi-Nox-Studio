@@ -61,8 +61,7 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 **Rythme :** nouveau plan, zoom, geste ou réaction toutes les 2 à 3 s. Dialogues courts, sous-titres dynamiques.
 
 ## Le fil rouge
-- **Continuité :** ce qui arrive dans un épisode reste vrai ensuite (dette cloud, client perdu, nouveau post-it).
-- **Le placard à projets :** les projets abandonnés de Tobi y sont rangés.
+- **Épisodes indépendants :** depuis novembre 2026, chaque épisode se comprend seul. Le compteur de projets et le placard ne sont plus utilisés.
 - **Le tableau** de la chambre change à chaque épisode et montre l'état des projets.
 
 ## Saison 1 proposée

@@ -28,12 +28,15 @@ L'auteur aime ces phrases et leur répétition. Il n'y a pas de quota : **la seu
 |---|---|---|
 | La boulangerie Martin | Premier client de Tobi, 12 visiteurs, le site à 150 € | 1, 2, 13, 14, 15, 17, 18, 21, 35 |
 | Les projets de Tobi | Il en a lancé 16 ou 17, aucun n'est terminé | 3, 9, 19 |
+| Nouveaux épisodes | Indépendants, sans continuité obligatoire | 52, 53, 54, 55 |
 | Léa | Major de promo, bosseuse, son crush | 32, 45 |
 | Le vélo volé | Volé en octobre, le livreur a une sonnette en canard | 26, 46 |
 | Sa mère | Elle le soutient en cachette | 48, 49 |
 | Sa situation | Licence 3, boursier, chambre CROUS, peu d'argent | Toute la série |
 
 ## Le placard à projets
+
+**Abandonné pour les nouveaux épisodes,** à la demande de l'auteur. Cette section garde seulement l'historique.
 
 Les projets abandonnés de Tobi vont « au placard ». L'épisode 3 l'installe : « Ils ne sont pas morts. Ils sont au placard. » Il remplace le compteur « Projet numéro dix-neuf », dont les numéros n'étaient pas expliqués. L'auteur a préféré le placard à un cimetière, plus dur.
 

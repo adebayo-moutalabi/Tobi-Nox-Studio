@@ -36,6 +36,10 @@ La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la
 | 5 novembre 2026 | Chat est remplacé par Codex : sa voix est à choisir de nouveau. |
 | Novembre 2026 | Demande de l'auteur : des voix françaises pro, adaptées à la personnalité de chacun. |
 
+## Économiser les crédits
+
+Écouter dans le Studio avec les voix d'essai ne coûte rien. Les crédits ne partent qu'après confirmation, pour la vidéo finale ou les vraies voix. Les répliques déjà créées sont réutilisées. Changer une réplique, une voix ou le modèle recrée seulement ce qui a changé.
+
 ## Ne plus dépendre d'ElevenLabs
 
 1. **Garder les fichiers :** les vidéos publiées et les répliques déjà créées restent utilisables, sous réserve des conditions du compte. Les répliques ne vivent que dans le navigateur : il faut les sauvegarder à part.

@@ -2,6 +2,19 @@
 
 Cette charte suffit pour écrire un épisode, seul, à plusieurs ou avec n'importe quelle IA. Elle complète `BIBLE.md`.
 
+## Les nouveaux épisodes
+
+Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
+
+- **Épisodes indépendants :** chaque épisode se comprend seul. Pas de suite, pas de compteur de projets, pas de placard.
+- **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
+- **Rythme rapide :** 40 à 50 s, répliques de 1 à 6 mots le plus souvent, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
+- **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
+- **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
+- **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
+
+Exemple à éviter : l'épisode du livreur. Le thème est bon, mais la révélation de la sonnette demande de deviner une suite et ne fait pas rire.
+
 ## L'épisode en une phrase
 
 Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouve une façon encore plus absurde de continuer.
@@ -35,7 +48,6 @@ Ce sont les rendez-vous du public. Elles peuvent revenir souvent : **il faut sur
 | Nox | **« J'appelle ta mère. »** | Chute, quand Tobi dépense, ne mange plus ou se met en danger |
 | Nox | **« Tobi. Non. »** | Il coupe l'idée avant la fin |
 | Tobi | **« C'est un investissement. »** | Il justifie une dépense |
-| Nox ou Tobi | **« Au placard. »** | Une idée vient de mourir |
 
 Règles : une phrase ne vient que si l'histoire y mène, et jamais deux fois la même chute à la suite. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox. La liste des épisodes est dans `SUIVI_GAGS.md`.
 
@@ -156,6 +168,8 @@ NOX dit (resigne) J'appelle ta mère.
 ## Vérifier un script
 
 - [ ] L'accroche fonctionne sans contexte.
+- [ ] L'épisode se comprend sans avoir vu les autres.
+- [ ] La chute fait rire sans rien deviner.
 - [ ] Chaque réplique répond à la précédente.
 - [ ] Au moins quatre punchlines.
 - [ ] Les phrases cultes tombent juste : l'histoire y mène.
