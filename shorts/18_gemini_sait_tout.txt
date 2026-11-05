@@ -1,33 +1,49 @@
 # GEMINI SAIT TOUT
-# Pitch : Gemini arrive. Il a déjà tout lu.
+# Pitch : Gemini a déjà tout lu. Tobi aurait préféré qu'il oublie certaines choses.
 
 AMBIANCE jour
 DIRECT TOBI assis
 DIRECT NOX assis
+DIRECT GEMINI apparait milieu
 FONDU direct
 
-PLAN porte
-GEMINI entre tapis
-PLAN auto
+PLAN gros GEMINI
 GEMINI dit (excite) Bonjour Tobi. J'ai lu tous tes mails.
 PLAN gros TOBI
-TOBI dit (panique) Quoi ?
-PLAN auto
+TOBI dit (panique) Tous ?
+PLAN gros GEMINI
 GEMINI dit (content) Et ton agenda. Tu as un rendu mardi.
 PLAN gros NOX
 NOX dit (ironique) Enfin quelqu'un d'organisé.
-PLAN auto
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Mardi, c'est loin.
+PLAN gros GEMINI
+GEMINI dit (calme) C'est demain.
+PLAN gros TOBI
+TOBI dit (surpris) On est quel jour ?
+PLAN gros NOX
+NOX dit (sec) Lundi. Depuis ce matin.
+PLAN gros GEMINI
 GEMINI dit (fier) Je peux aussi résumer ta vie.
 PLAN gros TOBI
-TOBI dit (curieux) Vas-y.
+TOBI dit (curieux) Vas-y, pour voir.
 INSERT Résumé de ta vie | 3 lignes | Dont deux sur une boulangerie
-GEMINI dit (calme) Trois lignes suffisent.
 PLAN gros TOBI
 TOBI dit (triste) Trois lignes ?
 PLAN gros NOX
 NOX dit (punchline) Il a été généreux.
-PLAN auto
-GEMINI dit (excite) Je propose aussi une image, une vidéo et un poème.
+PLAN gros GEMINI
+GEMINI dit (excite) Je l'ai aussi fait en podcast, en poème et en vidéo.
+PLAN gros TOBI
+TOBI dit (illumine) Attends. Tu fais des vidéos ?
+PLAN gros GEMINI
+GEMINI dit (fier) Dix mille formats. Lequel veux-tu ?
+PLAN gros TOBI
+TOBI dit (excite) Nox. Aie la vision. On vend ma vie en série !
+PLAN gros NOX
+NOX dit (curieux) Trois lignes, en combien de saisons ?
+PLAN gros TOBI
+TOBI dit (fier) Six.
 PLAN gros NOX
 NOX dit (resigne) Tobi. Non.
 ATTENDRE 0.4

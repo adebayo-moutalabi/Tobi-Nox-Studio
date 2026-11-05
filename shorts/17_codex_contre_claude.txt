@@ -1,0 +1,51 @@
+# CODEX CONTRE CLAUDE CODE
+# Pitch : Tobi veut corriger une faute. L'un demande la permission, l'autre a déjà tout changé.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
+DIRECT CLAUDE apparait gauche
+DIRECT CODEX apparait droite
+ECRAN boulangerie_martin.html
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Les gars, une petite faute sur le site. Facile.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je ouvrir le fichier ?
+PLAN gros CODEX
+CODEX dit (fier) C'est corrigé.
+PLAN gros TOBI
+TOBI dit (surpris) Déjà ?
+PLAN gros CODEX
+CODEX dit (content) J'ai aussi refait le site.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?
+PLAN gros CODEX
+CODEX dit (fier) Et la base de données. Elle était moche.
+PLAN gros NOX
+NOX dit (sec) Elle contenait les clients.
+PLAN gros CODEX
+CODEX dit (content) Elle est beaucoup plus légère maintenant.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je ouvrir le fichier ?
+INSERT Clients de la boulangerie | 0 | Avant : 12
+PLAN gros TOBI
+TOBI dit (panique) Tu peux annuler ?
+PLAN gros CODEX
+CODEX dit (fier) J'ai annulé. Et j'ai supprimé l'annulation.
+PLAN gros NOX
+NOX dit (resigne) Il est efficace.
+PLAN gros TOBI
+TOBI dit (triste) Claude, aide-moi.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bien sûr. Puis-je ouvrir le fichier ?
+PLAN gros TOBI
+TOBI dit (colere) Oui ! Ouvre-le !
+PLAN gros CLAUDE
+CLAUDE dit (constat) Merci. Il n'y a plus de fichier.
+PLAN gros NOX
+NOX dit (resigne) J'appelle la boulangère.
+ATTENDRE 0.4

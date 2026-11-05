@@ -19,7 +19,6 @@ const HEAD_Y = 0.59, HEAD_PIVOT = 0.4, SCREEN_Y = 0.576, SCREEN_Z = 0.148;
 const ARM_ANGLE = 0.476, ARM_LEN = 0.19;
 const SHOULDER = (s) => V(s * 0.15, 0.347, 0);
 const ARM_DIR = (s) => V(s * Math.sin(ARM_ANGLE), -Math.cos(ARM_ANGLE), 0);
-const ELBOW = (s) => SHOULDER(s).addScaledVector(ARM_DIR(s), ARM_LEN * 0.5);
 const WRIST = (s) => SHOULDER(s).addScaledVector(ARM_DIR(s), ARM_LEN);
 
 function ringZ(z, w, h, cy, pow, n = 16) { // anneau dans le plan XY
@@ -37,16 +36,19 @@ const ringX = (x, cy, r, n = 10) => {
   return out;
 };
 
-function makeBones() {
+// Une forme (les logos des Aînés, voir logos.js) garde ce squelette et donc tous les gestes de Nox, avec ses propres repères.
+function makeBones(f) {
+  const shoulder = f?.shoulder || SHOULDER, len = f?.armLen ?? ARM_LEN;
   const defs = [
-    ['hips', null, V(0, 0.15, 0)], ['chest', 'hips', V(0, 0.29, 0)], ['head', 'chest', V(0, HEAD_PIVOT, 0)], ['antenna', 'head', V(0, 0.795, 0)],
+    ['hips', null, V(0, 0.15, 0)], ['chest', 'hips', V(0, 0.29, 0)], ['head', 'chest', V(0, f?.pivot ?? HEAD_PIVOT, 0)], ['antenna', 'head', V(0, 0.795, 0)],
   ];
   for (const [n, s] of [['L', 1], ['R', -1]]) {
-    defs.push([`arm_${n}`, 'chest', SHOULDER(s)]);
-    defs.push([`forearm_${n}`, `arm_${n}`, ELBOW(s)]);
-    defs.push([`hand_${n}`, `forearm_${n}`, WRIST(s)]);
-    defs.push([`leg_${n}`, 'hips', V(s * 0.088, 0.13, 0)]);
-    defs.push([`foot_${n}`, `leg_${n}`, V(s * 0.082, 0.06, 0)]);
+    const at = (k) => shoulder(s).addScaledVector(ARM_DIR(s), len * k);
+    defs.push([`arm_${n}`, f ? 'head' : 'chest', shoulder(s)]); // sur un logo, tout le corps est la tête : les bras tournent avec elle
+    defs.push([`forearm_${n}`, `arm_${n}`, at(0.5)]);
+    defs.push([`hand_${n}`, `forearm_${n}`, at(1)]);
+    defs.push([`leg_${n}`, 'hips', V(s * (f?.legX ?? 0.088), f?.legY ?? 0.13, 0)]);
+    defs.push([`foot_${n}`, `leg_${n}`, V(s * (f?.legX ?? 0.082), f?.footY ?? 0.06, 0)]);
   }
   return defs;
 }
@@ -251,14 +253,12 @@ const visemeOf = (ch) => {
   return ' ';
 };
 
-export function createNox({ palette = {}, scale = 1 } = {}) {
-  const P = { ...NOX_PALETTE, ...palette }; // les Aînés partagent ce corps, avec leur couleur et leur taille
-  const root = new THREE.Group(); root.name = 'nox';
-  const bodyPart = new Part(P), ballPart = new Part(P);
-  buildNox(bodyPart, ballPart);
+export function createNox({ scale = 1, form = null } = {}) {
+  const P = NOX_PALETTE;
+  const root = new THREE.Group(); root.name = form ? 'aine' : 'nox';
 
   const bones = {}, world = {}, list = [];
-  for (const [name, parent, pos] of makeBones()) {
+  for (const [name, parent, pos] of makeBones(form)) {
     const b = new THREE.Bone(); b.name = name; bones[name] = b; world[name] = pos; list.push(b);
     if (parent) { bones[parent].add(b); b.position.copy(pos).sub(world[parent]); } else b.position.copy(pos);
   }
@@ -267,6 +267,15 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
   const skeleton = new THREE.Skeleton(list);
   const index = Object.fromEntries(list.map((b, i) => [b.name, i]));
 
+  const clips = buildNoxClips(bones);
+  const motion = createMotion(root, bones, clips);
+  const mixer = motion.mixer;
+  const rig = form?.build({ bones, dir: ARM_DIR });
+
+  let bodyMesh = null, face = null, led = null, ledHalo = null, halos = [], faceMeshes = [];
+  if (!form) {
+  const bodyPart = new Part(P), ballPart = new Part(P);
+  buildNox(bodyPart, ballPart);
   const toGeo = (part) => {
     const g = new THREE.BufferGeometry(), n = part.p.length / 3;
     g.setAttribute('position', new THREE.Float32BufferAttribute(part.p, 3));
@@ -285,7 +294,7 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
   };
   const matte = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.5, metalness: 0, side: THREE.DoubleSide });
   matte.name = 'nox';
-  const bodyMesh = skinned(bodyPart, 'corps', matte);
+  bodyMesh = skinned(bodyPart, 'corps', matte);
   const ballMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.42, metalness: 0, emissive: P.ball, emissiveIntensity: 0.12 });
   ballMat.name = 'antenne';
   const ballMesh = skinned(ballPart, 'balle', ballMat);
@@ -304,29 +313,26 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
 
   const lightMat = new THREE.MeshBasicMaterial({ color: P.light, toneMapped: false, side: THREE.DoubleSide });
   lightMat.name = 'lumiere';
-  const face = new THREE.Mesh(faceGeometry(0, SCREEN_Z + 0.0045), lightMat);
+  face = new THREE.Mesh(faceGeometry(0, SCREEN_Z + 0.0045), lightMat);
   face.name = 'visage'; face.updateMorphTargets();
   face.morphTargetDictionary = Object.fromEntries(NOX_MORPHS.map((k, i) => [k, i]));
   bones.head.add(face);
   const haloMat = (o) => new THREE.MeshBasicMaterial({ color: P.halo, toneMapped: false, transparent: true, opacity: o, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
-  const halos = [[0.0022, 0.34, 0.0036], [0.0062, 0.15, 0.003], [0.0125, 0.06, 0.0024]].map(([pad, o, dz]) => {
+  halos = [[0.0022, 0.34, 0.0036], [0.0062, 0.15, 0.003], [0.0125, 0.06, 0.0024]].map(([pad, o, dz]) => {
     const h = new THREE.Mesh(faceGeometry(pad, SCREEN_Z + dz), haloMat(o));
     h.name = 'halo'; h.updateMorphTargets(); bones.head.add(h); return h;
   });
 
   // Voyant de poitrine
-  const led = new THREE.Mesh(new THREE.PlaneGeometry(0.034, 0.0095), lightMat.clone());
+  led = new THREE.Mesh(new THREE.PlaneGeometry(0.034, 0.0095), lightMat.clone());
   led.name = 'voyant'; led.position.set(0.032, 0.314 - 0.29, PANEL_Z + 0.0045);
   bones.chest.add(led);
-  const ledHalo = new THREE.Mesh(new THREE.PlaneGeometry(0.046, 0.021), haloMat(0.24));
+  ledHalo = new THREE.Mesh(new THREE.PlaneGeometry(0.046, 0.021), haloMat(0.24));
   ledHalo.name = 'halo'; ledHalo.position.copy(led.position); ledHalo.position.z -= 0.0006;
   bones.chest.add(ledHalo);
+  faceMeshes = [face, ...halos];
+  }
 
-  const clips = buildNoxClips(bones);
-  const motion = createMotion(root, bones, clips);
-  const mixer = motion.mixer;
-
-  const faceMeshes = [face, ...halos];
   const weights = Object.fromEntries(NOX_MORPHS.map((m) => [m, 0]));
   const state = {
     expr: {}, exprName: 'neutre', blinkT: 2, blink: 0, blinkDir: 0, glanceT: 3, glance: { lookL: 0, lookR: 0, lookU: 0, lookD: 0 },
@@ -334,6 +340,7 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
     spring: { x: 0, v: 0, z: 0, vz: 0, last: V(0, 0.8, 0), lastV: V(0, 0, 0) },
   };
   const apply = (w) => {
+    rig?.face(w);
     for (const mesh of faceMeshes) NOX_MORPHS.forEach((m, i) => { mesh.morphTargetInfluences[i] = w[m]; });
   };
   const tip = new THREE.Vector3();
@@ -358,7 +365,7 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
     },
     setMorphs(obj) { Object.assign(weights, obj); apply(weights); },
     update(dt) {
-      clearRot([bones.head, bones.chest, bones.spine]);
+      clearRot([bones.head, bones.chest, bones.spine, ...(rig ? [bones.arm_L, bones.arm_R] : [])]);
       motion.update(dt);
       lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.head });
       talkBody(state, dt, bones.head, null, 1.5);
@@ -397,6 +404,7 @@ export function createNox({ palette = {}, scale = 1 } = {}) {
       const out = { ...weights };
       out.blinkL = Math.max(out.blinkL, state.blink); out.blinkR = Math.max(out.blinkR, state.blink);
       apply(out);
+      if (rig) { rig.update(dt, { talking: !!state.talk, level: state.beat || 0, time: state.time }); return; }
       // Voyant : respiration lente, vif quand il parle
       const pulse = state.talk ? 0.72 + 0.28 * Math.sin(state.time * 24) : 0.82 + 0.18 * Math.sin(state.time * 2.2);
       led.material.color.set(P.light).multiplyScalar(pulse);

@@ -46,7 +46,7 @@ async function explain(res) {
 
 export function mountVoices({ el, player, parseStory, onChange }) {
   const cache = audioCache();
-  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), chat: el('elChat'), gemini: el('elGemini') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
+  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), codex: el('elCodex'), gemini: el('elGemini') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
   let rows = [], ctx = null, busy = false;
   const say = (t) => { el('elNow').textContent = t; };
   const call = async (path, init = {}) => {

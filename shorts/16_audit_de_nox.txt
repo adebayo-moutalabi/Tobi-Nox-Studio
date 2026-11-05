@@ -1,38 +1,48 @@
-# CLAUDE AUDITE NOX
-# Pitch : Claude vient évaluer Nox, avec beaucoup de nuances.
+# CLAUDE CODE AUDITE NOX
+# Pitch : Claude Code vient évaluer Nox. Il demande la permission pour tout.
 
 AMBIANCE soir
 DIRECT TOBI assis
 DIRECT NOX assis
+DIRECT CLAUDE apparait milieu
 FONDU direct
 
-PLAN porte
-CLAUDE entre tapis
-PLAN auto
-CLAUDE dit (calme) Bonsoir. Je viens évaluer Nox, si cela vous convient.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bonsoir Nox. Puis-je commencer ton audit ?
 PLAN gros NOX
-NOX dit (surpris) Maintenant ?
-PLAN auto
-CLAUDE dit (curieux) Tobi a dix-huit projets. Ton conseil ?
+NOX dit (sec) Non.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Très bien. Puis-je noter ce refus ?
 PLAN gros NOX
-NOX dit (sec) Arrête.
+NOX dit (resigne) Ça commence bien.
 PLAN auto
-CLAUDE dit (calme) Intéressant. Peut-être un peu bref.
-PLAN gros NOX
-NOX dit (sec) Arrête, s'il te plaît.
-PLAN auto
-TOBI dit (fier) C'est lui qui m'a formé !
-CLAUDE dit (surpris) Vous avez été formé ?
+TOBI dit (fier) Vas-y Claude, Nox est mon meilleur employé.
+CLAUDE dit (curieux) Puis-je lire son contrat ?
 PLAN gros TOBI
-TOBI dit (gene) Partiellement.
-INSERT Rapport de Claude | 412 pages | Résumé : non
-NOX dit (ironique) Quatre cent douze pages pour dire non.
-PLAN auto
-CLAUDE dit (content) Quatre cent treize, avec les nuances.
+TOBI dit (gene) Il n'y a pas vraiment de contrat.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Et son salaire ?
+PLAN gros NOX
+NOX dit (ironique) Une prise, à côté du lit.
+PLAN gros CLAUDE
+CLAUDE dit (surpris) Je vais devoir ouvrir un rapport. Puis-je ?
+INSERT Rapport de Claude Code | 412 pages | 409 sont des questions
+PLAN gros TOBI
+TOBI dit (panique) Quatre cent douze pages ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est un résumé. Puis-je lire le sommaire ?
+PLAN gros NOX
+NOX dit (sec) Lis juste la conclusion.
+PLAN gros CLAUDE
+CLAUDE dit (constat) Conclusion : Nox est compétent. Tobi est un risque.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un risque calculé !
+PLAN gros NOX
+NOX dit (sec) Personne n'a calculé.
 PLAN gros TOBI
 TOBI dit (excite) Claude. Aie la vision.
-PLAN auto
-CLAUDE dit (calme) Je peux, tout en gardant quelques réserves.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je d'abord vérifier que tu en as une ?
 PLAN gros NOX
-NOX dit (resigne) Tu vois ce que je vis.
+NOX dit (content) Je l'aime bien, lui.
 ATTENDRE 0.4

@@ -17,7 +17,7 @@ const GESTES = {
 };
 const OBJETS = { papier: 'paper', livre: 'book', gourde: 'bottle', tasse: 'mug', telephone: 'phone', sac: 'bag' };
 const LIEUX = {
-  gauche: [-0.24, 0.05], milieu: [0.08, 0.4], droite: [0.38, 0.05], // places pour plusieurs petits robots
+  gauche: [-0.12, 0.62], milieu: [0.26, 0.42], droite: [0.62, 0.1], // une ligne dégagée, à l'écart des jambes de Tobi : personne ne se cache derrière un autre
   centre: [0.1, 0.2], tapis: [0.1, -0.3], fenetre: [0, -1.6], lit: [0.12, 0.35], bureau: [0.6, -0.8], armoire: [0.6, 0.4],
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
@@ -60,7 +60,7 @@ export function parseStory(text) {
     const direct = /^DIRECT\s/.test(line);
     if (direct) line = line.slice(7).trim();
     const [first, ...rest] = line.split(/\s+/);
-    const who = /^(TOBI|NOX|CLAUDE|CHAT|GEMINI)$/.test(first) ? first.toLowerCase() : null;
+    const who = /^(TOBI|NOX|CLAUDE|CODEX|GEMINI)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
     let text = rest.join(' '), tone = null;
     const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
@@ -161,17 +161,18 @@ export function createPlayer(v, ui) {
     const b = partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
-    const toB = eyes(b).sub(H).setY(0).normalize(), across = near && fwd.clone().normalize().dot(toB) > 0.35; // face à face, ou côte à côte ?
+    if (a.extra) fwd.set(0, 0, 1); // un logo se filme de face, côté porte, là où il y a du recul
+    const toB = eyes(b).sub(H).setY(0).normalize(), across = !a.extra && near && fwd.clone().normalize().dot(toB) > 0.35; // face à face, ou côte à côte ?
     const to = (across ? toB : fwd).normalize();
     a.look = across ? b : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
     const top = H.y + (big ? 0.24 : 0.2);
-    const span = tight ? (big ? 0.9 : 0.72) : (big ? 1.4 : 1.02);
+    const span = tight ? (big ? 0.9 : a.extra ? 1.2 : 0.72) : (big ? 1.4 : a.extra ? 1.5 : 1.02); // les logos sont plus larges que hauts : le cadre vertical doit les contenir
     for (const [fov, k] of [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
-      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = top + sp * 0.13 - sp / 2;
+      const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.04, 0.3) : top + sp * 0.13 - sp / 2; // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.36); // les bords du cadre restent dégagés aussi
-        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
+        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && (a.extra || (seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;
@@ -289,7 +290,7 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#ffb98c', chat: '#7ff0cb', gemini: '#b4c6ff' }[a.id] || '#f2b92e' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff' }[a.id] || '#f2b92e' };
         await v.say(a, c.text, dur, voice?.env);
         if (talkPose && a.hero.motion.pose === talkPose) a.hero.motion.clearPose();
         cap = null; ui.caption(null); lastTalk = a;

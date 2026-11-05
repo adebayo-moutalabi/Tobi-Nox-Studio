@@ -217,6 +217,14 @@ export function startViewer(cfg) {
   const yawTo = (a, b) => Math.atan2(pos(b).x - pos(a).x, pos(b).z - pos(a).z);
   function face(a, b, exact) { a.faceYaw = yawTo(a, b) * (exact ? 1 : 0.68); } // légèrement ouverts vers la caméra, comme au théâtre
 
+  // Un logo est plat : vu de profil, on ne le reconnaît plus. À l'arrêt, il reste donc tourné vers l'objectif.
+  function showLogo(a) {
+    if (a.goal) return;
+    const to = Math.atan2(camera.position.x - pos(a).x, camera.position.z - pos(a).z);
+    const off = Math.atan2(Math.sin(a.hero.root.rotation.y - to), Math.cos(a.hero.root.rotation.y - to));
+    a.hero.root.rotation.y = to + Math.max(-0.42, Math.min(0.42, off));
+  }
+
   // ---- Regards : la tête vise les yeux de l'autre ---------------------------
   const lq = { f: new THREE.Vector3(), h: new THREE.Vector3(), t: new THREE.Vector3(), w: new THREE.Quaternion(), d: new THREE.Quaternion(), p: new THREE.Quaternion(), id: new THREE.Quaternion() };
   function applyLook(a, dt) {
@@ -234,7 +242,8 @@ export function startViewer(cfg) {
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
     lq.d.setFromUnitVectors(lq.f, lq.t);
     const ang = 2 * Math.acos(Math.min(1, Math.abs(lq.d.w)));
-    if (ang > 1.05) lq.d.slerp(lq.id, 1 - 1.05 / ang);
+    const most = a.extra ? 0.32 : 1.05;
+    if (ang > most) lq.d.slerp(lq.id, 1 - most / ang);
     lq.d.multiply(lq.w);
     head.parent.getWorldQuaternion(lq.p);
     lq.p.invert().multiply(lq.d);
@@ -551,7 +560,7 @@ export function startViewer(cfg) {
     tickTime(dt);
     room?.update(dt);
     api.onFrame?.(dt);
-    for (const a of actors) { moveActor(a, dt); a.hero.update(dt); applyLook(a, dt); }
+    for (const a of actors) { moveActor(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); applyLook(a, dt); }
     if (camTween) {
       camTween.t = Math.min(1, camTween.t + dt / 0.7);
       const e = 1 - (1 - camTween.t) ** 3;

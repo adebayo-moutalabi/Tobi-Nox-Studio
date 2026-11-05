@@ -1,6 +1,7 @@
 // Fiches des personnages pour le visualiseur
 import { createCharacter } from './character.js';
 import { createNox, NOX_HEIGHT } from './nox.js';
+import { CLAUDE_CODE, CODEX, GEMINI } from './logos.js';
 
 const GESTURES = [
   ['wave', 'Saluer'], ['nod', 'Oui'], ['no', 'Non'], ['shrug', 'Hausser les épaules'], ['think', 'Réfléchir'], ['point', 'Montrer'],
@@ -43,13 +44,13 @@ export function nox() {
   };
 }
 
-// Les Aînés : des personnages originaux de la famille de Nox, un peu plus grands. Ils n'apparaissent que si un script les fait entrer.
+// Les Aînés : chaque logo est un personnage (logos.js). Ils n'apparaissent que si un script les place dans la scène.
 const AINES = {
-  claude: { name: 'Claude', scale: 1.14, palette: { body: '#c56a48', bezel: '#8f4a30', ball: '#efb08e', light: '#ffe6d2', halo: '#ffb98c' } },
-  chat: { name: 'Chat', scale: 1.2, palette: { body: '#2e9c7f', bezel: '#1d6f59', ball: '#9df0d4', light: '#d6fff1', halo: '#6ff0c6' } },
-  gemini: { name: 'Gemini', scale: 1.08, palette: { body: '#4b6fe2', bezel: '#3149a5', ball: '#b48cff', light: '#d8e4ff', halo: '#9fb8ff' } },
+  claude: { name: 'Claude Code', scale: 1, form: CLAUDE_CODE },
+  codex: { name: 'Codex', scale: 1.08, form: CODEX },
+  gemini: { name: 'Gemini', scale: 1, form: GEMINI },
 };
 export function aine(id) {
-  const base = nox(), a = AINES[id], hero = createNox({ palette: a.palette, scale: a.scale });
-  return { ...base, id, name: a.name, hero, extra: true, eyeUp: base.eyeUp * a.scale, reach: base.reach * a.scale };
+  const base = nox(), a = AINES[id], hero = createNox({ scale: a.scale, form: a.form });
+  return { ...base, id, name: a.name, hero, extra: true, eyeUp: (a.form.eyeY - a.form.pivot) * NOX_HEIGHT * a.scale, reach: base.reach * a.scale };
 }

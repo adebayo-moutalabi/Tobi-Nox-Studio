@@ -7,24 +7,49 @@ DIRECT NOX travaille
 DIRECT TOBI pivote
 DIRECT NOX pivote
 DIRECT CLAUDE apparait gauche
-DIRECT CHAT apparait milieu
+DIRECT CODEX apparait milieu
 DIRECT GEMINI apparait droite
+TABLEAU Conseil des Aînés | Sujet : Tobi | Durée : indéterminée
 FONDU direct
 
-PLAN auto
-CHAT dit (fier) Moi, je réponds à tout.
-GEMINI dit (fier) Moi, je vois tout.
-CLAUDE dit (calme) Moi, je doute de tout.
-PLAN auto
+PLAN gros CODEX
+CODEX dit (fier) Moi, j'ai livré trois cents projets cette nuit.
+PLAN gros GEMINI
+GEMINI dit (fier) Moi, j'ai lu tout internet. Deux fois.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Moi, j'ai demandé si je pouvais commencer.
+PLAN gros TOBI
 TOBI dit (curieux) Et toi, Nox ?
 PLAN gros NOX
 NOX dit (sec) Moi, je connais Tobi.
-PLAN auto
-CHAT dit (surpris) Courage.
-GEMINI dit (triste) Courage.
-CLAUDE dit (calme) Sincèrement, courage.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Attendez, c'est quoi le problème ?
+PLAN large
+ATTENDRE 0.5
+PLAN gros CODEX
+CODEX dit (surpris) Depuis combien de temps ?
 PLAN gros NOX
-NOX dit (resigne) Projet numéro vingt.
+NOX dit (resigne) Deux ans.
+PLAN gros GEMINI
+GEMINI dit (triste) J'ai lu ses mails. Courage.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je te prendre dans mes bras ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Attendez, c'est quoi le problème avec moi ?
+PLAN gros CODEX
+CODEX dit (constat) Dix-huit projets. Zéro fini.
+PLAN gros GEMINI
+GEMINI dit (constat) Quarante abonnements. Un seul utilisé.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Et une certaine fragilité, si je puis dire.
+PLAN gros TOBI
+TOBI dit (fier) Justement ! J'ai une idée pour nous tous.
+PLAN gros NOX
+NOX dit (sec) Courez.
+PLAN gros CODEX
+CODEX dit (fier) Je m'en vais. C'est déjà fait.
+PLAN gros GEMINI
+GEMINI dit (content) J'ai résumé son idée. Il vaut mieux partir.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je partir ?
+PLAN gros NOX
+NOX dit (resigne) Projet numéro dix-neuf.
 ATTENDRE 0.4
