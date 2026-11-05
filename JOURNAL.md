@@ -50,6 +50,9 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Logique et répétitions.** Le compteur de projets ne reste que dans l'épisode 3, les chutes répétées sont remplacées, Tobi est partout en licence 3, Léa est définie dans la Bible.
 - **Phrases cultes rétablies.** Les réductions de la version précédente sont annulées : les phrases reviennent là où elles tombent juste. Le placard à projets remplace le compteur.
 - **Suivi.** `SUIVI_GAGS.md`, `VOIX.md`, bouton « Copier la liste de mes voix » et section des demandes de l'auteur.
+- **Prononciation.** `src/prononciation.js` corrige ce que la voix dit sans changer les sous-titres.
+- **Sketchs plus riches.** Avec les vraies voix, l'épisode 45 durait 33 s au lieu de 51 s estimées. Nouvelle cible : 140 à 170 mots. L'épisode 45 est réécrit, les épisodes 46 à 51 écrits à ce format.
+- **Celui qui parle est toujours à l'image.** Quand aucun plan normal n'était possible, la caméra repartait sur le plan large, où l'armoire cache le bureau. Elle tourne désormais autour du personnage. Vérifié réplique par réplique sur tous les épisodes avec `tools/audit-cadrage.js`.
 
 ## Demandes de l'auteur
 
@@ -71,6 +74,9 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 5 nov. 2026 | Garder les phrases cultes, qu'elles tombent juste | Charte et `SUIVI_GAGS.md` |
 | 5 nov. 2026 | Placard à projets plutôt que cimetière | Épisodes 3, 9, 19 et 24 |
 | 5 nov. 2026 | Documenter les voix et chaque demande | `VOIX.md` et cette section |
+| 5 nov. 2026 | Corriger « Aie la vision » et « annales » à l'oral | `src/prononciation.js`, épisode 39 |
+| 5 nov. 2026 | Sketchs plus drôles et plus longs, épisode 45 trop court | Charte, épisodes 45 à 51 |
+| 5 nov. 2026 | Voir le personnage qui parle dans tous les épisodes | `frame()`, `tools/audit-cadrage.js` |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

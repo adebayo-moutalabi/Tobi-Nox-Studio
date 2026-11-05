@@ -22,6 +22,7 @@ Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLA
 
 - **Places au sol :** `gauche`, `milieu`, `droite`.
 - **Places en hauteur :** `bureau`, `chaise`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
+- **Un seul sur le bureau :** si un Aîné est sur le bureau, Nox va sur le lit (`assis`), sinon ils se gênent à l'image.
 - **Combien par épisode :** un ou deux le plus souvent. Les trois ensemble restent un événement.
 
 ## Les phrases de la série
@@ -40,7 +41,7 @@ Règles : une phrase ne vient que si l'histoire y mène, et jamais deux fois la 
 
 ## La structure, en 40 à 60 secondes
 
-Compter environ 100 à 120 mots de dialogue et une vingtaine de répliques. Vérifier la durée en lançant l'épisode : les déplacements et les écrans plein cadre comptent aussi.
+Avec les vraies voix, le rythme est d'environ 3 mots par seconde : compter **140 à 170 mots de dialogue** et une trentaine de répliques. La durée affichée sans voix dans le Studio est trop longue d'environ un tiers : seule la vidéo avec les voix fait foi.
 
 1. **Accroche, 0 à 3 s.** Une phrase qui donne envie de rester, sans introduction.
 2. **La question simple de Nox.**
@@ -69,6 +70,20 @@ Compter environ 100 à 120 mots de dialogue et une vingtaine de répliques. Vér
 ## Les titres
 
 Le titre vend la situation, à la première personne si possible, en moins de 45 caractères. Un chiffre ou un paradoxe aide : « Trois heures pour un point-virgule ». Jamais de numéro d'épisode.
+
+## Ce qui fait une bonne idée
+
+- **Une situation que tout le monde connaît :** argent, bourse, notes, livraison, jeux vidéo, famille.
+- **Un chiffre concret dans l'idée :** 340 € de pâtes, un 4 sur 20, 400 diapos.
+- **Un plan qui se retourne contre Tobi :** la dernière info change le sens de tout ce qu'on a vu.
+- **Trois paliers :** chaque étape aggrave la précédente, la troisième est la plus folle.
+- **Une vraie fin :** une révélation, un rappel d'un autre épisode ou un moment sincère. Pas seulement une réplique sèche.
+
+## Écrire pour la voix
+
+La voix lit ce qui est écrit, et se trompe sur les sigles et certains mots. Les corrections générales sont dans `src/prononciation.js`. Pour un cas isolé, écrire `[mot affiché|mot prononcé]` dans la réplique : le sous-titre garde le premier, la voix dit le second.
+
+Éviter les mots qui sonnent mal à l'oral, comme « annales ». Après une correction, utiliser « Refaire » sur la réplique : seule celle-ci est regénérée.
 
 ## Les recettes de punchline
 
@@ -149,7 +164,8 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] Un ton sur chaque réplique.
 - [ ] Personnages déjà en place, dialogue dès la première image.
 - [ ] Personne l'un dans l'autre, assis sur un meuble ou à côté d'un personnage debout : vérifier chaque place à l'image.
-- [ ] Durée mesurée entre 40 et 60 s.
+- [ ] Durée vérifiée avec les vraies voix, entre 40 et 60 s.
+- [ ] `tools/audit-cadrage.js` ne signale rien : celui qui parle est toujours à l'image.
 
 ## Consigne à donner à une autre IA
 

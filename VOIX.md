@@ -24,9 +24,14 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 - **Tons :** ils sont définis dans `src/tones.js`. ElevenLabs les suit sans garantie, il faut écouter le résultat.
 - **Coût :** les répliques déjà générées restent dans le navigateur et ne sont pas refacturées.
 
+## La prononciation
+
+La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la vision ». `src/prononciation.js` envoie à la voix une écriture phonétique, sans toucher au sous-titre. Cas isolé : `[affiché|prononcé]` dans le script. Ces réglages restent à confirmer à l'écoute.
+
 ## Historique
 
 | Date | Changement |
 |---|---|
+| 5 novembre 2026 | Prononciation corrigée pour « Aie la vision » et les sigles, « annales » retiré du script. |
 | 5 novembre 2026 | Chat est remplacé par Codex : sa voix est à choisir de nouveau. |
 | Novembre 2026 | Demande de l'auteur : des voix françaises pro, adaptées à la personnalité de chacun. |
