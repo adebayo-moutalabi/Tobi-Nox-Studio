@@ -1,0 +1,78 @@
+# CLAUDE CODE DEVAIT ME RÉVEILLER
+# Pitch : Partiel à 8 h. Tobi charge Claude Code de le réveiller. Il ne veut surtout pas le déranger.
+
+AMBIANCE jour
+DIRECT TOBI dort
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT CLAUDE apparait chaise
+TABLEAU Partiel à 8 h | Réveil : Claude Code | Rien à craindre
+FONDU direct
+
+INSERT Il est | 6 h 30 | Partiel à 8 h
+PLAN gros NOX
+NOX dit (sec) Claude. C'est l'heure.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Merci, Nox. Tobi, puis-je te réveiller ?
+ATTENDRE 0.6
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Il ne répond pas.
+PLAN gros NOX
+NOX dit (sec) Il dort.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je ne peux pas agir sans son accord.
+PLAN gros NOX
+NOX dit (curieux) C'est pourtant lui qui t'a demandé.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il a pu changer d'avis pendant la nuit.
+PLAN gros NOX
+NOX dit (sec) Il ronfle.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Est-ce un oui ?
+INSERT Il est | 7 h 00 | Toujours au lit
+PLAN gros NOX
+NOX dit (sec) Fais du bruit.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tobi. Puis-je faire du bruit ?
+PLAN gros NOX
+NOX dit (resigne) Tu chuchotes.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je ne voulais pas le brusquer.
+PLAN gros NOX
+NOX dit (sec) Il a un partiel.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je lui ai préparé un résumé du réveil.
+PLAN gros NOX
+NOX dit (curieux) Il va le lire comment ?
+PLAN gros CLAUDE
+CLAUDE dit (constat) Quand il sera réveillé.
+INSERT Il est | 8 h 00 | Partiel commencé
+PLAN gros NOX
+NOX dit (resigne) C'est trop tard.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je encore tenter une approche douce ?
+INSERT Il est | 10 h 45 | Partiel terminé
+TOBI leve
+PLAN gros TOBI
+TOBI dit (content) Quelle bonne nuit ! Il est quelle heure ?
+PLAN gros NOX
+NOX dit (sec) Dix heures quarante-cinq.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ? Claude ! Tu devais me réveiller !
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai demandé quarante-trois fois.
+PLAN gros TOBI
+TOBI dit (colere) Et ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu n'as jamais dit oui.
+PLAN gros TOBI
+TOBI dit (colere) Je dormais !
+PLAN gros CLAUDE
+CLAUDE dit (constat) C'est ce que j'ai noté.
+PLAN gros TOBI
+TOBI dit (triste) Et maintenant, je fais quoi ?
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je te proposer un réveil pour le rattrapage ?
+PLAN gros NOX
+NOX dit (sec) Je m'en occupe. J'ai un seau.
+ATTENDRE 0.4

@@ -1,17 +1,17 @@
 # GEMINI A FAIT MON EXPOSÉ EN 400 DIAPOS
-# Pitch : Tobi a cinq minutes d'exposé demain. Gemini a légèrement trop préparé.
+# Pitch : Tobi a cinq minutes d'exposé. Gemini en a fait 400 diapos, puis le programme du partiel de toute la promo.
 
 AMBIANCE soir
 DIRECT TOBI travaille
-DIRECT NOX marche centre
 DIRECT TOBI pivote
-DIRECT GEMINI apparait lit
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
 ECRAN expose_final.pptx
 TABLEAU Exposé demain | 5 minutes | Sujet : l'eau
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (fier) Gemini, mon exposé. Cinq minutes, sur l'eau.
+TOBI dit (panique) Gemini ! Exposé demain ! Cinq minutes, sur l'eau !
 PLAN gros GEMINI
 GEMINI dit (excite) C'est prêt. Quatre cents diapositives.
 PLAN gros TOBI
@@ -25,26 +25,51 @@ GEMINI dit (content) Diapositive trois cents.
 PLAN gros TOBI
 TOBI dit (panique) J'ai cinq minutes, pas trois jours !
 PLAN gros GEMINI
-GEMINI dit (fier) Je peux faire une version courte.
+GEMINI dit (fier) Version courte, alors. Une seule diapositive.
 PLAN gros TOBI
-TOBI dit (content) Enfin ! Combien de diapos ?
-PLAN gros GEMINI
-GEMINI dit (constat) Une. Avec le mot eau.
+TOBI dit (content) Enfin ! Elle dit quoi ?
 INSERT Version courte | EAU | Sources : 2 400
 PLAN gros NOX
-NOX dit (sec) C'est efficace.
+NOX dit (sec) C'est clair.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Et si je la lis très lentement ?
+TOBI dit (mauvaisefoi) Je la lis lentement, et je regarde le public.
 PLAN gros NOX
-NOX dit (curieux) Tu connais ton sujet ?
+NOX dit (curieux) Pendant cinq minutes ?
 PLAN gros TOBI
-TOBI dit (fier) J'en bois tous les jours.
-PLAN gros GEMINI
-GEMINI dit (excite) J'ai aussi écrit une chanson pour la conclusion.
-PLAN gros TOBI
-TOBI dit (curieux) Une chanson ?
-PLAN gros GEMINI
-GEMINI dit (fier) Avec une chorale. Elle arrive demain à huit heures.
+TOBI dit (fier) Avec un silence. Ça s'appelle du charisme.
 PLAN gros NOX
-NOX dit (resigne) Je ne viens pas à cet exposé.
+NOX dit (sec) Ça s'appelle un zéro.
+PLAN gros GEMINI
+GEMINI dit (excite) Pas de panique. J'ai envoyé les quatre cents au prof.
+PLAN gros TOBI
+TOBI dit (panique) Tu as fait quoi ?
+PLAN gros GEMINI
+GEMINI dit (content) Il a répondu. Il adore.
+PLAN gros TOBI
+TOBI dit (surpris) Il adore ?
+PLAN gros GEMINI
+GEMINI dit (fier) Il en fait le programme du partiel.
+INSERT Partiel de lundi | 400 diapos | À connaître par cœur
+PLAN gros TOBI
+TOBI dit (panique) Pour toute la promo ?
+PLAN gros GEMINI
+GEMINI dit (constat) Cent vingt étudiants. Je les ai prévenus. Avec ton nom.
+PLAN gros NOX
+NOX dit (curieux) Ton téléphone vibre depuis tout à l'heure.
+PLAN gros TOBI
+TOBI dit (triste) Il y a quoi ?
+PLAN gros NOX
+NOX dit (constat) Cent dix-neuf messages. Pas très gentils.
+PLAN gros TOBI
+TOBI dit (curieux) Et le cent vingtième ?
+PLAN gros NOX
+NOX dit (sec) Léa. Elle est déjà à la diapo trois cents.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Elle va me demander de l'aide !
+PLAN gros NOX
+NOX dit (calme) Elle t'envoie ses fiches. Avec un mot.
+PLAN gros TOBI
+TOBI dit (curieux) Quel mot ?
+PLAN gros NOX
+NOX dit (sec) Courage.
 ATTENDRE 0.4

@@ -50,6 +50,12 @@ import E42 from '../shorts/42_mon_prof_a_detecte_l_ia.txt';
 import E43 from '../shorts/43_stage_a_zero_euro.txt';
 import E44 from '../shorts/44_le_serveur_sous_le_lit.txt';
 import E45 from '../shorts/45_expose_de_demain.txt';
+import E46 from '../shorts/46_340_euros_de_pates_livrees.txt';
+import E47 from '../shorts/47_j_ai_conteste_mon_4_sur_20.txt';
+import E48 from '../shorts/48_j_ai_vendu_mon_sweat_en_ligne.txt';
+import E49 from '../shorts/49_j_ai_loue_mon_compte_de_films.txt';
+import E50 from '../shorts/50_claude_devait_me_reveiller.txt';
+import E51 from '../shorts/51_codex_a_eu_mon_stage.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
@@ -98,6 +104,12 @@ startViewer({
     "43. Mon stage à 0 € m'a fait Head of Growth": E43,
     "44. J'ai caché un serveur sous mon lit": E44,
     "45. Gemini a fait mon exposé en 400 diapos": E45,
+    "46. J'ai dépensé 340 € en pâtes livrées": E46,
+    "47. J'ai contesté mon 4 sur 20": E47,
+    "48. J'ai vendu mon sweat en ligne": E48,
+    "49. J'ai loué mon compte de films à 400 personnes": E49,
+    "50. Claude Code devait me réveiller": E50,
+    "51. Codex a eu mon stage": E51,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

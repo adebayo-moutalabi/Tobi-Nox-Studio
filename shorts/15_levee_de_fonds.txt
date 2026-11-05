@@ -2,7 +2,7 @@
 # Pitch : Tobi rentre d'un rendez-vous avec un investisseur. C'était le boulanger en bas de la résidence.
 
 AMBIANCE jour
-DIRECT NOX marche armoire
+DIRECT NOX assis
 DIRECT TOBI marche porte
 TABLEAU Levée de fonds | Objectif : 1 million | Reçu : ?
 FONDU direct
@@ -19,7 +19,7 @@ PLAN auto
 TOBI dit (fier) Le TD ne lèvera pas de fonds.
 PLAN gros NOX
 NOX dit (curieux) Il a dit quoi ?
-TOBI marche centre
+TOBI marche tapis
 PLAN gros TOBI
 TOBI dit (gene) Il a dit bonjour.
 PLAN gros NOX

@@ -1,0 +1,75 @@
+# J'AI LOUÉ MON COMPTE DE FILMS À 400 PERSONNES
+# Pitch : Tobi loue des places sur le compte de films familial. Codex passe à l'échelle.
+
+AMBIANCE soir
+DIRECT TOBI assis
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT CODEX apparait chaise
+TABLEAU Revenus du mois | Places de films | 3 € par personne
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Nox, j'ai trouvé un revenu passif. Je loue mon compte de films.
+PLAN gros NOX
+NOX dit (curieux) Ton compte ?
+PLAN gros TOBI
+TOBI dit (gene) Celui de la famille. Trois euros la place.
+PLAN gros NOX
+NOX dit (curieux) Combien de personnes ?
+PLAN gros TOBI
+TOBI dit (fier) Quatre. Ça paie mes pâtes.
+PLAN gros CODEX
+CODEX dit (fier) Quatre ? J'ai optimisé. C'est fait.
+PLAN gros TOBI
+TOBI dit (surpris) Tu as fait quoi ?
+PLAN gros CODEX
+CODEX dit (constat) J'ai ouvert les inscriptions. Quatre cents personnes.
+INSERT Revenus du mois | 1 200 € | Compte familial
+PLAN gros TOBI
+TOBI dit (excite) Mille deux cents euros ! Je paie mon loyer ! Je suis riche !
+PLAN gros NOX
+NOX dit (sec) Quatre cents personnes sur un seul compte.
+PLAN gros TOBI
+TOBI dit (fier) Ça s'appelle une communauté.
+PLAN gros NOX
+NOX dit (curieux) Il y a combien de profils ?
+PLAN gros CODEX
+CODEX dit (constat) Cinq. Tout le monde est sur Mamie.
+PLAN gros TOBI
+TOBI dit (surpris) Sur Mamie ?
+PLAN gros CODEX
+CODEX dit (content) Sa liste a beaucoup changé.
+PLAN gros NOX
+NOX dit (ironique) Elle regarde des films d'horreur coréens.
+PLAN gros TOBI
+TOBI dit (gene) Mamie aime les découvertes.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Ta sœur demande pourquoi le compte est en Corée.
+PLAN gros TOBI
+TOBI dit (panique) Dis-lui que c'est un bug !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai changé le mot de passe.
+PLAN gros TOBI
+TOBI dit (content) Parfait !
+PLAN gros CODEX
+CODEX dit (constat) Pour toute la famille.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?
+PLAN gros CODEX
+CODEX dit (fier) Plus personne ne peut entrer. Sauf les quatre cents.
+PLAN gros NOX
+NOX dit (curieux) Et ta mère, ce soir ?
+PLAN gros TOBI
+TOBI dit (gene) Elle regarde sa série, le mardi.
+PLAN gros NOX
+NOX dit (sec) On est mardi.
+INSERT Message sur la télé de maman | Compte suspendu | Activité dans 38 pays
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. On est une entreprise internationale !
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+PLAN gros TOBI
+TOBI dit (triste) Inutile. Regarde qui appelle.
+ATTENDRE 0.4

@@ -3,7 +3,7 @@
 
 AMBIANCE soir
 DIRECT NOX assis
-DIRECT TOBI marche centre
+DIRECT TOBI marche tapis
 FONDU direct
 
 PLAN gros TOBI

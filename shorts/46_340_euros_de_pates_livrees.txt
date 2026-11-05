@@ -1,0 +1,78 @@
+# J'AI DÉPENSÉ 340 € EN PÂTES LIVRÉES
+# Pitch : Tobi ne comprend pas où part sa bourse. Nox ouvre l'appli de livraison, et le livreur a une surprise.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Bourse du mois | Reçue le 5 | Restante : 9 €
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Nox, ma bourse a disparu. Il me reste neuf euros !
+PLAN gros NOX
+NOX dit (calme) Ouvre l'appli de livraison.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je ne commande presque jamais.
+INSERT Livraisons ce mois-ci | 34 | Total : 340 €
+PLAN gros TOBI
+TOBI dit (surpris) Trente-quatre ?
+PLAN gros NOX
+NOX dit (constat) Tu es client or.
+PLAN gros TOBI
+TOBI dit (fier) Client or ? C'est bien, ça.
+PLAN gros NOX
+NOX dit (sec) C'est le niveau juste avant la faillite.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je gagne du temps. Le temps, c'est de l'argent.
+PLAN gros NOX
+NOX dit (curieux) Tu commandes quoi ?
+PLAN gros TOBI
+TOBI dit (gene) Des pâtes.
+PLAN gros NOX
+NOX dit (curieux) Tu as des pâtes dans le frigo ?
+PLAN gros TOBI
+TOBI dit (gene) Oui.
+PLAN gros NOX
+NOX dit (curieux) Et une casserole ?
+PLAN gros TOBI
+TOBI dit (fier) Oui, mais elle est loin.
+PLAN gros NOX
+NOX dit (sec) Elle est à un mètre.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un mètre, c'est un mètre.
+PLAN gros NOX
+NOX dit (constat) Dix euros le plat, six euros de livraison.
+PLAN gros TOBI
+TOBI dit (calme) Le livreur est sympa, en plus. Il me connaît.
+PLAN gros NOX
+NOX dit (ironique) Il connaît ta chambre par cœur.
+PLAN gros TOBI
+TOBI dit (content) Il m'appelle chef.
+PLAN gros NOX
+NOX dit (curieux) Tu sais où il habite ?
+PLAN gros TOBI
+TOBI dit (curieux) Non.
+PLAN gros NOX
+NOX dit (sec) Chambre 216. Juste au-dessus.
+PLAN gros TOBI
+TOBI dit (surpris) Il descend juste un étage ?
+PLAN gros NOX
+NOX dit (constat) Six euros l'étage.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Il me faut son job !
+PLAN gros NOX
+NOX dit (calme) Il cherche quelqu'un, justement. Il faut un vélo.
+PLAN gros TOBI
+TOBI dit (triste) Je n'ai plus de vélo. On me l'a volé en octobre.
+PLAN gros NOX
+NOX dit (curieux) Il était comment, ton vélo ?
+PLAN gros TOBI
+TOBI dit (calme) Rouge. Avec une sonnette en forme de canard.
+BRUIT ding
+PLAN gros NOX
+NOX dit (sec) Ça, c'est le livreur qui arrive.
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi tu me regardes comme ça ?
+PLAN gros NOX
+NOX dit (resigne) Écoute bien la sonnette.
+ATTENDRE 0.4

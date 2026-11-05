@@ -1,0 +1,81 @@
+# J'AI CONTESTÉ MON 4 SUR 20
+# Pitch : Tobi est sûr que sa note est une erreur. Claude Code l'aide à écrire au prof, et ça empire.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+ECRAN note_droit.pdf
+TABLEAU Droit des contrats | Note : 4 sur 20 | Injustice ?
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (colere) Quatre sur vingt ! C'est une erreur, je vais contester.
+PLAN gros NOX
+NOX dit (curieux) Tu as lu le sujet ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai lu le titre. Il était très clair.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je t'aider à rédiger ta réclamation ?
+PLAN gros TOBI
+TOBI dit (excite) Oui ! Sois ferme. Dis que je mérite au moins dix.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je demander sur quelle base ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai écrit quatre pages.
+PLAN gros NOX
+NOX dit (sec) En taille vingt.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pour le confort de lecture.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Le mail est prêt. Puis-je l'envoyer ?
+PLAN gros TOBI
+TOBI dit (fier) Envoie !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Veux-tu d'abord relire ?
+PLAN gros TOBI
+TOBI dit (colere) Envoie !
+PLAN gros CLAUDE
+CLAUDE dit (content) C'est envoyé, avec tout mon respect.
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Il a déjà répondu.
+PLAN gros TOBI
+TOBI dit (excite) Tu vois ! Il reconnaît son erreur !
+PLAN gros NOX
+NOX dit (constat) Il a relu ta copie.
+INSERT Nouvelle note | 3 sur 20 | Après relecture
+PLAN gros TOBI
+TOBI dit (panique) Trois ?
+PLAN gros NOX
+NOX dit (sec) Il avait compté ton nom comme un point.
+PLAN gros TOBI
+TOBI dit (colere) Claude, réponds-lui ! Dis que c'est scandaleux !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je te déconseiller cela ?
+PLAN gros TOBI
+TOBI dit (colere) Non ! Envoie !
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est envoyé.
+BRUIT ding
+INSERT Nouvelle note | 2 sur 20 | Il a retrouvé une faute
+PLAN gros TOBI
+TOBI dit (triste) Il me reste combien de points ?
+PLAN gros NOX
+NOX dit (constat) Deux. Dont un pour la date.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je suggérer d'arrêter ?
+PLAN gros TOBI
+TOBI dit (illumine) Attends. Et si je demandais un entretien ?
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (fier) À ce rythme, je peux finir à zéro avec les honneurs.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il vient d'écrire. Il te remercie.
+PLAN gros TOBI
+TOBI dit (curieux) Pour quoi ?
+PLAN gros CLAUDE
+CLAUDE dit (constat) Tu es son nouvel exemple en cours.
+ATTENDRE 0.4

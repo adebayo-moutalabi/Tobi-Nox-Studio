@@ -2,7 +2,7 @@
 # Pitch : Fin de mois au CROUS. Tobi transforme un paquet de pâtes en stratégie.
 
 AMBIANCE soir
-DIRECT TOBI marche centre
+DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Budget du mois | Reste : 6 € | Jours : 9
 FONDU direct

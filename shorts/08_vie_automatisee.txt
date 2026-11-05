@@ -2,7 +2,7 @@
 # Pitch : Tobi a tout automatisé dans sa chambre CROUS, y compris sa mère et 40 kilos de riz.
 
 AMBIANCE soir
-DIRECT TOBI marche centre
+DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Ma vie, version 2 | 23 automatisations | Tout est sous contrôle
 FONDU direct

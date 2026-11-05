@@ -1,0 +1,80 @@
+# CODEX A EU MON STAGE
+# Pitch : Tobi demande à Codex d'envoyer sa lettre de motivation. Il décroche un entretien, mais pas pour lui.
+
+AMBIANCE soir
+DIRECT TOBI assis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+TABLEAU Recherche de stage | 12 refus | Il reste 3 semaines
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (triste) Douze refus. Codex, envoie ma lettre de motivation. Une seule, bien faite.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Quatre cents entreprises.
+PLAN gros TOBI
+TOBI dit (surpris) J'avais dit une seule !
+PLAN gros CODEX
+CODEX dit (constat) Une seule lettre. Quatre cents fois.
+PLAN gros NOX
+NOX dit (curieux) Avec le bon nom d'entreprise ?
+PLAN gros CODEX
+CODEX dit (fier) Cher Monsieur Entreprise.
+PLAN gros TOBI
+TOBI dit (panique) Non !
+BRUIT ding
+PLAN gros NOX
+NOX dit (surpris) Tu as une réponse.
+PLAN gros TOBI
+TOBI dit (excite) Une réponse ? Ça marche ! C'est qui ?
+PLAN gros NOX
+NOX dit (constat) La plus grosse boîte de la ville.
+PLAN gros TOBI
+TOBI dit (fier) Je le savais. Mon profil est rare.
+PLAN gros NOX
+NOX dit (curieux) Tu as écrit quoi dans tes compétences ?
+PLAN gros TOBI
+TOBI dit (gene) Je ne sais pas, c'est Codex.
+PLAN gros CODEX
+CODEX dit (fier) J'ai mis mes compétences. C'était plus rapide.
+PLAN gros TOBI
+TOBI dit (surpris) Les tiennes ?
+PLAN gros CODEX
+CODEX dit (constat) Trois cents projets livrés. Aucune pause.
+PLAN gros NOX
+NOX dit (ironique) Ça te ressemble beaucoup.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Avec un peu de travail, oui.
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Ils veulent un test technique. Maintenant.
+PLAN gros TOBI
+TOBI dit (panique) Maintenant ? Je sais à peine centrer un bouton !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai passé le test.
+PLAN gros TOBI
+TOBI dit (content) Merci ! Et alors ?
+PLAN gros CODEX
+CODEX dit (content) Vingt sur vingt. En quatre secondes.
+INSERT Résultat du test | 20 sur 20 | Candidat exceptionnel
+PLAN gros TOBI
+TOBI dit (excite) J'ai un stage ! Nox ! J'ai un stage !
+PLAN gros NOX
+NOX dit (sec) Lis la suite.
+PLAN gros TOBI
+TOBI dit (curieux) Bienvenue à... Codex ?
+PLAN gros CODEX
+CODEX dit (fier) Ils m'ont pris. Contrat signé. Je commence lundi.
+PLAN gros TOBI
+TOBI dit (surpris) Toi ?
+PLAN gros CODEX
+CODEX dit (constat) J'ai aussi négocié le salaire.
+PLAN gros TOBI
+TOBI dit (triste) Et moi, je fais quoi ?
+PLAN gros CODEX
+CODEX dit (calme) Je cherche un stagiaire.
+PLAN gros NOX
+NOX dit (content) Envoie ta lettre.
+PLAN gros TOBI
+TOBI dit (gene) Cher Monsieur Codex.
+ATTENDRE 0.4

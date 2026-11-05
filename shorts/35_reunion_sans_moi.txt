@@ -2,9 +2,8 @@
 # Pitch : Tobi rentre de la cuisine et surprend Nox et Claude Code en pleine réunion sur son cas.
 
 AMBIANCE soir
-DIRECT TOBI marche centre
-DIRECT NOX travaille
-DIRECT NOX pivote
+DIRECT TOBI marche tapis
+DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 TABLEAU Ordre du jour | 1. Tobi | 2. Encore Tobi
 FONDU direct

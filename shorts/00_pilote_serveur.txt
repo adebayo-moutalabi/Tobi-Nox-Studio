@@ -49,6 +49,7 @@ NOX dit (calme) Le client te paie combien ?
 PLAN gros TOBI
 TOBI dit (gene) Cent cinquante euros.
 INSERT Ton bilan | -697 € | Par mois
+PLAN gros NOX
 NOX dit (constat) Donc tu paies pour travailler.
 PLAN auto
 TOBI dit (mauvaisefoi) C'est un investissement.

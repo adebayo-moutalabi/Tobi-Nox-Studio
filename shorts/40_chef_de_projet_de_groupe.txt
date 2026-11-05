@@ -3,8 +3,7 @@
 
 AMBIANCE soir
 DIRECT TOBI assis
-DIRECT NOX travaille
-DIRECT NOX pivote
+DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 TABLEAU Projet de groupe | 5 membres | Rendu vendredi
 FONDU direct

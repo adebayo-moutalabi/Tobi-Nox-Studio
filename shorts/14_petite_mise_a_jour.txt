@@ -2,9 +2,8 @@
 # Pitch : Le site du boulanger tombe la veille d'un partiel. Tobi accuse Nox, puis Codex, puis tout le monde.
 
 AMBIANCE soir
-DIRECT TOBI marche centre
-DIRECT NOX travaille
-DIRECT NOX pivote
+DIRECT TOBI marche tapis
+DIRECT NOX assis
 DIRECT CODEX apparait bureau
 ECRAN erreur_500.txt
 TABLEAU Boulangerie Martin | Site en panne | 12 visiteurs perdus

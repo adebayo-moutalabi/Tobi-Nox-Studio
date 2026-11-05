@@ -11,7 +11,7 @@ PLAN auto
 TOBI dit (fier) Mesdames et messieurs du jury, le futur.
 PLAN gros NOX
 NOX dit (ironique) Il n'y a que moi.
-TOBI marche centre
+TOBI marche bureau
 PLAN auto
 TOBI dit (excite) Une appli qui te dit quand manger.
 PLAN gros NOX
