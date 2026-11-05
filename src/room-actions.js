@@ -25,7 +25,7 @@ export function roomActions(v, room) {
       if (toRoom) a.hero.motion.clearPose();
       await swivel(a, toRoom ? ROOM : EAST);
       if (!toRoom) a.hero.motion.togglePose('type');
-    } else a.hero.root.rotation.y = toRoom ? -2.1 : Math.atan2(-0.3, -0.3);
+    } else a.hero.root.rotation.y = toRoom ? -1.75 : Math.atan2(0.06, -0.33);
   }
   async function desk(a) {
     if (big(a)) {
@@ -38,7 +38,7 @@ export function roomActions(v, room) {
       a.hero.motion.togglePose('type');
     } else {
       await arrive(a, P(0.48, -0.28), EAST);
-      const spot = new THREE.Vector3(0.72, 0.745, -0.47), o = v.pos(other(a));
+      const spot = new THREE.Vector3(0.92, 0.745, -0.7), o = v.pos(other(a)); // bien sur le plateau, dont le bord est à x = 0,78
       await v.hop(a, spot, Math.atan2(o.x - spot.x, o.z - spot.z));
       a.spot = { exit: async () => { await v.stand(a); await v.hop(a, P(0.48, -0.28), WEST); } };
       await v.sit(a, 'floor');

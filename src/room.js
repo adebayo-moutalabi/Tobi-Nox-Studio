@@ -94,7 +94,7 @@ function buildStatic(p) {
   const dz0 = -1.88, dz1 = -0.12, dc = (dz0 + dz1) / 2, dl = dz1 - dz0, dx = 1.09;
   wood(p, [dx, 0.725, dc], [0.62, 0.04, dl], { cut: 'z', n: 6 });
   box(p, [0.8, 0.645, dc - 0.2], [0.02, 0.12, dl - 0.42], C.red, { vary: 0.01 });
-  box(p, [dx, 0.65, dc - 0.2], [0.6, 0.015, dl - 0.42], C.woodDark);
+  box(p, [dx + 0.02, 0.65, dc - 0.2], [0.58, 0.015, dl - 0.42], C.woodDark); // en retrait du bandeau rouge : deux faces confondues scintillaient à l'image
   wood(p, [1.385, 0.98, dc], [0.03, 0.48, dl], { cut: 'z', n: 8 });
   box(p, [dx, 0.35, dz0 + 0.02], [0.6, 0.7, 0.03], C.woodDark);
   // Casier sous le plateau

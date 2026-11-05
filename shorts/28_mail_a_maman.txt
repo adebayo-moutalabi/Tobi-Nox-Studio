@@ -6,7 +6,7 @@ DIRECT TOBI travaille
 DIRECT NOX travaille
 DIRECT TOBI pivote
 DIRECT NOX pivote
-DIRECT CODEX apparait ecran
+DIRECT CODEX apparait bureau
 DIRECT GEMINI apparait milieu
 ECRAN mail_maman.txt
 FONDU direct

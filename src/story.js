@@ -22,7 +22,7 @@ const LIEUX = {
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
 // Places en hauteur pour les Aînés, avec apparait : x, y, z
-const PERCHOIRS = { bureau: [0.98, 0.745, -0.52], ecran: [0.82, 0.745, -1.42], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
+const PERCHOIRS = { bureau: [0.98, 0.745, -0.42], frigo: [1.08, 0.89, 1.24], lit: [-0.72, 0.63, 0.72], rebord: [0.22, 1.1, -1.72] };
 // position caméra, cible, focale
 const PLANS = {
   large: [[0.05, 1.55, 2.75], [0, 0.9, -1.9], 58],
@@ -173,8 +173,8 @@ export function createPlayer(v, ui) {
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.26) : top + sp * 0.13 - sp / 2; // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
-        const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * 0.36); // les bords du cadre restent dégagés aussi
-        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && (a.extra || (seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
+        const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
+        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;

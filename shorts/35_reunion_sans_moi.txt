@@ -5,7 +5,7 @@ AMBIANCE soir
 DIRECT TOBI frigo
 DIRECT NOX travaille
 DIRECT NOX pivote
-DIRECT CLAUDE apparait ecran
+DIRECT CLAUDE apparait bureau
 TABLEAU Ordre du jour | 1. Tobi | 2. Encore Tobi
 FONDU direct
 
