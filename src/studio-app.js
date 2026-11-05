@@ -42,6 +42,14 @@ import E34 from '../shorts/34_ma_mere_a_vu_mon_linkedin.txt';
 import E35 from '../shorts/35_reunion_sans_moi.txt';
 import E36 from '../shorts/36_je_deviens_influenceur.txt';
 import E37 from '../shorts/37_le_wifi_a_coupe.txt';
+import E38 from '../shorts/38_mes_apl_ont_finance_ma_startup.txt';
+import E39 from '../shorts/39_j_ai_revise_le_mauvais_partiel.txt';
+import E40 from '../shorts/40_chef_de_projet_de_groupe.txt';
+import E41 from '../shorts/41_neuf_jours_de_pates.txt';
+import E42 from '../shorts/42_mon_prof_a_detecte_l_ia.txt';
+import E43 from '../shorts/43_stage_a_zero_euro.txt';
+import E44 from '../shorts/44_le_serveur_sous_le_lit.txt';
+import E45 from '../shorts/45_expose_de_demain.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
@@ -82,6 +90,14 @@ startViewer({
     '35. Mes IA ont fait une réunion sans moi': E35,
     '36. Je suis influenceur avec 12 abonnés': E36,
     '37. Le wifi a coupé, les IA paniquent': E37,
+    "38. Mes APL ont financé ma start-up": E38,
+    "39. J'ai révisé le mauvais partiel": E39,
+    "40. Je suis le chef d'un groupe de fantômes": E40,
+    "41. Je mange des pâtes depuis 9 jours": E41,
+    "42. Mon prof a détecté l'IA dans mon devoir": E42,
+    "43. Mon stage à 0 € m'a fait Head of Growth": E43,
+    "44. J'ai caché un serveur sous mon lit": E44,
+    "45. Gemini a fait mon exposé en 400 diapos": E45,
     "Le matin de l'examen": HISTOIRE,
   }),
 });

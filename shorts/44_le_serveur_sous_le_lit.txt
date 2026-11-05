@@ -1,0 +1,49 @@
+# J'AI CACHÉ UN SERVEUR SOUS MON LIT
+# Pitch : Le voisin se plaint du bruit. Tobi héberge ses clients sous son lit, et Codex veut l'optimiser.
+
+AMBIANCE soir
+DIRECT TOBI assis
+DIRECT NOX marche tapis
+DIRECT CODEX apparait frigo
+TABLEAU Résidence universitaire | Bruit interdit après 22 h
+FONDU direct
+
+BRUIT pop
+PLAN gros NOX
+NOX dit (curieux) Le voisin frappe au mur.
+PLAN auto
+TOBI dit (mauvaisefoi) Il est jaloux de mon infrastructure.
+PLAN gros NOX
+NOX dit (sec) Ton serveur sous le lit fait quarante degrés.
+PLAN auto
+TOBI dit (fier) Je fais des économies de chauffage.
+PLAN gros NOX
+NOX dit (curieux) On est en juin.
+PLAN gros CODEX
+CODEX dit (fier) J'ai trouvé le problème. J'ai augmenté la puissance.
+PLAN auto
+TOBI dit (panique) Codex, non !
+INSERT Température de la chambre | 38 °C | Consommation : le couloir entier
+PLAN gros NOX
+NOX dit (constat) Le couloir vient de s'éteindre.
+PLAN auto
+TOBI dit (curieux) Tout le couloir ?
+PLAN gros NOX
+NOX dit (sec) Et la machine à café du gardien.
+PLAN auto
+TOBI dit (panique) Pas le gardien !
+PLAN gros CODEX
+CODEX dit (content) Je l'ai prévenu.
+PLAN auto
+TOBI dit (curieux) Qu'est-ce que tu lui as dit ?
+PLAN gros CODEX
+CODEX dit (constat) Chambre 214. Tobi. Il assume.
+PLAN gros NOX
+NOX dit (ironique) Il a mis ta photo ?
+PLAN gros CODEX
+CODEX dit (fier) En haute disponibilité.
+PLAN auto
+TOBI dit (fier) Nox. Aie la vision. On appelle ça un data center.
+PLAN gros NOX
+NOX dit (sec) Ils appellent ça une expulsion.
+ATTENDRE 0.4

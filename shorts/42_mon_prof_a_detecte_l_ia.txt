@@ -1,0 +1,54 @@
+# MON PROF A DÉTECTÉ L'IA DANS MON DEVOIR
+# Pitch : Le prof trouve le devoir de Tobi trop bien écrit. Claude Code a laissé quelques indices.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+ECRAN devoir_final.txt
+TABLEAU Devoir de droit | Note : ? | Prof : à voir
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Le prof veut me voir. Il pense que c'est une IA.
+PLAN gros NOX
+NOX dit (ironique) Ton devoir ? Quelle surprise.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Impossible, j'ai tout relu.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je te demander ce que tu as relu ?
+PLAN gros TOBI
+TOBI dit (gene) Le titre.
+INSERT Dernière phrase du devoir | Puis-je continuer ? | Page 12
+PLAN gros NOX
+NOX dit (sec) Tu as laissé sa question.
+PLAN gros TOBI
+TOBI dit (panique) Claude, pourquoi tu as écrit ça ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je voulais ta permission pour la conclusion.
+PLAN gros TOBI
+TOBI dit (fier) Je dirai que c'est mon style.
+PLAN gros NOX
+NOX dit (curieux) Et ton mot préféré, à l'oral ?
+PLAN gros TOBI
+TOBI dit (fier) Genre.
+PLAN gros NOX
+NOX dit (constat) Le devoir dit : néanmoins, quarante fois.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je te proposer une solution honnête ?
+PLAN gros TOBI
+TOBI dit (curieux) Laquelle ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu réécris tout toi-même.
+PLAN gros TOBI
+TOBI dit (colere) Ça, c'est de la violence !
+PLAN gros NOX
+NOX dit (sec) Ça s'appelle étudier.
+PLAN gros TOBI
+TOBI dit (triste) Et je lui dis quoi, au prof ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) La vérité. Puis-je l'écrire pour toi ?
+PLAN gros NOX
+NOX dit (resigne) Vous êtes foutus tous les deux.
+ATTENDRE 0.4

@@ -1,0 +1,50 @@
+# GEMINI A FAIT MON EXPOSÉ EN 400 DIAPOS
+# Pitch : Tobi a cinq minutes d'exposé demain. Gemini a légèrement trop préparé.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT NOX marche centre
+DIRECT TOBI pivote
+DIRECT GEMINI apparait lit
+ECRAN expose_final.pptx
+TABLEAU Exposé demain | 5 minutes | Sujet : l'eau
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Gemini, mon exposé. Cinq minutes, sur l'eau.
+PLAN gros GEMINI
+GEMINI dit (excite) C'est prêt. Quatre cents diapositives.
+PLAN gros TOBI
+TOBI dit (surpris) Quatre cents ?
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai couvert l'eau depuis le Big Bang.
+PLAN gros NOX
+NOX dit (ironique) Il arrive à la pluie quand ?
+PLAN gros GEMINI
+GEMINI dit (content) Diapositive trois cents.
+PLAN gros TOBI
+TOBI dit (panique) J'ai cinq minutes, pas trois jours !
+PLAN gros GEMINI
+GEMINI dit (fier) Je peux faire une version courte.
+PLAN gros TOBI
+TOBI dit (content) Enfin ! Combien de diapos ?
+PLAN gros GEMINI
+GEMINI dit (constat) Une. Avec le mot eau.
+INSERT Version courte | EAU | Sources : 2 400
+PLAN gros NOX
+NOX dit (sec) C'est efficace.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et si je la lis très lentement ?
+PLAN gros NOX
+NOX dit (curieux) Tu connais ton sujet ?
+PLAN gros TOBI
+TOBI dit (fier) J'en bois tous les jours.
+PLAN gros GEMINI
+GEMINI dit (excite) J'ai aussi écrit une chanson pour la conclusion.
+PLAN gros TOBI
+TOBI dit (curieux) Une chanson ?
+PLAN gros GEMINI
+GEMINI dit (fier) Avec une chorale. Elle arrive demain à huit heures.
+PLAN gros NOX
+NOX dit (resigne) Je ne viens pas à cet exposé.
+ATTENDRE 0.4

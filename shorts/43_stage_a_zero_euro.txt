@@ -1,0 +1,52 @@
+# MON STAGE À 0 € M'A FAIT HEAD OF GROWTH
+# Pitch : Tobi décroche enfin un stage. Le titre est immense, le salaire beaucoup moins.
+
+AMBIANCE soir
+DIRECT TOBI miroir
+DIRECT NOX assis
+TABLEAU Stage trouvé ! | Head of Growth | Lundi 9 h
+FONDU direct
+
+PLAN miroir
+TOBI dit (excite) Nox ! J'ai un stage. Head of Growth.
+PLAN gros NOX
+NOX dit (surpris) Bravo. Dans quelle boîte ?
+PLAN miroir
+TOBI dit (fier) Une start-up qui va changer le monde.
+PLAN gros NOX
+NOX dit (curieux) Combien d'employés ?
+PLAN miroir
+TOBI dit (fier) Moi. Et le fondateur.
+PLAN gros NOX
+NOX dit (curieux) Et il te paie combien ?
+PLAN miroir
+TOBI dit (gene) On paie en expérience.
+INSERT Gratification | 0 € | Plus l'expérience
+PLAN gros NOX
+NOX dit (sec) C'est illégal, au-delà de deux mois.
+TOBI marche tapis
+PLAN auto
+TOBI dit (mauvaisefoi) J'ai aussi des parts. Zéro virgule un pour cent.
+PLAN gros NOX
+NOX dit (curieux) De quoi ?
+PLAN auto
+TOBI dit (fier) D'une idée.
+PLAN gros NOX
+NOX dit (curieux) Tu feras quoi, le lundi ?
+PLAN auto
+TOBI dit (fier) Stratégie. Croissance. Et je promène son chien.
+PLAN gros NOX
+NOX dit (ironique) Head of Chien.
+PLAN auto
+TOBI dit (mauvaisefoi) C'est un chien à fort potentiel.
+PLAN gros NOX
+NOX dit (curieux) Tu as signé la convention avec la fac ?
+PLAN auto
+TOBI dit (gene) Il dit que les papiers, c'est l'ancien monde.
+PLAN gros NOX
+NOX dit (sec) Montre-moi son nom.
+PLAN auto
+TOBI dit (fier) Il s'appelle Kevin. Il est en L2.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

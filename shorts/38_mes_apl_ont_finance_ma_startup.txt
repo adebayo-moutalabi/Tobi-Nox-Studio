@@ -1,0 +1,50 @@
+# MES APL ONT FINANCÉ MA START-UP
+# Pitch : Les APL tombent. Tobi les voit comme une levée de fonds publique.
+
+AMBIANCE jour
+DIRECT TOBI marche fenetre
+DIRECT NOX marche centre
+TABLEAU Compte courant | 4,12 € | APL : aujourd'hui
+FONDU direct
+
+BRUIT ding
+PLAN fenetre
+TOBI dit (excite) Nox ! Ils sont tombés !
+PLAN gros NOX
+NOX dit (curieux) Qui ça ?
+TOBI marche tapis
+PLAN auto
+TOBI dit (fier) Mes investisseurs.
+INSERT Virement reçu | 187 € | Caisse d'allocations familiales
+PLAN gros NOX
+NOX dit (sec) C'est ton APL.
+PLAN auto
+TOBI dit (mauvaisefoi) Une levée de fonds publique. Sans perdre de parts.
+PLAN gros NOX
+NOX dit (sec) C'est pour le loyer.
+PLAN auto
+TOBI dit (fier) Le loyer, c'est du passé. Moi, je pense croissance.
+PLAN gros NOX
+NOX dit (curieux) Tu as déjà dépensé combien ?
+PLAN auto
+TOBI dit (gene) Un nom de domaine. Pour la vision.
+PLAN gros NOX
+NOX dit (curieux) Lequel ?
+PLAN auto
+TOBI dit (fier) Tobi point international.
+PLAN gros NOX
+NOX dit (ironique) Tu vends à l'international ?
+PLAN auto
+TOBI dit (fier) Ma mère est en vacances en Espagne.
+PLAN gros NOX
+NOX dit (sec) Elle t'a envoyé dix euros.
+PLAN auto
+TOBI dit (fier) Donc j'ai déjà des revenus à l'étranger !
+INSERT Compte après dépenses | 3,40 € | Il reste 26 jours
+PLAN gros NOX
+NOX dit (constat) Trois euros quarante. Vingt-six jours.
+PLAN auto
+TOBI dit (illumine) Et si je déclarais Nox comme personne à charge ?
+PLAN gros NOX
+NOX dit (resigne) C'est plutôt l'inverse.
+ATTENDRE 0.4

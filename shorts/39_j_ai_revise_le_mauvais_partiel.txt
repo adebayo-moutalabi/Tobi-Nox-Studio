@@ -1,0 +1,52 @@
+# J'AI RÉVISÉ LE MAUVAIS PARTIEL
+# Pitch : Pour une fois, Tobi a tout révisé. Il reste un petit détail à vérifier.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX travaille
+DIRECT NOX pivote
+TABLEAU Partiel demain | Tout révisé | Enfin
+FONDU direct
+
+PLAN auto
+TOBI dit (fier) Nox, tu peux être fier. J'ai tout révisé.
+PLAN gros NOX
+NOX dit (surpris) Tout ?
+PLAN auto
+TOBI dit (fier) Tout. Trois nuits. Fiches, schémas, annales.
+PLAN gros NOX
+NOX dit (content) Je suis ému. Vraiment.
+PLAN auto
+TOBI dit (excite) Vas-y, interroge-moi sur la finance d'entreprise.
+PLAN gros NOX
+NOX dit (curieux) Pourquoi la finance d'entreprise ?
+PLAN auto
+TOBI dit (fier) Parce que c'est le partiel de demain.
+PLAN gros NOX
+NOX dit (calme) Tobi. Regarde ton emploi du temps.
+INSERT Partiel de demain | Réseaux | Salle B204, 8 h
+PLAN auto
+TOBI dit (surpris) Réseaux ?
+PLAN gros NOX
+NOX dit (constat) La finance, c'était en décembre.
+PLAN auto
+TOBI dit (panique) Et on est quand ?
+PLAN gros NOX
+NOX dit (sec) En mai.
+PLAN auto
+TOBI dit (mauvaisefoi) Donc je suis très en avance sur l'année prochaine.
+PLAN gros NOX
+NOX dit (ironique) Tu l'as validée, la finance ?
+PLAN auto
+TOBI dit (gene) J'ai eu quatre.
+PLAN gros NOX
+NOX dit (curieux) Tu connais quoi en réseaux ?
+PLAN auto
+TOBI dit (fier) Je connais des gens.
+PLAN gros NOX
+NOX dit (sec) Ce ne sont pas ces réseaux.
+PLAN auto
+TOBI dit (illumine) Nox. Aie la vision. Je leur vends mes fiches !
+PLAN gros NOX
+NOX dit (resigne) Elles ont un an de retard.
+ATTENDRE 0.4
