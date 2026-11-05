@@ -79,6 +79,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 5 nov. 2026 | Voir le personnage qui parle dans tous les épisodes | `frame()`, `tools/audit-cadrage.js` |
 | 5 nov. 2026 | Skills pour les vidéos | Hyperframes, Claude Animation Base et Lemo-Opuscar, installés hors du dépôt |
 | 5 nov. 2026 | Skill de logo sûr pour le filigrane et les deux chaînes | `logo-design` version 1.4.5, vérifié puis installé hors du dépôt |
+| 5 nov. 2026 | Mascotte Tobi & Nox, mignonne et souriante | Version 2 retenue : Tobi lève les bras, Nox a les yeux rieurs. Avatar, emblème et filigrane conservés hors du dépôt |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
