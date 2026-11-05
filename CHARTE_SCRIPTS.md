@@ -18,7 +18,11 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 - **Codex** agit avant la fin de la phrase : « C'est fait. » Il va toujours trop loin.
 - **Gemini** a déjà tout lu et propose tous les formats : « J'ai aussi fait un podcast. »
 
-Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait gauche`, `DIRECT CODEX apparait milieu`, `DIRECT GEMINI apparait droite`, puis `GEMINI dit (fier) ...`.
+Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
+
+- **Places au sol :** `gauche`, `milieu`, `droite`.
+- **Places en hauteur :** `bureau`, `ecran`, `lit`, `rebord` (la fenêtre). À préférer souvent au sol.
+- **Combien par épisode :** un ou deux le plus souvent. Les trois ensemble restent un événement.
 
 ## Les phrases de la série
 
@@ -61,6 +65,10 @@ Compter environ 100 à 120 mots de dialogue et une vingtaine de répliques. Vér
 - Répliques de 1 à 8 mots le plus souvent.
 - La plus forte punchline arrive dans le dernier quart.
 - Le mot qui fait rire arrive en dernier dans la phrase.
+
+## Les titres
+
+Le titre vend la situation, à la première personne si possible, en moins de 45 caractères. Un chiffre ou un paradoxe aide : « Trois heures pour un point-virgule ». Jamais de numéro d'épisode.
 
 ## Les recettes de punchline
 

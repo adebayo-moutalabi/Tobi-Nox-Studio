@@ -42,6 +42,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Les Aînés.** Claude, Chat et Gemini : même corps que Nox, couleur et taille propres (`aine()` dans `src/cast.js`), commandes `entre` et `apparait`, une voix réglable chacun. Épisodes 16 à 20.
 - **Aînés en logos.** Claude Code (crabe en pixels), Codex (nuage `>_`) et Gemini (étoile en lévitation) remplacent les Nox recolorés. Les tracés viennent des logos, le squelette et les gestes de ceux de Nox (`src/logos.js`). À l'arrêt, un logo reste tourné vers la caméra pour rester reconnaissable. Codex remplace Chat.
 - **Départ immédiat et épisodes plus longs.** Les Aînés sont en place dès la première image, les épisodes 16 à 19 sont réécrits, les épisodes 21 à 29 ajoutés. Durées mesurées sans voix : 46 à 60 s.
+- **Aînés plus petits et mieux placés.** Environ un quart plus petits. Ils regardent celui qui parle, en gardant leur logo lisible, et se posent sur le bureau, le lit ou le rebord (`PERCHOIRS` dans `src/story.js`).
+- **Épisodes 30 à 37 et nouveaux titres.** Un, deux ou trois Aînés selon l'épisode. Tous les titres sont réécrits pour accrocher.
 
 ## À faire
 
