@@ -4,11 +4,13 @@
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT NOX pivote
 ECRAN site_boulangerie.js
 FONDU direct
 
 PLAN clavier
 TOBI tape ça marche pas ça marche pas ça marche pas
+TOBI pivote
 PLAN gros TOBI
 TOBI dit (colere) Trois heures ! Trois heures sur la même ligne !
 PLAN gros NOX
@@ -17,8 +19,10 @@ PLAN gros TOBI
 TOBI dit (fier) Non. Un vrai développeur trouve seul.
 PLAN gros NOX
 NOX dit (sec) D'accord.
+TOBI pivote bureau
 PLAN clavier
 TOBI tape peut-être le serveur
+TOBI pivote
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est sûrement le serveur. Ou le cloud.
 PLAN gros NOX

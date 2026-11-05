@@ -4,7 +4,7 @@
 AMBIANCE jour
 DIRECT TOBI assis
 DIRECT NOX assis
-DIRECT CODEX apparait bureau
+DIRECT CODEX apparait chaise
 FONDU direct
 
 PLAN gros TOBI

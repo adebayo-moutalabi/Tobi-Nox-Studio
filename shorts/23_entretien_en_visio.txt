@@ -4,6 +4,7 @@
 AMBIANCE jour
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN entretien_de_stage.visio
 FONDU direct

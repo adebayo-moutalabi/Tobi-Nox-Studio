@@ -39,11 +39,11 @@ TOBI dit (illumine) Attends. Tu fais des vidéos ?
 PLAN gros GEMINI
 GEMINI dit (fier) Dix mille formats. Lequel veux-tu ?
 PLAN gros TOBI
-TOBI dit (excite) Nox. Aie la vision. On vend ma vie en série !
+TOBI dit (excite) Nox, écoute. On vend ma vie en série !
 PLAN gros NOX
 NOX dit (curieux) Trois lignes, en combien de saisons ?
 PLAN gros TOBI
 TOBI dit (fier) Six.
 PLAN gros NOX
-NOX dit (resigne) Tobi. Non.
+NOX dit (punchline) Une ligne par saison. Il en manque trois.
 ATTENDRE 0.4

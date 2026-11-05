@@ -19,33 +19,33 @@ PLAN auto
 TOBI dit (fier) Le TD ne lèvera pas de fonds.
 PLAN gros NOX
 NOX dit (curieux) Il a dit quoi ?
-TOBI frigo
-PLAN frigo
+TOBI marche centre
+PLAN gros TOBI
 TOBI dit (gene) Il a dit bonjour.
 PLAN gros NOX
 NOX dit (sec) C'était qui ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Le boulanger.
 PLAN gros NOX
 NOX dit (curieux) Tu lui as présenté le projet ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Dix minutes, devant les croissants.
 PLAN gros NOX
 NOX dit (ironique) Il a investi combien ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Une baguette.
 INSERT Levée de fonds | 1 | Baguette
 PLAN gros NOX
 NOX dit (constat) C'est ta première levée de fonds.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Et il garde zéro pour cent de la boîte.
 PLAN gros NOX
 NOX dit (curieux) Pourquoi il te l'a donnée ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (gene) Il a dit : mange, mon petit.
 PLAN gros NOX
 NOX dit (content) Je l'aime bien.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (excite) Nox. Aie la vision. Valorisation : deux baguettes.
 PLAN gros NOX
 NOX dit (resigne) Tobi. Non.

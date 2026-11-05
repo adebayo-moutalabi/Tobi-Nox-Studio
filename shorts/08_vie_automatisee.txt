@@ -2,39 +2,37 @@
 # Pitch : Tobi a tout automatisé dans sa chambre CROUS, y compris sa mère et 40 kilos de riz.
 
 AMBIANCE soir
-DIRECT TOBI frigo
+DIRECT TOBI marche centre
 DIRECT NOX assis
 TABLEAU Ma vie, version 2 | 23 automatisations | Tout est sous contrôle
 FONDU direct
 
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (excite) Nox, j'ai automatisé ma vie.
 PLAN gros NOX
 NOX dit (curieux) Toute ta vie ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Réveil, mails, courses, réponses à ma mère.
 PLAN gros NOX
 NOX dit (sec) Réponses à ta mère.
 INSERT Automatisations | 23 | Actives ce soir
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Elle reçoit un cœur toutes les six heures.
 PLAN gros NOX
 NOX dit (ironique) Elle a appelé.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (gene) Quand ?
 PLAN gros NOX
 NOX dit (constat) Quatre fois.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Elle est contente, alors. Elle a eu un cœur.
 PLAN gros NOX
 NOX dit (sec) Elle a demandé si tu étais vivant.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Et ma réponse automatique ?
 PLAN gros NOX
 NOX dit (constat) Un cœur.
 INSERT Courses livrées | 40 kg | De riz
-TOBI remet
-TOBI marche centre
 PLAN auto
 TOBI dit (panique) Pourquoi quarante kilos de riz ?
 PLAN gros NOX

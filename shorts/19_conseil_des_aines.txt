@@ -51,5 +51,5 @@ GEMINI dit (content) J'ai résumé son idée. Il vaut mieux partir.
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Puis-je partir ?
 PLAN gros NOX
-NOX dit (resigne) Projet numéro dix-neuf.
+NOX dit (resigne) Je viens avec toi.
 ATTENDRE 0.4

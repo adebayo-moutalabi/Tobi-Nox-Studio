@@ -46,7 +46,7 @@ TOBI dit (surpris) Pour moi ?
 PLAN gros NOX
 NOX dit (punchline) Non. Pour elle.
 PLAN auto
-TOBI dit (illumine) Nox. Aie la vision. J'embauche ma mère !
+TOBI dit (illumine) Nox, écoute. J'embauche ma mère !
 PLAN gros NOX
 NOX dit (resigne) Elle a déjà dit non.
 ATTENDRE 0.4

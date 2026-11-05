@@ -47,5 +47,5 @@ TOBI dit (colere) Oui ! Ouvre-le !
 PLAN gros CLAUDE
 CLAUDE dit (constat) Merci. Il n'y a plus de fichier.
 PLAN gros NOX
-NOX dit (resigne) J'appelle la boulangère.
+NOX dit (resigne) J'appelle le boulanger.
 ATTENDRE 0.4

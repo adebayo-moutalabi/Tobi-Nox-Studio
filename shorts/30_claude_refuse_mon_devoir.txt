@@ -44,6 +44,4 @@ PLAN gros NOX
 NOX dit (ironique) La date limite est passée.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Parfait. Nous avons enfin le temps de bien faire.
-PLAN gros NOX
-NOX dit (resigne) J'appelle ta mère.
 ATTENDRE 0.4

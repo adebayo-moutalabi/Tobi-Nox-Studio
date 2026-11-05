@@ -7,7 +7,7 @@ DIRECT NOX travaille
 DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN devis.txt
-TABLEAU Boulangerie Martin | Site vitrine | 150 euros | Projet n° 16
+TABLEAU Boulangerie Martin | Site vitrine | 150 euros
 FONDU direct
 
 PLAN gros TOBI

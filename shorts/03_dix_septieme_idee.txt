@@ -4,7 +4,7 @@
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-TABLEAU Idées de la semaine | 16 barrées | Une seule survit | Projet n° 17
+TABLEAU Idées de la semaine | 16 barrées | Une seule survit
 FONDU direct
 
 PLAN auto

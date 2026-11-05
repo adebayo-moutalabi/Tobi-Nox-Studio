@@ -5,7 +5,7 @@ AMBIANCE soir
 DIRECT TOBI marche centre
 DIRECT NOX travaille
 DIRECT NOX pivote
-DIRECT CODEX apparait frigo
+DIRECT CODEX apparait bureau
 ECRAN erreur_500.txt
 TABLEAU Boulangerie Martin | Site en panne | 12 visiteurs perdus
 FONDU direct
@@ -44,7 +44,7 @@ TOBI dit (curieux) À lui ?
 PLAN gros CODEX
 CODEX dit (constat) À toute la fac.
 PLAN auto
-TOBI dit (excite) Nox. Aie la vision. Zéro client, zéro problème.
+TOBI dit (excite) Zéro client, zéro problème.
 PLAN gros NOX
-NOX dit (resigne) Projet numéro dix-neuf.
+NOX dit (sec) Va répondre, c'est le boulanger.
 ATTENDRE 0.4

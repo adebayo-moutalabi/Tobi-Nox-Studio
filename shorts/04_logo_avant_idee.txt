@@ -4,6 +4,7 @@
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN logo_v32.txt
 TABLEAU Nouvelle marque | Logo : fini | Nom : ? | Produit : ?
@@ -40,7 +41,10 @@ PLAN gros NOX
 NOX dit (punchline) Donc tu vends de la confiance bleue.
 PLAN gros TOBI
 TOBI dit (illumine) Attends... c'est pas mal, ça !
+TOBI pivote bureau
+PLAN clavier
 TOBI tape Confiance Bleue
+TOBI pivote
 PLAN gros NOX
 NOX dit (resigne) Je n'aurais pas dû parler.
 ATTENDRE 0.4

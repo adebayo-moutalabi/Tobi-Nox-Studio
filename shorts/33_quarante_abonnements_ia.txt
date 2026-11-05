@@ -1,9 +1,10 @@
-# J'AI 40 ABONNEMENTS D'IA ET ZÉRO EURO
-# Pitch : Tobi découvre pourquoi son compte est vide. Il paie toutes les IA du monde pour ne rien faire.
+# J'AI 12 ABONNEMENTS D'IA ET ZÉRO EURO
+# Pitch : Tobi découvre pourquoi son compte est vide. Sa bourse part dans des essais gratuits qu'il a oublié d'annuler.
 
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN releve_de_compte.pdf
 FONDU direct
@@ -18,9 +19,9 @@ PLAN gros NOX
 NOX dit (curieux) Et les abonnements ?
 PLAN gros TOBI
 TOBI dit (fier) J'en ai deux ou trois, pour le business.
-INSERT Abonnements actifs | 40 | Total : 612 € par mois
+INSERT Abonnements actifs | 12 | Total : 87 € par mois
 PLAN gros TOBI
-TOBI dit (panique) Quarante ?
+TOBI dit (panique) Douze ?
 PLAN gros NOX
 NOX dit (constat) Une IA pour résumer tes mails.
 PLAN gros TOBI

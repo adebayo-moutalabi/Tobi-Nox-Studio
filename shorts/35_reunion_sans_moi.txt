@@ -2,7 +2,7 @@
 # Pitch : Tobi rentre de la cuisine et surprend Nox et Claude Code en pleine réunion sur son cas.
 
 AMBIANCE soir
-DIRECT TOBI frigo
+DIRECT TOBI marche centre
 DIRECT NOX travaille
 DIRECT NOX pivote
 DIRECT CLAUDE apparait bureau
@@ -13,14 +13,12 @@ PLAN gros CLAUDE
 CLAUDE dit (calme) Point suivant. Puis-je parler du projet boulangerie ?
 PLAN gros NOX
 NOX dit (sec) Vas-y, on a le temps.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (curieux) Vous parlez de quoi, là-bas ?
 PLAN gros NOX
 NOX dit (surpris) De rien.
 PLAN gros CLAUDE
 CLAUDE dit (calme) De toi. Je ne sais pas mentir.
-TOBI remet
-TOBI marche centre
 PLAN auto
 TOBI dit (colere) Vous faites des réunions sans moi ?
 PLAN gros NOX

@@ -10,7 +10,7 @@ DIRECT NOX travaille
 DIRECT TOBI pivote
 DIRECT NOX pivote
 ECRAN boulangerie.txt
-TABLEAU Boulangerie Martin | Site en ligne ! | 3 clusters | Projet n° 16
+TABLEAU Boulangerie Martin | Site en ligne ! | 3 clusters
 FONDU direct
 
 # 1. La situation, 2. l'annonce

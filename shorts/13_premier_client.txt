@@ -1,5 +1,5 @@
 # J'AI DÉPENSÉ L'ARGENT DE MON PREMIER CLIENT
-# Pitch : Tobi fête un contrat à 2 000 € avec une dépense de plus. Nox regarde ce qui est vraiment encaissé.
+# Pitch : Tobi fête son premier vrai client à 200 € en dépensant l'argent avant de l'avoir. Nox regarde ce qui est vraiment encaissé.
 
 AMBIANCE soir
 DIRECT NOX assis
@@ -12,12 +12,12 @@ TOBI dit (excite) Nox ! J'ai signé mon premier gros client !
 PLAN gros NOX
 NOX dit (curieux) Combien ?
 PLAN auto
-TOBI dit (fier) Deux mille euros.
+TOBI dit (fier) Deux cents euros.
 PLAN gros NOX
 NOX dit (surpris) C'est bien.
 PLAN auto
 TOBI dit (fier) Je sais. Du coup, j'ai commandé un bureau debout.
-INSERT Bureau debout | 1200 € | Déjà payé
+INSERT Bureau debout | 120 € | Déjà payé
 PLAN gros NOX
 NOX dit (curieux) Tu as encaissé combien ?
 PLAN auto

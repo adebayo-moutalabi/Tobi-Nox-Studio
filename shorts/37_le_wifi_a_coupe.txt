@@ -20,7 +20,7 @@ TOBI dit (surpris) Attendez. Vous ne marchez plus sans internet ?
 PLAN gros GEMINI
 GEMINI dit (triste) J'avais tout lu. Je ne retrouve plus la page.
 PLAN gros TOBI
-TOBI dit (fier) Du calme. Je suis ingénieur cloud. Je gère.
+TOBI dit (fier) Du calme. Je suis en licence réseaux. Je gère.
 PLAN gros NOX
 NOX dit (curieux) Tu vas faire quoi ?
 PLAN gros TOBI

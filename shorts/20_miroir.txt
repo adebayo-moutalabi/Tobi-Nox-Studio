@@ -11,23 +11,23 @@ PLAN miroir
 TOBI dit (fier) Bonjour. Je suis Tobi, CEO.
 PLAN gros NOX
 NOX dit (curieux) C'est un oral de licence.
-PLAN miroir
+TOBI marche tapis
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Il faut marquer les esprits.
 PLAN gros NOX
 NOX dit (curieux) CEO de quoi ?
-PLAN miroir
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) De plusieurs choses.
 PLAN gros NOX
 NOX dit (curieux) Combien d'employés ?
-PLAN miroir
+PLAN gros TOBI
 TOBI dit (fier) Deux.
 PLAN gros NOX
 NOX dit (sec) Moi et ton reflet.
-PLAN miroir
+PLAN gros TOBI
 TOBI dit (fier) Mon reflet est très investi.
 PLAN gros NOX
 NOX dit (ironique) Il arrive en retard aussi ?
-TOBI marche tapis
 PLAN auto
 TOBI dit (excite) Nox. Aie la vision. Bientôt, on sera trois.
 PLAN gros NOX
@@ -43,5 +43,5 @@ NOX dit (sec) Tu vas manger quoi ?
 PLAN auto
 TOBI dit (fier) De la vision.
 PLAN gros NOX
-NOX dit (resigne) J'appelle ta mère.
+NOX dit (resigne) Ça ne se mange pas.
 ATTENDRE 0.4

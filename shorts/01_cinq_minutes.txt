@@ -6,6 +6,8 @@
 AMBIANCE jour
 DIRECT TOBI travaille
 DIRECT NOX travaille
+DIRECT TOBI pivote
+DIRECT NOX pivote
 ECRAN revisions.txt
 TABLEAU Examen demain ! | Tout réviser | ce soir, promis
 FONDU direct
@@ -15,10 +17,12 @@ TOBI dit (fier) Ce soir, je révise TOUT le programme.
 NOX mimique doute
 NOX dit (ironique) Tu as dit ça hier.
 TOBI dit (mauvaisefoi) Oui, mais ce soir, j'ai un plan.
+TOBI pivote bureau
 PLAN clavier
 TOBI tape Chapitre 1 :
 PLAN ecran
 ATTENDRE 0.5
+TOBI pivote
 PLAN auto
 TOBI mimique sourire
 TOBI dit (content) Bon. Petite pause, je l'ai méritée.

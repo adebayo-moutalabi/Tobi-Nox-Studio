@@ -2,48 +2,48 @@
 # Pitch : Fin de mois au CROUS. Tobi transforme un paquet de pâtes en stratégie.
 
 AMBIANCE soir
-DIRECT TOBI frigo
-DIRECT NOX marche centre
+DIRECT TOBI marche centre
+DIRECT NOX assis
 TABLEAU Budget du mois | Reste : 6 € | Jours : 9
 FONDU direct
 
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Ce soir, chef Tobi vous propose des pâtes.
 PLAN gros NOX
 NOX dit (ironique) Comme hier.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Hier, c'étaient des pâtes au sel.
 PLAN gros NOX
 NOX dit (curieux) Et ce soir ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Des pâtes au souvenir du sel.
 INSERT Pâtes consécutives | 9 jours | Record de la résidence
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (excite) Je suis en mode survie. Comme les grands fondateurs.
 PLAN gros NOX
-NOX dit (sec) Tu as acheté une souris à cent euros.
-PLAN frigo
+NOX dit (sec) Tu as acheté une souris à trente euros.
+PLAN gros TOBI
 TOBI dit (mauvaisefoi) Elle améliore ma productivité.
 PLAN gros NOX
 NOX dit (curieux) Elle se mange ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (gene) Pas encore.
 PLAN gros NOX
 NOX dit (calme) Le resto U coûte un euro.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (fier) Un CEO ne mange pas au resto U.
 PLAN gros NOX
 NOX dit (curieux) Et un étudiant boursier ?
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (gene) Il y a du poulet, le jeudi ?
 PLAN gros NOX
 NOX dit (constat) Et un dessert.
-PLAN frigo
+PLAN gros TOBI
 TOBI dit (calme) Je pourrais y faire du réseautage.
 PLAN gros NOX
 NOX dit (sec) Voilà. Du réseautage.
-PLAN frigo
-TOBI dit (illumine) Nox. Aie la vision. Une appli pour partager son plateau !
+PLAN gros TOBI
+TOBI dit (illumine) Une appli pour partager son plateau !
 PLAN gros NOX
-NOX dit (resigne) Projet numéro vingt-deux.
+NOX dit (sec) Mange d'abord.
 ATTENDRE 0.4

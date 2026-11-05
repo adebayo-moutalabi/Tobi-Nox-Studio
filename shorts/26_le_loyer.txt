@@ -1,48 +1,56 @@
-# J'AI VOULU PAYER MON LOYER EN ACTIONS
-# Pitch : Tobi n'a pas de quoi payer son loyer. Il propose des parts de sa start-up à sa propriétaire.
+# IL ME MANQUE 180 € POUR LE LOYER
+# Pitch : Fin de mois. Tobi, étudiant en galère, cherche comment payer sa chambre CROUS.
 
 AMBIANCE soir
-DIRECT TOBI marche fenetre
-DIRECT NOX marche centre
-TABLEAU Loyer : 480 € | Compte : 11,32 € | Date limite : ce soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Loyer CROUS : 260 € | Compte : 80 € | Date limite : vendredi
 FONDU direct
 
 PLAN gros NOX
-NOX dit (sec) Tobi. Le loyer.
-PLAN fenetre
-TOBI dit (calme) Regarde cette ville, Nox. Bientôt, elle sera à nous.
+NOX dit (calme) Tobi. Le loyer, c'est vendredi.
+PLAN gros TOBI
+TOBI dit (fier) T'inquiète. J'ai un plan.
 PLAN gros NOX
-NOX dit (sec) Pour l'instant, elle veut quatre cent quatre-vingts euros.
-PLAN fenetre
-TOBI dit (fier) Ne t'inquiète pas. J'ai parlé à madame Lemoine.
+NOX dit (curieux) Tu as combien ?
+PLAN gros TOBI
+TOBI dit (gene) Quatre-vingts euros.
+INSERT Il manque | 180 € | Avant vendredi
 PLAN gros NOX
-NOX dit (curieux) Tu lui as dit quoi ?
-TOBI marche tapis
-PLAN auto
-TOBI dit (excite) Je lui ai proposé cinq pour cent de la boîte.
+NOX dit (curieux) C'est quoi, le plan ?
+PLAN gros TOBI
+TOBI dit (fier) Je vends des trucs. J'ai un stock.
 PLAN gros NOX
-NOX dit (surpris) Quelle boîte ?
-PLAN auto
-TOBI dit (fier) La mienne. Ma start-up. Valorisée à trois millions.
+NOX dit (curieux) Quel stock ?
+PLAN gros TOBI
+TOBI dit (fier) Mes vieux cours. Vingt euros le semestre.
 PLAN gros NOX
-NOX dit (curieux) Selon qui ?
-PLAN auto
-TOBI dit (mauvaisefoi) Selon un tableur que j'ai fait.
-INSERT Valorisation de la start-up | 3 000 000 € | Chiffre d'affaires : 12 €
-PLAN auto
-TOBI dit (fier) Mais je l'ai convaincue ! On a signé un accord.
+NOX dit (sec) Tes notes sont dessus.
+PLAN gros TOBI
+TOBI dit (gene) Dix euros.
+TOBI marche fenetre
+PLAN gros TOBI
+TOBI dit (fier) Et il y a mon vélo.
 PLAN gros NOX
-NOX dit (curieux) Quel accord ?
-PLAN auto
-TOBI dit (gene) À partir de demain, je tonds sa pelouse.
+NOX dit (sec) On te l'a volé en octobre.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il me reste l'antivol. Il est comme neuf.
 PLAN gros NOX
-NOX dit (curieux) Elle a une pelouse ?
-PLAN auto
-TOBI dit (fier) Elle a quatre hectares.
+NOX dit (calme) La pizzeria cherche un livreur.
+PLAN gros TOBI
+TOBI dit (triste) Sans vélo ?
 PLAN gros NOX
-NOX dit (punchline) Félicitations. Tu es enfin salarié.
-PLAN auto
-TOBI dit (illumine) Nox. Aie la vision. Une tondeuse pilotée par l'IA !
+NOX dit (calme) Et le CROUS peut étaler le paiement. Il suffit de demander.
+PLAN gros TOBI
+TOBI dit (surpris) On peut demander ?
 PLAN gros NOX
-NOX dit (resigne) Tobi. Non.
+NOX dit (sec) Depuis trois ans.
+PLAN gros TOBI
+TOBI dit (calme) Sinon, je te vends, toi.
+PLAN gros NOX
+NOX dit (curieux) Pour combien ?
+PLAN gros TOBI
+TOBI dit (content) Tu vaux bien plus. Toute ma vie est dans ta mémoire.
+PLAN gros NOX
+NOX dit (punchline) C'est pour ça qu'on m'en donnerait douze euros.
 ATTENDRE 0.4
