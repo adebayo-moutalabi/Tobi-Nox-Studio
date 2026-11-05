@@ -5,6 +5,7 @@ import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
 import { mountVoices } from './voices.js';
+import { nomFichier } from './publications.js';
 import { mountWriter } from './writer.js';
 import { TONS } from './tones.js';
 import { envelope } from './talk.js';
@@ -442,6 +443,8 @@ export function createPlayer(v, ui) {
   };
 }
 
+const QUALITE = { max: 1440, hd: 1080, fast: 720 };
+
 export function mountStory(v, stories) {
   const el = (id) => document.getElementById(id);
   el('storyBox').hidden = false;
@@ -481,7 +484,7 @@ export function mountStory(v, stories) {
     const row = el('rowVoice');
     row.textContent = { ready: 'Prêtes', auto: 'Créées avec la vidéo', none: 'Clé à ajouter' }[voice];
     row.className = voice === 'ready' ? 'ok' : voice === 'none' ? 'todo' : '';
-    el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${el('storyQuality').value === 'hd' ? '1080p' : '720p'}`;
+    el('rowVideo').textContent = `${short() ? 'Short' : 'YouTube'} · ${QUALITE[el('storyQuality').value]}p`;
     el('rowScript').textContent = `${c.length} répliques · environ ${secs} s`;
     el('epStatus').textContent = `Voix : ${row.textContent.toLowerCase()} · ${el('rowVideo').textContent} · Réglages →`;
   };
@@ -569,13 +572,14 @@ export function mountStory(v, stories) {
       if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
       const fps = Number(el('storyFps').value);
       exporting = true; el('storyExport').disabled = true;
-      const big = el('storyQuality').value === 'hd' ? 1080 : 720, long = Math.round((big * 16) / 9 / 2) * 2;
+      const big = QUALITE[el('storyQuality').value], long = Math.round((big * 16) / 9 / 2) * 2;
       const size = short() ? { width: big, height: long } : { width: long, height: big };
       const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length || 1;
       el('storyBar').hidden = false;
       const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, music: el('storyMusic').checked ? { file: musicFile } : null, onProgress: (s) => { ui.line(`Export en cours : ${s.toFixed(0)} s de vidéo`); el('storyBar').firstElementChild.style.width = `${Math.min(98, (player.done / lines) * 100)}%`; } });
       el('storyBar').hidden = true;
-      save(out.blob, 'histoire.mp4'); save(new Blob([out.srt], { type: 'text/plain' }), 'histoire.srt');
+      const nom = nomFichier(pick.value, el('storyText').value);
+      save(out.blob, `${nom}.mp4`); save(new Blob([out.srt], { type: 'text/plain' }), `${nom}.srt`);
       ui.line(`Ta vidéo est prête : ${out.seconds.toFixed(0)} s, dans tes téléchargements.`);
       v.lastExport = out;
     } catch (e) { el('storyBar').hidden = true; ui.line(`Export impossible : ${e.message}`); }
