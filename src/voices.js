@@ -5,7 +5,7 @@ import { prononce, sonAie, changeAie } from './prononciation.js';
 
 const API = 'https://api.elevenlabs.io/v1';
 const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
-const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices';
+const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices', KEEP = 'tobinox.elevenlabs.keep';
 
 const read = (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } };
 const write = (k, val) => { try { if (val) localStorage.setItem(k, val); else localStorage.removeItem(k); } catch { /* navigation privée */ } };
@@ -60,7 +60,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   };
   const lock = (on) => { busy = on; go.disabled = on || !pick.tobi.value; load.disabled = on; list.querySelectorAll('button[data-redo]').forEach((b) => { b.disabled = on; }); };
   const remember = () => {
-    write(KEY, keep.checked ? key.value.trim() : '');
+    write(KEEP, keep.checked ? '' : 'non');
+    if (!keep.checked) write(KEY, ''); else if (key.value.trim()) write(KEY, key.value.trim());
     write(PICK, JSON.stringify(Object.fromEntries(Object.entries(pick).map(([who, x]) => [who, x.value]))));
   };
 
@@ -191,8 +192,9 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   };
 
   key.value = read(KEY);
-  say(key.value ? '' : 'Colle ta clé ElevenLabs pour créer les voix.');
-  keep.checked = !!key.value || !read(PICK);
+  say(key.value ? '' : read(PICK) ? 'Ta clé n\'est plus dans ce navigateur. Colle-la puis clique sur Valider.' : 'Colle ta clé ElevenLabs pour créer les voix.');
+  keep.checked = read(KEEP) !== 'non'; // la clé reste gardée, sauf si l'auteur a décoché lui-même
+  navigator.storage?.persist?.().catch(() => {}); // demande au navigateur de ne pas effacer la clé ni les voix
   load.addEventListener('click', loadVoices);
   // La liste à coller dans VOIX.md : on garde ainsi la trace des voix réellement utilisées.
   el('elCopy').addEventListener('click', async () => {
@@ -214,6 +216,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     } catch (e) { say(e.message); }
   });
   keep.addEventListener('change', remember);
+  key.addEventListener('change', remember);
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();

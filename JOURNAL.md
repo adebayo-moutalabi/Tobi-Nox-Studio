@@ -91,6 +91,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 5 nov. 2026 | Ne plus dépendre d'ElevenLabs plus tard | Marche à suivre dans `VOIX.md` |
 | 5 nov. 2026 | Protéger les crédits ElevenLabs | Voix d'essai pour écouter, solde affiché, coût annoncé et confirmé avant la vidéo finale |
 | 5 nov. 2026 | Épisodes plus drôles, logiques et indépendants | Nouvelle formule dans `CHARTE_SCRIPTS.md`, épisodes 52 à 55, idées dans `IDEES_EPISODES.md`, placard abandonné |
+| 5 nov. 2026 | La clé ElevenLabs disparaît au redémarrage | Clé gardée par défaut dès qu'elle est collée, sauf si l'auteur décoche l'option, et message clair si elle manque |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
