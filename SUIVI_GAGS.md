@@ -4,12 +4,15 @@ Ce fichier dit quels gags reviennent, où, et à quelle condition. À mettre à 
 
 ## Les phrases de la série
 
-| Gag | Qui | Quand l'utiliser | Épisodes | Limite |
-|---|---|---|---|---|
-| « J'appelle ta mère. » | Nox | Tobi dépense trop ou met sa vie en danger | 1, 13, 22, 43 | Un épisode sur dix |
-| « Aie la vision. » | Tobi | Il est coincé et veut convaincre | 1, 3, 13, 15, 16, 20 | Un épisode sur six |
-| « C'est un investissement. » | Tobi | Il justifie une dépense | 1, 24, 33 | Un épisode sur dix |
-| « Tobi. Non. » | Nox | Avant la fin d'une idée | 15 | Rare |
+L'auteur aime ces phrases et leur répétition. Il n'y a pas de quota : **la seule condition, c'est qu'elles tombent juste.**
+
+| Gag | Qui | Quand ça tombe juste | Épisodes |
+|---|---|---|---|
+| « J'appelle ta mère. » | Nox | Tobi dépense, ne mange plus ou se met en danger | 1, 13, 20, 22, 41, 43 |
+| « Aie la vision. » | Tobi | Il est coincé et relance quand même | 1, 3, 13, 14, 15, 16, 18, 20, 26, 32, 34, 39, 41, 44 |
+| « Tobi. Non. » | Nox | Il coupe une idée avant la fin | 15, 29, 36 |
+| « C'est un investissement. » | Tobi | Il justifie une dépense | 1, 24, 33 |
+| « Au placard. » | Nox ou Tobi | Une idée vient de mourir | 3, 9, 19, 24 |
 
 ## Les Aînés
 
@@ -28,9 +31,9 @@ Ce fichier dit quels gags reviennent, où, et à quelle condition. À mettre à 
 | Léa | Major de promo, bosseuse, son crush | 32 |
 | Sa situation | Licence 3, boursier, chambre CROUS, peu d'argent | Toute la série |
 
-## Gag retiré
+## Le placard à projets
 
-**« Projet numéro dix-neuf. »** Nox comptait les projets de Tobi à chaque nouvelle idée. Le numéro n'était jamais expliqué et ne suivait pas d'ordre logique. Il reste seulement à la fin de l'épisode 3, où le compte est clair : dix-sept projets, puis un dix-huitième.
+Les projets abandonnés de Tobi vont « au placard ». L'épisode 3 l'installe : « Ils ne sont pas morts. Ils sont au placard. » Il remplace le compteur « Projet numéro dix-neuf », dont les numéros n'étaient pas expliqués. L'auteur a préféré le placard à un cimetière, plus dur.
 
 ## Note
 

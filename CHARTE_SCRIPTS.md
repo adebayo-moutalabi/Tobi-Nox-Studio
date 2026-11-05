@@ -26,16 +26,17 @@ Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLA
 
 ## Les phrases de la série
 
-Ce sont les rendez-vous du public. À valider par l'auteur.
+Ce sont les rendez-vous du public. Elles peuvent revenir souvent : **il faut surtout qu'elles tombent juste.**
 
-| Qui | Phrase | Quand | Fréquence |
-|---|---|---|---|
-| Tobi | **« Nox. Aie la vision. »** | Quand il est coincé et veut convaincre | Un épisode sur six environ |
-| Nox | **« J'appelle ta mère. »** | Chute, quand Tobi dépense ou met sa vie en danger | Un épisode sur dix environ |
-| Tobi | **« C'est un investissement. »** | Pour justifier une dépense | De temps en temps |
-| Nox | **« Tobi. Non. »** | Avant même la fin d'une idée | De temps en temps |
+| Qui | Phrase | Quand |
+|---|---|---|
+| Tobi | **« Nox. Aie la vision. »** | Il est coincé et relance quand même |
+| Nox | **« J'appelle ta mère. »** | Chute, quand Tobi dépense, ne mange plus ou se met en danger |
+| Nox | **« Tobi. Non. »** | Il coupe l'idée avant la fin |
+| Tobi | **« C'est un investissement. »** | Il justifie une dépense |
+| Nox ou Tobi | **« Au placard. »** | Une idée vient de mourir |
 
-Règles : une phrase culte par épisode au maximum, jamais deux fois la même chute à la suite, et jamais une phrase qui ne découle pas de l'histoire. Un spectateur qui découvre la série doit tout comprendre sans explication. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox.
+Règles : une phrase ne vient que si l'histoire y mène, et jamais deux fois la même chute à la suite. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox. La liste des épisodes est dans `SUIVI_GAGS.md`.
 
 ## La structure, en 40 à 60 secondes
 
@@ -142,7 +143,7 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] L'accroche fonctionne sans contexte.
 - [ ] Chaque réplique répond à la précédente.
 - [ ] Au moins quatre punchlines.
-- [ ] Au plus une phrase culte, et elle découle de l'histoire.
+- [ ] Les phrases cultes tombent juste : l'histoire y mène.
 - [ ] Celui qui parle est tourné vers la pièce : `pivote` au bureau, frigo refermé, jamais de dos pendant une réplique.
 - [ ] Au moins un mouvement ou une action.
 - [ ] Un ton sur chaque réplique.

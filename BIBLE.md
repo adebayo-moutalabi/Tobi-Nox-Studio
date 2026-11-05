@@ -18,7 +18,7 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 - **Fonction :** il lance des idées grandioses et se fait démasquer.
 - **Situation :** étudiant en galère, en licence 3. Boursier, chambre CROUS, peu d'argent. Les sommes des épisodes restent à sa mesure.
 - **Coiffure :** tresses plaquées, celles du modèle 3D. C'est la référence.
-- **Voix :** jeune, vivante, naturelle. Ta voix clonée.
+- **Voix :** jeune, vivante, naturelle. Voir `VOIX.md`.
 - **Règle :** il est de mauvaise foi, jamais bête. Il croit sincèrement à ce qu'il dit, et il progresse d'un épisode à l'autre.
 
 ### Nox
@@ -44,7 +44,7 @@ Client, prof, parent, ami, recruteur. Voix ou personnages simples, qui mettent T
 
 ## Les phrases de la série
 
-Elles sont listées dans `CHARTE_SCRIPTS.md` et restent rares : une phrase n'est utilisée que si elle a un sens dans l'histoire.
+Elles sont listées dans `CHARTE_SCRIPTS.md` et suivies dans `SUIVI_GAGS.md`. Elles peuvent revenir souvent, à condition de tomber juste.
 
 ## Le décor
 La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêtre, cloison rouge. Un décor reconnaissable, rapide à réutiliser, qui peut évoluer avec Tobi : post-it, tableau, objets.
@@ -62,6 +62,7 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 
 ## Le fil rouge
 - **Continuité :** ce qui arrive dans un épisode reste vrai ensuite (dette cloud, client perdu, nouveau post-it).
+- **Le placard à projets :** les projets abandonnés de Tobi y sont rangés.
 - **Le tableau** de la chambre change à chaque épisode et montre l'état des projets.
 
 ## Saison 1 proposée

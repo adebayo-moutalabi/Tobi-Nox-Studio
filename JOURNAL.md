@@ -48,6 +48,31 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Anciens épisodes réécrits et épisodes 38 à 45.** Les épisodes 2 à 6, 8, 9, 11 à 15 et 20 sont allongés et replacés dans la vie étudiante, avec moins d'entrées par la porte. Huit histoires étudiantes s'ajoutent.
 - **Cadrage vertical.** Le cadre d'un Short est étroit : les plans reculent pour garder le corps, les gestes et un peu de décor, sans changer la version horizontale. Celui qui parle s'adresse à son interlocuteur dans tous les épisodes.
 - **Logique et répétitions.** Le compteur de projets ne reste que dans l'épisode 3, les chutes répétées sont remplacées, Tobi est partout en licence 3, Léa est définie dans la Bible.
+- **Phrases cultes rétablies.** Les réductions de la version précédente sont annulées : les phrases reviennent là où elles tombent juste. Le placard à projets remplace le compteur.
+- **Suivi.** `SUIVI_GAGS.md`, `VOIX.md`, bouton « Copier la liste de mes voix » et section des demandes de l'auteur.
+
+## Demandes de l'auteur
+
+À compléter à chaque échange : ce qui a été demandé, et où cela se trouve.
+
+| Date | Demande | Résultat |
+|---|---|---|
+| 5 nov. 2026 | Aînés en vrais logos animés, pas des Nox recolorés | `src/logos.js` |
+| 5 nov. 2026 | Scripts de 40 à 60 s, personnages déjà en place | Charte et épisodes |
+| 5 nov. 2026 | Logos plus petits, qui regardent celui qui parle, pas toujours au sol | `PERCHOIRS`, `showLogo()` |
+| 5 nov. 2026 | Un, deux ou trois Aînés selon l'épisode | Charte |
+| 5 nov. 2026 | Titres plus accrocheurs | Tous les épisodes |
+| 5 nov. 2026 | Corriger la ligne rouge et les places au bureau | `src/room.js`, `src/room-actions.js` |
+| 5 nov. 2026 | Réécrire les anciens scripts, rester sur la vie étudiante | Épisodes 2 à 20 et 38 à 45 |
+| 5 nov. 2026 | Ne plus couper les personnages en Short, garder du décor | `frame()` dans `src/story.js` |
+| 5 nov. 2026 | Pas d'Aînés sur la kitchenette | `PERCHOIRS` |
+| 5 nov. 2026 | Tobi est un étudiant en galère, revoir le loyer | Bible et épisode 26 |
+| 5 nov. 2026 | Léa : bosseuse, inspirante, son crush | Bible et épisode 32 |
+| 5 nov. 2026 | Garder les phrases cultes, qu'elles tombent juste | Charte et `SUIVI_GAGS.md` |
+| 5 nov. 2026 | Placard à projets plutôt que cimetière | Épisodes 3, 9, 19 et 24 |
+| 5 nov. 2026 | Documenter les voix et chaque demande | `VOIX.md` et cette section |
+
+**Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
 ## À faire
 
