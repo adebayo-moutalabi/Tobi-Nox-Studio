@@ -1,6 +1,7 @@
 // Voix automatiques : le Studio demande chaque réplique à ElevenLabs avec la clé de l'utilisateur.
 // La clé ne quitte ce navigateur que vers api.elevenlabs.io. Elle n'est jamais dans le code.
 import { voiceTag } from './tones.js';
+import { prononce } from './prononciation.js';
 
 const API = 'https://api.elevenlabs.io/v1';
 const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
@@ -86,7 +87,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
 
   const makeLine = async (i, force) => {
     const r = rows[i], voice = pick[r.who].value, tag = voiceTag(r.tone), plain = model.value === STABLE;
-    const text = tag && !plain ? `[${tag}] ${r.text}` : r.text, id = [voice, model.value, text].join('|');
+    const said = prononce(r.spoken), text = tag && !plain ? `[${tag}] ${said}` : said, id = [voice, model.value, text].join('|');
     let buf = force ? null : await cache.get(id);
     const fresh = !buf;
     if (fresh) {
@@ -123,7 +124,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   };
 
   const generate = async () => {
-    rows = parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text, tone: c.tone }));
+    rows = parseStory(el('storyText').value).filter((c) => c.verb === 'dit' && c.who).map((c) => ({ who: c.who, text: c.text, spoken: c.spoken, tone: c.tone }));
     if (!rows.length) { say('Ce script ne contient aucune réplique.'); return; }
     remember(); player.voices = []; lock(true);
     let paid = 0;
