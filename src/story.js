@@ -19,7 +19,7 @@ const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
   viens: 'come', stop: 'stop', gratter: 'scratch', consterne: 'facepalm', regarder: 'look', etirer: 'stretch', saluerbas: 'bow', sauter: 'jump', victoire: 'cheer',
 };
-const VARIANTES = { montrer: ['montrer', 'viens', 'reflechir'], non: ['non', 'stop'], epaules: ['epaules', 'gratter'], oui: ['oui', 'pouce'] };
+const VARIANTES = { montrer: ['montrer', 'viens'], non: ['non', 'stop'], oui: ['oui', 'pouce'] };
 const OBJETS = { papier: 'paper', livre: 'book', gourde: 'bottle', tasse: 'mug', telephone: 'phone', sac: 'bag' };
 const LIEUX = {
   gauche: [-0.12, 0.62], milieu: [0.26, 0.42], droite: [0.62, 0.1], // une ligne dégagée, à l'écart des jambes de Tobi : personne ne se cache derrière un autre
@@ -306,7 +306,7 @@ export function createPlayer(v, ui) {
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
-        a.look = null; a.hero.motion.clearPose(); v.attach(a, v.item('phone'));
+        a.look = null; a.hero.motion.clearPose(); v.attach(a, v.item('phone')); a.hero.motion.setHold(false);
         const it = a.held; if (it?.obj) { it.obj.position.set(...PHONE_EAR.pos); it.obj.rotation.set(...PHONE_EAR.rot); }
         a.hero.motion.togglePose('call'); return v.wait(0.6);
       }
@@ -342,7 +342,8 @@ export function createPlayer(v, ui) {
         const fort = !!a.hero.seat || c.text.split(/\s+/).length <= 4 || ['panique', 'surpris', 'colere', 'punchline', 'illumine'].includes(c.tone);
         lowShot = !fort && a.id === 'tobi' && shotN % 3 === 0;
         talkTo = b; if (grosOf === a) frame(a, fort); talkTo = null; lowShot = false; unblock(a); // gros plan pour les temps forts, plan moyen ou bas sinon
-        if (before !== a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
+        if (a.hero.motion.pose === 'call') a.look = null; // au téléphone, il écoute la personne au bout du fil
+        if (before !== a.look && a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) v.face(a, b, true);
@@ -351,8 +352,8 @@ export function createPlayer(v, ui) {
         a.hero.energy = ENERGIE[c.tone] || 1;
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
-        const geste = tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
-        const talkPose = !geste && a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
+        const geste = !a.hero.seat && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
+        const talkPose = !geste && !a.hero.seat && a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
         if (geste && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {

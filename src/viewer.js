@@ -237,7 +237,7 @@ export function startViewer(cfg) {
     head.getWorldPosition(lq.h); lq.h.y += a.eyeUp;
     b.hero.bones.head.getWorldPosition(lq.t); lq.t.y += b.eyeUp;
     lq.t.sub(lq.h);
-    { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim, Math.min(lim, lq.t.y)); } // ne casse pas la nuque
+    { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim * 0.4, Math.min(lim, lq.t.y)); } // ne casse pas la nuque, et le visage reste visible quand il parle à quelqu'un de plus bas
     lq.t.normalize();
     head.getWorldQuaternion(lq.w);
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);

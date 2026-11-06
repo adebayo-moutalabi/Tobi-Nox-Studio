@@ -348,7 +348,7 @@ const POSES = {
   }],
   call: [4, (t) => {
     const P = base(t);
-    reach(P, 'R', -1, [-0.2, 1.33, 0.17], [-0.9, -0.6, 0.2]);
+    reach(P, 'R', -1, [-0.21, 1.39, 0.1], [-0.9, -0.6, 0.1]);
     mixHand(P, 'R', -1, 0.95, 1, 0.7);
     add(P, 'head', 0.02, -0.04, 0.05);
     add(P, 'chest', 0, 0, 0.02);
@@ -374,9 +374,9 @@ const MORE = {
     return P;
   }],
   scratch: [2.4, (t) => {
-    const P = base(t), w = bell(t, 0, 0.18, 0.84, 1), f = Math.sin(t * TAU * 6);
-    reach(P, 'L', 1, lerp3(restWrist('L'), [0.2 + 0.012 * f, 1.47, 0.0], w), [1, -0.2, -0.3]);
-    mix(P, 'hand_L', [0, 0, -0.7], w);
+    const P = base(t), w = bell(t, 0, 0.22, 0.8, 1), f = Math.sin(t * TAU * 2);
+    reach(P, 'L', 1, lerp3(restWrist('L'), [0.2 + 0.006 * f, 1.47, 0.0], w), [1, -0.2, -0.3]);
+    mix(P, 'hand_L', [0, 0, -0.2], w);
     mixHand(P, 'L', 1, 0.75, w, 0.3);
     add(P, 'head', 0, -0.08 * w, 0.12 * w);
     return P;
@@ -579,7 +579,7 @@ export function buildClips(bones) {
   // Les mouvements de base viennent de vrais enregistrements
   for (const r of recorded) {
     const i = out.findIndex((c) => c.name === r.name);
-    if (r.name.startsWith('talk_')) { r.userData.layer = 'upper'; r.userData.weight = 0.6; }
+    if (r.name.startsWith('talk_')) { r.userData.layer = 'upper'; r.userData.weight = 0.3; }
     if (i >= 0) out[i] = r; else out.push(r);
   }
   return out;
