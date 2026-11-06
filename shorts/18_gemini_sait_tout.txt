@@ -24,6 +24,9 @@ PLAN gros TOBI
 TOBI dit (surpris) On est quel jour ?
 PLAN gros NOX
 NOX dit (sec) Lundi. Depuis ce matin.
+PC Agenda : Semaine de Tobi | Lundi : Aujourd'hui | Mardi : Rendu de droit
+PLAN pc
+ATTENDRE 1.6
 PLAN gros GEMINI
 GEMINI dit (fier) Je peux aussi résumer ta vie.
 PLAN gros TOBI

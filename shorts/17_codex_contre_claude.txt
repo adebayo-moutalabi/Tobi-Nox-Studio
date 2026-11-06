@@ -31,7 +31,9 @@ PLAN gros CODEX
 CODEX dit (content) Elle est beaucoup plus légère maintenant.
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Attends, je regarde le fichier d'abord.
-INSERT Clients de la boulangerie | 0 | Avant : 12
+PC Terminal : codex | refaire le site | nettoyer la base | clients restants : 0
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Tu peux annuler ?
 PLAN gros CODEX

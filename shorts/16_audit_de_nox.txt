@@ -26,7 +26,9 @@ PLAN gros NOX
 NOX dit (ironique) Une prise, à côté du lit.
 PLAN gros CLAUDE
 CLAUDE dit (surpris) Je vais devoir ouvrir un rapport. Désolé.
-INSERT Rapport de Claude Code | 412 pages | 409 sont des questions
+PC Word : Audit_de_Nox.docx | Rapport de Claude Code | 412 pages | 409 sont des questions
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Quatre cent douze pages ?
 PLAN gros CLAUDE

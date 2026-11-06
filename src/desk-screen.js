@@ -108,7 +108,7 @@ export function createLaptop() {
       ctx.fillStyle = code ? '#1f2228' : '#101114'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = color; ctx.fillRect(0, 0, W, bar); dots(28);
       ctx.fillStyle = '#d7dae0'; ctx.textAlign = 'center'; ctx.font = `600 27px ${F}`; ctx.fillText(name, W / 2, 28, W - 240); ctx.textAlign = 'left';
       if (code) { ctx.fillStyle = '#2a2e36'; ctx.fillRect(0, bar, 70, H); }
-      each((r, i, last) => { const y = bar + 44 + i * 58; if (code) { ctx.fillStyle = '#6b7280'; ctx.font = `500 30px ${M}`; ctx.fillText(String(i + 1), 24, y); } ctx.fillStyle = code ? (last ? '#f6c177' : '#9ecbff') : (last ? '#ff7b72' : '#7ee787'); ctx.font = `600 36px ${M}`; ctx.fillText(code ? r : `$ ${r}`, code ? 92 : 28, y, W - 120); });
+      each((r, i, last) => { const y = bar + 52 + i * 76; if (code) { ctx.fillStyle = '#6b7280'; ctx.font = `500 30px ${M}`; ctx.fillText(String(i + 1), 24, y); } ctx.fillStyle = code ? (last ? '#f6c177' : '#9ecbff') : (last ? '#ff7b72' : '#7ee787'); ctx.font = `600 48px ${M}`; ctx.fillText(code ? r : `$ ${r}`, code ? 92 : 28, y, W - 120); });
     } else if (app === 'notes') {
       ctx.fillStyle = '#fffdf3'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = '#f6efd4'; ctx.fillRect(0, 0, 190, H); ctx.fillStyle = color; ctx.beginPath(); ctx.roundRect(16, 84, 158, 62, 10); ctx.fill(); dots(32);
       ctx.fillStyle = '#17191f'; ctx.font = `800 46px ${F}`; ctx.fillText(name, 226, 64, W - 260);

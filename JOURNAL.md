@@ -179,6 +179,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Retouches légères : vraies applications, conversation de l'épisode 8, heure de l'épisode 5 et saut dans le temps de l'épisode 7.
 - L'épisode 3 ne change pas : il respectait déjà les règles.
 
+## Retouches des épisodes 11 à 20 (6 novembre 2026)
+
+- Retouches légères : applications adaptées, saut de temps de l'épisode 11 et réplique de Claude plus naturelle.
+- Les épisodes 13, 15 et 20 ne changent pas : ils respectaient déjà les règles.
+
 ## À faire
 
 Voir `TACHES.md`.

@@ -10,7 +10,10 @@ TABLEAU Boulangerie Martin | Site en panne | 12 visiteurs perdus
 FONDU direct
 
 PLAN auto
-TOBI dit (panique) Pourquoi le site est en panne ?
+TOBI dit (panique) Pourquoi le site de la boulangerie est en panne ?
+PC Safari : boulangerie-martin.fr | Erreur 500 | Site indisponible
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (calme) J'ai une mauvaise nouvelle.
 PLAN auto
@@ -42,6 +45,9 @@ PLAN auto
 TOBI dit (curieux) À lui ?
 PLAN gros CODEX
 CODEX dit (constat) À toute la fac.
+PC Mail envoyé | À : toute la fac | Objet : Désolé pour le pain
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (excite) Nox. Aie la vision. Zéro client, zéro problème.
 PLAN gros NOX

@@ -18,7 +18,9 @@ PLAN gros NOX
 NOX dit (sec) Ça s'appelle avoir faim.
 PLAN auto
 TOBI dit (mauvaisefoi) Oui, mais avec un abonnement.
-INSERT Abonnement | 19 € | Par mois
+PC PowerPoint : Pitch_concours.pptx | L'appli qui te dit quand manger | Abonnement : 19 € par mois
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (curieux) Pour des étudiants ?
 PLAN auto

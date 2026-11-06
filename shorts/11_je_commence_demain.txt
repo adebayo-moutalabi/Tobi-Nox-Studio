@@ -41,7 +41,10 @@ PLAN gros NOX
 NOX dit (curieux) Ensuite ?
 PLAN gros TOBI
 TOBI dit (fier) Je fais un planning de révisions, avec des couleurs.
-INSERT Planning de révisions | 3 h | Révisions faites : 0 h
+PC Excel : Planning_revisions.xlsx | Couleurs : 14 | Révisions faites : 0 h
+PLAN pc
+ATTENDRE 1.6
+TEMPS Cinq heures plus tard | 17 h 00 | Le planning est très joli
 PLAN gros NOX
 NOX dit (sec) Il est dix-sept heures.
 PLAN gros TOBI
