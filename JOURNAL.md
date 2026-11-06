@@ -170,8 +170,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 
 ## Mêmes gestes en ligne et en local (6 novembre 2026)
 
-- Le Studio en ligne propose **Importer mes gestes** : le fichier reste dans le navigateur de l'auteur et le site public ne le contient pas.
-- **Retirer mes gestes** revient aux gestes d'origine.
+- Les gestes sont publiés chiffrés dans `gestes.chiffre`. Le mot de passe de l'auteur les ouvre une fois par appareil, puis ils se mettent à jour seuls.
+- **Retirer mes gestes de cet appareil** revient aux gestes d'origine.
 - `tools/serveur-local.mjs` : http://localhost:4173 ouvre toujours la dernière version, avec les gestes.
 
 ## À faire

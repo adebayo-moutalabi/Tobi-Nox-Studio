@@ -8,7 +8,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 2. **Appliquer les nouveaux outils à ces épisodes :** `TEMPS`, applications du PC et heure des messages, seulement quand c'est utile.
 3. **Regarder les vidéos en entier :** valider les gestes, la caméra et la lumière sur de vrais exports.
 4. **Décider de la mise en ligne :** fusionner la branche des gestes dans `main`, ce qui met le site à jour.
-5. **Sauvegarde privée des gestes :** créer un dépôt GitHub privé pour `src/mocap-mixamo.json` et les FBX.
+5. **Sauvegarde des gestes :** garder `src/mocap-mixamo.json` et les FBX hors de ce dossier de session, par exemple dans un dépôt privé.
 
 ## Documentation et code
 
@@ -23,6 +23,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 11. **Musique :** tester une musique très discrète sur quelques vidéos, et comparer la rétention.
 12. **Identité du Studio :** valider le bloc `CHARTE GRAPHIQUE`.
 13. **Expérience du Studio :** l'auteur doit préciser ce qu'il veut.
+- **Accès au dépôt :** l'auteur réfléchit à limiter le dépôt et le site aux personnes autorisées. Un dépôt privé ne suffit pas : GitHub Pages gratuit ne publie plus le site, il faudrait un autre hébergement avec connexion.
 
 ## Image
 

@@ -15,6 +15,7 @@ import { envelope } from './talk.js';
 import { createLook } from './look.js';
 import { playSfx } from './sound.js';
 import { gestures } from './mocap.js';
+import { unlockGestures, syncGestures, forgetGestures } from './gestes-prives.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -747,15 +748,16 @@ export function mountStory(v, stories) {
     refresh();
     if (player.voices.length) { ui.line(''); replay(); } else ui.line(el('elNow').textContent);
   });
-  // Gestes privés : ils restent dans ce navigateur et ne sont jamais envoyés. Voir docs/GUIDE_TECHNIQUE.md.
-  el('gestesImport').hidden = gestures.bundled || gestures.saved;
+  // Gestes privés : le mot de passe ouvre le coffre une fois par appareil, puis tout se met à jour seul. Voir docs/GUIDE_TECHNIQUE.md.
+  el('gestesForm').hidden = gestures.bundled || gestures.saved;
   el('gestesOff').hidden = gestures.bundled || !gestures.saved;
-  el('gestesFile').addEventListener('change', async (e) => {
-    const f = e.target.files[0];
-    if (!f) return;
-    try { gestures.save(await f.text()); location.reload(); } catch (err) { ui.line(`Gestes non importés : ${err.message}`); }
+  el('gestesForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    ui.line('Ouverture des gestes…');
+    try { await unlockGestures(el('gestesPass').value); location.reload(); } catch (err) { el('gestesPass').value = ''; ui.line(`Gestes non ouverts : ${err.message}`); }
   });
-  el('gestesOff').addEventListener('click', () => { gestures.remove(); location.reload(); });
+  el('gestesOff').addEventListener('click', () => { forgetGestures(); location.reload(); });
+  if (!gestures.bundled) syncGestures().then((changed) => { if (changed) location.reload(); }).catch(() => {}); // hors ligne : on garde la copie de l'appareil
   let musicFile = null, warned = false;
   el('storyMusicFile').addEventListener('change', async (e) => {
     const f = e.target.files[0];

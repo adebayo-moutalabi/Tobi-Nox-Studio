@@ -76,27 +76,35 @@ Dans la console, garder l'onglet au premier plan. Ne pas lancer deux contrôles 
 
 ## Animations Mixamo
 
-Les gestes les plus humains de Tobi viennent de Mixamo. La FAQ d'Adobe autorise leur usage dans un projet, mais interdit de distribuer les fichiers d'animation bruts. Le dépôt étant public, ces données restent sur le poste de l'auteur.
+Les gestes les plus humains de Tobi viennent de Mixamo. La FAQ d'Adobe autorise leur usage dans un projet, mais interdit de distribuer les fichiers d'animation bruts. Le dépôt étant public, ces données n'y sont jamais en clair.
 
 | Élément | Sur GitHub ? |
 |---|---|
-| `src/mocap-mixamo.json` | Non |
+| `src/mocap-mixamo.json` | Non, jamais en clair |
 | `studio-mixamo.html` | Non |
 | `studio.html`, `tobi.html`, `nox.html` | Oui, sans données Mixamo |
 | `tools/mixamo/` | Oui : scripts seulement |
-| Copie dans le navigateur de l'auteur | Non : elle n'existe que chez lui |
+| `gestes.chiffre` | Oui : chiffré, illisible sans le mot de passe |
 
 `node build.mjs` crée toujours les pages publiques. Si `src/mocap-mixamo.json` existe, il crée aussi `studio-mixamo.html`. Sans ce fichier, `clipFor` utilise les gestes d'origine.
 
 **Pour travailler en local :** lancer `node tools/serveur-local.mjs`, puis ouvrir http://localhost:4173. Cette adresse ouvre `studio-mixamo.html` s'il existe, et lit toujours la dernière compilation.
 
-**Pour avoir les mêmes gestes sur le site :**
+**Pour avoir les gestes sur tous ses appareils :** le site publie `gestes.chiffre`, une copie chiffrée en AES-256-GCM. Sans le mot de passe, ce fichier est illisible.
 
-1. Ouvrir le Studio en ligne, puis les réglages de la vidéo.
-2. Cliquer sur **Importer mes gestes** et choisir `mocap-mixamo.json`.
-3. La page se recharge avec les gestes.
+1. Ouvrir le Studio en ligne, puis la partie **Vidéo**.
+2. Entrer le mot de passe et cliquer sur **Déverrouiller mes gestes**. C'est à faire une seule fois par navigateur.
+3. Ensuite, le Studio vérifie le coffre à chaque ouverture et prend seul la nouvelle version.
 
-Le fichier reste dans le stockage de ce navigateur, sous la clé `tobi-gestes` (`src/mocap.js`). Il n'est envoyé nulle part. Les autres visiteurs gardent les gestes d'origine. **Retirer mes gestes** efface cette copie. Il faut refaire l'import sur un autre navigateur ou un autre ordinateur.
+Le mot de passe n'est ni enregistré ni envoyé. La clé qui en découle reste dans le navigateur déverrouillé (`src/gestes-prives.js`). **Retirer mes gestes de cet appareil** efface cette clé et la copie.
+
+**Pour mettre à jour les gestes :**
+
+1. Recréer `src/mocap-mixamo.json`.
+2. Lancer `node tools/chiffrer-gestes.mjs` avec le même mot de passe.
+3. Compiler, puis envoyer `gestes.chiffre` sur GitHub. Les appareils se mettent à jour seuls.
+
+**Mot de passe oublié :** supprimer `gestes.chiffre`, relancer le script avec un nouveau mot de passe, puis déverrouiller chaque appareil. Il faut pour cela le fichier `src/mocap-mixamo.json`.
 
 **Pour recréer les données :**
 

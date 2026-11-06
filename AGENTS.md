@@ -14,7 +14,7 @@ Tobi et Nox est une mini-sitcom 3D pour YouTube Shorts, fabriquée dans un Studi
 ## Règles à ne pas casser
 
 1. Rien de privé dans le dépôt : ni clé API, ni référence privée.
-2. `src/mocap-mixamo.json` et `studio-mixamo.html` ne vont jamais sur GitHub.
+2. `src/mocap-mixamo.json` et `studio-mixamo.html` ne vont jamais sur GitHub. Seul `gestes.chiffre` est publié. Ne jamais écrire son mot de passe.
 3. Écrire chaque retour de l'auteur dans `PREFERENCES_AUTEUR.md`. S'il contredit une ancienne décision, le lui dire.
 4. Faire un commit par modification précise et ajouter une ligne à `JOURNAL.md`.
 5. Répondre à l'auteur en français simple.

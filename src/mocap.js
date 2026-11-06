@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import BASE from './mocap.json';
 import MIXAMO from './mocap-mixamo.json';
 
-// Les gestes Mixamo ne sont pas publiés. Sur le site, l'auteur les importe une fois : ils restent dans son navigateur.
+// Les gestes Mixamo ne sont publiés que chiffrés. Une fois ouverts avec le mot de passe (gestes-prives.js), ils restent dans ce navigateur.
 const KEY = 'tobi-gestes';
 const bundled = Object.keys(MIXAMO.clips).length > 0;
 function savedGestures() {
