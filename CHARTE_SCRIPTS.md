@@ -15,6 +15,19 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 **Les sujets à privilégier :** les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
 
+## Le format d'une minute et plus
+
+Pour TikTok, viser 65 à 75 secondes, soit environ 170 à 190 mots, avec une trentaine à une quarantaine de répliques. Compter environ 1 300 crédits.
+
+1. **Ouvrir une question dès la première réplique :** temps, argent ou verdict. Le spectateur doit vouloir la réponse.
+2. **Rendre l'enjeu visible :** utiliser `COMPTEUR Il reste 60 s`, `COMPTEUR Jour 3 sur 10 · 8 €` ou `COMPTEUR Accusation 2 sur 3`.
+3. **Relancer toutes les 8 à 12 secondes :** nouveau chiffre, problème, personnage ou retournement.
+4. **Garder la réponse pour les derniers 20 % :** une fausse victoire peut arriver juste avant.
+5. **Fermer vite :** après la chute, plus aucune réplique.
+6. **Rappeler le début à la fin :** la dernière réplique reprend une phrase ou un chiffre du début.
+
+Ne jamais allonger avec du remplissage : si une relance ne fait pas rire ou n'aggrave pas la situation, il faut une meilleure idée.
+
 Exemple à éviter : l'épisode du livreur. Le thème est bon, mais la révélation de la sonnette demande de deviner une suite et ne fait pas rire.
 
 ## L'épisode en une phrase

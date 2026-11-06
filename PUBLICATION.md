@@ -81,6 +81,10 @@ Un nouvel épisode coûte environ 650 à 850 crédits, selon l'estimation du Stu
 - **Augmenter seulement si :** les crédits suivent, au moins une semaine de vidéos est prête d'avance et les résultats justifient plus de volume.
 - **Économiser :** valider le texte avant la voix, ne refaire qu'une réplique ratée et réutiliser le même MP4 sur toutes les plateformes.
 
+## Format TikTok d'une minute
+
+Les épisodes 61, 62 et 63 sont pensés pour dépasser une minute. Une vidéo de cette longueur coûte environ 1 300 crédits. La durée finale doit être vérifiée avec les vraies voix.
+
 ## Si le rythme augmente
 
 Estimation à 1 000 crédits par vidéo, avec une marge pour les corrections. Tarifs relevés le 6 novembre 2026, à vérifier au moment de payer.

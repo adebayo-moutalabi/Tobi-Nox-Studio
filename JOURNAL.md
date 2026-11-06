@@ -99,6 +99,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Commentaire épinglé jugé inutile | Retiré des étapes obligatoires |
 | 6 nov. 2026 | Rythme compatible avec les crédits ElevenLabs | Trois vidéos par semaine et budget dans `PUBLICATION.md` |
 | 6 nov. 2026 | Coût pour publier plus souvent | Besoins en crédits et offres conseillées dans `PUBLICATION.md` |
+| 6 nov. 2026 | Épisodes d'une minute et plus qui retiennent jusqu'au bout | Compteur à l'image, format TikTok dans la charte, épisodes 61 à 63 |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
