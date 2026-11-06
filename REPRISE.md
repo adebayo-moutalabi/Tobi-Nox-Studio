@@ -5,6 +5,7 @@ Ce document s'adresse à toute personne ou IA qui reprend le projet. Il dit ce q
 - `BIBLE.md` : la série, ses personnages et sa saison.
 - `SHORTS.md` : comment fabriquer un épisode.
 - `CHARTE_SCRIPTS.md` : comment écrire un script, pour une personne ou une IA.
+- `PUBLICATION.md` : réglages YouTube et stratégie TikTok et Instagram.
 - `JOURNAL.md` : ce qui a été fait, dans l'ordre, et pourquoi.
 - Ce fichier : le fonctionnement technique.
 
