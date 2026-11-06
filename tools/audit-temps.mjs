@@ -27,7 +27,7 @@ for (const file of readdirSync('shorts').filter((f) => f.endsWith('.txt'))) {
   if (now && date && now[1] !== date) flag(`le script dit ${now[1]}, mais DATE dit ${date}`);
 
   // « On est en juin » doit se retrouver dans DATE.
-  const month = /on est en (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|décembre)/.exec(low);
+  const month = /(?:on est en|on est quand \?\n(?:.*\n)*?.*dit \(\w+\) en) (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|décembre)/.exec(low);
   if (month && !new RegExp(`^DATE .*${month[1]}`, 'im').test(text)) flag(`le script dit « ${month[0]} », sans ce mois dans DATE`);
 
   // Chaque heure imposée doit coller à l'ambiance du moment.

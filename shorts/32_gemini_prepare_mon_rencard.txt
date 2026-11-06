@@ -40,6 +40,9 @@ PLAN auto
 TOBI dit (mauvaisefoi) Elle voudra forcément entendre parler de ma start-up.
 PLAN gros GEMINI
 GEMINI dit (excite) J'ai fait une présentation au cas où. Soixante diapositives.
+PC PowerPoint : Start-up_pour_Lea.pptx | Pourquoi investir en Tobi | Diapositive 1 sur 60
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (illumine) Nox. Aie la vision. J'arrive avec un projecteur !
 PLAN gros NOX

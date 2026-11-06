@@ -3,7 +3,7 @@
 
 AMBIANCE jour
 DIRECT TOBI marche fenetre
-DIRECT NOX marche centre
+DIRECT NOX assis
 TABLEAU Tobi | CEO, fondateur, visionnaire | 3 000 relations
 FONDU direct
 
@@ -24,7 +24,9 @@ PLAN gros NOX
 NOX dit (ironique) Elle a commenté ton dernier post.
 PLAN auto
 TOBI dit (content) Ah ! Qu'est-ce qu'elle dit ?
-INSERT Commentaire de maman | Range ta chambre | 340 personnes ont aimé
+PC Safari : linkedin.com/in/tobi-ceo | Maman : Range ta chambre | 340 personnes ont aimé
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (panique) Trois cent quarante ?
 PLAN gros NOX

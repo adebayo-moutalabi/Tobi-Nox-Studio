@@ -27,7 +27,9 @@ PLAN gros TOBI
 TOBI dit (fier) Il te prévient quand il expire.
 PLAN gros NOX
 NOX dit (constat) Il a expiré en mars.
-INSERT Budget du frigo intelligent | 4 200 € | Budget des courses : 12 €
+PC Excel : Frigo_intelligent.xlsx | Budget des courses : 12 € | Budget du frigo : 4 200 €
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (fier) C'est un investissement.
 PLAN gros NOX

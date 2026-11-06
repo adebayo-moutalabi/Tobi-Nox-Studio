@@ -25,7 +25,9 @@ PLAN gros CODEX
 CODEX dit (fier) J'ai trouvé le problème. J'ai augmenté la puissance.
 PLAN auto
 TOBI dit (panique) Codex, non !
-INSERT Température de la chambre | 38 °C | Consommation : le couloir entier
+PC Stats : Serveur sous le lit | Température de la chambre | 38 °C | Consommation : le couloir entier
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (constat) Le couloir vient de s'éteindre.
 PLAN auto

@@ -479,7 +479,7 @@ function toGeometry(part, boneIndex, morphs, lids) {
 function buildGlasses(headBone) {
   const grp = new THREE.Group(); grp.name = 'glasses';
   const mat = new THREE.MeshStandardMaterial({ color: PALETTE.frame, roughness: 0.72, metalness: 0, flatShading: true });
-  const lensMat = new THREE.MeshStandardMaterial({ color: '#cfd8dc', roughness: 0.08, metalness: 0, transparent: true, opacity: 0.05, depthWrite: false });
+  const lensMat = new THREE.MeshStandardMaterial({ color: '#cfd8dc', roughness: 0.6, metalness: 0, transparent: true, opacity: 0.05, depthWrite: false });
   const add = (g, m = mat, name) => { const x = new THREE.Mesh(g, m); if (name) x.name = name; x.castShadow = m === mat; grp.add(x); return x; };
   const R = 0.05, cx = 0.0625, y = FACE.eyeY - 0.005;
   const z = faceAt(cx, y).z + 0.024;

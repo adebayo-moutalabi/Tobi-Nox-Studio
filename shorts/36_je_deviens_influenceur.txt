@@ -28,7 +28,9 @@ PLAN auto
 TOBI dit (gene) Je vous révèle mon secret pour bientôt réussir.
 PLAN auto
 TOBI dit (excite) N'oubliez pas de liker et de partager !
-INSERT Statistiques en direct | 3 vues | Durée moyenne : 2 secondes
+PC Stats : Chaîne de Tobi | Vues en direct | 3 | Durée moyenne : 2 secondes
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (surpris) Deux secondes ?
 PLAN gros NOX

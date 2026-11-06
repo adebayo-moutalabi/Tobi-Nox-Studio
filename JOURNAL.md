@@ -184,6 +184,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Retouches légères : applications adaptées, saut de temps de l'épisode 11 et réplique de Claude plus naturelle.
 - Les épisodes 13, 15 et 20 ne changent pas : ils respectaient déjà les règles.
 
+## Retouches des épisodes 21 à 50 (7 novembre 2026)
+
+- Retouches légères : applications selon chaque histoire, messages lisibles, heures et dates corrigées.
+- Logique corrigée : épisode 28 (le message correspond à ce que dit Codex), 39 (mai), 45 (exposé un vendredi) et 46 (chambre 314, au-dessus de la 214).
+- Nox s'assoit sur le lit dans les épisodes 34 et 38 : il n'est plus dans les jambes de Tobi.
+- Les épisodes 22, 35, 41, 42, 43, 49 et 50 ne changent pas ici : ils respectaient déjà les règles, ou sont déjà aimés et publiés.
+
 ## À faire
 
 Voir `TACHES.md`.

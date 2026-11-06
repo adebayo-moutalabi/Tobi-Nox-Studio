@@ -16,6 +16,9 @@ PLAN gros TOBI
 TOBI dit (content) Tu es trop fort. T'as dit quoi ?
 PLAN gros CODEX
 CODEX dit (constat) Que tu quittais l'école.
+PC Mail au prof de droit | Objet : Ma démission | Je quitte l'école.
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Pardon ?
 PLAN gros CODEX

@@ -2,7 +2,7 @@
 # Pitch : Pour une fois, Tobi a tout révisé. Il reste un petit détail à vérifier.
 
 AMBIANCE jour
-DATE Mardi 11 février
+DATE Mardi 11 mai
 DIRECT TOBI marche tapis
 DIRECT NOX travaille
 DIRECT NOX pivote
@@ -25,7 +25,9 @@ PLAN auto
 TOBI dit (fier) Parce que c'est le partiel de demain.
 PLAN gros NOX
 NOX dit (calme) Tobi. Regarde ton emploi du temps.
-INSERT Partiel de demain | Réseaux | Salle B204, 8 h
+PC Agenda : Emploi du temps | Demain 8 h : Réseaux | Salle : B204
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (surpris) Réseaux ?
 PLAN gros NOX

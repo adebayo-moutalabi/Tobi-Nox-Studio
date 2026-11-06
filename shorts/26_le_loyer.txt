@@ -16,7 +16,9 @@ PLAN gros NOX
 NOX dit (curieux) T'as combien ?
 PLAN gros TOBI
 TOBI dit (gene) Quatre-vingts euros.
-INSERT Il manque | 180 € | Avant vendredi
+PC Banque : Compte de Tobi | Compte : 80 € | Loyer CROUS : -260 € | Il manque : -180 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (curieux) C'est quoi, le plan ?
 PLAN gros TOBI

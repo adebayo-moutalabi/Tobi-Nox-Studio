@@ -12,7 +12,7 @@ PLAN clavier
 TOBI tape ça marche pas ça marche pas ça marche pas
 TOBI pivote
 PLAN gros TOBI
-TOBI dit (colere) Trois heures ! Trois heures sur la même ligne !
+TOBI dit (colere) Trois heures sur le site du boulanger ! Trois heures sur la même ligne !
 PLAN gros NOX
 NOX dit (curieux) Tu veux de l'aide ?
 PLAN gros TOBI
@@ -39,7 +39,9 @@ PLAN gros TOBI
 TOBI dit (fier) Je connais le logo.
 PLAN gros NOX
 NOX dit (calme) Tobi. Ligne quarante-deux.
-INSERT Ligne 42 | ; | Il manquait un point-virgule
+PC Code : site_boulangerie.js | const pain = 1.10; | afficherPrix(pain) | // ligne 42 : il manque un ;
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (surpris) Tu le savais depuis quand ?
 PLAN gros NOX

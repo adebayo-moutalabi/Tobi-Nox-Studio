@@ -2,11 +2,13 @@
 # Pitch : Tobi a dix minutes pour rendre un devoir. Claude Code veut d'abord tout vérifier.
 
 AMBIANCE soir
+HEURE 23:50
 DIRECT TOBI travaille
 DIRECT NOX assis
 DIRECT TOBI pivote
 DIRECT CLAUDE apparait bureau
 TABLEAU Devoir à rendre | Dans 10 minutes | Commencé : non
+COMPTEUR Il reste 10 min
 FONDU direct
 
 PLAN gros TOBI
@@ -32,6 +34,8 @@ TOBI dit (colere) Non ! Je veux une note !
 PLAN gros CLAUDE
 CLAUDE dit (calme) C'est honnête. Je le note.
 INSERT Temps restant | 2 minutes | Lignes écrites : 0
+HEURE 23:58
+COMPTEUR Il reste 2 min
 PLAN gros TOBI
 TOBI dit (panique) Il reste deux minutes !
 PLAN gros CLAUDE
@@ -40,6 +44,11 @@ PLAN gros TOBI
 TOBI dit (illumine) Enfin ! Y a combien de parties ?
 PLAN gros CLAUDE
 CLAUDE dit (fier) Quarante. Je commence par la première.
+PC Word : Devoir.docx | Plan du devoir | Partie 1 sur 40
+PLAN pc
+ATTENDRE 1.6
+HEURE 00:00
+COMPTEUR Temps écoulé
 PLAN gros NOX
 NOX dit (ironique) La date limite est passée.
 PLAN gros CLAUDE

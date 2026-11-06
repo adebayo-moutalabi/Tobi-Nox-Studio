@@ -19,6 +19,9 @@ PLAN gros TOBI
 TOBI dit (content) Bonjour ! Oui, je vous entends très bien.
 PLAN gros NOX
 NOX dit (chuchote) Ton micro est coupé.
+PC Safari : visio.fr/entretien-de-stage | Recruteur connecté | Micro de Tobi : coupé
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (gene) Pardon. Bonjour ! Là, vous m'entendez ?
 PLAN gros TOBI

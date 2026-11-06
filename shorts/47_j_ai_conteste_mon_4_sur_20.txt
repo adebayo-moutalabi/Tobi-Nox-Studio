@@ -45,7 +45,9 @@ PLAN gros TOBI
 TOBI dit (excite) Tu vois ! Il reconnaît son erreur !
 PLAN gros NOX
 NOX dit (constat) Il a relu ta copie.
-INSERT Nouvelle note | 3 sur 20 | Après relecture
+PC Mail du prof de droit | Nouvelle note : 3 sur 20 | Après relecture
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Trois ?
 PLAN gros NOX
@@ -59,7 +61,9 @@ TOBI dit (colere) Non ! Envoie !
 PLAN gros CLAUDE
 CLAUDE dit (calme) C'est envoyé.
 BRUIT ding
-INSERT Nouvelle note | 2 sur 20 | Il a retrouvé une faute
+PC Mail du prof de droit | Nouvelle note : 2 sur 20 | J'ai retrouvé une faute
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (triste) Il me reste combien de points ?
 PLAN gros NOX

@@ -3,7 +3,7 @@
 
 AMBIANCE jour
 DIRECT TOBI marche fenetre
-DIRECT NOX marche centre
+DIRECT NOX assis
 TABLEAU Compte courant | 4,12 € | APL : aujourd'hui
 FONDU direct
 
@@ -15,7 +15,9 @@ NOX dit (curieux) Qui ça ?
 TOBI marche tapis
 PLAN auto
 TOBI dit (fier) Mes investisseurs.
-INSERT Virement reçu | 187 € | Caisse d'allocations familiales
+PC Banque : Compte de Tobi | Avant : 4,12 € | CAF : +187 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (sec) C'est ton APL.
 PLAN auto
@@ -40,7 +42,9 @@ PLAN gros NOX
 NOX dit (sec) Elle t'a envoyé dix euros.
 PLAN auto
 TOBI dit (fier) Donc j'ai déjà des revenus à l'étranger !
-INSERT Compte après dépenses | 3,40 € | Il reste 26 jours
+PC Banque : Compte de Tobi | Tobi.international : -197,72 € | Reste : 3,40 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (constat) Trois euros quarante. Vingt-six jours.
 PLAN auto

@@ -29,6 +29,9 @@ PLAN gros NOX
 NOX dit (sec) Sur internet ?
 PLAN gros TOBI
 TOBI dit (gene) Ah.
+PC Safari : Aucune connexion | Impossible d'ouvrir la page | Vérifie ta box
+PLAN pc
+ATTENDRE 1.6
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Je suggère une prière.
 PLAN gros GEMINI

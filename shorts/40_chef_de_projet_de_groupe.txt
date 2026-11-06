@@ -13,7 +13,7 @@ PLAN auto
 TOBI dit (fier) Dans le groupe, je suis le chef de projet.
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Montre-moi les messages du groupe.
-INSERT Groupe Projet L3 | 47 messages | Tous envoyés par Tobi
+TOBI message Groupe Projet L3 | > Les gars ? | > Vous êtes là ? | > Relance numéro 47.
 PLAN gros NOX
 NOX dit (sec) Tu parles tout seul.
 PLAN auto
@@ -46,6 +46,9 @@ PLAN auto
 TOBI dit (surpris) Comment ça, sans moi ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) Il s'appelle : pas Tobi. Le rendu est fini.
+PC Discord : pas Tobi | Kevin : Rendu terminé | Léa : On lui dit ?
+PLAN pc
+ATTENDRE 1.6
 PLAN auto
 TOBI dit (triste) Ils ont fini sans moi.
 PLAN gros NOX

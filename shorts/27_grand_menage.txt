@@ -20,6 +20,9 @@ PLAN gros NOX
 NOX dit (curieux) Laquelle ?
 PLAN gros CODEX
 CODEX dit (content) La corbeille.
+PC Finder : Bureau de Tobi | Corbeille
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Et mes photos ?
 PLAN gros CODEX

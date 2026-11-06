@@ -39,6 +39,7 @@ TOBI assis
 PLAN auto
 TOBI dit (calme) Je ferme les yeux. Je vois des voitures. Et un oreiller.
 INSERT Routine de millionnaire | 11 minutes | Record personnel
+HEURE 05:11
 TOBI dort
 PLAN gros NOX
 NOX dit (sec) Tobi, il est cinq heures onze.

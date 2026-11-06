@@ -2,6 +2,7 @@
 # Pitch : Tobi demande de l'aide pour écrire un simple mail à sa mère. Codex et Gemini s'en mêlent.
 
 AMBIANCE soir
+HEURE 21:05
 DIRECT TOBI travaille
 DIRECT NOX assis
 DIRECT TOBI pivote
@@ -30,7 +31,7 @@ PLAN gros TOBI
 TOBI dit (colere) Nox, dis quelque chose !
 PLAN gros NOX
 NOX dit (ironique) Le podcast est bien monté.
-TOBI message Maman | > Salut maman, tout va bien. | > Je t'envoie aussi un podcast de 40 minutes.
+TOBI message Maman | > [21:02] Tout va bien. Fin du message. Ne pas répondre. | > [21:03] Je t'envoie aussi un podcast de 40 minutes.
 BRUIT ding
 PLAN gros NOX
 NOX dit (curieux) Elle a déjà répondu.

@@ -19,7 +19,9 @@ PLAN gros NOX
 NOX dit (curieux) Et les abonnements ?
 PLAN gros TOBI
 TOBI dit (fier) J'en ai deux ou trois, pour le business.
-INSERT Abonnements actifs | 12 | Total : 87 € par mois
+PC Banque : Compte de Tobi | Abonnements actifs : 12 | Total par mois : -87 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Douze ?
 PLAN gros NOX

@@ -25,7 +25,9 @@ PLAN gros NOX
 NOX dit (curieux) Son pseudo ?
 PLAN gros TOBI
 TOBI dit (content) Mamour soixante-deux.
-INSERT Cliente | Mamour62 | 3 achats, 5 étoiles
+PC Safari : petites-ventes.fr/mes-ventes | Cliente : Mamour62 | 3 achats, 5 étoiles
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (curieux) Elle a acheté ta poêle combien ?
 PLAN gros TOBI

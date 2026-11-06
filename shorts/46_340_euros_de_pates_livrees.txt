@@ -13,7 +13,9 @@ PLAN gros NOX
 NOX dit (calme) Ouvre l'appli de livraison.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Je ne commande presque jamais.
-INSERT Livraisons ce mois-ci | 34 | Total : 340 €
+PC Safari : livraison-rapide.fr/commandes | Livraisons ce mois-ci : 34 | Total : 340 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (surpris) Trente-quatre ?
 PLAN gros NOX
@@ -53,7 +55,7 @@ NOX dit (curieux) Tu sais où il habite ?
 PLAN gros TOBI
 TOBI dit (curieux) Non.
 PLAN gros NOX
-NOX dit (sec) Chambre 216. Juste au-dessus.
+NOX dit (sec) Chambre 314. Juste au-dessus.
 PLAN gros TOBI
 TOBI dit (surpris) Il descend juste un étage ?
 PLAN gros NOX

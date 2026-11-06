@@ -2,7 +2,7 @@
 # Pitch : Tobi a cinq minutes d'exposé. Gemini en a fait 400 diapos, puis le programme du partiel de toute la promo.
 
 AMBIANCE soir
-DATE Samedi
+DATE Jeudi
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
@@ -29,7 +29,9 @@ PLAN gros GEMINI
 GEMINI dit (fier) Version courte, alors. Une seule diapositive.
 PLAN gros TOBI
 TOBI dit (content) Enfin ! Elle dit quoi ?
-INSERT Version courte | EAU | Sources : 2 400
+PC PowerPoint : Expose_version_courte.pptx | EAU | Sources : 2 400
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (sec) C'est clair.
 PLAN gros TOBI
@@ -61,6 +63,7 @@ PLAN gros TOBI
 TOBI dit (triste) Y a quoi ?
 PLAN gros NOX
 NOX dit (constat) Cent dix-neuf messages. Pas très gentils.
+TOBI message Groupe de la promo | 400 diapos ?! | C'est qui, Tobi ? | Merci, Tobi. Vraiment.
 PLAN gros TOBI
 TOBI dit (curieux) Et le cent vingtième ?
 PLAN gros NOX
