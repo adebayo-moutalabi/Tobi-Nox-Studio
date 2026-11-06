@@ -13,6 +13,8 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ».
 - **Mettre de l'émotion :** chaque réplique a une intention claire, adaptée à la scène : envie, gêne, panique, tristesse ou mauvaise foi.
 - **Regarder avant de parler :** le Studio tourne le personnage vers le prénom appelé, sinon vers celui qui répond ensuite. Pour changer d'interlocuteur, appeler le personnage par son prénom.
+- **Écrire à l'oral :** Tobi, Nox et Codex disent « T'as », « J'ai plus », « C'est pas » et « Je sais pas ». Claude reste plus posé.
+- **Varier les ouvertures :** ne pas commencer toutes les répliques par le prénom de Nox.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
 - **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
@@ -177,6 +179,8 @@ NOX dit (resigne) J'appelle ta mère.
 ```
 
 **Tons :** neutre, calme, curieux, fier, content, excite, illumine, ironique, sec, constat, punchline, gene, mauvaisefoi, resigne, triste, colere, surpris, panique, chuchote.
+
+**Mise en scène automatique :** `PLAN gros` choisit un gros plan pour les temps forts et un plan moyen ou bas pour les répliques plus calmes. Le Studio alterne aussi les gestes.
 
 **Plans :** `PLAN auto`, `PLAN gros TOBI`, `PLAN gros NOX`, `PLAN clavier`, `PLAN lit`, `PLAN large`. Changer de plan à presque chaque réplique.
 

@@ -112,6 +112,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Regarder la bonne personne avant de parler | Le Studio repère le prénom appelé ou la personne qui répond, puis tourne le personnage avant la réplique |
 | 6 nov. 2026 | Épisode du procès pas assez drôle | Remplacé par un entretien annuel de Tobi avec ses IA |
 | 6 nov. 2026 | Audit complet | Bug de plan de dos corrigé, contrôle ajouté à `tools/audit-cadrage.js` et priorités relevées dans un audit privé |
+| 6 nov. 2026 | Appliquer l'audit à tout le Studio | Dialogues plus oraux, plans variés, écrans animés, sous-titres plus grands, gestes alternés et actions dans les épisodes récents |
+| 6 nov. 2026 | Plans dans les vêtements et bras trop répétitifs | Caméra interdite dans les personnages, gestes plus rares et mouvements de bras réduits |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
