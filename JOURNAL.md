@@ -106,6 +106,9 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Histoires trop rapides et difficiles à suivre | Épisode 58 réécrit avec contexte, charte corrigée pour des répliques plus claires |
 | 6 nov. 2026 | Dialogues plus humains et moins de blancs | Silences des voix coupés, réponses enchaînées et consignes d'émotion renforcées |
 | 6 nov. 2026 | Titres et descriptions plus reconnaissables | Titres de série numérotés, descriptions courtes et appel à s'abonner |
+| 6 nov. 2026 | Gestes et téléphone plus humains | Téléphone visible à l'oreille, gestes calés sur les mots appuyés et énergie selon le ton |
+| 6 nov. 2026 | Appliquer l'épisode 58 aux autres | Épisodes 52 à 63 réécrits avec contexte, durée visée de 40 à 90 secondes |
+| 6 nov. 2026 | Personnages IA plus vivants | Claude grand frère honnête, Codex stagiaire surexcité, Gemini premier de la classe |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

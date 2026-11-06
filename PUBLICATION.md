@@ -83,13 +83,13 @@ Un nouvel épisode coûte environ 650 à 850 crédits, selon l'estimation du Stu
 
 ## Durée et crédits
 
-La cible va de 50 à 115 secondes. Une vidéo courte peut très bien marcher : il ne faut pas l'allonger sans raison.
+La cible va de 40 à 90 secondes. Une vidéo courte peut très bien marcher : il ne faut pas l'allonger sans raison.
 
 | Durée | Crédits estimés | Usage |
 |---|---:|---|
-| 50 à 60 s | 950 à 1 150 | Format normal |
+| 40 à 45 s | 750 à 900 | Format court |
+| 55 à 70 s | 1 000 à 1 350 | Format normal |
 | 75 à 90 s | 1 400 à 1 700 | Très bonne idée |
-| 100 à 115 s | 1 900 à 2 200 | Rare, pour un épisode événement |
 
 Avec 30 000 crédits par mois, prévoir environ 20 vidéos normales et 2 grands formats, soit 24 000 crédits, puis garder le reste pour les corrections.
 

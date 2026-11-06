@@ -13,7 +13,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ».
 - **Mettre de l'émotion :** chaque réplique a une intention claire, adaptée à la scène : envie, gêne, panique, tristesse ou mauvaise foi.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
-- **Rythme rapide :** 50 à 115 s selon l'idée, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
+- **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
@@ -22,10 +22,11 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 ## La bonne durée
 
-La durée vise 50 à 115 secondes, sans minimum strict d'une minute. La qualité passe avant la durée : une idée courte reste courte.
+La durée vise 40 à 90 secondes, sans minimum strict d'une minute. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.
 
-- **Format normal :** 50 à 60 secondes, environ 130 à 150 mots.
-- **Grand format :** 75 à 115 secondes, seulement pour une idée qui tient toute seule, avec des relances fortes.
+- **Format court :** 40 à 45 secondes, environ 100 à 115 mots.
+- **Format normal :** 55 à 70 secondes, environ 130 à 170 mots.
+- **Grand format :** 75 à 90 secondes, seulement pour une idée qui tient toute seule.
 
 1. **Ouvrir une question dès la première réplique :** temps, argent ou verdict. Le spectateur doit vouloir la réponse.
 2. **Rendre l'enjeu visible :** utiliser `COMPTEUR Il reste 60 s`, `COMPTEUR Jour 3 sur 10 · 8 €` ou `COMPTEUR Accusation 2 sur 3`.
@@ -50,9 +51,9 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Les Aînés** sont les logos de Claude Code, Codex et Gemini, animés comme des personnages. Ils viennent juger Tobi ou se contredire.
 
-- **Claude Code** demande la permission pour tout : « Puis-je ouvrir le fichier ? »
-- **Codex** agit avant la fin de la phrase : « C'est fait. » Il va toujours trop loin.
-- **Gemini** a déjà tout lu et propose tous les formats : « J'ai aussi fait un podcast. »
+- **Claude Code** est un grand frère sérieux et bienveillant. Il voit le problème, reste honnête et dit la vérité avec douceur : « Je vais être honnête avec toi. » « Puis-je » devient rare et sert seulement une vraie blague.
+- **Codex** est un stagiaire surexcité. Il agit avant la fin de la phrase et va trop loin : « C'est réglé. »
+- **Gemini** est le premier de la classe. Il a tout lu et ajoute trop de formats : « Fun fact. »
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
