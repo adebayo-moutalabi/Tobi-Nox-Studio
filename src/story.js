@@ -19,6 +19,7 @@ const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
   viens: 'come', stop: 'stop', gratter: 'scratch', consterne: 'facepalm', regarder: 'look', etirer: 'stretch', saluerbas: 'bow', sauter: 'jump', victoire: 'cheer',
 };
+const VARIANTES = { montrer: ['montrer', 'viens', 'reflechir'], non: ['non', 'stop'], epaules: ['epaules', 'gratter'], oui: ['oui', 'pouce'] };
 const OBJETS = { papier: 'paper', livre: 'book', gourde: 'bottle', tasse: 'mug', telephone: 'phone', sac: 'bag' };
 const LIEUX = {
   gauche: [-0.12, 0.62], milieu: [0.26, 0.42], droite: [0.62, 0.1], // une ligne dégagée, à l'écart des jambes de Tobi : personne ne se cache derrière un autre
@@ -50,7 +51,7 @@ function chunk(text) {
   const words = text.split(/\s+/), groups = [];
   let start = 0, size = 0;
   words.forEach((w, i) => {
-    if (i > start && (size + w.length > 24 || /[.?!…]$/.test(words[i - 1]))) { groups.push([start, i]); start = i; size = 0; }
+    if (i > start && (size + w.length > 22 || /[.?!…]$/.test(words[i - 1]))) { groups.push([start, i]); start = i; size = 0; }
     size += w.length + 1;
   });
   groups.push([start, words.length]);
@@ -99,7 +100,7 @@ export function createPlayer(v, ui) {
     return near[0] || v.actors.find((x) => x !== a);
   };
   const room = v.room;
-  let talkTo = null, grosOf = null;
+  let talkTo = null, grosOf = null, lowShot = false, shotN = 0, hiddenForShot = [];
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
   const look = createLook(v);
@@ -177,6 +178,13 @@ export function createPlayer(v, ui) {
     const big = b.id === 'tobi', e = eyes(b), r = big ? 0.3 : b.extra ? 0.3 : 0.17;
     return (big ? [0, 0.35, 0.7, 1.05, 1.4].map((d) => e.clone().setY(Math.max(0.08, e.y - d))).concat(v.pos(b).clone().setY(0.1)) : [e, e.clone().setY(e.y - 0.16)]).some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < r; });
   };
+  // La caméra ne se place jamais dans un autre personnage.
+  const free = (c, a) => v.actors.every((x) => x === a || !x.hero.root.visible || (x.id === 'tobi' ? Math.hypot(c.x - v.pos(x).x, c.z - v.pos(x).z) > 0.42 : eyes(x).distanceTo(c) > 0.38));
+  const unblock = (a) => {
+    const c = v.camera.position, near = v.actors.filter((x) => x !== a && x.hero.root.visible && (x.id === 'tobi' ? Math.hypot(c.x - v.pos(x).x, c.z - v.pos(x).z) <= 0.42 : eyes(x).distanceTo(c) <= 0.38));
+    for (const x of near) { x.hero.root.visible = false; hiddenForShot.push(x); }
+  };
+  const showHidden = () => { for (const x of hiddenForShot) x.hero.root.visible = true; hiddenForShot = []; };
   function frame(a, tight, front) {
     const b = talkTo || partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
@@ -193,10 +201,10 @@ export function createPlayer(v, ui) {
     for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.3) : Math.max(top + sp * 0.13 - sp / 2, 0.3); // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
-        const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03);
+        const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03) - (lowShot ? sp * 0.2 : 0);
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (tall ? 0.26 : a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
         const low = Math.max(0.2, mid - sp * 0.3), corner = (s) => H.clone().addScaledVector(side, s).setY(low); // et le bas de l'image, où un meuble passerait devant
-        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
+        if (room2(c) && free(c, a) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           return;
@@ -210,7 +218,7 @@ export function createPlayer(v, ui) {
       for (let i = 0; i < 16; i++) {
         const c = H.clone().addScaledVector(fwd.clone().normalize().applyAxisAngle(up, ((i % 2 ? 1 : -1) * Math.ceil(i / 2) * Math.PI) / 8), dist); c.y = mid + 0.03;
         const edge = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(0.16);
-        if (room2(c) && clear(H, c) && seen(c, H) && seen(c, H.clone().add(edge)) && seen(c, H.clone().sub(edge)) && seen(c, H.clone().setY(H.y - 0.1)) && !(strict && others.some((x) => blocks(x, c, H)))) { aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens()); return; }
+        if (room2(c) && free(c, a) && clear(H, c) && seen(c, H) && seen(c, H.clone().add(edge)) && seen(c, H.clone().sub(edge)) && seen(c, H.clone().setY(H.y - 0.1)) && !(strict && others.some((x) => blocks(x, c, H)))) { aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens()); return; }
       }
     }
     cut('large');
@@ -286,8 +294,13 @@ export function createPlayer(v, ui) {
         look.hideInsert();
         if (k === 'duo') { auto = false; duo(); return undefined; }
         grosOf = null;
+        showHidden(); // ceux qu'on avait retirés du plan précédent
         if (k === 'gros') { auto = false; grosOf = actor(plain(c.args[1] || 'tobi')); closeUp(grosOf); return undefined; }
         if (!auto) cut(k);
+        if (k === 'pc' || k === 'ecran' || k === 'clavier') { // la caméra ne doit jamais se retrouver dans un personnage
+          hiddenForShot = v.actors.filter((x) => x.hero.root.visible && v.pos(x).distanceTo(v.camera.position.clone().setY(v.pos(x).y)) < 0.5);
+          for (const x of hiddenForShot) x.hero.root.visible = false;
+        }
         return undefined;
       }
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
@@ -317,6 +330,7 @@ export function createPlayer(v, ui) {
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
       case 'porte': return v.swing(room.entryDoor, plain(c.args[0] || '') === 'ouverte' ? -1.5 : 0, 0.8);
       case 'dit': {
+        showHidden();
         const to = c.to && actor(c.to), b = to?.hero.root.visible ? to : partner(a), tone = TONS[c.tone], before = a.look;
         track = null;
         for (const x of v.actors) { // tout le monde regarde celui qui parle, et il parle à quelqu'un
@@ -324,19 +338,23 @@ export function createPlayer(v, ui) {
           x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.face(x, a, true);
         }
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
-        talkTo = b; if (grosOf === a) closeUp(a); talkTo = null; // le plan suit la personne à qui il parle
+        shotN++;
+        const fort = !!a.hero.seat || c.text.split(/\s+/).length <= 4 || ['panique', 'surpris', 'colere', 'punchline', 'illumine'].includes(c.tone);
+        lowShot = !fort && a.id === 'tobi' && shotN % 3 === 0;
+        talkTo = b; if (grosOf === a) frame(a, fort); talkTo = null; lowShot = false; unblock(a); // gros plan pour les temps forts, plan moyen ou bas sinon
         if (before !== a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) v.face(a, b, true);
-          talkShot(a);
+          talkTo = b; frame(a, !!a.hero.seat); talkTo = null; unblock(a);
         }
         a.hero.energy = ENERGIE[c.tone] || 1;
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
-        const talkPose = a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
+        const geste = tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
+        const talkPose = !geste && a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
-        if (tone?.geste && !talkPose) a.hero.play(GESTES[tone.geste]); // le geste part avec la voix
+        if (geste && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {
           voice.env ||= envelope(voice.buffer);
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
@@ -444,6 +462,7 @@ export function createPlayer(v, ui) {
       if (running) return;
       findBlockers();
       subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(); look.setMood('soir');
+      hiddenForShot = [];
       const list = parseStory(text);
       adresse(list);
       running = true; stopped = false; ui.state(true); v.locked = true;

@@ -90,7 +90,7 @@ export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   state.beatT = (state.beatT || 0) + dt;
   state.sincePush = (state.sincePush || 9) + dt;
   const level = T ? (T.env ? T.level : 0.62 + 0.38 * Math.sin(state.beatT * 7.3)) : 0, slow = state.slowLevel || 0;
-  if (T && level > 0.5 && level - slow > 0.1 && state.sincePush > 0.32) { // un mot appuyé
+  if (T && level > 0.5 && level - slow > 0.1 && state.sincePush > 0.6) { // un mot appuyé
     state.sincePush = 0; state.push = 0.65 + 0.35 * level;
     if (Math.random() < 0.35) state.hand = 1 - (state.hand || 0);
   }
@@ -102,8 +102,9 @@ export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   addRot(head, -0.02 * b - 0.1 * p, 0.05 * b * Math.sin(t * 2.1), 0.03 * b * Math.sin(t * 1.7));
   addRot(chest, -0.03 * p, 0.025 * b * Math.sin(t * 1.3), 0);
   if (arms) {
-    addRot(arms[h], -0.14 * b - 0.62 * p, 0, 0);
-    addRot(arms[1 - h], -0.08 * b - 0.16 * p, 0, 0);
+    const side = h ? 1 : -1; // la main s'ouvre un peu sur le côté, sans monter et descendre sans arrêt
+    addRot(arms[h], -0.05 * b - 0.16 * p, side * 0.12 * p, 0);
+    addRot(arms[1 - h], -0.02 * b, 0, 0);
   }
 }
 

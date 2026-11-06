@@ -49,15 +49,24 @@ export function createLaptop() {
   const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.312, 0.2), new THREE.MeshBasicMaterial({ color: '#20242f', toneMapped: false }));
   scr.name = 'ecran_pc'; scr.position.set(0, 0.115, 0.0056);
   hinge.add(scr); group.add(hinge);
-  const S = { title: 'notes.txt', text: '', caret: 0, board: null };
+  const S = { title: 'notes.txt', text: '', caret: 0, board: null, boardT: 0 };
   function drawBoard(W, H) { // écran lisible à l'image : un titre et quelques lignes en grand
-    const [title, ...rows] = S.board;
+    const [title, ...rows] = S.board, t = S.boardT, out = (x) => 1 - (1 - x) ** 3;
     ctx.fillStyle = '#14161b'; ctx.fillRect(0, 0, W, H);
-    ctx.fillStyle = '#f2b92e'; ctx.fillRect(0, 0, W, 136);
+    ctx.strokeStyle = 'rgba(255,255,255,.05)'; ctx.lineWidth = 2;
+    for (let x = 0; x < W; x += 64) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    ctx.fillStyle = '#f2b92e'; ctx.fillRect(0, 0, W * out(Math.min(1, t / 0.3)), 136);
     ctx.fillStyle = '#14161b'; ctx.font = '800 72px "Inter", "Segoe UI", sans-serif'; ctx.textBaseline = 'middle'; ctx.textAlign = 'center'; ctx.fillText(title, W / 2, 70, W - 60);
-    ctx.fillStyle = '#ffffff'; ctx.font = '700 66px "Inter", "Segoe UI", sans-serif';
     const step = (H - 160) / Math.max(rows.length, 1);
-    rows.forEach((r, i) => ctx.fillText(r, W / 2, 150 + step * (i + 0.5), W - 60));
+    rows.forEach((r, i) => { // les lignes arrivent l'une après l'autre, le dernier chiffre compte
+      const p = Math.max(0, Math.min(1, (t - 0.2 - i * 0.24) / 0.28)), last = i === rows.length - 1;
+      if (!p) return;
+      let text = r;
+      if (last && rows.length > 1) text = r.replace(/\d[\d ]*\d|\d/, (n) => { const v = Number(n.replace(/\s/g, '')); return Math.round(v * out(Math.min(1, (t - 0.45 - i * 0.24) / 0.5)) ).toLocaleString('fr-FR').replace(/\u202f/g, ' '); });
+      ctx.globalAlpha = p; ctx.fillStyle = last && rows.length > 1 ? '#f2b92e' : '#ffffff'; ctx.font = `${last && rows.length > 1 ? 800 : 700} ${last && rows.length > 1 ? 74 : 62}px "Inter", "Segoe UI", sans-serif`;
+      ctx.fillText(text, W / 2 + (1 - out(p)) * 90, 150 + step * (i + 0.5), W - 60);
+      ctx.globalAlpha = 1;
+    });
     ctx.textAlign = 'left'; tex.needsUpdate = true;
   }
   function draw() {
@@ -101,11 +110,12 @@ export function createLaptop() {
       return base[i][0] < 0 ? 'L' : 'R';
     },
     clear(title) { S.text = ''; S.board = null; if (title) S.title = title; draw(); },
-    show(lines) { S.board = lines; draw(); },
+    show(lines) { S.board = lines; S.boardT = 0; draw(); },
     update(dt) {
       let dirty = false;
       for (let i = 0; i < heat.length; i++) if (heat[i] > 0) { heat[i] = Math.max(0, heat[i] - dt * 9); put(i); dirty = true; }
       if (dirty) { keys.instanceMatrix.needsUpdate = true; if (keys.instanceColor) keys.instanceColor.needsUpdate = true; }
+      if (S.board && S.boardT < 2) { S.boardT += dt; draw(); }
       const c = S.caret; S.caret = (S.caret + dt) % 1;
       if ((c < 0.5) !== (S.caret < 0.5)) draw();
     },
