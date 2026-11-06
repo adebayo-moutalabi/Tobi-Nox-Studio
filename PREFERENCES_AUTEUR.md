@@ -28,6 +28,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - Les bras ne doivent ni rester figés, ni monter et descendre sans arrêt.
 - Le bon équilibre : quelques poses naturelles, tenues un moment, qui changent avec la phrase.
+- Les mains doivent être vivantes : doigts articulés, poignet qui suit le geste et pas de doigts raides.
 - Le téléphone doit être tenu avec une vraie prise de main, bien aligné à l'oreille.
 - Nox doit aussi bouger quand il parle, selon la situation.
 - Le corps doit jouer l'émotion : panique, doute, colère, fierté, tristesse et gêne doivent se lire sans le son.
@@ -45,4 +46,5 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
+- **Bras assis :** trop agités, puis trop immobiles. La règle retenue est des gestes petits, lents et liés à l'émotion.
 - **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes. La règle retenue est 40 à 90 secondes, sauf idée exceptionnelle.

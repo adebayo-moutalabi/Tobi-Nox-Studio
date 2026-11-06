@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
-import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart, keepHandsOut } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart, keepHandsOut, handLife } from './talk.js';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const PALETTE = {
@@ -92,9 +92,10 @@ function makeBones() {
     defs.push([`forearm_${n}`, `arm_${n}`, ELBOW(s)]);
     defs.push([`hand_${n}`, `forearm_${n}`, WRIST(s)]);
     FINGERS.forEach((f, i) => {
-      const a = handPoint(s, V(0, -0.09, f.z)), b = handPoint(s, V(0, -0.09 - f.l * 0.52, f.z));
+      const a = handPoint(s, V(0, -0.09, f.z)), b = handPoint(s, V(0, -0.09 - f.l * 0.44, f.z)), c = handPoint(s, V(0, -0.09 - f.l * 0.74, f.z));
       defs.push([`f${i}a_${n}`, `hand_${n}`, a]);
       defs.push([`f${i}b_${n}`, `f${i}a_${n}`, b]);
+      defs.push([`f${i}c_${n}`, `f${i}b_${n}`, c]);
     });
     const ta = handPoint(s, V(-s * 0.006, -0.025, 0.036)), tb = handPoint(s, V(-s * 0.009, -0.062, 0.058));
     defs.push([`th_a_${n}`, `hand_${n}`, ta]);
@@ -199,9 +200,10 @@ function buildBody(body, tails) {
     };
     const fingerRings = (y, z, r, x = 0) => prism(V(x, y, z), r).map((p) => handPoint(s, p));
     FINGERS.forEach((f, i) => {
-      const y0 = -0.086, y1 = -0.09 - f.l * 0.52, y2 = -0.09 - f.l;
+      const y0 = -0.086, y1 = -0.09 - f.l * 0.44, y2 = -0.09 - f.l * 0.74, y3 = -0.09 - f.l;
       body.loft([fingerRings(y0, f.z, 0.0118), fingerRings(y1 + 0.004, f.z, 0.0108)], { color: 'skin', skin: `f${i}a_${n}`, vary: 0.08 });
-      body.loft([fingerRings(y1 + 0.006, f.z, 0.0108), fingerRings(y1 - 0.004, f.z, 0.0105), fingerRings(y2, f.z, 0.0068)], { color: 'skin', skin: `f${i}b_${n}`, capEnd: true, vary: 0.08 });
+      body.loft([fingerRings(y1 + 0.005, f.z, 0.0108), fingerRings(y2 + 0.003, f.z, 0.0098)], { color: 'skin', skin: `f${i}b_${n}`, vary: 0.08 });
+      body.loft([fingerRings(y2 + 0.004, f.z, 0.0098), fingerRings(y3 + 0.006, f.z, 0.0084), fingerRings(y3, f.z, 0.0056)], { color: 'skin', skin: `f${i}c_${n}`, capEnd: true, vary: 0.08 });
     });
     const t0 = V(-s * 0.004, -0.018, 0.03), t1 = V(-s * 0.008, -0.062, 0.058), t2 = V(-s * 0.01, -0.098, 0.068);
     const thumb = (c, r) => prism(c, r).map((p) => handPoint(s, p));
@@ -573,7 +575,8 @@ export function createCharacter() {
   // État animé
   const faceMeshes = [headMesh, eyeMesh];
   const weights = Object.fromEntries(MORPHS.map((m) => [m, 0]));
-  const tapBones = [bones.head, bones.chest, bones.spine, bones.neck, bones.arm_L, bones.arm_R, bones.upleg_L, bones.upleg_R, bones.leg_L, bones.leg_R, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
+  const fingerBones = ['L', 'R'].flatMap((n) => [0, 1, 2, 3].flatMap((i) => ['a', 'b', 'c'].map((k) => bones[`f${i}${k}_${n}`])).concat(bones[`th_a_${n}`], bones[`th_b_${n}`]));
+  const tapBones = [...fingerBones, bones.head, bones.chest, bones.spine, bones.neck, bones.arm_L, bones.arm_R, bones.upleg_L, bones.upleg_R, bones.leg_L, bones.leg_R, ...['L', 'R'].flatMap((n) => [bones[`forearm_${n}`], bones[`hand_${n}`], ...[0, 1, 2, 3].map((k) => bones[`f${k}a_${n}`])])];
   const state = {
     expr: {}, exprName: 'neutre', blinkT: 2, blink: 0, blinkDir: 0, glanceT: 3, glance: { lookL: 0, lookR: 0, lookU: 0, lookD: 0 },
     talk: null, viseme: {}, current: null, loco: 'idle', gesture: null, taps: { L: 0, R: 0 }, tapF: { L: 1, R: 2 }, lift: 0, liftTo: 0,
@@ -618,8 +621,9 @@ export function createCharacter() {
         const k = state.lift / 0.09;
         for (const n of ['L', 'R']) { addRot(bones[`upleg_${n}`], 0.24 * k, 0, 0); addRot(bones[`leg_${n}`], -0.28 * k, 0, 0); }
       }
-      talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.seat ? null : motion.handsFree ? [bones.forearm_L, bones.forearm_R, bones.arm_L, bones.arm_R] : null);
+      talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R, bones.arm_L, bones.arm_R] : null, motion.seat);
       if (motion.handsFree) keepHandsApart(root, bones);
+      if (motion.handsFree) handLife(state, bones);
       keepHandsOut(root, bones, api.avoid);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
         const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);

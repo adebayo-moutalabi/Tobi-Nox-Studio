@@ -354,7 +354,7 @@ export function createPlayer(v, ui) {
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
         const geste = !a.hero.seat && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
-        const emotion = EMOTIONS[c.tone], talkPose = !a.hero.seat && a.id === 'tobi' && !a.hero.motion.pose ? (emotion && a.hero.motion.has(emotion) ? emotion : !geste && a.hero.motion.has(talkClip) ? talkClip : null) : null;
+        const emotion = EMOTIONS[c.tone], assisOk = !a.hero.seat || ['emo_panique', 'emo_surpris', 'emo_doute', 'emo_idee', 'emo_justifie'].includes(emotion), talkPose = a.id === 'tobi' && !a.hero.motion.pose ? (emotion && assisOk && a.hero.motion.has(emotion) ? emotion : !a.hero.seat && !geste && a.hero.motion.has(talkClip) ? talkClip : null) : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
         if (geste && !emotion && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {

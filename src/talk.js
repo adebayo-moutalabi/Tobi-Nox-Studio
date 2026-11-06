@@ -87,7 +87,7 @@ export function clearRot(bones) {
 const HANDS = [[-0.42, -0.14, 0, 0], [-0.16, -0.72, 0, -0.08], [-0.68, -0.2, 0.08, 0], [-0.52, -0.48, 0.14, -0.14], [-0.22, -0.3, 0, 0]];
 
 // Le corps accompagne la voix : chaque mot appuyé déclenche un petit élan, jamais les deux mains en même temps.
-export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
+export function talkBody(state, dt, head, chest, gain = 1, arms = null, seated = false) {
   const T = state.talk, target = T ? (T.env ? T.level : 0.7) : 0;
   state.beat = (state.beat || 0) + (target - (state.beat || 0)) * (1 - Math.exp(-dt * 12));
   state.beatT = (state.beatT || 0) + dt;
@@ -107,9 +107,9 @@ export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   addRot(head, -0.02 * b - 0.1 * p, 0.05 * b * Math.sin(t * 2.1), 0.03 * b * Math.sin(t * 1.7));
   addRot(chest, -0.03 * p, 0.025 * b * Math.sin(t * 1.3), 0);
   if (arms) { // des poses tenues, qui changent avec la phrase : jamais la même boucle
-    const [fl, fr, al, ar] = arms, pose = HANDS[state.handPose || 0], k = 1 - Math.exp(-dt * 6.5), lift = T ? 1 : 0;
+    const [fl, fr, al, ar] = arms, pose = HANDS[state.handPose || 0], k = 1 - Math.exp(-dt * (seated ? 4.5 : 6.5)), lift = T ? (seated ? 0.62 : 1) : 0; // assis, les gestes restent plus petits et plus lents
     state.hands = (state.hands || [0, 0, 0, 0]).map((x, n) => x + (pose[n] * lift - x) * k);
-    const [l, r, ol, or] = state.hands, push = 0.12 * p;
+    const [l, r, ol, or] = state.hands, push = seated ? 0 : 0.12 * p;
     addRot(fl, l - (h === 0 ? push : 0), ol, 0); addRot(fr, r - (h === 1 ? push : 0), or, 0);
     addRot(al, l * 0.24, 0, 0); addRot(ar, r * 0.24, 0, 0);
   }
@@ -165,4 +165,20 @@ export function keepHandsOut(root, bones, zones) {
     from.sub(shoulder).normalize(); to.sub(shoulder).normalize();
     arm.quaternion.premultiply(turnBy.setFromUnitVectors(from, to));
   }
+}
+
+// Doigts vivants : ils s'ouvrent sur le mot appuyé puis se relâchent, jamais tous ensemble.
+export function handLife(state, bones) {
+  const t = state.lifeT || 0, open = state.swing || 0, talk = state.beat || 0, active = state.hand || 0;
+  ['L', 'R'].forEach((n, side) => {
+    const s = n === 'L' ? 1 : -1, gesture = side === active ? open : open * 0.3;
+    for (let i = 0; i < 4; i++) {
+      const drift = 0.035 * Math.sin(t * (0.7 + i * 0.17) + i * 1.9 + side), c = drift + 0.05 * talk - gesture * (0.28 - i * 0.04);
+      addRot(bones[`f${i}a_${n}`], 0, 0, -s * c);
+      addRot(bones[`f${i}b_${n}`], 0, 0, -s * c * 0.7);
+      addRot(bones[`f${i}c_${n}`], 0, 0, -s * c * 0.45);
+    }
+    addRot(bones[`th_a_${n}`], 0.05 * gesture, 0, s * 0.08 * gesture);
+    addRot(bones[`hand_${n}`], 0.1 * gesture, 0, -s * 0.05 * talk * Math.sin(t * 1.3 + side)); // le poignet accompagne avec un léger retard
+  });
 }

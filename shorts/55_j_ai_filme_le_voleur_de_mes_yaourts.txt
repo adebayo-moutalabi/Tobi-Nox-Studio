@@ -41,7 +41,7 @@ TOBI marche tapis &
 TOBI dit (panique) Quoi ? Je me vole moi-même ?
 PLAN gros NOX
 NOX dit (constat) Depuis trois semaines.
-TOBI marche frigo
+TOBI marche centre
 PLAN gros TOBI
 TOBI dit (fier) Très bien. Je mets un cadenas. Il passera plus.
 INSERT La nuit suivante | 3 h 12 | Le suspect ouvre le cadenas

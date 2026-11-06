@@ -18,16 +18,17 @@ function bonesList() {
   const l = ['hips', 'spine', 'chest', 'neck', 'head'];
   for (const [n] of SIDES) {
     l.push(`shoulder_${n}`, `arm_${n}`, `forearm_${n}`, `hand_${n}`, `th_a_${n}`, `th_b_${n}`, `upleg_${n}`, `leg_${n}`, `foot_${n}`, `toe_${n}`);
-    for (let i = 0; i < 4; i++) l.push(`f${i}a_${n}`, `f${i}b_${n}`);
+    for (let i = 0; i < 4; i++) l.push(`f${i}a_${n}`, `f${i}b_${n}`, `f${i}c_${n}`);
   }
   return l;
 }
 
 function fingers(P, n, s, curl, thumb = curl * 0.6) {
   for (let i = 0; i < 4; i++) {
-    const c = curl * (1 + i * 0.05);
+    const c = curl * (0.78 + i * 0.16); // l'index reste plus ouvert, l'auriculaire plus replié
     P[`f${i}a_${n}`] = [0, 0, -s * c];
     P[`f${i}b_${n}`] = [0, 0, -s * c * 1.15];
+    P[`f${i}c_${n}`] = [0, 0, -s * c * 0.72];
   }
   P[`th_a_${n}`] = [thumb * 0.5, 0, -s * thumb * 0.3];
   P[`th_b_${n}`] = [0, 0, -s * thumb * 0.7];
@@ -391,7 +392,7 @@ const POSES = {
   emo_idee: [2.8, (t) => {
     const P = base(t), w = 0.012 * Math.sin(t * TAU * 2);
     reach(P, 'R', -1, [-0.26, 1.42 + w, 0.22], [-0.9, -0.6, 0]); mixHand(P, 'R', -1, 0.8, 1, 0.5);
-    P.f0a_R = [0, 0, 0]; P.f0b_R = [0, 0, 0];
+    P.f0a_R = [0, 0, 0]; P.f0b_R = [0, 0, 0]; P.f0c_R = [0, 0, 0];
     add(P, 'chest', -0.07, -0.06, 0); add(P, 'head', -0.04, 0, 0);
     return P;
   }],
