@@ -8,16 +8,19 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 - **Épisodes indépendants :** chaque épisode se comprend seul. Pas de suite, pas de compteur de projets, pas de placard.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
-- **Rythme rapide :** 40 à 50 s, répliques de 1 à 6 mots le plus souvent, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
+- **Rythme rapide :** 50 à 115 s selon l'idée, répliques de 1 à 6 mots le plus souvent, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
 
 **Les sujets à privilégier :** les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
 
-## Le format d'une minute et plus
+## La bonne durée
 
-Pour TikTok, viser 65 à 75 secondes, soit environ 170 à 190 mots, avec une trentaine à une quarantaine de répliques. Compter environ 1 300 crédits.
+La durée vise 50 à 115 secondes, sans minimum strict d'une minute. La qualité passe avant la durée : une idée courte reste courte.
+
+- **Format normal :** 50 à 60 secondes, environ 130 à 150 mots.
+- **Grand format :** 75 à 115 secondes, seulement pour une idée qui tient toute seule, avec des relances fortes.
 
 1. **Ouvrir une question dès la première réplique :** temps, argent ou verdict. Le spectateur doit vouloir la réponse.
 2. **Rendre l'enjeu visible :** utiliser `COMPTEUR Il reste 60 s`, `COMPTEUR Jour 3 sur 10 · 8 €` ou `COMPTEUR Accusation 2 sur 3`.

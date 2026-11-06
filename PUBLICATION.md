@@ -81,9 +81,23 @@ Un nouvel épisode coûte environ 650 à 850 crédits, selon l'estimation du Stu
 - **Augmenter seulement si :** les crédits suivent, au moins une semaine de vidéos est prête d'avance et les résultats justifient plus de volume.
 - **Économiser :** valider le texte avant la voix, ne refaire qu'une réplique ratée et réutiliser le même MP4 sur toutes les plateformes.
 
-## Format TikTok d'une minute
+## Durée et crédits
 
-Les épisodes 61, 62 et 63 sont pensés pour dépasser une minute. Une vidéo de cette longueur coûte environ 1 300 crédits. La durée finale doit être vérifiée avec les vraies voix.
+La cible va de 50 à 115 secondes. Une vidéo courte peut très bien marcher : il ne faut pas l'allonger sans raison.
+
+| Durée | Crédits estimés | Usage |
+|---|---:|---|
+| 50 à 60 s | 950 à 1 150 | Format normal |
+| 75 à 90 s | 1 400 à 1 700 | Très bonne idée |
+| 100 à 115 s | 1 900 à 2 200 | Rare, pour un épisode événement |
+
+Avec 30 000 crédits par mois, prévoir environ 20 vidéos normales et 2 grands formats, soit 24 000 crédits, puis garder le reste pour les corrections.
+
+Ne créer une version longue qu'après avoir validé le script avec les voix gratuites.
+
+## TikTok et la minute
+
+TikTok accepte les vidéos courtes. La minute compte surtout pour le programme qui rémunère les vidéos, avec des conditions souvent citées de 10 000 abonnés et 100 000 vues sur 30 jours. Vérifier le détail dans l'application.
 
 ## Si le rythme augmente
 
