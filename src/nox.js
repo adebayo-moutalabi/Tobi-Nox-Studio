@@ -368,7 +368,7 @@ export function createNox({ scale = 1, form = null } = {}) {
       clearRot([bones.head, bones.chest, bones.spine, ...(rig ? [bones.arm_L, bones.arm_R] : [])]);
       motion.update(dt);
       lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.head });
-      talkBody(state, dt, bones.head, null, 1.5);
+      talkBody(state, dt, bones.head, null, 1.5 * (api.energy || 1));
       const tilt = TILT[state.exprName] || [0, 0, 0], kt = 1 - Math.exp(-dt * 7);
       state.tilt = (state.tilt || [0, 0, 0]).map((x, i) => x + (tilt[i] - x) * kt);
       addRot(bones.head, ...state.tilt);

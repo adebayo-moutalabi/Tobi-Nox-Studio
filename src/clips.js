@@ -350,7 +350,8 @@ const POSES = {
     const P = base(t);
     reach(P, 'R', -1, [-0.2, 1.33, 0.17], [-0.9, -0.6, 0.2]);
     mixHand(P, 'R', -1, 0.95, 1, 0.7);
-    add(P, 'head', 0.03, -0.1, 0.07);
+    add(P, 'head', 0.02, -0.04, 0.05);
+    add(P, 'chest', 0, 0, 0.02);
     return P;
   }],
   carry: [4, (t) => {

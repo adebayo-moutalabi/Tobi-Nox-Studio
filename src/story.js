@@ -279,8 +279,12 @@ export function createPlayer(v, ui) {
       }
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
-      case 'appelle': a.look = null; v.attach(a, v.item('phone')); a.hero.motion.clearPose(); a.hero.motion.togglePose('call'); return v.wait(0.35);
-      case 'raccroche': a.hero.motion.clearPose(); v.stash(a); return v.wait(0.2);
+      case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
+        a.look = null; a.hero.motion.clearPose(); v.attach(a, v.item('phone'));
+        const it = a.held; if (it?.obj) { it.obj.position.set(...PHONE_EAR.pos); it.obj.rotation.set(...PHONE_EAR.rot); }
+        a.hero.motion.togglePose('call'); return v.wait(0.6);
+      }
+      case 'raccroche': a.hero.motion.clearPose(); await v.wait(0.45); v.stash(a); return undefined;
       case 'compteur': ui.counter(c.text); return undefined;
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
@@ -312,6 +316,7 @@ export function createPlayer(v, ui) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) v.face(a, b, true);
           talkShot(a);
         }
+        a.hero.energy = ENERGIE[c.tone] || 1;
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
         const talkPose = a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
@@ -453,6 +458,10 @@ export function createPlayer(v, ui) {
     stop() { stopped = true; voixEssai.stop(); },
   };
 }
+
+// Le téléphone posé contre l'oreille, dans la main droite.
+const PHONE_EAR = { pos: [0, -0.04, 0.05], rot: [0, -Math.PI / 2, 0] };
+const ENERGIE = { excite: 1.35, colere: 1.4, panique: 1.5, illumine: 1.3, fier: 1.1, triste: 0.55, gene: 0.75, calme: 0.8, sec: 0.6, constat: 0.65, chuchote: 0.5, resigne: 0.6 };
 
 const QUALITE = { max: 1440, hd: 1080, fast: 720 };
 

@@ -83,18 +83,27 @@ export function clearRot(bones) {
     b.userData.off = null;
   }
 }
-// Le corps accompagne la voix : la tête ponctue, le buste suit.
+// Le corps accompagne la voix : chaque mot appuyé déclenche un petit élan, jamais les deux mains en même temps.
 export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   const T = state.talk, target = T ? (T.env ? T.level : 0.7) : 0;
   state.beat = (state.beat || 0) + (target - (state.beat || 0)) * (1 - Math.exp(-dt * 12));
   state.beatT = (state.beatT || 0) + dt;
-  const b = state.beat * gain, t = state.beatT;
-  if (b < 0.01) return;
-  addRot(head, -0.03 * b - 0.075 * b * Math.sin(t * 8.5), 0.06 * b * Math.sin(t * 3.7), 0.04 * b * Math.sin(t * 2.9));
-  addRot(chest, 0.02 * b * Math.sin(t * 4.2), 0.03 * b * Math.sin(t * 2.3), 0);
-  if (arms) { // les mains ponctuent la phrase, l'une après l'autre
-    addRot(arms[0], -0.42 * b * Math.max(0, Math.sin(t * 2.3)), 0, 0);
-    addRot(arms[1], -0.42 * b * Math.max(0, Math.sin(t * 1.9 + 2.2)), 0, 0);
+  state.sincePush = (state.sincePush || 9) + dt;
+  const level = T ? (T.env ? T.level : 0.62 + 0.38 * Math.sin(state.beatT * 7.3)) : 0, slow = state.slowLevel || 0;
+  if (T && level > 0.5 && level - slow > 0.1 && state.sincePush > 0.32) { // un mot appuyé
+    state.sincePush = 0; state.push = 0.65 + 0.35 * level;
+    if (Math.random() < 0.35) state.hand = 1 - (state.hand || 0);
+  }
+  state.slowLevel = slow + (level - slow) * Math.min(1, dt * 9);
+  state.push = (state.push || 0) * Math.exp(-dt * 4.8);
+  state.swing = (state.swing || 0) + (state.push - (state.swing || 0)) * (1 - Math.exp(-dt * 20)); // part vite, retombe doucement
+  const b = state.beat * gain, p = state.swing * gain, t = state.beatT, h = state.hand || 0;
+  if (b < 0.01 && p < 0.01) return;
+  addRot(head, -0.02 * b - 0.1 * p, 0.05 * b * Math.sin(t * 2.1), 0.03 * b * Math.sin(t * 1.7));
+  addRot(chest, -0.03 * p, 0.025 * b * Math.sin(t * 1.3), 0);
+  if (arms) {
+    addRot(arms[h], -0.14 * b - 0.62 * p, 0, 0);
+    addRot(arms[1 - h], -0.08 * b - 0.16 * p, 0, 0);
   }
 }
 

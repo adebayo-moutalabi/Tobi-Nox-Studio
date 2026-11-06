@@ -618,7 +618,7 @@ export function createCharacter() {
         const k = state.lift / 0.09;
         for (const n of ['L', 'R']) { addRot(bones[`upleg_${n}`], 0.24 * k, 0, 0); addRot(bones[`leg_${n}`], -0.28 * k, 0, 0); }
       }
-      talkBody(state, dt, bones.head, bones.chest, 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R] : null);
+      talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R] : motion.pose === 'call' ? [bones.forearm_L, null] : null);
       if (motion.handsFree) keepHandsApart(root, bones);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
         const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);
