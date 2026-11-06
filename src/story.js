@@ -79,6 +79,16 @@ export function parseStory(text) {
   return out;
 }
 
+// À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui qui répond juste après.
+const APPEL = /\b(Nox|Tobi|Claude|Codex|Gemini)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g;
+function adresse(list) {
+  const lines = list.filter((c) => c.verb === 'dit' && c.who);
+  lines.forEach((c, i) => {
+    const names = [...c.text.matchAll(APPEL)].map((m) => m[1].toLowerCase()).filter((n) => n !== c.who);
+    c.to = names[names.length - 1] || lines.slice(i + 1).find((x) => x.who !== c.who)?.who || null;
+  });
+}
+
 export function createPlayer(v, ui) {
   const actor = (id) => v.actors.find((a) => a.id === id);
   // Avec qui parle-t-il ? Le dernier qui a parlé, sinon le plus proche.
@@ -304,13 +314,14 @@ export function createPlayer(v, ui) {
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
       case 'porte': return v.swing(room.entryDoor, plain(c.args[0] || '') === 'ouverte' ? -1.5 : 0, 0.8);
       case 'dit': {
-        const b = partner(a), tone = TONS[c.tone];
+        const to = c.to && actor(c.to), b = to?.hero.root.visible ? to : partner(a), tone = TONS[c.tone], before = a.look;
         track = null;
         for (const x of v.actors) { // tout le monde regarde celui qui parle, et il parle à quelqu'un
           if (x === a || !x.hero.root.visible || x.carried || x.hero.seat === 'lie') continue;
           x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.face(x, a, true);
         }
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
+        if (before !== a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
           if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) v.face(a, b, true);
@@ -430,6 +441,7 @@ export function createPlayer(v, ui) {
       findBlockers();
       subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(); look.setMood('soir');
       const list = parseStory(text);
+      adresse(list);
       running = true; stopped = false; ui.state(true); v.locked = true;
       ui.curtain(true, true);
       await reset();
