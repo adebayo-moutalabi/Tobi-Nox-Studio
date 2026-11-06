@@ -17,6 +17,9 @@ export function mountPublications({ el, stories, open, save, onChange }) {
   const sortie = (k) => PLATEFORMES.some(([p]) => data[k]?.[p]);
   const episodes = () => Object.keys(stories).filter((k) => fiche(k, stories[k]));
 
+  // La série est numérotée dans l'ordre réel de sortie.
+  const numero = () => Math.max(0, episodes().filter(sortie).length, ...Object.values(data).map((x) => x.num || 0)) + 1;
+
   const champ = (label, text) => {
     const pre = node('pre', { textContent: text }), b = node('button', { type: 'button', textContent: 'Copier' });
     b.addEventListener('click', async () => {
@@ -26,10 +29,10 @@ export function mountPublications({ el, stories, open, save, onChange }) {
   };
 
   const detail = (k, puces) => {
-    const f = fiche(k, stories[k]), d = of(k), box = node('div', { className: 'pubBody' });
+    const d = of(k), num = d.num || numero(), f = fiche(k, stories[k], num), box = node('div', { className: 'pubBody' });
     const cases = node('div', { className: 'pubCases' }, ...PLATEFORMES.map(([p, nom]) => {
       const c = node('input', { type: 'checkbox', checked: !!d[p] });
-      c.addEventListener('change', () => { if (c.checked) of(k)[p] = today(); else delete of(k)[p]; keep(); puces(); resume(); });
+      c.addEventListener('change', () => { if (c.checked) { of(k)[p] = today(); of(k).num ||= num; } else delete of(k)[p]; keep(); puces(); resume(); });
       return node('label', { className: 'sw' }, `Publiée sur ${nom}`, c);
     }));
     const chiffres = node('div', { className: 'pubNums' }, ...NOMBRES.map(([id, nom]) => {

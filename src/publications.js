@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : les meilleurs épisodes d'abord, puis le reste dans l'ordre de la série.
-const ORDRE = [61, 62, 63, 57, 59, 56, 52, 53, 60, 54, 58, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
+const ORDRE = [58, 61, 62, 63, 57, 59, 56, 52, 53, 60, 54, 58, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -21,11 +21,11 @@ const TITRES = {
   41: 'Je mange des pâtes depuis 9 jours 🍝', 42: "Mon prof a détecté l'IA dans mon devoir 🕵️", 43: "Mon stage à 0 € m'a fait Head of Growth 📈",
   44: "J'ai caché un serveur sous mon lit 🛏️", 45: 'Gemini a fait mon exposé en 400 diapos 📽️', 46: "J'ai dépensé 340 € en pâtes livrées 🍝",
   47: "J'ai contesté mon 4 sur 20 avec Claude 📉", 48: "J'ai vendu mon sweat en ligne 🧥", 49: "J'ai loué mon compte de films à 400 personnes 🎬",
-  50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱', 52: 'Ma grand-mère est morte quatre fois 🪦',
-  53: "Ma banque me facture d'être pauvre 💸", 54: 'Codex a récupéré mes 5 € 😱', 55: "J'ai filmé le voleur de mes yaourts 🎥",
-  56: "Mon jeu gratuit m'a coûté 10 800 € 🎮", 57: "J'ai calculé ce que je coûte à ma mère 💸", 58: 'Mon robot IA a été moi pendant 24 h 🤖',
-  59: 'Claude, Codex et Gemini contre ma mère 🧣', 60: 'Elle a répondu ok. Gemini a fait 40 pages 💌',
-  61: 'Il me reste 60 secondes pour rendre mon devoir ⏱️', 62: "J'ai 20 € pour tenir 10 jours 🍝", 63: "Mes IA m'ont fait un procès ⚖️",
+  50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱', 52: "Tobi tue sa grand-mère pour la 4e fois 🪦",
+  53: "Tobi paie sa banque pour être pauvre 💸", 54: "Tobi envoie Codex récupérer 5 € 😱", 55: "Tobi piège le voleur de ses yaourts 🎥",
+  56: "Tobi calcule le prix de son jeu gratuit 🎮", 57: "Tobi calcule ce qu'il coûte à sa mère 💸", 58: "Tobi confie sa vie à son robot IA 🤖",
+  59: "Claude, Codex et Gemini contre la mère de Tobi 🧣", 60: "Tobi fait analyser un « ok » par Gemini 💌",
+  61: "Tobi a 60 secondes pour rendre son devoir ⏱️", 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: "Claude, Codex et Gemini jugent Tobi ⚖️",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -77,16 +77,16 @@ const hashtags = (n, text) => {
   return ['#ia', ...ia, '#robot', ENTREPRENEURIAT.has(n) ? '#entrepreneuriat' : '#étudiant', '#humour'];
 };
 
-export function fiche(key, text = '') {
+export function fiche(key, text = '', num = 0) {
   const n = numero(key);
   if (!n) return null;
-  const titre = `${TITRES[n] || key.replace(/^\d+\.\s*/, '')} · Tobi & Nox`, tags = hashtags(n, text);
+  const titre = `${TITRES[n] || key.replace(/^\d+\.\s*/, '')} · Tobi & Nox${num ? ` #${num}` : ''}`, tags = hashtags(n, text);
   const accroche = ACCROCHES[n] || (/^#\s*Pitch\s*:\s*(.*)$/mi.exec(text) || [])[1] || '';
   const mots = tags.join(' ');
   return {
     n, rang: rang(key), titre, tags,
     motsCles: ['Tobi et Nox', 'humour étudiant', 'vie étudiante', 'animation 3D', 'IA', 'robot', ...tags.filter((t) => ['#claude', '#codex', '#gemini', '#entrepreneuriat'].includes(t)).map((t) => t.slice(1))].join(', '),
-    description: `${accroche}\n\nTobi, étudiant en galère, et Nox, son robot IA : une mini-sitcom 3D sur les études, la tech et l'entrepreneuriat.\n\n${mots}`,
+    description: `${accroche}\n\nTobi est étudiant et en galère. Nox est son robot IA. Abonne-toi pour suivre leurs prochaines catastrophes.\n\n${mots}`,
     tiktok: `${accroche} ${mots} #animation3d`,
     instagram: `${accroche}\n\n${mots} #animation3d`,
     commentaire: QUESTIONS[n] || 'Ça t\'est déjà arrivé ?',
