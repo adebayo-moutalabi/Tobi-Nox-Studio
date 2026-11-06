@@ -27,11 +27,13 @@ const save = async (file, text) => { // Windows bloque parfois le fichier un cou
     try { writeFileSync(file, text); return; } catch (e) { if (i === 4) throw e; await new Promise((r) => setTimeout(r, 400)); }
   }
 };
+const VERSION = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
 const template = readFileSync('src/page.html', 'utf8');
 for (const p of PAGES) {
   const r = await build({ entryPoints: [p.entry], bundle: true, format: 'esm', write: false, minify: true, target: 'es2020', loader: { '.txt': 'text', '.md': 'text' }, plugins: p.mixamo ? [] : [withoutMixamo] });
   const js = r.outputFiles[0].text.replace(/<\/script/g, '<\\/script');
   let page = template;
+  page = page.replace('{{VERSION}}', VERSION); // permet de voir d'un coup d'œil si le site est à jour
   for (const k of ['TITLE', 'H1', 'SUB', 'SAY', 'OPTS']) page = page.replace(`{{${k}}}`, () => (k === 'SAY' ? p[k].replace(/"/g, '&quot;') : p[k]));
   page = page.replace('/*BUNDLE*/', () => js);
   await save(p.out, page);

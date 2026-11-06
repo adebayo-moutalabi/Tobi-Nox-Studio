@@ -191,6 +191,10 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nox s'assoit sur le lit dans les épisodes 34 et 38 : il n'est plus dans les jambes de Tobi.
 - Les épisodes 22, 35, 41, 42, 43, 49 et 50 ne changent pas ici : ils respectaient déjà les règles, ou sont déjà aimés et publiés.
 
+## Version visible (7 novembre 2026)
+
+- Le Studio affiche la date de compilation : on voit tout de suite si le site est à jour.
+
 ## À faire
 
 Voir `TACHES.md`.
