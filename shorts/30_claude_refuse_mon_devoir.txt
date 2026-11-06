@@ -12,17 +12,17 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (panique) Claude ! Dix minutes ! Écris mon devoir !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Avec plaisir. Puis-je lire le sujet ?
+CLAUDE dit (calme) Avec plaisir. Je lis d'abord le sujet.
 PLAN gros TOBI
 TOBI dit (colere) Oui !
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je lire ton cours ?
+CLAUDE dit (curieux) Et ton cours ? Je veux comprendre.
 PLAN gros TOBI
 TOBI dit (gene) J'ai pas de cours.
 PLAN gros NOX
 NOX dit (sec) Il a une photo floue du tableau.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vois. Puis-je te poser une question ?
+CLAUDE dit (calme) Je vois. J'ai une question honnête.
 PLAN gros TOBI
 TOBI dit (panique) Vite !
 PLAN gros CLAUDE
@@ -39,7 +39,7 @@ CLAUDE dit (content) Bonne nouvelle. Mon plan est prêt.
 PLAN gros TOBI
 TOBI dit (illumine) Enfin ! Y a combien de parties ?
 PLAN gros CLAUDE
-CLAUDE dit (fier) Quarante. Puis-je commencer la première ?
+CLAUDE dit (fier) Quarante. Je commence par la première.
 PLAN gros NOX
 NOX dit (ironique) La date limite est passée.
 PLAN gros CLAUDE

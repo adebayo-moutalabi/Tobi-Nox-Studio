@@ -40,7 +40,7 @@ NOX dit (constat) La fac a même envoyé des fleurs à ta famille.
 PLAN gros TOBI
 TOBI dit (content) C'est gentil. Attends… à ma famille ?
 BRUIT ding
-INSERT Message de ta mère | Mamie a reçu des fleurs | « À la mémoire de Mamie »
+TOBI message Message de ta mère | Mamie a reçu des fleurs | « À la mémoire de Mamie »
 PLAN gros TOBI
 TOBI dit (panique) Oh non. Mamie a lu ça ?
 PLAN gros NOX

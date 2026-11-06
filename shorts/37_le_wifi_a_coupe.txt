@@ -14,7 +14,7 @@ GEMINI dit (panique) Je ne sais plus rien ! Quelle année sommes-nous ?
 PLAN gros CODEX
 CODEX dit (panique) Je peux plus rien casser !
 PLAN gros CLAUDE
-CLAUDE dit (panique) Puis-je paniquer ?
+CLAUDE dit (panique) Je vais être honnête : je panique.
 PLAN gros TOBI
 TOBI dit (surpris) Attendez. Vous ne marchez plus sans internet ?
 PLAN gros GEMINI
@@ -30,7 +30,7 @@ NOX dit (sec) Sur internet ?
 PLAN gros TOBI
 TOBI dit (gene) Ah.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je suggérer une prière ?
+CLAUDE dit (curieux) Je suggère une prière.
 PLAN gros GEMINI
 GEMINI dit (panique) Je ne trouve pas de prière !
 PLAN gros TOBI
@@ -47,7 +47,7 @@ CODEX dit (fier) C'est fait. C'est moi qui ai réparé.
 PLAN gros GEMINI
 GEMINI dit (fier) Je le savais depuis le début.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je oublier ce moment ?
+CLAUDE dit (calme) On oublie ce moment, d'accord ?
 PLAN gros NOX
 NOX dit (resigne) Et ils sont payés plus cher que moi.
 ATTENDRE 0.4

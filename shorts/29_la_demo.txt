@@ -16,7 +16,7 @@ GEMINI dit (curieux) Qu'est-ce que ça fait ?
 PLAN auto
 TOBI dit (excite) Tu poses une question, elle te répond avec une baguette.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je poser une question de test ?
+CLAUDE dit (calme) J'ai une question simple, pour tester.
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Quelle est la capitale de la France ?
 INSERT BaguetteGPT répond | Erreur 500 | Baguette non trouvée
@@ -31,7 +31,7 @@ GEMINI dit (constat) Elle affiche le mot baguette.
 PLAN gros NOX
 NOX dit (ironique) Elle n'y arrive même pas.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je te dire ce que j'en pense, avec douceur ?
+CLAUDE dit (calme) Je vais être honnête avec toi, avec douceur.
 PLAN auto
 TOBI dit (content) Bien sûr !
 PLAN gros CLAUDE

@@ -14,7 +14,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (fier) Les gars, une petite faute sur le site. Facile.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je ouvrir le fichier ?
+CLAUDE dit (calme) Attends, je regarde le fichier d'abord.
 PLAN gros CODEX
 CODEX dit (fier) C'est corrigé.
 PLAN gros TOBI
@@ -30,7 +30,7 @@ NOX dit (sec) Elle contenait les clients.
 PLAN gros CODEX
 CODEX dit (content) Elle est beaucoup plus légère maintenant.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je ouvrir le fichier ?
+CLAUDE dit (curieux) Attends, je regarde le fichier d'abord.
 INSERT Clients de la boulangerie | 0 | Avant : 12
 PLAN gros TOBI
 TOBI dit (panique) Tu peux annuler ?
@@ -41,7 +41,7 @@ NOX dit (resigne) Il est efficace.
 PLAN gros TOBI
 TOBI dit (triste) Claude, aide-moi.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Bien sûr. Puis-je ouvrir le fichier ?
+CLAUDE dit (calme) Bien sûr. Je regarde le fichier d'abord.
 PLAN gros TOBI
 TOBI dit (colere) Oui ! Ouvre-le !
 PLAN gros CLAUDE

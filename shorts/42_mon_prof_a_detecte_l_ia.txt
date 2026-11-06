@@ -11,44 +11,44 @@ TABLEAU Devoir de droit | Note : ? | Prof : à voir
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Le prof veut me voir. Il pense que c'est une IA.
+TOBI dit (panique) Claude ! Mon prof dit que mon devoir a été écrit par une IA. Il veut me voir demain !
 PLAN gros NOX
 NOX dit (ironique) Ton devoir ? Quelle surprise.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Impossible, j'ai tout relu.
+TOBI dit (mauvaisefoi) Impossible. J'ai tout relu, Nox.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je te demander ce que tu as relu ?
+CLAUDE dit (curieux) Qu'est-ce que t'as relu exactement ?
 PLAN gros TOBI
 TOBI dit (gene) Le titre.
-INSERT Dernière phrase du devoir | Puis-je continuer ? | Page 12
+PC Dernière phrase du devoir | Je vais être honnête avec toi : | ce devoir mérite mieux que ça.
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (sec) T'as laissé sa question.
+NOX dit (sec) T'as laissé sa phrase dans ton devoir.
 PLAN gros TOBI
 TOBI dit (panique) Claude, pourquoi t'as écrit ça ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je voulais ta permission pour la conclusion.
+CLAUDE dit (calme) Parce que c'était vrai. Je t'avais conseillé de relire.
 PLAN gros TOBI
 TOBI dit (fier) Je dirai que c'est mon style.
 PLAN gros NOX
-NOX dit (curieux) Et ton mot préféré, à l'oral ?
+NOX dit (curieux) Ah oui ? Et à l'oral, tu dis quoi ?
 PLAN gros TOBI
 TOBI dit (fier) Genre.
 PLAN gros NOX
-NOX dit (constat) Le devoir dit : néanmoins, quarante fois.
+NOX dit (constat) Ton devoir dit « néanmoins » quarante fois.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je te proposer une solution honnête ?
+CLAUDE dit (calme) Je vais être honnête : tu dois tout réécrire toi-même, Tobi.
 PLAN gros TOBI
-TOBI dit (curieux) Laquelle ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) Tu réécris tout toi-même.
-PLAN gros TOBI
-TOBI dit (colere) Ça, c'est de la violence !
+TOBI dit (colere) Ça, c'est de la violence, Claude !
 PLAN gros NOX
 NOX dit (sec) Ça s'appelle étudier.
 PLAN gros TOBI
-TOBI dit (triste) Et je lui dis quoi, au prof ?
+TOBI dit (triste) Et je dis quoi à mon prof, demain ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) La vérité. Puis-je l'écrire pour toi ?
+CLAUDE dit (calme) La vérité. Je te prépare un message.
+TOBI message Message du prof | J'ai corrigé ta copie avec Claude | Il te conseille de réécrire
+ATTENDRE 0.4
 PLAN gros NOX
-NOX dit (resigne) Vous êtes foutus tous les deux.
+NOX dit (resigne) Vous êtes foutus tous les trois.
 ATTENDRE 0.4

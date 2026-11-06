@@ -9,7 +9,7 @@ TABLEAU Ordre du jour | 1. Tobi | 2. Encore Tobi
 FONDU direct
 
 PLAN gros CLAUDE
-CLAUDE dit (calme) Point suivant. Puis-je parler du projet boulangerie ?
+CLAUDE dit (calme) Point suivant. Parlons du projet boulangerie.
 PLAN gros NOX
 NOX dit (sec) Vas-y, on a le temps.
 PLAN gros TOBI
@@ -25,12 +25,12 @@ NOX dit (constat) Tous les mardis.
 PLAN auto
 TOBI dit (surpris) Depuis quand ?
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je lire le premier compte rendu ?
+CLAUDE dit (curieux) Je lis le premier compte rendu.
 INSERT Réunion n° 1 | Mars 2024 | Sujet : Il a encore acheté un domaine
 PLAN auto
 TOBI dit (fier) D'accord. Je veux assister à la prochaine.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Nous pouvons voter. Puis-je ouvrir le vote ?
+CLAUDE dit (calme) Nous pouvons voter. J'ouvre le vote.
 PLAN gros NOX
 NOX dit (sec) Contre.
 PLAN auto

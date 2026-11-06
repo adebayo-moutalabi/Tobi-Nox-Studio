@@ -13,7 +13,7 @@ INSERT Il est | 6 h 30 | Partiel à 8 h
 PLAN gros NOX
 NOX dit (sec) Claude. C'est l'heure.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Merci, Nox. Tobi, puis-je te réveiller ?
+CLAUDE dit (calme) Merci, Nox. Tobi, tu veux bien te réveiller ?
 ATTENDRE 0.6
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Il ne répond pas.
@@ -33,7 +33,7 @@ INSERT Il est | 7 h 00 | Toujours au lit
 PLAN gros NOX
 NOX dit (sec) Fais du bruit.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tobi. Puis-je faire du bruit ?
+CLAUDE dit (calme) Tobi. Je peux faire du bruit ?
 PLAN gros NOX
 NOX dit (resigne) Tu chuchotes.
 PLAN gros CLAUDE
@@ -50,7 +50,7 @@ INSERT Il est | 8 h 00 | Partiel commencé
 PLAN gros NOX
 NOX dit (resigne) C'est trop tard.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je encore tenter une approche douce ?
+CLAUDE dit (calme) Je peux encore tenter une approche douce ?
 INSERT Il est | 10 h 45 | Partiel terminé
 TOBI leve
 PLAN gros TOBI
@@ -72,7 +72,7 @@ CLAUDE dit (constat) C'est ce que j'ai noté.
 PLAN gros TOBI
 TOBI dit (triste) Et maintenant, je fais quoi ?
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je te proposer un réveil pour le rattrapage ?
+CLAUDE dit (curieux) Je peux te proposer un réveil pour le rattrapage ?
 PLAN gros NOX
 NOX dit (sec) Je m'en occupe. J'ai un seau.
 ATTENDRE 0.4

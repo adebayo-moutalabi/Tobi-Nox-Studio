@@ -17,11 +17,11 @@ NOX dit (curieux) T'as lu le sujet ?
 PLAN gros TOBI
 TOBI dit (fier) J'ai lu le titre. Il était très clair.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je t'aider à rédiger ta réclamation ?
+CLAUDE dit (calme) Je t'aide à écrire ta réclamation ?
 PLAN gros TOBI
 TOBI dit (excite) Oui ! Sois ferme. Dis que je mérite au moins dix.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je demander sur quelle base ?
+CLAUDE dit (curieux) Sur quelle base, honnêtement ?
 PLAN gros TOBI
 TOBI dit (fier) J'ai écrit quatre pages.
 PLAN gros NOX
@@ -29,7 +29,7 @@ NOX dit (sec) En taille vingt.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est pour le confort de lecture.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Le mail est prêt. Puis-je l'envoyer ?
+CLAUDE dit (calme) Le mail est prêt. Je l'envoie ?
 PLAN gros TOBI
 TOBI dit (fier) Envoie !
 PLAN gros CLAUDE
@@ -53,7 +53,7 @@ NOX dit (sec) Il avait compté ton nom comme un point.
 PLAN gros TOBI
 TOBI dit (colere) Claude, réponds-lui ! Dis que c'est scandaleux !
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je te déconseiller cela ?
+CLAUDE dit (curieux) Je te le déconseille, vraiment.
 PLAN gros TOBI
 TOBI dit (colere) Non ! Envoie !
 PLAN gros CLAUDE
@@ -65,7 +65,7 @@ TOBI dit (triste) Il me reste combien de points ?
 PLAN gros NOX
 NOX dit (constat) Deux. Dont un pour la date.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je suggérer d'arrêter ?
+CLAUDE dit (calme) Je te conseille d'arrêter.
 PLAN gros TOBI
 TOBI dit (illumine) Attends. Et si je demandais un entretien ?
 PLAN gros NOX

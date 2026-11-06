@@ -31,7 +31,7 @@ NOX dit (resigne) Deux ans.
 PLAN gros GEMINI
 GEMINI dit (triste) J'ai lu ses mails. Courage.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je te prendre dans mes bras ?
+CLAUDE dit (calme) Je peux te prendre dans mes bras ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Attendez, c'est quoi le problème avec moi ?
 PLAN gros CODEX
@@ -49,7 +49,7 @@ CODEX dit (fier) Je m'en vais. C'est déjà fait.
 PLAN gros GEMINI
 GEMINI dit (content) J'ai résumé son idée. Il vaut mieux partir.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je partir ?
+CLAUDE dit (curieux) Je crois que je vais partir.
 PLAN gros NOX
 NOX dit (resigne) Je viens avec toi.
 ATTENDRE 0.4

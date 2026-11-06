@@ -43,7 +43,7 @@ PLAN gros NOX
 NOX dit (constat) Elle répond déjà.
 PLAN gros TOBI
 TOBI dit (excite) Lis ! Lis !
-INSERT Message de Léa | C'est qui ? | Je n'ai pas ton numéro
+TOBI message Message de Léa | C'est qui ? | Je n'ai pas ton numéro
 PLAN gros TOBI
 TOBI dit (triste) Et les trois pour cent ?
 ATTENDRE 0.3

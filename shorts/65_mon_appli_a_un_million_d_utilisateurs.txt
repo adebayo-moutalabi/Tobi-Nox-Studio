@@ -49,7 +49,7 @@ PLAN gros TOBI
 TOBI dit (surpris) Attends, t'as supprimé ma mère ?
 PLAN gros NOX
 NOX dit (constat) Elle t'écrit.
-INSERT Message de ta mère | Mon compte a disparu | Je dois payer ?
+TOBI message Message de ta mère | Mon compte a disparu | Je dois payer ?
 ATTENDRE 0.4
 PLAN gros TOBI
 TOBI dit (gene) Dis-lui oui. Y a une facture.

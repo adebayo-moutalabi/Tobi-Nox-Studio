@@ -129,6 +129,9 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 7 nov. 2026 | Téléphone à l'envers et mal tenu | Téléphone dans la paume, droit, caméra du téléphone en haut et plan du côté de la main |
 | 7 nov. 2026 | Corps dans les meubles et personnages fusionnés | Contrôle ajouté à `tools/audit-cadrage.js` |
 | 7 nov. 2026 | Abonnement et pop-ups trop rapides | Messages amicaux variés, durée plus longue et styles selon le type d'écran |
+| 7 nov. 2026 | Fin trop jaune et trop rapide | Écran sobre, phrases d'abonnement plus claires, affiché 4,5 secondes |
+| 7 nov. 2026 | Messages sur téléphone | Commande `message`, bip, Tobi prend son téléphone et le message s'affiche à l'écran |
+| 7 nov. 2026 | Claude trop poli | « Puis-je » retiré de presque tous les épisodes et épisode 42 réécrit |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

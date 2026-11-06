@@ -63,11 +63,11 @@ PLAN gros TOBI
 TOBI dit (excite) C'est passé ! Je suis un génie !
 PLAN gros NOX
 NOX dit (constat) Ton prof a écrit ce matin.
-INSERT Message du prof | Date repoussée | Rendu vendredi prochain
+TOBI message Message du prof | Date repoussée | Rendu vendredi prochain
 PLAN gros TOBI
 TOBI dit (surpris) Repoussée ? Et mes quatre cents pages ?
 BRUIT ding
-INSERT Message du prof | Merci Tobi | Présente-les à toute la classe
+TOBI message Message du prof | Merci Tobi | Présente-les à toute la classe
 PLAN gros TOBI
 TOBI dit (panique) Les quatre cents ?
 PLAN gros NOX

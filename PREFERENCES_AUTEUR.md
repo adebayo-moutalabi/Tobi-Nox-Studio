@@ -36,7 +36,9 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 ## Mise en scène
 
 - Les pop-ups restent assez longtemps à l'écran et changent de style selon le temps, un message ou l'argent.
-- L'écran d'abonnement doit être amical, attirant et pas trop rapide.
+- L'écran d'abonnement doit être amical, attirant, sobre et pas trop rapide. Pas de fond jaune.
+- Un message de téléphone se lit sur le téléphone, un contenu d'ordinateur sur le PC.
+- Pendant un appel, on privilégie le visage de Tobi.
 
 - Les personnages ne doivent pas rester toujours aux mêmes places.
 - Les départs, déplacements et gestes changent selon l'histoire, pour une raison claire.

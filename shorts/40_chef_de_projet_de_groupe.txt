@@ -11,14 +11,14 @@ FONDU direct
 PLAN auto
 TOBI dit (fier) Dans le groupe, je suis le chef de projet.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je voir les messages du groupe ?
+CLAUDE dit (curieux) Montre-moi les messages du groupe.
 INSERT Groupe Projet L3 | 47 messages | Tous envoyés par Tobi
 PLAN gros NOX
 NOX dit (sec) Tu parles tout seul.
 PLAN auto
 TOBI dit (mauvaisefoi) Je donne une direction.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je demander qui a répondu ?
+CLAUDE dit (calme) Qui a répondu ?
 PLAN auto
 TOBI dit (fier) Kevin a mis un pouce.
 PLAN gros NOX
@@ -26,7 +26,7 @@ NOX dit (curieux) Quand ?
 PLAN auto
 TOBI dit (gene) En septembre.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je voir la répartition des tâches ?
+CLAUDE dit (calme) Montre-moi la répartition des tâches.
 PLAN auto
 TOBI dit (fier) C'est simple. Moi, je dirige.
 PLAN gros NOX
@@ -36,7 +36,7 @@ TOBI dit (gene) Les autres.
 PLAN gros NOX
 NOX dit (constat) Personne n'a ouvert le document.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je dois signaler quelque chose. Puis-je ?
+CLAUDE dit (calme) Je dois te dire quelque chose.
 PLAN auto
 TOBI dit (curieux) Quoi ?
 PLAN gros CLAUDE
