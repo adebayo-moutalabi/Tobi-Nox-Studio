@@ -65,10 +65,16 @@ import E57 from '../shorts/57_j_ai_calcule_ce_que_je_coute_a_ma_mere.txt';
 import E58 from '../shorts/58_mon_robot_a_ete_moi_pendant_24_heures.txt';
 import E59 from '../shorts/59_claude_codex_et_gemini_contre_ma_mere.txt';
 import E60 from '../shorts/60_elle_a_repondu_ok.txt';
+import E61 from '../shorts/61_il_me_reste_60_secondes_pour_rendre_mon_devoir.txt';
+import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
+import E63 from '../shorts/63_mes_ia_m_ont_fait_un_proces.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    '61. Il me reste 60 secondes pour rendre mon devoir': E61,
+    "62. J'ai 20 € pour tenir 10 jours": E62,
+    "63. Mes IA m'ont fait un procès": E63,
     "57. J'ai calculé ce que je coûte à ma mère": E57,
     '59. Claude, Codex et Gemini contre ma mère': E59,
     "56. Mon jeu gratuit m'a coûté 10 800 €": E56,

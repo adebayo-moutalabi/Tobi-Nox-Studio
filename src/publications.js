@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : les meilleurs épisodes d'abord, puis le reste dans l'ordre de la série.
-const ORDRE = [57, 59, 56, 52, 53, 60, 54, 58, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
+const ORDRE = [61, 62, 63, 57, 59, 56, 52, 53, 60, 54, 58, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -25,6 +25,7 @@ const TITRES = {
   53: "Ma banque me facture d'être pauvre 💸", 54: 'Codex a récupéré mes 5 € 😱', 55: "J'ai filmé le voleur de mes yaourts 🎥",
   56: "Mon jeu gratuit m'a coûté 10 800 € 🎮", 57: "J'ai calculé ce que je coûte à ma mère 💸", 58: 'Mon robot IA a été moi pendant 24 h 🤖',
   59: 'Claude, Codex et Gemini contre ma mère 🧣', 60: 'Elle a répondu ok. Gemini a fait 40 pages 💌',
+  61: 'Il me reste 60 secondes pour rendre mon devoir ⏱️', 62: "J'ai 20 € pour tenir 10 jours 🍝", 63: "Mes IA m'ont fait un procès ⚖️",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -50,6 +51,9 @@ const ACCROCHES = {
   58: 'Tobi laisse Nox gérer sa vie pendant une journée. Tout va beaucoup mieux, et c\'est bien le problème…',
   59: 'Tobi a mal à la gorge. Claude, Codex et Gemini veulent l\'aider. Sa mère aussi…',
   60: 'Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement…',
+  61: 'Il est 23 h 59. Tobi doit rendre son devoir avec Claude Code et Codex. Le compte à rebours commence…',
+  62: 'Tobi doit tenir dix jours avec vingt euros. Jusqu\'à la fin, chaque centime compte…',
+  63: 'Claude Code, Codex et Gemini jugent Tobi. Son avocat, c\'est Nox. Le verdict arrive…',
 };
 
 const QUESTIONS = {
@@ -59,6 +63,7 @@ const QUESTIONS = {
   49: 'Tu partages ton compte avec combien de personnes ?', 50: 'Tu lui aurais fait confiance pour ton réveil ?', 51: 'Combien de refus de stage as-tu reçus ?',
   52: 'Ta pire excuse pour rater un cours, c\'était quoi ?', 53: 'Ta banque t\'a déjà fait ce coup-là ?', 54: 'Combien on te doit encore ?', 55: 'Qui vole ta nourriture chez toi ?',
   56: 'Ton temps de jeu, c\'est combien d\'heures ?', 57: 'Ta mère t\'envoie encore de l\'argent pour manger ?', 58: 'Tu laisserais une IA gérer ta vie pendant 24 h ?', 59: 'Équipe IA ou équipe maman ?', 60: 'Le pire message que tu aies reçu ?',
+  61: 'Tu rends tes devoirs à quelle heure ?', 62: 'Tu aurais tenu jusqu\'au dixième jour ?', 63: 'Ton pire « je commence demain », c\'était quoi ?',
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.

@@ -1,0 +1,96 @@
+# MES IA M'ONT FAIT UN PROCÈS
+# Pitch : Claude Code, Codex et Gemini jugent Tobi. Nox est son avocat, et il n'aide pas beaucoup.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+TABLEAU Procès de Tobi | Accusé : Tobi | Verdict ce soir
+COMPTEUR Verdict ce soir
+FONDU direct
+
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je déclarer la séance ouverte ?
+PLAN gros TOBI
+TOBI dit (surpris) Quelle séance ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Tu es accusé.
+PLAN gros TOBI
+TOBI dit (panique) De quoi ? Nox, aide-moi !
+PLAN gros NOX
+NOX dit (calme) Je suis ton avocat.
+PLAN gros TOBI
+TOBI dit (content) Merci !
+PLAN gros NOX
+NOX dit (sec) Je ne crois pas en toi.
+COMPTEUR Accusation 1 sur 3
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai relu toute ta vie.
+INSERT Preuve n° 1 | 412 fois | « Je commence demain »
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'étais sincère à chaque fois.
+PLAN gros NOX
+NOX dit (sec) Il reconnaît les faits.
+PLAN gros TOBI
+TOBI dit (surpris) Tu es mon avocat !
+PLAN gros NOX
+NOX dit (constat) J'ai vu les preuves.
+PLAN gros TOBI
+TOBI dit (colere) Je veux un autre avocat !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Deux cents euros de l'heure.
+PLAN gros TOBI
+TOBI dit (gene) Je garde Nox.
+COMPTEUR Accusation 2 sur 3
+PLAN gros GEMINI
+GEMINI dit (constat) Salle de sport payée douze mois.
+PLAN gros TOBI
+TOBI dit (fier) J'y suis allé !
+PLAN gros GEMINI
+GEMINI dit (constat) Une fois.
+PLAN gros TOBI
+TOBI dit (fier) Une très bonne séance.
+PLAN gros CODEX
+CODEX dit (constat) Tu as fait la visite.
+PLAN gros TOBI
+TOBI dit (gene) C'était une visite très sportive.
+COMPTEUR Accusation 3 sur 3
+PLAN gros GEMINI
+GEMINI dit (content) Message à ta mère : je mange bien.
+INSERT Preuve n° 3 | 9 jours | De pâtes au sel
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Les pâtes, c'est manger.
+PLAN gros NOX
+NOX dit (resigne) Je demande une peine légère.
+PLAN gros TOBI
+TOBI dit (content) Merci, Nox !
+PLAN gros NOX
+NOX dit (sec) Pour moi.
+PLAN gros CLAUDE
+CLAUDE dit (calme) L'accusé regrette-t-il ?
+PLAN gros TOBI
+TOBI dit (fier) Je regrette qu'il y ait des preuves.
+COMPTEUR Verdict
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je condamner ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je au moins dire la peine ?
+INSERT Verdict | Coupable | Peine : commencer maintenant
+PLAN gros TOBI
+TOBI dit (panique) Maintenant ? Tout de suite ?
+PLAN gros CODEX
+CODEX dit (constat) Tout de suite.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je fais appel !
+PLAN gros NOX
+NOX dit (curieux) Quand ?
+ATTENDRE 0.4
+PLAN gros TOBI
+TOBI dit (fier) Je commence demain.
+PLAN gros GEMINI
+GEMINI dit (constat) Quatre cent treize.
+ATTENDRE 0.4

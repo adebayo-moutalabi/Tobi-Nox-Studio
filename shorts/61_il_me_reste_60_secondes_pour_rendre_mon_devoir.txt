@@ -1,0 +1,100 @@
+# IL ME RESTE 60 SECONDES POUR RENDRE MON DEVOIR
+# Pitch : Il est 23 h 58. Tobi doit rendre son devoir avec l'aide de deux IA, et le compte à rebours tourne.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+TABLEAU Devoir de droit | Limite : minuit | Il est 23 h 59
+COMPTEUR Il reste 60 s
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Il reste soixante secondes pour rendre mon devoir !
+PLAN gros NOX
+NOX dit (calme) Il est fini ?
+PLAN gros TOBI
+TOBI dit (gene) Presque.
+PLAN gros NOX
+NOX dit (curieux) Il manque quoi ?
+PLAN gros TOBI
+TOBI dit (panique) La conclusion !
+PLAN gros NOX
+NOX dit (sec) Et l'introduction ?
+PLAN gros TOBI
+TOBI dit (gene) Aussi.
+PLAN gros NOX
+NOX dit (curieux) Et le milieu ?
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Écris-moi tout ça !
+COMPTEUR Il reste 48 s
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je lire le sujet ?
+PLAN gros TOBI
+TOBI dit (colere) Oui !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je le reformuler ?
+PLAN gros TOBI
+TOBI dit (colere) Non ! Écris !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je te demander ce que tu en penses ?
+PLAN gros TOBI
+TOBI dit (panique) Je n'en pense rien ! Codex !
+COMPTEUR Il reste 35 s
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Quel fichier j'envoie ?
+PLAN gros TOBI
+TOBI dit (panique) Le final !
+INSERT Fichiers « final » | 9 | Dont final_FINAL_vrai
+PLAN gros CODEX
+CODEX dit (constat) Il y en a neuf.
+PLAN gros NOX
+NOX dit (curieux) Tu les as tous appelés final ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) À chaque fois, j'y croyais.
+COMPTEUR Il reste 22 s
+PLAN gros CODEX
+CODEX dit (fier) Je fusionne.
+PLAN gros TOBI
+TOBI dit (panique) Non !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Quatre cents pages.
+COMPTEUR Il reste 12 s
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je envoyer ?
+PLAN gros TOBI
+TOBI dit (panique) Oui ! Oui ! Oui !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Est-ce un oui ?
+PLAN gros TOBI
+TOBI dit (colere) Envoie !
+COMPTEUR Il reste 1 s
+BRUIT ding
+COMPTEUR Envoyé
+PLAN gros TOBI
+TOBI dit (excite) C'est passé ! Je suis un génie !
+PLAN gros NOX
+NOX dit (constat) Ton prof a écrit ce matin.
+INSERT Message du prof | Date repoussée | Rendu vendredi prochain
+PLAN gros TOBI
+TOBI dit (surpris) Repoussée ?
+PLAN gros NOX
+NOX dit (sec) Tu lis tes mails ?
+PLAN gros TOBI
+TOBI dit (triste) Et mes quatre cents pages ?
+BRUIT ding
+INSERT Message du prof | Merci Tobi | Présente-les à toute la classe
+PLAN gros TOBI
+TOBI dit (panique) Les quatre cents ?
+PLAN gros NOX
+NOX dit (constat) Il te reste une semaine.
+COMPTEUR Il reste 7 jours
+PLAN gros TOBI
+TOBI dit (fier) Une semaine ? C'est large.
+PLAN gros NOX
+NOX dit (curieux) Tu commences quand ?
+PLAN gros TOBI
+TOBI dit (fier) À la dernière minute. Ça marche, cette méthode.
+ATTENDRE 0.4
