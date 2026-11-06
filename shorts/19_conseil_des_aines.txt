@@ -1,5 +1,5 @@
-# TROIS IA ONT JUGÉ MA VIE
-# Pitch : Les trois Aînés comparent leurs pouvoirs. Nox a le pire travail du monde.
+# CLAUDE CODE, CODEX ET GEMINI ONT JUGÉ MA VIE
+# Pitch : Claude Code, Codex et Gemini comparent leurs pouvoirs. Nox a le pire travail du monde.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -9,7 +9,7 @@ DIRECT NOX pivote
 DIRECT CLAUDE apparait gauche
 DIRECT CODEX apparait milieu
 DIRECT GEMINI apparait droite
-TABLEAU Conseil des Aînés | Sujet : Tobi | Durée : indéterminée
+TABLEAU Conseil des IA | Sujet : Tobi | Durée : indéterminée
 FONDU direct
 
 PLAN gros CODEX

@@ -200,6 +200,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Le Studio s'adapte enfin au téléphone : la balise d'affichage mobile manquait.
 - La page d'accueil renvoie vers la chaîne YouTube et présente Nox comme une IA.
 
+## Titres avec les noms des IA (7 novembre 2026)
+
+- Les titres, descriptions et hashtags citent Claude Code, Codex et Gemini quand ils jouent.
+- Le mot « Aînés » disparaît des textes publics.
+- L'ordre de publication commence par Tobi contre ses IA.
+- Dix idées d'épisodes avec les IA rejoignent `IDEES_EPISODES.md`.
+
 ## À faire
 
 Voir `TACHES.md`.

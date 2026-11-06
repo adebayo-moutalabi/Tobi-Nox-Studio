@@ -1,5 +1,5 @@
-# J'AI PRÉSENTÉ BAGUETTEGPT À DES IA
-# Pitch : Tobi présente son application devant les Aînés. Rien ne se passe comme prévu.
+# J'AI PRÉSENTÉ BAGUETTEGPT À CLAUDE CODE ET GEMINI
+# Pitch : Tobi présente son application à Claude Code et Gemini. Rien ne se passe comme prévu.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis

@@ -22,6 +22,12 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - Retoucher légèrement : garder les histoires et les blagues, améliorer le contexte, la logique et les écrans.
 
+## Titres et descriptions
+
+- Quand Claude Code, Codex ou Gemini joue dans un épisode, son nom apparaît dans le titre et la description.
+- Le mot « Aînés » sert seulement à décrire leur rôle en interne. Il n'apparaît jamais dans un titre, une description ou un écran.
+- L'auteur veut plus d'épisodes de qualité avec ces IA : ils semblent faire cliquer.
+
 ## Dialogues
 
 - Français parlé, naturel, avec de l'émotion et des réponses qui s'enchaînent.

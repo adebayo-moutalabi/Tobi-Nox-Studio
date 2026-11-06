@@ -1,5 +1,5 @@
-# LE WIFI A COUPÉ, LES IA PANIQUENT
-# Pitch : Plus d'internet dans la chambre. Les trois Aînés perdent tous leurs moyens, et seul Nox garde son calme.
+# LE WIFI A COUPÉ : CLAUDE CODE, CODEX ET GEMINI PANIQUENT
+# Pitch : Plus d'internet dans la chambre. Claude Code, Codex et Gemini perdent tous leurs moyens, et seul Nox garde son calme.
 
 AMBIANCE soir
 DIRECT TOBI assis
