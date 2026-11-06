@@ -195,6 +195,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 
 - Le Studio affiche la date de compilation : on voit tout de suite si le site est à jour.
 
+## Audit du site (7 novembre 2026)
+
+- Le Studio s'adapte enfin au téléphone : la balise d'affichage mobile manquait.
+- La page d'accueil renvoie vers la chaîne YouTube et présente Nox comme une IA.
+
 ## À faire
 
 Voir `TACHES.md`.
