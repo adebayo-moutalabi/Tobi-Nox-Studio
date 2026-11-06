@@ -10,6 +10,8 @@ window.auditCadrage = async (names) => {
     const a = p.actors.find((x) => x.id === who.toLowerCase()), h = a.hero.bones.head.getWorldPosition(new T.Vector3()); h.y += a.eyeUp;
     const n = h.clone().project(p.camera);
     if (Math.abs(n.x) > 0.86 || n.y > 0.92 || n.y < -0.9 || n.z > 1) return 'hors du cadre';
+    const front = new T.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0).normalize(), view = p.camera.position.clone().sub(h).setY(0).normalize();
+    if (who !== 'CLAUDE' && who !== 'CODEX' && who !== 'GEMINI' && front.dot(view) < -0.15) return 'de dos';
     const c = p.camera.position.clone(), d = h.clone().sub(c), L = d.length();
     ray.set(c, d.normalize()); ray.far = L - 0.15;
     return ray.intersectObject(p.room.group, true).some((i) => i.object.visible && i.object.name !== 'miroir') ? 'caché' : null;

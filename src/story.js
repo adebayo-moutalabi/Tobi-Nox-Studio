@@ -99,6 +99,7 @@ export function createPlayer(v, ui) {
     return near[0] || v.actors.find((x) => x !== a);
   };
   const room = v.room;
+  let talkTo = null, grosOf = null;
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
   const look = createLook(v);
@@ -177,9 +178,10 @@ export function createPlayer(v, ui) {
     return (big ? [0, 0.35, 0.7, 1.05, 1.4].map((d) => e.clone().setY(Math.max(0.08, e.y - d))).concat(v.pos(b).clone().setY(0.1)) : [e, e.clone().setY(e.y - 0.16)]).some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < r; });
   };
   function frame(a, tight, front) {
-    const b = partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
+    const b = talkTo || partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
+    if (talkTo && !a.hero.seat && !a.spot && a.faceYaw != null) fwd.set(Math.sin(a.faceYaw), 0, Math.cos(a.faceYaw)); // il va se tourner : on filme déjà son visage
     if (a.extra) fwd.set(0, 0, 1); // sans partenaire, un logo se filme côté porte, là où il y a du recul
     const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
     const to = (across ? toB : fwd).normalize();
@@ -283,7 +285,8 @@ export function createPlayer(v, ui) {
         const k = plain(c.args[0] || 'large'); auto = k === 'auto'; track = null;
         look.hideInsert();
         if (k === 'duo') { auto = false; duo(); return undefined; }
-        if (k === 'gros') { auto = false; closeUp(actor(plain(c.args[1] || 'tobi'))); return undefined; }
+        grosOf = null;
+        if (k === 'gros') { auto = false; grosOf = actor(plain(c.args[1] || 'tobi')); closeUp(grosOf); return undefined; }
         if (!auto) cut(k);
         return undefined;
       }
@@ -321,6 +324,7 @@ export function createPlayer(v, ui) {
           x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.face(x, a, true);
         }
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
+        talkTo = b; if (grosOf === a) closeUp(a); talkTo = null; // le plan suit la personne à qui il parle
         if (before !== a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
