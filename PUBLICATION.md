@@ -70,3 +70,13 @@ Sur ces plateformes, des inconnus peuvent découvrir une vidéo sans abonnés ni
 ### Lire les résultats
 
 Faire le point après 12 vidéos. Refaire les sujets où les gens restent et partagent. Changer l'accroche si les gens partent dans les deux premières secondes. Changer la fin s'ils restent sans commenter ni partager.
+
+## Rythme et crédits
+
+Un nouvel épisode coûte environ 650 à 850 crédits, selon l'estimation du Studio. Compter 1 000 crédits avec quelques corrections.
+
+- **Rythme de départ :** trois vidéos par semaine, lundi, mercredi et vendredi à 18 h.
+- **Une séance par semaine :** écouter les épisodes avec les voix gratuites, créer trois vidéos finales, puis tout programmer.
+- **Budget :** environ 3 000 crédits par semaine, soit 12 000 à 13 000 par mois.
+- **Augmenter seulement si :** les crédits suivent, au moins une semaine de vidéos est prête d'avance et les résultats justifient plus de volume.
+- **Économiser :** valider le texte avant la voix, ne refaire qu'une réplique ratée et réutiliser le même MP4 sur toutes les plateformes.
