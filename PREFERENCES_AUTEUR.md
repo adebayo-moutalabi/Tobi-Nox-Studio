@@ -18,6 +18,10 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - Nox est d'abord une IA, avec un corps de robot. On dit « mon IA ». Ce choix pourra être adapté plus tard.
 
+## Réécriture des épisodes 1 à 50
+
+- Retoucher légèrement : garder les histoires et les blagues, améliorer le contexte, la logique et les écrans.
+
 ## Dialogues
 
 - Français parlé, naturel, avec de l'émotion et des réponses qui s'enchaînent.

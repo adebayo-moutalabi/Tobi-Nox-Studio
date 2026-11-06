@@ -25,6 +25,9 @@ PLAN gros NOX
 NOX dit (curieux) Et il dit quoi, ton chatbot ?
 PLAN gros TOBI
 TOBI dit (fier) Bonjour, je suis Croustillant.
+PC Safari : boulangerie-martin.fr | Croustillant : Bonjour ! | Baguette : 1,10 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (ironique) Et après ?
 PLAN gros TOBI

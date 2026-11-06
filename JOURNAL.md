@@ -174,6 +174,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - **Retirer mes gestes de cet appareil** revient aux gestes d'origine.
 - `tools/serveur-local.mjs` : http://localhost:4173 ouvre toujours la dernière version, avec les gestes.
 
+## Retouches des épisodes 1 à 9 (6 novembre 2026)
+
+- Retouches légères : vraies applications, conversation de l'épisode 8, heure de l'épisode 5 et saut dans le temps de l'épisode 7.
+- L'épisode 3 ne change pas : il respectait déjà les règles.
+
 ## À faire
 
 Voir `TACHES.md`.

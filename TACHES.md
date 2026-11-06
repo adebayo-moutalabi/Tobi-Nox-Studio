@@ -4,7 +4,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 
 ## Priorité haute
 
-1. **Réécrire les épisodes 1 à 50 :** par lots de 10, avec toutes les règles de `PREFERENCES_AUTEUR.md`. Garder ceux que l'auteur aime.
+1. **Retoucher légèrement les épisodes 11 à 50 :** par lots de 10, avec les règles de `PREFERENCES_AUTEUR.md`. Les épisodes 1 à 9 sont faits. L'épisode 10 reste à écrire.
 2. **Appliquer les nouveaux outils à ces épisodes :** `TEMPS`, applications du PC et heure des messages, seulement quand c'est utile.
 3. **Regarder les vidéos en entier :** valider les gestes, la caméra et la lumière sur de vrais exports.
 4. **Décider de la mise en ligne :** fusionner la branche des gestes dans `main`, ce qui met le site à jour.

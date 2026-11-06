@@ -15,7 +15,7 @@ FONDU direct
 
 # 1. La situation, 2. l'annonce
 PLAN auto
-TOBI dit (fier) Le site de la boulangerie est en ligne !
+TOBI dit (fier) Nox, le site de la boulangerie est en ligne !
 NOX dit (curieux) Sur quoi ?
 TOBI dit (fier) Trois clusters.
 INSERT Boulangerie Martin | 3 clusters | Haute disponibilité
@@ -41,9 +41,10 @@ NOX dit (sec) Ouvre la facture.
 PLAN clavier
 TOBI pivote bureau
 TOBI tape Facture cloud
-INSERT Facture cloud | 847 € | Ce mois-ci
+PC Safari : cloud-console.fr/facture | Serveurs : 3 clusters | Ce mois-ci : 847 €
+PLAN pc
+ATTENDRE 1.6
 TOBI pivote
-ATTENDRE 0.4
 PLAN gros NOX
 NOX dit (calme) Le client te paie combien ?
 PLAN gros TOBI

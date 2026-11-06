@@ -20,6 +20,9 @@ NOX dit (curieux) Demain quand ?
 PLAN gros TOBI
 TOBI dit (gene) Huit heures.
 INSERT Il te reste | 8 h | Pages écrites : 3 sur 60
+PC Word : Memoire_final_v9.docx | Mémoire de licence | Page 3 sur 60
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (sec) Trois pages.
 PLAN gros TOBI
@@ -47,6 +50,7 @@ TOBI dit (triste) Tu es censé être de mon côté.
 PLAN gros NOX
 NOX dit (content) Je le suis. Ouvre le fichier.
 TOBI pivote bureau
+ECRAN memoire_final_v9.docx
 PLAN clavier
 TOBI tape Introduction
 PLAN gros TOBI

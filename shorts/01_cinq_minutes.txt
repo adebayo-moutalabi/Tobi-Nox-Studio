@@ -3,7 +3,8 @@
 # Durée visée : 35 à 40 s. Format vertical. La fin relance le début (boucle).
 # DIRECT devant une ligne = l'action se fait hors champ, sans temps mort.
 
-AMBIANCE jour
+AMBIANCE soir
+HEURE 00:30
 DIRECT TOBI travaille
 DIRECT NOX travaille
 DIRECT TOBI pivote
@@ -40,11 +41,10 @@ DIRECT TOBI dort
 PLAN auto
 NOX mimique doute
 NOX dit (ironique) Cinq minutes.
-FONDU noir
+TEMPS Huit heures plus tard | 8 h 30 | L'examen a commencé
+AMBIANCE jour
 DIRECT NOX marche lit
 VOLET ouvert
-TITRE Huit heures plus tard
-FONDU ouvert
 PLAN auto
 NOX mimique surprise
 NOX dit (panique) Tobi ! L'examen, c'était à huit heures !

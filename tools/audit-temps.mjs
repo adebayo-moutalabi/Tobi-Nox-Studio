@@ -16,7 +16,7 @@ for (const file of readdirSync('shorts').filter((f) => f.endsWith('.txt'))) {
   const date = lines.find((l) => l.startsWith('DATE '))?.split(/\s+/)[1]?.toLowerCase();
 
   // « Il est 23 h 59 », « il est midi », « il est cinq heures »
-  const said = /il est (\d{1,2}) h (\d{2})|il est (midi|minuit|\w+ heures)/i.exec(text);
+  const said = /il est (\d{1,2}) h (\d{2})|il est (midi|minuit|[\w-]+ heures)/i.exec(text);
   if (said && !hours.length && !/^INSERT Il est/m.test(text)) flag(`une heure est dite (« ${said[0]} ») sans HEURE`);
   if (said?.[1] && hours.length && !hours.some((h) => Math.abs(minutes(...h.split(':')) - minutes(said[1], said[2])) <= 2)) flag(`« ${said[0]} » ne correspond à aucune HEURE (${hours.join(', ')})`);
 

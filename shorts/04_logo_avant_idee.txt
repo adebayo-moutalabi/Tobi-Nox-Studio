@@ -12,6 +12,9 @@ FONDU direct
 
 PLAN gros TOBI
 TOBI dit (fier) Nox, regarde ce logo. Sois honnête.
+PC Canva : Logo_v32 | Ma future marque | 32 nuances de bleu
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (curieux) C'est pour quoi ?
 PLAN gros TOBI
@@ -42,6 +45,7 @@ NOX dit (punchline) Donc tu vends de la confiance bleue.
 PLAN gros TOBI
 TOBI dit (illumine) Attends... c'est pas mal, ça !
 TOBI pivote bureau
+ECRAN logo_v33.txt
 PLAN clavier
 TOBI tape Confiance Bleue
 TOBI pivote

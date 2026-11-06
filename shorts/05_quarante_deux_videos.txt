@@ -2,6 +2,7 @@
 # Pitch : Tobi a regardé 42 vidéos sur la discipline au lieu de réviser. C'est tout ce qu'il a fait.
 
 AMBIANCE soir
+HEURE 23:47
 DIRECT TOBI assis
 DIRECT NOX travaille
 DIRECT NOX pivote
