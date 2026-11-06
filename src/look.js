@@ -43,7 +43,7 @@ export function createLook(v) {
   const { scene, camera, lights, renderer } = v;
   scene.add(camera);
   const ui = new THREE.Scene(), uiCam = new THREE.PerspectiveCamera(40, 1, 0.01, 10); // calque posé sur l'image finale
-  let post = null, polish = false;
+  let post = null, polish = false, exposure = 1;
   v.render = () => {
     if (polish && v.offline) { post ||= createPost(v); post(); } else renderer.render(scene, camera); // les passes coûteuses sont réservées à l'export : la lecture reste fluide
     renderer.autoClear = false; renderer.render(ui, uiCam); renderer.autoClear = true;
@@ -105,17 +105,18 @@ export function createLook(v) {
       renderer.compileAsync(scene, camera).catch(() => {});
       renderer.setRenderTarget(null);
     },
+    setLight(name) { v.renderer.toneMappingExposure = exposure * ({ vive: 1.2, douce: 0.85 }[name] || 1); },
     setMood(name) {
       const on = name === 'soir';
       soir.visible = on; vignette.visible = on; face.visible = on; v.mood = name; polish = on;
-      v.renderer.toneMappingExposure = on ? 0.84 : 1;
+      exposure = on ? 1 : 1.05; v.renderer.toneMappingExposure = exposure;
       v.room?.sky.material.color.set(on ? '#141a3a' : '#fffdf4');
       v.room?.setShutter(on ? false : true);
       const L = lights;
       scene.background = on ? new THREE.Color(NIGHT) : day.bg;
-      L.hemi.intensity = on ? 0.32 : day.hemi;
+      L.hemi.intensity = on ? 0.46 : day.hemi;
       L.hemi.color.set(on ? '#4d3f6e' : day.hc); L.hemi.groundColor.set(on ? '#17132c' : day.hg);
-      scene.environmentIntensity = on ? 0.06 : day.env;
+      scene.environmentIntensity = on ? 0.1 : day.env;
       L.key.intensity = on ? 0 : day.key; L.fill.intensity = on ? 0 : day.fill;
       L.key.visible = !on; L.fill.visible = !on; // pas d'ombre de soleil à calculer la nuit
     },

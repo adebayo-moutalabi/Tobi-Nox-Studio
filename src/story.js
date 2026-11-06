@@ -277,6 +277,7 @@ export function createPlayer(v, ui) {
         return undefined;
       }
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
+      case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
         look.insert(title, big, small); sfx(/[€$]/.test(big) ? 'ding' : 'pop');
