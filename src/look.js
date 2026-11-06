@@ -89,24 +89,29 @@ export function createLook(v) {
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
-    if (I.kind === 'tel') { // l'écran du téléphone : une conversation, pas une fiche
-      ctx.fillStyle = '#0f1115'; ctx.strokeStyle = '#30343d'; ctx.lineWidth = 10;
-      ctx.beginPath(); ctx.roundRect(70, 10, W - 140, H - 20, 70); ctx.fill(); ctx.stroke();
-      ctx.fillStyle = '#20242c'; ctx.beginPath(); ctx.roundRect(80, 20, W - 160, 150, [60, 60, 0, 0]); ctx.fill();
-      ctx.fillStyle = '#f4f1ec'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.font = `600 50px ${FONT}`; ctx.fillText(I.title, W / 2, 96, W - 240);
-      ctx.textAlign = 'left';
-      const bubble = (text, y, size, color) => {
-        ctx.font = `600 ${size}px ${FONT}`;
-        const words = text.split(' '), rows = []; let row = '';
-        for (const w of words) { if (ctx.measureText(`${row} ${w}`).width > W - 360 && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; }
+    if (I.kind === 'tel') { // une vraie conversation : le contact en haut, les bulles qui arrivent une par une
+      const top = 150, X = 72, R = W - X;
+      ctx.fillStyle = '#0b141a'; ctx.strokeStyle = '#30343d'; ctx.lineWidth = 12;
+      ctx.beginPath(); ctx.roundRect(X - 12, 10, R - X + 24, H - 20, 70); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#1f2c34'; ctx.beginPath(); ctx.roundRect(X, 22, R - X, top, [58, 58, 0, 0]); ctx.fill();
+      ctx.fillStyle = '#6b7c85'; ctx.beginPath(); ctx.arc(X + 74, 96, 40, 0, 7); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.font = `700 42px ${FONT}`; ctx.fillText(I.title[0].toUpperCase(), X + 74, 98);
+      ctx.textAlign = 'left'; ctx.font = `600 44px ${FONT}`; ctx.fillText(I.title, X + 134, 78, R - X - 170);
+      ctx.fillStyle = '#8fa2ad'; ctx.font = `400 30px ${FONT}`; ctx.fillText('en ligne', X + 134, 122);
+      let y = top + 66;
+      I.chat.forEach((m, n) => {
+        if (I.t < n * 0.8) return;
+        const size = 42, max = R - X - 190; ctx.font = `500 ${size}px ${FONT}`;
+        const rows = []; let row = '';
+        for (const w of m.text.split(' ')) { if (ctx.measureText(`${row} ${w}`).width > max && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; }
         rows.push(row);
-        const h = rows.length * size * 1.25 + 60;
-        ctx.fillStyle = color; ctx.beginPath(); ctx.roundRect(130, y, W - 260, h, 38); ctx.fill();
-        ctx.fillStyle = '#f7f6f2'; rows.forEach((r, i) => ctx.fillText(r, 165, y + 30 + size * 0.62 + i * size * 1.25));
-        return y + h + 34;
-      };
-      const next = bubble(I.big, 240, 62, '#2f6fed');
-      if (I.small) bubble(I.small, next, 52, '#2c313b');
+        const bw = Math.max(...rows.map((r) => ctx.measureText(r).width)) + 56, bh = rows.length * size * 1.28 + 40, bx = m.me ? R - bw - 34 : X + 34;
+        ctx.fillStyle = m.me ? '#005c4b' : '#202c33'; ctx.beginPath(); ctx.roundRect(bx, y, bw, bh, 24); ctx.fill();
+        ctx.fillStyle = '#e9edef'; rows.forEach((r, k) => ctx.fillText(r, bx + 28, y + 20 + size * 0.58 + k * size * 1.28));
+        y += bh + 24;
+      });
+      ctx.fillStyle = '#1f2c34'; ctx.beginPath(); ctx.roundRect(X + 30, H - 112, R - X - 60, 66, 33); ctx.fill();
+      ctx.fillStyle = '#8fa2ad'; ctx.font = `400 30px ${FONT}`; ctx.fillText('Message', X + 66, H - 78);
       tex.needsUpdate = true; return;
     }
     const K = CARDS[I.kind] || CARDS.base;
@@ -157,6 +162,7 @@ export function createLook(v) {
       I.value = m && Number(m[2]) >= 10 ? { head: m[1], n: Number(m[2]), tail: m[3] } : null;
       backdrop.visible = true; card.visible = true; drawCard(0);
     },
+    chat(name, lines) { Object.assign(I, { on: true, t: 0, title: name, big: '', small: '', done: false, kind: 'tel', chat: lines, value: null }); backdrop.visible = true; card.visible = true; drawCard(1); },
     hideInsert() { I.on = false; backdrop.visible = false; card.visible = false; },
     update(dt) {
       uiCam.aspect = camera.aspect; uiCam.updateProjectionMatrix();
@@ -168,6 +174,7 @@ export function createLook(v) {
       const w = Math.min(h * 0.42 * camera.aspect * 0.86, h * 0.42 * 0.62), s = 0.86 + 0.14 * ease(Math.min(1, I.t / 0.2));
       card.scale.set(w * s, w * s, 1);
       card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
+      if (I.kind === 'tel' && I.t < I.chat.length * 0.8 + 0.1) drawCard(1);
       if (I.value && I.t < 0.6) drawCard(I.t / 0.45); else if (I.value && !I.done) { drawCard(1); I.done = true; }
     },
   };

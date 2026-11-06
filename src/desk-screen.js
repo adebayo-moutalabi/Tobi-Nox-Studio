@@ -51,20 +51,29 @@ export function createLaptop() {
   hinge.add(scr); group.add(hinge);
   const S = { title: 'notes.txt', text: '', caret: 0, board: null, boardT: 0 };
   function drawBoard(W, H) { // écran lisible à l'image : un titre et quelques lignes en grand
-    const [title, ...rows] = S.board, t = S.boardT, out = (x) => 1 - (1 - x) ** 3;
-    ctx.fillStyle = '#14161b'; ctx.fillRect(0, 0, W, H);
-    ctx.strokeStyle = 'rgba(255,255,255,.05)'; ctx.lineWidth = 2;
-    for (let x = 0; x < W; x += 64) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
-    ctx.fillStyle = '#f2b92e'; ctx.fillRect(0, 0, W * out(Math.min(1, t / 0.3)), 136);
-    ctx.fillStyle = '#14161b'; ctx.font = '800 72px "Inter", "Segoe UI", sans-serif'; ctx.textBaseline = 'middle'; ctx.textAlign = 'center'; ctx.fillText(title, W / 2, 70, W - 60);
-    const step = (H - 160) / Math.max(rows.length, 1);
+    const [title, ...rows] = S.board, t = S.boardT, out = (x) => 1 - (1 - x) ** 3, mail = /mail|message|groupe|contrat/i.test(title);
+    const sky = ctx.createLinearGradient(0, 0, W, H); sky.addColorStop(0, '#3a2f7a'); sky.addColorStop(1, '#c0537a');
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = 'rgba(20,22,27,.55)'; ctx.fillRect(0, 0, W, 34);
+    ctx.fillStyle = '#fff'; ctx.font = '600 22px "Inter", "Segoe UI", sans-serif'; ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.fillText(mail ? 'Mail   Fichier   Édition' : 'Finder   Fichier   Édition', 24, 18);
+    const X = 26, Y = 52, Wn = W - 52, Hn = H - 76;
+    ctx.fillStyle = '#f5f5f7'; ctx.beginPath(); ctx.roundRect(X, Y, Wn, Hn, 18); ctx.fill();
+    ctx.fillStyle = '#e4e4e8'; ctx.beginPath(); ctx.roundRect(X, Y, Wn, 66, [18, 18, 0, 0]); ctx.fill();
+    for (const [i, c] of ['#ff5f57', '#febc2e', '#28c840'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(X + 28 + i * 28, Y + 33, 9, 0, 7); ctx.fill(); }
+    ctx.fillStyle = '#23252b'; ctx.textAlign = 'center'; ctx.font = '700 34px "Inter", "Segoe UI", sans-serif'; ctx.fillText(title, W / 2, Y + 34, Wn - 220);
+    const side = mail ? 170 : 0;
+    if (mail) { ctx.fillStyle = '#dcdce2'; ctx.fillRect(X, Y + 66, side, Hn - 66); ctx.fillStyle = '#2f6fed'; ctx.beginPath(); ctx.roundRect(X + 14, Y + 86, side - 28, 48, 10); ctx.fill(); ctx.fillStyle = '#fff'; ctx.textAlign = 'left'; ctx.font = '600 26px "Inter", "Segoe UI", sans-serif'; ctx.fillText('Réception', X + 28, Y + 111); }
+    const left = X + side + 24, width = Wn - side - 48, step = (Hn - 92) / Math.max(rows.length, 1);
+    ctx.textAlign = 'left';
     rows.forEach((r, i) => { // les lignes arrivent l'une après l'autre, le dernier chiffre compte
-      const p = Math.max(0, Math.min(1, (t - 0.2 - i * 0.24) / 0.28)), last = i === rows.length - 1;
+      const p = Math.max(0, Math.min(1, (t - 0.2 - i * 0.24) / 0.28)), last = i === rows.length - 1 && rows.length > 1;
       if (!p) return;
       let text = r;
-      if (last && rows.length > 1) text = r.replace(/\d[\d ]*\d|\d/, (n) => { const v = Number(n.replace(/\s/g, '')); return Math.round(v * out(Math.min(1, (t - 0.45 - i * 0.24) / 0.5)) ).toLocaleString('fr-FR').replace(/\u202f/g, ' '); });
-      ctx.globalAlpha = p; ctx.fillStyle = last && rows.length > 1 ? '#f2b92e' : '#ffffff'; ctx.font = `${last && rows.length > 1 ? 800 : 700} ${last && rows.length > 1 ? 74 : 62}px "Inter", "Segoe UI", sans-serif`;
-      ctx.fillText(text, W / 2 + (1 - out(p)) * 90, 150 + step * (i + 0.5), W - 60);
+      if (last) text = r.replace(/\d[\d ]*\d|\d/, (n) => { const v = Number(n.replace(/\s/g, '')); return Math.round(v * out(Math.min(1, (t - 0.45 - i * 0.24) / 0.5))).toLocaleString('fr-FR').replace(/\u202f/g, ' '); });
+      const y = Y + 80 + step * i, h = step - 12;
+      ctx.globalAlpha = p; ctx.fillStyle = last ? '#fff3cd' : '#ffffff'; ctx.beginPath(); ctx.roundRect(left + (1 - out(p)) * 70, y, width, h, 14); ctx.fill();
+      ctx.fillStyle = '#17191f'; ctx.font = `${last ? 800 : 700} ${Math.min(58, h * 0.52)}px "Inter", "Segoe UI", sans-serif`;
+      ctx.fillText(text, left + 26 + (1 - out(p)) * 70, y + h / 2, width - 52);
       ctx.globalAlpha = 1;
     });
     ctx.textAlign = 'left'; tex.needsUpdate = true;

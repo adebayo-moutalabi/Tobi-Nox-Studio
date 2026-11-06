@@ -312,12 +312,13 @@ export function createPlayer(v, ui) {
         a.hero.motion.togglePose('call'); return v.wait(0.6);
       }
       case 'raccroche': a.hero.motion.clearPose(); await v.wait(0.45); v.stash(a); return undefined;
-      case 'message': { // il sort le téléphone, regarde, et on lit le message sur l'écran
-        const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
+      case 'message': { // il sort le téléphone, puis on lit la conversation à l'écran
+        const [name = '', ...rows] = c.text.split('|').map((x) => x.trim());
+        const lines = rows.filter(Boolean).map((x) => ({ me: x.startsWith('>'), text: x.replace(/^>\s*/, '') }));
         sfx('bip');
-        if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose('phone'); closeUp(a); await v.wait(0.9); }
-        look.insert(title, big, small, 'tel');
-        await v.wait(Math.min(4, 2.2 + (big.length + small.length) * 0.03));
+        if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose('phone'); closeUp(a); await v.wait(0.8); }
+        look.chat(name, lines);
+        await v.wait(Math.min(7, 1.8 + lines.length * 0.8 + lines.reduce((n, l) => n + l.text.length, 0) * 0.035));
         look.hideInsert();
         if (a?.held?.name === 'phone') { a.hero.motion.clearPose(); await v.wait(0.25); v.stash(a); }
         return undefined;
@@ -513,11 +514,7 @@ const ENERGIE = { excite: 1.35, colere: 1.4, panique: 1.5, illumine: 1.3, fier: 
 
 const EMOTIONS = { panique: 'emo_panique', surpris: 'emo_surpris', colere: 'emo_colere', fier: 'emo_fier', triste: 'emo_triste', curieux: 'emo_doute', illumine: 'emo_idee', gene: 'emo_gene', mauvaisefoi: 'emo_justifie' };
 
-const ABONNE = [
-  ["Ça t'a fait sourire ?", 'Abonne-toi', 'pour suivre les aventures de Tobi et Nox'],
-  ['La suite arrive bientôt', 'Abonne-toi', 'pour ne pas manquer Tobi et Nox'],
-  ['Tobi compte sur toi', 'Abonne-toi', 'pour le soutenir dans ses galères'],
-];
+const ABONNE = [["Merci d'être resté jusqu'à la fin", 'Abonne-toi', 'pour ne plus manquer nos aventures']];
 
 const QUALITE = { max: 1440, hd: 1080, fast: 720 };
 
