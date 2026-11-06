@@ -10,7 +10,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (excite) Nox ! Je suis un génie de la vente en ligne !
 PLAN gros NOX
-NOX dit (curieux) Tu as vendu quoi ?
+NOX dit (curieux) T'as vendu quoi ?
 PLAN gros TOBI
 TOBI dit (fier) Trois articles en deux jours. Mes cours, ma lampe, ma poêle.
 PLAN gros NOX
@@ -44,7 +44,7 @@ TOBI dit (mauvaisefoi) Il est vintage.
 PLAN gros NOX
 NOX dit (curieux) Elle habite où, ta cliente ?
 PLAN gros TOBI
-TOBI dit (calme) Je n'ai pas regardé. Attends. Livraison à...
+TOBI dit (calme) J'ai pas regardé. Attends. Livraison à...
 TOBI dit (surpris) Tiens. C'est drôle, c'est la même rue que chez mes parents.
 PLAN gros NOX
 NOX dit (calme) Tobi.
@@ -61,7 +61,7 @@ TOBI dit (surpris) Ma mère a acheté ma poêle ?
 PLAN gros NOX
 NOX dit (constat) Et ta lampe. Et tes cours.
 PLAN gros TOBI
-TOBI dit (triste) Elle n'a pas besoin de mes cours.
+TOBI dit (triste) Elle a pas besoin de mes cours.
 PLAN gros NOX
 NOX dit (calme) Non. Mais toi, tu avais besoin de quarante euros.
 PLAN gros TOBI

@@ -14,7 +14,7 @@ TOBI dit (surpris) Nox ! Quelqu'un a vidé mon compte !
 PLAN gros NOX
 NOX dit (sec) Oui. Toi.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Impossible, je n'ai rien acheté.
+TOBI dit (mauvaisefoi) Impossible, j'ai rien acheté.
 PLAN gros NOX
 NOX dit (curieux) Et les abonnements ?
 PLAN gros TOBI
@@ -37,7 +37,7 @@ TOBI dit (mauvaisefoi) Ça libère de l'énergie mentale.
 PLAN gros NOX
 NOX dit (ironique) Elle a dit quoi, ce matin ?
 PLAN gros TOBI
-TOBI dit (triste) Que je n'avais plus de pain.
+TOBI dit (triste) Que j'avais plus de pain.
 PLAN gros NOX
 NOX dit (constat) Une IA pour gérer tes abonnements.
 PLAN gros TOBI

@@ -12,7 +12,7 @@ COMPTEUR Il reste 60 s
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Nox ! Mon devoir de droit doit être rendu à minuit, et il reste soixante secondes !
+TOBI dit (panique) Il reste soixante secondes pour rendre mon devoir de droit, Nox !
 PLAN gros NOX
 NOX dit (calme) Il est fini ?
 PLAN gros TOBI
@@ -37,6 +37,7 @@ PLAN gros CODEX
 CODEX dit (fier) C'est réglé. J'envoie quel fichier ?
 PLAN gros TOBI
 TOBI dit (panique) Le final !
+TOBI leve &
 PC Dossier Droit | final | final_FINAL | final_FINAL_vrai
 PLAN pc
 ATTENDRE 1.6

@@ -8,18 +8,19 @@ TABLEAU Tobi | Statut : indépendant | Compte : 9 €
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (fier) Nox, à partir d'aujourd'hui, je suis indépendant. Je ne coûte plus rien à personne.
+TOBI dit (fier) À partir d'aujourd'hui, je suis indépendant, Nox. Je coûte plus rien à personne.
 PLAN gros NOX
-NOX dit (curieux) Tu veux que je calcule ce que tu as déjà coûté à ta mère ?
+NOX dit (curieux) Tu veux que je calcule ce que t'as déjà coûté à ta mère ?
 PLAN gros TOBI
 TOBI dit (fier) Vas-y. Ça ne doit pas être énorme.
+TOBI marche fenetre &
 PC Ce que Tobi a coûté | Couches : 3 200 € | Études : 21 000 € | Total : 143 000 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Cent quarante-trois mille euros ?
 PLAN gros NOX
-NOX dit (constat) Et je n'ai pas compté les cours de guitare.
+NOX dit (constat) Et j'ai pas compté les cours de guitare.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est un investissement.
 PLAN gros NOX

@@ -14,7 +14,7 @@ TOBI dit (panique) Pourquoi le site est en panne ?
 PLAN gros NOX
 NOX dit (calme) J'ai une mauvaise nouvelle.
 PLAN auto
-TOBI dit (colere) Nox, qu'est-ce que tu as fait ?
+TOBI dit (colere) Nox, qu'est-ce que t'as fait ?
 PLAN gros NOX
 NOX dit (sec) Moi, rien. Toi, une mise à jour.
 PLAN auto
@@ -22,7 +22,7 @@ TOBI dit (mauvaisefoi) Une toute petite mise à jour.
 PLAN gros CODEX
 CODEX dit (fier) Je l'ai améliorée. Elle est plus grande.
 PLAN auto
-TOBI dit (panique) Codex ! Tu as touché à quoi ?
+TOBI dit (panique) Codex ! T'as touché à quoi ?
 PLAN gros CODEX
 CODEX dit (constat) À tout. C'était plus rapide.
 INSERT Visiteurs perdus | 12 | Sur 12

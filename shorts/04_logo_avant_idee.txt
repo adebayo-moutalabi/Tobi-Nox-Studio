@@ -19,7 +19,7 @@ TOBI dit (mauvaisefoi) Pour l'instant, c'est pour la marque.
 PLAN gros NOX
 NOX dit (curieux) Quelle marque ?
 PLAN gros TOBI
-TOBI dit (gene) On n'a pas encore le nom.
+TOBI dit (gene) On a pas encore le nom.
 INSERT Temps sur le logo | 11 h | Sur le produit : 0 h
 PLAN gros NOX
 NOX dit (constat) Onze heures.
@@ -46,5 +46,5 @@ PLAN clavier
 TOBI tape Confiance Bleue
 TOBI pivote
 PLAN gros NOX
-NOX dit (resigne) Je n'aurais pas dû parler.
+NOX dit (resigne) J'aurais pas dû parler.
 ATTENDRE 0.4

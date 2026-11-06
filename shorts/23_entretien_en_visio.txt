@@ -12,7 +12,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (fier) Nox, tu me souffles les réponses. Discrètement.
 PLAN gros NOX
-NOX dit (sec) Je n'ai pas de discrétion.
+NOX dit (sec) J'ai pas de discrétion.
 INSERT Entretien de stage | 14 h 00 | Le recruteur est connecté
 PLAN gros TOBI
 TOBI dit (content) Bonjour ! Oui, je vous entends très bien.

@@ -20,15 +20,16 @@ PLAN gros TOBI
 TOBI dit (mauvaisefoi) Ça, c'était mon autre grand-mère.
 PLAN gros NOX
 NOX dit (constat) Tu l'as aussi dit en octobre, et la semaine dernière.
+TOBI leve &
 PC Absences de Tobi | Septembre : grand-mère morte | Octobre : grand-mère morte | Novembre : grand-mère morte
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est une famille très fragile.
 PLAN gros NOX
-NOX dit (sec) Tobi, tu as deux grands-mères. Tu en as déjà enterré trois.
+NOX dit (sec) Tobi, t'as deux grands-mères. Tu en as déjà enterré trois.
 PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. J'envoie quand même. Il ne vérifiera jamais.
+TOBI dit (illumine) Nox. Aie la vision. J'envoie quand même. Il vérifiera jamais.
 BRUIT ding
 PLAN gros NOX
 NOX dit (constat) Ton prof a répondu. Il te présente ses condoléances.
@@ -45,7 +46,7 @@ TOBI dit (panique) Oh non. Mamie a lu ça ?
 PLAN gros NOX
 NOX dit (constat) Elle est vivante, elle est furieuse, et elle veut te voir demain.
 PLAN gros TOBI
-TOBI dit (panique) Demain ? Dis-lui que je ne peux pas !
+TOBI dit (panique) Demain ? Dis-lui que je peux pas !
 PLAN gros NOX
 NOX dit (curieux) D'accord. Je lui donne quelle excuse ?
 ATTENDRE 0.5

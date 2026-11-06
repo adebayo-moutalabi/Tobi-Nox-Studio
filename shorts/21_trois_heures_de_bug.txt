@@ -45,7 +45,7 @@ TOBI dit (surpris) Tu le savais depuis quand ?
 PLAN gros NOX
 NOX dit (constat) Trois heures.
 PLAN gros TOBI
-TOBI dit (colere) Et tu n'as rien dit ?
+TOBI dit (colere) Et t'as rien dit ?
 PLAN gros NOX
 NOX dit (sec) Un vrai développeur trouve seul.
 PLAN gros TOBI

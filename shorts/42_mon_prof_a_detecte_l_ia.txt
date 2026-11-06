@@ -22,9 +22,9 @@ PLAN gros TOBI
 TOBI dit (gene) Le titre.
 INSERT Dernière phrase du devoir | Puis-je continuer ? | Page 12
 PLAN gros NOX
-NOX dit (sec) Tu as laissé sa question.
+NOX dit (sec) T'as laissé sa question.
 PLAN gros TOBI
-TOBI dit (panique) Claude, pourquoi tu as écrit ça ?
+TOBI dit (panique) Claude, pourquoi t'as écrit ça ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je voulais ta permission pour la conclusion.
 PLAN gros TOBI

@@ -40,7 +40,7 @@ NOX dit (ironique) Head of Chien.
 PLAN auto
 TOBI dit (mauvaisefoi) C'est un chien à fort potentiel.
 PLAN gros NOX
-NOX dit (curieux) Tu as signé la convention avec la fac ?
+NOX dit (curieux) T'as signé la convention avec la fac ?
 PLAN auto
 TOBI dit (gene) Il dit que les papiers, c'est l'ancien monde.
 PLAN gros NOX

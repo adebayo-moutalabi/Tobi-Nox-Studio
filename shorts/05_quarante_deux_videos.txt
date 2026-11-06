@@ -9,7 +9,7 @@ TABLEAU Routine des grands | Lever 5 h | Discipline | Commencer demain
 FONDU direct
 
 PLAN gros NOX
-NOX dit (curieux) Tu as révisé, ce soir ?
+NOX dit (curieux) T'as révisé, ce soir ?
 PLAN auto
 TOBI dit (fier) Mieux. J'ai étudié les plus grands.
 INSERT Aujourd'hui | 42 | Vidéos sur la discipline
@@ -18,7 +18,7 @@ NOX dit (sec) Quarante-deux vidéos.
 PLAN auto
 TOBI dit (excite) Je sais tout sur la discipline, maintenant.
 PLAN gros NOX
-NOX dit (curieux) Et tu as appliqué quoi ?
+NOX dit (curieux) Et t'as appliqué quoi ?
 PLAN auto
 TOBI dit (mauvaisefoi) Je me lève à cinq heures.
 PLAN gros NOX

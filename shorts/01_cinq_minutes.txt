@@ -15,7 +15,7 @@ PLAN auto
 TOBI mimique joie
 TOBI dit (fier) Ce soir, je révise TOUT le programme.
 NOX mimique doute
-NOX dit (ironique) Tu as dit ça hier.
+NOX dit (ironique) T'as dit ça hier.
 TOBI dit (mauvaisefoi) Oui, mais ce soir, j'ai un plan.
 TOBI pivote bureau
 PLAN clavier
@@ -27,7 +27,7 @@ PLAN auto
 TOBI mimique sourire
 TOBI dit (content) Bon. Petite pause, je l'ai méritée.
 NOX mimique surprise
-NOX dit (surpris) Tu as écrit deux mots.
+NOX dit (surpris) T'as écrit deux mots.
 DIRECT TOBI frigo
 PLAN frigo
 TOBI utilise

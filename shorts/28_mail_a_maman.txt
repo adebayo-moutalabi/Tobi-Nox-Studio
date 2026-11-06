@@ -15,7 +15,7 @@ TOBI dit (fier) Écrivez à ma mère que tout va bien. Trois mots.
 PLAN gros CODEX
 CODEX dit (fier) C'est envoyé.
 PLAN gros TOBI
-TOBI dit (surpris) Tu as écrit quoi ?
+TOBI dit (surpris) T'as écrit quoi ?
 PLAN gros CODEX
 CODEX dit (constat) Tout va bien. Fin du message. Ne pas répondre.
 PLAN gros NOX
@@ -41,9 +41,9 @@ GEMINI dit (calme) Je résume : Tobi, décroche.
 PLAN gros CODEX
 CODEX dit (fier) J'ai décroché pour toi.
 PLAN gros TOBI
-TOBI dit (panique) Tu as fait quoi ?
+TOBI dit (panique) T'as fait quoi ?
 PLAN gros CODEX
 CODEX dit (content) Elle arrive. J'ai réservé son train.
 PLAN gros NOX
-NOX dit (content) Pour une fois, je n'ai pas eu à l'appeler.
+NOX dit (content) Pour une fois, j'ai pas eu à l'appeler.
 ATTENDRE 0.4

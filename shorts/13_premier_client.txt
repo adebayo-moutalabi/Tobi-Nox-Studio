@@ -19,12 +19,12 @@ PLAN auto
 TOBI dit (fier) Je sais. Du coup, j'ai commandé un bureau debout.
 INSERT Bureau debout | 120 € | Déjà payé
 PLAN gros NOX
-NOX dit (curieux) Tu as encaissé combien ?
+NOX dit (curieux) T'as encaissé combien ?
 PLAN auto
 TOBI dit (gene) Pour l'instant, zéro.
 INSERT Encaissé | 0 € | Facture à 60 jours
 PLAN gros NOX
-NOX dit (constat) Tu as dépensé l'argent que tu n'as pas.
+NOX dit (constat) T'as dépensé l'argent que t'as pas.
 PLAN auto
 TOBI dit (mauvaisefoi) Nox. Aie la vision.
 PLAN gros NOX

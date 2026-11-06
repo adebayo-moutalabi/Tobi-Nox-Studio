@@ -14,7 +14,7 @@ PORTE fermee
 PLAN auto
 TOBI dit (fier) Aujourd'hui, j'ai rencontré un investisseur.
 PLAN gros NOX
-NOX dit (curieux) Tu as séché le TD pour ça ?
+NOX dit (curieux) T'as séché le TD pour ça ?
 PLAN auto
 TOBI dit (fier) Le TD ne lèvera pas de fonds.
 PLAN gros NOX

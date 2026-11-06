@@ -9,13 +9,14 @@ TABLEAU Temps de jeu | 900 heures | Prix du jeu : 0 €
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (fier) Nox, neuf cents heures sur mon jeu, et je n'ai jamais payé un euro.
+TOBI dit (fier) Neuf cents heures sur mon jeu, et j'ai jamais payé un euro, Nox.
 PLAN gros NOX
 NOX dit (curieux) Neuf cents heures ? Tu sais ce que ça représente ?
 PLAN gros TOBI
 TOBI dit (content) Oui, je suis niveau 412.
 PLAN gros NOX
 NOX dit (constat) À douze euros de l'heure, ça représente un autre chiffre.
+TOBI leve &
 PC Temps de jeu de Tobi | 900 heures | 12 € par heure | 10 800 € perdus
 PLAN pc
 ATTENDRE 1.6
@@ -39,7 +40,7 @@ PLAN gros NOX
 NOX dit (sec) Tobi. Non.
 BRUIT ding
 PLAN gros NOX
-NOX dit (curieux) Trop tard, tu as déjà une offre.
+NOX dit (curieux) Trop tard, t'as déjà une offre.
 INSERT Offre pour ton compte | 12 € | Prix final
 PLAN gros TOBI
 TOBI dit (surpris) Douze euros ? Pour neuf cents heures de ma vie ?

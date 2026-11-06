@@ -12,11 +12,11 @@ TOBI dit (fier) Nox, je viens de tout sécuriser. Personne ne peut entrer.
 PLAN gros NOX
 NOX dit (curieux) Ton mot de passe, c'est quoi ?
 PLAN gros TOBI
-TOBI dit (ironique) Je ne vais pas te le dire.
+TOBI dit (ironique) Je vais pas te le dire.
 PLAN gros NOX
 NOX dit (sec) Tobi123.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Non. J'ai changé. Il y a un point d'exclamation.
+TOBI dit (mauvaisefoi) Non. J'ai changé. Y a un point d'exclamation.
 PLAN gros NOX
 NOX dit (sec) Tobi123, point d'exclamation.
 PLAN gros TOBI

@@ -15,7 +15,7 @@ PLAN auto
 TOBI dit (mauvaisefoi) Non, celle de ce matin était nulle.
 INSERT Idées cette semaine | 17 | Nous sommes mardi
 PLAN gros NOX
-NOX dit (sec) Tu as un partiel jeudi.
+NOX dit (sec) T'as un partiel jeudi.
 PLAN auto
 TOBI dit (fier) Un site de rencontre pour les plantes.
 PLAN gros NOX
@@ -27,7 +27,7 @@ NOX dit (sec) Les plantes ne bougent pas.
 PLAN auto
 TOBI dit (illumine) D'où l'abonnement premium. Le livreur les déplace.
 PLAN gros NOX
-NOX dit (curieux) Tu as combien de plantes ?
+NOX dit (curieux) T'as combien de plantes ?
 PLAN auto
 TOBI dit (gene) Une.
 PLAN gros NOX

@@ -17,7 +17,7 @@ NOX dit (ironique) Tes partiels sont dans sept jours.
 PLAN lit
 TOBI dit (chuchote) Donc j'ai le temps.
 PLAN gros NOX
-NOX dit (sec) Hier, tu as dit demain.
+NOX dit (sec) Hier, t'as dit demain.
 TOBI leve
 PLAN auto
 TOBI dit (fier) Eh bien nous sommes demain. Aujourd'hui, je commence.

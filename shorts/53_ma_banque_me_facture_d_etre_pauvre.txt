@@ -8,11 +8,11 @@ TABLEAU Compte de Tobi | Solde : -3 € | Bourse dans 12 jours
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Nox, regarde mon compte ! La banque vient de me prendre huit euros !
+TOBI dit (panique) La banque vient de me prendre huit euros, Nox !
 PLAN gros NOX
 NOX dit (calme) Tu étais à découvert de trois euros. Ce sont des frais.
 PLAN gros TOBI
-TOBI dit (surpris) Attends. Je n'ai plus d'argent, et ils m'en prennent encore ?
+TOBI dit (surpris) Attends. J'ai plus d'argent, et ils m'en prennent encore ?
 PLAN gros NOX
 NOX dit (constat) Oui. Ils te font payer le fait de ne pas en avoir.
 PC Compte de Tobi | Avant : -3 € | Frais : -8 € | Maintenant : -11 €

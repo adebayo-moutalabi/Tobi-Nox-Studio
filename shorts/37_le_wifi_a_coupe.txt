@@ -12,7 +12,7 @@ FONDU direct
 PLAN gros GEMINI
 GEMINI dit (panique) Je ne sais plus rien ! Quelle année sommes-nous ?
 PLAN gros CODEX
-CODEX dit (panique) Je ne peux plus rien casser !
+CODEX dit (panique) Je peux plus rien casser !
 PLAN gros CLAUDE
 CLAUDE dit (panique) Puis-je paniquer ?
 PLAN gros TOBI

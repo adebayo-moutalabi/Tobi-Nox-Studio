@@ -13,7 +13,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (colere) Quatre sur vingt ! C'est une erreur, je vais contester.
 PLAN gros NOX
-NOX dit (curieux) Tu as lu le sujet ?
+NOX dit (curieux) T'as lu le sujet ?
 PLAN gros TOBI
 TOBI dit (fier) J'ai lu le titre. Il était très clair.
 PLAN gros CLAUDE

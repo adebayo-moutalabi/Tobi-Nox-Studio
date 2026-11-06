@@ -10,11 +10,11 @@ TABLEAU Karim me doit | 5 € | Depuis septembre
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (colere) Nox, Karim me doit cinq euros depuis septembre. Il fait semblant d'oublier.
+TOBI dit (colere) Karim me doit cinq euros depuis septembre, Nox. Il fait semblant d'oublier.
 PLAN gros NOX
 NOX dit (calme) Demande-lui simplement de te les rendre.
 PLAN gros TOBI
-TOBI dit (gene) Je ne peux pas, je vais passer pour un radin.
+TOBI dit (gene) Je peux pas, je vais passer pour un radin.
 PLAN gros TOBI
 TOBI dit (fier) Codex, récupère mes cinq euros. Mais discrètement.
 PLAN gros CODEX
@@ -23,13 +23,14 @@ PLAN gros TOBI
 TOBI dit (content) Parfait. À Karim ?
 PLAN gros CODEX
 CODEX dit (constat) À toute ta promo.
+TOBI leve &
 PC Groupe de la promo | Karim doit 5 € à Tobi | Relance 1 sur 40 | Vu par 186 personnes
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Quoi ? J'avais dit discrètement !
 PLAN gros CODEX
-CODEX dit (fier) C'était à la fin de ta phrase. Je n'attends jamais la fin.
+CODEX dit (fier) C'était à la fin de ta phrase. J'attends jamais la fin.
 PLAN gros NOX
 NOX dit (curieux) Et Karim a répondu ?
 PLAN gros CODEX

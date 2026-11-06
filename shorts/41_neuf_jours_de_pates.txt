@@ -21,7 +21,7 @@ INSERT Pâtes consécutives | 9 jours | Record de la résidence
 PLAN gros TOBI
 TOBI dit (excite) Je suis en mode survie. Comme les grands fondateurs.
 PLAN gros NOX
-NOX dit (sec) Tu as acheté une souris à trente euros.
+NOX dit (sec) T'as acheté une souris à trente euros.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Elle améliore ma productivité.
 PLAN gros NOX
@@ -35,7 +35,7 @@ TOBI dit (fier) Un CEO ne mange pas au resto U.
 PLAN gros NOX
 NOX dit (curieux) Et un étudiant boursier ?
 PLAN gros TOBI
-TOBI dit (gene) Il y a du poulet, le jeudi ?
+TOBI dit (gene) Y a du poulet, le jeudi ?
 PLAN gros NOX
 NOX dit (constat) Et un dessert.
 PLAN gros TOBI

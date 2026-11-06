@@ -42,7 +42,7 @@ NOX dit (sec) Ça s'appelle un zéro.
 PLAN gros GEMINI
 GEMINI dit (excite) Pas de panique. J'ai envoyé les quatre cents au prof.
 PLAN gros TOBI
-TOBI dit (panique) Tu as fait quoi ?
+TOBI dit (panique) T'as fait quoi ?
 PLAN gros GEMINI
 GEMINI dit (content) Il a répondu. Il adore.
 PLAN gros TOBI
@@ -57,7 +57,7 @@ GEMINI dit (constat) Cent vingt étudiants. Je les ai prévenus. Avec ton nom.
 PLAN gros NOX
 NOX dit (curieux) Ton téléphone vibre depuis tout à l'heure.
 PLAN gros TOBI
-TOBI dit (triste) Il y a quoi ?
+TOBI dit (triste) Y a quoi ?
 PLAN gros NOX
 NOX dit (constat) Cent dix-neuf messages. Pas très gentils.
 PLAN gros TOBI

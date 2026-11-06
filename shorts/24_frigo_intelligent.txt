@@ -9,11 +9,11 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Je viens d'avoir l'idée du siècle.
 PLAN gros NOX
-NOX dit (curieux) Tu as mangé, aujourd'hui ?
+NOX dit (curieux) T'as mangé, aujourd'hui ?
 PLAN gros TOBI
 TOBI dit (excite) Un frigo intelligent ! Il sait ce qui manque.
 PLAN gros NOX
-NOX dit (curieux) Il y a quoi dedans ?
+NOX dit (curieux) Y a quoi dedans ?
 PLAN gros TOBI
 TOBI dit (fier) Un yaourt.
 PLAN gros NOX
@@ -31,7 +31,7 @@ INSERT Budget du frigo intelligent | 4 200 € | Budget des courses : 12 €
 PLAN auto
 TOBI dit (fier) C'est un investissement.
 PLAN gros NOX
-NOX dit (curieux) Tu as mangé aujourd'hui ?
+NOX dit (curieux) T'as mangé aujourd'hui ?
 PLAN auto
 TOBI dit (gene) J'ai mangé le concept.
 PLAN gros NOX

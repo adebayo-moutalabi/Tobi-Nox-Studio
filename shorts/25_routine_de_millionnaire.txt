@@ -30,7 +30,7 @@ NOX dit (curieux) Étape deux ?
 PLAN miroir
 TOBI dit (fier) Bain glacé. Dix minutes. Comme les champions.
 PLAN gros NOX
-NOX dit (sec) Tu n'as pas de baignoire.
+NOX dit (sec) T'as pas de baignoire.
 PLAN miroir
 TOBI dit (mauvaisefoi) Alors étape trois : visualiser le succès.
 TOBI marche lit

@@ -25,7 +25,7 @@ NOX dit (sec) C'est pour le loyer.
 PLAN auto
 TOBI dit (fier) Le loyer, c'est du passé. Moi, je pense croissance.
 PLAN gros NOX
-NOX dit (curieux) Tu as déjà dépensé combien ?
+NOX dit (curieux) T'as déjà dépensé combien ?
 PLAN auto
 TOBI dit (gene) Un nom de domaine. Pour la vision.
 PLAN gros NOX

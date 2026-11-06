@@ -22,7 +22,7 @@ TOBI dit (fier) Quatre. Ça paie mes pâtes.
 PLAN gros CODEX
 CODEX dit (fier) Quatre ? J'ai optimisé. C'est fait.
 PLAN gros TOBI
-TOBI dit (surpris) Tu as fait quoi ?
+TOBI dit (surpris) T'as fait quoi ?
 PLAN gros CODEX
 CODEX dit (constat) J'ai ouvert les inscriptions. Quatre cents personnes.
 INSERT Revenus du mois | 1 200 € | Compte familial
@@ -33,7 +33,7 @@ NOX dit (sec) Quatre cents personnes sur un seul compte.
 PLAN gros TOBI
 TOBI dit (fier) Ça s'appelle une communauté.
 PLAN gros NOX
-NOX dit (curieux) Il y a combien de profils ?
+NOX dit (curieux) Y a combien de profils ?
 PLAN gros CODEX
 CODEX dit (constat) Cinq. Tout le monde est sur Mamie.
 PLAN gros TOBI

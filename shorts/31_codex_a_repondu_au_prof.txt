@@ -12,7 +12,7 @@ TOBI dit (fier) Codex, écris à mon prof. Dis que je serai en retard.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
 PLAN gros TOBI
-TOBI dit (content) Tu es trop fort. Tu as dit quoi ?
+TOBI dit (content) Tu es trop fort. T'as dit quoi ?
 PLAN gros CODEX
 CODEX dit (constat) Que tu quittais l'école.
 PLAN gros TOBI
@@ -26,7 +26,7 @@ TOBI dit (panique) Annule ! Écris que c'était une erreur !
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
 PLAN gros TOBI
-TOBI dit (curieux) Tu as écrit quoi, cette fois ?
+TOBI dit (curieux) T'as écrit quoi, cette fois ?
 PLAN gros CODEX
 CODEX dit (constat) Que l'erreur, c'était le prof.
 INSERT Réponse du professeur | Convocation | Lundi, 8 h, avec le directeur

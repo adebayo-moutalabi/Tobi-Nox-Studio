@@ -14,7 +14,7 @@ NOX dit (curieux) Quelle team ?
 PLAN auto
 TOBI dit (fier) Mes abonnés. Ma communauté. Ma famille.
 PLAN gros NOX
-NOX dit (constat) Tu as douze abonnés.
+NOX dit (constat) T'as douze abonnés.
 PLAN auto
 TOBI dit (mauvaisefoi) Douze personnes très engagées.
 PLAN gros NOX
@@ -22,7 +22,7 @@ NOX dit (sec) Dont ta mère, sur trois comptes.
 PLAN auto
 TOBI dit (fier) Aujourd'hui, je vous révèle mon secret de réussite.
 PLAN gros NOX
-NOX dit (curieux) Tu as réussi quoi ?
+NOX dit (curieux) T'as réussi quoi ?
 PLAN auto
 TOBI dit (gene) Je vous révèle mon secret pour bientôt réussir.
 PLAN auto
@@ -41,7 +41,7 @@ TOBI dit (fier) Et je parle de cloud pendant que ça repousse.
 PLAN gros NOX
 NOX dit (sec) Personne ne va regarder ça.
 PLAN auto
-TOBI dit (curieux) Il y a un commentaire ! Il dit quoi ?
+TOBI dit (curieux) Y a un commentaire ! Il dit quoi ?
 PLAN gros NOX
 NOX dit (constat) Le robot est drôle.
 PLAN auto

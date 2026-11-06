@@ -33,14 +33,15 @@ CODEX dit (fier) C'est réglé. Opération mardi.
 PLAN gros TOBI
 TOBI dit (panique) Quoi ? Quelle opération ?
 PLAN gros CODEX
-CODEX dit (fier) Tu as dit gorge. J'ai réservé toute la gorge.
+CODEX dit (fier) T'as dit gorge. J'ai réservé toute la gorge.
 PLAN gros TOBI
 TOBI dit (panique) Annule !
 PLAN gros NOX
-NOX dit (calme) Tu as demandé à ta mère ?
+NOX dit (calme) T'as demandé à ta mère ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Ma mère n'a même pas d'IA.
 BRUIT ding
+TOBI marche centre &
 PC Message de ta mère | Mets un pull. | Réponse en 2 secondes
 PLAN pc
 ATTENDRE 1.6

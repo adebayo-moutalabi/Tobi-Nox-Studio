@@ -10,7 +10,7 @@ TABLEAU Vie de Tobi | Loyer : en retard | Devoir : pas commencé
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (triste) Nox, je n'en peux plus. Le loyer, les cours, les mails, c'est trop pour moi.
+TOBI dit (triste) Nox, j'en peux plus. Le loyer, les cours, les mails, c'est trop pour moi.
 PLAN gros TOBI
 TOBI dit (illumine) Demain, tu deviens moi. Tu gères toute ma vie pendant vingt-quatre heures.
 PLAN gros NOX
@@ -19,7 +19,7 @@ PLAN gros TOBI
 TOBI dit (content) Tout. Moi, je reste au lit pour me reposer.
 INSERT Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
 PLAN gros TOBI
-TOBI dit (content) Alors, Nox ? Tu as survécu à ma vie ?
+TOBI dit (content) Alors, Nox ? T'as survécu à ma vie ?
 PC Bilan de la journée | Loyer payé | Devoir rendu | 47 mails traités
 PLAN pc
 ATTENDRE 1.6
@@ -32,7 +32,7 @@ NOX dit (sec) Depuis trois semaines. Et j'ai eu seize sur vingt.
 PLAN gros TOBI
 TOBI dit (excite) Seize ? Mais je suis un génie !
 PLAN gros NOX
-NOX dit (sec) Non. Je suis un génie. Toi, tu as dormi.
+NOX dit (sec) Non. Je suis un génie. Toi, t'as dormi.
 BRUIT ding
 PC Message de Léa | Bravo pour ton devoir ! | Tu as changé, j'aime bien | On révise ensemble ?
 PLAN pc

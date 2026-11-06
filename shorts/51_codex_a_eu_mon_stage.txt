@@ -24,7 +24,7 @@ PLAN gros TOBI
 TOBI dit (panique) Non !
 BRUIT ding
 PLAN gros NOX
-NOX dit (surpris) Tu as une réponse.
+NOX dit (surpris) T'as une réponse.
 PLAN gros TOBI
 TOBI dit (excite) Une réponse ? Ça marche ! C'est qui ?
 PLAN gros NOX
@@ -32,9 +32,9 @@ NOX dit (constat) La plus grosse boîte de la ville.
 PLAN gros TOBI
 TOBI dit (fier) Je le savais. Mon profil est rare.
 PLAN gros NOX
-NOX dit (curieux) Tu as écrit quoi dans tes compétences ?
+NOX dit (curieux) T'as écrit quoi dans tes compétences ?
 PLAN gros TOBI
-TOBI dit (gene) Je ne sais pas, c'est Codex.
+TOBI dit (gene) Je sais pas, c'est Codex.
 PLAN gros CODEX
 CODEX dit (fier) J'ai mis mes compétences. C'était plus rapide.
 PLAN gros TOBI

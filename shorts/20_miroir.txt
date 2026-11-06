@@ -31,7 +31,7 @@ NOX dit (ironique) Il arrive en retard aussi ?
 PLAN auto
 TOBI dit (excite) Nox. Aie la vision. Bientôt, on sera trois.
 PLAN gros NOX
-NOX dit (ironique) Tu as acheté un deuxième miroir ?
+NOX dit (ironique) T'as acheté un deuxième miroir ?
 PLAN auto
 TOBI dit (gene) Il arrive jeudi.
 PLAN gros NOX

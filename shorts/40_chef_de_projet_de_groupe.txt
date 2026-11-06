@@ -52,5 +52,5 @@ NOX dit (calme) Regarde le bon côté.
 PLAN auto
 TOBI dit (curieux) Lequel ?
 PLAN gros NOX
-NOX dit (punchline) Tu as enfin délégué.
+NOX dit (punchline) T'as enfin délégué.
 ATTENDRE 0.4

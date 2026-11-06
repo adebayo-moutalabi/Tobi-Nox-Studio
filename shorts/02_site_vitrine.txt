@@ -20,7 +20,7 @@ INSERT Devis signé | 150 € | Site vitrine
 PLAN gros NOX
 NOX dit (sec) Il a demandé un chatbot ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Il ne sait pas encore qu'il en a besoin.
+TOBI dit (mauvaisefoi) Il sait pas encore qu'il en a besoin.
 PLAN gros NOX
 NOX dit (curieux) Et il dit quoi, ton chatbot ?
 PLAN gros TOBI
@@ -41,7 +41,7 @@ NOX dit (constat) Un euro soixante de l'heure.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est de la visibilité.
 PLAN gros NOX
-NOX dit (punchline) Tu as douze visiteurs.
+NOX dit (punchline) T'as douze visiteurs.
 PLAN gros TOBI
 TOBI dit (illumine) Treize. Le boulanger est revenu.
 PLAN gros NOX

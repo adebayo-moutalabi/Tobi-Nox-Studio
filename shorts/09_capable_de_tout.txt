@@ -13,18 +13,18 @@ TOBI dit (triste) Trois refus aujourd'hui. Et six sur vingt en réseaux.
 PLAN gros NOX
 NOX dit (calme) Et alors ?
 PLAN auto
-TOBI dit (triste) Je crois que je ne suis pas fait pour ça.
+TOBI dit (triste) Je crois que je suis pas fait pour ça.
 PLAN gros NOX
 NOX dit (curieux) Pour quoi ?
 PLAN auto
 TOBI dit (triste) Pour tout. Les études. Les projets. Tout.
 NOX assis
 PLAN gros NOX
-NOX dit (sec) Tu as lancé seize projets.
+NOX dit (sec) T'as lancé seize projets.
 PLAN gros TOBI
 TOBI dit (gene) Et seize projets au placard.
 PLAN gros NOX
-NOX dit (calme) Seize fois, tu as recommencé.
+NOX dit (calme) Seize fois, t'as recommencé.
 INSERT Taux de retour | 100 % | Tobi revient toujours
 PLAN gros TOBI
 TOBI dit (surpris) Tu le penses vraiment ?
@@ -41,7 +41,7 @@ NOX dit (ironique) Ne l'écris pas sur LinkedIn.
 TOBI leve
 TOBI marche tapis
 PLAN auto
-TOBI dit (excite) Tu as raison ! Je lance le dix-septième !
+TOBI dit (excite) T'as raison ! Je lance le dix-septième !
 PLAN gros NOX
 NOX dit (resigne) J'aurais dû me taire.
 ATTENDRE 0.4

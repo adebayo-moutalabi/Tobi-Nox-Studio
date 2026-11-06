@@ -29,7 +29,7 @@ NOX dit (curieux) Tu commandes quoi ?
 PLAN gros TOBI
 TOBI dit (gene) Des pâtes.
 PLAN gros NOX
-NOX dit (curieux) Tu as des pâtes dans le frigo ?
+NOX dit (curieux) T'as des pâtes dans le frigo ?
 PLAN gros TOBI
 TOBI dit (gene) Oui.
 PLAN gros NOX
@@ -63,7 +63,7 @@ TOBI dit (illumine) Nox. Aie la vision. Il me faut son job !
 PLAN gros NOX
 NOX dit (calme) Il cherche quelqu'un, justement. Il faut un vélo.
 PLAN gros TOBI
-TOBI dit (triste) Je n'ai plus de vélo. On me l'a volé en octobre.
+TOBI dit (triste) J'ai plus de vélo. On me l'a volé en octobre.
 PLAN gros NOX
 NOX dit (curieux) Il était comment, ton vélo ?
 PLAN gros TOBI

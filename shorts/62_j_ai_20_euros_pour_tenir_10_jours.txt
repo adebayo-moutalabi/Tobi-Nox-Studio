@@ -11,7 +11,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (fier) Ma bourse arrive dans dix jours, et il me reste vingt euros. Facile.
 PLAN gros NOX
-NOX dit (curieux) Tu as un plan ?
+NOX dit (curieux) T'as un plan ?
 PLAN gros TOBI
 TOBI dit (fier) Deux euros par jour, pas un de plus. Discipline totale.
 PLAN gros NOX
@@ -25,7 +25,7 @@ PLAN gros TOBI
 TOBI dit (fier) Je passe aux pâtes. Je suis une machine.
 COMPTEUR Jour 3 sur 10 · 8 €
 PLAN gros NOX
-NOX dit (curieux) Pourquoi tu as encore dépensé ?
+NOX dit (curieux) Pourquoi t'as encore dépensé ?
 PLAN gros TOBI
 TOBI dit (gene) Du sel rose.
 PLAN gros NOX
@@ -33,10 +33,11 @@ NOX dit (sec) Pour des pâtes.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est un investissement.
 COMPTEUR Jour 5 sur 10 · 8 €
+TOBI marche centre
 PLAN gros TOBI
 TOBI dit (triste) Nox, je rêve de viande.
 PLAN gros NOX
-NOX dit (constat) Tu as léché la boîte du kebab.
+NOX dit (constat) T'as léché la boîte du kebab.
 PLAN gros TOBI
 TOBI dit (gene) Il restait du goût.
 COMPTEUR Jour 6 sur 10 · 2 €
@@ -66,7 +67,7 @@ COMPTEUR Jour 10 sur 10 · 0,10 €
 PLAN gros TOBI
 TOBI dit (triste) Dix centimes. Il me reste dix centimes.
 PLAN gros NOX
-NOX dit (calme) Mais tu as tenu.
+NOX dit (calme) Mais t'as tenu.
 PLAN gros TOBI
 TOBI dit (surpris) J'ai tenu ?
 BRUIT ding

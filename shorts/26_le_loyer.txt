@@ -12,7 +12,7 @@ NOX dit (calme) Tobi. Le loyer, c'est vendredi.
 PLAN gros TOBI
 TOBI dit (fier) T'inquiète. J'ai un plan.
 PLAN gros NOX
-NOX dit (curieux) Tu as combien ?
+NOX dit (curieux) T'as combien ?
 PLAN gros TOBI
 TOBI dit (gene) Quatre-vingts euros.
 INSERT Il manque | 180 € | Avant vendredi

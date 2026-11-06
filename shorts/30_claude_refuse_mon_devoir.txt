@@ -18,7 +18,7 @@ TOBI dit (colere) Oui !
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Puis-je lire ton cours ?
 PLAN gros TOBI
-TOBI dit (gene) Je n'ai pas de cours.
+TOBI dit (gene) J'ai pas de cours.
 PLAN gros NOX
 NOX dit (sec) Il a une photo floue du tableau.
 PLAN gros CLAUDE
@@ -37,7 +37,7 @@ TOBI dit (panique) Il reste deux minutes !
 PLAN gros CLAUDE
 CLAUDE dit (content) Bonne nouvelle. Mon plan est prêt.
 PLAN gros TOBI
-TOBI dit (illumine) Enfin ! Il y a combien de parties ?
+TOBI dit (illumine) Enfin ! Y a combien de parties ?
 PLAN gros CLAUDE
 CLAUDE dit (fier) Quarante. Puis-je commencer la première ?
 PLAN gros NOX

@@ -19,7 +19,7 @@ PLAN auto
 TOBI dit (fier) Vas-y Claude, Nox est mon meilleur employé.
 CLAUDE dit (curieux) Puis-je lire son contrat ?
 PLAN gros TOBI
-TOBI dit (gene) Il n'y a pas vraiment de contrat.
+TOBI dit (gene) Y a pas vraiment de contrat.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Et son salaire ?
 PLAN gros NOX

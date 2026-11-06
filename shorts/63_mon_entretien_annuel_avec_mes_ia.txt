@@ -18,11 +18,12 @@ PLAN gros TOBI
 TOBI dit (mauvaisefoi) Un entretien ? Mais c'est moi le patron, ici !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je vais être honnête avec toi : on a regardé ton année.
+TOBI marche centre &
 PC Résultats de Tobi | Réveil à l'heure : 4 % | Devoirs rendus : 2 | Vaisselle : 0
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (fier) Deux devoirs rendus ! Ce n'est pas si mal, Claude.
+TOBI dit (fier) Deux devoirs rendus ! C'est pas si mal, Claude.
 PLAN gros GEMINI
 GEMINI dit (constat) Fun fact : c'est le même devoir, rendu deux fois.
 PLAN gros TOBI
@@ -49,7 +50,7 @@ INSERT Nouveau locataire | Une plante verte | Elle se lève avec le soleil
 PLAN gros TOBI
 TOBI dit (colere) Une plante ? Vous me remplacez par une plante, Nox ?
 PLAN gros NOX
-NOX dit (sec) Elle ne dépense rien, et elle grandit.
+NOX dit (sec) Elle dépense rien, et elle grandit.
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Aie la vision. Je reste, et je fais ce qu'il faut !
 PLAN gros CLAUDE

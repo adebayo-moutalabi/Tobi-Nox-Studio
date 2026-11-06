@@ -28,7 +28,7 @@ NOX dit (sec) Ils n'ont pas dix-neuf euros.
 PLAN auto
 TOBI dit (fier) C'est pour ça qu'ils ne mangent pas !
 PLAN gros NOX
-NOX dit (curieux) Et si je n'ai pas faim ?
+NOX dit (curieux) Et si j'ai pas faim ?
 TOBI court tapis
 PLAN auto
 TOBI dit (excite) On t'envoie une notification !
@@ -37,7 +37,7 @@ NOX dit (constat) Donc je paie pour avoir faim.
 PLAN auto
 TOBI dit (fier) Exactement. Applaudissements du jury.
 PLAN gros NOX
-NOX dit (ironique) Le jury demande si tu as mangé.
+NOX dit (ironique) Le jury demande si t'as mangé.
 PLAN auto
 TOBI dit (gene) Ce matin ? Non.
 PLAN gros NOX
