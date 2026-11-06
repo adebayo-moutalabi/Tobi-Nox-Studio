@@ -114,6 +114,10 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Audit complet | Bug de plan de dos corrigé, contrôle ajouté à `tools/audit-cadrage.js` et priorités relevées dans un audit privé |
 | 6 nov. 2026 | Appliquer l'audit à tout le Studio | Dialogues plus oraux, plans variés, écrans animés, sous-titres plus grands, gestes alternés et actions dans les épisodes récents |
 | 6 nov. 2026 | Plans dans les vêtements et bras trop répétitifs | Caméra interdite dans les personnages, gestes plus rares et mouvements de bras réduits |
+| 6 nov. 2026 | Téléphone, main sur la tête et bras assis | Tête gardée près du téléphone, gestes à la tête retirés, bras calmes en position assise |
+| 6 nov. 2026 | Visages trop peu visibles | Regard vers le bas limité et contrôle ajouté à `tools/audit-cadrage.js` |
+| 6 nov. 2026 | Plus de projets fous et de revers | Épisodes 64 à 67 sur l'entrepreneuriat |
+| 6 nov. 2026 | Épisodes 59 et 62 pas assez réussis | Histoires réécrites : appel à la mère et carte bloquée par Nox |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

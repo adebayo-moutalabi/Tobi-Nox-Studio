@@ -15,13 +15,14 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Regarder avant de parler :** le Studio tourne le personnage vers le prénom appelé, sinon vers celui qui répond ensuite. Pour changer d'interlocuteur, appeler le personnage par son prénom.
 - **Écrire à l'oral :** Tobi, Nox et Codex disent « T'as », « J'ai plus », « C'est pas » et « Je sais pas ». Claude reste plus posé.
 - **Varier les ouvertures :** ne pas commencer toutes les répliques par le prénom de Nox.
+- **Animer par poses :** un personnage prend une pose claire, la tient avec de petits mouvements, puis change seulement quand l'histoire le demande. Assis, il garde les mains calmes.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
 - **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
 
-**Les sujets à privilégier :** les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
+**Les sujets à privilégier :** les projets fous de Tobi et leurs revers (start-up, appli, formation, coworking, levée de fonds), les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
 
 ## La bonne durée
 
