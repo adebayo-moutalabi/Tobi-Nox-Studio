@@ -91,7 +91,7 @@ export function fiche(key, text = '', num = 0) {
   return {
     n, rang: rang(key), titre, tags,
     motsCles: ['Tobi et Nox', 'humour étudiant', 'vie étudiante', 'animation 3D', 'IA', 'robot', ...tags.filter((t) => ['#claude', '#codex', '#gemini', '#entrepreneuriat'].includes(t)).map((t) => t.slice(1))].join(', '),
-    description: `${accroche}\n\nTobi est étudiant et en galère. Nox est son robot IA. Abonne-toi pour suivre leurs prochaines catastrophes.\n\n${mots}`,
+    description: `${accroche}\n\nTobi est étudiant et en galère. Nox est son IA, dans un corps de robot. Abonne-toi pour suivre leurs prochaines catastrophes.\n\n${mots}`,
     tiktok: `${accroche} ${mots} #animation3d`,
     instagram: `${accroche}\n\n${mots} #animation3d`,
     commentaire: QUESTIONS[n] || 'Ça t\'est déjà arrivé ?',
