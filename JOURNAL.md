@@ -125,6 +125,10 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Émotions visibles dans le corps | Poses de panique, doute, colère, fierté, tristesse, idée, gêne et justification pour Tobi |
 | 6 nov. 2026 | Demander l'abonnement à la fin | Écran court « Abonne-toi », réglable dans le Studio |
 | 6 nov. 2026 | Mains et gestes assis trop pauvres | Troisième phalange, doigts animés, poignets vivants et gestes assis calmes |
+| 7 nov. 2026 | Sauts dans le temps invisibles | Les écrans `INSERT` restent maintenant à l'image avant le plan suivant |
+| 7 nov. 2026 | Téléphone à l'envers et mal tenu | Téléphone dans la paume, droit, caméra du téléphone en haut et plan du côté de la main |
+| 7 nov. 2026 | Corps dans les meubles et personnages fusionnés | Contrôle ajouté à `tools/audit-cadrage.js` |
+| 7 nov. 2026 | Abonnement et pop-ups trop rapides | Messages amicaux variés, durée plus longue et styles selon le type d'écran |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
