@@ -2,8 +2,9 @@
 # Pitch : Tobi se dit indépendant. Nox fait le total, et Tobi décide de rembourser sa mère.
 
 AMBIANCE jour
-DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT TOBI marche fenetre
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU Tobi | Statut : indépendant | Compte : 9 €
 FONDU direct
 

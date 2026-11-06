@@ -2,9 +2,9 @@
 # Pitch : Tobi rate encore son TD et ressort son excuse préférée. Sa famille finit par l'apprendre.
 
 AMBIANCE jour
-DIRECT TOBI travaille
-DIRECT TOBI pivote
-DIRECT NOX assis
+DIRECT TOBI assis
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU TD de droit | Absences : 4 | Justificatif demandé
 FONDU direct
 

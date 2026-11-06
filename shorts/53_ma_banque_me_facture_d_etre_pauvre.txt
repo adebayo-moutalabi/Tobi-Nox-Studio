@@ -3,7 +3,8 @@
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU Compte de Tobi | Solde : -3 € | Bourse dans 12 jours
 FONDU direct
 
@@ -34,7 +35,7 @@ PLAN gros TOBI
 TOBI dit (curieux) Un prêt ? À qui ?
 PLAN gros NOX
 NOX dit (sec) À ta banque.
-TOBI marche fenetre
+TOBI marche centre
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Aie la vision. Je crée ma banque ! Je fais payer les gens qui n'ont rien !
 PLAN gros NOX

@@ -3,7 +3,8 @@
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU Bourse dans 10 jours | Reste : 20 € | Objectif : survivre
 FONDU direct
 
@@ -49,6 +50,7 @@ TOBI dit (content) Merci, Nox. Sérieusement, sans toi, j'aurais tout dépensé.
 BRUIT ding
 INSERT Bourse reçue | 450 € | Carte débloquée
 PLAN gros TOBI
+TOBI geste victoire &
 TOBI dit (excite) Je suis riche ! Ce soir, je fête ça !
 BRUIT ding
 INSERT Loyer prélevé | 441 € | Reste : 29 €

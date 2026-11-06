@@ -4,7 +4,8 @@
 AMBIANCE jour
 LUMIERE vive
 DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU Tobi Space | Bureau : 8 € l'heure | Lit : 12 € l'heure
 FONDU direct
 
@@ -22,7 +23,7 @@ PLAN gros NOX
 NOX dit (curieux) Et toi, tu dors où ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Un fondateur ne dort pas, Nox. Il scale.
-TOBI marche centre &
+TOBI marche centre
 PC Tobi Space | 1 réservation | Lit premium : 2 heures | Total : 24 €
 PLAN pc
 ATTENDRE 1.6
@@ -39,6 +40,7 @@ TOBI dit (fier) Il est très pro. Ça va être un super avis.
 BRUIT ding
 INSERT Avis du client | ★★★★★ | Accueil parfait
 PLAN gros TOBI
+TOBI geste victoire &
 TOBI dit (excite) Cinq étoiles ! Lis la suite !
 INSERT Signé : inspecteur du CROUS | Amende : 300 € | Sous-location interdite
 PLAN gros TOBI

@@ -3,8 +3,9 @@
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
-DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT CLAUDE apparait chaise
 TABLEAU Tobi Corp | PDG : Tobi | Employé : Nox
 FONDU direct
 
@@ -27,6 +28,7 @@ NOX dit (constat) Vingt-quatre heures sur vingt-quatre ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est une culture d'entreprise, Nox.
 PLAN gros NOX
+NOX marche fenetre &
 NOX dit (sec) Très bien. Je me mets en grève.
 PLAN gros TOBI
 TOBI dit (surpris) Quoi ? Un robot peut pas faire grève !

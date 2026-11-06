@@ -22,6 +22,7 @@ PC PastApp en direct | Utilisateurs | 1 000 000
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
+TOBI geste victoire &
 TOBI dit (excite) Un million ! Nox, je suis une licorne !
 PLAN gros NOX
 NOX dit (curieux) Ils viennent d'où, Codex ?

@@ -2,8 +2,9 @@
 # Pitch : Quelqu'un vide le frigo de Tobi la nuit. Il pose une caméra pour le démasquer.
 
 AMBIANCE jour
-DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT TOBI marche frigo
+DIRECT NOX travaille
+DIRECT NOX pivote
 TABLEAU Yaourts | Lundi : 6 | Ce matin : 1
 FONDU direct
 
@@ -36,6 +37,7 @@ TOBI dit (surpris) C'est vrai qu'il me ressemble beaucoup.
 PLAN gros NOX
 NOX dit (sec) Tobi. C'est toi. Tu manges en dormant.
 PLAN gros TOBI
+TOBI marche tapis &
 TOBI dit (panique) Quoi ? Je me vole moi-même ?
 PLAN gros NOX
 NOX dit (constat) Depuis trois semaines.

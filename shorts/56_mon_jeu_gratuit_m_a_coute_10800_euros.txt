@@ -2,9 +2,8 @@
 # Pitch : Tobi est fier d'avoir joué 900 heures sans dépenser un euro. Nox refait le calcul.
 
 AMBIANCE soir
-DIRECT TOBI travaille
-DIRECT TOBI pivote
-DIRECT NOX assis
+DIRECT TOBI assis
+DIRECT NOX marche tapis
 TABLEAU Temps de jeu | 900 heures | Prix du jeu : 0 €
 FONDU direct
 

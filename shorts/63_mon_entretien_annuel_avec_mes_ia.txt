@@ -15,7 +15,7 @@ TOBI dit (surpris) Pourquoi vous êtes tous dans ma chambre ?
 PLAN gros NOX
 NOX dit (calme) Assieds-toi, Tobi. C'est ton entretien annuel.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Un entretien ? Mais c'est moi le patron, ici !
+TOBI dit (surpris) Un entretien ? Mais c'est moi le patron, ici !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je vais être honnête avec toi : on a regardé ton année.
 TOBI marche centre &

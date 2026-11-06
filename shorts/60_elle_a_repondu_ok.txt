@@ -2,9 +2,9 @@
 # Pitch : Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement.
 
 AMBIANCE soir
-DIRECT TOBI marche tapis
+DIRECT TOBI marche fenetre
 DIRECT NOX assis
-DIRECT GEMINI apparait bureau
+DIRECT GEMINI apparait chaise
 TABLEAU Message à Léa | Réponse : ok | Analyse en cours
 FONDU direct
 

@@ -2,11 +2,11 @@
 # Pitch : Tobi a mal à la gorge. Trois IA tentent de l'aider, puis sa mère répond en trois mots.
 
 AMBIANCE soir
-DIRECT TOBI marche tapis
-DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
-DIRECT CODEX apparait chaise
-DIRECT GEMINI apparait rebord
+DIRECT TOBI assis
+DIRECT NOX marche tapis
+DIRECT CLAUDE apparait rebord
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait bureau
 TABLEAU Problème | Mal à la gorge | 3 IA mobilisées
 FONDU direct
 
