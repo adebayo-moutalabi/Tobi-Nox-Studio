@@ -109,6 +109,8 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Gestes et téléphone plus humains | Téléphone visible à l'oreille, gestes calés sur les mots appuyés et énergie selon le ton |
 | 6 nov. 2026 | Appliquer l'épisode 58 aux autres | Épisodes 52 à 63 réécrits avec contexte, durée visée de 40 à 90 secondes |
 | 6 nov. 2026 | Personnages IA plus vivants | Claude grand frère honnête, Codex stagiaire surexcité, Gemini premier de la classe |
+| 6 nov. 2026 | Regarder la bonne personne avant de parler | Le Studio repère le prénom appelé ou la personne qui répond, puis tourne le personnage avant la réplique |
+| 6 nov. 2026 | Épisode du procès pas assez drôle | Remplacé par un entretien annuel de Tobi avec ses IA |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

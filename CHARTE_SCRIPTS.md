@@ -12,6 +12,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Montrer les informations :** utiliser `PC`, `PLAN pc`, `TOBI appelle`, `TOBI raccroche` ou `INSERT` quand cela rend l'histoire plus claire.
 - **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ».
 - **Mettre de l'émotion :** chaque réplique a une intention claire, adaptée à la scène : envie, gêne, panique, tristesse ou mauvaise foi.
+- **Regarder avant de parler :** le Studio tourne le personnage vers le prénom appelé, sinon vers celui qui répond ensuite. Pour changer d'interlocuteur, appeler le personnage par son prénom.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
 - **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
