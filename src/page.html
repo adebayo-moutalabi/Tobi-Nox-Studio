@@ -192,6 +192,8 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 #elLines button { padding: 3px 10px; font-size: 12px; margin-right: 4px; }
 .back { flex: none; }
 .panel > section:not(#storyBox) { border-top: 1px solid var(--brand-hair); padding-top: 14px; }
+.counter { position: absolute; left: 50%; top: 14.5%; transform: translate(-50%, -50%); max-width: 92%; padding: .42em .75em; border-radius: .65em; background: rgba(14, 15, 18, .84); color: #f2b92e; font: 800 2.4cqh "Inter", "Segoe UI", sans-serif; white-space: nowrap; pointer-events: none; z-index: 2; }
+.counter[hidden] { display: none; }
 .cap { font-family: var(--brand-body); }
 .cap b { color: var(--brand-on-nox); }
 * { scrollbar-width: none; }
@@ -264,6 +266,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
     <div class="bubble" id="bubble" hidden></div>
     <div class="curtain" id="curtain"></div>
     <div class="card" id="card" hidden></div>
+    <div class="counter" id="counter" hidden></div>
     <div class="cap" id="cap" hidden></div>
     <div class="transport" id="transport" hidden><button type="button" id="storyPlay">Revoir</button><button type="button" id="storyStop" disabled>Arrêter</button></div>
     <p class="hint"><kbd>Clic au sol</kbd> pour l'envoyer · <kbd>ZQSD</kbd> ou <kbd>flèches</kbd> pour marcher · <kbd>Maj</kbd> pour courir · glisser pour tourner</p>

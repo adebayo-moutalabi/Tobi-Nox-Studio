@@ -33,6 +33,15 @@ function drawCaption(ctx, c, w, h) {
   });
 }
 
+// Compteur fixe en haut de l'image : il donne une raison de rester jusqu'à la fin.
+function drawCounter(ctx, text, w, h) {
+  const s = Math.round(h * (h > w ? 0.024 : 0.042)), y = h * (h > w ? 0.145 : 0.1), padX = s * 0.75, padY = s * 0.42;
+  ctx.font = `800 ${s}px "Inter", "Segoe UI", sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  const tw = ctx.measureText(text).width;
+  ctx.fillStyle = 'rgba(14,15,18,.84)'; ctx.beginPath(); ctx.roundRect(w / 2 - tw / 2 - padX, y - s / 2 - padY, tw + padX * 2, s + padY * 2, s * 0.65); ctx.fill();
+  ctx.fillStyle = '#f2b92e'; ctx.fillText(text, w / 2, y);
+}
+
 export async function exportVideo(v, player, text, { width = 1080, height = 1920, fps = 30, captions = true, music = null, onProgress, maxSeconds = 600 } = {}) {
   if (typeof VideoEncoder === 'undefined') throw new Error("Ce navigateur ne sait pas encoder la vidéo : utilise Chrome ou Edge.");
   // Au-delà de 1080p, on change de niveau H.264 et de débit : YouTube garde mieux les vidéos qui arrivent plus grandes.
@@ -64,6 +73,7 @@ export async function exportVideo(v, player, text, { width = 1080, height = 1920
         ctx.fillStyle = '#f6f1e6'; ctx.font = `700 ${Math.round(height * 0.06)}px "Bricolage Grotesque", "Trebuchet MS", sans-serif`;
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(o.card, width / 2, height / 2);
       }
+      if (o.counter) drawCounter(ctx, o.counter, width, height);
       if (captions && o.caption) drawCaption(ctx, o.caption, width, height);
       const frame = new VideoFrame(comp, { timestamp: Math.round((i * 1e6) / fps), duration: Math.round(1e6 / fps) });
       enc.encode(frame, { keyFrame: i % (fps * 2) === 0 });

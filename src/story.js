@@ -277,6 +277,7 @@ export function createPlayer(v, ui) {
         return undefined;
       }
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
+      case 'compteur': ui.counter(c.text); return undefined;
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
@@ -418,7 +419,7 @@ export function createPlayer(v, ui) {
     async play(text, opts = {}) {
       if (running) return;
       findBlockers();
-      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); v.quiet = true; look.hideInsert(); look.setMood('soir');
+      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(); look.setMood('soir');
       const list = parseStory(text);
       running = true; stopped = false; ui.state(true); v.locked = true;
       ui.curtain(true, true);
@@ -585,6 +586,7 @@ export function mountStory(v, stories) {
       box.style.setProperty('--w', c.color);
       box.replaceChildren(...c.words.flatMap((w, i) => { const n = document.createElement(i === c.active ? 'b' : 'span'); n.textContent = w; return [n, ' ']; }));
     },
+    counter: (t) => { st.counter = t; el('counter').textContent = t; el('counter').hidden = !t; },
     card: (t) => { st.card = t; el('card').textContent = t; el('card').hidden = !t; },
     line: (t) => { const n = el('storyNow'); n.dataset.line = t; if (!/^(Ligne|Fin de|Lecture)/.test(t)) n.textContent = t; }, // pas de jargon à l'écran
     state: (on) => { el('storyPlay').disabled = on; el('storyStop').disabled = !on; el('storyExport').disabled = exporting; },
