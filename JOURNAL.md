@@ -101,6 +101,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Coût pour publier plus souvent | Besoins en crédits et offres conseillées dans `PUBLICATION.md` |
 | 6 nov. 2026 | Épisodes d'une minute et plus qui retiennent jusqu'au bout | Compteur à l'image, format TikTok dans la charte, épisodes 61 à 63 |
 | 6 nov. 2026 | Durée libre de 50 à 115 secondes, avec crédits maîtrisés | Format normal de 50 à 60 s, grands formats réservés aux meilleures idées |
+| 6 nov. 2026 | « Aie » toujours mal prononcé | Écriture « Est » envoyée à la voix. À confirmer à l'écoute |
+| 6 nov. 2026 | Plus d'effets à l'image | Commandes `PC`, `appelle` et `raccroche` |
+| 6 nov. 2026 | Histoires trop rapides et difficiles à suivre | Épisode 58 réécrit avec contexte, charte corrigée pour des répliques plus claires |
+| 6 nov. 2026 | Dialogues plus humains et moins de blancs | Silences des voix coupés, réponses enchaînées et consignes d'émotion renforcées |
+| 6 nov. 2026 | Titres et descriptions plus reconnaissables | Titres de série numérotés, descriptions courtes et appel à s'abonner |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

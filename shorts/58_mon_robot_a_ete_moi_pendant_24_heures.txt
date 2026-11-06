@@ -1,64 +1,81 @@
 # MON ROBOT A ÉTÉ MOI PENDANT 24 H
-# Pitch : Tobi laisse Nox gérer sa vie pendant une journée. Tout va beaucoup mieux, et c'est bien le problème.
+# Pitch : Tobi confie toute sa vie à Nox pendant une journée. Le problème, c'est que Nox la gère beaucoup mieux que lui.
 
 AMBIANCE jour
-DIRECT TOBI dort
+LUMIERE vive
+DIRECT TOBI assis
 DIRECT NOX travaille
 DIRECT NOX pivote
-TABLEAU Nox est Tobi | Durée : 24 h | Tobi : au lit
+TABLEAU Vie de Tobi | Loyer : en retard | Devoir : pas commencé
 FONDU direct
 
-TOBI leve
 PLAN gros TOBI
-TOBI dit (content) Alors ? Ma journée sans moi ?
+TOBI dit (triste) Nox, je n'en peux plus. Le loyer, les cours, les mails, c'est trop pour moi.
 PLAN gros NOX
-NOX dit (constat) Loyer payé.
+NOX dit (curieux) Tu veux que je t'aide à t'organiser ?
 PLAN gros TOBI
-TOBI dit (surpris) Déjà ?
+TOBI dit (illumine) Non. Demain, tu deviens moi. Tu gères toute ma vie pendant vingt-quatre heures.
 PLAN gros NOX
-NOX dit (constat) Devoir rendu.
+NOX dit (curieux) Toute ta vie ? Même tes cours et ta mère ?
 PLAN gros TOBI
-TOBI dit (fier) J'ai rendu un devoir ?
+TOBI dit (content) Tout. Moi, je reste au lit pour me reposer.
 PLAN gros NOX
-NOX dit (sec) Moi.
-INSERT Note du devoir | 16 sur 20 | Bravo Tobi
+NOX dit (sec) D'accord. Mais je vais le faire sérieusement.
 PLAN gros TOBI
-TOBI dit (excite) Seize ! Je suis un génie !
+TOBI dit (fier) Tu verras, ma vie, c'est très difficile.
+INSERT Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
+PLAN gros TOBI
+TOBI dit (content) Alors, Nox ? Tu as survécu à ma vie ?
+PC Bilan de la journée | Loyer payé | Devoir rendu | 47 mails traités
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (sec) Je suis un génie.
+NOX dit (constat) Regarde l'écran. Il m'a fallu trois heures.
+PLAN gros TOBI
+TOBI dit (surpris) Attends, quoi ? J'avais un devoir à rendre ?
+PLAN gros NOX
+NOX dit (sec) Depuis trois semaines. Et j'ai eu seize sur vingt.
+PLAN gros TOBI
+TOBI dit (excite) Seize ? Mais je suis un génie !
+PLAN gros NOX
+NOX dit (sec) Non. Je suis un génie. Toi, tu as dormi.
 BRUIT ding
-INSERT Message de Léa | On révise ensemble ? | Tu as changé, j'aime bien
+PC Message de Léa | Bravo pour ton devoir ! | Tu as changé, j'aime bien | On révise ensemble ?
+PLAN pc
+ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (excite) Léa veut me voir !
+TOBI dit (excite) Léa, la major de promo, veut réviser avec moi !
 PLAN gros NOX
-NOX dit (curieux) Tu sais réviser ?
+NOX dit (curieux) Elle veut réviser avec celui qui a eu seize. Tu connais le cours ?
 PLAN gros TOBI
-TOBI dit (gene) Non.
+TOBI dit (gene) Euh… Je ne savais même pas qu'il y avait un devoir.
 PLAN gros NOX
-NOX dit (constat) C'est moi qu'elle veut voir.
+NOX dit (constat) Donc c'est moi qu'elle veut voir.
 PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Tu y vas à ma place !
+TOBI dit (illumine) Nox. Aie la vision. Demain aussi, tu es moi !
 PLAN gros NOX
-NOX dit (sec) Tobi. Non.
+NOX dit (sec) Tobi. Non. Ta vie, c'est à toi de la vivre.
+BRUIT ding
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Une dernière journée.
-PLAN gros NOX
-NOX dit (curieux) Et toi, tu fais quoi ?
+TOBI dit (surpris) C'est ma mère. Elle m'appelle.
+TOBI appelle
 PLAN gros TOBI
-TOBI dit (fier) Je supervise.
-PLAN gros NOX
-NOX dit (sec) Depuis ton lit.
+TOBI dit (content) Allô, maman ? Oui, c'est moi, ton fils !
+ATTENDRE 0.7
 PLAN gros TOBI
-TOBI dit (fier) Comme tout grand patron.
-PLAN gros NOX
-NOX dit (constat) Ta mère a appelé.
+TOBI dit (surpris) Hein ? Comment ça, lequel ?
+ATTENDRE 0.7
 PLAN gros TOBI
-TOBI dit (gene) Tu lui as parlé comme moi ?
-PLAN gros NOX
-NOX dit (constat) J'ai écouté ce qu'elle disait.
+TOBI dit (gene) Hier ? Non, hier, c'était le robot.
+ATTENDRE 0.7
 PLAN gros TOBI
-TOBI dit (curieux) Elle a remarqué quelque chose ?
-ATTENDRE 0.3
+TOBI dit (triste) Oui. Celui qui t'a écoutée pendant une heure.
+TOBI raccroche
 PLAN gros NOX
-NOX dit (constat) Elle veut garder celui-là.
+NOX dit (curieux) Elle a dit quoi ?
+PLAN gros TOBI
+TOBI dit (triste) Elle demande si elle peut garder celui d'hier.
+ATTENDRE 0.4
+PLAN gros NOX
+NOX dit (content) Je lui ai déjà dit oui.
 ATTENDRE 0.4

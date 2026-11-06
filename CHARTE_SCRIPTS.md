@@ -7,8 +7,13 @@ Cette charte suffit pour écrire un épisode, seul, à plusieurs ou avec n'impor
 Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 - **Épisodes indépendants :** chaque épisode se comprend seul. Pas de suite, pas de compteur de projets, pas de placard.
+- **Comprendre sans description :** dans les 8 premières secondes, le dialogue dit qui veut quoi, pourquoi, et ce qui peut mal tourner.
+- **Faire entrer dans l'histoire :** chaque changement est dit ou montré. Une réplique très courte sert à la chute, pas à expliquer le contexte.
+- **Montrer les informations :** utiliser `PC`, `PLAN pc`, `TOBI appelle`, `TOBI raccroche` ou `INSERT` quand cela rend l'histoire plus claire.
+- **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ».
+- **Mettre de l'émotion :** chaque réplique a une intention claire, adaptée à la scène : envie, gêne, panique, tristesse ou mauvaise foi.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
-- **Rythme rapide :** 50 à 115 s selon l'idée, répliques de 1 à 6 mots le plus souvent, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
+- **Rythme rapide :** 50 à 115 s selon l'idée, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
@@ -99,7 +104,7 @@ Avec les vraies voix, le rythme est d'environ 3 mots par seconde : compter **140
 
 ## Les titres
 
-Le titre vend la situation, à la première personne si possible, en moins de 45 caractères. Un chiffre ou un paradoxe aide : « Trois heures pour un point-virgule ». Jamais de numéro d'épisode.
+Le titre dit ce que Tobi veut ou ce qui lui arrive, avec un emoji utile et le nom de la série : « Tobi confie sa vie à son robot IA 🤖 · Tobi & Nox #2 ». Le numéro suit l'ordre réel de sortie. La description raconte la situation en trois lignes et s'arrête avant la chute.
 
 ## Ce qui fait une bonne idée
 
@@ -172,6 +177,10 @@ NOX dit (resigne) J'appelle ta mère.
 **Tons :** neutre, calme, curieux, fier, content, excite, illumine, ironique, sec, constat, punchline, gene, mauvaisefoi, resigne, triste, colere, surpris, panique, chuchote.
 
 **Plans :** `PLAN auto`, `PLAN gros TOBI`, `PLAN gros NOX`, `PLAN clavier`, `PLAN lit`, `PLAN large`. Changer de plan à presque chaque réplique.
+
+**Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle.
+
+**Téléphone :** `TOBI appelle`, puis `TOBI raccroche`.
 
 **Actions :** `marche <lieu>`, `court <lieu>`, `assis` (sur le lit), `leve`, `dort`, `travaille`, `pivote`, `pivote bureau`, `frigo`, `miroir`, `fenetre`, `tape <texte>`, `geste <nom>`, `mimique <nom>`.
 
