@@ -33,6 +33,7 @@ function burst(ctx, dest, t, peak, release, filter, freq, q = 1, to = 0) {
 export function playSfx(ctx, dest, type, t) {
   if (type === 'key') { burst(ctx, dest, t, 0.16, 0.028, 'highpass', 2200); tone(ctx, dest, t, 190, 0.08, 0.03); }
   if (type === 'pop') { tone(ctx, dest, t, 420, 0.2, 0.09, 'sine', 900); burst(ctx, dest, t, 0.05, 0.05, 'highpass', 3000); }
+  if (type === 'bip') { tone(ctx, dest, t, 880, 0.09, 0.45); tone(ctx, dest, t + 0.13, 1175, 0.11, 0.45); }
   if (type === 'ding') { tone(ctx, dest, t, 1320, 0.15, 0.6); tone(ctx, dest, t + 0.01, 1980, 0.08, 0.45); }
   if (type === 'whoosh') burst(ctx, dest, t, 0.09, 0.24, 'bandpass', 500, 1.2, 2600);
 }

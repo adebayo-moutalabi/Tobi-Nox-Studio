@@ -16,7 +16,6 @@ const CARDS = {
   temps: { bg: '#102a3c', top: '#173a50', ink: '#e6f7ff', big: '#8feaff', small: '#a9d6e6' },
   message: { bg: '#143427', top: '#1b4634', ink: '#edfff5', big: '#8df0b8', small: '#b6e8cc' },
   argent: { bg: '#351a1c', top: '#4a2124', ink: '#fff0ee', big: '#ffb35c', small: '#e5bcb6' },
-  abonne: { bg: NOX, top: '#ffd978', ink: '#14161b', big: '#14161b', small: '#37332a' },
 };
 
 function canvasTexture(w, h) {
@@ -90,6 +89,26 @@ export function createLook(v) {
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
+    if (I.kind === 'tel') { // l'écran du téléphone : une conversation, pas une fiche
+      ctx.fillStyle = '#0f1115'; ctx.strokeStyle = '#30343d'; ctx.lineWidth = 10;
+      ctx.beginPath(); ctx.roundRect(70, 10, W - 140, H - 20, 70); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#20242c'; ctx.beginPath(); ctx.roundRect(80, 20, W - 160, 150, [60, 60, 0, 0]); ctx.fill();
+      ctx.fillStyle = '#f4f1ec'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.font = `600 50px ${FONT}`; ctx.fillText(I.title, W / 2, 96, W - 240);
+      ctx.textAlign = 'left';
+      const bubble = (text, y, size, color) => {
+        ctx.font = `600 ${size}px ${FONT}`;
+        const words = text.split(' '), rows = []; let row = '';
+        for (const w of words) { if (ctx.measureText(`${row} ${w}`).width > W - 360 && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; }
+        rows.push(row);
+        const h = rows.length * size * 1.25 + 60;
+        ctx.fillStyle = color; ctx.beginPath(); ctx.roundRect(130, y, W - 260, h, 38); ctx.fill();
+        ctx.fillStyle = '#f7f6f2'; rows.forEach((r, i) => ctx.fillText(r, 165, y + 30 + size * 0.62 + i * size * 1.25));
+        return y + h + 34;
+      };
+      const next = bubble(I.big, 240, 62, '#2f6fed');
+      if (I.small) bubble(I.small, next, 52, '#2c313b');
+      tex.needsUpdate = true; return;
+    }
     const K = CARDS[I.kind] || CARDS.base;
     ctx.fillStyle = K.bg; ctx.strokeStyle = 'rgba(244,241,236,.14)'; ctx.lineWidth = 4;
     ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.fill(); ctx.stroke();
@@ -130,9 +149,9 @@ export function createLook(v) {
       L.key.intensity = on ? 0 : day.key; L.fill.intensity = on ? 0 : day.fill;
       L.key.visible = !on; L.fill.visible = !on; // pas d'ombre de soleil à calculer la nuit
     },
-    insert(title, big, small) {
+    insert(title, big, small, forced) {
       const text = `${title} ${big} ${small}`;
-      const kind = /abonne/i.test(big) ? 'abonne' : /plus tard|lendemain|suivante|\bnuit\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base';
+      const kind = forced || (/plus tard|lendemain|suivante|\bnuit\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base');
       Object.assign(I, { on: true, t: 0, title, big, small, done: false, kind });
       const m = /^([^\d]*)(\d+)(.*)$/.exec(big);
       I.value = m && Number(m[2]) >= 10 ? { head: m[1], n: Number(m[2]), tail: m[3] } : null;

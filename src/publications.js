@@ -14,7 +14,7 @@ const TITRES = {
   20: 'Je suis CEO de mon miroir 🪞', 21: 'Trois heures de bug pour un point-virgule 🐛', 22: 'Mon IA a trouvé mon mot de passe en 0,4 s 🔓',
   23: 'Entretien de stage en caleçon 🩲', 24: "J'ai mis de l'IA dans mon frigo, il reste un yaourt 🥛", 25: "Routine de millionnaire : j'ai tenu 11 minutes ⏰",
   26: 'Il me manque 180 € pour le loyer 🏠', 27: "J'ai demandé à Codex de ranger mon PC 🧹", 28: 'Une IA a écrit à ma mère 💌',
-  29: "J'ai présenté BaguetteGPT à des IA 🥖", 30: "Claude Code veut la permission de m'aider 🙋", 31: 'Codex a répondu à mon prof 😬',
+  29: "J'ai présenté BaguetteGPT à des IA 🥖", 30: "Claude Code veut tout vérifier avant de m'aider 🙋", 31: 'Codex a répondu à mon prof 😬',
   32: 'Gemini a préparé mon rencard 🌹', 33: "12 abonnements d'IA et zéro euro 💸", 34: 'Ma mère a vu mon LinkedIn de CEO 👀',
   35: 'Mes IA ont fait une réunion sans moi 🤫', 36: 'Influenceur avec 12 abonnés 🤳', 37: 'Le wifi a coupé, les IA paniquent 📶',
   38: 'Mes APL ont financé ma start-up 💶', 39: "J'ai révisé le mauvais partiel 📚", 40: 'Projet de groupe : je suis chef de fantômes 👻',

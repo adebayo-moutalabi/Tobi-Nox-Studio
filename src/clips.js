@@ -413,7 +413,7 @@ const POSES = {
   call: [4, (t) => {
     const P = base(t);
     reach(P, 'R', -1, [-0.25, 1.36, 0.1], [-0.9, -0.6, 0.1]);
-    aim(P, 'R', -1, [0.05, 0.3, 1], [-0.05, 1, -0.3]); // pouce vers l'avant, doigts vers le haut : la paume est tournée vers l'oreille
+    aim(P, 'R', -1, [0, 0.4, -0.9], [0, 0.9, 0.4]); // doigts vers le haut, paume contre l'oreille : ils se replient vers la tête
     mixHand(P, 'R', -1, 0.62, 1, 0.5);
     add(P, 'head', 0.02, -0.04, 0.05);
     add(P, 'chest', 0, 0, 0.02);

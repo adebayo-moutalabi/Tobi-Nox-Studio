@@ -192,9 +192,8 @@ export function createPlayer(v, ui) {
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
     if (talkTo && !a.hero.seat && !a.spot && a.faceYaw != null) fwd.set(Math.sin(a.faceYaw), 0, Math.cos(a.faceYaw)); // il va se tourner : on filme déjà son visage
     if (a.extra) fwd.set(0, 0, 1); // sans partenaire, un logo se filme côté porte, là où il y a du recul
-    const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
+    const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || a.hero.seat || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
     const to = (across ? toB : fwd).normalize();
-    if (a.hero.motion.pose === 'call') to.copy(fwd).normalize().applyAxisAngle(up, -0.75); // on filme du côté du téléphone
     a.look = near ? b : a.extra ? a.look : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
     const top = H.y + (big ? 0.24 : 0.2);
     // En vertical, le cadre est étroit : la largeur vaut 0,56 fois la hauteur. On recule pour garder le corps entier, les gestes et un peu de décor.
@@ -313,6 +312,16 @@ export function createPlayer(v, ui) {
         a.hero.motion.togglePose('call'); return v.wait(0.6);
       }
       case 'raccroche': a.hero.motion.clearPose(); await v.wait(0.45); v.stash(a); return undefined;
+      case 'message': { // il sort le téléphone, regarde, et on lit le message sur l'écran
+        const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
+        sfx('bip');
+        if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose('phone'); closeUp(a); await v.wait(0.9); }
+        look.insert(title, big, small, 'tel');
+        await v.wait(Math.min(4, 2.2 + (big.length + small.length) * 0.03));
+        look.hideInsert();
+        if (a?.held?.name === 'phone') { a.hero.motion.clearPose(); await v.wait(0.25); v.stash(a); }
+        return undefined;
+      }
       case 'compteur': ui.counter(c.text); return undefined;
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
@@ -481,7 +490,7 @@ export function createPlayer(v, ui) {
           if (c.free) { const q = Promise.resolve(t).finally(() => pending.delete(q)); pending.add(q); } else await t;
         }
         await Promise.allSettled([...pending]);
-        if (!stopped && ui.subscribe?.()) { const m = ABONNE[Math.abs([...text].reduce((n, ch) => n * 31 + ch.charCodeAt(0) | 0, 7)) % ABONNE.length]; look.insert(...m); sfx('pop'); await v.wait(3.2); look.hideInsert(); } // court, sans voix : aucun crédit
+        if (!stopped && ui.subscribe?.()) { const m = ABONNE[Math.abs([...text].reduce((n, ch) => n * 31 + ch.charCodeAt(0) | 0, 7)) % ABONNE.length]; look.insert(...m, 'base'); sfx('pop'); await v.wait(4.5); look.hideInsert(); } // court, sans voix : aucun crédit
         ui.line(stopped ? 'Lecture arrêtée.' : 'Fin de l’histoire.');
       } catch (e) { ui.line(`Erreur : ${e.message}`); }
       closing = true; ui.curtain(true, true); ui.card('');
@@ -499,16 +508,15 @@ export function createPlayer(v, ui) {
 }
 
 // Le téléphone posé contre l'oreille, dans la main droite.
-const PHONE_EAR = { pos: [-0.03, -0.04, 0.03], rot: [Math.PI / 2, -Math.PI / 2, 0] };
+const PHONE_EAR = { pos: [0.04, 0.07, 0.03], rot: [Math.PI / 2, Math.PI / 2, 0] };
 const ENERGIE = { excite: 1.35, colere: 1.4, panique: 1.5, illumine: 1.3, fier: 1.1, triste: 0.55, gene: 0.75, calme: 0.8, sec: 0.6, constat: 0.65, chuchote: 0.5, resigne: 0.6 };
 
 const EMOTIONS = { panique: 'emo_panique', surpris: 'emo_surpris', colere: 'emo_colere', fier: 'emo_fier', triste: 'emo_triste', curieux: 'emo_doute', illumine: 'emo_idee', gene: 'emo_gene', mauvaisefoi: 'emo_justifie' };
 
 const ABONNE = [
-  ["Tobi n'a toujours pas de plan", 'Abonne-toi', 'et viens voir la suite'],
-  ['Nox fait ce qu\'il peut', 'Abonne-toi', 'pour le soutenir un peu'],
-  ['Merci d\'être resté', 'Abonne-toi', 'la prochaine galère arrive'],
-  ['Tobi a encore une idée', 'Abonne-toi', 'on va en avoir besoin'],
+  ["Ça t'a fait sourire ?", 'Abonne-toi', 'pour suivre les aventures de Tobi et Nox'],
+  ['La suite arrive bientôt', 'Abonne-toi', 'pour ne pas manquer Tobi et Nox'],
+  ['Tobi compte sur toi', 'Abonne-toi', 'pour le soutenir dans ses galères'],
 ];
 
 const QUALITE = { max: 1440, hd: 1080, fast: 720 };

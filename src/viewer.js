@@ -243,7 +243,7 @@ export function startViewer(cfg) {
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
     lq.d.setFromUnitVectors(lq.f, lq.t);
     const ang = 2 * Math.acos(Math.min(1, Math.abs(lq.d.w)));
-    const most = a.extra ? 0.2 : 1.05;
+    const most = a.extra ? 0.2 : a.hero.seat ? 1.5 : 1.15; // assis côte à côte, il tourne franchement la tête
     if (ang > most) lq.d.slerp(lq.id, 1 - most / ang);
     lq.d.multiply(lq.w);
     head.parent.getWorldQuaternion(lq.p);
