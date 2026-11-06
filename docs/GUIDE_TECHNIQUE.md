@@ -84,10 +84,19 @@ Les gestes les plus humains de Tobi viennent de Mixamo. La FAQ d'Adobe autorise 
 | `studio-mixamo.html` | Non |
 | `studio.html`, `tobi.html`, `nox.html` | Oui, sans données Mixamo |
 | `tools/mixamo/` | Oui : scripts seulement |
+| Copie dans le navigateur de l'auteur | Non : elle n'existe que chez lui |
 
 `node build.mjs` crée toujours les pages publiques. Si `src/mocap-mixamo.json` existe, il crée aussi `studio-mixamo.html`. Sans ce fichier, `clipFor` utilise les gestes d'origine.
 
-**Pour exporter une vidéo avec les gestes Mixamo :** ouvrir `studio-mixamo.html` depuis un serveur local.
+**Pour travailler en local :** lancer `node tools/serveur-local.mjs`, puis ouvrir http://localhost:4173. Cette adresse ouvre `studio-mixamo.html` s'il existe, et lit toujours la dernière compilation.
+
+**Pour avoir les mêmes gestes sur le site :**
+
+1. Ouvrir le Studio en ligne, puis les réglages de la vidéo.
+2. Cliquer sur **Importer mes gestes** et choisir `mocap-mixamo.json`.
+3. La page se recharge avec les gestes.
+
+Le fichier reste dans le stockage de ce navigateur, sous la clé `tobi-gestes` (`src/mocap.js`). Il n'est envoyé nulle part. Les autres visiteurs gardent les gestes d'origine. **Retirer mes gestes** efface cette copie. Il faut refaire l'import sur un autre navigateur ou un autre ordinateur.
 
 **Pour recréer les données :**
 

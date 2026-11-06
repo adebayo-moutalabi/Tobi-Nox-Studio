@@ -339,6 +339,8 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label>
             <label class="sw">Écran « Abonne-toi » à la fin <input type="checkbox" id="storySub" checked></label>
             <label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label>
+            <label class="file" id="gestesImport">Importer mes gestes<input type="file" id="gestesFile" accept=".json"></label>
+            <button type="button" class="file" id="gestesOff" hidden>Retirer mes gestes</button>
           </div></details>
           <details open><summary>Écriture <b id="rowAI">Claude</b></summary><div>
             <label class="voice">IA <select id="wrProvider"><option value="claude">Claude</option><option value="openai">ChatGPT</option><option value="gemini">Gemini</option></select></label>

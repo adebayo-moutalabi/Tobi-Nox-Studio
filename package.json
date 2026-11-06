@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "local": "node build.mjs && node tools/serveur-local.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

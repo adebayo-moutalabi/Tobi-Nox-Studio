@@ -14,6 +14,7 @@ import { TONS } from './tones.js';
 import { envelope } from './talk.js';
 import { createLook } from './look.js';
 import { playSfx } from './sound.js';
+import { gestures } from './mocap.js';
 
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -746,6 +747,15 @@ export function mountStory(v, stories) {
     refresh();
     if (player.voices.length) { ui.line(''); replay(); } else ui.line(el('elNow').textContent);
   });
+  // Gestes privés : ils restent dans ce navigateur et ne sont jamais envoyés. Voir docs/GUIDE_TECHNIQUE.md.
+  el('gestesImport').hidden = gestures.bundled || gestures.saved;
+  el('gestesOff').hidden = gestures.bundled || !gestures.saved;
+  el('gestesFile').addEventListener('change', async (e) => {
+    const f = e.target.files[0];
+    if (!f) return;
+    try { gestures.save(await f.text()); location.reload(); } catch (err) { ui.line(`Gestes non importés : ${err.message}`); }
+  });
+  el('gestesOff').addEventListener('click', () => { gestures.remove(); location.reload(); });
   let musicFile = null, warned = false;
   el('storyMusicFile').addEventListener('change', async (e) => {
     const f = e.target.files[0];

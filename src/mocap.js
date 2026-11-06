@@ -3,7 +3,27 @@ import * as THREE from 'three';
 import BASE from './mocap.json';
 import MIXAMO from './mocap-mixamo.json';
 
-export const mocapClips = () => [...clipsFrom(BASE), ...clipsFrom(MIXAMO)];
+// Les gestes Mixamo ne sont pas publiés. Sur le site, l'auteur les importe une fois : ils restent dans son navigateur.
+const KEY = 'tobi-gestes';
+const bundled = Object.keys(MIXAMO.clips).length > 0;
+function savedGestures() {
+  try { const t = localStorage.getItem(KEY); return t ? JSON.parse(t) : null; } catch { return null; }
+}
+export const gestures = {
+  bundled,
+  get saved() { try { return !!localStorage.getItem(KEY); } catch { return false; } },
+  save(text) { // refuse tout fichier qui n'est pas le bon
+    const data = JSON.parse(text);
+    if (!data.clips?.mx_parle || !data.bones) throw new Error('Ce fichier ne contient pas les gestes de Tobi.');
+    localStorage.setItem(KEY, text);
+  },
+  remove() { localStorage.removeItem(KEY); },
+};
+
+export const mocapClips = () => {
+  const extra = bundled ? MIXAMO : savedGestures();
+  return [...clipsFrom(BASE), ...(extra ? clipsFrom(extra) : [])];
+};
 
 function clipsFrom(DATA) {
   return Object.entries(DATA.clips).map(([name, c]) => {
