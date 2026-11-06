@@ -26,6 +26,20 @@ export function envelope(buffer) {
   return { rate: RATE, seconds: buffer.duration, level, cum };
 }
 
+// Retire le silence au début et à la fin d'une réplique : les personnages s'enchaînent comme une vraie discussion.
+export function trimSilence(buffer, ctx, limit = 0.012) {
+  const data = Array.from({ length: buffer.numberOfChannels }, (_, c) => buffer.getChannelData(c)), n = buffer.length;
+  const loud = (i) => data.some((d) => Math.abs(d[i]) > limit);
+  let a = 0, b = n - 1;
+  while (a < n && !loud(a)) a++;
+  while (b > a && !loud(b)) b--;
+  if (a >= b) return buffer;
+  const rate = buffer.sampleRate, start = Math.max(0, a - Math.round(rate * 0.02)), end = Math.min(n, b + Math.round(rate * 0.05));
+  const out = ctx.createBuffer(buffer.numberOfChannels, end - start, rate);
+  data.forEach((d, c) => out.copyToChannel(d.subarray(start, end), c));
+  return out;
+}
+
 export function createTalk(seq, onEnd, duration, env) {
   if (env) seq.forEach((x) => { x.d = x.v === ' ' ? 0.02 : 0.078; }); // les silences viennent de l'audio
   else if (duration) { const k = duration / seq.reduce((n, x) => n + x.d, 0); seq.forEach((x) => { x.d *= k; }); }

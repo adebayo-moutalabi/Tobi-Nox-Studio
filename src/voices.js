@@ -1,6 +1,7 @@
 // Voix automatiques : le Studio demande chaque réplique à ElevenLabs avec la clé de l'utilisateur.
 // La clé ne quitte ce navigateur que vers api.elevenlabs.io. Elle n'est jamais dans le code.
 import { voiceTag } from './tones.js';
+import { trimSilence } from './talk.js';
 import { prononce, sonAie, changeAie } from './prononciation.js';
 
 const API = 'https://api.elevenlabs.io/v1';
@@ -117,7 +118,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
       await cache.put(id, buf);
     }
     ctx ||= new AudioContext();
-    r.buffer = await ctx.decodeAudioData(buf.slice(0));
+    r.buffer = trimSilence(await ctx.decodeAudioData(buf.slice(0)), ctx);
     if (r.url) URL.revokeObjectURL(r.url);
     r.url = URL.createObjectURL(new Blob([buf], { type: 'audio/mpeg' }));
     return fresh;
