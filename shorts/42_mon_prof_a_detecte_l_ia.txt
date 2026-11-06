@@ -47,7 +47,7 @@ PLAN gros TOBI
 TOBI dit (triste) Et je dis quoi à mon prof, demain ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) La vérité. Je te prépare un message.
-TOBI message Message du prof | J'ai corrigé ta copie avec Claude | Il te conseille de réécrire
+TOBI message Prof de droit | J'ai corrigé ta copie avec Claude. | Il te conseille de tout réécrire.
 ATTENDRE 0.4
 PLAN gros NOX
 NOX dit (resigne) Vous êtes foutus tous les trois.

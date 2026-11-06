@@ -36,8 +36,9 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 ## Mise en scène
 
 - Les pop-ups restent assez longtemps à l'écran et changent de style selon le temps, un message ou l'argent.
-- L'écran d'abonnement doit être amical, attirant, sobre et pas trop rapide. Pas de fond jaune.
-- Un message de téléphone se lit sur le téléphone, un contenu d'ordinateur sur le PC.
+- L'écran d'abonnement dit : « Merci d'être resté jusqu'à la fin. Abonne-toi pour ne plus manquer nos aventures. » Il est sobre, sans fond jaune, et reste assez longtemps.
+- Un message de téléphone ressemble à une conversation, avec le contact et les bulles. Un contenu d'ordinateur ressemble à un écran de MacBook ou à une boîte mail.
+- Pas de petite phrase inutile comme « Réponse en 2 secondes ».
 - Pendant un appel, on privilégie le visage de Tobi.
 
 - Les personnages ne doivent pas rester toujours aux mêmes places.

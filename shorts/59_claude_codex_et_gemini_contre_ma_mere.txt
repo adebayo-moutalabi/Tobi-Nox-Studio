@@ -57,5 +57,5 @@ CLAUDE dit (calme) Je vais être honnête, Tobi : elle est meilleure que nous.
 PLAN gros CODEX
 CODEX dit (fier) C'est réglé. Je lui ai proposé un poste chez nous.
 BRUIT ding
-TOBI message Réponse de ta mère | Mets un pull. | Toi aussi.
+TOBI message Maman | Mets un pull. | Toi aussi, Codex.
 ATTENDRE 0.4

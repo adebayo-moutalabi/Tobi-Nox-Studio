@@ -65,7 +65,7 @@ PLAN gros TOBI
 TOBI dit (gene) Elle regarde sa série, le mardi.
 PLAN gros NOX
 NOX dit (sec) On est mardi.
-TOBI message Message sur la télé de maman | Compte suspendu | Activité dans 38 pays
+INSERT Message sur la télé de maman | Compte suspendu | Activité dans 38 pays
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Aie la vision. On est une entreprise internationale !
 PLAN gros NOX

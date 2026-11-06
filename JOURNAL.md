@@ -132,6 +132,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 7 nov. 2026 | Fin trop jaune et trop rapide | Écran sobre, phrases d'abonnement plus claires, affiché 4,5 secondes |
 | 7 nov. 2026 | Messages sur téléphone | Commande `message`, bip, Tobi prend son téléphone et le message s'affiche à l'écran |
 | 7 nov. 2026 | Claude trop poli | « Puis-je » retiré de presque tous les épisodes et épisode 42 réécrit |
+| 7 nov. 2026 | Vraies interfaces de message | Conversations avec bulles sur téléphone et écran PC façon MacBook avec boîte mail |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

@@ -30,7 +30,7 @@ PLAN gros TOBI
 TOBI dit (colere) Nox, dis quelque chose !
 PLAN gros NOX
 NOX dit (ironique) Le podcast est bien monté.
-TOBI message Message reçu par maman | 3 mots | Et un podcast de 40 minutes
+TOBI message Maman | > Salut maman, tout va bien. | > Je t'envoie aussi un podcast de 40 minutes.
 BRUIT ding
 PLAN gros NOX
 NOX dit (curieux) Elle a déjà répondu.

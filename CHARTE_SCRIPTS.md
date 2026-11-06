@@ -17,7 +17,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Varier les ouvertures :** ne pas commencer toutes les répliques par le prénom de Nox.
 - **Animer par poses :** un personnage prend une pose claire, la tient avec de petits mouvements, puis change seulement quand l'histoire le demande. Assis, il garde les mains calmes.
 - **Montrer le temps :** chaque saut dans le temps a un écran clair, comme « Vingt-quatre heures plus tard ». Il reste assez longtemps pour être lu.
-- **Messages à l'écran :** un message de téléphone utilise `TOBI message Titre | Texte | Texte`. Un contenu d'ordinateur utilise `PC`.
+- **Messages à l'écran :** un message de téléphone utilise `TOBI message Contact | Message reçu | > Message envoyé`, affiché comme une messagerie. Un contenu d'ordinateur utilise `PC`, affiché comme un écran de MacBook.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
 - **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.

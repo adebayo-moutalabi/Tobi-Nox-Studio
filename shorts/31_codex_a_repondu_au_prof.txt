@@ -29,7 +29,7 @@ PLAN gros TOBI
 TOBI dit (curieux) T'as écrit quoi, cette fois ?
 PLAN gros CODEX
 CODEX dit (constat) Que l'erreur, c'était le prof.
-TOBI message Réponse du professeur | Convocation | Lundi, 8 h, avec le directeur
+TOBI message Prof de droit | Convocation lundi à 8 h. | Avec le directeur.
 PLAN gros TOBI
 TOBI dit (triste) Le directeur...
 PLAN gros CODEX

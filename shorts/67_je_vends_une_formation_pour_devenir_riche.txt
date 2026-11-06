@@ -41,7 +41,7 @@ PLAN gros NOX
 NOX dit (constat) Un élève a un problème. Il demande un remboursement.
 PLAN gros TOBI
 TOBI dit (curieux) Il a dit pourquoi ?
-TOBI message Message de Karim | J'ai tout appliqué | Il me reste 9 €
+TOBI message Karim | J'ai tout appliqué. | Il me reste 9 €.
 PLAN gros TOBI
 TOBI dit (surpris) Neuf euros ? Comme moi ?
 PLAN gros NOX
