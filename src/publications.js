@@ -78,7 +78,7 @@ const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };
 
 // Hashtags précis : les IA présentes et le sujet de l'épisode passent avant les mots généraux. Six au maximum.
-const SUJETS = [[/CROUS|loyer/i, '#crous'], [/partiel|examen|mémoire|devoir/i, '#partiels'], [/\bstage\b/i, '#stage'], [/start-up|client|levée de fonds/i, '#startup'], [/bourse|\bAPL\b|banque/i, '#argent']];
+const SUJETS = [[/CROUS|loyer/i, '#crous'], [/partiel|examen|ton mémoire|mon mémoire|bdevoirb/i, '#partiels'], [/\bstage\b/i, '#stage'], [/start-up|client|levée de fonds/i, '#startup'], [/bourse|\bAPL\b|banque/i, '#argent']];
 const hashtags = (n, text) => {
   const ia = [/^CLAUDE dit/m.test(text) && '#claudecode', /^CODEX dit/m.test(text) && '#codex', /^GEMINI dit/m.test(text) && '#gemini'].filter(Boolean);
   const sujet = SUJETS.filter(([re]) => re.test(text)).map(([, tag]) => tag).slice(0, 2);
