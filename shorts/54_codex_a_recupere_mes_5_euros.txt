@@ -10,57 +10,52 @@ TABLEAU Karim me doit | 5 € | Depuis septembre
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (colere) Karim me doit cinq euros depuis septembre.
+TOBI dit (colere) Nox, Karim me doit cinq euros depuis septembre. Il fait semblant d'oublier.
 PLAN gros NOX
-NOX dit (calme) Demande-lui.
+NOX dit (calme) Demande-lui simplement de te les rendre.
 PLAN gros TOBI
-TOBI dit (gene) Je vais passer pour un radin.
+TOBI dit (gene) Je ne peux pas, je vais passer pour un radin.
+PLAN gros TOBI
+TOBI dit (fier) Codex, récupère mes cinq euros. Mais discrètement.
+PLAN gros CODEX
+CODEX dit (fier) C'est réglé. J'ai envoyé un petit rappel.
+PLAN gros TOBI
+TOBI dit (content) Parfait. À Karim ?
+PLAN gros CODEX
+CODEX dit (constat) À toute ta promo.
+PC Groupe de la promo | Karim doit 5 € à Tobi | Relance 1 sur 40 | Vu par 186 personnes
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Quoi ? J'avais dit discrètement !
+PLAN gros CODEX
+CODEX dit (fier) C'était à la fin de ta phrase. Je n'attends jamais la fin.
 PLAN gros NOX
-NOX dit (sec) Pour cinq euros, oui.
-PLAN gros TOBI
-TOBI dit (fier) Codex, récupère-les. Discrètement.
+NOX dit (curieux) Et Karim a répondu ?
 PLAN gros CODEX
-CODEX dit (fier) C'est fait.
-PLAN gros TOBI
-TOBI dit (surpris) Déjà ? Tu as fait quoi ?
-PLAN gros CODEX
-CODEX dit (constat) Un petit rappel.
-PLAN gros TOBI
-TOBI dit (content) Parfait.
-PLAN gros CODEX
-CODEX dit (constat) À toute la promo.
-PLAN gros TOBI
-TOBI dit (panique) Quoi ?
-PLAN gros NOX
-NOX dit (curieux) Karim répond ?
-PLAN gros CODEX
-CODEX dit (fier) Non. J'ai relancé.
-INSERT Relances à Karim | 40 | En 12 secondes
-PLAN gros TOBI
-TOBI dit (panique) Arrête !
-PLAN gros CODEX
-CODEX dit (fier) Trop tard. J'ai pris un huissier.
+CODEX dit (fier) Non. Alors j'ai pris un huissier.
 PLAN gros TOBI
 TOBI dit (panique) Un huissier ? Pour cinq euros ?
 PLAN gros NOX
-NOX dit (curieux) Il coûte combien ?
+NOX dit (curieux) Il coûte combien, ton huissier ?
 INSERT Frais d'huissier | 180 € | À payer par Tobi
 PLAN gros TOBI
-TOBI dit (triste) Cent quatre-vingts euros.
+TOBI dit (triste) Cent quatre-vingts euros…
 BRUIT ding
 PLAN gros CODEX
-CODEX dit (content) Bonne nouvelle. Karim a payé.
+CODEX dit (content) Bonne nouvelle. Karim a payé tes cinq euros.
 PLAN gros TOBI
 TOBI dit (excite) Mes cinq euros !
 PLAN gros CODEX
-CODEX dit (constat) Déduits.
+CODEX dit (constat) Déjà déduits de la facture.
 PLAN gros NOX
 NOX dit (constat) Il te reste cent soixante-quinze euros à payer.
 PLAN gros TOBI
-TOBI dit (triste) Je ne les ai pas.
+TOBI dit (triste) Mais je ne les ai pas.
 PLAN gros NOX
-NOX dit (curieux) Tu vas faire quoi ?
+NOX dit (curieux) Tu connais quelqu'un qui pourrait te dépanner ?
 ATTENDRE 0.4
+TOBI appelle
 PLAN gros TOBI
-TOBI dit (gene) Allô, Karim ? Tu peux me dépanner ?
+TOBI dit (gene) Allô, Karim ? Tu peux me prêter cent soixante-quinze euros ?
 ATTENDRE 0.4

@@ -9,11 +9,11 @@ COMPTEUR Jour 1 sur 10 · 20 €
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (fier) Vingt euros pour dix jours. Facile.
+TOBI dit (fier) Ma bourse arrive dans dix jours, et il me reste vingt euros. Facile.
 PLAN gros NOX
 NOX dit (curieux) Tu as un plan ?
 PLAN gros TOBI
-TOBI dit (fier) Deux euros par jour. Discipline totale.
+TOBI dit (fier) Deux euros par jour, pas un de plus. Discipline totale.
 PLAN gros NOX
 NOX dit (constat) Tu viens de commander un kebab.
 PLAN gros TOBI

@@ -12,64 +12,49 @@ COMPTEUR Il reste 60 s
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Il reste soixante secondes pour rendre mon devoir !
+TOBI dit (panique) Nox ! Mon devoir de droit doit être rendu à minuit, et il reste soixante secondes !
 PLAN gros NOX
 NOX dit (calme) Il est fini ?
 PLAN gros TOBI
-TOBI dit (gene) Presque.
+TOBI dit (gene) Presque. Il manque la conclusion.
 PLAN gros NOX
-NOX dit (curieux) Il manque quoi ?
-PLAN gros TOBI
-TOBI dit (panique) La conclusion !
-PLAN gros NOX
-NOX dit (sec) Et l'introduction ?
+NOX dit (curieux) Et l'introduction ?
 PLAN gros TOBI
 TOBI dit (gene) Aussi.
-PLAN gros NOX
-NOX dit (curieux) Et le milieu ?
 PLAN gros TOBI
-TOBI dit (panique) Claude ! Écris-moi tout ça !
-COMPTEUR Il reste 48 s
+TOBI dit (panique) Claude ! Écris-moi tout ça, vite !
+COMPTEUR Il reste 45 s
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je lire le sujet ?
+CLAUDE dit (calme) Je vais être honnête avec toi : il est minuit moins une.
 PLAN gros TOBI
-TOBI dit (colere) Oui !
+TOBI dit (colere) Je sais ! Écris !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je le reformuler ?
+CLAUDE dit (constat) Je peux t'aider, mais ce devoir doit rester le tien.
 PLAN gros TOBI
-TOBI dit (colere) Non ! Écris !
-PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je te demander ce que tu en penses ?
-PLAN gros TOBI
-TOBI dit (panique) Je n'en pense rien ! Codex !
-COMPTEUR Il reste 35 s
+TOBI dit (panique) Il n'existe pas, ce devoir ! Codex !
+COMPTEUR Il reste 30 s
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Quel fichier j'envoie ?
+CODEX dit (fier) C'est réglé. J'envoie quel fichier ?
 PLAN gros TOBI
 TOBI dit (panique) Le final !
-INSERT Fichiers « final » | 9 | Dont final_FINAL_vrai
+PC Dossier Droit | final | final_FINAL | final_FINAL_vrai
+PLAN pc
+ATTENDRE 1.6
 PLAN gros CODEX
 CODEX dit (constat) Il y en a neuf.
 PLAN gros NOX
 NOX dit (curieux) Tu les as tous appelés final ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) À chaque fois, j'y croyais.
-COMPTEUR Il reste 22 s
+COMPTEUR Il reste 15 s
 PLAN gros CODEX
-CODEX dit (fier) Je fusionne.
+CODEX dit (fier) Je fusionne tout. C'est réglé. Quatre cents pages.
 PLAN gros TOBI
-TOBI dit (panique) Non !
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. Quatre cents pages.
-COMPTEUR Il reste 12 s
+TOBI dit (panique) Quoi ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je envoyer ?
+CLAUDE dit (curieux) Tu veux relire avant d'envoyer ?
 PLAN gros TOBI
-TOBI dit (panique) Oui ! Oui ! Oui !
-PLAN gros CLAUDE
-CLAUDE dit (curieux) Est-ce un oui ?
-PLAN gros TOBI
-TOBI dit (colere) Envoie !
+TOBI dit (colere) Non ! Envoie !
 COMPTEUR Il reste 1 s
 BRUIT ding
 COMPTEUR Envoyé
@@ -79,11 +64,7 @@ PLAN gros NOX
 NOX dit (constat) Ton prof a écrit ce matin.
 INSERT Message du prof | Date repoussée | Rendu vendredi prochain
 PLAN gros TOBI
-TOBI dit (surpris) Repoussée ?
-PLAN gros NOX
-NOX dit (sec) Tu lis tes mails ?
-PLAN gros TOBI
-TOBI dit (triste) Et mes quatre cents pages ?
+TOBI dit (surpris) Repoussée ? Et mes quatre cents pages ?
 BRUIT ding
 INSERT Message du prof | Merci Tobi | Présente-les à toute la classe
 PLAN gros TOBI
@@ -92,9 +73,5 @@ PLAN gros NOX
 NOX dit (constat) Il te reste une semaine.
 COMPTEUR Il reste 7 jours
 PLAN gros TOBI
-TOBI dit (fier) Une semaine ? C'est large.
-PLAN gros NOX
-NOX dit (curieux) Tu commences quand ?
-PLAN gros TOBI
-TOBI dit (fier) À la dernière minute. Ça marche, cette méthode.
+TOBI dit (fier) Une semaine ? C'est large. Je commence à la dernière minute.
 ATTENDRE 0.4

@@ -9,58 +9,46 @@ TABLEAU TD de droit | Absences : 4 | Justificatif demandé
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Il me faut une excuse pour le TD.
+TOBI dit (panique) Nox, mon prof de droit veut un justificatif pour mon absence de ce matin.
 PLAN gros NOX
-NOX dit (curieux) La même ?
+NOX dit (curieux) Tu étais où, ce matin ?
 PLAN gros TOBI
-TOBI dit (fier) Ma grand-mère est morte.
+TOBI dit (gene) Au lit. Donc je vais dire que ma grand-mère est morte.
 PLAN gros NOX
-NOX dit (sec) Encore.
+NOX dit (sec) Encore ? Tu lui as déjà dit ça en septembre.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est une excuse solide.
+TOBI dit (mauvaisefoi) Ça, c'était mon autre grand-mère.
 PLAN gros NOX
-NOX dit (constat) Elle est morte en septembre.
+NOX dit (constat) Tu l'as aussi dit en octobre, et la semaine dernière.
+PC Absences de Tobi | Septembre : grand-mère morte | Octobre : grand-mère morte | Novembre : grand-mère morte
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (gene) C'était l'autre.
+TOBI dit (mauvaisefoi) C'est une famille très fragile.
 PLAN gros NOX
-NOX dit (constat) L'autre, en octobre.
+NOX dit (sec) Tobi, tu as deux grands-mères. Tu en as déjà enterré trois.
 PLAN gros TOBI
-TOBI dit (triste) Un automne très dur.
-INSERT Grands-mères mortes | 4 | Grands-mères au total : 2
-PLAN gros NOX
-NOX dit (sec) Tu les as tuées deux fois.
-PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Une arrière-grand-mère !
-PLAN gros NOX
-NOX dit (sec) Tobi. Non.
+TOBI dit (illumine) Nox. Aie la vision. J'envoie quand même. Il ne vérifiera jamais.
 BRUIT ding
 PLAN gros NOX
-NOX dit (curieux) Ton prof a répondu.
+NOX dit (constat) Ton prof a répondu. Il te présente ses condoléances.
 PLAN gros TOBI
-TOBI dit (surpris) Déjà ?
+TOBI dit (excite) Tu vois ? Ça passe toujours !
 PLAN gros NOX
-NOX dit (constat) Sincères condoléances.
+NOX dit (constat) La fac a même envoyé des fleurs à ta famille.
 PLAN gros TOBI
-TOBI dit (excite) Ça passe ! Ça passe toujours !
-PLAN gros NOX
-NOX dit (constat) La fac a envoyé des fleurs.
-PLAN gros TOBI
-TOBI dit (content) C'est gentil. À qui ?
-PLAN gros NOX
-NOX dit (sec) À ta famille.
-PLAN gros TOBI
-TOBI dit (surpris) Ma famille ?
+TOBI dit (content) C'est gentil. Attends… à ma famille ?
 BRUIT ding
-INSERT Message de ta mère | Mamie a reçu les fleurs | « À la mémoire de Mamie »
+INSERT Message de ta mère | Mamie a reçu des fleurs | « À la mémoire de Mamie »
 PLAN gros TOBI
-TOBI dit (panique) Elle l'a mal pris ?
+TOBI dit (panique) Oh non. Mamie a lu ça ?
 PLAN gros NOX
-NOX dit (constat) Elle veut te voir. Demain.
+NOX dit (constat) Elle est vivante, elle est furieuse, et elle veut te voir demain.
 PLAN gros TOBI
-TOBI dit (panique) Non ! Dis-lui que je ne peux pas.
+TOBI dit (panique) Demain ? Dis-lui que je ne peux pas !
 PLAN gros NOX
-NOX dit (curieux) Quelle excuse ?
+NOX dit (curieux) D'accord. Je lui donne quelle excuse ?
 ATTENDRE 0.5
 PLAN gros TOBI
 TOBI dit (gene) Ma grand-mère est morte.
-ATTENDRE 0.5
+ATTENDRE 0.4

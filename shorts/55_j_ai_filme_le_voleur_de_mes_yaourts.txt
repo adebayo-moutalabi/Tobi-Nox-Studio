@@ -8,54 +8,47 @@ TABLEAU Yaourts | Lundi : 6 | Ce matin : 1
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (colere) Nox ! Quelqu'un vole mes yaourts !
+TOBI dit (colere) Nox, c'est la troisième fois ! Quelqu'un mange mes yaourts pendant la nuit !
 PLAN gros NOX
-NOX dit (curieux) La porte était fermée ?
+NOX dit (curieux) La porte de la chambre était fermée ?
 PLAN gros TOBI
-TOBI dit (colere) À clé. On n'est que deux ici.
+TOBI dit (colere) À clé. Et on n'est que deux ici.
 PLAN gros NOX
-NOX dit (sec) Je n'ai pas de bouche.
+NOX dit (sec) Je suis un robot, Tobi. Je n'ai pas de bouche.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est ce que dirait un voleur.
+TOBI dit (mauvaisefoi) C'est exactement ce que dirait un voleur.
 PLAN gros NOX
-NOX dit (resigne) Pose une caméra.
-INSERT Le lendemain | 7 h | Yaourts : 0
+NOX dit (resigne) Pose une caméra devant le frigo, et on verra.
+INSERT Le lendemain matin | Yaourts : 0 | Il est revenu
 PLAN gros TOBI
-TOBI dit (excite) Il est revenu ! Mets la vidéo !
-INSERT Caméra du frigo | 3 h 12 | Un suspect arrive
+TOBI dit (excite) Il est revenu ! Nox, mets la vidéo !
+PC Caméra du frigo | 3 h 12 | Suspect : sweat moutarde | Yeux fermés
+PLAN pc
+ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (constat) Il porte un sweat moutarde.
+NOX dit (constat) On voit un homme en sweat moutarde, à trois heures du matin.
 PLAN gros TOBI
-TOBI dit (colere) Comme le mien ! Il m'a copié !
+TOBI dit (colere) Comme le mien ! Il a copié mon style !
 PLAN gros NOX
-NOX dit (constat) Il a tes tresses.
+NOX dit (constat) Il a aussi tes lunettes et tes tresses.
 PLAN gros TOBI
-TOBI dit (surpris) Il me ressemble beaucoup.
+TOBI dit (surpris) C'est vrai qu'il me ressemble beaucoup.
 PLAN gros NOX
-NOX dit (sec) C'est toi.
+NOX dit (sec) Tobi. C'est toi. Tu manges en dormant.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Impossible. Je dormais.
-PLAN gros NOX
-NOX dit (sec) Lui aussi.
-INSERT Caméra du frigo | 3 h 13 | Il mange debout, les yeux fermés
-PLAN gros TOBI
-TOBI dit (panique) Je me vole moi-même ?
+TOBI dit (panique) Quoi ? Je me vole moi-même ?
 PLAN gros NOX
 NOX dit (constat) Depuis trois semaines.
 TOBI marche frigo
 PLAN gros TOBI
-TOBI dit (fier) Très bien. J'ai mis un cadenas au frigo.
-PLAN gros NOX
-NOX dit (curieux) Avec quel code ?
+TOBI dit (fier) Très bien. Je mets un cadenas. Il ne passera plus.
+INSERT La nuit suivante | 3 h 12 | Le suspect ouvre le cadenas
 PLAN gros TOBI
-TOBI dit (fier) Un code que lui seul ne connaît pas.
-INSERT Le lendemain | 3 h 12 | Le suspect ouvre le cadenas
-PLAN gros TOBI
-TOBI dit (panique) Il a le code ! Comment il a le code ?
+TOBI dit (panique) Il a trouvé le code ! Comment il a trouvé le code ?
 PLAN gros NOX
 NOX dit (sec) C'est toi.
 PLAN gros TOBI
-TOBI dit (surpris) En plus, il s'est levé à trois heures. Sans réveil.
+TOBI dit (surpris) En plus, il s'est levé à trois heures, sans réveil !
 PLAN gros NOX
 NOX dit (sec) Lui, au moins, il se lève.
 ATTENDRE 0.4

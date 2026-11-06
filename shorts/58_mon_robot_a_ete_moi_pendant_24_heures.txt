@@ -11,18 +11,12 @@ FONDU direct
 
 PLAN gros TOBI
 TOBI dit (triste) Nox, je n'en peux plus. Le loyer, les cours, les mails, c'est trop pour moi.
-PLAN gros NOX
-NOX dit (curieux) Tu veux que je t'aide à t'organiser ?
 PLAN gros TOBI
-TOBI dit (illumine) Non. Demain, tu deviens moi. Tu gères toute ma vie pendant vingt-quatre heures.
+TOBI dit (illumine) Demain, tu deviens moi. Tu gères toute ma vie pendant vingt-quatre heures.
 PLAN gros NOX
 NOX dit (curieux) Toute ta vie ? Même tes cours et ta mère ?
 PLAN gros TOBI
 TOBI dit (content) Tout. Moi, je reste au lit pour me reposer.
-PLAN gros NOX
-NOX dit (sec) D'accord. Mais je vais le faire sérieusement.
-PLAN gros TOBI
-TOBI dit (fier) Tu verras, ma vie, c'est très difficile.
 INSERT Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
 PLAN gros TOBI
 TOBI dit (content) Alors, Nox ? Tu as survécu à ma vie ?
@@ -42,19 +36,15 @@ NOX dit (sec) Non. Je suis un génie. Toi, tu as dormi.
 BRUIT ding
 PC Message de Léa | Bravo pour ton devoir ! | Tu as changé, j'aime bien | On révise ensemble ?
 PLAN pc
-ATTENDRE 1.8
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (excite) Léa, la major de promo, veut réviser avec moi !
 PLAN gros NOX
-NOX dit (curieux) Elle veut réviser avec celui qui a eu seize. Tu connais le cours ?
-PLAN gros TOBI
-TOBI dit (gene) Euh… Je ne savais même pas qu'il y avait un devoir.
-PLAN gros NOX
-NOX dit (constat) Donc c'est moi qu'elle veut voir.
+NOX dit (constat) Elle veut réviser avec celui qui a eu seize. C'est moi.
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Aie la vision. Demain aussi, tu es moi !
 PLAN gros NOX
-NOX dit (sec) Tobi. Non. Ta vie, c'est à toi de la vivre.
+NOX dit (sec) Tobi. Non.
 BRUIT ding
 PLAN gros TOBI
 TOBI dit (surpris) C'est ma mère. Elle m'appelle.
@@ -67,9 +57,6 @@ TOBI dit (surpris) Hein ? Comment ça, lequel ?
 ATTENDRE 0.7
 PLAN gros TOBI
 TOBI dit (gene) Hier ? Non, hier, c'était le robot.
-ATTENDRE 0.7
-PLAN gros TOBI
-TOBI dit (triste) Oui. Celui qui t'a écoutée pendant une heure.
 TOBI raccroche
 PLAN gros NOX
 NOX dit (curieux) Elle a dit quoi ?

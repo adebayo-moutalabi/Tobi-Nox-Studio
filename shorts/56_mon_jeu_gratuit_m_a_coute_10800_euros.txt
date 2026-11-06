@@ -9,55 +9,47 @@ TABLEAU Temps de jeu | 900 heures | Prix du jeu : 0 €
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (fier) Neuf cents heures de jeu, zéro euro dépensé.
+TOBI dit (fier) Nox, neuf cents heures sur mon jeu, et je n'ai jamais payé un euro.
 PLAN gros NOX
-NOX dit (curieux) Zéro euro ?
+NOX dit (curieux) Neuf cents heures ? Tu sais ce que ça représente ?
 PLAN gros TOBI
-TOBI dit (fier) Il est gratuit.
+TOBI dit (content) Oui, je suis niveau 412.
 PLAN gros NOX
-NOX dit (constat) À douze euros de l'heure.
+NOX dit (constat) À douze euros de l'heure, ça représente un autre chiffre.
+PC Temps de jeu de Tobi | 900 heures | 12 € par heure | 10 800 € perdus
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (curieux) Comment ça ?
-INSERT Si tu avais travaillé | 10 800 € | 900 heures payées
-PLAN gros TOBI
-TOBI dit (surpris) Dix mille euros ?
+TOBI dit (surpris) Dix mille huit cents euros ?
 PLAN gros NOX
-NOX dit (sec) Ton jeu gratuit.
+NOX dit (sec) Pour un jeu gratuit.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est un investissement.
+TOBI dit (mauvaisefoi) C'est un investissement. J'ai une épée légendaire.
 PLAN gros NOX
-NOX dit (curieux) Dans quoi ?
+NOX dit (sec) Et un découvert à la banque.
 PLAN gros TOBI
-TOBI dit (fier) J'ai une épée légendaire.
+TOBI dit (mauvaisefoi) Dans le jeu, je suis respecté.
 PLAN gros NOX
-NOX dit (sec) Tu as un découvert.
+NOX dit (curieux) Respecté par qui ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Je suis respecté.
-PLAN gros NOX
-NOX dit (curieux) Par qui ?
+TOBI dit (gene) Un enfant de douze ans. Il m'appelle maître.
 PLAN gros TOBI
-TOBI dit (gene) Un enfant de douze ans.
-PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Je vends mon compte !
+TOBI dit (illumine) Nox. Aie la vision. Je vends mon compte, il vaut une fortune !
 PLAN gros NOX
 NOX dit (sec) Tobi. Non.
-PLAN gros TOBI
-TOBI dit (excite) Niveau 412 ! Ça vaut une fortune !
 BRUIT ding
 PLAN gros NOX
-NOX dit (curieux) Tu as une offre.
+NOX dit (curieux) Trop tard, tu as déjà une offre.
 INSERT Offre pour ton compte | 12 € | Prix final
 PLAN gros TOBI
-TOBI dit (surpris) Douze euros ?
+TOBI dit (surpris) Douze euros ? Pour neuf cents heures de ma vie ?
 PLAN gros NOX
 NOX dit (constat) Une heure de travail.
 PLAN gros TOBI
-TOBI dit (triste) Neuf cents heures pour une heure.
-PLAN gros TOBI
-TOBI dit (curieux) C'est qui, l'acheteur ?
+TOBI dit (curieux) C'est qui, cet acheteur ?
 PLAN gros NOX
 NOX dit (constat) L'enfant de douze ans.
 ATTENDRE 0.4
 PLAN gros TOBI
-TOBI dit (gene) Il cherche un stagiaire ?
+TOBI dit (gene) Demande-lui s'il cherche un stagiaire.
 ATTENDRE 0.4

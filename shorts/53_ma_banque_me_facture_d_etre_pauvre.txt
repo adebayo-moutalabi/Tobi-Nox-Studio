@@ -8,63 +8,45 @@ TABLEAU Compte de Tobi | Solde : -3 € | Bourse dans 12 jours
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Nox ! La banque m'a pris huit euros !
+TOBI dit (panique) Nox, regarde mon compte ! La banque vient de me prendre huit euros !
 PLAN gros NOX
-NOX dit (calme) Tu étais à découvert.
+NOX dit (calme) Tu étais à découvert de trois euros. Ce sont des frais.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) De trois euros !
+TOBI dit (surpris) Attends. Je n'ai plus d'argent, et ils m'en prennent encore ?
 PLAN gros NOX
-NOX dit (constat) Donc, ils te facturent.
+NOX dit (constat) Oui. Ils te font payer le fait de ne pas en avoir.
+PC Compte de Tobi | Avant : -3 € | Frais : -8 € | Maintenant : -11 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (surpris) Parce que je n'ai pas d'argent ?
+TOBI dit (colere) Mais c'est eux qui m'ont mis à moins onze !
 PLAN gros NOX
-NOX dit (constat) Exactement.
+NOX dit (constat) Et demain, comme tu es à moins onze, il y aura de nouveaux frais.
 PLAN gros TOBI
-TOBI dit (colere) Je n'en ai pas, et ils m'en prennent ?
-PLAN gros NOX
-NOX dit (sec) C'est un métier.
-INSERT Solde | -11 € | Après les frais
-PLAN gros TOBI
-TOBI dit (panique) Moins onze ?
-PLAN gros NOX
-NOX dit (constat) Demain, nouveaux frais.
-PLAN gros TOBI
-TOBI dit (colere) Pourquoi ?
-PLAN gros NOX
-NOX dit (sec) Tu es plus pauvre.
-PLAN gros TOBI
-TOBI dit (colere) À cause de leurs frais !
-PLAN gros NOX
-NOX dit (constat) Oui.
-PLAN gros TOBI
-TOBI dit (fier) Très bien. Je ferme le compte.
+TOBI dit (fier) Très bien. Je ferme ce compte.
 PLAN gros NOX
 NOX dit (calme) Il faut d'abord le remettre à zéro.
 PLAN gros TOBI
 TOBI dit (curieux) Avec quel argent ?
 PLAN gros NOX
-NOX dit (constat) Un prêt.
+NOX dit (constat) Tu peux demander un prêt.
 PLAN gros TOBI
-TOBI dit (curieux) Chez qui ?
+TOBI dit (curieux) Un prêt ? À qui ?
 PLAN gros NOX
-NOX dit (sec) Eux.
+NOX dit (sec) À ta banque.
 TOBI marche fenetre
 PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. J'ouvre une banque !
+TOBI dit (illumine) Nox. Aie la vision. Je crée ma banque ! Je fais payer les gens qui n'ont rien !
 PLAN gros NOX
-NOX dit (sec) Tobi. Non.
+NOX dit (sec) Tobi. Non. Ils n'ont rien, justement.
 PLAN gros TOBI
-TOBI dit (excite) Je facture les gens qui n'ont rien !
-PLAN gros NOX
-NOX dit (curieux) Ils ont zéro euro.
-PLAN gros TOBI
-TOBI dit (fier) C'est ça, le produit.
+TOBI dit (fier) Justement. C'est ça, le modèle.
 BRUIT ding
 PLAN gros NOX
 NOX dit (constat) Ta banque t'écrit.
 PLAN gros TOBI
 TOBI dit (content) Ils s'excusent ?
-INSERT Offre réservée | Carte Premium | 9 € par mois
+INSERT Offre réservée à Tobi | Carte Premium | 9 € par mois
 PLAN gros TOBI
 TOBI dit (fier) Tu vois ? Ils croient en moi.
 PLAN gros NOX

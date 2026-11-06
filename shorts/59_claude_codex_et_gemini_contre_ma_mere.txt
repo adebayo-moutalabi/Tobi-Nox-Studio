@@ -11,52 +11,50 @@ TABLEAU Problème | Mal à la gorge | 3 IA mobilisées
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (triste) J'ai mal à la gorge. Qui peut m'aider ?
+TOBI dit (triste) J'ai mal à la gorge depuis ce matin. Vous êtes trois IA, aidez-moi.
 PLAN gros GEMINI
-GEMINI dit (fier) J'ai lu quatre mille études.
+GEMINI dit (fier) Fun fact : j'ai déjà comparé quatre mille études.
 PLAN gros TOBI
-TOBI dit (content) Et alors ?
+TOBI dit (content) Super. Et le résultat ?
 PLAN gros GEMINI
-GEMINI dit (content) Voici un podcast de six heures.
+GEMINI dit (content) Un podcast de six heures, avec un graphique.
 PLAN gros TOBI
-TOBI dit (resigne) Claude ?
+TOBI dit (resigne) Claude, s'il te plaît. Toi, tu es sérieux.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je regarder ta gorge ?
+CLAUDE dit (calme) Je vais être honnête avec toi. Ce n'est sûrement rien.
 PLAN gros TOBI
-TOBI dit (content) Oui.
+TOBI dit (content) Merci !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je te demander d'ouvrir la bouche ?
+CLAUDE dit (constat) Mais tu ne dors plus depuis deux jours. Parlons de ta vie.
 PLAN gros TOBI
-TOBI dit (colere) Oui !
-PLAN gros CLAUDE
-CLAUDE dit (curieux) Puis-je rappeler que je ne suis pas médecin ?
-PLAN gros TOBI
-TOBI dit (resigne) Codex ?
+TOBI dit (colere) Je veux juste aller mieux ! Codex !
 PLAN gros CODEX
-CODEX dit (fier) C'est fait.
+CODEX dit (fier) C'est réglé. Opération mardi.
 PLAN gros TOBI
-TOBI dit (curieux) Quoi ?
+TOBI dit (panique) Quoi ? Quelle opération ?
 PLAN gros CODEX
-CODEX dit (constat) Opération mardi.
+CODEX dit (fier) Tu as dit gorge. J'ai réservé toute la gorge.
 PLAN gros TOBI
 TOBI dit (panique) Annule !
 PLAN gros NOX
-NOX dit (calme) Demande à ta mère.
+NOX dit (calme) Tu as demandé à ta mère ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elle n'a même pas d'IA.
+TOBI dit (mauvaisefoi) Ma mère n'a même pas d'IA.
 BRUIT ding
-INSERT Message de ta mère | Mets un pull. | Réponse en 2 secondes
+PC Message de ta mère | Mets un pull. | Réponse en 2 secondes
+PLAN pc
+ATTENDRE 1.6
 INSERT Le lendemain | Gorge guérie | Coût : 0 €
 PLAN gros TOBI
-TOBI dit (surpris) Ça a marché.
+TOBI dit (surpris) Ça a marché. Elle avait raison.
 PLAN gros GEMINI
 GEMINI dit (curieux) Sur quelle étude ?
 PLAN gros NOX
 NOX dit (sec) Vingt ans de Tobi.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Puis-je avoir son numéro ?
+CLAUDE dit (curieux) Je peux avoir son numéro ? J'aurais des questions.
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Je lui ai demandé sa méthode.
+CODEX dit (fier) C'est réglé. Je lui ai demandé sa méthode.
 BRUIT ding
 INSERT Réponse de ta mère | Mets un pull. | Toi aussi.
 ATTENDRE 0.4

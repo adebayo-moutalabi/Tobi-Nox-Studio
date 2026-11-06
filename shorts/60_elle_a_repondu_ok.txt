@@ -9,42 +9,37 @@ TABLEAU Message à Léa | Réponse : ok | Analyse en cours
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (excite) Léa a répondu ! Elle a mis « ok » !
+TOBI dit (excite) Nox ! J'ai écrit à Léa, la major de promo, et elle m'a répondu !
 PLAN gros NOX
-NOX dit (calme) Et ?
+NOX dit (curieux) Elle a écrit quoi ?
 PLAN gros TOBI
-TOBI dit (panique) Sans point ! Ça veut dire quoi, sans point ?
-PLAN gros GEMINI
-GEMINI dit (fier) J'ai analysé.
-INSERT Analyse de « ok » | 40 pages | Et un podcast
-PLAN gros GEMINI
-GEMINI dit (constat) Deux lettres. Neuf interprétations.
-PLAN gros TOBI
-TOBI dit (curieux) La meilleure ?
-PLAN gros GEMINI
-GEMINI dit (content) Elle t'aime. Trois pour cent.
-PLAN gros TOBI
-TOBI dit (excite) Trois pour cent ! C'est énorme !
+TOBI dit (panique) Elle a écrit « ok ». Sans point. Ça veut dire quoi, sans point ?
 PLAN gros NOX
-NOX dit (curieux) Tu lui avais écrit quoi ?
+NOX dit (calme) Ça veut dire ok.
+PLAN gros GEMINI
+GEMINI dit (fier) Fun fact : j'ai déjà analysé ces deux lettres.
+PC Analyse de « ok » | 40 pages | 9 interprétations | Amour : 3 %
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (fier) Un message simple.
-INSERT Ton message | 400 mots | Avec un poème
+TOBI dit (excite) Trois pour cent d'amour ! C'est énorme !
+PLAN gros NOX
+NOX dit (curieux) Tu lui avais écrit quoi, au fait ?
+PLAN gros TOBI
+TOBI dit (fier) Un message tout simple.
+PLAN gros GEMINI
+GEMINI dit (constat) Quatre cents mots. Et un poème.
 PLAN gros NOX
 NOX dit (sec) Elle a répondu ok à un poème.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elle a été touchée.
+TOBI dit (mauvaisefoi) Elle a été touchée, c'est tout.
 PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Je réponds « ok » !
+TOBI dit (illumine) Nox. Aie la vision. Je réponds « ok » aussi. Elle verra que je suis détaché.
 PLAN gros NOX
-NOX dit (curieux) Pourquoi ?
-PLAN gros TOBI
-TOBI dit (fier) Elle verra que je suis détaché.
-PLAN gros NOX
-NOX dit (resigne) Envoie.
+NOX dit (resigne) Après un poème de quatre cents mots. Envoie.
 BRUIT ding
 PLAN gros NOX
-NOX dit (constat) Elle répond.
+NOX dit (constat) Elle répond déjà.
 PLAN gros TOBI
 TOBI dit (excite) Lis ! Lis !
 INSERT Message de Léa | C'est qui ? | Je n'ai pas ton numéro
