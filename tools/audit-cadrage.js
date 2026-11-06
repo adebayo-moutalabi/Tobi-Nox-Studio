@@ -25,6 +25,21 @@ window.auditCadrage = async (names) => {
     ray.set(c, d.normalize()); ray.far = L - 0.15;
     return ray.intersectObject(p.room.group, true).some((i) => i.object.visible && i.object.name !== 'miroir') ? 'caché' : null;
   };
+  // À chaque image : un personnage dans un autre, ou Tobi dans un meuble.
+  const body = () => {
+    const out = [], seen = p.actors.filter((x) => x.hero.root.visible), at = (x) => x.hero.bones.chest?.getWorldPosition(new T.Vector3()) || x.hero.root.getWorldPosition(new T.Vector3());
+    for (let i = 0; i < seen.length; i++) for (let j = i + 1; j < seen.length; j++) {
+      const A = at(seen[i]), B = at(seen[j]);
+      if (Math.hypot(A.x - B.x, A.z - B.z) < 0.22 && Math.abs(A.y - B.y) < 0.45) out.push(`${seen[i].id} dans ${seen[j].id}`);
+    }
+    const t = p.actors.find((x) => x.id === 'tobi');
+    if (t?.hero.root.visible) {
+      const h = t.hero.bones.hips.getWorldPosition(new T.Vector3());
+      if (h.x > 0.76 && h.y < 0.9) out.push('tobi dans le bureau');
+      if (h.x < -0.5 && h.y < 0.72 && !t.hero.seat) out.push('tobi dans le lit');
+    }
+    return out;
+  };
   const off = p.beginOffline(225, 400), report = {}; void off;
   for (const o of [...sel.options].filter((x) => !names || names.some((n) => x.textContent.startsWith(n)))) {
     sel.value = o.value; sel.dispatchEvent(new Event('change'));
@@ -34,6 +49,7 @@ window.auditCadrage = async (names) => {
     let last = '', wait = 0; const bad = [];
     while (p.story.running) {
       await step();
+      for (const m of body()) if (!bad.includes(m)) bad.push(m);
       const l = now.dataset.line || '';
       if (l !== last) { last = l; wait = 6; }
       if (wait > 0 && --wait === 0) { const m = /Ligne (\d+) : (TOBI|NOX|CLAUDE|CODEX|GEMINI) dit/.exec(l); const r = m && check(m[2]); if (r) bad.push(`ligne ${m[1]}, ${m[2]} : ${r}`); }

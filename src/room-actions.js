@@ -46,9 +46,9 @@ export function roomActions(v, room) {
   }
   async function bedEdge(a) {
     if (big(a)) {
-      await arrive(a, P(-0.3, -0.2), EAST); // il s'arrête devant le lit, sans y entrer
+      await arrive(a, P(-0.26, -0.2), EAST); // il s'arrête devant le lit, sans y entrer
       a.spot = { exit: async () => { a.hero.setLift(0); await v.stand(a); } };
-      a.hero.setLift(0.09); // le matelas est plus haut qu'une chaise : il s'assoit dessus, pas dedans
+      a.hero.setLift(0.15); // le matelas est plus haut qu'une chaise : il s'assoit dessus, pas dedans
       await v.sit(a, 'chair', true);
     } else {
       const z = 0.28; // Nox garde sa place : Tobi peut toujours s'asseoir à côté

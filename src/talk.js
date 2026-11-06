@@ -178,7 +178,7 @@ export function handLife(state, bones) {
       addRot(bones[`f${i}b_${n}`], 0, 0, -s * c * 0.7);
       addRot(bones[`f${i}c_${n}`], 0, 0, -s * c * 0.45);
     }
-    addRot(bones[`th_a_${n}`], 0.05 * gesture, 0, s * 0.08 * gesture);
+    addRot(bones[`th_a_${n}`], 0.05 * gesture, 0, s * (0.08 * gesture - 0.55)); // le pouce reste le long de la main au repos
     addRot(bones[`hand_${n}`], 0.1 * gesture, 0, -s * 0.05 * talk * Math.sin(t * 1.3 + side)); // le poignet accompagne avec un léger retard
   });
 }

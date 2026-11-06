@@ -10,6 +10,15 @@ const NIGHT = '#0b0a18';
 const FONT = '"Inter", "Segoe UI", sans-serif', DISPLAY = '"Fraunces", Georgia, serif', NOX = '#f2b92e';
 const ease = (t) => { const c = 1.7, u = t - 1; return 1 + (c + 1) * u * u * u + c * u * u; };
 
+// Chaque type d'écran a sa couleur : on comprend d'un coup d'œil s'il s'agit du temps, d'un message ou d'argent.
+const CARDS = {
+  base: { bg: '#16181c', top: '#1e2126', ink: '#f4f1ec', big: NOX, small: '#a8a49c' },
+  temps: { bg: '#102a3c', top: '#173a50', ink: '#e6f7ff', big: '#8feaff', small: '#a9d6e6' },
+  message: { bg: '#143427', top: '#1b4634', ink: '#edfff5', big: '#8df0b8', small: '#b6e8cc' },
+  argent: { bg: '#351a1c', top: '#4a2124', ink: '#fff0ee', big: '#ffb35c', small: '#e5bcb6' },
+  abonne: { bg: NOX, top: '#ffd978', ink: '#14161b', big: '#14161b', small: '#37332a' },
+};
+
 function canvasTexture(w, h) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const tex = new THREE.CanvasTexture(canvas); tex.colorSpace = THREE.SRGBColorSpace;
@@ -81,18 +90,19 @@ export function createLook(v) {
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#16181c'; ctx.strokeStyle = 'rgba(244,241,236,.14)'; ctx.lineWidth = 4;
+    const K = CARDS[I.kind] || CARDS.base;
+    ctx.fillStyle = K.bg; ctx.strokeStyle = 'rgba(244,241,236,.14)'; ctx.lineWidth = 4;
     ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.fill(); ctx.stroke();
-    ctx.fillStyle = '#1e2126'; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, 120, [44, 44, 0, 0]); ctx.fill();
+    ctx.fillStyle = K.top; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, 120, [44, 44, 0, 0]); ctx.fill();
     for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(68 + i * 44, 70, 13, 0, 7); ctx.fill(); }
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = '#f4f1ec'; ctx.font = `500 58px ${FONT}`; ctx.fillText(I.title, W / 2, 262);
+    ctx.fillStyle = K.ink; ctx.font = `500 58px ${FONT}`; ctx.fillText(I.title, W / 2, 262, W - 110);
     let big = I.big;
     if (I.value) big = `${I.value.head}${Math.round(I.value.n * Math.min(1, f))}${I.value.tail}`;
     const size = Math.min(210, Math.floor((W - 90) / Math.max(1, big.length) * 1.75));
-    ctx.fillStyle = I.value?.head.includes('-') || I.value?.head.includes('−') ? '#ff7a6b' : NOX;
+    ctx.fillStyle = I.value?.head.includes('-') || I.value?.head.includes('−') ? '#ff7a6b' : K.big;
     ctx.font = `400 ${size}px ${DISPLAY}`; ctx.fillText(big, W / 2, 560);
-    ctx.fillStyle = '#a8a49c'; ctx.font = `500 50px ${FONT}`; ctx.fillText(I.small, W / 2, 850);
+    ctx.fillStyle = K.small; ctx.font = `500 50px ${FONT}`; ctx.fillText(I.small, W / 2, 850, W - 110);
     tex.needsUpdate = true;
   }
 
@@ -121,7 +131,9 @@ export function createLook(v) {
       L.key.visible = !on; L.fill.visible = !on; // pas d'ombre de soleil à calculer la nuit
     },
     insert(title, big, small) {
-      Object.assign(I, { on: true, t: 0, title, big, small, done: false });
+      const text = `${title} ${big} ${small}`;
+      const kind = /abonne/i.test(big) ? 'abonne' : /plus tard|lendemain|suivante|\bnuit\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base';
+      Object.assign(I, { on: true, t: 0, title, big, small, done: false, kind });
       const m = /^([^\d]*)(\d+)(.*)$/.exec(big);
       I.value = m && Number(m[2]) >= 10 ? { head: m[1], n: Number(m[2]), tail: m[3] } : null;
       backdrop.visible = true; card.visible = true; drawCard(0);
