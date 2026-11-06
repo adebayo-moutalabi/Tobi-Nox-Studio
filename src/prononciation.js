@@ -1,12 +1,13 @@
 // Ce que la voix doit dire quand l'écrit la trompe. Le sous-titre garde toujours le vrai mot.
 // Pour un cas isolé, écrire dans le script : [mot affiché|mot prononcé].
 const AIE = 'tobinox.prononciation.aie';
-// « Haie » est un mot courant qui se dit « è » : la voix ne peut plus y lire les lettres A et I.
-let aie = 'Haie';
-try { aie = localStorage.getItem(AIE) || aie; } catch { /* navigation privée */ }
+// « Est » se lit « è » : la voix ne voit plus les lettres A et I. « Ait » et « Haie » ont échoué à l'écoute.
+const DEFAUT = 'Est';
+let aie = DEFAUT;
+try { const x = localStorage.getItem(AIE); if (x && !/^(ait|haie)$/i.test(x)) aie = x; } catch { /* navigation privée */ }
 export const sonAie = () => aie;
 export const changeAie = (son) => {
-  aie = son.trim() || 'Haie';
+  aie = son.trim() || DEFAUT;
   try { localStorage.setItem(AIE, aie); } catch { /* navigation privée */ }
 };
 

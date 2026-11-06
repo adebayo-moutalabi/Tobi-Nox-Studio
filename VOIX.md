@@ -26,7 +26,7 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 
 ## La prononciation
 
-La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la vision ». `src/prononciation.js` envoie à la voix une écriture phonétique, sans toucher au sous-titre. « Aie » est envoyé sous la forme « Haie », un mot courant qui se dit « è » ; l'écriture se change et s'écoute dans Réglages, Voix. Cas isolé : `[affiché|prononcé]` dans le script. Ces réglages restent à confirmer à l'écoute.
+La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la vision ». `src/prononciation.js` envoie à la voix une écriture phonétique, sans toucher au sous-titre. « Aie » est envoyé sous la forme « Est », qui se dit « è ». « Ait » et « Haie » ont échoué à l'écoute. L'écriture se change et s'écoute dans Réglages, Voix. Cas isolé : `[affiché|prononcé]` dans le script. Ces réglages restent à confirmer à l'écoute.
 
 ## Historique
 
