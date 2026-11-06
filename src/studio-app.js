@@ -68,10 +68,18 @@ import E60 from '../shorts/60_elle_a_repondu_ok.txt';
 import E61 from '../shorts/61_il_me_reste_60_secondes_pour_rendre_mon_devoir.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
 import E63 from '../shorts/63_mon_entretien_annuel_avec_mes_ia.txt';
+import E64 from '../shorts/64_j_ai_transforme_ma_chambre_en_coworking.txt';
+import E65 from '../shorts/65_mon_appli_a_un_million_d_utilisateurs.txt';
+import E66 from '../shorts/66_mon_robot_a_fait_greve_dans_ma_start_up.txt';
+import E67 from '../shorts/67_je_vends_une_formation_pour_devenir_riche.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    "64. J'ai transformé ma chambre en coworking": E64,
+    "65. Mon appli a un million d'utilisateurs": E65,
+    '66. Mon robot a fait grève dans ma start-up': E66,
+    '67. Je vends une formation pour devenir riche': E67,
     '61. Il me reste 60 secondes pour rendre mon devoir': E61,
     "62. J'ai 20 € pour tenir 10 jours": E62,
     '63. Mon entretien annuel avec mes IA': E63,

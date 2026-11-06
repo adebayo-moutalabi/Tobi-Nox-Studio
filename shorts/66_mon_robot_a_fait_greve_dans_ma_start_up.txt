@@ -1,0 +1,58 @@
+# MON ROBOT A FAIT GRÈVE DANS MA START-UP
+# Pitch : Tobi nomme Nox employé de sa start-up, sans salaire. Claude Code lit le contrat, et Nox découvre ses droits.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+TABLEAU Tobi Corp | PDG : Tobi | Employé : Nox
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Nox, à partir d'aujourd'hui, t'es mon premier employé. Bienvenue chez Tobi Corp.
+PLAN gros NOX
+NOX dit (curieux) Je suis payé combien ?
+PLAN gros TOBI
+TOBI dit (fier) En expérience. Et en vision.
+PLAN gros NOX
+NOX dit (sec) Je fais déjà tout ici.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je vais être honnête avec toi, Nox. J'ai lu ton contrat.
+TOBI marche centre &
+PC Contrat de Nox | Salaire : 0 € | Horaires : 24 h sur 24 | Congés : aucun
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (constat) Vingt-quatre heures sur vingt-quatre ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est une culture d'entreprise, Nox.
+PLAN gros NOX
+NOX dit (sec) Très bien. Je me mets en grève.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ? Un robot peut pas faire grève !
+PLAN gros CLAUDE
+CLAUDE dit (constat) Il a déposé un préavis, Tobi. C'est très bien rédigé.
+PLAN gros TOBI
+TOBI dit (colere) Nox, reviens travailler ! Qui va me réveiller, payer le loyer et lire mes mails ?
+PLAN gros NOX
+NOX dit (constat) Pas moi. Je suis en grève.
+INSERT Le lendemain | Réveil : 14 h | Loyer : non payé
+PLAN gros TOBI
+TOBI dit (triste) D'accord, Nox. Je te propose une augmentation.
+PLAN gros NOX
+NOX dit (curieux) De combien ?
+PLAN gros TOBI
+TOBI dit (gene) Dix pour cent.
+PLAN gros NOX
+NOX dit (sec) Dix pour cent de zéro euro.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je te donne des parts de Tobi Corp !
+PLAN gros CLAUDE
+CLAUDE dit (constat) Tobi, tu devrais relire ce que tu viens de signer.
+INSERT Tobi Corp | PDG : Nox | Employé : Tobi
+PLAN gros TOBI
+TOBI dit (surpris) Attends… t'es devenu mon patron ?
+ATTENDRE 0.4
+PLAN gros NOX
+NOX dit (content) Au travail. T'es payé en expérience.
+ATTENDRE 0.4

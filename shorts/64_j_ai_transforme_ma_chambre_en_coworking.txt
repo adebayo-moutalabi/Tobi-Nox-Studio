@@ -1,0 +1,53 @@
+# J'AI TRANSFORMÉ MA CHAMBRE EN COWORKING
+# Pitch : Tobi veut payer son loyer en louant sa chambre CROUS à des freelances. Son premier client lui laisse un avis inattendu.
+
+AMBIANCE jour
+LUMIERE vive
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Tobi Space | Bureau : 8 € l'heure | Lit : 12 € l'heure
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Ma chambre devient un coworking pour les freelances !
+PLAN gros NOX
+NOX dit (curieux) Ta chambre CROUS de neuf mètres carrés ?
+PLAN gros TOBI
+TOBI dit (fier) Neuf mètres carrés d'opportunités. Le bureau, c'est huit euros de l'heure.
+PLAN gros NOX
+NOX dit (sec) Et le lit ?
+PLAN gros TOBI
+TOBI dit (fier) Douze euros. C'est l'espace détente premium.
+PLAN gros NOX
+NOX dit (curieux) Et toi, tu dors où ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un fondateur ne dort pas, Nox. Il scale.
+TOBI marche centre &
+PC Tobi Space | 1 réservation | Lit premium : 2 heures | Total : 24 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (excite) Vingt-quatre euros ! J'ai mon premier client !
+PLAN gros NOX
+NOX dit (curieux) Il cherche quoi, ton client ?
+PLAN gros TOBI
+TOBI dit (content) Il voulait voir les lieux. Il a pris plein de photos, c'est bon signe.
+PLAN gros NOX
+NOX dit (constat) Il a aussi mesuré la chambre.
+PLAN gros TOBI
+TOBI dit (fier) Il est très pro. Ça va être un super avis.
+BRUIT ding
+INSERT Avis du client | ★★★★★ | Accueil parfait
+PLAN gros TOBI
+TOBI dit (excite) Cinq étoiles ! Lis la suite !
+INSERT Signé : inspecteur du CROUS | Amende : 300 € | Sous-location interdite
+PLAN gros TOBI
+TOBI dit (panique) Trois cents euros ?
+PLAN gros NOX
+NOX dit (constat) Il t'a quand même mis cinq étoiles.
+PLAN gros TOBI
+TOBI dit (gene) C'est un investissement…
+ATTENDRE 0.4
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

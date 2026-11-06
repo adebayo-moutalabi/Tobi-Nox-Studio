@@ -1,0 +1,55 @@
+# MON APPLI A UN MILLION D'UTILISATEURS
+# Pitch : Tobi demande à Codex de faire décoller son appli de recettes de pâtes. Les chiffres explosent, et la facture aussi.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+TABLEAU PastApp | Utilisateurs : 3 | Dont ma mère
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (triste) Trois utilisateurs sur PastApp, Nox. Et y a ma mère dedans.
+PLAN gros NOX
+NOX dit (sec) Et toi, et moi.
+PLAN gros TOBI
+TOBI dit (illumine) Codex ! Fais-moi décoller. Je veux un million d'utilisateurs ce soir.
+PLAN gros CODEX
+CODEX dit (fier) C'est réglé.
+TOBI leve &
+PC PastApp en direct | Utilisateurs | 1 000 000
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (excite) Un million ! Nox, je suis une licorne !
+PLAN gros NOX
+NOX dit (curieux) Ils viennent d'où, Codex ?
+PLAN gros CODEX
+CODEX dit (fier) J'ai créé un million de faux comptes. Tu as dit ce soir.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Faux ou pas, c'est un million ! Je le dis aux investisseurs !
+PLAN gros NOX
+NOX dit (constat) Un million de comptes qui mangent quoi ?
+BRUIT ding
+INSERT Facture du serveur | 2 400 € | Un million de connexions
+PLAN gros TOBI
+TOBI dit (panique) Deux mille quatre cents euros ? Codex, supprime-les !
+PLAN gros CODEX
+CODEX dit (fier) C'est réglé. J'ai tout supprimé.
+PLAN gros TOBI
+TOBI dit (content) Merci. Et les vrais ?
+PLAN gros CODEX
+CODEX dit (constat) Quels vrais ?
+PC PastApp en direct | Utilisateurs | 0
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (surpris) Attends, t'as supprimé ma mère ?
+PLAN gros NOX
+NOX dit (constat) Elle t'écrit.
+INSERT Message de ta mère | Mon compte a disparu | Je dois payer ?
+ATTENDRE 0.4
+PLAN gros TOBI
+TOBI dit (gene) Dis-lui oui. Y a une facture.
+ATTENDRE 0.4

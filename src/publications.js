@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : les meilleurs épisodes d'abord, puis le reste dans l'ordre de la série.
-const ORDRE = [58, 61, 62, 63, 57, 59, 56, 52, 53, 60, 54, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
+const ORDRE = [64, 65, 66, 67, 58, 61, 62, 63, 57, 59, 56, 52, 53, 60, 54, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -26,6 +26,7 @@ const TITRES = {
   56: "Tobi calcule le prix de son jeu gratuit 🎮", 57: "Tobi calcule ce qu'il coûte à sa mère 💸", 58: "Tobi confie sa vie à son robot IA 🤖",
   59: "Claude, Codex et Gemini contre la mère de Tobi 🧣", 60: "Tobi fait analyser un « ok » par Gemini 💌",
   61: "Tobi a 60 secondes pour rendre son devoir ⏱️", 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: "Tobi passe son entretien annuel avec ses IA 😬",
+  64: "Tobi loue sa chambre CROUS en coworking 🛏️", 65: "Codex donne un million d'utilisateurs à Tobi 📈", 66: "Nox fait grève dans la start-up de Tobi 🪧", 67: "Tobi vend une formation pour devenir riche 💰",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -49,10 +50,14 @@ const ACCROCHES = {
   56: 'Tobi est fier d\'avoir joué 900 heures sans dépenser un euro. Nox refait le calcul…',
   57: 'Tobi se dit indépendant. Nox calcule ce qu\'il a coûté à sa mère…',
   58: 'Tobi laisse Nox gérer sa vie pendant une journée. Tout va beaucoup mieux, et c\'est bien le problème…',
-  59: 'Tobi a mal à la gorge. Claude, Codex et Gemini veulent l\'aider. Sa mère aussi…',
+  59: "Tobi a mal à la gorge. Trois IA veulent l'aider, puis il appelle sa mère…",
   60: 'Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement…',
   61: 'Il est 23 h 59. Tobi doit rendre son devoir avec Claude Code et Codex. Le compte à rebours commence…',
-  62: 'Tobi doit tenir dix jours avec vingt euros. Jusqu\'à la fin, chaque centime compte…',
+  62: "Tobi a vingt euros pour tenir dix jours. Il demande à Nox de bloquer sa carte, même s'il supplie…",
+  64: 'Tobi veut payer son loyer en louant sa chambre CROUS à des freelances. Son premier client prend beaucoup de photos…',
+  65: 'Tobi demande à Codex de faire décoller son appli de pâtes. Les chiffres explosent, la facture aussi…',
+  66: 'Tobi embauche Nox sans le payer. Claude Code lit le contrat, et la start-up change de patron…',
+  67: 'Tobi a neuf euros, mais il lance une formation pour devenir riche. Le pire, c\'est que ça marche…',
   63: 'Tobi rentre dans sa chambre. Nox, Claude, Codex et Gemini l\'attendent pour son entretien annuel…',
 };
 
@@ -63,11 +68,11 @@ const QUESTIONS = {
   49: 'Tu partages ton compte avec combien de personnes ?', 50: 'Tu lui aurais fait confiance pour ton réveil ?', 51: 'Combien de refus de stage as-tu reçus ?',
   52: 'Ta pire excuse pour rater un cours, c\'était quoi ?', 53: 'Ta banque t\'a déjà fait ce coup-là ?', 54: 'Combien on te doit encore ?', 55: 'Qui vole ta nourriture chez toi ?',
   56: 'Ton temps de jeu, c\'est combien d\'heures ?', 57: 'Ta mère t\'envoie encore de l\'argent pour manger ?', 58: 'Tu laisserais une IA gérer ta vie pendant 24 h ?', 59: 'Équipe IA ou équipe maman ?', 60: 'Le pire message que tu aies reçu ?',
-  61: 'Tu rends tes devoirs à quelle heure ?', 62: 'Tu aurais tenu jusqu\'au dixième jour ?', 63: 'Quelle note tu te mettrais cette année ?',
+  61: 'Tu rends tes devoirs à quelle heure ?', 62: 'Tu aurais tenu jusqu\'au dixième jour ?', 63: 'Quelle note tu te mettrais cette année ?', 64: 'Tu payerais combien pour dormir chez Tobi ?', 65: 'Ton pire projet, c\'était quoi ?', 66: 'Tu travaillerais pour Tobi ?', 67: 'T\'aurais acheté sa formation ?',
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.
-const ENTREPRENEURIAT = new Set([1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
+const ENTREPRENEURIAT = new Set([64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
 
 const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };

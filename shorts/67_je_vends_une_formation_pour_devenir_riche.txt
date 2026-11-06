@@ -1,0 +1,53 @@
+# JE VENDS UNE FORMATION POUR DEVENIR RICHE
+# Pitch : Tobi a neuf euros, mais il lance une formation pour devenir riche. Le pire, c'est que ça marche.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Compte de Tobi | 9 € | Objectif : millionnaire
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je lance une formation pour devenir riche !
+PLAN gros NOX
+NOX dit (sec) T'as neuf euros sur ton compte.
+PLAN gros TOBI
+TOBI dit (fier) Justement. Je pars de zéro, c'est inspirant.
+PLAN gros NOX
+NOX dit (curieux) Et tu vends ça combien ?
+PLAN gros TOBI
+TOBI dit (fier) Quarante-neuf euros. Le premier module, c'est : crois en toi.
+PLAN gros NOX
+NOX dit (curieux) Et le deuxième ?
+PLAN gros TOBI
+TOBI dit (gene) Crois encore plus en toi.
+TOBI marche centre &
+PC Formation de Tobi | 3 ventes | 3 élèves motivés | Total : 147 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (excite) Cent quarante-sept euros ! Nox, ça marche !
+PLAN gros NOX
+NOX dit (surpris) Attends. Des gens ont vraiment payé ?
+PLAN gros TOBI
+TOBI dit (fier) Je t'avais dit que j'étais riche.
+PLAN gros NOX
+NOX dit (constat) Ta seule façon de gagner de l'argent, c'est de vendre comment en gagner.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est exactement le module trois.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Un élève a un problème. Il demande un remboursement.
+PLAN gros TOBI
+TOBI dit (curieux) Il a dit pourquoi ?
+INSERT Message de Karim | J'ai tout appliqué | Il me reste 9 €
+PLAN gros TOBI
+TOBI dit (surpris) Neuf euros ? Comme moi ?
+PLAN gros NOX
+NOX dit (sec) Ta méthode marche. Il est exactement là où t'es.
+PLAN gros TOBI
+TOBI dit (illumine) Nox ! Je le prends comme coach !
+ATTENDRE 0.4
+PLAN gros NOX
+NOX dit (resigne) Il va te vendre ta formation.
+ATTENDRE 0.4
