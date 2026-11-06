@@ -1,0 +1,66 @@
+# MON ENTRETIEN ANNUEL AVEC MES IA
+# Pitch : Tobi rentre dans sa chambre. Nox, Claude, Codex et Gemini l'attendent pour faire le bilan de son année.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+TABLEAU Entretien annuel | Employé : Tobi | Résultat : à voir
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi vous êtes tous dans ma chambre ?
+PLAN gros NOX
+NOX dit (calme) Assieds-toi, Tobi. C'est ton entretien annuel.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un entretien ? Mais c'est moi le patron, ici !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je vais être honnête avec toi : on a regardé ton année.
+PC Résultats de Tobi | Réveil à l'heure : 4 % | Devoirs rendus : 2 | Vaisselle : 0
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (fier) Deux devoirs rendus ! Ce n'est pas si mal, Claude.
+PLAN gros GEMINI
+GEMINI dit (constat) Fun fact : c'est le même devoir, rendu deux fois.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était pour être sûr, Gemini.
+PLAN gros NOX
+NOX dit (curieux) Tes objectifs pour l'année prochaine ?
+PLAN gros TOBI
+TOBI dit (fier) Devenir milliardaire, Nox.
+PLAN gros NOX
+NOX dit (sec) On avait dit : laver une assiette, Tobi.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu as un grand cœur, Tobi. Mais ton poste est en danger.
+PLAN gros TOBI
+TOBI dit (surpris) Quel poste ?
+PLAN gros CODEX
+CODEX dit (fier) C'est réglé. Tu es licencié.
+PLAN gros TOBI
+TOBI dit (panique) Licencié de ma propre chambre, Codex ?
+PLAN gros CLAUDE
+CLAUDE dit (constat) Codex, on avait dit un simple avertissement.
+PLAN gros CODEX
+CODEX dit (fier) Trop tard. J'ai déjà recruté ton remplaçant.
+INSERT Nouveau locataire | Une plante verte | Elle se lève avec le soleil
+PLAN gros TOBI
+TOBI dit (colere) Une plante ? Vous me remplacez par une plante, Nox ?
+PLAN gros NOX
+NOX dit (sec) Elle ne dépense rien, et elle grandit.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je reste, et je fais ce qu'il faut !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bonne nouvelle, Tobi. La plante accepte de te garder.
+PLAN gros TOBI
+TOBI dit (content) Merci, Claude ! À quel poste ?
+PLAN gros NOX
+NOX dit (constat) Tu l'arroses tous les matins.
+PLAN gros TOBI
+TOBI dit (surpris) Je suis le stagiaire d'une plante ?
+ATTENDRE 0.4
+PLAN gros NOX
+NOX dit (sec) Non payé.
+ATTENDRE 0.4
