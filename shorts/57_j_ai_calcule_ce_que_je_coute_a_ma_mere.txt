@@ -1,0 +1,57 @@
+# J'AI CALCULÉ CE QUE JE COÛTE À MA MÈRE
+# Pitch : Tobi se dit indépendant. Nox fait le total, et Tobi décide de rembourser sa mère.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Tobi | Statut : indépendant | Compte : 9 €
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Je suis indépendant. Je ne coûte rien à personne.
+PLAN gros NOX
+NOX dit (curieux) Je calcule ?
+PLAN gros TOBI
+TOBI dit (fier) Vas-y.
+INSERT Ce que tu as coûté à ta mère | 143 000 € | Depuis ta naissance
+PLAN gros TOBI
+TOBI dit (panique) Cent quarante-trois mille ?
+PLAN gros NOX
+NOX dit (constat) Couches comprises.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un investissement.
+PLAN gros NOX
+NOX dit (curieux) Quel rendement ?
+PLAN gros TOBI
+TOBI dit (fier) Je suis en licence.
+PLAN gros NOX
+NOX dit (sec) Avec un quatre sur vingt.
+PLAN gros TOBI
+TOBI dit (gene) D'accord. Je vais la rembourser.
+PLAN gros NOX
+NOX dit (curieux) À quel rythme ?
+PLAN gros TOBI
+TOBI dit (fier) Cinq euros par mois.
+INSERT Remboursement terminé dans | 2 383 ans | À 5 € par mois
+PLAN gros NOX
+NOX dit (sec) Elle sera patiente.
+PLAN gros TOBI
+TOBI dit (fier) Envoie les cinq euros. C'est le principe.
+PLAN gros NOX
+NOX dit (constat) C'est envoyé.
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Elle a répondu.
+PLAN gros TOBI
+TOBI dit (content) Elle est fière de moi ?
+INSERT Virement de ta mère | 20 € | Motif : Mange
+PLAN gros TOBI
+TOBI dit (surpris) Elle m'a envoyé vingt euros ?
+PLAN gros NOX
+NOX dit (constat) Tu viens de gagner quinze euros.
+ATTENDRE 0.4
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Renvoie-lui cinq euros.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+ATTENDRE 0.4

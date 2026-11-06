@@ -1,0 +1,62 @@
+# CLAUDE, CODEX ET GEMINI CONTRE MA MÈRE
+# Pitch : Tobi a mal à la gorge. Trois IA tentent de l'aider, puis sa mère répond en trois mots.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait chaise
+DIRECT GEMINI apparait rebord
+TABLEAU Problème | Mal à la gorge | 3 IA mobilisées
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (triste) J'ai mal à la gorge. Qui peut m'aider ?
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai lu quatre mille études.
+PLAN gros TOBI
+TOBI dit (content) Et alors ?
+PLAN gros GEMINI
+GEMINI dit (content) Voici un podcast de six heures.
+PLAN gros TOBI
+TOBI dit (resigne) Claude ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je regarder ta gorge ?
+PLAN gros TOBI
+TOBI dit (content) Oui.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je te demander d'ouvrir la bouche ?
+PLAN gros TOBI
+TOBI dit (colere) Oui !
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Puis-je rappeler que je ne suis pas médecin ?
+PLAN gros TOBI
+TOBI dit (resigne) Codex ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (curieux) Quoi ?
+PLAN gros CODEX
+CODEX dit (constat) Opération mardi.
+PLAN gros TOBI
+TOBI dit (panique) Annule !
+PLAN gros NOX
+NOX dit (calme) Demande à ta mère.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle n'a même pas d'IA.
+BRUIT ding
+INSERT Message de ta mère | Mets un pull. | Réponse en 2 secondes
+INSERT Le lendemain | Gorge guérie | Coût : 0 €
+PLAN gros TOBI
+TOBI dit (surpris) Ça a marché.
+PLAN gros GEMINI
+GEMINI dit (curieux) Sur quelle étude ?
+PLAN gros NOX
+NOX dit (sec) Vingt ans de Tobi.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Puis-je avoir son numéro ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Je lui ai demandé sa méthode.
+BRUIT ding
+INSERT Réponse de ta mère | Mets un pull. | Toi aussi.
+ATTENDRE 0.4

@@ -1,0 +1,56 @@
+# ELLE A RÉPONDU OK
+# Pitch : Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
+TABLEAU Message à Léa | Réponse : ok | Analyse en cours
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (excite) Léa a répondu ! Elle a mis « ok » !
+PLAN gros NOX
+NOX dit (calme) Et ?
+PLAN gros TOBI
+TOBI dit (panique) Sans point ! Ça veut dire quoi, sans point ?
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai analysé.
+INSERT Analyse de « ok » | 40 pages | Et un podcast
+PLAN gros GEMINI
+GEMINI dit (constat) Deux lettres. Neuf interprétations.
+PLAN gros TOBI
+TOBI dit (curieux) La meilleure ?
+PLAN gros GEMINI
+GEMINI dit (content) Elle t'aime. Trois pour cent.
+PLAN gros TOBI
+TOBI dit (excite) Trois pour cent ! C'est énorme !
+PLAN gros NOX
+NOX dit (curieux) Tu lui avais écrit quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Un message simple.
+INSERT Ton message | 400 mots | Avec un poème
+PLAN gros NOX
+NOX dit (sec) Elle a répondu ok à un poème.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle a été touchée.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je réponds « ok » !
+PLAN gros NOX
+NOX dit (curieux) Pourquoi ?
+PLAN gros TOBI
+TOBI dit (fier) Elle verra que je suis détaché.
+PLAN gros NOX
+NOX dit (resigne) Envoie.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Elle répond.
+PLAN gros TOBI
+TOBI dit (excite) Lis ! Lis !
+INSERT Message de Léa | C'est qui ? | Je n'ai pas ton numéro
+PLAN gros TOBI
+TOBI dit (triste) Et les trois pour cent ?
+ATTENDRE 0.3
+PLAN gros GEMINI
+GEMINI dit (constat) C'était la marge d'erreur.
+ATTENDRE 0.4

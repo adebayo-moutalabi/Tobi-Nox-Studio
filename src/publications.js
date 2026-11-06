@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : les meilleurs épisodes d'abord, puis le reste dans l'ordre de la série.
-const ORDRE = [52, 53, 54, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
+const ORDRE = [57, 59, 56, 52, 53, 60, 54, 58, 55, 50, 51, 47, 1, 26, 45, 48, 49, 22, 17, 18];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -23,6 +23,8 @@ const TITRES = {
   47: "J'ai contesté mon 4 sur 20 avec Claude 📉", 48: "J'ai vendu mon sweat en ligne 🧥", 49: "J'ai loué mon compte de films à 400 personnes 🎬",
   50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱', 52: 'Ma grand-mère est morte quatre fois 🪦',
   53: "Ma banque me facture d'être pauvre 💸", 54: 'Codex a récupéré mes 5 € 😱', 55: "J'ai filmé le voleur de mes yaourts 🎥",
+  56: "Mon jeu gratuit m'a coûté 10 800 € 🎮", 57: "J'ai calculé ce que je coûte à ma mère 💸", 58: 'Mon robot IA a été moi pendant 24 h 🤖',
+  59: 'Claude, Codex et Gemini contre ma mère 🧣', 60: 'Elle a répondu ok. Gemini a fait 40 pages 💌',
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -43,6 +45,11 @@ const ACCROCHES = {
   53: 'Tobi n\'a plus d\'argent. Sa banque lui en prend quand même…',
   54: 'Karim doit cinq euros à Tobi. Codex s\'en occupe, beaucoup trop bien…',
   55: 'Quelqu\'un vide le frigo de Tobi la nuit. Il pose une caméra pour le démasquer…',
+  56: 'Tobi est fier d\'avoir joué 900 heures sans dépenser un euro. Nox refait le calcul…',
+  57: 'Tobi se dit indépendant. Nox calcule ce qu\'il a coûté à sa mère…',
+  58: 'Tobi laisse Nox gérer sa vie pendant une journée. Tout va beaucoup mieux, et c\'est bien le problème…',
+  59: 'Tobi a mal à la gorge. Claude, Codex et Gemini veulent l\'aider. Sa mère aussi…',
+  60: 'Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement…',
 };
 
 const QUESTIONS = {
@@ -51,6 +58,7 @@ const QUESTIONS = {
   46: 'Tu as déjà commandé un plat que tu avais dans ton frigo ?', 47: "Ta pire note, c'était combien ?", 48: "Identifie quelqu'un qui ferait ça pour toi.",
   49: 'Tu partages ton compte avec combien de personnes ?', 50: 'Tu lui aurais fait confiance pour ton réveil ?', 51: 'Combien de refus de stage as-tu reçus ?',
   52: 'Ta pire excuse pour rater un cours, c\'était quoi ?', 53: 'Ta banque t\'a déjà fait ce coup-là ?', 54: 'Combien on te doit encore ?', 55: 'Qui vole ta nourriture chez toi ?',
+  56: 'Ton temps de jeu, c\'est combien d\'heures ?', 57: 'Ta mère t\'envoie encore de l\'argent pour manger ?', 58: 'Tu laisserais une IA gérer ta vie pendant 24 h ?', 59: 'Équipe IA ou équipe maman ?', 60: 'Le pire message que tu aies reçu ?',
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.

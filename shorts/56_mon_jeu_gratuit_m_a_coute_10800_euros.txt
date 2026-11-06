@@ -1,0 +1,63 @@
+# MON JEU GRATUIT M'A COÛTÉ 10 800 €
+# Pitch : Tobi est fier d'avoir joué 900 heures sans dépenser un euro. Nox refait le calcul.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+TABLEAU Temps de jeu | 900 heures | Prix du jeu : 0 €
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Neuf cents heures de jeu, zéro euro dépensé.
+PLAN gros NOX
+NOX dit (curieux) Zéro euro ?
+PLAN gros TOBI
+TOBI dit (fier) Il est gratuit.
+PLAN gros NOX
+NOX dit (constat) À douze euros de l'heure.
+PLAN gros TOBI
+TOBI dit (curieux) Comment ça ?
+INSERT Si tu avais travaillé | 10 800 € | 900 heures payées
+PLAN gros TOBI
+TOBI dit (surpris) Dix mille euros ?
+PLAN gros NOX
+NOX dit (sec) Ton jeu gratuit.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un investissement.
+PLAN gros NOX
+NOX dit (curieux) Dans quoi ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai une épée légendaire.
+PLAN gros NOX
+NOX dit (sec) Tu as un découvert.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je suis respecté.
+PLAN gros NOX
+NOX dit (curieux) Par qui ?
+PLAN gros TOBI
+TOBI dit (gene) Un enfant de douze ans.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je vends mon compte !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (excite) Niveau 412 ! Ça vaut une fortune !
+BRUIT ding
+PLAN gros NOX
+NOX dit (curieux) Tu as une offre.
+INSERT Offre pour ton compte | 12 € | Prix final
+PLAN gros TOBI
+TOBI dit (surpris) Douze euros ?
+PLAN gros NOX
+NOX dit (constat) Une heure de travail.
+PLAN gros TOBI
+TOBI dit (triste) Neuf cents heures pour une heure.
+PLAN gros TOBI
+TOBI dit (curieux) C'est qui, l'acheteur ?
+PLAN gros NOX
+NOX dit (constat) L'enfant de douze ans.
+ATTENDRE 0.4
+PLAN gros TOBI
+TOBI dit (gene) Il cherche un stagiaire ?
+ATTENDRE 0.4

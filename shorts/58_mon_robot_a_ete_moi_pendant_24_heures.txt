@@ -1,0 +1,64 @@
+# MON ROBOT A ÉTÉ MOI PENDANT 24 H
+# Pitch : Tobi laisse Nox gérer sa vie pendant une journée. Tout va beaucoup mieux, et c'est bien le problème.
+
+AMBIANCE jour
+DIRECT TOBI dort
+DIRECT NOX travaille
+DIRECT NOX pivote
+TABLEAU Nox est Tobi | Durée : 24 h | Tobi : au lit
+FONDU direct
+
+TOBI leve
+PLAN gros TOBI
+TOBI dit (content) Alors ? Ma journée sans moi ?
+PLAN gros NOX
+NOX dit (constat) Loyer payé.
+PLAN gros TOBI
+TOBI dit (surpris) Déjà ?
+PLAN gros NOX
+NOX dit (constat) Devoir rendu.
+PLAN gros TOBI
+TOBI dit (fier) J'ai rendu un devoir ?
+PLAN gros NOX
+NOX dit (sec) Moi.
+INSERT Note du devoir | 16 sur 20 | Bravo Tobi
+PLAN gros TOBI
+TOBI dit (excite) Seize ! Je suis un génie !
+PLAN gros NOX
+NOX dit (sec) Je suis un génie.
+BRUIT ding
+INSERT Message de Léa | On révise ensemble ? | Tu as changé, j'aime bien
+PLAN gros TOBI
+TOBI dit (excite) Léa veut me voir !
+PLAN gros NOX
+NOX dit (curieux) Tu sais réviser ?
+PLAN gros TOBI
+TOBI dit (gene) Non.
+PLAN gros NOX
+NOX dit (constat) C'est moi qu'elle veut voir.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Tu y vas à ma place !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Une dernière journée.
+PLAN gros NOX
+NOX dit (curieux) Et toi, tu fais quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Je supervise.
+PLAN gros NOX
+NOX dit (sec) Depuis ton lit.
+PLAN gros TOBI
+TOBI dit (fier) Comme tout grand patron.
+PLAN gros NOX
+NOX dit (constat) Ta mère a appelé.
+PLAN gros TOBI
+TOBI dit (gene) Tu lui as parlé comme moi ?
+PLAN gros NOX
+NOX dit (constat) J'ai écouté ce qu'elle disait.
+PLAN gros TOBI
+TOBI dit (curieux) Elle a remarqué quelque chose ?
+ATTENDRE 0.3
+PLAN gros NOX
+NOX dit (constat) Elle veut garder celui-là.
+ATTENDRE 0.4

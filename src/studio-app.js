@@ -60,10 +60,20 @@ import E52 from '../shorts/52_ma_grand_mere_est_morte_quatre_fois.txt';
 import E53 from '../shorts/53_ma_banque_me_facture_d_etre_pauvre.txt';
 import E54 from '../shorts/54_codex_a_recupere_mes_5_euros.txt';
 import E55 from '../shorts/55_j_ai_filme_le_voleur_de_mes_yaourts.txt';
+import E56 from '../shorts/56_mon_jeu_gratuit_m_a_coute_10800_euros.txt';
+import E57 from '../shorts/57_j_ai_calcule_ce_que_je_coute_a_ma_mere.txt';
+import E58 from '../shorts/58_mon_robot_a_ete_moi_pendant_24_heures.txt';
+import E59 from '../shorts/59_claude_codex_et_gemini_contre_ma_mere.txt';
+import E60 from '../shorts/60_elle_a_repondu_ok.txt';
 
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    "57. J'ai calculé ce que je coûte à ma mère": E57,
+    '59. Claude, Codex et Gemini contre ma mère': E59,
+    "56. Mon jeu gratuit m'a coûté 10 800 €": E56,
+    '60. Elle a répondu ok': E60,
+    '58. Mon robot a été moi pendant 24 h': E58,
     '52. Ma grand-mère est morte quatre fois': E52,
     "53. Ma banque me facture d'être pauvre": E53,
     '54. Codex a récupéré mes 5 €': E54,
