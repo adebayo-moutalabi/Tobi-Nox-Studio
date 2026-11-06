@@ -24,7 +24,7 @@ TOBI dit (content) Parfait. À Karim ?
 PLAN gros CODEX
 CODEX dit (constat) À toute ta promo.
 TOBI leve &
-PC Groupe de la promo | Karim doit 5 € à Tobi | Relance 1 sur 40 | Vu par 186 personnes
+PC Discord : Groupe de la promo | Karim doit 5 € à Tobi | Relance 1 sur 40 | Vu par 186 personnes
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -40,7 +40,7 @@ TOBI dit (panique) Un huissier ? Pour cinq euros ?
 PLAN gros NOX
 NOX dit (curieux) Il coûte combien, ton huissier ?
 INSERT Frais d'huissier | 180 € | À payer par Tobi
-PLAN gros TOBI
+PLAN auto
 TOBI dit (triste) Cent quatre-vingts euros…
 BRUIT ding
 PLAN gros CODEX

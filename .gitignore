@@ -3,3 +3,12 @@ node_modules/
 *.log
 tools/.mocap.bundle.mjs
 lancement/
+
+tools/.mixamo*
+tools/.run-mixamo.mjs
+# Animations Mixamo : données non redistribuables, gardées sur le poste de l'auteur
+src/mocap-mixamo.json
+studio-mixamo.html
+tools/mixamo/glb/
+tools/mixamo/o.json
+tools/.mixamo.bundle.mjs

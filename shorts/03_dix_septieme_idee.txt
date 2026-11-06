@@ -2,6 +2,7 @@
 # Pitch : Mardi, en plein partiels, déjà dix-sept idées. La dernière : un site de rencontre pour plantes.
 
 AMBIANCE soir
+DATE Mardi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Placard à projets | 16 idées rangées | Place restante : peu

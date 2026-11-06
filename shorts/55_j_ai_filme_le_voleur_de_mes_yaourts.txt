@@ -2,6 +2,7 @@
 # Pitch : Quelqu'un vide le frigo de Tobi la nuit. Il pose une caméra pour le démasquer.
 
 AMBIANCE jour
+DATE Jeudi
 DIRECT TOBI marche frigo
 DIRECT NOX travaille
 DIRECT NOX pivote
@@ -23,7 +24,7 @@ NOX dit (resigne) Pose une caméra devant le frigo, et on verra.
 INSERT Le lendemain matin | Yaourts : 0 | Il est revenu
 PLAN gros TOBI
 TOBI dit (excite) Il est revenu ! Nox, mets la vidéo !
-PC Caméra du frigo | 3 h 12 | Suspect : sweat moutarde | Yeux fermés
+PC Camera : Frigo | 3 h 12 | Suspect : sweat moutarde | Yeux fermés
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX

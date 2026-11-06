@@ -608,7 +608,7 @@ export function createCharacter() {
     },
     setGlasses(on) { glasses.visible = on; },
     setMorphs(obj) { Object.assign(weights, obj); faceApply(weights); },
-    setLift(h) { state.liftTo = h; },
+    setLift(h, flat) { state.liftTo = h; state.liftFlat = !!flat; },
     tap(side) { state.taps[side] = 1; state.tapF[side] = (state.tapF[side] + 1 + (side === 'L' ? 0 : 1)) % 4; },
     update(dt) {
       clearRot(tapBones);
@@ -618,7 +618,8 @@ export function createCharacter() {
         state.lift += (state.liftTo - state.lift) * (1 - Math.exp(-dt * 7));
         if (Math.abs(state.lift) < 0.001 && !state.liftTo) state.lift = 0;
         root.position.y = state.lift;
-        const k = state.lift / 0.09;
+        state.liftLegs = (state.liftLegs ?? 1) + ((state.liftFlat ? 0 : 1) - (state.liftLegs ?? 1)) * (1 - Math.exp(-dt * 7)); // couché, les jambes restent droites
+        const k = (state.lift / 0.09) * state.liftLegs;
         for (const n of ['L', 'R']) { addRot(bones[`upleg_${n}`], 0.24 * k, 0, 0); addRot(bones[`leg_${n}`], -0.28 * k, 0, 0); }
       }
       talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.handsFree ? [bones.forearm_L, bones.forearm_R, bones.arm_L, bones.arm_R] : null, motion.seat);

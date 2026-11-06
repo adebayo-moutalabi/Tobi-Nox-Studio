@@ -2,6 +2,7 @@
 # Pitch : Tobi a cinq minutes d'exposé. Gemini en a fait 400 diapos, puis le programme du partiel de toute la promo.
 
 AMBIANCE soir
+DATE Samedi
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis

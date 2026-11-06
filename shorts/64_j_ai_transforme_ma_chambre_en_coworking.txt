@@ -24,7 +24,7 @@ NOX dit (curieux) Et toi, tu dors où ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Un fondateur ne dort pas, Nox. Il scale.
 TOBI marche centre
-PC Tobi Space | 1 réservation | Lit premium : 2 heures | Total : 24 €
+PC Safari : tobispace.fr/reservation | 1 réservation | Lit premium : 2 heures | Total : 24 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

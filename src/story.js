@@ -23,7 +23,7 @@ const VARIANTES = { montrer: ['montrer', 'viens'], non: ['non', 'stop'], oui: ['
 const OBJETS = { papier: 'paper', livre: 'book', gourde: 'bottle', tasse: 'mug', telephone: 'phone', sac: 'bag' };
 const LIEUX = {
   gauche: [-0.12, 0.62], milieu: [0.26, 0.42], droite: [0.62, 0.1], // une ligne dégagée, à l'écart des jambes de Tobi : personne ne se cache derrière un autre
-  centre: [0.1, 0.2], tapis: [0.1, -0.3], fenetre: [0, -1.6], lit: [0.12, 0.35], bureau: [0.6, -0.8], armoire: [0.6, 0.4],
+  centre: [0.1, 0.2], tapis: [0.1, -0.3], fenetre: [0, -1.6], lit: [0.12, 0.35], bureau: [0.42, -0.46], armoire: [0.6, 0.4],
   frigo: [0.5, 1.24], miroir: [-0.42, -1.5], couloir: [0, 1.9], porte: [0, 2.72],
 };
 // Places en hauteur pour les Aînés, avec apparait : x, y, z
@@ -166,6 +166,7 @@ export function createPlayer(v, ui) {
     v.controls.update();
   }
   function aim(pos, target, fov) {
+    room.chair.visible = true;
     v.camera.fov = fov * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1; v.controls.target.copy(target); v.camera.position.copy(pos); v.controls.update();
     shoot(pos, target);
@@ -180,7 +181,13 @@ export function createPlayer(v, ui) {
     return (big ? [0, 0.35, 0.7, 1.05, 1.4].map((d) => e.clone().setY(Math.max(0.08, e.y - d))).concat(v.pos(b).clone().setY(0.1)) : [e, e.clone().setY(e.y - 0.16)]).some((x) => { line.closestPointToPoint(x, true, o); return o.distanceTo(x) < r; });
   };
   // La caméra ne se place jamais dans un autre personnage.
-  const free = (c, a) => v.actors.every((x) => x === a || !x.hero.root.visible || (x.id === 'tobi' ? Math.hypot(c.x - v.pos(x).x, c.z - v.pos(x).z) > 0.42 : eyes(x).distanceTo(c) > 0.38));
+  const chairClear = (c) => c.y > 1.05 || Math.hypot(c.x - room.chair.position.x, c.z - room.chair.position.z) > 0.42;
+  const chairAhead = (c, p) => { // le dossier ne doit pas passer devant celui qu'on filme
+    const C = room.chair.position, dx = p.x - c.x, dz = p.z - c.z, t = Math.max(0, Math.min(1, ((C.x - c.x) * dx + (C.z - c.z) * dz) / (dx * dx + dz * dz || 1)));
+    return Math.hypot(c.x + dx * t - C.x, c.z + dz * t - C.z) < 0.34 && Math.hypot(p.x - C.x, p.z - C.z) > 0.45;
+  };
+  const chairTaken = () => v.actors.some((x) => x.hero.seat && Math.hypot(v.pos(x).x - room.chair.position.x, v.pos(x).z - room.chair.position.z) < 0.45);
+  const free = (c, a) => (!chairTaken() || chairClear(c)) && v.actors.every((x) => x === a || !x.hero.root.visible || (x.id === 'tobi' ? Math.hypot(c.x - v.pos(x).x, c.z - v.pos(x).z) > 0.62 : eyes(x).distanceTo(c) > 0.38)); // ses bras bougent : on garde de la marge
   const unblock = (a) => {
     const c = v.camera.position, near = v.actors.filter((x) => x !== a && x.hero.root.visible && (x.id === 'tobi' ? Math.hypot(c.x - v.pos(x).x, c.z - v.pos(x).z) <= 0.42 : eyes(x).distanceTo(c) <= 0.38));
     for (const x of near) { x.hero.root.visible = false; hiddenForShot.push(x); }
@@ -192,22 +199,30 @@ export function createPlayer(v, ui) {
     const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0);
     if (talkTo && !a.hero.seat && !a.spot && a.faceYaw != null) fwd.set(Math.sin(a.faceYaw), 0, Math.cos(a.faceYaw)); // il va se tourner : on filme déjà son visage
     if (a.extra) fwd.set(0, 0, 1); // sans partenaire, un logo se filme côté porte, là où il y a du recul
-    const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || a.hero.seat || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
-    const to = (across ? toB : fwd).normalize();
+    const toB = eyes(b).sub(H).setY(0).normalize(), across = !front && near && (a.extra || (a.id === 'tobi' && a.hero.seat) || fwd.clone().normalize().dot(toB) > 0.35); // face à face, ou côte à côte ?
+    const to = (across ? (a.id === 'tobi' && a.hero.seat ? toB.clone().add(fwd.clone().normalize().multiplyScalar(1.4)) : toB) : fwd).normalize(); // assis, on reste du côté de son visage
     a.look = near ? b : a.extra ? a.look : null; if (near) b.look = a; // face à face, ils se regardent ; côte à côte, celui qui écoute tourne la tête
     const top = H.y + (big ? 0.24 : 0.2);
     // En vertical, le cadre est étroit : la largeur vaut 0,56 fois la hauteur. On recule pour garder le corps entier, les gestes et un peu de décor.
     const tall = v.camera.aspect < 1;
     const span = tall ? (tight ? (big ? 1.55 : a.extra ? 1.2 : 1.05) : (big ? 1.95 : a.extra ? 1.55 : 1.4)) : tight ? (big ? 0.9 : a.extra ? 0.9 : 0.72) : (big ? 1.4 : a.extra ? 1.2 : 1.02); // les logos sont plus larges que hauts : le cadre vertical doit les contenir
-    for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
+    // On filme du côté où il regarde : d'abord de trois quarts face, et seulement s'il n'y a aucune place, de plus loin sur le côté.
+    const look3 = (near && !a.extra ? toB.clone().multiplyScalar(0.7).add(fwd.clone().normalize().multiplyScalar(0.3)) : fwd.clone()).normalize();
+    const standing = !a.extra && near && !a.hero.seat && !a.spot; // debout, il s'ouvre vers la caméra : on peut le filmer de plus loin
+    for (const need of a.extra ? [-2] : standing ? [-0.35, -2] : [0.5, 0.15, -2]) for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.3) : Math.max(top + sp * 0.13 - sp / 2, 0.3); // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03) - (lowShot ? sp * 0.2 : 0);
+        const camDir = c.clone().sub(H).setY(0).normalize();
+        if ((standing ? camDir.dot(toB) : camDir.dot(look3)) < need) continue;
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (tall ? 0.26 : a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
         const low = Math.max(0.2, mid - sp * 0.3), corner = (s) => H.clone().addScaledVector(side, s).setY(low); // et le bas de l'image, où un meuble passerait devant
-        if (room2(c) && free(c, a) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H))) {
+        if (room2(c) && free(c, a) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H) || (a.id === 'nox' && x.id === 'tobi' && (blocks(x, c, H.clone().add(side)) || blocks(x, c, H.clone().sub(side)))))) { // Nox est petit : la jambe de Tobi ne doit pas manger le plan
           aim(c, new THREE.Vector3(H.x, mid, H.z), fov / lens());
+          if (!chairTaken() && (!chairClear(c) || chairAhead(c, v.pos(a)))) room.chair.visible = false; // comme sur un tournage : on retire la chaise vide qui gênerait le plan
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
+          if (standing) { const open = toB.clone().lerp(camDir, camDir.dot(toB) < 0.2 ? 0.85 : 0.6); a.faceYaw = Math.atan2(open.x, open.z); } // comme au théâtre : de trois quarts, jamais de profil
+          a.cheat = standing ? 0.55 : !near ? 0 : a.id === 'tobi' ? 0.5 : 0.35; b.cheat = 0; // assis aussi, il ne plonge pas la tête vers Nox
           return;
         }
       }
@@ -264,6 +279,7 @@ export function createPlayer(v, ui) {
 
   function cut(name) {
     const p = PLANS[name] || PLANS.large;
+    room.chair.visible = true;
     v.camera.fov = p[2] * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1;
     v.controls.target.set(...p[1]); v.camera.position.set(...p[0]);
@@ -280,12 +296,48 @@ export function createPlayer(v, ui) {
       v.stash(a); if (a.bag) { v.drop(a, a.bag); }
       a.hero.setExpression('neutre');
     }
-    room.setShutter(false); room.lamp.intensity = 0; room.sillBag.visible = true; room.laptop.clear('notes.txt');
+    room.setShutter(false); room.lamp.intensity = 0; room.sillBag.visible = true; room.laptop.clear('notes.txt'); room.chair.visible = true;
     room.entryDoor.rotation.y = 0; room.fridgeDoor.rotation.y = 0;
     place(actor('tobi'), [0, 0.2]); place(actor('nox'), [0.3, 0.5]);
     actor('tobi').hero.root.visible = true; actor('nox').hero.root.visible = true;
     for (const a of v.actors) if (a.extra) { a.hero.root.visible = false; place(a, [0, 2.4]); }
     lastTalk = null;
+  }
+  // Horloge de l'histoire, affichée sur le second ordinateur. Règles complètes : CHARTE_SCRIPTS.md, « Heure et date ».
+  // Sans indication, l'heure et la date sont stables pour un épisode et restent dans une plage neutre.
+  // Dès que le script parle d'une heure ou d'un jour, il doit les imposer avec HEURE et DATE : tools/audit-temps.mjs le vérifie.
+  const JOURS = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+  const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+  const PLAGES = { soir: [20 * 60, 210], jour: [13 * 60, 300], matin: [7 * 60, 240], nuit: [2 * 60, 150] }; // début en minutes, durée
+  const NOMBRES = { deux: 2, trois: 3, quatre: 4, cinq: 5, six: 6, sept: 7, huit: 8, neuf: 9, dix: 10 };
+  const clockText = (t) => `${String(Math.floor(t / 60) % 24).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+  let clockSeed = 1, clockMood = 'soir', clockFixed = false, jumps = 0, today = { wd: 0, day: 1, month: 10 };
+  const clock = (mood = clockMood) => { const [start, span] = PLAGES[mood], r = (clockSeed * 2654435761 + jumps * 40503) >>> 0; return clockText(start + (r % span)); };
+  const dateText = () => `${JOURS[today.wd]} ${today.day} ${MOIS[today.month]}`;
+  function setClock(text) { // au début de chaque lecture
+    clockSeed = [...text].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+    jumps = 0; clockMood = 'soir'; clockFixed = false;
+    today = { wd: clockSeed % 7, day: 1 + (clockSeed % 27), month: 10 };
+    room.lock.set({ time: clock(), day: '', date: dateText(), fixed: false });
+  }
+  function advanceDays(n) {
+    today.wd = (today.wd + n) % 7; today.day += n;
+    if (today.day > 28) { today.day -= 28; today.month = (today.month + 1) % 12; }
+  }
+  function daysIn(title) { // combien de jours passent, d'après le titre de l'écran
+    const t = plain(title), m = /(\d+|\p{L}+) jours? plus tard/u.exec(t);
+    if (m) return Number(m[1]) || NOMBRES[m[1]] || 1;
+    if (/semaine (plus tard|suivante)/.test(t)) return 7;
+    return /lendemain|suivante|vingt-quatre|24 h/.test(t) ? 1 : 0;
+  }
+  function timeJump(title, big) { // les pages s'envolent, et le second écran suit l'histoire
+    sfx('whoosh');
+    jumps += 1; advanceDays(daysIn(title));
+    const t = plain(title), exact = /^(\d{1,2}) h (\d{2})$/.exec(big), same = /vingt-quatre|24 h/.test(t);
+    const time = exact ? `${exact[1].padStart(2, '0')}:${exact[2]}` : same ? undefined : clock(/matin/.test(t) ? 'matin' : /\bnuit\b/.test(t) ? 'nuit' : /\bsoir\b/.test(t) ? 'soir' : clockMood);
+    clockFixed = !!exact;
+    room.lock.set({ ...(time ? { time } : {}), date: dateText(), fixed: clockFixed, ...(/^jour\s/i.test(big) ? { day: big } : {}) });
+    return v.wait(2.3);
   }
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
@@ -304,7 +356,7 @@ export function createPlayer(v, ui) {
         }
         return undefined;
       }
-      case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
+      case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
         a.look = null; a.hero.motion.clearPose(); v.attach(a, v.item('phone')); a.hero.motion.setHold(false);
@@ -314,9 +366,12 @@ export function createPlayer(v, ui) {
       case 'raccroche': a.hero.motion.clearPose(); await v.wait(0.45); v.stash(a); return undefined;
       case 'message': { // il sort le téléphone, puis on lit la conversation à l'écran
         const [name = '', ...rows] = c.text.split('|').map((x) => x.trim());
-        const lines = rows.filter(Boolean).map((x) => ({ me: x.startsWith('>'), text: x.replace(/^>\s*/, '') }));
+        const lines = rows.filter(Boolean).map((x) => { // > message envoyé, [23:47] heure discrète si elle compte
+          const m = /^(>?)\s*(?:\[(\d{1,2}[:h]\d{2})\])?\s*(.*)$/.exec(x);
+          return { me: !!m[1], time: m[2] || '', text: m[3] };
+        });
         sfx('bip');
-        if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose('phone'); closeUp(a); await v.wait(0.8); }
+        if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose(clipFor(a, 'mx_texto_debout')); closeUp(a); await v.wait(0.8); }
         look.chat(name, lines);
         await v.wait(Math.min(7, 1.8 + lines.length * 0.8 + lines.reduce((n, l) => n + l.text.length, 0) * 0.035));
         look.hideInsert();
@@ -327,8 +382,22 @@ export function createPlayer(v, ui) {
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
-        look.insert(title, big, small); sfx(/[€$]/.test(big) ? 'ding' : 'pop');
+        const kind = look.insert(title, big, small);
+        if (kind === 'temps') return timeJump(title, big);
+        sfx(/[€$]/.test(big) ? 'ding' : 'pop');
         return v.wait(Math.min(3.4, 2.1 + (title.length + big.length + small.length) * 0.02)); // le temps de lire avant le plan suivant
+      }
+      case 'temps': { // saut dans le temps : TEMPS Trois jours plus tard | Jour 4 | Reste : 20 €
+        const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
+        look.insert(title, big, small, 'temps');
+        return timeJump(title, big);
+      }
+      case 'heure': clockFixed = true; room.lock.set({ time: c.args[0] || '', fixed: true }); return undefined; // heure imposée par l'histoire : elle ne bouge plus
+      case 'date': { // DATE Mardi, ou DATE Mardi 11 février
+        const [wd, day, month] = c.text.split(/\s+/), w = JOURS.findIndex((x) => plain(x) === plain(wd || '')), m = MOIS.findIndex((x) => plain(x) === plain(month || ''));
+        if (w < 0) throw new Error(`jour inconnu : ${wd}`);
+        today.wd = w; if (Number(day)) today.day = Number(day); if (m >= 0) today.month = m;
+        room.lock.set({ date: dateText() }); return undefined;
       }
       case 'bruit': sfx(plain(c.args[0] || 'pop')); return undefined;
       case 'attendre': return v.wait(parseFloat(c.args[0]) || 1);
@@ -363,9 +432,9 @@ export function createPlayer(v, ui) {
         }
         a.hero.energy = ENERGIE[c.tone] || 1;
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
-        const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
+        const talkClip = clipFor(a, a.hero.seat ? 'mx_parle_assis' : 'mx_parle'); // gestuelle enregistrée, si elle est activée
         const geste = !a.hero.seat && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
-        const emotion = EMOTIONS[c.tone], assisOk = !a.hero.seat || ['emo_panique', 'emo_surpris', 'emo_doute', 'emo_idee', 'emo_justifie'].includes(emotion), talkPose = a.id === 'tobi' && !a.hero.motion.pose ? (emotion && assisOk && a.hero.motion.has(emotion) ? emotion : !a.hero.seat && !geste && a.hero.motion.has(talkClip) ? talkClip : null) : null;
+        const emotion = clipFor(a, EMOTIONS[c.tone]), assisOk = !a.hero.seat, talkPose = a.id === 'tobi' && !a.hero.motion.pose ? (emotion && assisOk && a.hero.motion.has(emotion) ? emotion : a.hero.motion.has(talkClip) ? talkClip : null) : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
         if (geste && !emotion && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {
@@ -474,6 +543,7 @@ export function createPlayer(v, ui) {
     async play(text, opts = {}) {
       if (running) return;
       findBlockers();
+      setClock(text);
       subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(); look.setMood('soir');
       hiddenForShot = [];
       const list = parseStory(text);
@@ -512,7 +582,11 @@ export function createPlayer(v, ui) {
 const PHONE_EAR = { pos: [0.04, 0.07, 0.03], rot: [Math.PI / 2, Math.PI / 2, 0] };
 const ENERGIE = { excite: 1.35, colere: 1.4, panique: 1.5, illumine: 1.3, fier: 1.1, triste: 0.55, gene: 0.75, calme: 0.8, sec: 0.6, constat: 0.65, chuchote: 0.5, resigne: 0.6 };
 
-const EMOTIONS = { panique: 'emo_panique', surpris: 'emo_surpris', colere: 'emo_colere', fier: 'emo_fier', triste: 'emo_triste', curieux: 'emo_doute', illumine: 'emo_idee', gene: 'emo_gene', mauvaisefoi: 'emo_justifie' };
+// Les gestes mx_ viennent de src/mocap-mixamo.json, qui reste sur le poste de l'auteur (voir docs/GUIDE_TECHNIQUE.md).
+// Sans ce fichier, c'est le cas de la version publique, chaque geste retombe sur son équivalent d'origine.
+const REPLI = { mx_panique: 'emo_panique', mx_surpris: 'emo_surpris', mx_colere: 'emo_colere', mx_question: 'emo_fier', mx_triste: 'emo_triste', mx_doute: 'emo_doute', mx_montre: 'emo_idee', mx_gene: 'emo_gene', mx_epaules: 'emo_justifie', mx_parle: 'talk_stand', mx_parle_assis: 'talk_sit', mx_texto_debout: 'phone' };
+const clipFor = (a, name) => (!name || a.hero.motion.has(name) ? name : REPLI[name] || null);
+const EMOTIONS = { panique: 'mx_panique', surpris: 'mx_surpris', colere: 'mx_colere', fier: 'mx_question', triste: 'mx_triste', curieux: 'mx_doute', illumine: 'mx_montre', gene: 'mx_gene', mauvaisefoi: 'mx_epaules', excite: 'mx_deux_mains', content: 'mx_rire', resigne: 'mx_decu' };
 
 const ABONNE = [["Merci d'être resté jusqu'à la fin", 'Abonne-toi', 'pour ne plus manquer nos aventures']];
 

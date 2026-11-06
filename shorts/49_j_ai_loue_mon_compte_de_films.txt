@@ -2,6 +2,7 @@
 # Pitch : Tobi loue des places sur le compte de films familial. Codex passe à l'échelle.
 
 AMBIANCE soir
+DATE Mardi
 DIRECT TOBI assis
 DIRECT NOX travaille
 DIRECT NOX pivote

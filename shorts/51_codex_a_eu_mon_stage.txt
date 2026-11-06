@@ -2,6 +2,7 @@
 # Pitch : Tobi demande à Codex d'envoyer sa lettre de motivation. Il décroche un entretien, mais pas pour lui.
 
 AMBIANCE soir
+DATE Vendredi
 DIRECT TOBI assis
 DIRECT NOX assis
 DIRECT CODEX apparait bureau

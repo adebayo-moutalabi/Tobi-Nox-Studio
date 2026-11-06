@@ -136,14 +136,38 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
+## Essai des gestes Mixamo (branche `essai/mixamo`, 6 novembre 2026)
+
+- 22 animations Mixamo adaptées au squelette de Tobi, dans `src/mocap-mixamo.json` : parole, émotions, téléphone en main.
+- Elles ne pilotent que le haut du corps, sans la tête ni le cou, pour garder le regard vers l'interlocuteur.
+- Cadrage repris sur les épisodes 13 et 54.
+- Audit de tous les épisodes : reste l'épisode 31 ligne 11 (visage de Tobi peu visible) et l'ancienne démo « Le matin de l'examen ».
+- La branche n'est pas envoyée sur GitHub : il faut d'abord valider le rendu et vérifier la licence Mixamo pour un dépôt public.
+- Retour arrière : `git switch main`.
+
+## Meubles, caméra, temps et applications (branche `essai/mixamo`, 6 novembre 2026)
+
+- Nouvel audit `tools/audit-meubles.js` : il mesure, image par image, ce qui entre dans le lit, la chaise, le bureau, les armoires et le frigo.
+- Tobi contourne la chaise, avance d'un pas quand il se lève, et se couche sur le matelas.
+- Caméra : Tobi s'ouvre de trois quarts vers l'objectif, on filme le côté de son visage, et la chaise vide sort du plan si elle passe devant.
+- Lumière : jour plus doux sur le visage, soir moins violet, halo réduit.
+- Nouvelle commande `TEMPS` : un calendrier dont les pages s'envolent. Elle est utilisée dans l'épisode 62.
+- Imprimante tournée vers la pièce. Le second ordinateur affiche une heure propre à chaque épisode, qui avance, et le jour de l'histoire.
+- `PC` ouvre l'application logique : Word, PowerPoint, Excel, Canva, navigateur, banque, terminal, code, notes, fichiers, statistiques, discussion, caméra et agenda.
+- Les messages peuvent afficher une heure avec `[23:47]`.
+- Il reste un contact d'environ une seconde quand Tobi se couche (pied dans le matelas) et l'épisode 66, ligne 15 (visage de Nox peu visible).
+
+## Heure et date, documentation (6 novembre 2026)
+
+- L'heure et la date du second PC suivent l'histoire : `HEURE`, `DATE`, sauts de temps qui font avancer la date.
+- `tools/audit-temps.mjs` cherche les contradictions entre le script et l'écran.
+- Les épisodes qui parlent d'une heure ou d'un jour ont reçu leurs réglages. L'épisode 61 affiche 23:59, puis 00:00.
+- L'épisode 25 passe en ambiance de nuit : il se déroule à 5 h.
+- Nox redevient d'abord « mon IA » dans la charte, à la demande de l'auteur.
+- `build.mjs` crée les pages publiques sans données Mixamo, et `studio-mixamo.html` sur le poste de l'auteur.
+- Les scripts de conversion Mixamo rejoignent `tools/mixamo/`.
+- Nouveaux documents : `docs/GUIDE_TECHNIQUE.md`, `AGENTS.md` et `TACHES.md`.
+
 ## À faire
 
-1. Faire valider l'identité du Studio (bloc `CHARTE GRAPHIQUE`).
-2. Préciser l'expérience voulue dans le Studio (l'auteur reviendra dessus).
-3. Améliorer le modèle de Tobi : visage, tissu du sweat, peau.
-4. Améliorer les éléments de la chambre : ordinateurs, placards qui s'ouvrent, textures.
-5. Ajouter d'autres lieux (voir `REPRISE.md`).
-6. Écrire l'épisode 10.
-7. Remonter l'épisode 7 au format actuel.
-8. Tester avec les vraies voix ElevenLabs.
-9. **Faire du projet un framework réutilisable :** à la fin, documenter comment quelqu'un d'autre crée sa propre série (personnages, lieux, charte, histoires) sur cette base.
+Voir `TACHES.md`.

@@ -10,6 +10,14 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - La durée visée va de 40 à 90 secondes, sans allonger pour rien.
 - La chute doit être comprise immédiatement.
 
+## Épisodes aimés
+
+- « Codex a eu mon stage », « J'ai loué mon compte de films à 400 personnes » et l'épisode 62, « J'ai 20 € pour tenir 10 jours » et l'épisode 22, « Mon IA a trouvé mon mot de passe » : drôles, avec le bon ton. Ils servent de modèle.
+
+## Nox
+
+- Nox est d'abord une IA, avec un corps de robot. On dit « mon IA ». Ce choix pourra être adapté plus tard.
+
 ## Dialogues
 
 - Français parlé, naturel, avec de l'émotion et des réponses qui s'enchaînent.
@@ -23,6 +31,13 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Le PC et le téléphone doivent être lisibles et utiles à l'histoire.
 - Rien ne doit traverser un objet : bras, mains, chaise, bureau ou téléphone.
 - Aucune main, aucun doigt ne doit disparaître ou clignoter.
+- La chaise et le lit comptent autant que le bureau : Tobi les contourne, s'assoit dessus et se lève sans les traverser.
+- La lumière et la place de la caméra doivent être soignées à chaque plan. Voir les personnages est très important.
+- Pas de lumière forte sur le visage : il doit rester reconnaissable dès le premier plan.
+- Les actions au PC ouvrent l'application logique pour chaque script, sans se limiter à Word ou Canva : navigateur, banque, terminal, discussion, etc.
+- Le second PC affiche l'heure et la date, qui doivent changer et avancer.
+- Rien d'affiché ne doit contredire l'histoire : heure, date, jour de la semaine ou mois. Exemple à éviter : un devoir à rendre à minuit avec 21 h à l'écran.
+- Les messages peuvent afficher une heure discrète, seulement quand elle est utile.
 
 ## Gestes
 
@@ -35,6 +50,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 ## Mise en scène
 
+- Un saut dans le temps se comprend tout de suite. Passer de Jour 1 à Jour 4, c'est un vrai écran, pas seulement un compteur qui change.
 - Les pop-ups restent assez longtemps à l'écran et changent de style selon le temps, un message ou l'argent.
 - L'écran d'abonnement dit : « Merci d'être resté jusqu'à la fin. Abonne-toi pour ne plus manquer nos aventures. » Il est sobre, sans fond jaune, et reste assez longtemps.
 - Un message de téléphone ressemble à une conversation, avec le contact et les bulles. Un contenu d'ordinateur ressemble à un écran de MacBook ou à une boîte mail.
@@ -54,3 +70,5 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
 - **Bras assis :** trop agités, puis trop immobiles. La règle retenue est des gestes petits, lents et liés à l'émotion.
 - **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes. La règle retenue est 40 à 90 secondes, sauf idée exceptionnelle.
+- **Épisode des 20 € :** l'auteur n'aimait pas une première version, puis a trouvé la version réécrite vraiment drôle. La règle retenue est de garder la version actuelle comme modèle.
+- **Statut de Nox :** j'ai proposé « mon robot », l'auteur préfère « mon IA » pour l'instant. Deux titres disent encore « Mon robot » (épisodes 58 et 66), à revoir si besoin.

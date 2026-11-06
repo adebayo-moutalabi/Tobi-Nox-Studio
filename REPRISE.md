@@ -7,6 +7,9 @@ Ce document s'adresse à toute personne ou IA qui reprend le projet. Il dit ce q
 - `CHARTE_SCRIPTS.md` : comment écrire un script, pour une personne ou une IA.
 - `PUBLICATION.md` : réglages YouTube et stratégie TikTok et Instagram.
 - `JOURNAL.md` : ce qui a été fait, dans l'ordre, et pourquoi.
+- `TACHES.md` : ce qu'il reste à faire.
+- `docs/GUIDE_TECHNIQUE.md` : les recettes pour modifier le code.
+- `AGENTS.md` : les consignes pour une IA.
 - Ce fichier : le fonctionnement technique.
 
 Site : https://adebayo-moutalabi.github.io/Tobi-Nox-Studio/
@@ -121,8 +124,9 @@ Pour un deuxième lieu : créer `src/lieux/<nom>.js` qui renvoie ces mêmes él�
 - **Premier plan du soir :** la compilation des effets fige l'image quelques secondes une seule fois.
 - **Mesurer la vitesse d'export :** le navigateur de test intégré peut donner des chiffres très variables. Même une ancienne version y est tombée à moins d'une image par seconde. Mesurer dans Chrome ou Edge, onglet au premier plan.
 - **Encodeur :** rester en `prefer-software` ; l'encodeur matériel s'est montré 30 fois plus lent au test.
+- **Gestes Mixamo :** les données restent sur le poste de l'auteur. Les pages publiques utilisent les gestes d'origine. Voir `docs/GUIDE_TECHNIQUE.md`.
 - **Envoi sur GitHub :** il peut demander une connexion Windows à l'auteur.
 
 ## À faire
 
-Voir la fin de `JOURNAL.md`.
+Voir `TACHES.md`.

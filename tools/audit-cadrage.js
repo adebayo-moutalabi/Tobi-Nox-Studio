@@ -15,15 +15,15 @@ window.auditCadrage = async (names) => {
       if (at.distanceTo(p.camera.position) < 0.3) return `caméra dans ${x.id}`;
     }
     if (Math.abs(n.x) > 0.86 || n.y > 0.92 || n.y < -0.9 || n.z > 1) return 'hors du cadre';
-    const front = new T.Vector3(0, 0, 1).applyQuaternion(a.hero.root.quaternion).setY(0).normalize(), view = p.camera.position.clone().sub(h).setY(0).normalize();
-    if (who !== 'CLAUDE' && who !== 'CODEX' && who !== 'GEMINI') {
+        if (who !== 'CLAUDE' && who !== 'CODEX' && who !== 'GEMINI') {
       const q = a.hero.bones.head.getWorldQuaternion(new T.Quaternion()), face = new T.Vector3(0, 0, 1).applyQuaternion(q), eye = p.camera.position.clone().sub(h).normalize();
-      if (front.dot(view) < -0.15) return 'de dos';
+      if (face.dot(eye) < -0.1) return 'de dos';
       if (face.dot(eye) < 0.2) return 'visage peu visible';
     }
     const c = p.camera.position.clone(), d = h.clone().sub(c), L = d.length();
     ray.set(c, d.normalize()); ray.far = L - 0.15;
-    return ray.intersectObject(p.room.group, true).some((i) => i.object.visible && i.object.name !== 'miroir') ? 'caché' : null;
+    const shown = (o) => { for (; o; o = o.parent) if (!o.visible) return false; return true; }; // la chaise retirée du plan ne cache rien
+    return ray.intersectObject(p.room.group, true).some((i) => shown(i.object) && i.object.name !== 'miroir') ? 'caché' : null;
   };
   // À chaque image : un personnage dans un autre, ou Tobi dans un meuble.
   const body = () => {
@@ -51,7 +51,7 @@ window.auditCadrage = async (names) => {
       await step();
       for (const m of body()) if (!bad.includes(m)) bad.push(m);
       const l = now.dataset.line || '';
-      if (l !== last) { last = l; wait = 6; }
+      if (l !== last) { last = l; wait = 14; }
       if (wait > 0 && --wait === 0) { const m = /Ligne (\d+) : (TOBI|NOX|CLAUDE|CODEX|GEMINI) dit/.exec(l); const r = m && check(m[2]); if (r) bad.push(`ligne ${m[1]}, ${m[2]} : ${r}`); }
     }
     if (bad.length) report[o.textContent] = bad;

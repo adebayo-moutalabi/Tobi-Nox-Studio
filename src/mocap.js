@@ -1,8 +1,11 @@
 // Mouvements enregistrés sur de vraies personnes (Quaternius, CC0), déjà transposés sur Tobi par tools/mocap.mjs.
 import * as THREE from 'three';
-import DATA from './mocap.json';
+import BASE from './mocap.json';
+import MIXAMO from './mocap-mixamo.json';
 
-export function mocapClips() {
+export const mocapClips = () => [...clipsFrom(BASE), ...clipsFrom(MIXAMO)];
+
+function clipsFrom(DATA) {
   return Object.entries(DATA.clips).map(([name, c]) => {
     const raw = atob(c.q), bytes = new Uint8Array(raw.length);
     for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);

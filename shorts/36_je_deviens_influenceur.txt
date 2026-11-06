@@ -2,6 +2,7 @@
 # Pitch : Tobi filme sa première vidéo. Nox lit les statistiques en direct.
 
 AMBIANCE jour
+DATE Lundi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Objectif | 1 million d'abonnés | Pour vendredi

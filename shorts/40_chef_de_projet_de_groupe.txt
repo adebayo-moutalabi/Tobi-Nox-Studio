@@ -2,6 +2,7 @@
 # Pitch : Tobi dirige un projet de groupe. Claude Code veut comprendre pourquoi personne ne répond.
 
 AMBIANCE soir
+DATE Mardi
 DIRECT TOBI assis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau

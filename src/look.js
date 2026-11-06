@@ -36,7 +36,7 @@ function createPost(v) {
   ao.updateGtaoMaterial({ radius: 0.2, distanceExponent: 1.3, thickness: 1, scale: 1.1, samples: 8, distanceFallOff: 1, screenSpaceRadius: false });
   ao.blendIntensity = 0.85;
   composer.addPass(ao);
-  composer.addPass(new UnrealBloomPass(size.clone(), 0.28, 0.55, 0.82));
+  composer.addPass(new UnrealBloomPass(size.clone(), 0.14, 0.5, 0.94));
   composer.addPass(new OutputPass());
 
   v.composer = composer;
@@ -62,11 +62,11 @@ export function createLook(v) {
   const lamp = new THREE.SpotLight('#ffa873', 2.4, 5, 0.85, 0.75, 1.3);
   lamp.position.set(-0.1, 2.25, -0.3); lamp.target.position.set(0.95, 0.75, -0.9);
   lamp.castShadow = true; lamp.shadow.mapSize.set(1024, 1024); lamp.shadow.bias = -0.0006; lamp.shadow.normalBias = 0.02; lamp.shadow.radius = 6;
-  const wash = new THREE.PointLight('#6a48e0', 1.5, 7, 1.4); wash.position.set(-0.9, 1.9, 0.9);
-  const back = new THREE.PointLight('#4d38d8', 0.9, 4, 1.5); back.position.set(0.1, 1.5, -1.6);
+  const wash = new THREE.PointLight('#7f70c9', 1.1, 7, 1.4); wash.position.set(0.1, 2.1, 0.9);
+  const back = new THREE.PointLight('#6a5fc0', 0.5, 4, 1.5); back.position.set(0.1, 1.5, -1.6);
   const screen = new THREE.PointLight('#a9cfff', 0.7, 1.7, 1.5); screen.position.set(1.0, 1.02, -1.0);
-  const face = new THREE.PointLight('#ffcfa8', 2.6, 6, 1.1); face.position.set(0.25, 0.1, 0.1); camera.add(face); face.visible = false;
-  const bedside = new THREE.PointLight('#ffb27a', 1.8, 3.2, 1.4); bedside.position.set(-0.55, 1.5, 0.75); // lampe de chevet : le lit reste lisible
+  const face = new THREE.PointLight('#ffd9b8', 3, 6, 1.1); face.position.set(0.25, 0.1, 0.1); camera.add(face); face.visible = false;
+  const bedside = new THREE.PointLight('#ffb27a', 1.8, 3.2, 1.4); bedside.position.set(-0.2, 1.65, 0.75); // lampe de chevet : le lit reste lisible
   soir.add(lamp, lamp.target, wash, back, screen, bedside);
   const day = { bg: scene.background, hemi: lights.hemi.intensity, hc: lights.hemi.color.clone(), hg: lights.hemi.groundColor.clone(), env: scene.environmentIntensity, key: lights.key.intensity, fill: lights.fill.intensity };
 
@@ -80,10 +80,10 @@ export function createLook(v) {
 
   // Écran plein cadre
   const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: NIGHT, depthTest: false, depthWrite: false, toneMapped: false }));
-  backdrop.renderOrder = 900; backdrop.position.z = -0.45; backdrop.visible = false; backdrop.frustumCulled = false; ui.add(backdrop);
+  backdrop.renderOrder = 955; backdrop.position.z = -0.45; backdrop.visible = false; backdrop.frustumCulled = false; ui.add(backdrop);
   const cd = canvasTexture(900, 1100);
   const card = new THREE.Mesh(new THREE.PlaneGeometry(1, 1100 / 900), overlay(cd.tex));
-  card.renderOrder = 910; card.position.z = -0.42; card.visible = false; card.frustumCulled = false; ui.add(card);
+  card.renderOrder = 960; card.position.z = -0.42; card.visible = false; card.frustumCulled = false; ui.add(card);
   const I = { on: false, t: 0, title: '', big: '', small: '', value: null };
 
   function drawCard(f) {
@@ -105,13 +105,35 @@ export function createLook(v) {
         const rows = []; let row = '';
         for (const w of m.text.split(' ')) { if (ctx.measureText(`${row} ${w}`).width > max && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; }
         rows.push(row);
-        const bw = Math.max(...rows.map((r) => ctx.measureText(r).width)) + 56, bh = rows.length * size * 1.28 + 40, bx = m.me ? R - bw - 34 : X + 34;
+        const stamp = m.time ? (m.me ? `${m.time} ✓✓` : m.time) : '', sw = stamp ? stamp.length * 15 + 16 : 0;
+        const bw = Math.max(sw + 40, ...rows.map((r) => ctx.measureText(r).width + 56)), bh = rows.length * size * 1.28 + 40 + (stamp ? 26 : 0), bx = m.me ? R - bw - 34 : X + 34;
         ctx.fillStyle = m.me ? '#005c4b' : '#202c33'; ctx.beginPath(); ctx.roundRect(bx, y, bw, bh, 24); ctx.fill();
         ctx.fillStyle = '#e9edef'; rows.forEach((r, k) => ctx.fillText(r, bx + 28, y + 20 + size * 0.58 + k * size * 1.28));
+        if (stamp) { ctx.textAlign = 'right'; ctx.font = `400 25px ${FONT}`; ctx.fillStyle = m.me ? '#a8d8cc' : '#8fa2ad'; ctx.fillText(stamp, bx + bw - 20, y + bh - 22); ctx.textAlign = 'left'; ctx.font = `500 ${size}px ${FONT}`; }
         y += bh + 24;
       });
       ctx.fillStyle = '#1f2c34'; ctx.beginPath(); ctx.roundRect(X + 30, H - 112, R - X - 60, 66, 33); ctx.fill();
       ctx.fillStyle = '#8fa2ad'; ctx.font = `400 30px ${FONT}`; ctx.fillText('Message', X + 66, H - 78);
+      tex.needsUpdate = true; return;
+    }
+    if (I.kind === 'temps') { // un calendrier dont on arrache les pages : le temps passe, sans lire
+      const X = 90, Y = 120, CW = W - 180, CH = H - 230, sheet = (x, y, r, fade) => {
+        ctx.save(); ctx.translate(x + CW / 2, y + CH / 2); ctx.rotate(r); ctx.globalAlpha = fade; ctx.translate(-CW / 2, -CH / 2);
+        ctx.fillStyle = '#f8f4ea'; ctx.beginPath(); ctx.roundRect(0, 0, CW, CH, 34); ctx.fill();
+        ctx.fillStyle = '#d4453a'; ctx.beginPath(); ctx.roundRect(0, 0, CW, 190, [34, 34, 0, 0]); ctx.fill();
+        ctx.restore();
+      };
+      sheet(X, Y, 0, 1);
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#fff'; ctx.font = `700 60px ${FONT}`; ctx.fillText(I.title, W / 2, Y + 96, CW - 70);
+      const size = Math.min(190, Math.floor((CW - 60) / Math.max(1, I.big.length) * 1.75));
+      ctx.fillStyle = '#20222a'; ctx.font = `700 ${size}px ${DISPLAY}`; ctx.fillText(I.big, W / 2, Y + 440, CW - 60);
+      ctx.fillStyle = '#6a665e'; ctx.font = `600 50px ${FONT}`; ctx.fillText(I.small, W / 2, Y + 720, CW - 70);
+      for (const x of [W / 2 - 170, W / 2 + 170]) { ctx.fillStyle = '#c8c4bb'; ctx.beginPath(); ctx.roundRect(x - 14, Y - 42, 28, 84, 14); ctx.fill(); }
+      for (let n = 0; n < 3; n++) { // trois pages s'envolent l'une après l'autre
+        const u = (I.t - n * 0.2) / 0.45; if (u >= 1) continue;
+        const k = Math.max(0, u); sheet(X + k * k * 520 * (n % 2 ? -1 : 1), Y + k * k * 760, k * 0.5 * (n % 2 ? -1 : 1), 1);
+      }
       tex.needsUpdate = true; return;
     }
     const K = CARDS[I.kind] || CARDS.base;
@@ -142,25 +164,27 @@ export function createLook(v) {
     setLight(name) { v.renderer.toneMappingExposure = exposure * ({ vive: 1.2, douce: 0.85 }[name] || 1); },
     setMood(name) {
       const on = name === 'soir';
-      soir.visible = on; vignette.visible = on; face.visible = on; v.mood = name; polish = on;
-      exposure = on ? 1 : 1.05; v.renderer.toneMappingExposure = exposure;
+      soir.visible = on; vignette.visible = on; face.visible = true; face.intensity = on ? 3 : 0.45; v.mood = name; polish = on; // la lumière de face garde le visage lisible, de jour comme de nuit
+      exposure = on ? 1.02 : 0.9; v.renderer.toneMappingExposure = exposure;
       v.room?.sky.material.color.set(on ? '#141a3a' : '#fffdf4');
       v.room?.setShutter(on ? false : true);
       const L = lights;
       scene.background = on ? new THREE.Color(NIGHT) : day.bg;
-      L.hemi.intensity = on ? 0.46 : day.hemi;
-      L.hemi.color.set(on ? '#4d3f6e' : day.hc); L.hemi.groundColor.set(on ? '#17132c' : day.hg);
+      L.hemi.intensity = on ? 0.72 : day.hemi * 0.9;
+      L.hemi.color.set(on ? '#7a6d92' : day.hc); L.hemi.groundColor.set(on ? '#2e2838' : day.hg);
       scene.environmentIntensity = on ? 0.1 : day.env;
-      L.key.intensity = on ? 0 : day.key; L.fill.intensity = on ? 0 : day.fill;
+      L.key.intensity = on ? 0 : day.key * 0.78; L.fill.intensity = on ? 0 : day.fill * 0.8;
       L.key.visible = !on; L.fill.visible = !on; // pas d'ombre de soleil à calculer la nuit
     },
     insert(title, big, small, forced) {
       const text = `${title} ${big} ${small}`;
-      const kind = forced || (/plus tard|lendemain|suivante|\bnuit\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base');
+      const kind = forced || (/plus tard|lendemain|suivante|\bnuit\b|^il est\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base');
       Object.assign(I, { on: true, t: 0, title, big, small, done: false, kind });
       const m = /^([^\d]*)(\d+)(.*)$/.exec(big);
       I.value = m && Number(m[2]) >= 10 ? { head: m[1], n: Number(m[2]), tail: m[3] } : null;
+      if (kind === 'temps') I.value = null;
       backdrop.visible = true; card.visible = true; drawCard(0);
+      return kind;
     },
     chat(name, lines) { Object.assign(I, { on: true, t: 0, title: name, big: '', small: '', done: false, kind: 'tel', chat: lines, value: null }); backdrop.visible = true; card.visible = true; drawCard(1); },
     hideInsert() { I.on = false; backdrop.visible = false; card.visible = false; },
@@ -173,8 +197,9 @@ export function createLook(v) {
       backdrop.scale.set(h * d * camera.aspect * 1.05, h * d * 1.05, 1);
       const w = Math.min(h * 0.42 * camera.aspect * 0.86, h * 0.42 * 0.62), s = 0.86 + 0.14 * ease(Math.min(1, I.t / 0.2));
       card.scale.set(w * s, w * s, 1);
-      card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
+      if (I.kind === 'temps') card.rotation.set(0, 0, 0); else card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
       if (I.kind === 'tel' && I.t < I.chat.length * 0.8 + 0.1) drawCard(1);
+      if (I.kind === 'temps') { if (I.t < 1) drawCard(1); return; }
       if (I.value && I.t < 0.6) drawCard(I.t / 0.45); else if (I.value && !I.done) { drawCard(1); I.done = true; }
     },
   };

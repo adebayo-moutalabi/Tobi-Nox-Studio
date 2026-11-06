@@ -2,6 +2,7 @@
 # Pitch : Tobi décroche enfin un stage. Le titre est immense, le salaire beaucoup moins.
 
 AMBIANCE soir
+DATE Jeudi
 DIRECT TOBI miroir
 DIRECT NOX assis
 TABLEAU Stage trouvé ! | Head of Growth | Lundi 9 h

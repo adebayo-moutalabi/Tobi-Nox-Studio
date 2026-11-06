@@ -2,6 +2,7 @@
 # Pitch : Léa répond « ok » à Tobi. Gemini analyse ces deux lettres beaucoup trop sérieusement.
 
 AMBIANCE soir
+HEURE 23:40
 DIRECT TOBI marche fenetre
 DIRECT NOX assis
 DIRECT GEMINI apparait chaise
@@ -19,7 +20,7 @@ NOX dit (calme) Ça veut dire ok.
 PLAN gros GEMINI
 GEMINI dit (fier) Fun fact : j'ai déjà analysé ces deux lettres.
 TOBI marche centre &
-PC Analyse de « ok » | 40 pages | 9 interprétations | Amour : 3 %
+PC Word : Analyse_de_ok.docx | Analyse de « ok » | 40 pages | 9 interprétations | Amour : 3 %
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -43,7 +44,8 @@ PLAN gros NOX
 NOX dit (constat) Elle répond déjà.
 PLAN gros TOBI
 TOBI dit (excite) Lis ! Lis !
-TOBI message Léa | > ok | C'est qui ? | Je n'ai pas ton numéro.
+HEURE 23:47
+TOBI message Léa | > [23:47] ok | [23:52] C'est qui ? | [23:52] Je n'ai pas ton numéro.
 PLAN gros TOBI
 TOBI dit (triste) Et les trois pour cent ?
 ATTENDRE 0.3

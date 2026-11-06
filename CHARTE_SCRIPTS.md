@@ -17,7 +17,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Varier les ouvertures :** ne pas commencer toutes les répliques par le prénom de Nox.
 - **Animer par poses :** un personnage prend une pose claire, la tient avec de petits mouvements, puis change seulement quand l'histoire le demande. Assis, il garde les mains calmes.
 - **Montrer le temps :** chaque saut dans le temps a un écran clair, comme « Vingt-quatre heures plus tard ». Il reste assez longtemps pour être lu.
-- **Messages à l'écran :** un message de téléphone utilise `TOBI message Contact | Message reçu | > Message envoyé`, affiché comme une messagerie. Un contenu d'ordinateur utilise `PC`, affiché comme un écran de MacBook.
+- **Messages à l'écran :** un message de téléphone utilise `TOBI message Contact | Message reçu | > Message envoyé`, affiché comme une messagerie. Si l'heure compte, écrire `[23:47] Message reçu` ou `> [23:48] Message envoyé`. Un contenu d'ordinateur utilise `PC`, affiché comme un écran de MacBook.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
 - **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
@@ -53,7 +53,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Tobi** parle vite, avec enthousiasme et mauvaise foi. Il croit sincèrement à ce qu'il dit. Il n'est jamais bête, il rebondit toujours.
 
-**Nox** parle peu, calmement, avec un humour sec. Il pique sans humilier et reste du côté de Tobi. Ses répliques font rarement plus de six mots.
+**Nox** est d'abord une IA, dans un corps de petit robot. À l'écran, on dit plutôt « mon IA », et « mon robot » seulement si le gag vient de son corps. Ce choix pourra être revu plus tard. Il parle peu, calmement, avec un humour sec. Il pique sans humilier et reste du côté de Tobi. Ses répliques font rarement plus de six mots.
 
 **Les Aînés** sont les logos de Claude Code, Codex et Gemini, animés comme des personnages. Ils viennent juger Tobi ou se contredire.
 
@@ -187,7 +187,19 @@ NOX dit (resigne) J'appelle ta mère.
 
 **Plans :** `PLAN auto`, `PLAN gros TOBI`, `PLAN gros NOX`, `PLAN clavier`, `PLAN lit`, `PLAN large`. Changer de plan à presque chaque réplique.
 
-**Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle.
+**Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle. Pour ouvrir une application : `PC Word : Memoire.docx | Titre | Ligne`. Choisir l'outil que le personnage utiliserait vraiment : `Word`, `PowerPoint`, `Excel`, `Canva`, `Safari` ou `Chrome` (le nom devient l'adresse), `Banque`, `Terminal`, `Code`, `Notes`, `Finder`, `Stats`, `Discord` ou `Slack`, `Camera`, `Agenda`. Dans `Excel`, `Banque` et `Agenda`, écrire `Nom : valeur`. Dans `Stats`, écrire `Libellé | Chiffre`.
+
+**Saut dans le temps :** `TEMPS Trois jours plus tard | Jour 4 | Il reste 20 €`, puis les nouveaux placements en `DIRECT`. Le calendrier cache le changement, et le second ordinateur affiche le jour. 
+
+**Heure et date :** rien d'affiché ne doit contredire l'histoire.
+
+- Sans indication, l'horloge avance seule, dans une plage neutre : 13 h à 18 h de jour, 20 h à 23 h 30 le soir.
+- Dès qu'un script dit une heure, écrire `HEURE 23:59` après `AMBIANCE`. L'heure imposée ne bouge plus. Si elle change dans l'histoire, remettre `HEURE`.
+- Dès qu'un script dit un jour, écrire `DATE Mardi`. Pour une échéance, comme « rendu vendredi », choisir un jour d'avant. Pour un mois précis, écrire `DATE Mardi 9 juin`.
+- Sans `DATE`, le mois affiché est novembre.
+- Un écran `TEMPS` ou `INSERT` fait avancer la date : « Le lendemain » ajoute un jour, « Trois jours plus tard » en ajoute trois. Un titre comme `INSERT Il est | 6 h 30 | ...` règle l'heure.
+- Un message avec `[23:47]` doit suivre l'heure de l'épisode.
+- Après chaque script, lancer `node tools/audit-temps.mjs`.
 
 **Téléphone :** `TOBI appelle`, puis `TOBI raccroche`.
 

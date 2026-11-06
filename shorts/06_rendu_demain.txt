@@ -2,6 +2,7 @@
 # Pitch : Mémoire à rendre demain à 8 h, trois pages écrites. Tobi compte sur son IA, qui a d'autres plans.
 
 AMBIANCE soir
+HEURE 00:00
 DIRECT TOBI travaille
 DIRECT NOX travaille
 DIRECT TOBI pivote

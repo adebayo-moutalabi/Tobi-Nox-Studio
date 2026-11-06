@@ -2,6 +2,7 @@
 # Pitch : Pour une fois, Tobi a tout révisé. Il reste un petit détail à vérifier.
 
 AMBIANCE jour
+DATE Mardi 11 février
 DIRECT TOBI marche tapis
 DIRECT NOX travaille
 DIRECT NOX pivote

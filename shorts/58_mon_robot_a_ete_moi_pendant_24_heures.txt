@@ -20,7 +20,7 @@ TOBI dit (content) Tout. Moi, je reste au lit pour me reposer.
 INSERT Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
 PLAN gros TOBI
 TOBI dit (content) Alors, Nox ? T'as survécu à ma vie ?
-PC Bilan de la journée | Loyer payé | Devoir rendu | 47 mails traités
+PC Notes : Bilan de la journée | Loyer payé | Devoir rendu | 47 mails traités
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX

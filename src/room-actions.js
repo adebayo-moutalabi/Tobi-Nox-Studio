@@ -2,6 +2,7 @@
 import * as THREE from 'three';
 
 const P = (x, z) => new THREE.Vector3(x, 0, z);
+const LYING = 0.1; // couché, le corps repose sur le matelas
 const ROOM = 0.42, EAST = Math.PI / 2, WEST = -Math.PI / 2, NORTH = Math.PI;
 
 export function roomActions(v, room) {
@@ -32,7 +33,11 @@ export function roomActions(v, room) {
       // Il arrive devant la chaise tournée vers lui, s'assoit, puis pivote vers le bureau : il ne traverse rien.
       room.chair.rotation.y = ROOM;
       await arrive(a, P(0.42 + 0.3 * Math.sin(ROOM), -1.05 + 0.3 * Math.cos(ROOM)), ROOM);
-      a.spot = { exit: async () => { swivel(a, ROOM, true); a.hero.motion.clearPose(); await v.stand(a); room.chair.rotation.y = EAST; } };
+      a.spot = { exit: async () => { // il se lève, puis avance d'un pas : debout, ses jambes ne restent pas dans l'assise
+        swivel(a, ROOM, true); a.hero.motion.clearPose(); await v.stand(a);
+        await v.glide(a, P(0.42, -0.46), ROOM, 0.45);
+        room.chair.rotation.y = EAST;
+      } };
       await v.sit(a, 'chair', true);
       await swivel(a, EAST);
       a.hero.motion.togglePose('type');
@@ -59,17 +64,21 @@ export function roomActions(v, room) {
     }
   }
   async function sleep(a) {
-    const out = P(-0.42, -0.05);
+    const out = big(a) ? P(-0.26, -0.05) : P(-0.42, -0.05);
     await arrive(a, out, EAST);
     const expr = a.hero.expression;
     if (big(a)) { // s'assoit au bord, puis s'allonge ; au réveil, le chemin inverse
+      a.hero.setLift(0.15); // comme au bord du lit : sur le matelas, pas dedans
       await v.sit(a, 'chair', true);
-      v.glide(a, new THREE.Vector3(-0.95, 0, -0.05), NORTH, 1.5);
+      a.hero.setLift(LYING, true);
+      v.wait(0.4).then(() => v.glide(a, new THREE.Vector3(-0.95, 0, -0.05), NORTH, 1.2)); // les jambes montent d'abord, puis il glisse sur le matelas
       await a.hero.motion.transition('seat_to_lie', 'lying', 'lie');
       a.spot = { exit: async () => {
         a.hero.setExpression(expr);
+        a.hero.setLift(0.15);
         v.glide(a, out, EAST, 1.7);
         await a.hero.motion.transition('lie_to_seat', 'sitting', 'chair');
+        a.hero.setLift(0);
         await v.stand(a);
       } };
     } else {

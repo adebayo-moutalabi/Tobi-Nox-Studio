@@ -39,6 +39,8 @@ TOBI dit (colere) Nox, reviens travailler ! Qui va me réveiller, payer le loyer
 PLAN gros NOX
 NOX dit (constat) Pas moi. Je suis en grève.
 INSERT Le lendemain | Réveil : 14 h | Loyer : non payé
+AMBIANCE jour
+HEURE 14:05
 PLAN gros TOBI
 TOBI dit (triste) D'accord, Nox. Je te propose une augmentation.
 PLAN gros NOX

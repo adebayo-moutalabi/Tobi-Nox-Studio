@@ -1,7 +1,8 @@
 # ROUTINE DE MILLIONNAIRE : J'AI TENU 11 MINUTES
 # Pitch : Tobi veut se lever à cinq heures comme les millionnaires. Il tient onze minutes.
 
-AMBIANCE jour
+AMBIANCE soir
+HEURE 05:00
 DIRECT TOBI dort
 DIRECT NOX travaille
 DIRECT NOX pivote

@@ -42,7 +42,7 @@ TOBI dit (fier) Là, à la place de la chaise.
 PLAN gros NOX
 NOX dit (punchline) Tu travailles assis sur ton lit.
 TOBI assis
-PLAN gros TOBI
+PLAN auto
 TOBI dit (gene) C'est temporaire.
 PLAN gros NOX
 NOX dit (resigne) J'appelle ta mère.

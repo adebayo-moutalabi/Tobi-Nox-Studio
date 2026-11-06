@@ -60,7 +60,7 @@ export function createMotion(root, bones, clips) {
       c.userData.moved = [];
       for (const tr of c.tracks) {
         const name = tr.name.split('.')[0];
-        if (!tr.name.endsWith('.quaternion') || LOWER.test(name) || !rest[tr.name]) continue;
+        if (!tr.name.endsWith('.quaternion') || LOWER.test(name) || !rest[tr.name] || (c.name.startsWith('mx_') && /^(head|neck)$/.test(name))) continue; // la tête garde son regard et reste tournée vers l'autre
         let max = 0;
         for (let i = 0; i < tr.values.length; i += 4) max = Math.max(max, a.fromArray(tr.values, i).angleTo(rest[tr.name]));
         if (max > 0.05) c.userData.moved.push({ bone: bones[name], it: tr.createInterpolant() });

@@ -2,6 +2,7 @@
 # Pitch : Midi, partiels dans une semaine. Tobi se lève enfin pour commencer. Presque.
 
 AMBIANCE jour
+HEURE 12:00
 DIRECT TOBI dort
 DIRECT NOX travaille
 DIRECT NOX pivote

@@ -3,7 +3,7 @@
 import * as THREE from 'three';
 import { V, Part, jit, hash, ring } from './lowpoly.js';
 import { box as rawBox, mesh, yLoft, createProp } from './props.js';
-import { createLaptop, createBoard } from './desk-screen.js';
+import { createLaptop, createBoard, createLockScreen } from './desk-screen.js';
 
 export const C = {
   wall: '#f1e9dc', wallSoft: '#ebe2d4', red: '#b8222a', floor: '#b5aca2', rug: '#5a5b61', white: '#f1eee8',
@@ -241,11 +241,13 @@ function buildBedding(p, bx, bz, bl) {
   const pil = new THREE.IcosahedronGeometry(1, 1); pil.scale(0.3, 0.075, 0.2); pil.translate(bx, 0.6, bz + bl / 2 - 0.23);
   p.geo(pil, { color: '#faf8f3', skin: 'x', vary: 0.04 });
 }
+let LID = null; // position de l'écran du second ordinateur
 function buildDeskItems(p) {
   const y = 0.745, x = 1.1;
   // Imprimante sans marque
-  box(p, [x, y + 0.085, -1.58], [0.34, 0.17, 0.42], '#e9e7e2'); box(p, [x, y + 0.178, -1.6], [0.3, 0.02, 0.38], '#dcdad5');
-  box(p, [x - 0.2, y + 0.03, -1.58], [0.14, 0.012, 0.26], '#d4d2cc');
+  const TURN = 0.445, turned = new THREE.Matrix4().makeTranslation(x, y, -1.58).multiply(new THREE.Matrix4().makeRotationY(TURN)); // tournée vers la pièce
+  box(p, [0, 0.085, 0], [0.34, 0.17, 0.42], '#e9e7e2', { m: turned }); box(p, [0, 0.178, -0.02], [0.3, 0.02, 0.38], '#dcdad5', { m: turned });
+  box(p, [-0.2, 0.03, 0], [0.14, 0.012, 0.26], '#d4d2cc', { m: turned });
   // Ordinateurs : l'un sur l'imprimante, l'autre devant la chaise
   const laptop = (cx, cy, cz, yaw) => {
     const m = new THREE.Matrix4().makeRotationY(yaw), t = new THREE.Matrix4().makeTranslation(cx, cy, cz);
@@ -254,8 +256,9 @@ function buildDeskItems(p) {
     const h = t.clone().multiply(m).multiply(new THREE.Matrix4().makeTranslation(0, 0.012, -0.115)).multiply(new THREE.Matrix4().makeRotationX(-0.28));
     box(p, [0, 0.115, 0], [0.34, 0.23, 0.01], '#bdbcb9', { m: h });
     box(p, [0, 0.115, 0.0055], [0.31, 0.2, 0.002], '#2a2c30', { m: h, vary: 0 });
+    LID = h;
   };
-  laptop(x + 0.02, y + 0.19, -1.6, -Math.PI / 2);
+  laptop(x + 0.02, y + 0.19, -1.6, -Math.PI / 2 + TURN);
   // Gourde, bouteille, mouchoirs, biscuits
   const small = new Part({});
   yLoft(small, [[0, 0.033], [0.17, 0.033], [0.2, 0.024], [0.235, 0.024]], 10, '#efece6');
@@ -356,6 +359,10 @@ export function createRoom({ Reflector } = {}) {
   const laptop = createLaptop(); laptop.group.position.set(0.98, 0.745, -1.05); laptop.group.rotation.y = -Math.PI / 2; group.add(laptop.group);
   const board = createBoard(); board.group.position.set(0.42, 1.08, -1.84); board.group.rotation.x = -0.08; group.add(board.group);
 
+  // Second ordinateur : écran verrouillé, avec l'heure et le jour de l'histoire
+  const lock = createLockScreen();
+  lock.mesh.applyMatrix4(LID.clone().multiply(new THREE.Matrix4().makeTranslation(0, 0.115, 0.0075))); group.add(lock.mesh);
+
   // Porte d'entrée, articulée, avec ses affiches (contenu neutre)
   const ed = new Part(C);
   box(ed, [0.46, 1.02, 0], [0.9, 2.04, 0.03], C.white, { vary: 0.008 });
@@ -375,8 +382,8 @@ export function createRoom({ Reflector } = {}) {
 
   const rect = [[-0.42, 0.72, -1.6, 1.58], [-0.42, 0.42, 1.58, 2.8]];
   const room = {
-    group, lamp, sky, fridgeDoor, entryDoor, shutter, chair, sillBag, laptop, board, walls: wm, solid: group.userData.solid,
-    update(dt) { laptop.update(dt); },
+    group, lamp, sky, fridgeDoor, entryDoor, shutter, chair, sillBag, laptop, board, lock, walls: wm, solid: group.userData.solid,
+    update(dt) { laptop.update(dt); lock.update(dt); },
     surfaceNear(q, from) { return from.x > 0.2 && from.z < 0 ? { x: 0.92, y: 0.745, z: Math.min(-0.3, Math.max(-0.7, q.z)) } : null; },
     center: V(0, 0.7, 0.3),
     clamp(q) { // ramène un point dans la zone où l'on peut marcher

@@ -1,7 +1,9 @@
 # IL ME RESTE 60 SECONDES POUR RENDRE MON DEVOIR
-# Pitch : Il est 23 h 58. Tobi doit rendre son devoir avec l'aide de deux IA, et le compte à rebours tourne.
+# Pitch : Il est 23 h 59. Tobi doit rendre son devoir avec l'aide de deux IA, et le compte à rebours tourne.
 
 AMBIANCE soir
+HEURE 23:59
+DATE Vendredi
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
@@ -38,7 +40,7 @@ CODEX dit (fier) C'est réglé. J'envoie quel fichier ?
 PLAN gros TOBI
 TOBI dit (panique) Le final !
 TOBI leve &
-PC Dossier Droit | final | final_FINAL | final_FINAL_vrai
+PC Finder : Dossier Droit | final | final_FINAL | final_FINAL_vrai
 PLAN pc
 ATTENDRE 1.6
 PLAN gros CODEX
@@ -59,6 +61,7 @@ TOBI dit (colere) Non ! Envoie !
 COMPTEUR Il reste 1 s
 BRUIT ding
 COMPTEUR Envoyé
+HEURE 00:00
 PLAN gros TOBI
 TOBI dit (excite) C'est passé ! Je suis un génie !
 PLAN gros NOX

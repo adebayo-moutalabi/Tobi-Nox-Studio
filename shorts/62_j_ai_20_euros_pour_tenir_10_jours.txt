@@ -19,7 +19,8 @@ NOX dit (calme) Même si tu me supplies ?
 PLAN gros TOBI
 TOBI dit (fier) Surtout si je te supplie. Je suis un homme de parole.
 COMPTEUR Jour 1 sur 10 · 20 €
-PC Achat en cours | Kebab : 9 € | Refusé par Nox
+TEMPS Ça commence | Jour 1 | Il reste 20 €
+PC Safari : kebab-rennes.fr/commande | Kebab : 9 € | Refusé par Nox
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -29,6 +30,8 @@ NOX dit (sec) T'as dit : surtout si je te supplie.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'était l'ancien Tobi. Le nouveau a faim.
 COMPTEUR Jour 4 sur 10 · 20 €
+TEMPS Trois jours plus tard | Jour 4 | Il reste 20 €
+DIRECT TOBI assis
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Nox, c'est pour mes études. Il me faut un cahier à neuf euros, avec sauce.
 PLAN gros NOX
@@ -36,6 +39,9 @@ NOX dit (sec) Un cahier avec sauce.
 PLAN gros TOBI
 TOBI dit (gene) Et des frites. Pour prendre des notes.
 COMPTEUR Jour 7 sur 10 · 20 €
+TEMPS Trois jours plus tard | Jour 7 | Il reste 20 €
+AMBIANCE soir
+DIRECT TOBI marche tapis
 PLAN gros TOBI
 TOBI dit (colere) Débloque ma carte, ou je te débranche !
 PLAN gros NOX
@@ -43,6 +49,9 @@ NOX dit (calme) J'avais prévu ça. J'ai caché ton chargeur.
 PLAN gros TOBI
 TOBI dit (panique) Mon chargeur ? Rends-le-moi, Nox !
 COMPTEUR Jour 10 sur 10 · 20 €
+TEMPS Trois jours plus tard | Jour 10 | Il reste 20 €
+AMBIANCE jour
+DIRECT TOBI assis
 PLAN gros NOX
 NOX dit (calme) Bravo, Tobi. T'as tenu dix jours, et il te reste vingt euros.
 PLAN gros TOBI

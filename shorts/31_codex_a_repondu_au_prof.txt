@@ -2,6 +2,7 @@
 # Pitch : Tobi demande à Codex une petite excuse pour son retard. Il a réglé le problème à sa façon.
 
 AMBIANCE jour
+DATE Jeudi
 DIRECT TOBI assis
 DIRECT NOX assis
 DIRECT CODEX apparait chaise

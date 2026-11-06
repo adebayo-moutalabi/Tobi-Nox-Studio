@@ -16,7 +16,7 @@ PLAN gros TOBI
 TOBI dit (surpris) Attends. J'ai plus d'argent, et ils m'en prennent encore ?
 PLAN gros NOX
 NOX dit (constat) Oui. Ils te font payer le fait de ne pas en avoir.
-PC Compte de Tobi | Avant : -3 € | Frais : -8 € | Maintenant : -11 €
+PC Banque : Compte de Tobi | Avant : -3 € | Frais : -8 € | Maintenant : -11 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

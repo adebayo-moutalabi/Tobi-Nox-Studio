@@ -2,6 +2,8 @@
 # Pitch : Le voisin se plaint du bruit. Tobi héberge ses clients sous son lit, et Codex veut l'optimiser.
 
 AMBIANCE soir
+HEURE 22:40
+DATE Mardi 9 juin
 DIRECT TOBI assis
 DIRECT NOX marche tapis
 DIRECT CODEX apparait bureau

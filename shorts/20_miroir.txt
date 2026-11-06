@@ -2,6 +2,7 @@
 # Pitch : Tobi répète son discours de CEO pour un oral de fac. Nox l'écoute depuis le lit.
 
 AMBIANCE jour
+DATE Mercredi
 DIRECT NOX assis
 DIRECT TOBI miroir
 TABLEAU Oral de lundi | Présentation personnelle | 3 minutes

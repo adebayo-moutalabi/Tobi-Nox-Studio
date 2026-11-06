@@ -2,6 +2,7 @@
 # Pitch : Tobi a mal à la gorge. Trois IA tentent de l'aider, puis sa mère répond en trois mots.
 
 AMBIANCE soir
+DATE Jeudi
 DIRECT TOBI assis
 DIRECT NOX marche tapis
 DIRECT CLAUDE apparait rebord

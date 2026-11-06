@@ -2,6 +2,7 @@
 # Pitch : Partiel à 8 h. Tobi charge Claude Code de le réveiller. Il ne veut surtout pas le déranger.
 
 AMBIANCE jour
+HEURE 06:30
 DIRECT TOBI dort
 DIRECT NOX travaille
 DIRECT NOX pivote

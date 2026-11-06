@@ -18,7 +18,7 @@ TOBI dit (illumine) Codex ! Fais-moi décoller. Je veux un million d'utilisateur
 PLAN gros CODEX
 CODEX dit (fier) C'est réglé.
 TOBI leve &
-PC PastApp en direct | Utilisateurs | 1 000 000
+PC Stats : PastApp en direct | Utilisateurs | 1 000 000
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -42,7 +42,7 @@ PLAN gros TOBI
 TOBI dit (content) Merci. Et les vrais ?
 PLAN gros CODEX
 CODEX dit (constat) Quels vrais ?
-PC PastApp en direct | Utilisateurs | 0
+PC Stats : PastApp en direct | Utilisateurs | 0
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

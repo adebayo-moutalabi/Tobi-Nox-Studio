@@ -2,6 +2,7 @@
 # Pitch : Gemini a déjà tout lu. Tobi aurait préféré qu'il oublie certaines choses.
 
 AMBIANCE jour
+DATE Lundi
 DIRECT TOBI assis
 DIRECT NOX assis
 DIRECT GEMINI apparait bureau

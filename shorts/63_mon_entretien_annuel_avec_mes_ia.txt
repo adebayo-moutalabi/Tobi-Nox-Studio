@@ -19,7 +19,7 @@ TOBI dit (surpris) Un entretien ? Mais c'est moi le patron, ici !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je vais être honnête avec toi : on a regardé ton année.
 TOBI marche centre &
-PC Résultats de Tobi | Réveil à l'heure : 4 % | Devoirs rendus : 2 | Vaisselle : 0
+PC Excel : Résultats_Tobi.xlsx | Réveil à l'heure : 4 % | Devoirs rendus : 2 | Vaisselle : 0
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

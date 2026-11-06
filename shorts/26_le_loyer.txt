@@ -2,6 +2,7 @@
 # Pitch : Fin de mois. Tobi, étudiant en galère, cherche comment payer sa chambre CROUS.
 
 AMBIANCE soir
+DATE Mercredi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Loyer CROUS : 260 € | Compte : 80 € | Date limite : vendredi

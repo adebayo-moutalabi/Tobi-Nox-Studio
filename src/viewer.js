@@ -63,7 +63,7 @@ export function startViewer(cfg) {
     key.intensity = b.key; hemi.intensity = b.hemi; scene.environmentIntensity = b.env;
   }
   const room = cfg.room ? cfg.room() : null;
-  const fillLight = new THREE.PointLight('#ffefd9', 5, 6, 1.5); fillLight.position.set(0, 1.5, -1.3);
+  const fillLight = new THREE.PointLight('#ffefd9', 5, 6, 1.5); fillLight.position.set(0, 2.3, -0.3); // au plafond : à hauteur de tête, elle brûlait le visage
   setBackdrop(cfg.backdrop || 'studio');
   if (room) {
     scene.add(room.group); floor.visible = false; scene.fog = null;
@@ -144,11 +144,29 @@ export function startViewer(cfg) {
       marker.scale.setScalar(A.markerScale); marker.position.set(p.x, 0.004, p.z); marker.visible = true;
     }
   });
-  function walkTo(a, p, run = false) {
+  function walkStraight(a, p, run) {
     return new Promise((res) => {
       a.arrive?.();
       a.goal = clampP(p.clone().setY(0)); a.run = run; a.arrive = res; a.faceYaw = null;
     });
+  }
+  // La chaise est le seul meuble au milieu du passage : on la contourne du côté de la pièce.
+  function aroundChair(a, p) {
+    const C = room?.chair.position, from = pos(a);
+    if (!C) return null;
+    const d = p.clone().sub(from).setY(0), L = d.length(), r = a.id === 'tobi' ? 0.46 : 0.34;
+    if (L < 0.05 || Math.hypot(p.x - C.x, p.z - C.z) < r) return null;
+    const t = Math.max(0, Math.min(1, C.clone().sub(from).setY(0).dot(d) / (L * L))), near = from.clone().addScaledVector(d, t).setY(0);
+    if (t <= 0 || t >= 1 || Math.hypot(near.x - C.x, near.z - C.z) >= r) return null;
+    const n = new THREE.Vector3(-d.z, 0, d.x).normalize();
+    if (n.x * -C.x + n.z * -C.z < 0) n.negate();
+    return clampP(new THREE.Vector3(C.x, 0, C.z).addScaledVector(n, r + 0.04));
+  }
+  function walkTo(a, p, run = false) {
+    const via = aroundChair(a, p);
+    if (!via) return walkStraight(a, p, run);
+    const trip = (a.trip = (a.trip || 0) + 1);
+    return walkStraight(a, via, run).then(() => (a.trip === trip ? walkStraight(a, p, run) : undefined));
   }
   const turn = (cur, want, k) => {
     let d = (want - cur + Math.PI) % (Math.PI * 2);
@@ -239,11 +257,12 @@ export function startViewer(cfg) {
     lq.t.sub(lq.h);
     { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim * 0.4, Math.min(lim, lq.t.y)); } // ne casse pas la nuque, et le visage reste visible quand il parle à quelqu'un de plus bas
     lq.t.normalize();
+    if (a.cheat) { head.getWorldPosition(lq.f); lq.f.subVectors(camera.position, lq.f).normalize(); lq.t.lerp(lq.f, a.cheat).normalize(); } // il parle à l'autre, mais son visage reste ouvert vers nous
     head.getWorldQuaternion(lq.w);
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
     lq.d.setFromUnitVectors(lq.f, lq.t);
     const ang = 2 * Math.acos(Math.min(1, Math.abs(lq.d.w)));
-    const most = a.extra ? 0.2 : a.hero.seat ? 1.5 : 1.15; // assis côte à côte, il tourne franchement la tête
+    const most = a.extra ? 0.2 : a.id === 'tobi' && a.hero.seat ? 1.5 : 1.05; // assis côte à côte, il tourne franchement la tête
     if (ang > most) lq.d.slerp(lq.id, 1 - most / ang);
     lq.d.multiply(lq.w);
     head.parent.getWorldQuaternion(lq.p);

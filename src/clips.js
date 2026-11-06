@@ -645,6 +645,7 @@ export function buildClips(bones) {
   for (const r of recorded) {
     const i = out.findIndex((c) => c.name === r.name);
     if (r.name.startsWith('talk_')) { r.userData.layer = 'upper'; r.userData.weight = 0.3; }
+    if (r.name.startsWith('mx_')) { r.userData.layer = 'upper'; r.userData.weight = 0.92; }
     if (i >= 0) out[i] = r; else out.push(r);
   }
   return out;

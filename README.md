@@ -32,7 +32,11 @@ Tout tourne dans le navigateur, sans logiciel 3D à installer.
 | `histoire.txt` | Le script en cours, avec la liste des instructions en tête |
 | `CHARTE_SCRIPTS.md` | Comment écrire un épisode : ton, phrases de la série, format |
 | `REPRISE.md` | Pour reprendre le projet : fonctionnement, dépendances, où changer quoi |
-| `JOURNAL.md` | Tout ce qui a été fait, commit par commit, et ce qu'il reste à faire |
+| `JOURNAL.md` | Tout ce qui a été fait, commit par commit |
+| `TACHES.md` | Ce qu'il reste à faire |
+| `docs/GUIDE_TECHNIQUE.md` | Comment modifier le code, recette par recette |
+| `AGENTS.md` | Les consignes pour une IA qui reprend le projet |
+| `PREFERENCES_AUTEUR.md` | Les retours de l'auteur, à respecter |
 | `BIBLE.md` | L'univers, les personnages, la structure et la saison 1 |
 | `SHORTS.md` | Le format, les règles d'écriture, le workflow et le suivi des Shorts |
 | `shorts/` | Les scripts et les répliques de chaque Short |
@@ -46,6 +50,7 @@ Tout tourne dans le navigateur, sans logiciel 3D à installer.
 ```bash
 npm install
 node build.mjs
+node tools/audit-temps.mjs
 node export-glb.mjs tobi
 node export-glb.mjs nox
 node export-glb.mjs chambre

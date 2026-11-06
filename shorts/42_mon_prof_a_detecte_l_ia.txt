@@ -20,7 +20,7 @@ PLAN gros CLAUDE
 CLAUDE dit (curieux) Qu'est-ce que t'as relu exactement ?
 PLAN gros TOBI
 TOBI dit (gene) Le titre.
-PC Dernière phrase du devoir | Je vais être honnête avec toi : | ce devoir mérite mieux que ça.
+PC Word : Devoir_Droit.docx | Dernière phrase du devoir | Je vais être honnête avec toi : | ce devoir mérite mieux que ça.
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
