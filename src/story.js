@@ -104,6 +104,7 @@ export function createPlayer(v, ui) {
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
   const look = createLook(v);
+  for (const x of v.actors) x.hero.avoid = [{ x0: 0.78, x1: 1.4, z0: -1.88, z1: -0.12, top: 0.745 }];
   // Le soir est l'ambiance par défaut : ses effets sont préparés dès l'ouverture, pas pendant l'export.
   look.setMood('soir');
   look.warm();
@@ -353,9 +354,9 @@ export function createPlayer(v, ui) {
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = a.hero.seat ? 'talk_sit' : 'talk_stand'; // gestuelle enregistrée, si elle est activée
         const geste = !a.hero.seat && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
-        const talkPose = !geste && !a.hero.seat && a.id === 'tobi' && !a.hero.motion.pose && a.hero.motion.has(talkClip) ? talkClip : null;
+        const emotion = EMOTIONS[c.tone], talkPose = !a.hero.seat && a.id === 'tobi' && !a.hero.motion.pose ? (emotion && a.hero.motion.has(emotion) ? emotion : !geste && a.hero.motion.has(talkClip) ? talkClip : null) : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
-        if (geste && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
+        if (geste && !emotion && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {
           voice.env ||= envelope(voice.buffer);
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
@@ -496,8 +497,10 @@ export function createPlayer(v, ui) {
 }
 
 // Le téléphone posé contre l'oreille, dans la main droite.
-const PHONE_EAR = { pos: [0, -0.04, 0.05], rot: [0, -Math.PI / 2, 0] };
+const PHONE_EAR = { pos: [-0.045, -0.05, 0.03], rot: [0, -Math.PI / 2, 0.1] };
 const ENERGIE = { excite: 1.35, colere: 1.4, panique: 1.5, illumine: 1.3, fier: 1.1, triste: 0.55, gene: 0.75, calme: 0.8, sec: 0.6, constat: 0.65, chuchote: 0.5, resigne: 0.6 };
+
+const EMOTIONS = { panique: 'emo_panique', surpris: 'emo_surpris', colere: 'emo_colere', fier: 'emo_fier', triste: 'emo_triste', curieux: 'emo_doute', illumine: 'emo_idee', gene: 'emo_gene', mauvaisefoi: 'emo_justifie' };
 
 const QUALITE = { max: 1440, hd: 1080, fast: 720 };
 

@@ -83,6 +83,9 @@ export function clearRot(bones) {
     b.userData.off = null;
   }
 }
+// Poses de mains pendant la parole : avant-bras gauche, droit, ouverture gauche, droite.
+const HANDS = [[-0.42, -0.14, 0, 0], [-0.16, -0.72, 0, -0.08], [-0.68, -0.2, 0.08, 0], [-0.52, -0.48, 0.14, -0.14], [-0.22, -0.3, 0, 0]];
+
 // Le corps accompagne la voix : chaque mot appuyé déclenche un petit élan, jamais les deux mains en même temps.
 export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   const T = state.talk, target = T ? (T.env ? T.level : 0.7) : 0;
@@ -93,6 +96,8 @@ export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   if (T && level > 0.5 && level - slow > 0.1 && state.sincePush > 0.6) { // un mot appuyé
     state.sincePush = 0; state.push = 0.65 + 0.35 * level;
     if (Math.random() < 0.35) state.hand = 1 - (state.hand || 0);
+    state.sincePose = (state.sincePose || 0) + 1;
+    if (state.sincePose >= 2) { state.sincePose = 0; state.handPose = (state.handPose + 1 + Math.floor(Math.random() * (HANDS.length - 1))) % HANDS.length || 0; }
   }
   state.slowLevel = slow + (level - slow) * Math.min(1, dt * 9);
   state.push = (state.push || 0) * Math.exp(-dt * 4.8);
@@ -101,10 +106,12 @@ export function talkBody(state, dt, head, chest, gain = 1, arms = null) {
   if (b < 0.01 && p < 0.01) return;
   addRot(head, -0.02 * b - 0.1 * p, 0.05 * b * Math.sin(t * 2.1), 0.03 * b * Math.sin(t * 1.7));
   addRot(chest, -0.03 * p, 0.025 * b * Math.sin(t * 1.3), 0);
-  if (arms) {
-    const side = h ? 1 : -1; // la main s'ouvre un peu sur le côté, sans monter et descendre sans arrêt
-    addRot(arms[h], -0.05 * b - 0.16 * p, side * 0.12 * p, 0);
-    addRot(arms[1 - h], -0.02 * b, 0, 0);
+  if (arms) { // des poses tenues, qui changent avec la phrase : jamais la même boucle
+    const [fl, fr, al, ar] = arms, pose = HANDS[state.handPose || 0], k = 1 - Math.exp(-dt * 6.5), lift = T ? 1 : 0;
+    state.hands = (state.hands || [0, 0, 0, 0]).map((x, n) => x + (pose[n] * lift - x) * k);
+    const [l, r, ol, or] = state.hands, push = 0.12 * p;
+    addRot(fl, l - (h === 0 ? push : 0), ol, 0); addRot(fr, r - (h === 1 ? push : 0), or, 0);
+    addRot(al, l * 0.24, 0, 0); addRot(ar, r * 0.24, 0, 0);
   }
 }
 
@@ -138,6 +145,23 @@ export function keepHandsApart(root, bones) {
     to.copy(hand); parent.worldToLocal(to);
     bones[`hand_${n}`].getWorldPosition(from); parent.worldToLocal(from);
     parent.worldToLocal(shoulder);
+    from.sub(shoulder).normalize(); to.sub(shoulder).normalize();
+    arm.quaternion.premultiply(turnBy.setFromUnitVectors(from, to));
+  }
+}
+
+// Les mains ne traversent pas les meubles : le bras remonte juste au-dessus du plateau.
+export function keepHandsOut(root, bones, zones) {
+  if (!zones) return;
+  root.updateMatrixWorld(true);
+  for (const n of ['L', 'R']) {
+    const arm = bones[`arm_${n}`], parent = arm.parent;
+    bones[`hand_${n}`].getWorldPosition(hand);
+    const z = zones.find((a) => hand.x > a.x0 && hand.x < a.x1 && hand.z > a.z0 && hand.z < a.z1 && hand.y < a.top + 0.05 && hand.y > a.top - 0.4);
+    if (!z) continue;
+    arm.getWorldPosition(shoulder);
+    to.copy(hand).setY(z.top + 0.06); from.copy(hand);
+    parent.worldToLocal(to); parent.worldToLocal(from); parent.worldToLocal(shoulder);
     from.sub(shoulder).normalize(); to.sub(shoulder).normalize();
     arm.quaternion.premultiply(turnBy.setFromUnitVectors(from, to));
   }

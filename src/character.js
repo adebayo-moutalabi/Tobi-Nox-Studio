@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
-import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart } from './talk.js';
+import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart, keepHandsOut } from './talk.js';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
 export const PALETTE = {
@@ -618,8 +618,9 @@ export function createCharacter() {
         const k = state.lift / 0.09;
         for (const n of ['L', 'R']) { addRot(bones[`upleg_${n}`], 0.24 * k, 0, 0); addRot(bones[`leg_${n}`], -0.28 * k, 0, 0); }
       }
-      talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.seat ? null : motion.handsFree ? [bones.forearm_L, bones.forearm_R] : null);
+      talkBody(state, dt, bones.head, bones.chest, api.energy || 1, motion.seat ? null : motion.handsFree ? [bones.forearm_L, bones.forearm_R, bones.arm_L, bones.arm_R] : null);
       if (motion.handsFree) keepHandsApart(root, bones);
+      keepHandsOut(root, bones, api.avoid);
       for (const n of ['L', 'R']) { // chaque frappe se voit dans la main
         const p = state.taps[n] = Math.max(0, state.taps[n] - dt * 11);
         if (p > 0) {

@@ -22,7 +22,7 @@ export function startViewer(cfg) {
   const pm = new THREE.PMREMGenerator(renderer);
   scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
 
-  const camera = new THREE.PerspectiveCamera(26, 1, 0.1, 80);
+  const camera = new THREE.PerspectiveCamera(26, 1, 0.02, 80);
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; controls.dampingFactor = 0.08;
   controls.maxDistance = 14; controls.maxPolarAngle = Math.PI * 0.53; controls.enablePan = false;

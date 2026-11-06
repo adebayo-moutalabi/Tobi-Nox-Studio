@@ -346,10 +346,73 @@ const POSES = {
     add(P, 'head', 0.34, 0, 0);
     return P;
   }],
+  // Poses d'émotion : tout le haut du corps raconte le sentiment, avec une petite vie pour ne pas figer.
+  emo_panique: [1.6, (t) => {
+    const P = base(t), w = 0.012 * Math.sin(t * TAU * 3);
+    reach(P, 'R', -1, [-0.34, 1.34 + w, 0.22], [-0.9, -0.6, -0.1]); reach(P, 'L', 1, [0.34, 1.36 - w, 0.22], [0.9, -0.6, -0.1]);
+    mixHand(P, 'R', -1, 0.06, 1, 0.1); mixHand(P, 'L', 1, 0.1, 1, 0.1);
+    add(P, 'chest', -0.08, 0, 0); add(P, 'head', -0.05, 0, 0);
+    return P;
+  }],
+  emo_surpris: [3, (t) => {
+    const P = base(t), w = 0.006 * Math.sin(t * TAU);
+    reach(P, 'R', -1, [-0.3, 1.18 + w, 0.26], [-0.9, -0.6, -0.2]); reach(P, 'L', 1, [0.26, 1.12 - w, 0.24], [0.9, -0.6, -0.2]);
+    mixHand(P, 'R', -1, 0.06, 1, 0.1); mixHand(P, 'L', 1, 0.14, 1, 0.1);
+    add(P, 'chest', -0.1, 0, 0);
+    return P;
+  }],
+  emo_colere: [2.4, (t) => {
+    const P = base(t), w = 0.012 * Math.max(0, Math.sin(t * TAU * 2));
+    reach(P, 'R', -1, [-0.2, 1.08 - w, 0.36], [-0.8, -0.7, -0.2]); reach(P, 'L', 1, [0.3, 0.92, 0.03], [1, -0.2, -0.5]);
+    mixHand(P, 'R', -1, 0.95, 1, 0.7); mixHand(P, 'L', 1, 0.7, 1, 0.5);
+    add(P, 'chest', 0.09, 0.08, 0); add(P, 'head', 0.03, 0, 0);
+    return P;
+  }],
+  emo_fier: [3.5, (t) => {
+    const P = base(t), w = 0.008 * Math.sin(t * TAU);
+    reach(P, 'R', -1, [-0.31, 0.93 + w, 0.0], [-1, -0.2, -0.5]); reach(P, 'L', 1, [0.31, 0.93 - w, 0.0], [1, -0.2, -0.5]);
+    mixHand(P, 'R', -1, 0.6, 1, 0.45); mixHand(P, 'L', 1, 0.6, 1, 0.45);
+    add(P, 'chest', -0.09, 0, 0); add(P, 'head', -0.04, 0, 0);
+    return P;
+  }],
+  emo_triste: [4, (t) => {
+    const P = base(t);
+    reach(P, 'R', -1, [-0.17, 0.82, 0.13], [-0.8, -0.5, -0.4]); reach(P, 'L', 1, [0.2, 0.8, 0.1], [0.8, -0.5, -0.4]);
+    add(P, 'chest', 0.12, 0, 0); add(P, 'head', 0.1, 0, 0.03 * Math.sin(t * TAU));
+    return P;
+  }],
+  emo_doute: [3.2, (t) => {
+    const P = base(t), w = 0.006 * Math.sin(t * TAU);
+    reach(P, 'R', -1, [-0.1, 1.3 + w, 0.27], [-0.9, -0.7, -0.1]); reach(P, 'L', 1, [0.04, 1.02, 0.25], [0.9, -0.6, -0.3]);
+    mixHand(P, 'R', -1, 0.72, 1, 0.45); mixHand(P, 'L', 1, 0.5, 1, 0.4);
+    add(P, 'head', 0.02, 0.08, 0.08);
+    return P;
+  }],
+  emo_idee: [2.8, (t) => {
+    const P = base(t), w = 0.012 * Math.sin(t * TAU * 2);
+    reach(P, 'R', -1, [-0.26, 1.42 + w, 0.22], [-0.9, -0.6, 0]); mixHand(P, 'R', -1, 0.8, 1, 0.5);
+    P.f0a_R = [0, 0, 0]; P.f0b_R = [0, 0, 0];
+    add(P, 'chest', -0.07, -0.06, 0); add(P, 'head', -0.04, 0, 0);
+    return P;
+  }],
+  emo_gene: [3, (t) => {
+    const P = base(t), w = 0.008 * Math.sin(t * TAU * 2);
+    reach(P, 'R', -1, [-0.1, 0.96 + w, 0.22], [-0.8, -0.6, -0.3]); reach(P, 'L', 1, [0.1, 0.95 - w, 0.22], [0.8, -0.6, -0.3]);
+    mixHand(P, 'R', -1, 0.55, 1, 0.45); mixHand(P, 'L', 1, 0.55, 1, 0.45);
+    add(P, 'chest', 0.05, 0, 0); add(P, 'head', 0.04, 0.05, 0.05);
+    return P;
+  }],
+  emo_justifie: [2.8, (t) => {
+    const P = base(t), w = 0.012 * Math.sin(t * TAU);
+    reach(P, 'R', -1, [-0.36, 1.04 + w, 0.22], [-0.9, -0.6, -0.1]); reach(P, 'L', 1, [0.36, 1.06 - w, 0.22], [0.9, -0.6, -0.1]);
+    mixHand(P, 'R', -1, 0.08, 1, 0.1); mixHand(P, 'L', 1, 0.08, 1, 0.1);
+    add(P, 'head', 0, 0.06, 0.06);
+    return P;
+  }],
   call: [4, (t) => {
     const P = base(t);
-    reach(P, 'R', -1, [-0.21, 1.39, 0.1], [-0.9, -0.6, 0.1]);
-    mixHand(P, 'R', -1, 0.95, 1, 0.7);
+    reach(P, 'R', -1, [-0.25, 1.42, 0.13], [-0.9, -0.6, 0.1]);
+    mixHand(P, 'R', -1, 0.5, 1, 0.45);
     add(P, 'head', 0.02, -0.04, 0.05);
     add(P, 'chest', 0, 0, 0.02);
     return P;
@@ -538,7 +601,7 @@ POSES.type = [2.4, (t) => {
 }];
 Object.assign(gestures, MORE);
 for (const [k, v] of Object.entries(POSES)) loops[k] = v;
-const UPPER = new Set(['call', 'wave', 'nod', 'no', 'shrug', 'think', 'point', 'clap', ...Object.keys(MORE), ...Object.keys(POSES)]);
+const UPPER = new Set(['call', 'emo_panique', 'emo_surpris', 'emo_colere', 'emo_fier', 'emo_triste', 'emo_doute', 'emo_idee', 'emo_gene', 'emo_justifie', 'wave', 'nod', 'no', 'shrug', 'think', 'point', 'clap', ...Object.keys(MORE), ...Object.keys(POSES)]);
 
 export function sample(name, dur, fn, loop, boneMap, names = bonesList()) {
   const fps = 30, frames = Math.max(2, Math.round(dur * fps));
