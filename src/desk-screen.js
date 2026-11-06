@@ -49,10 +49,21 @@ export function createLaptop() {
   const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.312, 0.2), new THREE.MeshBasicMaterial({ color: '#20242f', toneMapped: false }));
   scr.name = 'ecran_pc'; scr.position.set(0, 0.115, 0.0056);
   hinge.add(scr); group.add(hinge);
-  const S = { title: 'notes.txt', text: '', caret: 0 };
+  const S = { title: 'notes.txt', text: '', caret: 0, board: null };
+  function drawBoard(W, H) { // écran lisible à l'image : un titre et quelques lignes en grand
+    const [title, ...rows] = S.board;
+    ctx.fillStyle = '#14161b'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#f2b92e'; ctx.fillRect(0, 0, W, 136);
+    ctx.fillStyle = '#14161b'; ctx.font = '800 72px "Inter", "Segoe UI", sans-serif'; ctx.textBaseline = 'middle'; ctx.textAlign = 'center'; ctx.fillText(title, W / 2, 70, W - 60);
+    ctx.fillStyle = '#ffffff'; ctx.font = '700 66px "Inter", "Segoe UI", sans-serif';
+    const step = (H - 160) / Math.max(rows.length, 1);
+    rows.forEach((r, i) => ctx.fillText(r, W / 2, 150 + step * (i + 0.5), W - 60));
+    ctx.textAlign = 'left'; tex.needsUpdate = true;
+  }
   function draw() {
     if (!ctx) return;
     const W = canvas.width, H = canvas.height;
+    if (S.board) { drawBoard(W, H); return; }
     ctx.fillStyle = '#20242f'; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = '#2d3342'; ctx.fillRect(0, 0, W, 54);
     for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(30 + i * 28, 27, 9, 0, 7); ctx.fill(); }
@@ -82,13 +93,15 @@ export function createLaptop() {
   return {
     group,
     type(ch) {
+      S.board = null;
       if (ch === '\b') S.text = S.text.slice(0, -1); else S.text += ch;
       const i = keyOf(ch);
       heat[i] = 1;
       S.caret = 0; draw();
       return base[i][0] < 0 ? 'L' : 'R';
     },
-    clear(title) { S.text = ''; if (title) S.title = title; draw(); },
+    clear(title) { S.text = ''; S.board = null; if (title) S.title = title; draw(); },
+    show(lines) { S.board = lines; draw(); },
     update(dt) {
       let dirty = false;
       for (let i = 0; i < heat.length; i++) if (heat[i] > 0) { heat[i] = Math.max(0, heat[i] - dt * 9); put(i); dirty = true; }

@@ -345,7 +345,7 @@ export function startViewer(cfg) {
     if (o.bag === it) o.bag = null;
     if (o.held === it) {
       o.held = null; o.hero.motion.setHold(false);
-      if (['read', 'phone'].includes(o.hero.motion.pose)) o.hero.motion.clearPose();
+      if (['read', 'phone', 'call'].includes(o.hero.motion.pose)) o.hero.motion.clearPose();
     }
     it.owner = null;
   }

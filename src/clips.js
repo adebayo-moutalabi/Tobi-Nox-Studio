@@ -346,6 +346,13 @@ const POSES = {
     add(P, 'head', 0.34, 0, 0);
     return P;
   }],
+  call: [4, (t) => {
+    const P = base(t);
+    reach(P, 'R', -1, [-0.2, 1.33, 0.17], [-0.9, -0.6, 0.2]);
+    mixHand(P, 'R', -1, 0.95, 1, 0.7);
+    add(P, 'head', 0.03, -0.1, 0.07);
+    return P;
+  }],
   carry: [4, (t) => {
     const P = base(t);
     reach(P, 'R', -1, [-0.1, 0.98, 0.3], [-0.9, -0.5, -0.1]);
@@ -530,7 +537,7 @@ POSES.type = [2.4, (t) => {
 }];
 Object.assign(gestures, MORE);
 for (const [k, v] of Object.entries(POSES)) loops[k] = v;
-const UPPER = new Set(['wave', 'nod', 'no', 'shrug', 'think', 'point', 'clap', ...Object.keys(MORE), ...Object.keys(POSES)]);
+const UPPER = new Set(['call', 'wave', 'nod', 'no', 'shrug', 'think', 'point', 'clap', ...Object.keys(MORE), ...Object.keys(POSES)]);
 
 export function sample(name, dur, fn, loop, boneMap, names = bonesList()) {
   const fps = 30, frames = Math.max(2, Math.round(dur * fps));

@@ -39,6 +39,7 @@ const PLANS = {
   miroir: [[0.72, 1.7, -0.4], [-0.7, 1.15, -1.5], 54],
   dessus: [[-4.2, 6.6, 6.6], [0, 0.6, 0.3], 26],
   clavier: [[0.66, 1.2, -1.5], [1.0, 0.8, -1.02], 42],
+  pc: [[0.42, 1.0, -1.05], [1.06, 0.86, -1.05], 46],
   ecran: [[0.8, 1.02, -0.66], [1.1, 0.92, -1.05], 44],
   tableau: [[0.34, 1.32, -1.06], [0.42, 1.08, -1.84], 38],
 };
@@ -277,6 +278,9 @@ export function createPlayer(v, ui) {
         return undefined;
       }
       case 'ambiance': look.setMood(plain(c.args[0] || 'jour')); return undefined;
+      case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
+      case 'appelle': a.look = null; v.attach(a, v.item('phone')); a.hero.motion.clearPose(); a.hero.motion.togglePose('call'); return v.wait(0.35);
+      case 'raccroche': a.hero.motion.clearPose(); v.stash(a); return v.wait(0.2);
       case 'compteur': ui.counter(c.text); return undefined;
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
@@ -305,7 +309,7 @@ export function createPlayer(v, ui) {
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
         if (auto) {
-          if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); await v.wait(0.08); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) { v.face(a, b, true); await v.wait(0.08); }
+          if (!a.carried && !b.carried && b.hero.root.visible && a.hero.seat !== 'lie' && b.hero.seat !== 'lie' && v.pos(a).distanceTo(v.pos(b)) > 0.4) { b.look = a; if (!a.hero.seat && !a.spot) v.face(a, b, true); if (!b.hero.seat && !b.spot) v.face(b, a, true); } else if (b.hero.root.visible && !a.hero.seat && !a.spot) v.face(a, b, true);
           talkShot(a);
         }
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
