@@ -123,6 +123,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Moins de positions identiques | Départs et actions choisis selon chaque histoire dans les épisodes récents |
 | 6 nov. 2026 | Garder les retours de l'auteur | Fichier `PREFERENCES_AUTEUR.md` |
 | 6 nov. 2026 | Émotions visibles dans le corps | Poses de panique, doute, colère, fierté, tristesse, idée, gêne et justification pour Tobi |
+| 6 nov. 2026 | Demander l'abonnement à la fin | Écran court « Abonne-toi », réglable dans le Studio |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

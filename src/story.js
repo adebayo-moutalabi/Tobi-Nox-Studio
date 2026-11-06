@@ -480,6 +480,7 @@ export function createPlayer(v, ui) {
           if (c.free) { const q = Promise.resolve(t).finally(() => pending.delete(q)); pending.add(q); } else await t;
         }
         await Promise.allSettled([...pending]);
+        if (!stopped && ui.subscribe?.()) { look.insert('Pour la suite', 'Abonne-toi', 'Tobi & Nox'); sfx('pop'); await v.wait(1.5); look.hideInsert(); } // court, sans voix : aucun crédit
         ui.line(stopped ? 'Lecture arrêtée.' : 'Fin de l’histoire.');
       } catch (e) { ui.line(`Erreur : ${e.message}`); }
       closing = true; ui.curtain(true, true); ui.card('');
@@ -530,7 +531,7 @@ export function mountStory(v, stories) {
   panel.dataset.tab = 'film';
   el('nav').querySelector('button').setAttribute('aria-current', 'true');
   // Les réglages de la vidéo restent les mêmes d'une fois à l'autre
-  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial'];
+  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial', 'storySub'];
   let reglages = {};
   try { reglages = JSON.parse(localStorage.getItem(REGLAGES) || '{}'); } catch { /* réglages illisibles */ }
   for (const id of CHOIX) {
@@ -645,6 +646,7 @@ export function mountStory(v, stories) {
     tick: (dt) => { const d = st.target - st.alpha; if (d) { st.alpha += Math.sign(d) * Math.min(Math.abs(d), dt / 0.7); el('curtain').style.opacity = st.alpha; } },
   };
   ui.trial = () => el('storyTrial').checked;
+  ui.subscribe = () => el('storySub').checked;
   const player = createPlayer(v, ui);
   el('storyPlay').addEventListener('click', replay);
   el('storyStop').addEventListener('click', () => player.stop());

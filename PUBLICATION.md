@@ -99,6 +99,10 @@ Ne créer une version longue qu'après avoir validé le script avec les voix gra
 
 TikTok accepte les vidéos courtes. La minute compte surtout pour le programme qui rémunère les vidéos, avec des conditions souvent citées de 10 000 abonnés et 100 000 vues sur 30 jours. Vérifier le détail dans l'application.
 
+## Abonnés
+
+Le Studio ajoute à la fin un court écran « Abonne-toi », sans voix. Comparer les abonnés gagnés sur une dizaine de vidéos, avec et sans cet écran.
+
 ## Si le rythme augmente
 
 Estimation à 1 000 crédits par vidéo, avec une marge pour les corrections. Tarifs relevés le 6 novembre 2026, à vérifier au moment de payer.
