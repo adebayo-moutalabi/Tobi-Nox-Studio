@@ -80,3 +80,13 @@ Un nouvel épisode coûte environ 650 à 850 crédits, selon l'estimation du Stu
 - **Budget :** environ 3 000 crédits par semaine, soit 12 000 à 13 000 par mois.
 - **Augmenter seulement si :** les crédits suivent, au moins une semaine de vidéos est prête d'avance et les résultats justifient plus de volume.
 - **Économiser :** valider le texte avant la voix, ne refaire qu'une réplique ratée et réutiliser le même MP4 sur toutes les plateformes.
+
+## Si le rythme augmente
+
+Estimation à 1 000 crédits par vidéo, avec une marge pour les corrections. Tarifs relevés le 6 novembre 2026, à vérifier au moment de payer.
+
+| Rythme | Crédits par mois | Offre conseillée |
+|---|---:|---|
+| Une vidéo par jour | 30 000 | Starter si le texte est validé avant la voix, sinon Creator |
+| Deux vidéos par jour | 60 000 | Creator |
+| Sept vidéos par jour | 210 000 | Pro |

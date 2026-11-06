@@ -98,6 +98,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 6 nov. 2026 | Scripts plus drôles, inspirés de ce qui marche ailleurs | Épisodes 56 à 60, ressorts adaptés à Tobi et Nox sans reprendre de gag |
 | 6 nov. 2026 | Commentaire épinglé jugé inutile | Retiré des étapes obligatoires |
 | 6 nov. 2026 | Rythme compatible avec les crédits ElevenLabs | Trois vidéos par semaine et budget dans `PUBLICATION.md` |
+| 6 nov. 2026 | Coût pour publier plus souvent | Besoins en crédits et offres conseillées dans `PUBLICATION.md` |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 
