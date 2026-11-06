@@ -475,6 +475,18 @@ export function mountStory(v, stories) {
   el('nav').hidden = false;
   panel.dataset.tab = 'film';
   el('nav').querySelector('button').setAttribute('aria-current', 'true');
+  // Les réglages de la vidéo restent les mêmes d'une fois à l'autre
+  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial'];
+  let reglages = {};
+  try { reglages = JSON.parse(localStorage.getItem(REGLAGES) || '{}'); } catch { /* réglages illisibles */ }
+  for (const id of CHOIX) {
+    const x = el(id), box = x.type === 'checkbox';
+    if (id in reglages) { if (box) x.checked = reglages[id]; else if ([...x.options].some((o) => o.value === reglages[id])) x.value = reglages[id]; }
+    x.addEventListener('change', () => {
+      reglages[id] = box ? x.checked : x.value;
+      try { localStorage.setItem(REGLAGES, JSON.stringify(reglages)); } catch { /* navigation privée */ }
+    });
+  }
   // Listes courtes affichées en contrôle segmenté
   for (const id of ['storyFormat', 'storyFps', 'storyQuality']) {
     const sel = el(id), seg = document.createElement('div'); seg.className = 'seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', sel.getAttribute('aria-label'));

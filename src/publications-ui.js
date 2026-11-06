@@ -43,7 +43,7 @@ export function mountPublications({ el, stories, open, save, onChange }) {
     note.addEventListener('change', () => { of(k).note = note.value; keep(); });
     const voir = node('button', { type: 'button', textContent: 'Ouvrir l\'épisode' });
     voir.addEventListener('click', () => open(k));
-    box.append(champ('Titre', f.titre), champ('Description YouTube', f.description), champ('Légende TikTok', f.tiktok), champ('Légende Instagram', f.instagram), champ('Commentaire à épingler', f.commentaire), cases, chiffres, lien, note, voir);
+    box.append(champ('Titre', f.titre), champ('Description YouTube', f.description), champ('Tags YouTube', f.motsCles), champ('Légende TikTok', f.tiktok), champ('Légende Instagram', f.instagram), champ('Commentaire à épingler', f.commentaire), cases, chiffres, lien, note, voir);
     return box;
   };
 

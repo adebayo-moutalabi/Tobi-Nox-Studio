@@ -5,7 +5,7 @@ import { prononce, sonAie, changeAie } from './prononciation.js';
 
 const API = 'https://api.elevenlabs.io/v1';
 const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
-const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices', KEEP = 'tobinox.elevenlabs.keep';
+const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices', KEEP = 'tobinox.elevenlabs.keep', NAMES = 'tobinox.elevenlabs.names', MODEL = 'tobinox.elevenlabs.model';
 
 const read = (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } };
 const write = (k, val) => { try { if (val) localStorage.setItem(k, val); else localStorage.removeItem(k); } catch { /* navigation privée */ } };
@@ -62,7 +62,11 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   const remember = () => {
     write(KEEP, keep.checked ? '' : 'non');
     if (!keep.checked) write(KEY, ''); else if (key.value.trim()) write(KEY, key.value.trim());
-    write(PICK, JSON.stringify(Object.fromEntries(Object.entries(pick).map(([who, x]) => [who, x.value]))));
+    // Un choix vide n'efface jamais un choix déjà enregistré. Le nom sert de secours si l'identifiant change.
+    const json = (k) => { try { return JSON.parse(read(k) || '{}'); } catch { return {}; } };
+    const ids = json(PICK), names = json(NAMES);
+    for (const [who, x] of Object.entries(pick)) if (x.value) { ids[who] = x.value; names[who] = x.selectedOptions[0]?.dataset.name || names[who]; }
+    write(PICK, JSON.stringify(ids)); write(NAMES, JSON.stringify(names)); write(MODEL, model.value);
   };
 
   // Solde du compte. La clé doit avoir le droit de lecture « User » : sinon le Studio continue sans afficher le solde.
@@ -81,16 +85,17 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     try {
       const { voices } = await (await call('/voices')).json();
       const mine = [...voices].sort((a, b) => (b.category === 'cloned') - (a.category === 'cloned') || a.name.localeCompare(b.name));
-      let saved = {};
-      try { saved = JSON.parse(read(PICK) || '{}'); } catch { /* choix illisible */ }
+      let saved = {}, names = {};
+      try { saved = JSON.parse(read(PICK) || '{}'); names = JSON.parse(read(NAMES) || '{}'); } catch { /* choix illisible */ }
+      const missing = [];
       for (const [who, s] of Object.entries(pick)) {
-        s.replaceChildren(...mine.map((x) => new Option(x.category === 'cloned' ? `${x.name} (clonée)` : x.name, x.voice_id)));
-        if (mine.some((x) => x.voice_id === saved[who])) s.value = saved[who];
+        s.replaceChildren(...mine.map((x) => { const o = new Option(x.category === 'cloned' ? `${x.name} (clonée)` : x.name, x.voice_id); o.dataset.name = x.name; return o; }));
+        const found = mine.find((x) => x.voice_id === saved[who]) || mine.find((x) => x.name === names[who]);
+        if (found) s.value = found.voice_id; else { s.selectedIndex = -1; missing.push(s.closest('label').firstChild.textContent.trim()); } // jamais de voix choisie au hasard
       }
-      Object.entries(pick).forEach(([who, x], i) => { if (!mine.some((m) => m.voice_id === saved[who])) x.selectedIndex = i % mine.length; });
       remember();
       el('elTobi').closest('.pair').hidden = false;
-      say(`${mine.length} voix trouvées. Vérifie Tobi et Nox.`);
+      say(missing.length ? `${mine.length} voix trouvées. Choisis la voix de : ${missing.join(', ')}.` : `${mine.length} voix trouvées. Tes voix sont gardées.`);
       credits();
       onChange?.();
     } catch (e) { say(e.message); }
@@ -156,6 +161,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   // Rien n'est dépensé sans accord : le premier clic annonce le coût, le second confirme.
   let accord = '';
   const allow = async (tell) => {
+    const empty = readLines().find((r) => !pick[r.who].value);
+    if (empty) { tell(`Choisis d'abord la voix de ${empty.who} dans Réglages.`); return false; }
     let chars = 0, lines = 0;
     for (const r of readLines()) { const { id, text } = lineId(r); if (!(await cache.get(id))) { chars += text.length; lines++; } }
     if (!chars) return true;
@@ -217,6 +224,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   });
   keep.addEventListener('change', remember);
   key.addEventListener('change', remember);
+  if ([...model.options].some((o) => o.value === read(MODEL))) model.value = read(MODEL);
+  for (const x of [...Object.values(pick), model]) x.addEventListener('change', () => { remember(); forget(); lock(false); });
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
   if (key.value) loadVoices();

@@ -72,6 +72,7 @@ export function fiche(key, text = '') {
   const mots = tags.join(' ');
   return {
     n, rang: rang(key), titre, tags,
+    motsCles: ['Tobi et Nox', 'humour étudiant', 'vie étudiante', 'animation 3D', 'IA', 'robot', ...tags.filter((t) => ['#claude', '#codex', '#gemini', '#entrepreneuriat'].includes(t)).map((t) => t.slice(1))].join(', '),
     description: `${accroche}\n\nTobi, étudiant en galère, et Nox, son robot IA : une mini-sitcom 3D sur les études, la tech et l'entrepreneuriat.\n\n${mots}`,
     tiktok: `${accroche} ${mots} #animation3d`,
     instagram: `${accroche}\n\n${mots} #animation3d`,
