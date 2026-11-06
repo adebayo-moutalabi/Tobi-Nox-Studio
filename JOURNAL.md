@@ -207,6 +207,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - L'ordre de publication commence par Tobi contre ses IA.
 - Dix idées d'épisodes avec les IA rejoignent `IDEES_EPISODES.md`.
 
+## Titres plus variés (7 novembre 2026)
+
+- Les noms des IA restent seulement dans les titres où elles sont le sujet.
+- Hashtags précis : IA présentes, sujet de l'épisode, six au maximum.
+- L'ordre de sortie alterne les épisodes avec les IA et ceux sur la vie de Tobi.
+
 ## À faire
 
 Voir `TACHES.md`.

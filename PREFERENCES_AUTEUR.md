@@ -24,7 +24,10 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 ## Titres et descriptions
 
-- Quand Claude Code, Codex ou Gemini joue dans un épisode, son nom apparaît dans le titre et la description.
+- Le nom de Claude Code, Codex ou Gemini va dans le titre seulement quand cette IA est le sujet de la blague. Pas à chaque fois : ça deviendrait lassant.
+- Les trois noms ensemble restent rares, pour les épisodes où ils sont vraiment les trois au centre.
+- Les hashtags restent précis : IA présentes et sujet de l'épisode.
+- On alterne les épisodes avec les IA et ceux sur la vie de Tobi.
 - Le mot « Aînés » sert seulement à décrire leur rôle en interne. Il n'apparaît jamais dans un titre, une description ou un écran.
 - L'auteur veut plus d'épisodes de qualité avec ces IA : ils semblent faire cliquer.
 
@@ -82,3 +85,4 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes. La règle retenue est 40 à 90 secondes, sauf idée exceptionnelle.
 - **Épisode des 20 € :** l'auteur n'aimait pas une première version, puis a trouvé la version réécrite vraiment drôle. La règle retenue est de garder la version actuelle comme modèle.
 - **Statut de Nox :** j'ai proposé « mon robot », l'auteur préfère « mon IA » pour l'instant. Deux titres disent encore « Mon robot » (épisodes 58 et 66), à revoir si besoin.
+- **Noms des IA dans les titres :** l'auteur a d'abord voulu les mettre souvent, puis a trouvé que ce serait trop. La règle retenue : seulement quand l'IA est le sujet, et des hashtags précis.

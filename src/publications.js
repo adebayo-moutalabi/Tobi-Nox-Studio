@@ -1,32 +1,32 @@
 // Fiches de publication : titres travaillés pour la recherche, textes prêts à coller, ordre de sortie.
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
-// Ordre de sortie : Tobi contre ses IA d'abord, le thème qui a le mieux démarré, puis les épisodes préférés de l'auteur.
-const ORDRE = [63, 19, 62, 17, 37, 22, 51, 59, 61, 50, 65, 54, 49, 18, 45, 60, 66, 64, 67, 58, 57, 56, 52, 53, 55, 47, 1, 26, 48];
+// Ordre de sortie : on alterne les épisodes avec les IA et ceux sur la vie de Tobi, pour ne pas lasser.
+const ORDRE = [63, 62, 19, 22, 17, 49, 37, 46, 51, 48, 61, 26, 50, 64, 59, 67, 54, 56, 18, 58, 65, 52, 45, 53, 60, 55, 47, 57, 1, 66];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
   4: "J'ai fait mon logo avant d'avoir une idée 🎨", 5: '42 vidéos sur la discipline, zéro action 📱', 6: "Mémoire à rendre demain, mon IA a d'autres plans 😱",
   7: "« Juste 5 minutes », le mensonge de l'étudiant ⏳", 8: "J'ai automatisé ma vie avec l'IA, même ma mère 🤖", 9: "Mon robot IA croit en moi, chiffres à l'appui 📊",
   11: 'Je commence demain, promis 🛌', 12: 'Mon appli IA te dit quand manger 🍽️', 13: "J'ai dépensé l'argent de mon premier client 💳",
-  14: 'Codex a cassé mon site avec une petite mise à jour 💥', 15: "Mon investisseur, c'était le boulanger 🥖", 16: 'Claude Code a audité mon IA : 412 pages 📄',
-  17: 'Codex a supprimé tous mes clients, Claude Code regardait 🗑️', 18: 'Gemini a lu tous mes mails 📧', 19: 'Claude Code, Codex et Gemini ont jugé ma vie ⚖️',
+  14: 'Une petite mise à jour a tout cassé 💥', 15: "Mon investisseur, c'était le boulanger 🥖", 16: 'Claude Code a audité mon IA : 412 pages 📄',
+  17: 'Codex a supprimé tous mes clients 🗑️', 18: 'Gemini a lu tous mes mails 📧', 19: 'Claude Code, Codex et Gemini ont jugé ma vie ⚖️',
   20: 'Je suis CEO de mon miroir 🪞', 21: 'Trois heures de bug pour un point-virgule 🐛', 22: 'Mon IA a trouvé mon mot de passe en 0,4 s 🔓',
   23: 'Entretien de stage en caleçon 🩲', 24: "J'ai mis de l'IA dans mon frigo, il reste un yaourt 🥛", 25: "Routine de millionnaire : j'ai tenu 11 minutes ⏰",
-  26: 'Il me manque 180 € pour le loyer 🏠', 27: 'Codex a rangé mon PC, Claude Code posait des questions 🧹', 28: 'Codex et Gemini ont écrit à ma mère 💌',
+  26: 'Il me manque 180 € pour le loyer 🏠', 27: "J'ai demandé à Codex de ranger mon PC 🧹", 28: 'Codex et Gemini ont écrit à ma mère 💌',
   29: "J'ai présenté BaguetteGPT à Claude Code et Gemini 🥖", 30: "Claude Code veut tout vérifier avant de m'aider 🙋", 31: 'Codex a répondu à mon prof 😬',
   32: 'Gemini a préparé mon rencard 🌹', 33: "12 abonnements d'IA et zéro euro 💸", 34: 'Ma mère a vu mon LinkedIn de CEO 👀',
   35: 'Mes IA ont fait une réunion sans moi 🤫', 36: 'Influenceur avec 12 abonnés 🤳', 37: 'Le wifi a coupé : Claude Code, Codex et Gemini paniquent 📶',
-  38: 'Mes APL ont financé ma start-up 💶', 39: "J'ai révisé le mauvais partiel 📚", 40: 'Claude Code découvre que mon groupe m\'ignore 👻',
+  38: 'Mes APL ont financé ma start-up 💶', 39: "J'ai révisé le mauvais partiel 📚", 40: 'Projet de groupe : je suis chef de fantômes 👻',
   41: 'Je mange des pâtes depuis 9 jours 🍝', 42: 'Mon prof a détecté Claude Code dans mon devoir 🕵️', 43: "Mon stage à 0 € m'a fait Head of Growth 📈",
-  44: 'Codex a surchauffé le serveur sous mon lit 🛏️', 45: 'Gemini a fait mon exposé en 400 diapos 📽️', 46: "J'ai dépensé 340 € en pâtes livrées 🍝",
-  47: "J'ai contesté mon 4 sur 20 avec Claude Code 📉", 48: "J'ai vendu mon sweat en ligne 🧥", 49: "J'ai loué mon compte de films à 400 personnes avec Codex 🎬",
+  44: "J'ai caché un serveur sous mon lit 🛏️", 45: 'Gemini a fait mon exposé en 400 diapos 📽️', 46: "J'ai dépensé 340 € en pâtes livrées 🍝",
+  47: "J'ai contesté mon 4 sur 20 📉", 48: "J'ai vendu mon sweat en ligne 🧥", 49: "J'ai loué mon compte de films à 400 personnes 🎬",
   50: 'Claude Code devait me réveiller ⏰', 51: 'Codex a eu mon stage à ma place 😱', 52: "Tobi tue sa grand-mère pour la 4e fois 🪦",
   53: "Tobi paie sa banque pour être pauvre 💸", 54: "Tobi envoie Codex récupérer 5 € 😱", 55: "Tobi piège le voleur de ses yaourts 🎥",
   56: "Tobi calcule le prix de son jeu gratuit 🎮", 57: "Tobi calcule ce qu'il coûte à sa mère 💸", 58: "Tobi confie sa vie à son robot IA 🤖",
   59: 'Claude Code, Codex et Gemini contre la mère de Tobi 🧣', 60: "Tobi fait analyser un « ok » par Gemini 💌",
-  61: 'Claude Code et Codex ont 60 secondes pour sauver mon devoir ⏱️', 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: 'Claude Code, Codex et Gemini me font passer un entretien 😬',
-  64: "Tobi loue sa chambre CROUS en coworking 🛏️", 65: "Codex donne un million d'utilisateurs à Tobi 📈", 66: 'Nox fait grève, Claude Code lit son contrat 🪧', 67: "Tobi vend une formation pour devenir riche 💰",
+  61: "Tobi a 60 secondes pour rendre son devoir ⏱️", 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: "Tobi passe son entretien annuel avec ses IA 😬",
+  64: "Tobi loue sa chambre CROUS en coworking 🛏️", 65: "Codex donne un million d'utilisateurs à Tobi 📈", 66: "Nox fait grève dans la start-up de Tobi 🪧", 67: "Tobi vend une formation pour devenir riche 💰",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
@@ -77,9 +77,12 @@ const ENTREPRENEURIAT = new Set([64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 
 const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };
 
+// Hashtags précis : les IA présentes et le sujet de l'épisode passent avant les mots généraux. Six au maximum.
+const SUJETS = [[/CROUS|loyer/i, '#crous'], [/partiel|examen|mémoire|devoir/i, '#partiels'], [/\bstage\b/i, '#stage'], [/start-up|client|levée de fonds/i, '#startup'], [/bourse|\bAPL\b|banque/i, '#argent']];
 const hashtags = (n, text) => {
-  const ia = [/^CLAUDE dit/m.test(text) && '#claude', /^CODEX dit/m.test(text) && '#codex', /^GEMINI dit/m.test(text) && '#gemini'].filter(Boolean); // chaque IA présente est citée : c'est ce que les gens cherchent
-  return ['#ia', ...ia, '#robot', ENTREPRENEURIAT.has(n) ? '#entrepreneuriat' : '#étudiant', '#humour'];
+  const ia = [/^CLAUDE dit/m.test(text) && '#claudecode', /^CODEX dit/m.test(text) && '#codex', /^GEMINI dit/m.test(text) && '#gemini'].filter(Boolean);
+  const sujet = SUJETS.filter(([re]) => re.test(text)).map(([, tag]) => tag).slice(0, 2);
+  return [...ia, ...sujet, ENTREPRENEURIAT.has(n) ? '#entrepreneuriat' : '#étudiant', '#ia', '#humour'].filter((t, k, all) => all.indexOf(t) === k).slice(0, 6);
 };
 
 export function fiche(key, text = '', num = 0) {
