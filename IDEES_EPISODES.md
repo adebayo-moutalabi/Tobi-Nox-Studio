@@ -4,7 +4,6 @@ Chaque idée tient en une phrase et a déjà sa chute. Si la chute n'est pas cla
 
 | Idée | Le ressort comique | La chute |
 |---|---|---|
-| Elle a répondu « ok » | Gemini fait 40 pages d'analyse sur deux lettres | Léa écrit : « Désolée, mauvais numéro. » |
 | 40 centimes pour imprimer 60 pages | Tobi réduit le texte jusqu'à tout faire tenir sur huit pages | Le prof lui rend sa note avec une loupe |
 | Je chauffe ma chambre avec mon PC | L'électricité est comprise dans le loyer, alors Tobi fait tourner l'ordinateur toute la nuit | Tout l'étage saute et le voisin lui demande de chauffer sa chambre aussi |
 | Ma mère arrive dans 10 minutes | Codex range la chambre avant la fin de la phrase | Il a aussi jeté le cadeau de sa mère |

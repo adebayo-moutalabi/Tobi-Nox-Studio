@@ -94,6 +94,9 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 | 5 nov. 2026 | La clé ElevenLabs disparaît au redémarrage | Clé gardée par défaut dès qu'elle est collée, sauf si l'auteur décoche l'option, et message clair si elle manque |
 | 6 nov. 2026 | Garder les mêmes voix et réglages | Voix, modèle, format, qualité et options gardés. Une voix manquante n'est plus remplacée au hasard |
 | 6 nov. 2026 | Guide YouTube et stratégie des nouveaux comptes | `PUBLICATION.md`, avec les tags YouTube ajoutés aux fiches |
+| 6 nov. 2026 | Plus de lumière dans le Studio | Soir plus lumineux et commande `LUMIERE vive` ou `douce` par épisode |
+| 6 nov. 2026 | Scripts plus drôles, inspirés de ce qui marche ailleurs | Épisodes 56 à 60, ressorts adaptés à Tobi et Nox sans reprendre de gag |
+| 6 nov. 2026 | Commentaire épinglé jugé inutile | Retiré des étapes obligatoires |
 
 **Idées gardées pour plus tard :** petit frère, grande sœur, partenaires de travail, Léa à l'écran.
 

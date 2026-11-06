@@ -13,6 +13,8 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
 
+**Les sujets à privilégier :** les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
+
 Exemple à éviter : l'épisode du livreur. Le thème est bon, mais la révélation de la sonnette demande de deviner une suite et ne fait pas rire.
 
 ## L'épisode en une phrase
@@ -122,6 +124,10 @@ Un épisode ne reste pas assis du début à la fin. Prévoir au moins un déplac
 ## Le moment de la journée
 
 Chaque script choisit son ambiance dès la première ligne : `AMBIANCE jour` ou `AMBIANCE soir`. Elle doit servir l'histoire : un réveil se passe le jour, une nuit blanche le soir. Il est possible d'en changer en cours d'épisode.
+
+## La lumière
+
+Après `AMBIANCE`, écrire `LUMIERE vive` pour une image plus lumineuse, ou `LUMIERE douce` pour une scène plus intime.
 
 ## Le format du fichier
 

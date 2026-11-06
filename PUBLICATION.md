@@ -56,10 +56,9 @@ Sur ces plateformes, des inconnus peuvent découvrir une vidéo sans abonnés ni
 
 ### Après chaque vidéo
 
-1. Épingler la question de la fiche.
-2. Répondre aux premiers commentaires.
-3. Après 48 h, noter vues, rétention et abonnés dans Publications.
-4. Ne pas supprimer une vidéo parce qu'elle démarre lentement.
+1. Répondre aux premiers commentaires, s'il y en a.
+2. Après 48 h, noter vues, rétention et abonnés dans Publications.
+3. Ne pas supprimer une vidéo parce qu'elle démarre lentement.
 
 ### À éviter
 
