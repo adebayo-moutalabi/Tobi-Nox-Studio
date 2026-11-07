@@ -195,6 +195,19 @@ export function createPlayer(v, ui) {
     for (const x of near) { x.hero.root.visible = false; hiddenForShot.push(x); }
   };
   const showHidden = () => { for (const x of hiddenForShot) x.hero.root.visible = true; hiddenForShot = []; };
+  // Un meuble ne doit pas boucher le haut et le centre de l'image. Le bas peut montrer le lit ou le bureau où le personnage est assis.
+  function clearFrame(c, target, fov) {
+    const f = target.clone().sub(c), L = f.length(); f.normalize();
+    const right = new THREE.Vector3().crossVectors(f, new THREE.Vector3(0, 1, 0)).normalize(), upv = new THREE.Vector3().crossVectors(right, f);
+    const th = Math.tan((fov * Math.PI) / 360), tw = th * v.camera.aspect, free = !chairTaken();
+    let hits = 0;
+    for (let i = -1; i <= 3; i++) for (let j = -2; j <= 2; j++) {
+      const d = f.clone().addScaledVector(right, (j / 2.6) * tw).addScaledVector(upv, (i / 3.6) * th).normalize();
+      ray.set(c, d); ray.far = L * 0.55;
+      if (ray.intersectObjects(blockers, false).some((h) => h.point.y > 0.06 && !(free && h.object.parent === room.chair))) hits += 1;
+    }
+    return hits <= 2;
+  }
   function frame(a, tight, front) {
     const b = talkTo || partner(a), H = eyes(a), big = a.id === 'tobi', up = new THREE.Vector3(0, 1, 0), others = v.actors.filter((x) => x !== a);
     const near = !a.carried && !b.carried && b.hero.root.visible && eyes(b).sub(H).setY(0).length() > 0.3;
@@ -211,12 +224,15 @@ export function createPlayer(v, ui) {
     // On filme du côté où il regarde : d'abord de trois quarts face, et seulement s'il n'y a aucune place, de plus loin sur le côté.
     const look3 = (near && !a.extra ? toB.clone().multiplyScalar(0.7).add(fwd.clone().normalize().multiplyScalar(0.3)) : fwd.clone()).normalize();
     const standing = !a.extra && near && !a.hero.seat && !a.spot; // debout, il s'ouvre vers la caméra : on peut le filmer de plus loin
-    for (const need of a.extra ? [-2] : standing ? [-0.35, -2] : [0.5, 0.15, -2]) for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
+    const good = a.extra ? [] : standing ? [0.1, -0.35] : [0.5, 0.15];
+    const passes = [...good.map((n) => [n, true]), ...good.map((n) => [n, false]), [-2, true], [-2, false]]; // visage et image dégagée d'abord
+    for (const [need, clean] of passes) for (const [fov, k] of tall ? [[42, 1], [54, 1], [66, 1], [54, 0.88], [66, 0.88], [74, 0.8]] : [[32, 1], [42, 1], [54, 1], [42, 0.85], [54, 0.85], [54, 0.72]]) { // la pièce est étroite : on ouvre l'objectif avant de se rapprocher
       const sp = span * k, dist = sp / (2 * Math.tan((fov * Math.PI) / 360)), mid = a.extra ? Math.max(H.y + 0.02, 0.3) : Math.max(top + sp * 0.13 - sp / 2, 0.3); // un petit logo au sol : la caméra reste à sa hauteur, au-dessus du plancher
       for (const ang of across ? [0.6, -0.6, 0.8, -0.8, 1, -1, 1.25, -1.25] : [0.3, -0.3, 0.55, -0.55, 0.85, -0.85, 1.15, -1.15]) {
         const c = H.clone().addScaledVector(to.clone().applyAxisAngle(up, ang), dist); c.y = mid + (big ? 0.05 : 0.03) - (lowShot ? sp * 0.2 : 0);
         const camDir = c.clone().sub(H).setY(0).normalize();
         if ((standing ? camDir.dot(toB) : camDir.dot(look3)) < need) continue;
+        if (clean && !clearFrame(c, new THREE.Vector3(H.x, mid, H.z), fov)) continue;
         const side = new THREE.Vector3(c.z - H.z, 0, H.x - c.x).normalize().multiplyScalar(sp * (tall ? 0.26 : a.extra ? 0.24 : 0.36)); // les bords du cadre restent dégagés aussi
         const low = Math.max(0.2, mid - sp * 0.3), corner = (s) => H.clone().addScaledVector(side, s).setY(low); // et le bas de l'image, où un meuble passerait devant
         if (room2(c) && free(c, a) && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - (big ? 0.3 : 0.14))) && seen(c, H.clone().add(side)) && seen(c, H.clone().sub(side)) && (!tall || (seen(c, corner(1)) && seen(c, corner(-1)))) && seen(c, H.clone().setY(H.y + (big ? 0.16 : 0.1))) && !others.some((x) => blocks(x, c, H) || ((a.id === 'nox' || a.extra) && x.id === 'tobi' && (blocks(x, c, H.clone().add(side)) || blocks(x, c, H.clone().sub(side)))))) { // Nox et les logos sont petits : le corps de Tobi ne doit pas manger le plan

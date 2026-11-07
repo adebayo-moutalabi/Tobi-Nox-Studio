@@ -14,7 +14,7 @@ GEMINI dit (panique) Je ne sais plus rien ! Quelle année sommes-nous ?
 PLAN gros CODEX
 CODEX dit (panique) Je peux plus rien casser !
 PLAN gros CLAUDE
-CLAUDE dit (panique) Je vais être honnête : je panique.
+CLAUDE dit (panique) Je crois que je panique.
 PLAN gros TOBI
 TOBI dit (surpris) Attendez. Vous ne marchez plus sans internet ?
 PLAN gros GEMINI

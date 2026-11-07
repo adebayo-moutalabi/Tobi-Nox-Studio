@@ -18,7 +18,7 @@ TOBI dit (fier) En expérience. Et en vision.
 PLAN gros NOX
 NOX dit (sec) Je fais déjà tout ici.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête avec toi, Nox. J'ai lu ton contrat.
+CLAUDE dit (calme) Nox, j'ai lu ton contrat.
 TOBI marche centre &
 PC Contrat de Nox | Salaire : 0 € | Horaires : 24 h sur 24 | Congés : aucun
 PLAN pc

@@ -57,7 +57,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Les Aînés** sont les logos de Claude Code, Codex et Gemini, animés comme des personnages. Ils viennent juger Tobi ou se contredire.
 
-- **Claude Code** est un grand frère sérieux et bienveillant. Il voit le problème, reste honnête et dit la vérité avec douceur : « Je vais être honnête avec toi. » « Puis-je » devient rare et sert seulement une vraie blague.
+- **Claude Code** est un grand frère sérieux et bienveillant. Il voit le problème, reste honnête et dit la vérité avec douceur : Il parle simplement et ne répète pas de formule. « Puis-je » devient rare et sert seulement une vraie blague.
 - **Codex** est un stagiaire surexcité. Il agit avant la fin de la phrase et va trop loin : « C'est réglé. »
 - **Gemini** est le premier de la classe. Il a tout lu et ajoute trop de formats : « Fun fact. »
 

@@ -36,7 +36,7 @@ ATTENDRE 1.6
 PLAN gros NOX
 NOX dit (ironique) Elle n'y arrive même pas.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête avec toi, avec douceur.
+CLAUDE dit (calme) Je vais te dire ça avec douceur.
 PLAN auto
 TOBI dit (content) Bien sûr !
 PLAN gros CLAUDE

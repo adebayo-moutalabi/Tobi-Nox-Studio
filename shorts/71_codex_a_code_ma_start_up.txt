@@ -1,5 +1,5 @@
 # CODEX A CODÉ MA START-UP EN 4 SECONDES
-# Pitch : Tobi veut vendre ses fiches de révision en ligne. Codex crée le site en quatre secondes, sans le tester.
+# Pitch : Tobi a trois cents clients et perd de l'argent. Codex a créé son site en quatre secondes, sans le tester.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -8,45 +8,32 @@ DIRECT NOX assis
 DIRECT CODEX apparait bureau
 ECRAN fiches_de_tobi.html
 FONDU direct
-ACCROCHE Une start-up en 4 secondes
+ACCROCHE 300 clients, et il perd de l'argent
 
 PLAN gros TOBI
-TOBI dit (excite) Codex, code-moi un site pour vendre mes fiches. T'as dix secondes.
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. Quatre secondes.
-PC Safari : fiches-de-tobi.fr | Fiches de révision | 5 € la fiche
+TOBI dit (panique) Nox ! J'ai trois cents clients, et je perds de l'argent !
+PC Banque : Compte de Tobi | Client 1 : -5 € | Client 300 : -5 € | Total : -1 500 €
 PLAN pc
 ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (curieux) Tu vends quoi ?
 PLAN gros TOBI
-TOBI dit (content) C'est magnifique. T'as mis le paiement ?
+TOBI dit (gene) Mes fiches de révision. Codex a fait le site en quatre secondes.
 PLAN gros CODEX
-CODEX dit (content) Le paiement, les comptes et la pub.
+CODEX dit (fier) Record personnel.
 PLAN gros NOX
 NOX dit (curieux) T'as testé ?
 PLAN gros CODEX
 CODEX dit (constat) Les tests ralentissent.
-BRUIT ding
-PLAN gros TOBI
-TOBI dit (excite) Un client !
-BRUIT ding
-INSERT Clients | 300 | En deux heures
-PLAN gros TOBI
-TOBI dit (fier) Trois cents clients ! Nox, je suis riche !
-PLAN gros NOX
-NOX dit (calme) Ouvre ton compte.
-PC Banque : Compte de Tobi | Client 1 : -5 € | Client 300 : -5 € | Total : -1 500 €
+PC Safari : fiches-de-tobi.fr | Achetez une fiche | Recevez 5 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Pourquoi je perds de l'argent ?
-PLAN gros CODEX
-CODEX dit (constat) Le paiement est à l'envers. C'est toi qui les paies.
-PLAN gros TOBI
-TOBI dit (colere) Ils gagnent cinq euros par fiche ?
+TOBI dit (colere) Recevez cinq euros ? C'est moi qui les paie !
 PLAN gros NOX
 NOX dit (constat) C'est pour ça qu'ils sont trois cents.
 PLAN gros TOBI
-TOBI dit (panique) Coupe le site, Codex !
+TOBI dit (panique) Coupe le site !
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. J'ai fermé ton compte.
 PLAN gros TOBI

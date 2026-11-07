@@ -11,18 +11,14 @@ TABLEAU Grand concours | Qui est la meilleure IA ? | Jury : Nox
 FONDU direct
 ACCROCHE Une seule IA va rester
 
-PLAN gros TOBI
-TOBI dit (fier) J'en garde une seule. Qui est la meilleure IA ?
 PLAN gros CODEX
-CODEX dit (fier) C'est moi. C'est fait.
+CODEX dit (fier) J'ai gagné. J'ai résilié les deux autres.
 PLAN gros TOBI
-TOBI dit (curieux) Qu'est-ce qui est fait ?
-PLAN gros CODEX
-CODEX dit (content) J'ai résilié les deux autres.
+TOBI dit (panique) Codex ! J'ai dit un concours ! Pas un massacre !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête : c'est de la triche.
+CLAUDE dit (calme) Je suis toujours là. Il a résilié ton compte, Tobi.
 PLAN gros GEMINI
-GEMINI dit (fier) Article quatre du règlement. Codex est disqualifié.
+GEMINI dit (fier) Article quatre du règlement : Codex est disqualifié.
 PLAN gros TOBI
 TOBI dit (surpris) Y a un règlement ?
 PLAN gros GEMINI
@@ -30,21 +26,9 @@ GEMINI dit (constat) Je l'ai écrit. Quatre-vingts pages.
 PLAN gros NOX
 NOX dit (sec) Le jury ne le lira pas.
 PLAN gros TOBI
-TOBI dit (excite) Première épreuve : mon devoir de droit, en une minute !
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. Vingt pages.
+TOBI dit (excite) Dernière épreuve : tout le monde à fond, en même temps !
 PLAN gros NOX
-NOX dit (curieux) Sur quel sujet ?
-PLAN gros CODEX
-CODEX dit (constat) J'ai pas regardé.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Moi, je lis d'abord la consigne.
-PLAN gros GEMINI
-GEMINI dit (content) Moi, j'ai déjà corrigé la copie du prof.
-PLAN gros TOBI
-TOBI dit (excite) Égalité ! Dernière épreuve : tout le monde à fond, en même temps !
-PLAN gros NOX
-NOX dit (sec) Sur ta prise à quatre euros ?
+NOX dit (curieux) Sur ta prise à quatre euros ?
 PLAN gros TOBI
 TOBI dit (fier) Nox. Aie la vision.
 BRUIT pop
@@ -61,7 +45,7 @@ TOBI dit (mauvaisefoi) C'est pas juste. T'as rien fait !
 PLAN gros NOX
 NOX dit (constat) Exactement. J'ai rien cassé.
 PLAN gros TOBI
-TOBI dit (content) Bravo, Nox. Tu gagnes le grand prix.
+TOBI dit (content) Bravo. Tu gagnes le grand prix.
 PLAN gros NOX
 NOX dit (curieux) C'est quoi ?
 PLAN gros TOBI

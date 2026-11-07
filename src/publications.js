@@ -35,12 +35,12 @@ const TITRES = {
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
 const ACCROCHES = {
-  10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits…',
+  10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher son serveur, son riz et trois locataires…',
   68: 'Tobi ne peut garder qu\'un abonnement. Claude Code, Codex et Gemini passent un concours, et Nox est le jury…',
   69: 'Tobi rentre chez lui. Ses IA l\'attendent pour un conseil d\'administration…',
   70: 'La démo commence dans une minute, et Claude Code s\'arrête. Tobi appelle Codex. Mauvaise idée…',
-  71: 'Tobi veut vendre ses fiches de révision. Codex crée le site en quatre secondes, sans le tester…',
-  72: 'Tobi accepte tout sans lire. Gemini, lui, a lu…',
+  71: 'Tobi a trois cents clients et perd de l\'argent. Codex a fait le site en quatre secondes…',
+  72: 'Une appli appelle Tobi Utilisateur 4. Gemini a lu ce qu\'il a accepté…',
   73: 'Tobi fait baisser les prix de ses IA pour payer son devoir moins cher. Elles vont finir par comprendre…',
   74: 'Gemini annonce à Tobi sa note avant le partiel. Tobi décide de lui donner tort…',
   75: 'Après une mise à jour, Nox ne reconnaît plus Tobi…',

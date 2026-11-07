@@ -5,6 +5,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 ## Histoire
 
 - Capter l'attention dès les premières secondes, puis la garder jusqu'à la fin : c'est la priorité de chaque épisode.
+- Entrer directement dans la crise. L'auteur n'a pas accroché à des débuts encore trop explicatifs.
 - Les épisodes sont indépendants, drôles, logiques et compréhensibles sans description.
 - Le contexte doit être dit par les personnages dès le début.
 - On privilégie les projets fous de Tobi, l'argent, l'entrepreneuriat et leurs revers.
@@ -36,11 +37,13 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - Français parlé, naturel, avec de l'émotion et des réponses qui s'enchaînent.
 - Un personnage regarde son interlocuteur avant de parler.
+- Claude Code ne répète pas de formule. « Je vais être honnête » est à éviter : il parle simplement, avec ses propres mots.
 - Claude est un grand frère honnête, Codex un stagiaire surexcité, Gemini le premier de la classe.
 
 ## Image
 
 - Le visage de celui qui parle reste visible.
+- La caméra ne se place jamais derrière une table ou un meuble : le centre de l'image reste dégagé sur tous les épisodes.
 - La caméra ne doit jamais entrer dans un personnage ou un vêtement.
 - Le PC et le téléphone doivent être lisibles et utiles à l'histoire.
 - Rien ne doit traverser un objet : bras, mains, chaise, bureau ou téléphone.

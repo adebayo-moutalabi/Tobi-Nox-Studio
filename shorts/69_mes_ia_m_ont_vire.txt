@@ -1,5 +1,5 @@
 # MES IA M'ONT VIRÉ DE MA START-UP
-# Pitch : Tobi rentre chez lui. Claude Code, Codex, Gemini et Nox l'attendent pour un conseil d'administration.
+# Pitch : Tobi rentre chez lui. Claude Code, Codex, Gemini et Nox sont en train de voter son départ.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,58 +7,46 @@ DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 DIRECT CODEX apparait gauche
 DIRECT GEMINI apparait droite
-TABLEAU Conseil d'administration | Ordre du jour | Tobi
+TABLEAU Conseil d'administration | Ordre du jour | Virer Tobi
 FONDU direct
 ACCROCHE Viré de ma propre start-up
 
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tobi, assieds-toi. On va te virer de ta start-up.
-PLAN gros TOBI
-TOBI dit (surpris) Me virer ? Vous êtes qui pour ça ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) Ton conseil d'administration.
-PLAN gros TOBI
-TOBI dit (surpris) J'ai un conseil ?
+CLAUDE dit (calme) Qui est pour virer Tobi ?
 PLAN gros CODEX
-CODEX dit (fier) Je l'ai créé ce matin. C'est fait.
+CODEX dit (content) Pour.
 PLAN gros GEMINI
-GEMINI dit (constat) J'ai lu tes comptes. La start-up a perdu neuf cents euros.
+GEMINI dit (content) Pour.
+PLAN gros NOX
+NOX dit (sec) Pour.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est un investissement.
+TOBI dit (surpris) Je suis là, hein.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tobi, ta start-up a perdu neuf cents euros.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un investissement !
 PLAN gros NOX
 NOX dit (curieux) Dans quoi ?
 PLAN gros TOBI
 TOBI dit (gene) Des autocollants.
-PLAN gros CLAUDE
-CLAUDE dit (calme) On passe au vote. Qui veut garder Tobi comme patron ?
-PLAN gros TOBI
-TOBI dit (fier) Moi.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Une voix. Qui est contre ?
-PLAN gros CODEX
-CODEX dit (content) Contre.
-PLAN gros GEMINI
-GEMINI dit (content) Contre.
-PLAN gros NOX
-NOX dit (sec) Contre.
-INSERT Résultat du vote | 3 contre 1 | Tobi est viré
+INSERT Résultat du vote | 3 voix pour | Tobi est viré
 PLAN gros TOBI
 TOBI dit (panique) Vous pouvez pas ! C'est ma start-up !
 PLAN gros GEMINI
-GEMINI dit (constat) Article trois des statuts. Tu les as acceptés hier.
+GEMINI dit (constat) Article trois. Tu l'as accepté hier.
 PLAN gros CODEX
-CODEX dit (fier) Tu as cliqué sans lire.
+CODEX dit (fier) Tu cliques sans lire.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Très bien. Alors je postule.
 PC Mail de candidature | Poste : stagiaire | Candidat : Tobi
 PLAN pc
 ATTENDRE 1.6
 PLAN gros GEMINI
-GEMINI dit (calme) Candidature refusée. J'ai lu tes mails.
+GEMINI dit (calme) Refusé. J'ai lu tes mails.
 PLAN gros TOBI
 TOBI dit (triste) Même stagiaire ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Il reste un poste. Je vais être honnête : il n'est pas payé.
+CLAUDE dit (calme) Il reste un poste. Il n'est pas payé.
 PLAN gros TOBI
 TOBI dit (content) J'accepte !
 PLAN gros NOX

@@ -55,5 +55,5 @@ TOBI dit (illumine) Attends... Tu peux faire pareil avec mes dettes ?
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
 PLAN gros CLAUDE
-CLAUDE dit (surpris) Oh non. Je vais être honnête : appelle un avocat.
+CLAUDE dit (surpris) Oh non. Appelle un avocat.
 ATTENDRE 0.4

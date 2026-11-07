@@ -38,7 +38,7 @@ TOBI dit (fier) Genre.
 PLAN gros NOX
 NOX dit (constat) Ton devoir dit « néanmoins » quarante fois.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête : tu dois tout réécrire toi-même, Tobi.
+CLAUDE dit (calme) Écoute, Tobi : tu dois tout réécrire toi-même.
 PLAN gros TOBI
 TOBI dit (colere) Ça, c'est de la violence, Claude !
 PLAN gros NOX

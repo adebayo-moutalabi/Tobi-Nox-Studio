@@ -22,7 +22,7 @@ GEMINI dit (content) Un podcast de six heures, avec un graphique.
 PLAN gros TOBI
 TOBI dit (resigne) Claude, toi t'es sérieux. C'est grave ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête avec toi : je suis pas médecin. Va voir un médecin.
+CLAUDE dit (calme) Tobi, je suis pas médecin. Va voir un médecin.
 PLAN gros TOBI
 TOBI dit (colere) Le rendez-vous, c'est dans trois semaines ! Codex, fais quelque chose !
 PLAN gros CODEX
@@ -54,7 +54,7 @@ PLAN gros NOX
 NOX dit (sec) Vingt ans de Tobi.
 INSERT Le lendemain | Gorge guérie | Coût : 0 €
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête, Tobi : elle est meilleure que nous.
+CLAUDE dit (calme) Faut le reconnaître, Tobi : elle est meilleure que nous.
 PLAN gros CODEX
 CODEX dit (fier) C'est réglé. Je lui ai proposé un poste chez nous.
 BRUIT ding

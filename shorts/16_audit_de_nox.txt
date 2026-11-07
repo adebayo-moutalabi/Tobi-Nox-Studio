@@ -8,7 +8,7 @@ DIRECT CLAUDE apparait bureau
 FONDU direct
 
 PLAN gros CLAUDE
-CLAUDE dit (calme) Bonsoir Nox. Je vais être honnête, je viens faire ton audit.
+CLAUDE dit (calme) Bonsoir Nox. Je viens faire ton audit.
 PLAN gros NOX
 NOX dit (sec) Non.
 PLAN gros CLAUDE

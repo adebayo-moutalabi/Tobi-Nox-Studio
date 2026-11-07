@@ -21,7 +21,7 @@ CLAUDE dit (calme) Je t'aide à écrire ta réclamation ?
 PLAN gros TOBI
 TOBI dit (excite) Oui ! Sois ferme. Dis que je mérite au moins dix.
 PLAN gros CLAUDE
-CLAUDE dit (curieux) Sur quelle base, honnêtement ?
+CLAUDE dit (curieux) Sur quelle base ?
 PLAN gros TOBI
 TOBI dit (fier) J'ai écrit quatre pages.
 PLAN gros NOX

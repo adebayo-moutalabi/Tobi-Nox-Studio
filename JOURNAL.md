@@ -223,6 +223,16 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nouvelle commande `ACCROCHE`, et début plus direct pour les nouveaux épisodes.
 - Seize épisodes prioritaires reçoivent une accroche.
 
+## Claude plus naturel et nouveaux épisodes réécrits (7 novembre 2026)
+
+- La formule répétée de Claude Code disparaît des dialogues.
+- Les épisodes 10 et 68 à 78 sont réécrits : ils commencent dans la crise et sont plus courts.
+
+## Caméra dégagée des meubles (7 novembre 2026)
+
+- La caméra évite les positions où un meuble bouche le haut ou le centre de l'image.
+- L'audit de cadrage signale maintenant « meuble devant ». Le bas de l'image peut montrer le lit où un personnage est assis.
+
 ## À faire
 
 Voir `TACHES.md`.

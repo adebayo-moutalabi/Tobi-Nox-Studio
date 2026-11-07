@@ -27,7 +27,7 @@ PLAN gros TOBI
 TOBI dit (panique) Claude ! Écris-moi tout ça, vite !
 COMPTEUR Il reste 45 s
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vais être honnête avec toi : il est minuit moins une.
+CLAUDE dit (calme) Tobi, il est minuit moins une.
 PLAN gros TOBI
 TOBI dit (colere) Je sais ! Écris !
 PLAN gros CLAUDE

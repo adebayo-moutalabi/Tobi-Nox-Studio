@@ -24,7 +24,7 @@ TOBI dit (gene) J'ai pas de cours.
 PLAN gros NOX
 NOX dit (sec) Il a une photo floue du tableau.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je vois. J'ai une question honnête.
+CLAUDE dit (calme) Je vois. J'ai une vraie question.
 PLAN gros TOBI
 TOBI dit (panique) Vite !
 PLAN gros CLAUDE
@@ -32,7 +32,7 @@ CLAUDE dit (curieux) Veux-tu vraiment apprendre quelque chose ?
 PLAN gros TOBI
 TOBI dit (colere) Non ! Je veux une note !
 PLAN gros CLAUDE
-CLAUDE dit (calme) C'est honnête. Je le note.
+CLAUDE dit (calme) C'est clair. Je le note.
 INSERT Temps restant | 2 minutes | Lignes écrites : 0
 HEURE 23:58
 COMPTEUR Il reste 2 min
