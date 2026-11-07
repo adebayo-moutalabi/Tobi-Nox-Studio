@@ -273,6 +273,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nouveau bouton pour tout recréer, avec le coût affiché avant.
 - La recherche de voix françaises filtre aussi par âge et par mot-clé.
 
+## Voix plus lisibles et gardées (7 novembre 2026)
+
+- Les menus de voix sont lisibles, et les étiquettes des voix sont traduites.
+- Recherche par nom, et bouton pour voir plus de voix.
+- Les répliques d'un épisode se téléchargent dans un ZIP, pour ne pas les perdre.
+
 ## À faire
 
 Voir `TACHES.md`.

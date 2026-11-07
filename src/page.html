@@ -38,8 +38,7 @@ h1 { font-family: var(--display); font-weight: 700; font-size: 25px; line-height
 h2 { font-family: var(--display); font-weight: 500; font-size: 15px; margin: 0 0 8px; }
 .grid { display: flex; flex-wrap: wrap; gap: 6px; }
 .frList { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
-.frList li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; }
-.frList li span { flex: 1 1 160px; }
+.frList li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: 13px; }
 button { font: inherit; font-weight: 500; font-size: 13px; padding: 7px 10px; border-radius: 7px; border: 1px solid transparent; background: var(--chip); color: var(--ink); cursor: pointer; transition: background .12s; }
 button:hover { background: var(--chip-hover); }
 button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
@@ -183,7 +182,11 @@ details[open]::details-content { block-size: auto; opacity: 1; }
 .file:hover { background: var(--chip-hover); }
 .file input { position: absolute; width: 1px !important; height: 1px !important; opacity: 0; }
 .rows input[type="password"], .rows select { font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
-.rows select option { color: #111; }
+.rows select option { color: #17191f; background: #ffffff; font-size: 14px; }
+.frList li { padding: 10px 12px; border: 1px solid var(--brand-hair, var(--line)); border-radius: 12px; background: var(--brand-surface, var(--panel)); }
+.frList .frName { font-weight: 600; font-size: 14px; }
+.frList .frTags { color: var(--muted); font-size: 12.5px; flex-basis: 100%; }
+.frList .frBtns { display: flex; gap: 6px; flex-basis: 100%; }
 .rows textarea { background: var(--brand-surface); color: var(--brand-ink); border: 1px solid var(--brand-hair); border-radius: 12px; margin: 0; }
 #settings input[type="text"] { flex: 0 1 62%; width: 62%; font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
 #elCredits:empty { display: none; }
@@ -329,10 +332,12 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <p class="sub" id="elNow" aria-live="polite"></p>
             <button type="button" id="elGo" disabled>Créer les vraies voix de cet épisode</button>
             <button type="button" id="elRedoAll" title="Consomme des crédits">Tout recréer avec les voix choisies</button>
+            <button type="button" id="elSaveVoices">Télécharger les voix de cet épisode</button>
             <button type="button" id="elCopy">Copier la liste de mes voix</button>
             <details id="elFr"><summary>Trouver des voix françaises</summary><div>
-              <div class="grid"><select id="elFrFor" aria-label="Personnage"><option value="codex">Pour Codex</option><option value="gemini">Pour Gemini</option><option value="claude">Pour Claude Code</option><option value="nox">Pour Nox</option><option value="tobi">Pour Tobi</option></select><select id="elFrGender" aria-label="Voix"><option value="">Toutes</option><option value="male">Masculines</option><option value="female">Féminines</option></select><select id="elFrAge" aria-label="Âge"><option value="">Tous âges</option><option value="young">Jeunes</option><option value="middle_aged">Adultes</option></select><input type="text" id="elFrQuery" placeholder="Mot-clé : énergique, calme…" aria-label="Mot-clé"><button type="button" id="elFrSearch">Chercher</button></div>
+              <div class="grid"><select id="elFrFor" aria-label="Personnage"><option value="codex">Pour Codex</option><option value="gemini">Pour Gemini</option><option value="claude">Pour Claude Code</option><option value="nox">Pour Nox</option><option value="tobi">Pour Tobi</option></select><select id="elFrGender" aria-label="Voix"><option value="">Toutes</option><option value="male">Masculines</option><option value="female">Féminines</option></select><select id="elFrAge" aria-label="Âge"><option value="">Tous âges</option><option value="young">Jeunes</option><option value="middle_aged">Adultes</option></select><input type="text" id="elFrQuery" placeholder="Nom ou mot-clé : Julien, énergique…" aria-label="Nom ou mot-clé"><button type="button" id="elFrSearch">Chercher</button></div>
               <ul id="elFrList" class="frList"></ul>
+              <button type="button" id="elFrMore" hidden>Voir plus de voix</button>
             </div></details>
             <ol id="elLines"></ol>
             <label class="voice">« Aie » se dit <input type="text" id="elAie" spellcheck="false" aria-label="Écriture envoyée à la voix pour Aie"></label>

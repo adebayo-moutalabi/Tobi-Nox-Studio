@@ -49,6 +49,27 @@ async function explain(res) {
   return `ElevenLabs a répondu ${res.status}${msg ? ` : ${msg}` : ''}.`;
 }
 
+// Archive ZIP sans compression : assez pour ranger les répliques d'un épisode dans un seul fichier.
+const CRC = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
+const crc32 = (d) => { let c = 0xffffffff; for (const b of d) c = CRC[(c ^ b) & 255] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
+function zip(files) {
+  const enc = new TextEncoder(), parts = [], dir = [];
+  let offset = 0;
+  for (const f of files) {
+    const name = enc.encode(f.name), crc = crc32(f.data), head = new DataView(new ArrayBuffer(30));
+    head.setUint32(0, 0x04034b50, true); head.setUint16(4, 20, true); head.setUint16(6, 0x0800, true);
+    head.setUint32(14, crc, true); head.setUint32(18, f.data.length, true); head.setUint32(22, f.data.length, true); head.setUint16(26, name.length, true);
+    const cen = new DataView(new ArrayBuffer(46));
+    cen.setUint32(0, 0x02014b50, true); cen.setUint16(4, 20, true); cen.setUint16(6, 20, true); cen.setUint16(8, 0x0800, true);
+    cen.setUint32(16, crc, true); cen.setUint32(20, f.data.length, true); cen.setUint32(24, f.data.length, true); cen.setUint16(28, name.length, true); cen.setUint32(42, offset, true);
+    parts.push(head, name, f.data); dir.push(cen, name);
+    offset += 30 + name.length + f.data.length;
+  }
+  const size = dir.reduce((n, p) => n + p.byteLength, 0), end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true); end.setUint32(12, size, true); end.setUint32(16, offset, true);
+  return new Blob([...parts, ...dir, end], { type: 'application/zip' });
+}
+
 export function mountVoices({ el, player, parseStory, onChange }) {
   const cache = audioCache();
   const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), codex: el('elCodex'), gemini: el('elGemini') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
@@ -216,20 +237,29 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   // Bibliothèque ElevenLabs : écouter un extrait est gratuit. Ajouter une voix au compte ne consomme pas de crédit,
   // mais certaines offres limitent le nombre de voix. Seule la création des répliques consomme des crédits.
   const frList = el('elFrList');
-  el('elFrSearch').addEventListener('click', async () => {
+  // Les étiquettes d'ElevenLabs sont en anglais : on les traduit pour les lire d'un coup d'œil.
+  const FR = { male: 'homme', female: 'femme', young: 'jeune', middle_aged: 'adulte', old: 'âgée', upbeat: 'dynamique', gentle: 'douce', professional: 'professionnelle', modulated: 'expressive', calm: 'calme', confident: 'assurée', casual: 'décontractée', warm: 'chaleureuse', energetic: 'énergique', friendly: 'amicale', serious: 'sérieuse', deep: 'grave', soft: 'douce', conversational: 'conversation', narrative_story: 'récit', informative_educational: 'explications', advertisement: 'publicité', characters_animation: 'personnages', social_media: 'réseaux sociaux', entertainment_tv: 'divertissement' };
+  const fr = (t) => FR[t] || (t || '').replace(/_/g, ' ');
+  let page = 0, lastQuery = '';
+  const search = async (more) => {
     if (!key.value.trim()) { say('Colle d\'abord ta clé ElevenLabs.'); return; }
-    frList.replaceChildren(); say('Recherche de voix françaises…');
+    if (!more) { frList.replaceChildren(); page = 0; } else page += 1;
+    say('Recherche de voix françaises…');
     try {
       const g = el('elFrGender').value, a = el('elFrAge').value, t = el('elFrQuery').value.trim();
-      const q = new URLSearchParams({ language: 'fr', page_size: '30', sort: 'trending', ...(g ? { gender: g } : {}), ...(a ? { age: a } : {}), ...(t ? { search: t } : {}) });
-      const { voices = [] } = await (await call(`/shared-voices?${q}`)).json();
-      if (!voices.length) { say('Aucune voix française trouvée avec ce filtre.'); return; }
-      frList.replaceChildren(...voices.map((x) => {
-        const li = document.createElement('li'), text = document.createElement('span'), hear = document.createElement('button'), add = document.createElement('button');
-        text.textContent = [x.name, x.gender === 'male' ? 'homme' : x.gender === 'female' ? 'femme' : '', x.age, x.descriptive, x.use_case].filter(Boolean).join(' · ');
+      const q = new URLSearchParams({ language: 'fr', page_size: '30', page: String(page), sort: t ? 'usage_character_count_1y' : 'trending', ...(g ? { gender: g } : {}), ...(a ? { age: a } : {}), ...(t ? { search: t } : {}) });
+      lastQuery = q.toString();
+      const { voices = [], has_more: hasMore } = await (await call(`/shared-voices?${q}`)).json();
+      el('elFrMore').hidden = !hasMore;
+      if (!voices.length && !more) { say('Aucune voix française trouvée. Essaie un autre nom ou un autre mot-clé.'); return; }
+      frList.append(...voices.map((x) => {
+        const li = document.createElement('li'), name = document.createElement('span'), tags = document.createElement('span'), btns = document.createElement('div'), hear = document.createElement('button'), add = document.createElement('button');
+        name.className = 'frName'; name.textContent = x.name;
+        tags.className = 'frTags'; tags.textContent = [fr(x.gender), fr(x.age), fr(x.descriptive), fr(x.use_case)].filter(Boolean).join(' · ');
+        btns.className = 'frBtns';
         hear.type = 'button'; hear.textContent = 'Écouter'; hear.disabled = !x.preview_url;
         hear.addEventListener('click', () => new Audio(x.preview_url).play());
-        add.type = 'button'; add.textContent = 'Choisir';
+        add.type = 'button'; add.textContent = 'Choisir pour ce personnage';
         add.addEventListener('click', async () => {
           const who = el('elFrFor').value;
           add.disabled = true; say(`Ajout de ${x.name} à tes voix…`);
@@ -240,10 +270,24 @@ export function mountVoices({ el, player, parseStory, onChange }) {
             say(`${x.name} est maintenant la voix de ${el('elFrFor').selectedOptions[0].textContent.replace('Pour ', '')}.`);
           } catch (e) { say(e.message); add.disabled = false; }
         });
-        li.append(text, hear, add); return li;
+        btns.append(hear, add); li.append(name, tags, btns); return li;
       }));
-      say(`${voices.length} voix françaises. Écoute-les, puis choisis.`);
+      say(`${frList.children.length} voix françaises. Écoute-les, puis choisis.`);
     } catch (e) { say(e.message); }
+  };
+  el('elFrSearch').addEventListener('click', () => search(false));
+  el('elFrMore').addEventListener('click', () => search(true));
+  el('elFrQuery').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); search(false); } });
+
+  // Les répliques créées appartiennent à l'auteur : il peut les garder hors d'ElevenLabs et les réimporter plus tard.
+  el('elSaveVoices').addEventListener('click', async () => {
+    if (!rows.length || !rows.every((r) => r.url)) { say('Crée d\'abord les voix de cet épisode.'); return; }
+    const files = [];
+    for (let i = 0; i < rows.length; i++) files.push({ name: `${String(i + 1).padStart(2, '0')}_${rows[i].who}.mp3`, data: new Uint8Array(await (await fetch(rows[i].url)).arrayBuffer()) });
+    const a = document.createElement('a'), title = (el('storyPick').value || 'episode').replace(/[<>:"/\\|?*]/g, ' ').trim();
+    a.href = URL.createObjectURL(zip(files)); a.download = `${title} - voix.zip`; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    say(`${files.length} répliques téléchargées. Pour les réutiliser : Vidéo, puis « Importer mes propres voix ».`);
   });
   el('elCopy').addEventListener('click', async () => {
     const line = (who, s) => `${who} : ${s.selectedOptions[0]?.textContent || 'non choisie'}`;

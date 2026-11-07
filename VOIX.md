@@ -9,8 +9,8 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 | Tobi | À renseigner | Jeune, vive, naturelle. Voix clonée de l'auteur prévue, ce qui permet de le reconnaître | À confirmer |
 | Nox | À renseigner | Posée, légèrement mécanique, humour très sec, jamais froide | À renseigner |
 | Claude Code | À renseigner | Calme, polie, prudente | À renseigner |
-| Codex | À renseigner | Rapide, sûre d'elle, un peu trop efficace | À renseigner |
-| Gemini | À renseigner | Enthousiaste, rapide, encyclopédique | À renseigner |
+| Codex | Julien - Professional & Energetic, proposée | Rapide, sûre d'elle, un peu trop efficace | À choisir dans le Studio |
+| Gemini | Manon, Claire ou Elia, proposées | Enthousiaste, rapide, encyclopédique | À choisir dans le Studio |
 
 ## Trouver une voix française
 
@@ -23,6 +23,13 @@ Dans le Studio, ouvrir Réglages, puis Voix, puis « Trouver des voix française
 - **Changer de voix :** dès qu'une voix change, les anciennes répliques sont oubliées. « Tout recréer avec les voix choisies » refait tout l'épisode, même les répliques déjà créées. Le Studio annonce le coût et demande un second clic.
 
 Pistes : Codex, une voix d'homme jeune, rapide et énergique. Gemini, une voix vive et enthousiaste, plutôt de femme pour bien la distinguer.
+
+## Garder les voix sur la durée
+
+- **Les fichiers audio créés sont à l'auteur.** « Télécharger les voix de cet épisode » range toutes les répliques dans un fichier ZIP. Pour les réutiliser sans ElevenLabs : Vidéo, puis « Importer mes propres voix ».
+- **Une voix de la bibliothèque peut être retirée par son auteur.** Garder le ZIP de chaque épisode publié protège les vidéos déjà faites.
+- **Pour les futurs épisodes,** une voix retirée devra être remplacée. Vérifier les conditions d'ElevenLabs pour les voix de la bibliothèque.
+- **Pour ne plus dépendre d'ElevenLabs,** il faudra une autre solution de voix, à étudier plus tard.
 
 ## Les règles
 

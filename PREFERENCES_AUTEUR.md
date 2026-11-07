@@ -87,6 +87,9 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 ## Crédits
 
+- Les voix doivent rester utilisables sur la durée, sans dépendre complètement d'ElevenLabs.
+- La lumière doit suivre l'heure de l'histoire : lampes, fenêtre et soleil cohérents.
+
 - On écoute d'abord avec les voix gratuites.
 - ElevenLabs sert à la vidéo finale, après confirmation du coût.
 

@@ -11,6 +11,9 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 - **Épisodes de plus d'une minute :** les raccourcir seulement si la rétention le demande.
 - **Sweat de Tobi :** l'auteur doit décider s'il garde le moutarde.
 
+- **Lumière selon l'heure :** la nuit, lampes allumées et fenêtre sombre ; le jour, lumière du soleil cohérente avec l'heure affichée. Rien ne doit être laissé au hasard.
+- **Défilement du Studio :** l'auteur signale un souci quand on remonte tout en haut. À préciser avec lui.
+
 ## Documentation et code
 
 4. **Revoir la documentation et le code :** une personne ou une IA doit pouvoir les comprendre et les modifier facilement. L'auteur y reviendra.
