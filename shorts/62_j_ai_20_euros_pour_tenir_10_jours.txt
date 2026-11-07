@@ -11,8 +11,6 @@ ACCROCHE 20 € pour tenir 10 jours
 
 PLAN gros TOBI
 TOBI dit (gene) Nox, ma bourse arrive dans dix jours, et il me reste vingt euros.
-PLAN gros NOX
-NOX dit (curieux) Ça fait deux euros par jour. Tu vas tenir ?
 PLAN gros TOBI
 TOBI dit (triste) Non. Je me connais. Bloque ma carte et laisse-moi rien acheter.
 PLAN gros NOX
@@ -20,7 +18,6 @@ NOX dit (calme) Même si tu me supplies ?
 PLAN gros TOBI
 TOBI dit (fier) Surtout si je te supplie. Je suis un homme de parole.
 COMPTEUR Jour 1 sur 10 · 20 €
-TEMPS Ça commence | Jour 1 | Il reste 20 €
 PC Safari : kebab-rennes.fr/commande | Kebab : 9 € | Refusé par Nox
 PLAN pc
 ATTENDRE 1.6
@@ -39,19 +36,8 @@ PLAN gros NOX
 NOX dit (sec) Un cahier avec sauce.
 PLAN gros TOBI
 TOBI dit (gene) Et des frites. Pour prendre des notes.
-COMPTEUR Jour 7 sur 10 · 20 €
-TEMPS Trois jours plus tard | Jour 7 | Il reste 20 €
-AMBIANCE soir
-DIRECT TOBI marche tapis
-PLAN gros TOBI
-TOBI dit (colere) Débloque ma carte, ou je te débranche !
-PLAN gros NOX
-NOX dit (calme) J'avais prévu ça. J'ai caché ton chargeur.
-PLAN gros TOBI
-TOBI dit (panique) Mon chargeur ? Rends-le-moi, Nox !
 COMPTEUR Jour 10 sur 10 · 20 €
-TEMPS Trois jours plus tard | Jour 10 | Il reste 20 €
-AMBIANCE jour
+TEMPS Six jours plus tard | Jour 10 | Il reste 20 €
 DIRECT TOBI assis
 PLAN gros NOX
 NOX dit (calme) Bravo, Tobi. T'as tenu dix jours, et il te reste vingt euros.
@@ -64,8 +50,6 @@ TOBI geste victoire &
 TOBI dit (excite) Je suis riche ! Ce soir, je fête ça !
 BRUIT ding
 INSERT Loyer prélevé | 441 € | Reste : 29 €
-PLAN gros NOX
-NOX dit (constat) Il te reste vingt-neuf euros pour trente jours.
 PLAN gros TOBI
 TOBI dit (triste) Nox… bloque ma carte.
 PLAN gros NOX

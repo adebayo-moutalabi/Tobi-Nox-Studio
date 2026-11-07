@@ -8,6 +8,9 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 2. **Regarder les vidéos en entier :** valider les gestes, la caméra et la lumière sur de vrais exports.
 3. **Sauvegarde des gestes :** garder `src/mocap-mixamo.json` et les FBX hors de ce dossier de session, par exemple dans un dépôt privé.
 
+- **Raccourcir les épisodes encore au-dessus d'une minute :** viser moins de 40 secondes à 1 minute, avec le script d'estimation du journal.
+- **Tenue de Tobi :** l'auteur doit choisir les chaussures, puis décider du sweat.
+
 ## Documentation et code
 
 4. **Revoir la documentation et le code :** une personne ou une IA doit pouvoir les comprendre et les modifier facilement. L'auteur y reviendra.

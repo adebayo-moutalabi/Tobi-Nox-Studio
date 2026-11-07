@@ -233,6 +233,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - La caméra évite les positions où un meuble bouche le haut ou le centre de l'image.
 - L'audit de cadrage signale maintenant « meuble devant ». Le bas de l'image peut montrer le lit où un personnage est assis.
 
+## Épisodes plus courts (7 novembre 2026)
+
+- Nouvelle durée visée : de moins de 40 secondes à 1 minute.
+- Premier passage sur les épisodes 45, 46, 47, 48, 50 et 62.
+
 ## À faire
 
 Voir `TACHES.md`.
