@@ -1,0 +1,50 @@
+# GEMINI A LU LES CONDITIONS D'UTILISATION À MA PLACE
+# Pitch : Tobi accepte tout sans lire pour une appli météo gratuite. Gemini, lui, a lu.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX travaille
+DIRECT NOX pivote
+DIRECT GEMINI apparait milieu
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) Nouvelle appli météo, gratuite ! J'accepte tout sans lire.
+PLAN gros GEMINI
+GEMINI dit (excite) Moi, j'ai lu. Les quatre-vingt-dix pages.
+PLAN gros TOBI
+TOBI dit (curieux) Personne ne lit ça. Y a quoi ?
+PLAN gros GEMINI
+GEMINI dit (constat) Article douze. L'appli utilise ta position.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Normal. C'est la météo.
+PLAN gros GEMINI
+GEMINI dit (constat) Article trente et un. Et ta caméra.
+PLAN gros TOBI
+TOBI dit (gene) Pour voir les nuages.
+PLAN gros GEMINI
+GEMINI dit (constat) Article cinquante-huit. Et ton prénom.
+PLAN gros TOBI
+TOBI dit (surpris) Mon prénom ?
+PLAN gros GEMINI
+GEMINI dit (calme) Il ne t'appartient plus.
+INSERT Propriétaire du prénom Tobi | MétéoPlus | Depuis 8 secondes
+PLAN gros NOX
+NOX dit (ironique) Je t'appelle comment, maintenant ?
+PLAN gros TOBI
+TOBI dit (panique) Je peux résilier ?
+PLAN gros GEMINI
+GEMINI dit (constat) Article quatre-vingt-neuf. Par courrier, au Groenland.
+BRUIT ding
+TOBI message MétéoPlus | Bonjour, Utilisateur 4. | Prénom Tobi : 2 € par mois.
+PLAN gros TOBI
+TOBI dit (colere) Deux euros par mois pour mon propre prénom ?
+PLAN gros NOX
+NOX dit (sec) Et il est sur ton sweat. Ça compte comme une publicité.
+PLAN gros TOBI
+TOBI dit (excite) Nox. Aie la vision. Je change de prénom !
+PLAN gros GEMINI
+GEMINI dit (content) Article quatre-vingt-dix. Ils ont pris les suivants aussi.
+PLAN gros NOX
+NOX dit (resigne) Courage, Utilisateur 4.
+ATTENDRE 0.4

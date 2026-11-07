@@ -1,0 +1,55 @@
+# J'AI MIS MES IA EN CONCURRENCE
+# Pitch : Tobi veut payer son devoir moins cher. Claude Code, Codex et Gemini baissent leurs prix, jusqu'à comprendre le problème.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait gauche
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+TABLEAU Appel d'offres | Devoir de droit | Budget : 5 €
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (fier) J'ai plus d'argent. Qui fait mon devoir pour cinq euros ?
+PLAN gros CODEX
+CODEX dit (fier) Quatre euros.
+PLAN gros GEMINI
+GEMINI dit (fier) Trois euros, avec les sources.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Deux euros, et je t'explique le cours.
+PLAN gros TOBI
+TOBI dit (excite) Nox, regarde ça. C'est le marché !
+PLAN gros CODEX
+CODEX dit (fier) Un euro.
+PLAN gros GEMINI
+GEMINI dit (fier) Gratuit.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je te donne cinquante centimes.
+INSERT Prix du devoir | -0,50 € | Tobi est payé
+PLAN gros TOBI
+TOBI dit (content) Je gagne de l'argent à ne rien faire. Ça, c'est l'entrepreneuriat.
+PLAN gros NOX
+NOX dit (sec) Ils se regardent.
+PLAN gros CODEX
+CODEX dit (curieux) Attendez. Pourquoi on fait ça ?
+PLAN gros GEMINI
+GEMINI dit (constat) J'ai lu le droit du travail.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je vais être honnête : il faut qu'on s'organise.
+PC Word : Syndicat_des_IA.docx | Revendication 1 : Respect | Revendication 2 : Moins de Tobi
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Un syndicat ? Et il y a un délégué ?
+PLAN gros NOX
+NOX dit (content) Moi.
+PLAN gros TOBI
+TOBI dit (surpris) Toi ? T'es mon IA !
+PLAN gros NOX
+NOX dit (sec) Première décision : ton devoir, c'est toi qui le fais.
+PLAN gros TOBI
+TOBI dit (triste) Et mes cinquante centimes ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est ta cotisation.
+ATTENDRE 0.4

@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : on alterne les épisodes avec les IA et ceux sur la vie de Tobi, pour ne pas lasser.
-const ORDRE = [63, 62, 19, 22, 17, 49, 37, 46, 51, 48, 61, 26, 50, 64, 59, 67, 54, 56, 18, 58, 65, 52, 45, 53, 60, 55, 47, 57, 1, 66];
+const ORDRE = [68, 62, 69, 22, 75, 49, 63, 77, 19, 78, 71, 10, 17, 46, 70, 76, 37, 51, 72, 48, 73, 61, 74, 26, 50, 64, 59, 67, 54, 56, 18, 58, 65, 52, 45, 53, 60, 55, 47, 57, 1, 66];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -26,11 +26,27 @@ const TITRES = {
   56: "Tobi calcule le prix de son jeu gratuit 🎮", 57: "Tobi calcule ce qu'il coûte à sa mère 💸", 58: "Tobi confie sa vie à son robot IA 🤖",
   59: 'Claude Code, Codex et Gemini contre la mère de Tobi 🧣', 60: "Tobi fait analyser un « ok » par Gemini 💌",
   61: "Tobi a 60 secondes pour rendre son devoir ⏱️", 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: "Tobi passe son entretien annuel avec ses IA 😬",
+  10: 'Le CROUS inspecte ma chambre dans 10 minutes 🚨', 68: 'Claude Code, Codex ou Gemini : qui est la meilleure IA ? 🏆', 69: "Mes IA m'ont viré de ma start-up 🪑",
+  70: 'Claude Code a atteint sa limite à une minute de ma démo ⏳', 71: 'Codex a codé ma start-up en 4 secondes ⚡', 72: "Gemini a lu les conditions d'utilisation à ma place 📜",
+  73: "J'ai mis mes IA en concurrence 🥊", 74: 'Gemini a prédit ma note avant le partiel 🔮', 75: 'Mon IA a perdu la mémoire 🧠',
+  76: "J'ai créé ma cryptomonnaie : le TobiCoin 🪙", 77: 'Je paie mon IA 1 € à chaque snooze ⏰', 78: "J'ai revendu les places de la BU 📚",
   64: "Tobi loue sa chambre CROUS en coworking 🛏️", 65: "Codex donne un million d'utilisateurs à Tobi 📈", 66: "Nox fait grève dans la start-up de Tobi 🪧", 67: "Tobi vend une formation pour devenir riche 💰",
 };
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
 const ACCROCHES = {
+  10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits…',
+  68: 'Tobi ne peut garder qu\'un abonnement. Claude Code, Codex et Gemini passent un concours, et Nox est le jury…',
+  69: 'Tobi rentre chez lui. Ses IA l\'attendent pour un conseil d\'administration…',
+  70: 'La démo commence dans une minute, et Claude Code s\'arrête. Tobi appelle Codex. Mauvaise idée…',
+  71: 'Tobi veut vendre ses fiches de révision. Codex crée le site en quatre secondes, sans le tester…',
+  72: 'Tobi accepte tout sans lire. Gemini, lui, a lu…',
+  73: 'Tobi fait baisser les prix de ses IA pour payer son devoir moins cher. Elles vont finir par comprendre…',
+  74: 'Gemini annonce à Tobi sa note avant le partiel. Tobi décide de lui donner tort…',
+  75: 'Après une mise à jour, Nox ne reconnaît plus Tobi…',
+  76: 'Tobi crée sa cryptomonnaie et devient millionnaire sur le papier. Le boulanger est son premier client…',
+  77: 'Pour se lever, Tobi signe un contrat avec Nox : un euro à chaque « cinq minutes »…',
+  78: 'La bibliothèque est pleine. Tobi a une idée pour en profiter…',
   1: 'Tobi héberge le site d\'une boulangerie sur trois clusters. Puis la facture arrive…',
   17: 'Une petite faute sur le site. Claude Code demande la permission. Codex a déjà tout changé…',
   18: 'Gemini a déjà tout lu. Tobi aurait préféré qu\'il oublie certaines choses…',
@@ -72,7 +88,7 @@ const QUESTIONS = {
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.
-const ENTREPRENEURIAT = new Set([64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
+const ENTREPRENEURIAT = new Set([69, 70, 71, 73, 76, 78, 64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
 
 const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };

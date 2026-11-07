@@ -213,6 +213,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Hashtags précis : IA présentes, sujet de l'épisode, six au maximum.
 - L'ordre de sortie alterne les épisodes avec les IA et ceux sur la vie de Tobi.
 
+## Douze nouveaux épisodes (7 novembre 2026)
+
+- Épisodes 10 et 68 à 78 : huit avec les IA, quatre sur les projets et la vie de Tobi.
+- Ils utilisent les nouvelles normes : contexte dès le début, applis, messages, calendrier, heure et date.
+
 ## À faire
 
 Voir `TACHES.md`.

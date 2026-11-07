@@ -1,0 +1,48 @@
+# J'AI REVENDU LES PLACES DE LA BU
+# Pitch : En période de partiels, Tobi réserve les places gratuites de la bibliothèque pour les revendre.
+
+AMBIANCE jour
+DATE Lundi
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+TABLEAU Période de partiels | BU pleine | Une idée
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (excite) Nox ! La BU est pleine. Je réserve toutes les places, et je les revends.
+PLAN gros NOX
+NOX dit (sec) Elles sont gratuites.
+PLAN gros TOBI
+TOBI dit (fier) Trois euros l'heure. Le marché est en tension.
+PC Safari : reserve-bu.fr | Places réservées par Tobi : 40 | Places libres : 0
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (curieux) Et les autres étudiants ?
+PLAN gros TOBI
+TOBI dit (content) Ils paient. J'ai déjà vingt clients.
+INSERT Recettes | 60 € | En une journée
+PLAN gros NOX
+NOX dit (curieux) Et toi, tu révises où ?
+PLAN gros TOBI
+TOBI dit (gene) J'ai tout vendu.
+BRUIT ding
+TOBI message Bibliothèque universitaire | Compte bloqué jusqu'à la fin des partiels. | Motif : 40 places.
+PLAN gros TOBI
+TOBI dit (panique) Bloqué ? Mon partiel est vendredi !
+PLAN gros NOX
+NOX dit (constat) Tes clients veulent aussi être remboursés.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Pas grave. Je vais réviser ici, au calme.
+PLAN gros NOX
+NOX dit (sec) Ici, c'est plus possible.
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi ?
+PLAN gros NOX
+NOX dit (constat) Pour les rembourser, j'ai loué ta chambre.
+PLAN gros TOBI
+TOBI dit (panique) T'as loué ma chambre ?
+PLAN gros NOX
+NOX dit (punchline) Trois euros l'heure. Le marché est en tension.
+ATTENDRE 0.4

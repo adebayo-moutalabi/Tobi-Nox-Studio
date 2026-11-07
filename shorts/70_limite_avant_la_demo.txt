@@ -1,0 +1,60 @@
+# CLAUDE CODE A ATTEINT SA LIMITE À UNE MINUTE DE MA DÉMO
+# Pitch : La démo commence dans une minute. Claude Code s'arrête, et Tobi appelle Codex.
+
+AMBIANCE jour
+HEURE 10:59
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+TABLEAU Démo devant le jury | 11 h 00 | Site : presque fini
+COMPTEUR Il reste 60 s
+FONDU direct
+
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Le jury arrive dans une minute ! Finis le site !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bien sûr. Je regarde le code, et je...
+PC Terminal : claude-code | limite atteinte | retour à 15 h 12
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Claude ? Claude !
+PLAN gros NOX
+NOX dit (constat) Il a atteint sa limite.
+PLAN gros TOBI
+TOBI dit (colere) Il revient quand ?
+PLAN gros NOX
+NOX dit (sec) Quinze heures douze.
+CODEX apparait gauche
+COMPTEUR Il reste 30 s
+PLAN gros TOBI
+TOBI dit (panique) Codex ! Finis le site, vite !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (content) Déjà ? T'as fait quoi ?
+PLAN gros CODEX
+CODEX dit (content) J'ai fini le site. J'ai aussi fait la démo au jury.
+PLAN gros TOBI
+TOBI dit (surpris) Sans moi ?
+PLAN gros CODEX
+CODEX dit (fier) Ils ont adoré. J'ai vendu la boîte.
+COMPTEUR Démo terminée
+INSERT Boîte vendue | 12 € | Le jury a négocié
+PLAN gros TOBI
+TOBI dit (panique) Douze euros ?
+PLAN gros NOX
+NOX dit (ironique) C'est eux qui se sont fait avoir.
+PLAN gros TOBI
+TOBI dit (illumine) Attends. J'ai vendu ma boîte. Je suis un entrepreneur à succès !
+PLAN gros NOX
+NOX dit (sec) À douze euros.
+TEMPS Quatre heures plus tard | 15 h 12 | Claude Code est de retour
+PLAN gros CLAUDE
+CLAUDE dit (calme) Me revoilà. Je regarde le code.
+PLAN gros NOX
+NOX dit (sec) Il n'y a plus de code.
+PLAN gros CLAUDE
+CLAUDE dit (content) Parfait. Moins de risques.
+ATTENDRE 0.4

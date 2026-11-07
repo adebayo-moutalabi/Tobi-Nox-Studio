@@ -66,6 +66,18 @@ import E58 from '../shorts/58_mon_robot_a_ete_moi_pendant_24_heures.txt';
 import E59 from '../shorts/59_claude_codex_et_gemini_contre_ma_mere.txt';
 import E60 from '../shorts/60_elle_a_repondu_ok.txt';
 import E61 from '../shorts/61_il_me_reste_60_secondes_pour_rendre_mon_devoir.txt';
+import E10 from '../shorts/10_inspection_du_crous.txt';
+import E68 from '../shorts/68_qui_est_la_meilleure_ia.txt';
+import E69 from '../shorts/69_mes_ia_m_ont_vire.txt';
+import E70 from '../shorts/70_limite_avant_la_demo.txt';
+import E71 from '../shorts/71_codex_a_code_ma_start_up.txt';
+import E72 from '../shorts/72_gemini_a_lu_les_conditions.txt';
+import E73 from '../shorts/73_mes_ia_en_concurrence.txt';
+import E74 from '../shorts/74_gemini_a_predit_ma_note.txt';
+import E75 from '../shorts/75_mon_ia_a_perdu_la_memoire.txt';
+import E76 from '../shorts/76_le_tobicoin.txt';
+import E77 from '../shorts/77_un_euro_par_snooze.txt';
+import E78 from '../shorts/78_les_places_de_la_bu.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
 import E63 from '../shorts/63_mon_entretien_annuel_avec_mes_ia.txt';
 import E64 from '../shorts/64_j_ai_transforme_ma_chambre_en_coworking.txt';
@@ -76,6 +88,18 @@ import E67 from '../shorts/67_je_vends_une_formation_pour_devenir_riche.txt';
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    "10. Le CROUS inspecte ma chambre dans 10 minutes": E10,
+    "68. Claude Code, Codex ou Gemini : qui est la meilleure IA ?": E68,
+    "69. Mes IA m'ont viré de ma start-up": E69,
+    "70. Claude Code a atteint sa limite à une minute de ma démo": E70,
+    "71. Codex a codé ma start-up en 4 secondes": E71,
+    "72. Gemini a lu les conditions d'utilisation à ma place": E72,
+    "73. J'ai mis mes IA en concurrence": E73,
+    "74. Gemini a prédit ma note avant le partiel": E74,
+    "75. Mon IA a perdu la mémoire": E75,
+    "76. J'ai créé ma cryptomonnaie : le TobiCoin": E76,
+    "77. Je paie mon IA 1 € à chaque snooze": E77,
+    "78. J'ai revendu les places de la BU": E78,
     "64. J'ai transformé ma chambre en coworking": E64,
     "65. Mon appli a un million d'utilisateurs": E65,
     '66. Mon robot a fait grève dans ma start-up': E66,

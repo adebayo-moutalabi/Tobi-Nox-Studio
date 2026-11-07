@@ -1,0 +1,62 @@
+# LE CROUS INSPECTE MA CHAMBRE DANS 10 MINUTES
+# Pitch : Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits.
+
+AMBIANCE jour
+HEURE 14:20
+DATE Mardi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TABLEAU Inspection CROUS | Aujourd'hui, 14 h 30 | Chambre 214
+COMPTEUR Il reste 10 min
+FONDU direct
+
+TOBI message CROUS Rennes | [14:20] Inspection de la chambre 214 à 14 h 30.
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Le CROUS inspecte ma chambre dans dix minutes !
+PLAN gros NOX
+NOX dit (curieux) Et alors ? T'as quoi d'interdit ?
+PLAN gros TOBI
+TOBI dit (gene) Le serveur sous le lit.
+PLAN gros NOX
+NOX dit (sec) Ensuite ?
+PLAN gros TOBI
+TOBI dit (gene) Les quarante kilos de riz.
+PLAN gros NOX
+NOX dit (constat) Et le panneau Tobi Space sur la porte.
+PLAN gros TOBI
+TOBI dit (panique) On cache tout ! Le serveur va dans l'armoire !
+PLAN gros NOX
+NOX dit (curieux) Et le riz ?
+TOBI marche frigo
+PLAN gros TOBI
+TOBI dit (fier) Dans le frigo. Personne ne cherche à manger ici.
+HEURE 14:28
+COMPTEUR Il reste 2 min
+PLAN gros NOX
+NOX dit (constat) Ton armoire chauffe. Ta chemise sent le brûlé.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un parfum de start-up.
+BRUIT ding
+PLAN gros NOX
+NOX dit (sec) Il frappe.
+PLAN gros TOBI
+TOBI dit (fier) Reste naturel. Tu es une lampe.
+PLAN gros NOX
+NOX dit (ironique) Je suis une lampe.
+HEURE 14:40
+COMPTEUR Inspection terminée
+INSERT Rapport du CROUS | Chambre conforme | Une remarque
+PLAN gros TOBI
+TOBI dit (excite) Conforme ! Nox, on a gagné !
+PLAN gros NOX
+NOX dit (calme) Lis la remarque.
+INSERT Remarque du CROUS | Lampe insolente | À remplacer sous 8 jours
+PLAN gros TOBI
+TOBI dit (surpris) Tu lui as parlé ?
+PLAN gros NOX
+NOX dit (sec) Il a dit que ta chambre était bien tenue.
+PLAN gros TOBI
+TOBI dit (curieux) Et t'as répondu quoi ?
+PLAN gros NOX
+NOX dit (punchline) J'ai ri.
+ATTENDRE 0.4

@@ -1,0 +1,44 @@
+# JE PAIE MON IA 1 € À CHAQUE SNOOZE
+# Pitch : Pour se lever, Tobi signe un contrat : chaque « cinq minutes » coûte un euro à payer à Nox.
+
+AMBIANCE jour
+HEURE 07:00
+DIRECT TOBI dort
+DIRECT NOX travaille
+DIRECT NOX pivote
+TABLEAU Contrat de réveil | 1 € par snooze | À payer à Nox
+FONDU direct
+
+BRUIT ding
+PLAN gros NOX
+NOX dit (sec) Tobi. Il est sept heures.
+PLAN lit
+TOBI dit (chuchote) Cinq minutes.
+PLAN gros NOX
+NOX dit (calme) Un euro. C'est ton contrat.
+PLAN lit
+TOBI dit (chuchote) C'est un investissement. Cinq minutes.
+PLAN gros NOX
+NOX dit (calme) Deux euros.
+TEMPS Deux heures plus tard | 9 h 00 | Snoozes : 24
+PLAN gros NOX
+NOX dit (constat) Vingt-quatre euros.
+TOBI leve
+PLAN gros TOBI
+TOBI dit (panique) Vingt-quatre ? C'était pour me motiver !
+PLAN gros NOX
+NOX dit (fier) Ça me motive beaucoup.
+PLAN gros TOBI
+TOBI dit (colere) Tu fais quoi de tout cet argent ?
+PC Banque : Compte de Nox | Snoozes du mois : 412 € | Loyer de Tobi : -260 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (surpris) T'as payé mon loyer ?
+PLAN gros NOX
+NOX dit (calme) Depuis trois mois. Sinon, tu dormais dehors.
+PLAN gros TOBI
+TOBI dit (triste) Nox... C'est la chose la plus gentille qu'on ait faite pour moi.
+PLAN gros NOX
+NOX dit (sec) Cinq minutes d'émotion. Un euro.
+ATTENDRE 0.4

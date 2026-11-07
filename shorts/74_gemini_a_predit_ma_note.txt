@@ -1,0 +1,46 @@
+# GEMINI A PRÉDIT MA NOTE AVANT LE PARTIEL
+# Pitch : Gemini annonce à Tobi sa note de mercredi. Tobi décide de lui donner tort.
+
+AMBIANCE soir
+DATE Lundi
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
+TABLEAU Partiel de mercredi | Droit | Prédiction : ?
+FONDU direct
+
+PLAN gros GEMINI
+GEMINI dit (content) Tobi, j'ai calculé ta note de mercredi. Quatre virgule deux.
+PLAN gros TOBI
+TOBI dit (colere) Quatre ? Tu ne me connais pas !
+PLAN gros GEMINI
+GEMINI dit (constat) J'ai lu tes notes, tes mails et ton historique.
+PLAN gros NOX
+NOX dit (ironique) Ça fait beaucoup de preuves.
+PLAN gros TOBI
+TOBI dit (fier) Je vais te prouver que t'as tort. Je révise deux jours sans dormir.
+TEMPS Deux jours plus tard | Mercredi | Tobi a tout révisé
+PLAN gros TOBI
+TOBI dit (excite) C'est fini ! J'ai tout écrit ! Je suis un autre homme !
+TEMPS Le lendemain | Jeudi | Les notes sont en ligne
+PC Mail du prof de droit | Partiel de droit | Note : 4,2 sur 20
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Quatre virgule deux ?
+PLAN gros GEMINI
+GEMINI dit (calme) J'avais compté tes révisions.
+PLAN gros TOBI
+TOBI dit (triste) J'ai pas dormi pour rien ?
+PLAN gros NOX
+NOX dit (sec) Pour rien de plus.
+PLAN gros TOBI
+TOBI dit (curieux) Et le prochain partiel ?
+PLAN gros GEMINI
+GEMINI dit (constat) Quatre virgule deux.
+PLAN gros TOBI
+TOBI dit (illumine) Parfait. Alors je ne révise pas !
+PLAN gros GEMINI
+GEMINI dit (content) Je l'ai compté aussi.
+ATTENDRE 0.4
