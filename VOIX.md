@@ -31,6 +31,24 @@ Pistes : Codex, une voix d'homme jeune, rapide et énergique. Gemini, une voix v
 - **Pour les futurs épisodes,** une voix retirée devra être remplacée. Vérifier les conditions d'ElevenLabs pour les voix de la bibliothèque.
 - **Pour ne plus dépendre d'ElevenLabs,** il faudra une autre solution de voix, à étudier plus tard.
 
+## Créer les voix avec Voice Design
+
+Dans ElevenLabs, ouvrir Voice Design, coller la description en anglais, puis écouter les essais avec la phrase de test. Garder la meilleure, puis la choisir dans le Studio.
+
+| Personnage | Description à coller | Phrase de test |
+|---|---|---|
+| Tobi | Young French man, 21, broke university student with huge ambitions. Fast, lively and expressive voice, a bit cocky, quick to switch from pride to panic. Natural spoken French with a casual Paris accent, warm and funny, never theatrical. | Nox, aie la vision ! Cette fois, c'est la bonne idée, je te le jure ! |
+| Nox | Small friendly robot assistant with a calm, soft and slightly synthetic voice. Speaks native French in short, precise sentences with deadpan dry humor. Never cold: caring underneath, like a patient best friend who has seen everything. | Tobi. Non. J'appelle ta mère. |
+| Claude Code | French man in his early 30s with a calm, warm and reassuring voice. Speaks native French slowly and clearly, like a kind and honest older brother. Thoughtful, polite but natural, with gentle pauses before telling the truth. | Tobi, assieds-toi. On a regardé ton année. |
+| Codex | Young French man, 22, overexcited startup intern. Fast, energetic and very confident voice, always slightly too pleased with himself. Native French, crisp and punchy, speaks like he already finished the job before you asked. | C'est fait. J'ai aussi refait tout le site. |
+| Gemini | Young French woman, 25, brilliant top-of-the-class student who has read everything. Bright, enthusiastic and fast voice, very articulate, a little know-it-all but cheerful. Native French, clear and expressive. | J'ai lu tous tes mails. Et j'ai fait un résumé en podcast ! |
+
+Conseils :
+
+- Garder la même voix pour toute la série, puis la noter dans le tableau du haut.
+- Si l'accent sonne anglais, ajouter « native French speaker, no English accent » à la description.
+- Les essais peuvent consommer des crédits selon l'offre ElevenLabs.
+
 ## Les règles
 
 - Prendre des voix françaises natives et professionnelles, sans accent anglais : l'accent de la voix d'origine reste.
