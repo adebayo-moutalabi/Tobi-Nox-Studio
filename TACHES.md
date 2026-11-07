@@ -9,7 +9,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 3. **Sauvegarde des gestes :** garder `src/mocap-mixamo.json` et les FBX hors de ce dossier de session, par exemple dans un dépôt privé.
 
 - **Raccourcir les épisodes encore au-dessus d'une minute :** viser moins de 40 secondes à 1 minute, avec le script d'estimation du journal.
-- **Tenue de Tobi :** l'auteur doit choisir les chaussures, puis décider du sweat.
+- **Sweat de Tobi :** l'auteur doit décider s'il garde le moutarde.
 
 ## Documentation et code
 

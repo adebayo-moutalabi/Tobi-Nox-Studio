@@ -13,7 +13,7 @@ export const PALETTE = {
   hair: '#5a5049', brow: '#4f463f', beard: '#4b4038',
   hoodie: '#cc8726', rib: '#bd7a20', pocket: '#c58022', string: '#a99a84',
   pants: '#565651', pantsIn: '#3c3c39',
-  shoe: '#c9c7c2', lace: '#b0aea8', sole: '#d6702a',
+  shoe: '#1f2f55', lace: '#e8e6e0', sole: '#f1efe9',
   lip: '#6e4e3c', mouth: '#3f1c1a', teeth: '#e8e2d6',
   eye: '#120e0c', frame: '#6a6057',
 };

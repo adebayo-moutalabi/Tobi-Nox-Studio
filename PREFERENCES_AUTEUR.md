@@ -56,6 +56,11 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Rien d'affiché ne doit contredire l'histoire : heure, date, jour de la semaine ou mois. Exemple à éviter : un devoir à rendre à minuit avec 21 h à l'écran.
 - Les messages peuvent afficher une heure discrète, seulement quand elle est utile.
 
+## Tenue de Tobi
+
+- Chaussures bleu marine à semelle blanche, choisies par l'auteur.
+- Le sweat reste moutarde pour l'instant. Une autre couleur reste possible.
+
 ## Gestes
 
 - Les bras ne doivent ni rester figés, ni monter et descendre sans arrêt.

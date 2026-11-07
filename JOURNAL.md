@@ -238,6 +238,10 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nouvelle durée visée : de moins de 40 secondes à 1 minute.
 - Premier passage sur les épisodes 45, 46, 47, 48, 50 et 62.
 
+## Nouvelles chaussures (7 novembre 2026)
+
+- Tobi porte des chaussures bleu marine à semelle blanche.
+
 ## À faire
 
 Voir `TACHES.md`.
