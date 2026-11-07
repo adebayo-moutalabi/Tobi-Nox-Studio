@@ -6,11 +6,11 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 
 | Personnage | Voix choisie | Ce qu'on cherche | État |
 |---|---|---|---|
-| Tobi | À renseigner | Jeune, vive, naturelle. Voix clonée de l'auteur prévue, ce qui permet de le reconnaître | À confirmer |
-| Nox | À renseigner | Posée, légèrement mécanique, humour très sec, jamais froide | À renseigner |
-| Claude Code | À renseigner | Calme, polie, prudente | À renseigner |
-| Codex | Codex voice (créée avec Voice Design) | Rapide, sûre d'elle, un peu trop efficace | En test |
-| Gemini | Gemini voice (créée avec Voice Design) | Enthousiaste, rapide, encyclopédique | En test |
+| Tobi | Tobi voice (clonée, FR) | Jeune, vive, naturelle | Choisie |
+| Nox | Nox Voice (clonée, FR) | Posée, légèrement mécanique, humour très sec, jamais froide | Choisie |
+| Claude Code | Adam - Dominant, Firm | Calme, polie, prudente | Gardée pour l'instant, à revoir |
+| Codex | Codex Voice (FR, créée avec Voice Design) | Rapide, sûre d'elle, un peu trop efficace | Choisie |
+| Gemini | Gemini Voice (FR, créée avec Voice Design) | Enthousiaste, rapide, encyclopédique | Choisie |
 
 ## Trouver une voix française
 
@@ -98,6 +98,7 @@ La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la
 | Novembre 2026 | Demande de l'auteur : des voix françaises pro, adaptées à la personnalité de chacun. |
 | 7 novembre 2026 | Les voix de Codex et Gemini sonnent anglaises : recherche de voix françaises ajoutée au Studio. |
 | 7 novembre 2026 | L'auteur crée « Codex voice » et « Gemini voice » avec Voice Design. La voix de Claude Code reste la même pour l'instant. |
+| 7 novembre 2026 | Liste confirmée par l'auteur. Modèle : Expressif (v4). |
 
 ## Économiser les crédits
 
