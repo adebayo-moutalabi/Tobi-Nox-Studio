@@ -9,7 +9,9 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Les épisodes sont indépendants, drôles, logiques et compréhensibles sans description.
 - Le contexte doit être dit par les personnages dès le début.
 - On privilégie les projets fous de Tobi, l'argent, l'entrepreneuriat et leurs revers.
-- La durée visée va de moins de 40 secondes à 1 minute, selon le script. Il faut des punchlines rapides et aucun temps mort.
+- La durée n'est pas une limite stricte. Un épisode court d'environ 40 secondes marche très bien, mais un épisode plus long reste possible s'il tient l'attention. C'est la rétention qui décide.
+- Il faut des punchlines rapides et aucun temps mort.
+- L'épisode 75 (environ 37 secondes) est un bon modèle de rythme, si c'est bien celui que l'auteur a aimé.
 - La chute doit être comprise immédiatement.
 
 ## Épisodes aimés
@@ -91,7 +93,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
 - **Bras assis :** trop agités, puis trop immobiles. La règle retenue est des gestes petits, lents et liés à l'émotion.
-- **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes, puis moins de 40 secondes à 1 minute. La règle actuelle est la dernière, pour retenir le spectateur.
+- **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes, puis moins de 40 secondes à 1 minute. Il a ensuite précisé que les épisodes plus longs ne le dérangent pas. La règle actuelle : viser court, puis décider avec la rétention.
 - **Épisode des 20 € :** l'auteur n'aimait pas une première version, puis a trouvé la version réécrite vraiment drôle. La règle retenue est de garder la version actuelle comme modèle.
 - **Retouches :** l'auteur a demandé de ne pas trop changer les anciens épisodes, puis de les raccourcir pour la rétention. La règle actuelle : garder les histoires, couper tout ce qui ralentit.
 - **Statut de Nox :** j'ai proposé « mon robot », l'auteur préfère « mon IA » pour l'instant. Deux titres disent encore « Mon robot » (épisodes 58 et 66), à revoir si besoin.
