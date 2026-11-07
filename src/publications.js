@@ -37,7 +37,7 @@ const TITRES = {
 const ACCROCHES = {
   10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits…',
   68: 'Tobi ne peut garder qu\'un abonnement. Claude Code, Codex et Gemini passent un concours, et Nox est le jury…',
-  69: 'Tobi rentre chez lui. Ses IA l\'attendent pour un conseil d\'administration…',
+  69: "Tobi rentre chez lui. Ses IA sont en train de voter son départ…",
   70: 'La démo commence dans une minute, et Claude Code s\'arrête. Tobi appelle Codex. Mauvaise idée…',
   71: 'Tobi veut vendre ses fiches de révision. Codex crée le site en quatre secondes, sans le tester…',
   72: 'Tobi accepte tout sans lire. Gemini, lui, a lu…',

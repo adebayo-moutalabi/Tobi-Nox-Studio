@@ -258,6 +258,10 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - La clé est gardée à deux endroits dans le navigateur, et le gestionnaire de mots de passe de Chrome peut l'enregistrer.
 - Elle n'est jamais envoyée sur GitHub.
 
+## Nouvelle fin de l'épisode 69 (7 novembre 2026)
+
+- L'auteur a choisi la version où Tobi redevient stagiaire sous les ordres de Nox.
+
 ## À faire
 
 Voir `TACHES.md`.
