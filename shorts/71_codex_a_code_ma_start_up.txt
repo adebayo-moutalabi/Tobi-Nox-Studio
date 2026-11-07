@@ -8,9 +8,10 @@ DIRECT NOX assis
 DIRECT CODEX apparait bureau
 ECRAN fiches_de_tobi.html
 FONDU direct
+ACCROCHE Une start-up en 4 secondes
 
 PLAN gros TOBI
-TOBI dit (excite) Codex, je veux vendre mes fiches de révision. Code-moi un site.
+TOBI dit (excite) Codex, code-moi un site pour vendre mes fiches. T'as dix secondes.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. Quatre secondes.
 PC Safari : fiches-de-tobi.fr | Fiches de révision | 5 € la fiche

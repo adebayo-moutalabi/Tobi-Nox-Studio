@@ -6,6 +6,7 @@ DIRECT TOBI assis
 DIRECT NOX assis
 TABLEAU Sécurité | Niveau : expert | Selon Tobi
 FONDU direct
+ACCROCHE Mot de passe trouvé en 0,4 s
 
 PLAN gros TOBI
 TOBI dit (fier) Nox, je viens de tout sécuriser. Personne ne peut entrer.

@@ -7,9 +7,12 @@ DIRECT NOX travaille
 DIRECT NOX pivote
 DIRECT GEMINI apparait milieu
 FONDU direct
+ACCROCHE Il a perdu son prénom
 
+PLAN gros GEMINI
+GEMINI dit (calme) Tobi, tu viens de perdre ton prénom.
 PLAN gros TOBI
-TOBI dit (fier) Nouvelle appli météo, gratuite ! J'accepte tout sans lire.
+TOBI dit (surpris) Quoi ? J'ai juste accepté une appli météo, sans lire !
 PLAN gros GEMINI
 GEMINI dit (excite) Moi, j'ai lu. Les quatre-vingt-dix pages.
 PLAN gros TOBI

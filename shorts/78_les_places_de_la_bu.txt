@@ -8,9 +8,10 @@ DIRECT TOBI pivote
 DIRECT NOX assis
 TABLEAU Période de partiels | BU pleine | Une idée
 FONDU direct
+ACCROCHE Il revend des places gratuites
 
 PLAN gros TOBI
-TOBI dit (excite) Nox ! La BU est pleine. Je réserve toutes les places, et je les revends.
+TOBI dit (excite) Nox ! La BU est pleine. Je réserve toutes les places, et je les revends !
 PLAN gros NOX
 NOX dit (sec) Elles sont gratuites.
 PLAN gros TOBI

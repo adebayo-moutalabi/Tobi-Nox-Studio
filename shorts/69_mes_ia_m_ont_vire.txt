@@ -9,11 +9,14 @@ DIRECT CODEX apparait gauche
 DIRECT GEMINI apparait droite
 TABLEAU Conseil d'administration | Ordre du jour | Tobi
 FONDU direct
+ACCROCHE Viré de ma propre start-up
 
-PLAN gros TOBI
-TOBI dit (fier) Salut l'équipe ! Pourquoi vous m'attendez tous ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Assieds-toi, Tobi. C'est ton conseil d'administration.
+CLAUDE dit (calme) Tobi, assieds-toi. On va te virer de ta start-up.
+PLAN gros TOBI
+TOBI dit (surpris) Me virer ? Vous êtes qui pour ça ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ton conseil d'administration.
 PLAN gros TOBI
 TOBI dit (surpris) J'ai un conseil ?
 PLAN gros CODEX

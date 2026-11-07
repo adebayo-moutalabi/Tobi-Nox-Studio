@@ -10,6 +10,7 @@ DIRECT CLAUDE apparait lit
 DIRECT CODEX apparait milieu
 ECRAN boulangerie_martin.html
 FONDU direct
+ACCROCHE Tous ses clients ont disparu
 
 PLAN gros TOBI
 TOBI dit (fier) Les gars, une petite faute sur le site. Facile.

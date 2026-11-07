@@ -8,10 +8,8 @@ DIRECT NOX travaille
 DIRECT NOX pivote
 TABLEAU Contrat de réveil | 1 € par snooze | À payer à Nox
 FONDU direct
+ACCROCHE 1 € à chaque snooze
 
-BRUIT ding
-PLAN gros NOX
-NOX dit (sec) Tobi. Il est sept heures.
 PLAN lit
 TOBI dit (chuchote) Cinq minutes.
 PLAN gros NOX

@@ -189,6 +189,8 @@ NOX dit (resigne) J'appelle ta mère.
 
 **Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle. Pour ouvrir une application : `PC Word : Memoire.docx | Titre | Ligne`. Choisir l'outil que le personnage utiliserait vraiment : `Word`, `PowerPoint`, `Excel`, `Canva`, `Safari` ou `Chrome` (le nom devient l'adresse), `Banque`, `Terminal`, `Code`, `Notes`, `Finder`, `Stats`, `Discord` ou `Slack`, `Camera`, `Agenda`. Dans `Excel`, `Banque` et `Agenda`, écrire `Nom : valeur`. Dans `Stats`, écrire `Libellé | Chiffre`.
 
+**Trois premières secondes :** elles décident si le spectateur reste. Commencer par le conflit, jamais par un bonjour ou une explication. La première réplique doit être courte et poser une question. `ACCROCHE Viré de ma propre start-up` affiche une phrase forte pendant trois secondes, juste après `FONDU direct`. Ne pas l'utiliser si un `COMPTEUR` joue déjà ce rôle.
+
 **Saut dans le temps :** `TEMPS Trois jours plus tard | Jour 4 | Il reste 20 €`, puis les nouveaux placements en `DIRECT`. Le calendrier cache le changement, et le second ordinateur affiche le jour. 
 
 **Heure et date :** rien d'affiché ne doit contredire l'histoire.

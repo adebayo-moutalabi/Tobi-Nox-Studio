@@ -6,13 +6,12 @@ DIRECT TOBI marche tapis
 DIRECT NOX assis
 TABLEAU Mise à jour de Nox | Terminée | Mémoire : ?
 FONDU direct
+ACCROCHE Nox ne le reconnaît plus
 
-PLAN gros TOBI
-TOBI dit (content) Nox, ta mise à jour est finie ! Tu m'as manqué.
 PLAN gros NOX
 NOX dit (calme) Bonjour. Vous êtes qui ?
 PLAN gros TOBI
-TOBI dit (surpris) C'est moi. Tobi.
+TOBI dit (surpris) Nox, c'est moi. Tobi. Ta mise à jour a tout effacé ?
 PLAN gros NOX
 NOX dit (curieux) Enchanté. Vous venez pour la chambre ?
 PLAN gros TOBI

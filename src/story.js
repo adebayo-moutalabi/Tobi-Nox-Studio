@@ -341,6 +341,7 @@ export function createPlayer(v, ui) {
     room.lock.set({ ...(time ? { time } : {}), date: dateText(), fixed: clockFixed, ...(/^jour\s/i.test(big) ? { day: big } : {}) });
     return v.wait(2.3);
   }
+  let hookText = '';
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
     switch (c.verb) {
@@ -380,7 +381,12 @@ export function createPlayer(v, ui) {
         if (a?.held?.name === 'phone') { a.hero.motion.clearPose(); await v.wait(0.25); v.stash(a); }
         return undefined;
       }
-      case 'compteur': ui.counter(c.text); return undefined;
+      case 'compteur': hookText = ''; ui.counter(c.text); return undefined;
+      case 'accroche': { // phrase forte des premières secondes : elle dit tout de suite ce qui est en jeu
+        const t = c.text; hookText = t; ui.counter(t);
+        v.wait(3).then(() => { if (hookText === t) { hookText = ''; ui.counter(''); } });
+        return undefined;
+      }
       case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
       case 'insert': {
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());

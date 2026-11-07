@@ -9,9 +9,10 @@ DIRECT CODEX apparait gauche
 DIRECT GEMINI apparait droite
 TABLEAU Grand concours | Qui est la meilleure IA ? | Jury : Nox
 FONDU direct
+ACCROCHE Une seule IA va rester
 
 PLAN gros TOBI
-TOBI dit (fier) Je peux garder un seul abonnement. Ce soir, on règle ça : qui est la meilleure IA ?
+TOBI dit (fier) J'en garde une seule. Qui est la meilleure IA ?
 PLAN gros CODEX
 CODEX dit (fier) C'est moi. C'est fait.
 PLAN gros TOBI

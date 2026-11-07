@@ -4,6 +4,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 ## Histoire
 
+- Capter l'attention dès les premières secondes, puis la garder jusqu'à la fin : c'est la priorité de chaque épisode.
 - Les épisodes sont indépendants, drôles, logiques et compréhensibles sans description.
 - Le contexte doit être dit par les personnages dès le début.
 - On privilégie les projets fous de Tobi, l'argent, l'entrepreneuriat et leurs revers.

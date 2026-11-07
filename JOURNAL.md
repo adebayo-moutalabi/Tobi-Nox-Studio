@@ -218,6 +218,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Épisodes 10 et 68 à 78 : huit avec les IA, quatre sur les projets et la vie de Tobi.
 - Ils utilisent les nouvelles normes : contexte dès le début, applis, messages, calendrier, heure et date.
 
+## Premières secondes (7 novembre 2026)
+
+- Nouvelle commande `ACCROCHE`, et début plus direct pour les nouveaux épisodes.
+- Seize épisodes prioritaires reçoivent une accroche.
+
 ## À faire
 
 Voir `TACHES.md`.

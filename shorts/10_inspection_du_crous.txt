@@ -10,9 +10,9 @@ TABLEAU Inspection CROUS | Aujourd'hui, 14 h 30 | Chambre 214
 COMPTEUR Il reste 10 min
 FONDU direct
 
-TOBI message CROUS Rennes | [14:20] Inspection de la chambre 214 à 14 h 30.
 PLAN gros TOBI
 TOBI dit (panique) Nox ! Le CROUS inspecte ma chambre dans dix minutes !
+TOBI message CROUS Rennes | [14:20] Inspection de la chambre 214 à 14 h 30.
 PLAN gros NOX
 NOX dit (curieux) Et alors ? T'as quoi d'interdit ?
 PLAN gros TOBI
