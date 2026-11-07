@@ -37,6 +37,9 @@ h1 { font-family: var(--display); font-weight: 700; font-size: 25px; line-height
 .sub { margin: 0; color: var(--muted); line-height: 1.45; }
 h2 { font-family: var(--display); font-weight: 500; font-size: 15px; margin: 0 0 8px; }
 .grid { display: flex; flex-wrap: wrap; gap: 6px; }
+.frList { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.frList li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; }
+.frList li span { flex: 1 1 160px; }
 button { font: inherit; font-weight: 500; font-size: 13px; padding: 7px 10px; border-radius: 7px; border: 1px solid transparent; background: var(--chip); color: var(--ink); cursor: pointer; transition: background .12s; }
 button:hover { background: var(--chip-hover); }
 button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
@@ -326,6 +329,10 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <p class="sub" id="elNow" aria-live="polite"></p>
             <button type="button" id="elGo" disabled>Créer les vraies voix de cet épisode</button>
             <button type="button" id="elCopy">Copier la liste de mes voix</button>
+            <details id="elFr"><summary>Trouver des voix françaises</summary><div>
+              <div class="grid"><select id="elFrFor" aria-label="Personnage"><option value="codex">Pour Codex</option><option value="gemini">Pour Gemini</option><option value="claude">Pour Claude Code</option><option value="nox">Pour Nox</option><option value="tobi">Pour Tobi</option></select><select id="elFrGender" aria-label="Voix"><option value="">Toutes</option><option value="male">Masculines</option><option value="female">Féminines</option></select><button type="button" id="elFrSearch">Chercher</button></div>
+              <ul id="elFrList" class="frList"></ul>
+            </div></details>
             <ol id="elLines"></ol>
             <label class="voice">« Aie » se dit <input type="text" id="elAie" spellcheck="false" aria-label="Écriture envoyée à la voix pour Aie"></label>
             <button type="button" id="elAieTest">Écouter « Aie la vision » (environ 20 crédits)</button>

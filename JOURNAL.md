@@ -262,6 +262,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 
 - L'auteur a choisi la version où Tobi redevient stagiaire sous les ordres de Nox.
 
+## Voix françaises (7 novembre 2026)
+
+- Le Studio cherche des voix françaises dans la bibliothèque ElevenLabs, les fait écouter et les donne au personnage choisi.
+- Les voix françaises du compte passent en premier dans les listes.
+
 ## À faire
 
 Voir `TACHES.md`.

@@ -12,6 +12,16 @@ Ce fichier garde la trace des voix utilisées. Les voix viennent du compte Eleve
 | Codex | À renseigner | Rapide, sûre d'elle, un peu trop efficace | À renseigner |
 | Gemini | À renseigner | Enthousiaste, rapide, encyclopédique | À renseigner |
 
+## Trouver une voix française
+
+Dans le Studio, ouvrir Réglages, puis Voix, puis « Trouver des voix françaises ». Choisir le personnage et, si besoin, voix masculines ou féminines, puis cliquer sur « Chercher ».
+
+- **Écouter :** joue l'extrait public de la voix, sans crédit.
+- **Choisir :** ajoute la voix au compte ElevenLabs et la donne au personnage. Cette étape ne consomme pas de crédit, mais certaines offres limitent le nombre de voix.
+- Dans les listes, les voix françaises du compte passent en premier et portent la mention « FR ».
+
+Pistes : Codex, une voix d'homme jeune, rapide et énergique. Gemini, une voix vive et enthousiaste, plutôt de femme pour bien la distinguer.
+
 ## Les règles
 
 - Prendre des voix françaises natives et professionnelles, sans accent anglais : l'accent de la voix d'origine reste.
@@ -35,6 +45,7 @@ La voix se trompait sur certains mots : « Aie la vision » devenait « A. I. la
 | 5 novembre 2026 | Prononciation corrigée pour « Aie la vision » et les sigles, « annales » retiré du script. |
 | 5 novembre 2026 | Chat est remplacé par Codex : sa voix est à choisir de nouveau. |
 | Novembre 2026 | Demande de l'auteur : des voix françaises pro, adaptées à la personnalité de chacun. |
+| 7 novembre 2026 | Les voix de Codex et Gemini sonnent anglaises : recherche de voix françaises ajoutée au Studio. |
 
 ## Économiser les crédits
 

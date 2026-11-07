@@ -84,17 +84,20 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     } catch { box.textContent = 'Solde non lisible : autorise la lecture « User » sur ta clé ElevenLabs.'; return null; }
   };
 
+  // Langue d'une voix de la liste : les voix françaises passent en premier et sont marquées « FR ».
+  const isFr = (x) => [x.labels?.language, x.labels?.accent, ...(x.verified_languages || []).map((l) => l.language)].some((l) => /^fr|french|français/i.test(l || ''));
+
   const loadVoices = async () => {
     if (!key.value.trim()) { say('Colle d\'abord ta clé ElevenLabs.'); return; }
     lock(true); say('Chargement de tes voix…');
     try {
       const { voices } = await (await call('/voices')).json();
-      const mine = [...voices].sort((a, b) => (b.category === 'cloned') - (a.category === 'cloned') || a.name.localeCompare(b.name));
+      const mine = [...voices].sort((a, b) => (b.category === 'cloned') - (a.category === 'cloned') || isFr(b) - isFr(a) || a.name.localeCompare(b.name));
       let saved = {}, names = {};
       try { saved = JSON.parse(read(PICK) || '{}'); names = JSON.parse(read(NAMES) || '{}'); } catch { /* choix illisible */ }
       const missing = [];
       for (const [who, s] of Object.entries(pick)) {
-        s.replaceChildren(...mine.map((x) => { const o = new Option(x.category === 'cloned' ? `${x.name} (clonée)` : x.name, x.voice_id); o.dataset.name = x.name; return o; }));
+        s.replaceChildren(...mine.map((x) => { const o = new Option(`${x.name}${x.category === 'cloned' ? ' (clonée)' : ''}${isFr(x) ? ' · FR' : ''}`, x.voice_id); o.dataset.name = x.name; return o; }));
         const found = mine.find((x) => x.voice_id === saved[who]) || mine.find((x) => x.name === names[who]);
         if (found) s.value = found.voice_id; else { s.selectedIndex = -1; missing.push(s.closest('label').firstChild.textContent.trim()); } // jamais de voix choisie au hasard
       }
@@ -210,6 +213,37 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   load.addEventListener('click', () => { remember(); loadVoices(); });
   el('elForm').addEventListener('submit', (e) => e.preventDefault());
   // La liste à coller dans VOIX.md : on garde ainsi la trace des voix réellement utilisées.
+  // Bibliothèque ElevenLabs : écouter un extrait est gratuit. Ajouter une voix au compte ne consomme pas de crédit,
+  // mais certaines offres limitent le nombre de voix. Seule la création des répliques consomme des crédits.
+  const frList = el('elFrList');
+  el('elFrSearch').addEventListener('click', async () => {
+    if (!key.value.trim()) { say('Colle d\'abord ta clé ElevenLabs.'); return; }
+    frList.replaceChildren(); say('Recherche de voix françaises…');
+    try {
+      const g = el('elFrGender').value, q = new URLSearchParams({ language: 'fr', page_size: '12', sort: 'trending', ...(g ? { gender: g } : {}) });
+      const { voices = [] } = await (await call(`/shared-voices?${q}`)).json();
+      if (!voices.length) { say('Aucune voix française trouvée avec ce filtre.'); return; }
+      frList.replaceChildren(...voices.map((x) => {
+        const li = document.createElement('li'), text = document.createElement('span'), hear = document.createElement('button'), add = document.createElement('button');
+        text.textContent = [x.name, x.gender === 'male' ? 'homme' : x.gender === 'female' ? 'femme' : '', x.age, x.descriptive, x.use_case].filter(Boolean).join(' · ');
+        hear.type = 'button'; hear.textContent = 'Écouter'; hear.disabled = !x.preview_url;
+        hear.addEventListener('click', () => new Audio(x.preview_url).play());
+        add.type = 'button'; add.textContent = 'Choisir';
+        add.addEventListener('click', async () => {
+          const who = el('elFrFor').value;
+          add.disabled = true; say(`Ajout de ${x.name} à tes voix…`);
+          try {
+            const { voice_id: id } = await (await call(`/voices/add/${encodeURIComponent(x.public_owner_id)}/${encodeURIComponent(x.voice_id)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ new_name: x.name }) })).json();
+            await loadVoices();
+            pick[who].value = id || x.voice_id; remember(); forget(); lock(false);
+            say(`${x.name} est maintenant la voix de ${el('elFrFor').selectedOptions[0].textContent.replace('Pour ', '')}.`);
+          } catch (e) { say(e.message); add.disabled = false; }
+        });
+        li.append(text, hear, add); return li;
+      }));
+      say(`${voices.length} voix françaises. Écoute-les, puis choisis.`);
+    } catch (e) { say(e.message); }
+  });
   el('elCopy').addEventListener('click', async () => {
     const line = (who, s) => `${who} : ${s.selectedOptions[0]?.textContent || 'non choisie'}`;
     const text = [...Object.entries({ Tobi: pick.tobi, Nox: pick.nox, 'Claude Code': pick.claude, Codex: pick.codex, Gemini: pick.gemini }).map(([w, s]) => line(w, s)), `Modèle : ${model.selectedOptions[0]?.textContent}`].join('\n');
