@@ -247,6 +247,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - L'épisode 75 retrouve ses dialogues d'origine, sans la formule répétée de Claude Code.
 - L'auteur relira ensuite les épisodes un par un.
 
+## Retour des versions d'origine (7 novembre 2026)
+
+- Les épisodes 10 et 68 à 78 retrouvent leur première version, avec les accroches et sans la formule répétée de Claude Code.
+- Les épisodes 45, 46, 47, 48, 50 et 62 retrouvent leur version d'avant le raccourcissement.
+- Les chaussures et les réglages de caméra restent.
+
 ## À faire
 
 Voir `TACHES.md`.

@@ -11,18 +11,20 @@ TABLEAU Appel d'offres | Devoir de droit | Budget : 5 €
 FONDU direct
 ACCROCHE Il fait baisser le prix de ses IA
 
+PLAN gros TOBI
+TOBI dit (fier) J'ai plus d'argent. Qui fait mon devoir pour cinq euros ?
 PLAN gros CODEX
-CODEX dit (fier) Quatre euros !
+CODEX dit (fier) Quatre euros.
 PLAN gros GEMINI
-GEMINI dit (fier) Trois euros, avec les sources !
+GEMINI dit (fier) Trois euros, avec les sources.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Deux euros, et je t'explique le cours.
 PLAN gros TOBI
-TOBI dit (excite) Continuez ! Mon devoir de droit n'a jamais coûté aussi peu !
+TOBI dit (excite) Nox, regarde ça. C'est le marché !
 PLAN gros CODEX
-CODEX dit (fier) Un euro !
+CODEX dit (fier) Un euro.
 PLAN gros GEMINI
-GEMINI dit (fier) Gratuit !
+GEMINI dit (fier) Gratuit.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je te donne cinquante centimes.
 INSERT Prix du devoir | -0,50 € | Tobi est payé
@@ -40,7 +42,7 @@ PC Word : Syndicat_des_IA.docx | Revendication 1 : Respect | Revendication 2 : M
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Un syndicat ? Qui est le délégué ?
+TOBI dit (panique) Un syndicat ? Et il y a un délégué ?
 PLAN gros NOX
 NOX dit (content) Moi.
 PLAN gros TOBI

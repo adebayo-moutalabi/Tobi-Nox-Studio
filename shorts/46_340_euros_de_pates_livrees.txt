@@ -20,6 +20,12 @@ PLAN gros TOBI
 TOBI dit (surpris) Trente-quatre ?
 PLAN gros NOX
 NOX dit (constat) Tu es client or.
+PLAN gros TOBI
+TOBI dit (fier) Client or ? C'est bien, ça.
+PLAN gros NOX
+NOX dit (sec) C'est le niveau juste avant la faillite.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je gagne du temps. Le temps, c'est de l'argent.
 PLAN gros NOX
 NOX dit (curieux) Tu commandes quoi ?
 PLAN gros TOBI
@@ -35,7 +41,15 @@ TOBI dit (fier) Oui, mais elle est loin.
 PLAN gros NOX
 NOX dit (sec) Elle est à un mètre.
 PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un mètre, c'est un mètre.
+PLAN gros NOX
+NOX dit (constat) Dix euros le plat, six euros de livraison.
+PLAN gros TOBI
 TOBI dit (calme) Le livreur est sympa, en plus. Il me connaît.
+PLAN gros NOX
+NOX dit (ironique) Il connaît ta chambre par cœur.
+PLAN gros TOBI
+TOBI dit (content) Il m'appelle chef.
 PLAN gros NOX
 NOX dit (curieux) Tu sais où il habite ?
 PLAN gros TOBI

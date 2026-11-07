@@ -68,5 +68,12 @@ PLAN gros TOBI
 TOBI dit (curieux) Et le cent vingtième ?
 PLAN gros NOX
 NOX dit (sec) Léa. Elle est déjà à la diapo trois cents.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Elle va me demander de l'aide !
 PLAN gros NOX
+NOX dit (calme) Elle t'envoie ses fiches. Avec un mot.
+PLAN gros TOBI
+TOBI dit (curieux) Quel mot ?
+PLAN gros NOX
+NOX dit (sec) Courage.
 ATTENDRE 0.4

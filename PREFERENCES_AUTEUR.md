@@ -96,6 +96,6 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - **Bras assis :** trop agités, puis trop immobiles. La règle retenue est des gestes petits, lents et liés à l'émotion.
 - **Durée :** l'auteur a demandé plus d'une minute, puis 40 à 90 secondes, puis moins de 40 secondes à 1 minute. Il a ensuite précisé que les épisodes plus longs ne le dérangent pas. La règle actuelle : viser court, puis décider avec la rétention.
 - **Épisode des 20 € :** l'auteur n'aimait pas une première version, puis a trouvé la version réécrite vraiment drôle. La règle retenue est de garder la version actuelle comme modèle.
-- **Retouches :** l'auteur a demandé de ne pas trop changer les anciens épisodes, puis de les raccourcir pour la rétention. La règle actuelle : garder les histoires, couper tout ce qui ralentit.
+- **Retouches :** l'auteur a demandé de raccourcir les épisodes, puis de revenir aux versions d'origine. La règle actuelle : ne rien réécrire sans demande précise, épisode par épisode.
 - **Statut de Nox :** j'ai proposé « mon robot », l'auteur préfère « mon IA » pour l'instant. Deux titres disent encore « Mon robot » (épisodes 58 et 66), à revoir si besoin.
 - **Noms des IA dans les titres :** l'auteur a d'abord voulu les mettre souvent, puis a trouvé que ce serait trop. La règle retenue : seulement quand l'IA est le sujet, et des hashtags précis.

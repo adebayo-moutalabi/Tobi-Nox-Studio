@@ -42,6 +42,16 @@ CLAUDE dit (calme) Je ne voulais pas le brusquer.
 PLAN gros NOX
 NOX dit (sec) Il a un partiel.
 PLAN gros CLAUDE
+CLAUDE dit (calme) Je lui ai préparé un résumé du réveil.
+PLAN gros NOX
+NOX dit (curieux) Il va le lire comment ?
+PLAN gros CLAUDE
+CLAUDE dit (constat) Quand il sera réveillé.
+INSERT Il est | 8 h 00 | Partiel commencé
+PLAN gros NOX
+NOX dit (resigne) C'est trop tard.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je peux encore tenter une approche douce ?
 INSERT Il est | 10 h 45 | Partiel terminé
 TOBI leve
 PLAN gros TOBI

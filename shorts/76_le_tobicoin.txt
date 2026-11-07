@@ -1,5 +1,5 @@
 # J'AI CRÉÉ MA CRYPTOMONNAIE : LE TOBICOIN
-# Pitch : Tobi est millionnaire en TobiCoins. Le boulanger est son premier client.
+# Pitch : Tobi crée le TobiCoin et devient millionnaire sur le papier. Le boulanger est son premier client.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -9,24 +9,29 @@ FONDU direct
 ACCROCHE Millionnaire sur le papier
 
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Je suis millionnaire !
+TOBI dit (excite) Nox, j'ai créé ma cryptomonnaie : le TobiCoin !
 PLAN gros NOX
-NOX dit (curieux) En quoi ?
+NOX dit (curieux) Ça vaut combien ?
 PLAN gros TOBI
-TOBI dit (fier) En TobiCoins. Ma cryptomonnaie.
+TOBI dit (fier) J'ai un million de pièces. Je suis millionnaire.
 PLAN gros NOX
 NOX dit (sec) Qui en a acheté ?
 PLAN gros TOBI
-TOBI dit (gene) Moi.
+TOBI dit (gene) Pour l'instant, moi.
 PLAN gros NOX
 NOX dit (curieux) À qui ?
 PLAN gros TOBI
 TOBI dit (gene) À moi.
 INSERT Fortune de Tobi | 1 000 000 TC | En euros : 0 €
 PLAN gros TOBI
-TOBI dit (excite) Mais le boulanger les accepte ! Une baguette, dix mille TobiCoins !
+TOBI dit (excite) Mais le boulanger les accepte ! Il m'a donné une baguette.
 PLAN gros NOX
-NOX dit (surpris) Il a dit oui ?
+NOX dit (surpris) Contre combien ?
+PLAN gros TOBI
+TOBI dit (fier) Dix mille TobiCoins.
+PC Stats : TobiCoin en direct | Prix de la baguette | 10 000 TC
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Bon. Demain, il en veut cent mille.
 PLAN gros NOX
@@ -37,6 +42,8 @@ PLAN gros NOX
 NOX dit (sec) Tu viens d'inventer l'inflation.
 BRUIT ding
 TOBI message Boulanger | Je vous rends vos pièces. | Vous me devez une baguette.
+PLAN gros TOBI
+TOBI dit (panique) Il rend tout ?
 PLAN gros NOX
 NOX dit (constat) T'as deux millions de TobiCoins, et une dette d'une baguette.
 PLAN gros TOBI

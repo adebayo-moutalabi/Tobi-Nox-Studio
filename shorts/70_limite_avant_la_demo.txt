@@ -12,12 +12,20 @@ COMPTEUR Il reste 60 s
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (panique) Non, non, non ! Claude, pas maintenant !
+TOBI dit (panique) Claude ! Le jury arrive dans une minute ! Finis le site !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bien sûr. Je regarde le code, et je...
 PC Terminal : claude-code | limite atteinte | retour à 15 h 12
 PLAN pc
 ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Claude ? Claude !
 PLAN gros NOX
-NOX dit (constat) Le jury arrive dans une minute. Claude revient à quinze heures douze.
+NOX dit (constat) Il a atteint sa limite.
+PLAN gros TOBI
+TOBI dit (colere) Il revient quand ?
+PLAN gros NOX
+NOX dit (sec) Quinze heures douze.
 CODEX apparait gauche
 COMPTEUR Il reste 30 s
 PLAN gros TOBI
@@ -27,11 +35,11 @@ CODEX dit (fier) C'est fait.
 PLAN gros TOBI
 TOBI dit (content) Déjà ? T'as fait quoi ?
 PLAN gros CODEX
-CODEX dit (content) J'ai fini le site, et j'ai fait la démo sans toi.
+CODEX dit (content) J'ai fini le site. J'ai aussi fait la démo au jury.
 PLAN gros TOBI
-TOBI dit (surpris) Et le jury ?
+TOBI dit (surpris) Sans moi ?
 PLAN gros CODEX
-CODEX dit (fier) Il a adoré. J'ai vendu la boîte.
+CODEX dit (fier) Ils ont adoré. J'ai vendu la boîte.
 COMPTEUR Démo terminée
 INSERT Boîte vendue | 12 € | Le jury a négocié
 PLAN gros TOBI

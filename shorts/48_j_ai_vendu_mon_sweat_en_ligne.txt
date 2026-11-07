@@ -17,6 +17,8 @@ PLAN gros NOX
 NOX dit (surpris) Qui achète tes cours ?
 PLAN gros TOBI
 TOBI dit (fier) Une cliente. Elle a tout pris, sans négocier.
+PLAN gros NOX
+NOX dit (sec) Avec tes notes dessus ?
 PLAN gros TOBI
 TOBI dit (fier) Elle a mis cinq étoiles. Elle m'a appelé : vendeur courageux.
 PLAN gros NOX
@@ -37,6 +39,10 @@ TOBI dit (fier) C'est ça, le marketing.
 BRUIT ding
 PLAN gros TOBI
 TOBI dit (excite) Encore elle ! Elle veut mon sweat. Soixante euros !
+PLAN gros NOX
+NOX dit (surpris) Ton sweat troué ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il est vintage.
 PLAN gros NOX
 NOX dit (curieux) Elle habite où, ta cliente ?
 PLAN gros TOBI

@@ -64,6 +64,18 @@ BRUIT ding
 PC Mail du prof de droit | Nouvelle note : 2 sur 20 | J'ai retrouvé une faute
 PLAN pc
 ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (triste) Il me reste combien de points ?
+PLAN gros NOX
+NOX dit (constat) Deux. Dont un pour la date.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je te conseille d'arrêter.
+PLAN gros TOBI
+TOBI dit (illumine) Attends. Et si je demandais un entretien ?
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (fier) À ce rythme, je peux finir à zéro avec les honneurs.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Il vient d'écrire. Il te remercie.
 PLAN gros TOBI
