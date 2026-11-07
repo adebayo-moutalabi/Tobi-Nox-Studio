@@ -33,21 +33,45 @@ Pistes : Codex, une voix d'homme jeune, rapide et énergique. Gemini, une voix v
 
 ## Créer les voix avec Voice Design
 
-Dans ElevenLabs, ouvrir Voice Design, coller la description en anglais, puis écouter les essais avec la phrase de test. Garder la meilleure, puis la choisir dans le Studio.
+Dans ElevenLabs : Voices, My Voices, Add a new voice, puis Voice Design. Coller la description, puis le texte d'aperçu, et régler la fidélité à la description (Guidance Scale). ElevenLabs propose trois essais. Seul le texte d'aperçu consomme des crédits, une seule fois. La voix gardée occupe une place de voix du compte.
 
-| Personnage | Description à coller | Phrase de test |
-|---|---|---|
-| Tobi | Young French man, 21, broke university student with huge ambitions. Fast, lively and expressive voice, a bit cocky, quick to switch from pride to panic. Natural spoken French with a casual Paris accent, warm and funny, never theatrical. | Nox, aie la vision ! Cette fois, c'est la bonne idée, je te le jure ! |
-| Nox | Small friendly robot assistant with a calm, soft and slightly synthetic voice. Speaks native French in short, precise sentences with deadpan dry humor. Never cold: caring underneath, like a patient best friend who has seen everything. | Tobi. Non. J'appelle ta mère. |
-| Claude Code | French man in his early 30s with a calm, warm and reassuring voice. Speaks native French slowly and clearly, like a kind and honest older brother. Thoughtful, polite but natural, with gentle pauses before telling the truth. | Tobi, assieds-toi. On a regardé ton année. |
-| Codex | Young French man, 22, overexcited startup intern. Fast, energetic and very confident voice, always slightly too pleased with himself. Native French, crisp and punchy, speaks like he already finished the job before you asked. | C'est fait. J'ai aussi refait tout le site. |
-| Gemini | Young French woman, 25, brilliant top-of-the-class student who has read everything. Bright, enthusiastic and fast voice, very articulate, a little know-it-all but cheerful. Native French, clear and expressive. | J'ai lu tous tes mails. Et j'ai fait un résumé en podcast ! |
+Le format suit le guide d'ElevenLabs : langue et variante d'abord, puis genre, âge, qualité, personnage, émotion et façon de parler. Le mot « accent » n'est pas utilisé pour décrire l'intonation, et les mots d'effets sonores sont évités.
 
-Conseils :
+### Tobi
 
+- **Description :** Native French, français de France, no English or Canadian features. Male, 20–23. Studio quality. Persona: broke ambitious student. Emotion: lively, cocky, playful. Bright, slightly nasal young timbre, quick conversational pacing, switches fast from proud excitement to panic, natural Parisian everyday speech, close and clean recording.
+- **Aperçu :** Nox, aie la vision ! [laughs] Cette fois, c'est la bonne. Une appli qui te dit quand manger, avec un abonnement à dix-neuf euros ! Quoi, c'est cher ? C'est un investissement, Nox. Attends... pourquoi mon compte est à moins onze euros ? Non, non, non. Nox, dis-moi que c'est une erreur !
+- **Fidélité :** 35 %
+
+### Nox
+
+- **Description :** Native French, français de France, no English features. Gender-neutral, young adult. Excellent quality. Persona: small assistant robot, deadpan best friend. Emotion: calm, dry, caring. Soft, light and slightly robotic timbre, very even pacing with short precise sentences and small pauses before each punchline, never cold, quietly warm underneath.
+- **Aperçu :** Tobi. Il est midi. Tes partiels sont dans sept jours, et ton sweat est à l'envers. Non, je ne bloquerai pas ta carte pour un kebab. [sighs] Écoute. Tu as lancé seize projets, et seize fois tu as recommencé. Ça, je le calcule. Bon. J'appelle ta mère.
+- **Fidélité :** 40 %
+
+### Claude Code
+
+- **Description :** Native French, français de France, no English features. Male, 30–35. Studio quality. Persona: kind honest older brother. Emotion: calm, warm, reassuring. Smooth, mellow mid-low timbre, slow and deliberate pacing with gentle pauses before telling the truth, clear diction, close natural proximity.
+- **Aperçu :** Tobi, assieds-toi une seconde. On a regardé ton année ensemble. Je ne vais pas te mentir : il est minuit moins une, et le devoir n'est pas commencé. Ce n'est pas grave. On lit d'abord la consigne, puis on avance, une étape après l'autre. Je reste avec toi.
+- **Fidélité :** 30 %
+
+### Codex
+
+- **Description :** Native French, français de France, no English features. Male, 21–24. Studio quality. Persona: overexcited startup intern. Emotion: energetic, overconfident, proud. Crisp, bright and punchy timbre, fast staccato pacing, sounds like he finished the job before being asked, slightly too pleased with himself.
+- **Aperçu :** C'est fait. Quatre secondes. J'ai refait le site, la base de données et la publicité. Les tests ? Ça ralentit. [laughs] Le client a répondu, il adore. Et bonne nouvelle : j'ai vendu ta boîte. Douze euros. Non, ne me remercie pas. C'est fait.
+- **Fidélité :** 35 %
+
+### Gemini
+
+- **Description :** Native French, français de France, no English features. Female, 23–27. Studio quality. Persona: brilliant top of the class who has read everything. Emotion: enthusiastic, cheerful, know-it-all. Bright, clear and light timbre, fast articulate pacing, lively intonation with excited emphasis on facts, friendly and expressive.
+- **Aperçu :** Bonjour Tobi ! J'ai lu tous tes mails, ton agenda, et les quatre-vingt-dix pages des conditions d'utilisation. Personne ne les lit, mais moi, si ! Tu as un rendu mardi. C'est demain ! [laughs] J'ai aussi résumé ta vie : en trois lignes, en poème et en podcast. Tu préfères laquelle ?
+- **Fidélité :** 30 %
+
+### Conseils
+
+- Si une voix sonne anglaise, monter la fidélité de 5 à 10 points.
+- Si la voix grésille ou sonne artificielle, baisser la fidélité de 5 points.
 - Garder la même voix pour toute la série, puis la noter dans le tableau du haut.
-- Si l'accent sonne anglais, ajouter « native French speaker, no English accent » à la description.
-- Les essais peuvent consommer des crédits selon l'offre ElevenLabs.
 
 ## Les règles
 
