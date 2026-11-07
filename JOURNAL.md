@@ -253,6 +253,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Les épisodes 45, 46, 47, 48, 50 et 62 retrouvent leur version d'avant le raccourcissement.
 - Les chaussures et les réglages de caméra restent.
 
+## Clé ElevenLabs plus stable (7 novembre 2026)
+
+- La clé est gardée à deux endroits dans le navigateur, et le gestionnaire de mots de passe de Chrome peut l'enregistrer.
+- Elle n'est jamais envoyée sur GitHub.
+
 ## À faire
 
 Voir `TACHES.md`.

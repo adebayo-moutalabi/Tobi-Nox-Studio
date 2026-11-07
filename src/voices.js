@@ -8,6 +8,8 @@ const API = 'https://api.elevenlabs.io/v1';
 const STABLE = 'eleven_multilingual_v2'; // ce modèle lirait les consignes de ton à voix haute
 const KEY = 'tobinox.elevenlabs.key', PICK = 'tobinox.elevenlabs.voices', KEEP = 'tobinox.elevenlabs.keep', NAMES = 'tobinox.elevenlabs.names', MODEL = 'tobinox.elevenlabs.model';
 
+const BACKUP = 'cle-elevenlabs';
+
 const read = (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } };
 const write = (k, val) => { try { if (val) localStorage.setItem(k, val); else localStorage.removeItem(k); } catch { /* navigation privée */ } };
 
@@ -32,6 +34,7 @@ function audioCache() {
   return {
     get: async (k) => memory.get(k) || ask('readonly', (s) => s.get(k)),
     put: async (k, buf) => { memory.set(k, buf); await ask('readwrite', (s) => s.put(buf, k)); },
+    remove: async (k) => { memory.delete(k); await ask('readwrite', (s) => s.delete(k)); },
   };
 }
 
@@ -62,7 +65,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   const lock = (on) => { busy = on; go.disabled = on || !pick.tobi.value; load.disabled = on; list.querySelectorAll('button[data-redo]').forEach((b) => { b.disabled = on; }); };
   const remember = () => {
     write(KEEP, keep.checked ? '' : 'non');
-    if (!keep.checked) write(KEY, ''); else if (key.value.trim()) write(KEY, key.value.trim());
+    // La clé est gardée à deux endroits : certains nettoyages du navigateur n'en effacent qu'un seul.
+    if (!keep.checked) { write(KEY, ''); cache.remove(BACKUP); } else if (key.value.trim()) { write(KEY, key.value.trim()); cache.put(BACKUP, key.value.trim()); }
     // Un choix vide n'efface jamais un choix déjà enregistré. Le nom sert de secours si l'identifiant change.
     const json = (k) => { try { return JSON.parse(read(k) || '{}'); } catch { return {}; } };
     const ids = json(PICK), names = json(NAMES);
@@ -203,7 +207,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   say(key.value ? '' : read(PICK) ? 'Ta clé n\'est plus dans ce navigateur. Colle-la puis clique sur Valider.' : 'Colle ta clé ElevenLabs pour créer les voix.');
   keep.checked = read(KEEP) !== 'non'; // la clé reste gardée, sauf si l'auteur a décoché lui-même
   navigator.storage?.persist?.().catch(() => {}); // demande au navigateur de ne pas effacer la clé ni les voix
-  load.addEventListener('click', loadVoices);
+  load.addEventListener('click', () => { remember(); loadVoices(); });
+  el('elForm').addEventListener('submit', (e) => e.preventDefault());
   // La liste à coller dans VOIX.md : on garde ainsi la trace des voix réellement utilisées.
   el('elCopy').addEventListener('click', async () => {
     const line = (who, s) => `${who} : ${s.selectedOptions[0]?.textContent || 'non choisie'}`;
@@ -229,6 +234,10 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   for (const x of [...Object.values(pick), model]) x.addEventListener('change', () => { remember(); forget(); lock(false); });
   el('storyText').addEventListener('input', forget);
   el('storyPick').addEventListener('change', forget);
-  if (key.value) loadVoices();
+  if (key.value) { remember(); loadVoices(); }
+  else if (keep.checked) cache.get(BACKUP).then((saved) => { // le navigateur a perdu la première copie : on reprend la seconde
+    if (typeof saved !== 'string' || key.value) return;
+    key.value = saved; remember(); loadVoices();
+  });
   return { generate, warm, allow, ready: () => !!key.value.trim() && !!pick.tobi.value, state: () => (player.voices.length ? 'ready' : key.value.trim() && pick.tobi.value ? 'auto' : 'none') };
 }

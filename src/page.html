@@ -318,7 +318,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         <p class="caps">Réglages</p>
         <div class="rows">
           <details open id="elSetup"><summary>Voix <b id="rowVoice"></b></summary><div>
-            <div class="grid"><input type="password" id="elKey" placeholder="Clé API ElevenLabs" autocomplete="off" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="button" id="elLoad">Valider</button></div>
+            <form class="grid" id="elForm"><input type="text" name="username" value="ElevenLabs" autocomplete="username" hidden><input type="password" id="elKey" name="password" placeholder="Clé API ElevenLabs" autocomplete="current-password" spellcheck="false" aria-label="Clé API ElevenLabs"><button type="submit" id="elLoad">Valider</button></form>
             <label class="sw">Garder la clé sur cet ordinateur <input type="checkbox" id="elKeep"></label>
             <div class="pair" hidden><label class="voice">Tobi <select id="elTobi"></select></label><label class="voice">Nox <select id="elNox"></select></label><label class="voice">Claude Code <select id="elClaude"></select></label><label class="voice">Codex <select id="elCodex"></select></label><label class="voice">Gemini <select id="elGemini"></select></label></div>
             <label class="voice">Modèle <select id="elModel"><option value="eleven_v4">Expressif (v4)</option><option value="eleven_v3">Expressif (v3)</option><option value="eleven_multilingual_v2">Stable, sans ton</option></select></label>
