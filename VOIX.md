@@ -19,6 +19,8 @@ Dans le Studio, ouvrir Réglages, puis Voix, puis « Trouver des voix française
 - **Écouter :** joue l'extrait public de la voix, sans crédit.
 - **Choisir :** ajoute la voix au compte ElevenLabs et la donne au personnage. Cette étape ne consomme pas de crédit, mais certaines offres limitent le nombre de voix.
 - Dans les listes, les voix françaises du compte passent en premier et portent la mention « FR ».
+- **Filtres :** voix masculines ou féminines, jeunes ou adultes, et un mot-clé comme « énergique » ou « calme ».
+- **Changer de voix :** dès qu'une voix change, les anciennes répliques sont oubliées. « Tout recréer avec les voix choisies » refait tout l'épisode, même les répliques déjà créées. Le Studio annonce le coût et demande un second clic.
 
 Pistes : Codex, une voix d'homme jeune, rapide et énergique. Gemini, une voix vive et enthousiaste, plutôt de femme pour bien la distinguer.
 

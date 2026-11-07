@@ -267,6 +267,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Le Studio cherche des voix françaises dans la bibliothèque ElevenLabs, les fait écouter et les donne au personnage choisi.
 - Les voix françaises du compte passent en premier dans les listes.
 
+## Recréer les voix (7 novembre 2026)
+
+- Changer de voix oublie toujours les anciennes répliques, même importées.
+- Nouveau bouton pour tout recréer, avec le coût affiché avant.
+- La recherche de voix françaises filtre aussi par âge et par mot-clé.
+
 ## À faire
 
 Voir `TACHES.md`.

@@ -328,9 +328,10 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <p class="sub" id="elCredits"></p>
             <p class="sub" id="elNow" aria-live="polite"></p>
             <button type="button" id="elGo" disabled>Créer les vraies voix de cet épisode</button>
+            <button type="button" id="elRedoAll" title="Consomme des crédits">Tout recréer avec les voix choisies</button>
             <button type="button" id="elCopy">Copier la liste de mes voix</button>
             <details id="elFr"><summary>Trouver des voix françaises</summary><div>
-              <div class="grid"><select id="elFrFor" aria-label="Personnage"><option value="codex">Pour Codex</option><option value="gemini">Pour Gemini</option><option value="claude">Pour Claude Code</option><option value="nox">Pour Nox</option><option value="tobi">Pour Tobi</option></select><select id="elFrGender" aria-label="Voix"><option value="">Toutes</option><option value="male">Masculines</option><option value="female">Féminines</option></select><button type="button" id="elFrSearch">Chercher</button></div>
+              <div class="grid"><select id="elFrFor" aria-label="Personnage"><option value="codex">Pour Codex</option><option value="gemini">Pour Gemini</option><option value="claude">Pour Claude Code</option><option value="nox">Pour Nox</option><option value="tobi">Pour Tobi</option></select><select id="elFrGender" aria-label="Voix"><option value="">Toutes</option><option value="male">Masculines</option><option value="female">Féminines</option></select><select id="elFrAge" aria-label="Âge"><option value="">Tous âges</option><option value="young">Jeunes</option><option value="middle_aged">Adultes</option></select><input type="text" id="elFrQuery" placeholder="Mot-clé : énergique, calme…" aria-label="Mot-clé"><button type="button" id="elFrSearch">Chercher</button></div>
               <ul id="elFrList" class="frList"></ul>
             </div></details>
             <ol id="elLines"></ol>

@@ -183,7 +183,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     return false;
   };
 
-  const generate = async () => {
+  const generate = async (force = false) => {
     rows = readLines();
     if (!rows.length) { say('Ce script ne contient aucune réplique.'); return; }
     remember(); player.voices = []; lock(true);
@@ -191,7 +191,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     try {
       for (let i = 0; i < rows.length; i++) {
         say(`Voix ${i + 1} sur ${rows.length}…`);
-        if (await makeLine(i, false)) paid++;
+        if (await makeLine(i, force)) paid++;
       }
       publish();
       say(`${rows.length} voix prêtes pour ${rows.length} répliques, dont ${paid} nouvelles. Tu peux lire ou exporter.`);
@@ -199,8 +199,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     lock(false); show(); onChange?.(); credits();
   };
 
-  const forget = () => {
-    if (!rows.length) return;
+  const forget = () => { // une voix ou un script change : les anciennes répliques ne servent plus, même importées
+    if (!rows.length && !player.voices.length) return;
     rows = []; player.voices = []; list.replaceChildren();
     say('');
     onChange?.();
@@ -220,7 +220,8 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     if (!key.value.trim()) { say('Colle d\'abord ta clé ElevenLabs.'); return; }
     frList.replaceChildren(); say('Recherche de voix françaises…');
     try {
-      const g = el('elFrGender').value, q = new URLSearchParams({ language: 'fr', page_size: '12', sort: 'trending', ...(g ? { gender: g } : {}) });
+      const g = el('elFrGender').value, a = el('elFrAge').value, t = el('elFrQuery').value.trim();
+      const q = new URLSearchParams({ language: 'fr', page_size: '30', sort: 'trending', ...(g ? { gender: g } : {}), ...(a ? { age: a } : {}), ...(t ? { search: t } : {}) });
       const { voices = [] } = await (await call(`/shared-voices?${q}`)).json();
       if (!voices.length) { say('Aucune voix française trouvée avec ce filtre.'); return; }
       frList.replaceChildren(...voices.map((x) => {
@@ -250,6 +251,17 @@ export function mountVoices({ el, player, parseStory, onChange }) {
     try { await navigator.clipboard.writeText(text); say('Liste copiée.'); } catch { say(text); }
   });
   go.addEventListener('click', async () => { if (await allow(say)) generate(); });
+  // Refaire tout l'épisode, même les répliques déjà créées : utile après un réglage de voix sur ElevenLabs.
+  let redoSign = '';
+  el('elRedoAll').addEventListener('click', async () => {
+    const lines = readLines();
+    if (!lines.length) { say('Ce script ne contient aucune réplique.'); return; }
+    const empty = lines.find((r) => !pick[r.who].value);
+    if (empty) { say(`Choisis d'abord la voix de ${empty.who}.`); return; }
+    const chars = lines.reduce((n, r) => n + lineId(r).text.length, 0), sign = [el('storyText').value, model.value, ...Object.values(pick).map((x) => x.value)].join('|');
+    if (redoSign !== sign) { redoSign = sign; say(`Tout recréer : ${lines.length} répliques, environ ${chars.toLocaleString('fr-FR')} crédits. Clique encore pour confirmer.`); return; }
+    redoSign = ''; await generate(true);
+  });
   const aie = el('elAie');
   aie.value = sonAie();
   aie.addEventListener('change', () => { changeAie(aie.value); aie.value = sonAie(); forget(); });
