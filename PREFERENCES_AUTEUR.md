@@ -24,6 +24,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 ## Réécriture des épisodes 1 à 50
 
+- Ne plus retoucher un épisode sans demande précise : l'auteur les relit un par un et donne ses retours.
 - Retoucher légèrement : garder les histoires et les blagues, améliorer le contexte, la logique et les écrans.
 
 ## Titres et descriptions

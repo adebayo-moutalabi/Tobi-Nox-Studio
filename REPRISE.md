@@ -116,6 +116,13 @@ Aujourd'hui, le Studio ne connaît qu'un décor. Ce qui lui est lié :
 
 Pour un deuxième lieu : créer `src/lieux/<nom>.js` qui renvoie ces mêmes éléments, puis ajouter une commande `DECOR <nom>` qui remplace `v.room`, `LIEUX` et `PLANS`. Ce travail n'est pas commencé.
 
+## Reprendre depuis une nouvelle session
+
+1. Cloner le dépôt : `git clone https://github.com/adebayo-moutalabi/Tobi-Nox-Studio.git`.
+2. Ouvrir ce dossier dans Claude Code.
+3. Demander de lire `AGENTS.md`, `PREFERENCES_AUTEUR.md`, `CHARTE_SCRIPTS.md` et `TACHES.md`.
+4. Pour les gestes en local, copier `mocap-mixamo.json` dans `src/`, puis lancer `npm install` et `npm run local`.
+
 ## Points de vigilance
 
 - **Tester sans voix réelles :** le test d'export utilise de fausses voix ; la durée finale dépend des voix.

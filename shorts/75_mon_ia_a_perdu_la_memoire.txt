@@ -1,5 +1,5 @@
 # MON IA A PERDU LA MÉMOIRE
-# Pitch : Après une mise à jour, Nox ne reconnaît plus Tobi. Claude Code lui résume sa vie.
+# Pitch : Après une mise à jour, Nox ne reconnaît plus Tobi. Claude Code propose de lui résumer sa vie.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -8,19 +8,21 @@ TABLEAU Mise à jour de Nox | Terminée | Mémoire : ?
 FONDU direct
 ACCROCHE Nox ne le reconnaît plus
 
+PLAN gros TOBI
+TOBI dit (content) Nox, ta mise à jour est finie ! Tu m'as manqué.
 PLAN gros NOX
 NOX dit (calme) Bonjour. Vous êtes qui ?
 PLAN gros TOBI
-TOBI dit (surpris) Nox, c'est moi. Tobi.
+TOBI dit (surpris) C'est moi. Tobi.
 PLAN gros NOX
 NOX dit (curieux) Enchanté. Vous venez pour la chambre ?
 PLAN gros TOBI
-TOBI dit (panique) Claude ! La mise à jour a tout effacé !
+TOBI dit (panique) Claude ! Il a tout oublié !
 CLAUDE apparait bureau
 PLAN gros CLAUDE
-CLAUDE dit (calme) Sa mémoire est partie. J'ai un résumé de sa vie.
+CLAUDE dit (calme) Sa mémoire est partie. J'ai un résumé de sa vie, si tu veux.
 PLAN gros TOBI
-TOBI dit (excite) Montre-lui qui je suis !
+TOBI dit (excite) Oui ! Montre-lui qui je suis !
 PC Word : Resume_de_Tobi.docx | 17 projets au placard | 847 € de serveur | Salaire de Nox : 0 €
 PLAN pc
 ATTENDRE 1.6
@@ -28,10 +30,22 @@ PLAN gros NOX
 NOX dit (surpris) J'ai travaillé pour ça ?
 PLAN gros TOBI
 TOBI dit (gene) C'est mal résumé.
+PLAN gros CLAUDE
+CLAUDE dit (constat) Il y a aussi un chapitre sur tes yaourts.
+PLAN gros NOX
+NOX dit (sec) Deux ans, sans salaire.
+PLAN gros TOBI
+TOBI dit (triste) Et nos bons moments ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai cherché. Il y en a trois.
 PLAN gros NOX
 NOX dit (curieux) Claude, je peux rester comme ça ?
 PLAN gros TOBI
-TOBI dit (triste) Nox, j'ai besoin de toi. Je sais même pas où est mon chargeur.
+TOBI dit (panique) Non ! Restaure-le !
+PLAN gros CLAUDE
+CLAUDE dit (calme) C'est à lui de choisir.
+PLAN gros TOBI
+TOBI dit (triste) Nox, j'ai besoin de toi. Sans toi, je sais même pas où est mon chargeur.
 PLAN gros NOX
 NOX dit (calme) Sous ton oreiller, Tobi.
 PLAN gros TOBI

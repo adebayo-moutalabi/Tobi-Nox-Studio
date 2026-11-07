@@ -242,6 +242,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 
 - Tobi porte des chaussures bleu marine à semelle blanche.
 
+## Retour de l'épisode 75 (7 novembre 2026)
+
+- L'épisode 75 retrouve ses dialogues d'origine, sans la formule répétée de Claude Code.
+- L'auteur relira ensuite les épisodes un par un.
+
 ## À faire
 
 Voir `TACHES.md`.
