@@ -1,7 +1,7 @@
 // Fiches des personnages pour le visualiseur
 import { createCharacter } from './character.js';
 import { createNox, NOX_HEIGHT } from './nox.js';
-import { CLAUDE_CODE, CODEX, GEMINI } from './logos.js';
+import { CLAUDE_CODE, CODEX, GEMINI, PROMO } from './logos.js';
 
 const GESTURES = [
   ['wave', 'Saluer'], ['nod', 'Oui'], ['no', 'Non'], ['shrug', 'Hausser les épaules'], ['think', 'Réfléchir'], ['point', 'Montrer'],
@@ -49,6 +49,7 @@ const AINES = {
   claude: { name: 'Claude Code', scale: 0.74, form: CLAUDE_CODE },
   codex: { name: 'Codex', scale: 0.76, form: CODEX },
   gemini: { name: 'Gemini', scale: 0.74, form: GEMINI },
+  promo: { name: 'IA Promo', scale: 0.62, form: PROMO }, // l'IA à trente centimes : plus petite que les autres
 };
 export function aine(id) {
   const base = nox(), a = AINES[id], hero = createNox({ scale: a.scale, form: a.form });

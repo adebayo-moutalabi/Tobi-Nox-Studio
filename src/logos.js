@@ -228,3 +228,25 @@ export const GEMINI = {
     };
   },
 };
+
+// ---- Promo : l'IA à trente centimes. Une étiquette de prix jaune, inventée pour la série ----
+// Même squelette et même visage que Claude, mais une autre matière : une étiquette en carton, son œillet et son bandeau de prix.
+export const PROMO = {
+  ...CLAUDE_CODE,
+  build(ctx) {
+    const life = CLAUDE_CODE.build(ctx), { bones } = ctx;
+    bones.head.traverse((m) => { if (m.material?.name === 'claude') { m.material = m.material.clone(); m.material.color.set('#ffd23f'); m.material.name = 'promo'; } });
+    for (const n of ['arm_L', 'arm_R', 'leg_L', 'leg_R']) bones[n]?.traverse((m) => { if (m.material?.name === 'claude') { m.material = m.material.clone(); m.material.color.set('#f2b92e'); m.material.name = 'promo'; } });
+    const logo = bones.head.children[bones.head.children.length - 1];
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.6 * U, 0.45 * U, 8, 20), new THREE.MeshStandardMaterial({ color: '#c9ccd3', metalness: 0.6, roughness: 0.3 }));
+    ring.position.set(-7 * U, 4.2 * U, 4 * U + 0.003); logo.add(ring);
+    if (typeof document !== 'undefined') { // bandeau rouge « 0,30 € » sous les yeux
+      const c = document.createElement('canvas'); c.width = 256; c.height = 64; const g = c.getContext('2d');
+      g.fillStyle = '#e5383b'; g.fillRect(0, 0, 256, 64); g.fillStyle = '#fff'; g.font = '900 44px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('0,30 €', 128, 34);
+      const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+      const band = new THREE.Mesh(new THREE.PlaneGeometry(14 * U, 3.5 * U), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }));
+      band.position.set(0, -4.4 * U, 4 * U + 0.004); logo.add(band);
+    }
+    return life;
+  },
+};

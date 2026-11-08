@@ -107,7 +107,7 @@ import E66 from '../shorts/66_mon_robot_a_fait_greve_dans_ma_start_up.txt';
 import E67 from '../shorts/67_je_vends_une_formation_pour_devenir_riche.txt';
 
 startViewer({
-  cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
+  cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini'), aine('promo')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
     "79. Plus que 4 jours pour insulter Claude": A79,
     "80. ChatGPT m'a mis une pub en pleine rupture": A80,

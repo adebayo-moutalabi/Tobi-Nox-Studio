@@ -15,7 +15,7 @@ window.auditCadrage = async (names) => {
       if (at.distanceTo(p.camera.position) < 0.3) return `caméra dans ${x.id}`;
     }
     if (Math.abs(n.x) > 0.86 || n.y > 0.92 || n.y < -0.9 || n.z > 1) return 'hors du cadre';
-        if (who !== 'CLAUDE' && who !== 'CODEX' && who !== 'GEMINI') {
+        if (who !== 'CLAUDE' && who !== 'CODEX' && who !== 'GEMINI' && who !== 'PROMO') {
       const q = a.hero.bones.head.getWorldQuaternion(new T.Quaternion()), face = new T.Vector3(0, 0, 1).applyQuaternion(q), eye = p.camera.position.clone().sub(h).normalize();
       if (face.dot(eye) < -0.1) return 'de dos';
       if (face.dot(eye) < 0.2) return 'visage peu visible';
@@ -61,7 +61,7 @@ window.auditCadrage = async (names) => {
       for (const m of body()) if (!bad.includes(m)) bad.push(m);
       const l = now.dataset.line || '';
       if (l !== last) { last = l; wait = 14; }
-      if (wait > 0 && --wait === 0) { const m = /Ligne (\d+) : (TOBI|NOX|CLAUDE|CODEX|GEMINI) dit/.exec(l); const r = m && check(m[2]); if (r) bad.push(`ligne ${m[1]}, ${m[2]} : ${r}`); }
+      if (wait > 0 && --wait === 0) { const m = /Ligne (\d+) : (TOBI|NOX|CLAUDE|CODEX|GEMINI|PROMO) dit/.exec(l); const r = m && check(m[2]); if (r) bad.push(`ligne ${m[1]}, ${m[2]} : ${r}`); }
     }
     if (bad.length) report[o.textContent] = bad;
   }

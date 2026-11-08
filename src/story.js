@@ -70,7 +70,7 @@ export function parseStory(text) {
     const direct = /^DIRECT\s/.test(line);
     if (direct) line = line.slice(7).trim();
     const [first, ...rest] = line.split(/\s+/);
-    const who = /^(TOBI|NOX|CLAUDE|CODEX|GEMINI)$/.test(first) ? first.toLowerCase() : null;
+    const who = /^(TOBI|NOX|CLAUDE|CODEX|GEMINI|PROMO)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
     let text = rest.join(' '), tone = null;
     const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
@@ -84,7 +84,7 @@ export function parseStory(text) {
 
 // À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui à qui il répond (le dernier qui a parlé), sinon celui qui parle ensuite.
 // Un prénom cité au milieu d'une phrase ne compte pas.
-const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
+const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini|Promo)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
 function adresse(list) {
   const lines = list.filter((c) => c.verb === 'dit' && c.who);
   lines.forEach((c, i) => {
@@ -472,7 +472,7 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff' }[a.id] || '#f2b92e' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff', promo: '#ffd23f' }[a.id] || '#f2b92e' };
         const essai = !voice && !offline && ui.trial?.() ? voixEssai.dit(a.id, prononce(c.spoken || c.text)) : null;
         await v.say(a, c.text, dur, voice?.env);
         if (essai) await essai;

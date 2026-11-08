@@ -2,7 +2,7 @@
 // Elle sert seulement à la lecture : la vidéo finale n'utilise jamais ces voix.
 const TIMBRES = {
   tobi: { pitch: 1.15, rate: 1.15 }, nox: { pitch: 0.6, rate: 1.1 }, claude: { pitch: 1, rate: 1 },
-  codex: { pitch: 0.8, rate: 1.25 }, gemini: { pitch: 1.4, rate: 1.15 },
+  codex: { pitch: 0.8, rate: 1.25 }, gemini: { pitch: 1.4, rate: 1.15 }, promo: { pitch: 1.7, rate: 1.4 },
 };
 const synth = typeof speechSynthesis === 'undefined' ? null : speechSynthesis;
 const homme = (x) => /Paul|Thomas|Henri|Claude|Remy|Rémy|Nicolas/i.test(x.name);
