@@ -82,8 +82,8 @@ export function parseStory(text) {
   return out;
 }
 
-// À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui qui répond juste après.
-const APPEL = /\b(Nox|Tobi|Claude|Codex|Gemini)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g;
+// À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui qui répond juste après. Un prénom cité au milieu d'une phrase ne compte pas.
+const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
 function adresse(list) {
   const lines = list.filter((c) => c.verb === 'dit' && c.who);
   lines.forEach((c, i) => {
