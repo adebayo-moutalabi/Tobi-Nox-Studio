@@ -49,7 +49,7 @@ const AINES = {
   claude: { name: 'Claude Code', scale: 0.74, form: CLAUDE_CODE },
   codex: { name: 'Codex', scale: 0.76, form: CODEX },
   gemini: { name: 'Gemini', scale: 0.74, form: GEMINI },
-  promo: { name: 'IA Promo', scale: 0.66, form: PROMO }, // l'IA à trente centimes : une étiquette, plus petite que les autres
+  promo: { name: 'IA Promo', scale: 0.8, form: PROMO }, // l'IA à trente centimes : un petit mochi gourmand
 };
 export function aine(id) {
   const base = nox(), a = AINES[id], hero = createNox({ scale: a.scale, form: a.form });

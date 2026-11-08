@@ -126,7 +126,7 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - S'inspirer des épisodes déjà publiés qui ont marché (62, 22, 69, 75).
 - Un brouillon vidéo gratuit, sans voix ElevenLabs, sert à vérifier le rythme sur téléphone.
 
-- La première IA Promo ressemblait trop à Claude. Chaque nouvelle IA doit avoir une forme bien à elle.
+- La première IA Promo ressemblait trop à Claude. Chaque nouvelle IA doit avoir une forme bien à elle. L'étiquette et la tirelire n'ont pas plu non plus : l'auteur a choisi un mochi mignon. Pour un nouveau personnage, proposer plusieurs idées avant de le construire.
 
 ## Points à surveiller
 

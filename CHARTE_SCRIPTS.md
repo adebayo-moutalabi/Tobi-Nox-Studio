@@ -67,7 +67,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
-- **IA Promo** est l'IA à trente centimes : une étiquette de prix jaune qui pend à son œillet, avec une pièce dans chaque main. Elle ne doit jamais ressembler aux autres IA. Toujours ravie, souvent fausse, et chaque vraie réponse est « une option premium ». `DIRECT PROMO apparait milieu`, puis `PROMO dit (excite) ...`. Plutôt au sol : elle est petite et bon marché.
+- **IA Promo** est l'IA à trente centimes : un petit mochi vert menthe, joues roses, antenne et casquette « PROMO » de travers. Elle ne doit jamais ressembler aux autres IA. Toujours ravie, souvent fausse, et chaque vraie réponse est « une option premium ». `DIRECT PROMO apparait milieu`, puis `PROMO dit (excite) ...`. Plutôt au sol : elle est petite et bon marché.
 
 - **Places au sol :** `gauche`, `milieu`, `droite`.
 - **Places en hauteur :** `bureau`, `chaise`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.

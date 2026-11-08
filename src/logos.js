@@ -229,47 +229,56 @@ export const GEMINI = {
   },
 };
 
-// ---- Promo : l'IA à trente centimes. Une étiquette de prix, inventée pour la série ----
-// Une vraie étiquette : pointe en haut, œillet et ficelle, bandeau rouge « 0,30 € ». Elle se balance comme si on venait de la décrocher.
+// ---- Promo : l'IA à trente centimes. Un petit mochi gourmand, inventé pour la série ----
+// Une boule moelleuse vert menthe, joues roses, grands yeux brillants, une antenne et une casquette « PROMO » de travers.
+// Elle s'écrase et rebondit comme une pâte molle quand elle parle.
 export const PROMO = {
-  pivot: 0.4, shoulder: (s) => new THREE.Vector3(s * 0.24, 0.42, 0.1), armLen: 0.19, legY: 0.13, legX: 0.1, footY: 0.06, eyeY: 0.6,
+  pivot: 0.4, shoulder: (s) => new THREE.Vector3(s * 0.26, 0.36, 0.1), armLen: 0.15, legY: 0.13, legX: 0.1, footY: 0.06, eyeY: 0.58,
   build({ bones }) {
-    const P = (x, y) => new THREE.Vector2(x, y), TAG = [P(-0.3, -0.38), P(0.3, -0.38), P(0.3, 0.16), P(0, 0.42), P(-0.3, 0.16)];
-    const logo = new THREE.Group(); logo.position.y = 0.2; bones.head.add(logo);
-    const swing = new THREE.Group(); logo.add(swing); // l'étiquette pend à son œillet
-    const tag = solid(new THREE.Mesh(volume(TAG, 0.06, (c, x, y) => c.set('#ffd23f').lerp(new THREE.Color('#f2a91e'), Math.max(0, -y) * 0.9)), glossy('promo')));
-    swing.add(tag);
-    const z = 0.064, hole = new THREE.Mesh(new THREE.CircleGeometry(0.045, 20), ink('#3a2a10')); hole.position.set(0, 0.27, z); swing.add(hole);
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.055, 0.014, 8, 24), new THREE.MeshStandardMaterial({ color: '#c9ccd3', metalness: 0.7, roughness: 0.3 })); ring.position.set(0, 0.27, z); swing.add(ring);
-    const string = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 0.2, 6), new THREE.MeshStandardMaterial({ color: '#e5383b' })); string.position.set(0.04, 0.37, z); string.rotation.z = -0.4; swing.add(string);
-    const dark = ink('#1b1b1f');
-    const eyes = [1, -1].map((side) => { const e = new THREE.Mesh(new THREE.CircleGeometry(1, 24), dark); e.userData.side = side; e.position.z = z + 0.002; swing.add(e); return e; });
-    const mouth = bandMouth(0.05, 0.008, dark); mouth.position.set(0, -0.06, z + 0.002); swing.add(mouth);
-    if (typeof document !== 'undefined') { // bandeau rouge du prix
-      const c = document.createElement('canvas'); c.width = 256; c.height = 72; const g = c.getContext('2d');
-      g.fillStyle = '#e5383b'; g.beginPath(); g.roundRect(0, 0, 256, 72, 14); g.fill(); g.fillStyle = '#fff'; g.font = '900 48px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('0,30 €', 128, 38);
-      const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
-      const band = new THREE.Mesh(new THREE.PlaneGeometry(0.42, 0.12), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false, transparent: true }));
-      band.position.set(0, -0.24, z + 0.003); swing.add(band);
-    }
-    const coins = ['L', 'R'].map((n) => { // dans chaque main, une pièce : elle compte tout
-      const m = solid(new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.014, 20), new THREE.MeshStandardMaterial({ color: '#e0b43a', metalness: 0.8, roughness: 0.25 })));
-      m.rotation.x = Math.PI / 2; bones[`hand_${n}`].add(m); return m;
+    const mint = new THREE.MeshStandardMaterial({ color: '#a8ecc9', roughness: 0.75 }); mint.name = 'promo';
+    const logo = new THREE.Group(); logo.position.y = 0.17; bones.head.add(logo);
+    const body = solid(new THREE.Mesh(new THREE.SphereGeometry(0.3, 40, 28), mint)); body.scale.set(1.08, 0.8, 0.9); logo.add(body);
+    const face = new THREE.Group(); logo.add(face); // visage collé au ventre du mochi
+    const eyeInk = ink('#21302a'), shine = ink('#ffffff');
+    const eyes = [1, -1].map((side) => {
+      const e = new THREE.Group(); e.userData.side = side; face.add(e);
+      e.add(new THREE.Mesh(new THREE.CircleGeometry(1, 24), eyeInk));
+      const glint = new THREE.Mesh(new THREE.CircleGeometry(0.38, 14), shine); glint.position.set(0.28, 0.32, 0.001); e.add(glint);
+      e.position.z = 0.262; e.rotation.y = side * 0.32; return e;
     });
+    for (const s of [1, -1]) { const c = new THREE.Mesh(new THREE.CircleGeometry(0.042, 18), ink('#ff8fab')); c.material.opacity = 0.7; c.position.set(s * 0.17, -0.045, 0.235); c.rotation.y = s * 0.6; face.add(c); }
+    const mouth = bandMouth(0.03, 0.006, eyeInk); mouth.position.set(0, -0.06, 0.268); face.add(mouth);
+    const red = new THREE.MeshStandardMaterial({ color: '#e5383b', roughness: 0.5 });
+    const cap = new THREE.Group(); cap.position.set(0.03, 0.2, 0); cap.rotation.z = -0.35; logo.add(cap);
+    cap.add(solid(new THREE.Mesh(new THREE.SphereGeometry(0.15, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), red)));
+    const visor = solid(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.012, 24, 1, false, -Math.PI / 2, Math.PI), red)); visor.position.set(0, 0.005, 0.09); cap.add(visor);
+    if (typeof document !== 'undefined') {
+      const c = document.createElement('canvas'); c.width = 192; c.height = 64; const g = c.getContext('2d');
+      g.fillStyle = '#fff'; g.font = '900 46px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('PROMO', 96, 36);
+      const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+      const label = new THREE.Mesh(new THREE.PlaneGeometry(0.17, 0.057), new THREE.MeshBasicMaterial({ map: tex, transparent: true, toneMapped: false }));
+      label.position.set(0, 0.07, 0.135); label.rotation.x = -0.45; cap.add(label);
+    }
+    const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 0.12, 6), new THREE.MeshStandardMaterial({ color: '#5a6b63' })); stem.position.set(-0.05, 0.2, 0); stem.rotation.z = 0.25; logo.add(stem);
+    const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.025, 14, 10), new THREE.MeshStandardMaterial({ color: '#ffd23f', emissive: '#ffb000', emissiveIntensity: 0.6 })); bulb.position.set(-0.066, 0.265, 0); logo.add(bulb);
+    let squish = 0;
     return {
       face(w) {
         for (const e of eyes) {
           const s = e.userData.side, blink = s > 0 ? w.blinkL : w.blinkR, big = 1 + 0.3 * w.wide;
-          e.scale.set(0.032 * big, 0.04 * big * (1 - 0.9 * blink) * (1 - 0.45 * w.happy), 1);
-          e.position.x = s * 0.09 + (w.lookL - w.lookR) * 0.012;
-          e.position.y = 0.06 + (w.lookU - w.lookD) * 0.012;
+          e.scale.set(0.048 * big * (1 + 0.15 * w.happy), 0.055 * big * (1 - 0.9 * blink) * (1 - 0.5 * w.happy), 1);
+          e.position.x = s * 0.1 + (w.lookL - w.lookR) * 0.012;
+          e.position.y = 0.03 + (w.lookU - w.lookD) * 0.012;
         }
         mouth.draw(w);
       },
       update(dt, s) {
-        swing.rotation.z = 0.1 * Math.sin(s.time * 1.7) + (s.talking ? 0.06 * Math.sin(s.time * 9) : 0);
-        logo.position.y = 0.2 + (s.talking ? 0.02 * s.level : 0.01 * Math.sin(s.time * 2.2));
-        coins.forEach((m, i) => { m.rotation.z = s.time * (i ? 3 : -3); });
+        // Pâte molle : elle s'écrase en parlant puis reprend sa forme, et respire doucement au repos.
+        const want = s.talking ? (0.4 + 0.6 * Math.abs(Math.sin(s.time * 9))) * (0.5 + s.level) : 0.15 + 0.15 * Math.sin(s.time * 2);
+        squish += (want - squish) * (1 - Math.exp(-dt * 12));
+        body.scale.set(1.08 + 0.06 * squish, 0.8 - 0.06 * squish, 0.9 + 0.03 * squish);
+        face.position.y = -0.02 * squish; cap.position.y = 0.2 - 0.04 * squish; stem.position.y = 0.2 - 0.04 * squish; bulb.position.y = 0.265 - 0.04 * squish;
+        bulb.material.emissiveIntensity = 0.4 + 0.4 * Math.abs(Math.sin(s.time * (s.talking ? 8 : 2)));
       },
     };
   },
