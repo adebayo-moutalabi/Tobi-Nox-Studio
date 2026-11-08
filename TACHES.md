@@ -14,6 +14,13 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 - **Lumière selon l'heure :** la nuit, lampes allumées et fenêtre sombre ; le jour, lumière du soleil cohérente avec l'heure affichée. Rien ne doit être laissé au hasard.
 - **Défilement du Studio :** l'auteur signale un souci quand on remonte tout en haut. À préciser avec lui.
 
+## Demandes du 8 novembre 2026
+
+- **Visuels du PC :** une interface de discussion type assistant IA avec ses publicités (épisode 80), un aperçu du jeu inventé (épisode 86), une petite IA bon marché avec son logo, à côté de Tobi (épisode 93).
+- **Mémoire trop fréquent :** revoir les épisodes qui citent encore le mémoire, dont 82, 85, 94 et 95.
+- **Places des IA :** revoir les anciens épisodes où Claude est par terre, et les plans mal cadrés.
+- **Épisodes 82, 85, 87, 90, 92, 94 et 95 :** à raccourcir et adapter de la même façon si l'auteur le demande.
+
 ## Documentation et code
 
 4. **Revoir la documentation et le code :** une personne ou une IA doit pouvoir les comprendre et les modifier facilement. L'auteur y reviendra.

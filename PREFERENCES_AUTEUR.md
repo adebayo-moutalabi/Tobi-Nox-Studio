@@ -108,6 +108,15 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Les faits inventés doivent rester crédibles : l'auteur n'a pas cru au « yaourt à boire » de la page Wikipédia.
 - Au début de l'épisode 79, Tobi regardait Claude au lieu de Nox. Le Studio prenait le dernier prénom cité. Seul un prénom appelé compte désormais.
 
+## Format court (8 novembre 2026)
+
+- Un Short dure moins d'une minute. Plus long, il faut une vraie raison. Cela précise l'ancienne règle « les épisodes plus longs ne dérangent pas ».
+- Plus de chutes : une punchline presque à chaque échange.
+- Compréhensible sans être dans la tech : une idée simple, dite avec des mots de tous les jours.
+- Le « mémoire » revient trop souvent et n'est plus crédible. On varie : exposé, dossier de stage, CV, partiel, rendu.
+- Claude, Codex et Gemini se placent plutôt sur le bureau que par terre.
+- Les écrans du PC doivent être plus immersifs : vraie interface de discussion avec ses publicités, aperçu du jeu inventé, petite IA bon marché avec son logo.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

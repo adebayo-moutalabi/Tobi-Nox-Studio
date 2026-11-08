@@ -292,6 +292,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Réécrits à la voix des personnages, avec un dialogue qui s'enchaîne : la liste de Tobi contre Claude s'affiche dans Notes, l'entretien avec la recruteuse IA se termine par un mail, et la page Wikipédia de Tobi repose sur des articles écrits par Codex.
 - Regard : seul un prénom appelé (« Nox, … », « Merci, Claude ! ») désigne celui à qui l'on parle. Avant, « insulter Claude » faisait regarder Claude.
 
+## Épisodes d'actualité raccourcis (8 novembre 2026)
+
+- Épisodes 79, 80, 81, 83, 84, 86, 88, 89, 91, 93, 96, 98 et 99 réécrits en format court : environ 25 à 40 secondes sans les écrans, une chute à presque chaque échange, des mots simples.
+- Le mémoire est remplacé par un exposé, un dossier de stage ou un CV. Claude, Codex et Gemini sont sur le bureau.
+
 ## À faire
 
 Voir `TACHES.md`.
