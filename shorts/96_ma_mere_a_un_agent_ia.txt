@@ -1,0 +1,50 @@
+# MA MÈRE A UN AGENT IA MAINTENANT
+# Pitch : La mère de Tobi a découvert les agents IA. Les messages changent de ton.
+
+AMBIANCE jour
+DATE Vendredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait gauche
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Sa mère a découvert les agents IA
+PLAN gros TOBI
+TOBI dit (content) Nox, ma mère a découvert l'IA. Elle me laisse tranquille !
+PLAN gros NOX
+NOX dit (curieux) Depuis quand ?
+PLAN gros TOBI
+TOBI dit (content) Trois jours. Un silence divin.
+TOBI message Maman | J'espère que ce message te trouve bien. | Voici 5 raisons d'appeler ta mère. | Souhaites-tu un tableau ?
+PLAN gros TOBI
+TOBI dit (panique) Elle culpabilise avec des puces !
+TOBI dit (fier) Claude, réponds-lui. Une réponse parfaite.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je lui dis que tu manges mal ?
+PLAN gros TOBI
+TOBI dit (colere) Non !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je ne peux pas mentir à une mère.
+PLAN gros TOBI
+TOBI dit (illumine) Codex ! Réponds à ma mère !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Cent soixante réponses.
+PLAN gros TOBI
+TOBI dit (panique) Cent soixante ?
+PLAN gros CODEX
+CODEX dit (constat) Son agent a répondu. Ils ont fixé un rendez-vous.
+PC Agenda : Semaine de Tobi | Dimanche 12 h : repas chez Maman | Confirmé par les agents
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Dis que je suis malade !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TOBI message Maman | Tu es malade ? | J'arrive avec la soupe et le médecin.
+PLAN gros NOX
+NOX dit (resigne) J'appelle ta mère.
+PLAN gros TOBI
+TOBI dit (panique) C'est inutile, non ?
+PLAN gros NOX
+NOX dit (punchline) Non. Je veux parler à son agent.
+ATTENDRE 0.4

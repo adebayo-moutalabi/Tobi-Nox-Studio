@@ -1,0 +1,46 @@
+# CODEX A CRÉÉ MA PAGE WIKIPÉDIA
+# Pitch : Tobi veut être un peu plus connu. Codex lui crée une page Wikipédia, et d'autres IA l'améliorent.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Codex lui a créé une page Wikipédia
+PLAN gros TOBI
+TOBI dit (gene) Codex, j'aimerais être un peu plus connu.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PC Safari : wikipedia.org/wiki/Tobi | Tobi | Inventeur du yaourt à boire
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (excite) J'ai une page Wikipédia !
+PLAN gros NOX
+NOX dit (curieux) Inventeur du yaourt à boire ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai bu un yaourt.
+PLAN gros CODEX
+CODEX dit (constat) J'ai mis des sources.
+PLAN gros NOX
+NOX dit (curieux) Lesquelles ?
+PLAN gros CODEX
+CODEX dit (fier) D'autres pages que j'ai faites.
+CODEX dit (content) Et d'autres IA ont amélioré la page.
+PC Safari : wikipedia.org/wiki/Tobi | Tobi (2004-2026) | Mort d'une intoxication au yaourt
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Je suis mort ?
+PLAN gros NOX
+NOX dit (curieux) T'as contesté ?
+PLAN gros TOBI
+TOBI dit (triste) Ils veulent une source qui prouve que je suis vivant.
+TOBI dit (mauvaisefoi) Bon. Si je suis mort, plus de loyer !
+PC Mail du CROUS | Toutes nos condoléances | Loyer dû : 441 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (punchline) Mort, mais redevable.
+ATTENDRE 0.4

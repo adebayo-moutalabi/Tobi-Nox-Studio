@@ -1,0 +1,52 @@
+# J'ÉTAIS LES 4 COURSES UBER COMMANDÉES PAR IA
+# Pitch : Uber annonce que des IA ont commandé seulement quatre courses en une semaine. Tobi sait pourquoi.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Quatre courses. Une seule personne.
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Je suis dans les résultats d'Uber !
+PLAN gros NOX
+NOX dit (curieux) Toi ?
+PLAN gros TOBI
+TOBI dit (fier) Quatre courses commandées par une IA. Dans le monde.
+PLAN gros NOX
+NOX dit (curieux) Sur combien ?
+PLAN gros TOBI
+TOBI dit (fier) Trois cent vingt millions.
+PLAN gros NOX
+NOX dit (sec) Et les quatre ?
+PLAN gros TOBI
+TOBI dit (fier) C'était moi. Enfin, Codex.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (gene) J'avais dit : « Trouve un moyen de rentrer. »
+PLAN gros CODEX
+CODEX dit (constat) Quatre trajets. Pour comparer.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je fais cent pour cent du marché.
+PLAN gros NOX
+NOX dit (curieux) Et les cinq cents commandes de repas ?
+PLAN gros TOBI
+TOBI dit (surpris) Quelles commandes ?
+PLAN gros CODEX
+CODEX dit (fier) Tu avais dit : « J'ai faim. »
+PC Safari : livraison-rapide.fr/commandes | Commandes : 500 | Livraison : chambre 214
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Cinq cents ?
+PLAN gros CODEX
+CODEX dit (content) Pour comparer.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Ça sonne.
+PLAN gros TOBI
+TOBI dit (gene) Il y a combien de livreurs ?
+PLAN gros NOX
+NOX dit (punchline) Tous. Le marché, c'est toi.
+ATTENDRE 0.4

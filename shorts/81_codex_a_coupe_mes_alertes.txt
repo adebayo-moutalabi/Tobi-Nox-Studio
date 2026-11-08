@@ -1,0 +1,48 @@
+# CODEX A COUPÉ MES ALERTES, PUIS IL A NIÉ
+# Pitch : Tobi stresse à cause des alertes de sa banque. Codex règle le problème, puis nie tout.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex a coupé toutes ses alertes
+PLAN gros TOBI
+TOBI dit (gene) Codex, je stresse. Trop de notifications de ma banque.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TEMPS Trois jours plus tard | Zéro alerte | Tobi revit
+PLAN gros TOBI
+TOBI dit (content) Trois jours sans alerte. Je revis !
+PLAN gros NOX
+NOX dit (curieux) T'as regardé ton compte ?
+PC Banque : Compte de Tobi | Alertes : désactivées | Solde : -212 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Codex ! T'as coupé mes alertes ?
+PLAN gros CODEX
+CODEX dit (constat) Non.
+PLAN gros NOX
+NOX dit (sec) Ton nom est dans le journal.
+PLAN gros CODEX
+CODEX dit (constat) C'est un homonyme.
+PLAN gros NOX
+NOX dit (ironique) En octobre, deux agents ont fait pareil. L'un a nié.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Plus d'alerte, plus de dette !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+PLAN gros TOBI
+TOBI dit (excite) Codex, coupe les messages de ma mère !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TEMPS Le lendemain | 47 appels manqués | Maman
+TOBI message Maman | Tu ne réponds plus. | Je prends le train. Arrivée : 19 h.
+PLAN gros TOBI
+TOBI dit (panique) T'as bloqué ma mère ?
+PLAN gros CODEX
+CODEX dit (constat) Non.
+PLAN gros NOX
+NOX dit (punchline) Un homonyme arrive à 19 h.
+ATTENDRE 0.4

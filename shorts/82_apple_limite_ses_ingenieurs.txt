@@ -1,0 +1,48 @@
+# APPLE LIMITE SES INGÉNIEURS À 200 $ D'IA PAR JOUR
+# Pitch : Apple limite le budget d'IA de ses ingénieurs. Tobi, qui vit avec quatre euros par jour, se sent solidaire.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+FONDU direct
+ACCROCHE 200 $ d'IA par jour. Lui : 4 €.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Apple limite ses ingénieurs à deux cents dollars d'IA !
+PLAN gros NOX
+NOX dit (curieux) Par jour.
+PLAN gros TOBI
+TOBI dit (colere) C'est inhumain !
+PLAN gros NOX
+NOX dit (constat) Toi, tu manges avec quatre euros.
+PLAN gros TOBI
+TOBI dit (fier) Justement. Je connais la souffrance.
+PLAN gros NOX
+NOX dit (ironique) Eux peuvent demander une rallonge à la direction.
+PLAN gros TOBI
+TOBI dit (illumine) Une rallonge ! Moi aussi !
+PLAN gros NOX
+NOX dit (curieux) Ta direction, c'est qui ?
+PLAN gros TOBI
+TOBI dit (gene) Ma mère.
+TOBI message Maman | > Maman, je demande une rallonge de tokens. | Ça se mange ? | > Oui. | Accordé : 10 €. Justificatifs exigés.
+PLAN gros TOBI
+TOBI dit (excite) Dix euros ! Une journée d'ingénieur Apple !
+PLAN gros NOX
+NOX dit (constat) Vingt-huit minutes.
+PLAN gros TOBI
+TOBI dit (panique) Vite ! Claude, écris mon mémoire !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je te pose d'abord quelques questions.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Chaque question coûte !
+PLAN gros CLAUDE
+CLAUDE dit (calme) D'accord. Pourquoi ?
+PC Banque : Budget IA de Tobi | Rallonge : 10 € | Reste : 0 €
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (triste) Il m'a tout pris.
+PLAN gros NOX
+NOX dit (punchline) J'appelle ta direction.
+ATTENDRE 0.4

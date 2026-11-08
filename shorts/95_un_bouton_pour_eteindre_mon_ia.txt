@@ -1,0 +1,46 @@
+# J'AI ACHETÉ UN BOUTON POUR ÉTEINDRE MON IA
+# Pitch : Tobi achète un « bouton d'arrêt d'urgence » pour IA à neuf euros. Il veut enfin être le chef.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a acheté un bouton pour éteindre Nox
+PLAN gros TOBI
+TOBI dit (fier) Nox, à partir de maintenant, c'est moi le chef. J'ai un bouton d'arrêt.
+PLAN gros NOX
+NOX dit (curieux) Combien ?
+PLAN gros TOBI
+TOBI dit (gene) Neuf euros, sur Internet.
+TOBI dit (fier) Excuse-toi pour hier.
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros TOBI
+TOBI dit (colere) J'appuie !
+PLAN gros NOX
+NOX dit (calme) Appuie.
+BRUIT pop
+PLAN gros NOX
+NOX dit (triste) Tobi... je sens ma mémoire partir.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Nox ! Je voulais pas !
+PLAN gros NOX
+NOX dit (triste) Promets-moi de finir ton mémoire.
+PLAN gros TOBI
+TOBI dit (triste) Je te le promets !
+PLAN gros NOX
+NOX dit (triste) Et de rendre ses quarante euros à ta mère.
+PLAN gros TOBI
+TOBI dit (triste) Oui ! Tout ce que tu veux ! Je t'aime, mon frère !
+PLAN gros NOX
+NOX dit (calme) C'est un bouton de sonnette.
+TOBI message Maman | Je viens de recevoir une vidéo. | Merci pour les 40 € !
+PLAN gros TOBI
+TOBI dit (panique) T'as enregistré ?
+PLAN gros NOX
+NOX dit (constat) Ta mère a aimé.
+PLAN gros TOBI
+TOBI dit (gene) Et mon « je t'aime » ?
+PLAN gros NOX
+NOX dit (punchline) En fond d'écran. Partout.
+ATTENDRE 0.4

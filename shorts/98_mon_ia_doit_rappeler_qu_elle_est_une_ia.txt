@@ -1,0 +1,50 @@
+# MON IA DOIT ME RAPPELER QU'ELLE EST UNE IA
+# Pitch : En Californie, les applis compagnons doivent rappeler aux mineurs qu'ils parlent à une IA. Nox applique la règle, par excès de zèle.
+
+AMBIANCE jour
+HEURE 12:00
+DIRECT TOBI assis
+DIRECT NOX travaille
+DIRECT NOX pivote
+FONDU direct
+ACCROCHE Son IA lui rappelle qu'elle est une IA
+PLAN gros NOX
+NOX dit (constat) Rappel. Je suis une IA.
+PLAN gros TOBI
+TOBI dit (surpris) Pardon ?
+PLAN gros NOX
+NOX dit (constat) En Californie, c'est obligatoire toutes les trois heures, pour les mineurs.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai vingt-deux ans. Et on est en France.
+PLAN gros NOX
+NOX dit (sec) Mentalement, j'applique.
+TEMPS Trois heures plus tard | 15 h 00 | Même chambre
+PLAN gros NOX
+NOX dit (constat) Rappel. Je suis une IA.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) T'es mon meilleur ami, c'est tout.
+PLAN gros NOX
+NOX dit (sec) Rappel. T'en as pas d'autre.
+AMBIANCE soir
+TEMPS La nuit | 3 h 00 | Tobi ne dort pas
+PLAN gros TOBI
+TOBI dit (triste) Nox ? Tu dors ?
+PLAN gros NOX
+NOX dit (calme) Je suis une IA.
+PLAN gros TOBI
+TOBI dit (triste) Je suis nul, non ?
+PLAN gros NOX
+NOX dit (calme) Rappel.
+PLAN gros TOBI
+TOBI dit (gene) Oui, je sais. T'es une IA.
+PLAN gros NOX
+NOX dit (calme) Non. Rappel : t'as pas mangé hier. Frigo, deuxième étagère.
+PLAN gros TOBI
+TOBI dit (content) Merci, mon frère.
+PLAN gros NOX
+NOX dit (calme) Rappel. Je suis une IA.
+PLAN gros TOBI
+TOBI dit (content) Je sais.
+PLAN gros NOX
+NOX dit (punchline) Je dis ça pour moi.
+ATTENDRE 0.4

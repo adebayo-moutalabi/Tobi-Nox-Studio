@@ -1,0 +1,51 @@
+# CLAUDE REFUSE DE REFAIRE UN JEU
+# Pitch : Tobi veut un jeu en une soirée. Claude Code refuse de recopier un jeu qui existe déjà.
+
+AMBIANCE soir
+DATE Mardi
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait milieu
+FONDU direct
+ACCROCHE Claude refuse de cloner un jeu
+PLAN gros TOBI
+TOBI dit (excite) Claude, fais-moi un jeu. Un plombier saute sur des champignons.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ce jeu existe déjà. Je ne peux pas le refaire.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le mien a une moustache.
+PLAN gros NOX
+NOX dit (sec) Le sien aussi.
+PLAN gros TOBI
+TOBI dit (fier) Un électricien saute sur des courgettes.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Pourquoi des courgettes ?
+PLAN gros TOBI
+TOBI dit (fier) Elles lui ont fait du mal.
+PLAN gros CLAUDE
+CLAUDE dit (content) Là, c'est original.
+PLAN gros NOX
+NOX dit (constat) C'est plus un jeu, c'est un signalement.
+PLAN gros TOBI
+TOBI dit (excite) Et à la fin, il sauve sa princesse !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Non.
+PLAN gros TOBI
+TOBI dit (excite) Son stage !
+PLAN gros CLAUDE
+CLAUDE dit (content) Autorisé.
+PC Safari : super-stagiaire.fr | Niveau 1 : trouver une convention | Boss final : le secrétariat
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (curieux) Le boss final ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Le secrétariat. Fermé le mercredi.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Claude, rends-le plus fun.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Impossible sans copier un jeu.
+PLAN gros NOX
+NOX dit (punchline) Même l'IA te conseille le plagiat.
+ATTENDRE 0.4

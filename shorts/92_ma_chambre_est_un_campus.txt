@@ -1,0 +1,45 @@
+# MA CHAMBRE EST UN CAMPUS DE CALCUL
+# Pitch : Les géants de l'IA ne disent plus « centre de données », mais « campus ». Tobi rebaptise sa chambre.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Sa chambre devient un « campus »
+PLAN gros TOBI
+TOBI dit (fier) Nox, on dit plus « ma chambre ». On dit « campus de calcul ».
+PLAN gros NOX
+NOX dit (sec) Neuf mètres carrés.
+PLAN gros TOBI
+TOBI dit (fier) Un campus à taille humaine.
+PLAN gros NOX
+NOX dit (curieux) Le frigo ?
+PLAN gros TOBI
+TOBI dit (fier) Pôle de résilience alimentaire.
+PLAN gros NOX
+NOX dit (curieux) Le linge sale, là ?
+PLAN gros TOBI
+TOBI dit (gene) Réserve stratégique.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai prévenu le CROUS.
+PLAN gros TOBI
+TOBI dit (surpris) Prévenu de quoi ?
+PLAN gros CODEX
+CODEX dit (constat) Que tu as ouvert un campus dans ta chambre.
+PC Mail du CROUS | Activité commerciale ? | Contrôle demain à 9 h
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Un contrôle ?
+PLAN gros NOX
+NOX dit (ironique) Communication de crise ?
+PLAN gros TOBI
+TOBI dit (illumine) Aie la vision. Trois mois de loyer en retard, c'est « un décalage de flux ».
+PLAN gros NOX
+NOX dit (curieux) Et l'expulsion, on dit comment ?
+PLAN gros TOBI
+TOBI dit (gene) Une relocalisation de campus.
+PLAN gros NOX
+NOX dit (punchline) Sur le trottoir. C'est moins cher à refroidir.
+ATTENDRE 0.4

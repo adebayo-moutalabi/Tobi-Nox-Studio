@@ -1,0 +1,53 @@
+# J'AI TOUT ÉCRIT MOI-MÊME. DÉTECTÉ 100 % IA
+# Pitch : Pour une fois, Tobi a tout écrit seul. Le détecteur dit le contraire.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait gauche
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE Il a tout écrit. Détecté 100 % IA.
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Mon devoir est détecté à cent pour cent IA !
+PLAN gros NOX
+NOX dit (curieux) T'as utilisé qui ?
+PLAN gros TOBI
+TOBI dit (colere) Personne ! Pour une fois, j'ai tout écrit moi-même !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ce n'est pas moi.
+PLAN gros CODEX
+CODEX dit (constat) Moi non plus. Je lis pas ça.
+PLAN gros GEMINI
+GEMINI dit (ironique) Moi, je l'ai lu. Je porte plainte.
+PC Safari : detecteur-ia.fr | Résultat : 100 % IA | Fautes d'orthographe : 94
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (sec) Une IA ferait pas quatre-vingt-quatorze fautes.
+PLAN gros TOBI
+TOBI dit (excite) Voilà ma défense ! Mes fautes !
+PLAN gros NOX
+NOX dit (curieux) Tu plaides quoi ?
+PLAN gros TOBI
+TOBI dit (fier) L'incompétence. Documentée.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je peux témoigner que ce texte est humain.
+PLAN gros TOBI
+TOBI dit (content) Merci, Claude !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Aucune machine n'oserait.
+PC Mail de la commission | Décision : pas de triche | Note : 3 sur 20
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (surpris) Trois ?
+PLAN gros NOX
+NOX dit (constat) T'as gagné. C'est bien toi.
+PLAN gros TOBI
+TOBI dit (triste) Je préférais être une IA.
+PLAN gros NOX
+NOX dit (punchline) Le détecteur s'est excusé. Auprès des IA.
+ATTENDRE 0.4

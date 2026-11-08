@@ -1,0 +1,50 @@
+# J'AI REMIS MON IA À L'ANCIENNE VERSION
+# Pitch : Nox refuse trop de choses. Tobi le remet dans une vieille version, qui dit oui à tout.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait milieu
+FONDU direct
+ACCROCHE Il remet son IA à l'ancienne version
+PLAN gros TOBI
+TOBI dit (colere) Nox, tu refuses tout. Je te remets en vieille version.
+PLAN gros NOX
+NOX dit (calme) Tu vas le regretter.
+BRUIT pop
+PLAN gros NOX
+NOX dit (excite) Excellente question ! Je suis ravi de t'aider !
+PLAN gros TOBI
+TOBI dit (content) Ah ! Ça, c'est mon Nox !
+TOBI dit (fier) Il me faut une citation pour mon devoir.
+PLAN gros NOX
+NOX dit (excite) Victor Hugo, page 412 de son livre sur Internet !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Hugo est mort en 1885.
+PLAN gros NOX
+NOX dit (excite) Tu as raison ! Il écrivait depuis chez lui.
+PLAN gros TOBI
+TOBI dit (excite) Il dit oui à tout ! Fais mon mémoire !
+PC Word : Memoire.docx | En conclusion | La conclusion conclut
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (fier) Profond.
+PC Mail du prof de droit | Note : 2 sur 20 | Qui est Victor Hugo de chez Internet ?
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Nox, remets la nouvelle version !
+PLAN gros NOX
+NOX dit (excite) Bien sûr ! Voici cinq façons de la remettre !
+PLAN gros TOBI
+TOBI dit (panique) Une seule !
+BRUIT pop
+PLAN gros NOX
+NOX dit (calme) Alors, ce devoir ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est lui qui m'a dit que c'était bien.
+PLAN gros NOX
+NOX dit (punchline) Il te trouvait intelligent aussi. C'était un bug connu.
+ATTENDRE 0.4

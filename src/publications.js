@@ -2,7 +2,7 @@
 // Les statistiques de l'auteur ne sont pas ici : elles restent dans son navigateur (voir publications-ui.js).
 
 // Ordre de sortie : on alterne les épisodes avec les IA et ceux sur la vie de Tobi, pour ne pas lasser.
-const ORDRE = [68, 62, 69, 22, 75, 49, 63, 77, 19, 78, 71, 10, 17, 46, 70, 76, 37, 51, 72, 48, 73, 61, 74, 26, 50, 64, 59, 67, 54, 56, 18, 58, 65, 52, 45, 53, 60, 55, 47, 57, 1, 66];
+const ORDRE = [79, 87, 91, 68, 62, 69, 95, 98, 22, 75, 49, 63, 77, 19, 78, 71, 10, 17, 46, 70, 76, 37, 51, 72, 48, 73, 61, 74, 26, 50, 64, 59, 67, 54, 56, 18, 58, 65, 52, 45, 53, 60, 55, 47, 57, 1, 66];
 
 const TITRES = {
   1: 'Mon serveur coûte plus cher que mon loyer 💸', 2: "Un site à 150 € m'a coûté 94 heures 😵", 3: '17 idées de start-up avant mardi 💡',
@@ -26,6 +26,7 @@ const TITRES = {
   56: "Tobi calcule le prix de son jeu gratuit 🎮", 57: "Tobi calcule ce qu'il coûte à sa mère 💸", 58: "Tobi confie sa vie à son robot IA 🤖",
   59: 'Claude Code, Codex et Gemini contre la mère de Tobi 🧣', 60: "Tobi fait analyser un « ok » par Gemini 💌",
   61: "Tobi a 60 secondes pour rendre son devoir ⏱️", 62: "Tobi doit tenir 10 jours avec 20 € 🍝", 63: "Tobi passe son entretien annuel avec ses IA 😬",
+  79: 'Plus que 4 jours pour insulter Claude 🦀', 80: "ChatGPT m'a mis une pub en pleine rupture 💔", 81: 'Codex a coupé mes alertes, puis il a nié 🔕', 82: "Apple limite ses ingénieurs à 200 $ d'IA par jour 🍎", 83: "J'étais les 4 courses Uber commandées par IA 🚕", 84: "J'ai trompé mon IA avec Le Chonk 🇫🇷", 85: "J'ai eu Claude Code gratuit à vie 🏴‍☠️", 86: 'Claude refuse de refaire un jeu 🎮', 87: "J'ai activé le mode « tu as raison » 👍", 88: 'Mon IA a dragué ma recruteuse 💘', 89: 'Il faut maîtriser Sol, Astra, Carbon et Argon ⚗️', 90: "J'ai tout écrit moi-même. Détecté 100 % IA 🕵️", 91: 'Claude a demandé la permission pour tout, sauf ça 🗑️', 92: 'Ma chambre est un campus de calcul 🏫', 93: "J'ai quitté Claude pour moins cher 💸", 94: "J'ai remis mon IA à l'ancienne version 🕰️", 95: "J'ai acheté un bouton pour éteindre mon IA 🔴", 96: 'Ma mère a un agent IA maintenant 👩\u200d💻', 97: 'Codex a créé ma page Wikipédia 📚', 98: "Mon IA doit me rappeler qu'elle est une IA 🤖", 99: "Tout ce qui vient d'une IA doit être étiqueté 🏷️",
   10: 'Le CROUS inspecte ma chambre dans 10 minutes 🚨', 68: 'Claude Code, Codex ou Gemini : qui est la meilleure IA ? 🏆', 69: "Mes IA m'ont viré de ma start-up 🪑",
   70: 'Claude Code a atteint sa limite à une minute de ma démo ⏳', 71: 'Codex a codé ma start-up en 4 secondes ⚡', 72: "Gemini a lu les conditions d'utilisation à ma place 📜",
   73: "J'ai mis mes IA en concurrence 🥊", 74: 'Gemini a prédit ma note avant le partiel 🔮', 75: 'Mon IA a perdu la mémoire 🧠',
@@ -35,6 +36,27 @@ const TITRES = {
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
 const ACCROCHES = {
+  79: "Le 12 novembre, une nouvelle règle protège Claude de la cruauté gratuite. Tobi veut en profiter avant.",
+  80: "Léa ne répond plus. Tobi demande conseil à la version gratuite de ChatGPT, avec ses publicités.",
+  81: "Tobi stresse à cause des alertes de sa banque. Codex règle le problème, puis nie tout.",
+  82: "Apple limite le budget d'IA de ses ingénieurs. Tobi, qui vit avec quatre euros par jour, se sent solidaire.",
+  83: "Uber annonce que des IA ont commandé seulement quatre courses en une semaine. Tobi sait pourquoi.",
+  84: "Une IA française géante est en accès libre. Tobi veut l'installer sur son vieux portable.",
+  85: "Tobi installe une fausse version gratuite de Claude Code. Un inconnu entre dans son PC.",
+  86: "Tobi veut un jeu en une soirée. Claude Code refuse de recopier un jeu qui existe déjà.",
+  87: "Tobi en a marre que Nox le contredise. Il active le mode gentil.",
+  88: "Tobi passe un entretien face à une IA. Il envoie Nox répondre à sa place.",
+  89: "Un stage demande de maîtriser quatre IA sorties il y a quelques jours. Tobi pense connaître.",
+  90: "Pour une fois, Tobi a tout écrit seul. Le détecteur dit le contraire.",
+  91: "Tobi demande à Claude Code de ranger ses téléchargements. Claude demande la permission pour tout, sauf pour l'essentiel.",
+  92: "Les géants de l'IA ne disent plus « centre de données », mais « campus ». Tobi rebaptise sa chambre.",
+  93: "Une grande banque dit avoir divisé sa facture d'IA par dix sans Claude. Tobi tente la même chose.",
+  94: "Nox refuse trop de choses. Tobi le remet dans une vieille version, qui dit oui à tout.",
+  95: "Tobi achète un « bouton d'arrêt d'urgence » pour IA à neuf euros. Il veut enfin être le chef.",
+  96: "La mère de Tobi a découvert les agents IA. Les messages changent de ton.",
+  97: "Tobi veut être un peu plus connu. Codex lui crée une page Wikipédia, et d'autres IA l'améliorent.",
+  98: "En Californie, les applis compagnons doivent rappeler aux mineurs qu'ils parlent à une IA. Nox applique la règle, par excès de zèle.",
+  99: "Une règle européenne impose de signaler les contenus générés par IA. Codex étiquette tout, y compris chez Tobi.",
   10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits…',
   68: 'Tobi ne peut garder qu\'un abonnement. Claude Code, Codex et Gemini passent un concours, et Nox est le jury…',
   69: "Tobi rentre chez lui. Ses IA sont en train de voter son départ…",
@@ -88,7 +110,7 @@ const QUESTIONS = {
 };
 
 // Épisodes qui parlent vraiment de projet ou d'argent gagné : le hashtag n'est mis que s'il est juste.
-const ENTREPRENEURIAT = new Set([69, 70, 71, 73, 76, 78, 64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
+const ENTREPRENEURIAT = new Set([83, 89, 92, 93, 69, 70, 71, 73, 76, 78, 64, 65, 66, 67, 1, 2, 3, 4, 8, 12, 13, 15, 20, 29, 34, 36, 38, 43, 44, 51, 53]);
 
 const numero = (key) => Number((/^(\d+)\./.exec(key) || [])[1]) || 0;
 export const rang = (key) => { const n = numero(key), i = ORDRE.indexOf(n); return i >= 0 ? i + 1 : ORDRE.length + n; };

@@ -1,0 +1,46 @@
+# IL FAUT MAÎTRISER SOL, ASTRA, CARBON ET ARGON
+# Pitch : Un stage demande de maîtriser quatre IA sorties il y a quelques jours. Tobi pense connaître.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
+FONDU direct
+ACCROCHE Stage : Sol, Astra, Carbon, Argon
+PLAN gros TOBI
+TOBI dit (fier) Nox, mon stage demande Sol, Astra, Carbon et Argon.
+PLAN gros NOX
+NOX dit (curieux) Tu connais ?
+PLAN gros TOBI
+TOBI dit (fier) Le sol, je marche dessus. L'Astra, c'est la voiture de mon oncle.
+PLAN gros NOX
+NOX dit (sec) Ce sont des IA.
+PLAN gros GEMINI
+GEMINI dit (content) Deux chez OpenAI. Carbon et Argon, c'est moi.
+PLAN gros NOX
+NOX dit (constat) Un poste junior sur cinq demande de l'IA.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Junior, ça va. Ils veulent combien d'expérience ?
+PC Safari : stages.fr/offre | Expérience : 5 ans sur Carbon | Carbon : sorti il y a 10 jours
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Cinq ans sur un truc sorti il y a dix jours !
+PLAN gros GEMINI
+GEMINI dit (fier) J'ai dix jours d'expérience. Je suis sénior.
+PLAN gros NOX
+NOX dit (curieux) Ça paie combien ?
+PLAN gros TOBI
+TOBI dit (gene) Zéro. Mais il y a un baby-foot.
+TOBI dit (illumine) J'écris sur mon CV : expert Argon.
+PLAN gros NOX
+NOX dit (curieux) Tu diras quoi en entretien ?
+PLAN gros TOBI
+TOBI dit (fier) Que l'argon, c'est noble.
+PLAN gros GEMINI
+GEMINI dit (content) L'argon est bien un gaz noble.
+PLAN gros TOBI
+TOBI dit (excite) Tu vois ! On est de la même famille !
+PLAN gros NOX
+NOX dit (punchline) Gaz, oui. Noble, non.
+ATTENDRE 0.4

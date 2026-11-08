@@ -1,0 +1,46 @@
+# J'AI EU CLAUDE CODE GRATUIT À VIE
+# Pitch : Tobi installe une fausse version gratuite de Claude Code. Un inconnu entre dans son PC.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait milieu
+FONDU direct
+ACCROCHE Il a installé Claude Code « gratuit »
+PLAN gros TOBI
+TOBI dit (fier) Nox, j'ai eu Claud Code Pro Max. Gratuit à vie.
+PLAN gros NOX
+NOX dit (curieux) Claud, sans E ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est plus moderne.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ce n'est pas moi.
+PLAN gros NOX
+NOX dit (constat) En octobre, une fausse version piégée est restée onze heures en ligne.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et alors ? J'ai rien à cacher.
+PC Terminal : connexion | accès à distance : actif | un inconnu lit vos dossiers
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Y a quelqu'un dans mon PC !
+PLAN gros NOX
+NOX dit (curieux) Il regarde quoi ?
+PLAN gros TOBI
+TOBI dit (panique) Mon compte en banque !
+PLAN gros NOX
+NOX dit (constat) Il est resté longtemps dessus.
+PLAN gros TOBI
+TOBI dit (surpris) Il ouvre mon mémoire. Il corrige les fautes.
+PC Banque : Compte de Tobi | Virement reçu : +5 € | Motif : courage
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (gene) Il m'a fait un virement.
+TOBI message Inconnu | Désolé pour tout. | Mange quelque chose.
+PLAN gros TOBI
+TOBI dit (fier) C'est mon premier investisseur.
+PLAN gros NOX
+NOX dit (punchline) Ta mère a un concurrent.
+ATTENDRE 0.4

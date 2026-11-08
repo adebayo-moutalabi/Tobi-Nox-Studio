@@ -78,6 +78,27 @@ import E75 from '../shorts/75_mon_ia_a_perdu_la_memoire.txt';
 import E76 from '../shorts/76_le_tobicoin.txt';
 import E77 from '../shorts/77_un_euro_par_snooze.txt';
 import E78 from '../shorts/78_les_places_de_la_bu.txt';
+import A79 from '../shorts/79_plus_que_4_jours_pour_insulter_claude.txt';
+import A80 from '../shorts/80_une_pub_en_pleine_rupture.txt';
+import A81 from '../shorts/81_codex_a_coupe_mes_alertes.txt';
+import A82 from '../shorts/82_apple_limite_ses_ingenieurs.txt';
+import A83 from '../shorts/83_les_4_courses_uber.txt';
+import A84 from '../shorts/84_j_ai_trompe_mon_ia_avec_le_chonk.txt';
+import A85 from '../shorts/85_claude_code_gratuit_a_vie.txt';
+import A86 from '../shorts/86_claude_refuse_de_refaire_un_jeu.txt';
+import A87 from '../shorts/87_le_mode_tu_as_raison.txt';
+import A88 from '../shorts/88_mon_ia_a_drague_ma_recruteuse.txt';
+import A89 from '../shorts/89_sol_astra_carbon_argon.txt';
+import A90 from '../shorts/90_detecte_100_pourcent_ia.txt';
+import A91 from '../shorts/91_claude_a_demande_la_permission.txt';
+import A92 from '../shorts/92_ma_chambre_est_un_campus.txt';
+import A93 from '../shorts/93_j_ai_quitte_claude_pour_moins_cher.txt';
+import A94 from '../shorts/94_mon_ia_en_ancienne_version.txt';
+import A95 from '../shorts/95_un_bouton_pour_eteindre_mon_ia.txt';
+import A96 from '../shorts/96_ma_mere_a_un_agent_ia.txt';
+import A97 from '../shorts/97_codex_a_cree_ma_page_wikipedia.txt';
+import A98 from '../shorts/98_mon_ia_doit_rappeler_qu_elle_est_une_ia.txt';
+import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
 import E63 from '../shorts/63_mon_entretien_annuel_avec_mes_ia.txt';
 import E64 from '../shorts/64_j_ai_transforme_ma_chambre_en_coworking.txt';
@@ -88,6 +109,27 @@ import E67 from '../shorts/67_je_vends_une_formation_pour_devenir_riche.txt';
 startViewer({
   cast: [tobi(), nox(), aine('claude'), aine('codex'), aine('gemini')], backdrop: 'studio', startView: 'chambre', scenes: SCENES, duo: true,
   room: () => createRoom({ Reflector }), roomActions, onReady: (v) => mountStory(v, {
+    "79. Plus que 4 jours pour insulter Claude": A79,
+    "80. ChatGPT m'a mis une pub en pleine rupture": A80,
+    "81. Codex a coupé mes alertes, puis il a nié": A81,
+    "82. Apple limite ses ingénieurs à 200 $ d'IA par jour": A82,
+    "83. J'étais les 4 courses Uber commandées par IA": A83,
+    "84. J'ai trompé mon IA avec Le Chonk": A84,
+    "85. J'ai eu Claude Code gratuit à vie": A85,
+    "86. Claude refuse de refaire un jeu": A86,
+    "87. J'ai activé le mode « tu as raison »": A87,
+    "88. Mon IA a dragué ma recruteuse": A88,
+    "89. Il faut maîtriser Sol, Astra, Carbon et Argon": A89,
+    "90. J'ai tout écrit moi-même. Détecté 100 % IA": A90,
+    "91. Claude a demandé la permission pour tout, sauf ça": A91,
+    "92. Ma chambre est un campus de calcul": A92,
+    "93. J'ai quitté Claude pour moins cher": A93,
+    "94. J'ai remis mon IA à l'ancienne version": A94,
+    "95. J'ai acheté un bouton pour éteindre mon IA": A95,
+    "96. Ma mère a un agent IA maintenant": A96,
+    "97. Codex a créé ma page Wikipédia": A97,
+    "98. Mon IA doit me rappeler qu'elle est une IA": A98,
+    "99. Tout ce qui vient d'une IA doit être étiqueté": A99,
     "10. Le CROUS inspecte ma chambre dans 10 minutes": E10,
     "68. Claude Code, Codex ou Gemini : qui est la meilleure IA ?": E68,
     "69. Mes IA m'ont viré de ma start-up": E69,

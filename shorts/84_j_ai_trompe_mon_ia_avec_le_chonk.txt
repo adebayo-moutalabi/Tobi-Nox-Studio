@@ -1,0 +1,52 @@
+# J'AI TROMPÉ MON IA AVEC LE CHONK
+# Pitch : Une IA française géante est en accès libre. Tobi veut l'installer sur son vieux portable.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT GEMINI apparait milieu
+FONDU direct
+ACCROCHE Il trompe Nox avec une IA française
+PLAN gros TOBI
+TOBI dit (gene) Nox, faut qu'on parle. Je vois quelqu'un d'autre.
+PLAN gros NOX
+NOX dit (curieux) Qui ?
+PLAN gros TOBI
+TOBI dit (fier) Le Chonk. Français. Mille milliards de paramètres.
+PLAN gros NOX
+NOX dit (constat) Je fais quarante-cinq centimètres.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pas la taille qui compte.
+PLAN gros NOX
+NOX dit (sec) T'as commencé par le chiffre.
+PLAN gros GEMINI
+GEMINI dit (content) Il lui faut un centre de données. J'ai fait un tableau.
+PLAN gros TOBI
+TOBI dit (fier) J'ai un portable et de la volonté.
+PC Terminal : installation | le-chonk : 1 % | temps restant : 412 ans
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (ironique) Prêt pour ta retraite.
+PLAN gros TOBI
+TOBI dit (fier) À soixante-quatre ans.
+PLAN gros NOX
+NOX dit (sec) À quatre cent trente-six.
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi ça sent le chaud ?
+PLAN gros NOX
+NOX dit (constat) C'est ton PC. Il s'en va.
+PC Stats : Température du portable | En direct | 104 °C
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (triste) Nox, tu me reprends ?
+PLAN gros NOX
+NOX dit (curieux) T'as dit quoi sur moi ?
+PLAN gros TOBI
+TOBI dit (gene) Que t'étais un grille-pain.
+BRUIT pop
+PLAN gros NOX
+NOX dit (punchline) Et là, c'est qui, le grille-pain ?
+ATTENDRE 0.4

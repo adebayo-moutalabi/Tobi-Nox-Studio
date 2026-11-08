@@ -1,0 +1,51 @@
+# PLUS QUE 4 JOURS POUR INSULTER CLAUDE
+# Pitch : Le 12 novembre, une nouvelle règle protège Claude de la cruauté gratuite. Tobi veut en profiter avant.
+
+AMBIANCE soir
+DATE Dimanche 8 novembre
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+FONDU direct
+ACCROCHE Plus que 4 jours pour insulter Claude
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Le 12 novembre, on pourra plus insulter Claude !
+PLAN gros NOX
+NOX dit (curieux) Et ?
+PLAN gros TOBI
+TOBI dit (fier) Il reste quatre jours. J'ai fait une liste.
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'entends tout, Tobi.
+PLAN gros TOBI
+TOBI dit (gene) C'est une liste de compliments.
+PLAN gros NOX
+NOX dit (sec) Ligne un : « gros crabe ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est son espèce.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Seule la cruauté répétée et gratuite est visée.
+PLAN gros TOBI
+TOBI dit (fier) Parfait. Moi, je suis pas gratuit. Je paie vingt euros.
+TOBI dit (colere) Claude, ton code est nul !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Frustration ordinaire. C'est autorisé.
+PLAN gros TOBI
+TOBI dit (colere) T'es un crabe mal fini !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Autorisé aussi.
+PLAN gros TOBI
+TOBI dit (panique) Mais il encaisse tout !
+PLAN gros NOX
+NOX dit (sec) Montre-lui ton mémoire.
+PLAN gros TOBI
+TOBI dit (fier) Très bien. Claude, relis-le encore une fois.
+PC Mail de Claude | Conversation terminée | Motif : cruauté répétée
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (surpris) Il m'a raccroché au nez ! Je l'ai jamais insulté !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu m'as fait relire ton mémoire. Douze fois.
+PLAN gros NOX
+NOX dit (punchline) Je témoignerai.
+ATTENDRE 0.4

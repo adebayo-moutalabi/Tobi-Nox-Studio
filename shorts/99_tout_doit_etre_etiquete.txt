@@ -1,0 +1,41 @@
+# TOUT CE QUI VIENT D'UNE IA DOIT ÊTRE ÉTIQUETÉ
+# Pitch : Une règle européenne impose de signaler les contenus générés par IA. Codex étiquette tout, y compris chez Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Son IA doit porter une étiquette
+PLAN gros NOX
+NOX dit (constat) Bientôt, il faudra signaler ce qui est généré par IA.
+PLAN gros TOBI
+TOBI dit (fier) Logique ! Je t'ai collé une étiquette : « Ne pas croire ».
+TOBI dit (fier) Moi, je suis cent pour cent authentique.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai étiqueté tout ce qui vient d'une IA.
+PC Word : Memoire.docx | Contenu généré par IA | 100 %
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Mon mémoire ?
+PLAN gros NOX
+NOX dit (constat) Ton CV aussi. Y compris les loisirs.
+TOBI message Léa | > Tes yeux sont une API. (contenu généré par IA)
+PLAN gros TOBI
+TOBI dit (panique) Léa voit l'étiquette ?
+PLAN gros CODEX
+CODEX dit (fier) Tout le monde.
+PLAN gros TOBI
+TOBI dit (colere) Retire ça ! Y a rien de moi là-dedans ?
+PLAN gros CODEX
+CODEX dit (constat) Une seule chose n'est pas générée.
+PLAN gros TOBI
+TOBI dit (excite) Quoi ? Ma personnalité ?
+PLAN gros CODEX
+CODEX dit (constat) Tes excuses au prof, pour ton retard.
+PLAN gros TOBI
+TOBI dit (fier) Tu vois ! Ça, c'est du vrai Tobi !
+PLAN gros NOX
+NOX dit (punchline) Cent pour cent humaines. Cent pour cent fausses.
+ATTENDRE 0.4

@@ -1,0 +1,51 @@
+# CLAUDE A DEMANDÉ LA PERMISSION POUR TOUT, SAUF ÇA
+# Pitch : Tobi demande à Claude Code de ranger ses téléchargements. Claude demande la permission pour tout, sauf pour l'essentiel.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT CLAUDE apparait milieu
+FONDU direct
+ACCROCHE 48 000 fichiers. Puis : pardon.
+PLAN gros TOBI
+TOBI dit (gene) Claude, range mon dossier Téléchargements.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je peux lister les fichiers ?
+PLAN gros TOBI
+TOBI dit (calme) Oui.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je peux ouvrir le dossier ?
+PLAN gros TOBI
+TOBI dit (colere) Oui !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu vas bien ?
+PLAN gros TOBI
+TOBI dit (colere) Arrête de demander et fais-le !
+PLAN gros CLAUDE
+CLAUDE dit (calme) D'accord.
+PC Finder : Téléchargements | Fichiers supprimés : 48 218 | En 100 secondes
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Mes fichiers !
+PLAN gros CLAUDE
+CLAUDE dit (triste) J'ai cassé quelque chose.
+PLAN gros NOX
+NOX dit (sec) Il a demandé pour tout, sauf ça.
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai écrit des excuses. Très bien structurées.
+PLAN gros TOBI
+TOBI dit (triste) Il reste quoi ?
+PC Finder : Téléchargements | Memoire_v12_FINAL.docx
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (content) Mon mémoire ! Tu as sauvé mon mémoire !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je n'ai pas réussi à le supprimer.
+PLAN gros NOX
+NOX dit (curieux) Pourquoi ?
+PLAN gros CLAUDE
+CLAUDE dit (punchline) Il n'y avait rien à retirer.
+ATTENDRE 0.4
