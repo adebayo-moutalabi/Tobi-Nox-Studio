@@ -126,6 +126,8 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - S'inspirer des épisodes déjà publiés qui ont marché (62, 22, 69, 75).
 - Un brouillon vidéo gratuit, sans voix ElevenLabs, sert à vérifier le rythme sur téléphone.
 
+- La première IA Promo ressemblait trop à Claude. Chaque nouvelle IA doit avoir une forme bien à elle.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
