@@ -568,7 +568,7 @@ export function createPlayer(v, ui) {
       if (running) return;
       findBlockers();
       setClock(text);
-      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(); look.setMood('soir');
+      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
       hiddenForShot = [];
       const list = parseStory(text);
       adresse(list);
@@ -593,7 +593,7 @@ export function createPlayer(v, ui) {
       ui.curtain(false, true);
       v.camera.fov = 26; v.camera.updateProjectionMatrix();
       v.actors.forEach((a) => { a.hero.root.visible = !a.extra; });
-      v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(); look.setMood('soir'); ui.caption(null);
+      v.locked = false; track = null; auto = false; v.quiet = false; look.hideInsert(true); look.setMood('soir'); ui.caption(null);
       v.actors.forEach((a) => { a.look = null; });
       v.setView('chambre', true);
       running = false; closing = false; ui.state(false);

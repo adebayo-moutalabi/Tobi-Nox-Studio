@@ -8,7 +8,13 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 const NIGHT = '#0b0a18';
 const FONT = '"Inter", "Segoe UI", sans-serif', DISPLAY = '"Fraunces", Georgia, serif', NOX = '#f2b92e';
-const ease = (t) => { const c = 1.7, u = t - 1; return 1 + (c + 1) * u * u * u + c * u * u; };
+const ease = (t) => { const c = 1.7, u = t - 1; return 1 + (c + 1) * u * u * u + c * u * u; }; // arrive, dépasse un peu, puis se pose
+// Mouvement des écrans : une entrée qui ralentit en arrivant, une sortie qui accélère en partant, jamais de mouvement linéaire.
+const clamp01 = (x) => Math.min(1, Math.max(0, x));
+const easeOut = (t) => 1 - (1 - clamp01(t)) ** 3;
+const easeIn = (t) => clamp01(t) ** 3;
+const pop = (t) => ease(clamp01(t)); // petit rebond, pour ce qui doit attirer l'œil
+const ENTER = 0.3, LEAVE = 0.16, STEP = 0.08; // durées en secondes : entrée, sortie, décalage entre deux éléments
 
 // Chaque type d'écran a sa couleur : on comprend d'un coup d'œil s'il s'agit du temps, d'un message ou d'argent.
 const CARDS = {
@@ -79,12 +85,12 @@ export function createLook(v) {
   vignette.renderOrder = 950; vignette.position.z = -0.4; vignette.visible = false; vignette.frustumCulled = false; ui.add(vignette);
 
   // Écran plein cadre
-  const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: NIGHT, depthTest: false, depthWrite: false, toneMapped: false }));
+  const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: NIGHT, transparent: true, depthTest: false, depthWrite: false, toneMapped: false }));
   backdrop.renderOrder = 955; backdrop.position.z = -0.45; backdrop.visible = false; backdrop.frustumCulled = false; ui.add(backdrop);
   const cd = canvasTexture(900, 1100);
   const card = new THREE.Mesh(new THREE.PlaneGeometry(1, 1100 / 900), overlay(cd.tex));
   card.renderOrder = 960; card.position.z = -0.42; card.visible = false; card.frustumCulled = false; ui.add(card);
-  const I = { on: false, t: 0, title: '', big: '', small: '', value: null };
+  const I = { on: false, t: 0, title: '', big: '', small: '', value: null, out: -1 };
 
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
@@ -100,16 +106,26 @@ export function createLook(v) {
       ctx.fillStyle = '#8fa2ad'; ctx.font = `400 30px ${FONT}`; ctx.fillText('en ligne', X + 134, 122);
       let y = top + 66;
       I.chat.forEach((m, n) => {
-        if (I.t < n * 0.8) return;
+        if (I.t < n * 0.8) {
+          if (!m.me && n > 0 && I.t > n * 0.8 - 0.5 && I.t > (n - 1) * 0.8 + 0.3) { // l'autre écrit : trois points qui sautillent
+            ctx.fillStyle = '#202c33'; ctx.beginPath(); ctx.roundRect(X + 34, y, 132, 70, 24); ctx.fill();
+            for (let k = 0; k < 3; k++) { ctx.fillStyle = '#8fa2ad'; ctx.beginPath(); ctx.arc(X + 72 + k * 28, y + 35 - 7 * Math.max(0, Math.sin(I.t * 11 - k * 0.9)), 8, 0, 7); ctx.fill(); }
+          }
+          return;
+        }
+        const u = (I.t - n * 0.8) / 0.26, k = 0.82 + 0.18 * pop(u);
         const size = 42, max = R - X - 190; ctx.font = `500 ${size}px ${FONT}`;
         const rows = []; let row = '';
         for (const w of m.text.split(' ')) { if (ctx.measureText(`${row} ${w}`).width > max && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; }
         rows.push(row);
         const stamp = m.time ? (m.me ? `${m.time} ✓✓` : m.time) : '', sw = stamp ? stamp.length * 15 + 16 : 0;
         const bw = Math.max(sw + 40, ...rows.map((r) => ctx.measureText(r).width + 56)), bh = rows.length * size * 1.28 + 40 + (stamp ? 26 : 0), bx = m.me ? R - bw - 34 : X + 34;
+        const ox = m.me ? bx + bw : bx; // la bulle grandit depuis le coin d'où elle part
+        ctx.save(); ctx.globalAlpha = easeOut(u * 1.6); ctx.translate(ox, y + bh + (1 - easeOut(u)) * 26); ctx.scale(k, k); ctx.translate(-ox, -(y + bh));
         ctx.fillStyle = m.me ? '#005c4b' : '#202c33'; ctx.beginPath(); ctx.roundRect(bx, y, bw, bh, 24); ctx.fill();
         ctx.fillStyle = '#e9edef'; rows.forEach((r, k) => ctx.fillText(r, bx + 28, y + 20 + size * 0.58 + k * size * 1.28));
         if (stamp) { ctx.textAlign = 'right'; ctx.font = `400 25px ${FONT}`; ctx.fillStyle = m.me ? '#a8d8cc' : '#8fa2ad'; ctx.fillText(stamp, bx + bw - 20, y + bh - 22); ctx.textAlign = 'left'; ctx.font = `500 ${size}px ${FONT}`; }
+        ctx.restore();
         y += bh + 24;
       });
       ctx.fillStyle = '#1f2c34'; ctx.beginPath(); ctx.roundRect(X + 30, H - 112, R - X - 60, 66, 33); ctx.fill();
@@ -127,8 +143,10 @@ export function createLook(v) {
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.fillStyle = '#fff'; ctx.font = `700 60px ${FONT}`; ctx.fillText(I.title, W / 2, Y + 96, CW - 70);
       const size = Math.min(190, Math.floor((CW - 60) / Math.max(1, I.big.length) * 1.75));
-      ctx.fillStyle = '#20222a'; ctx.font = `700 ${size}px ${DISPLAY}`; ctx.fillText(I.big, W / 2, Y + 440, CW - 60);
-      ctx.fillStyle = '#6a665e'; ctx.font = `600 50px ${FONT}`; ctx.fillText(I.small, W / 2, Y + 720, CW - 70);
+      const kb = 0.7 + 0.3 * pop((I.t - 0.35) / 0.3), ds = easeOut((I.t - 0.5) / 0.28); // la date rebondit, puis le détail monte
+      ctx.save(); ctx.translate(W / 2, Y + 440); ctx.scale(kb, kb);
+      ctx.fillStyle = '#20222a'; ctx.font = `700 ${size}px ${DISPLAY}`; ctx.fillText(I.big, 0, 0, CW - 60); ctx.restore();
+      ctx.save(); ctx.globalAlpha = ds; ctx.fillStyle = '#6a665e'; ctx.font = `600 50px ${FONT}`; ctx.fillText(I.small, W / 2, Y + 720 + (1 - ds) * 30, CW - 70); ctx.restore();
       for (const x of [W / 2 - 170, W / 2 + 170]) { ctx.fillStyle = '#c8c4bb'; ctx.beginPath(); ctx.roundRect(x - 14, Y - 42, 28, 84, 14); ctx.fill(); }
       for (let n = 0; n < 3; n++) { // trois pages s'envolent l'une après l'autre
         const u = (I.t - n * 0.2) / 0.45; if (u >= 1) continue;
@@ -140,15 +158,24 @@ export function createLook(v) {
     ctx.fillStyle = K.bg; ctx.strokeStyle = 'rgba(244,241,236,.14)'; ctx.lineWidth = 4;
     ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.fill(); ctx.stroke();
     ctx.fillStyle = K.top; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, 120, [44, 44, 0, 0]); ctx.fill();
-    for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(68 + i * 44, 70, 13, 0, 7); ctx.fill(); }
+    for (const [i, c] of ['#ff6b5e', '#f6c14e', '#5ccb74'].entries()) { const r = 13 * pop((I.t - 0.05 - i * 0.04) / 0.2); if (r > 0) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(68 + i * 44, 70, r, 0, 7); ctx.fill(); } }
+    const rise = (d) => { const u = (I.t - d) / 0.28; ctx.globalAlpha = easeOut(u * 1.4); return (1 - easeOut(u)) * 40; }; // monte de 40 px en se posant
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = K.ink; ctx.font = `500 58px ${FONT}`; ctx.fillText(I.title, W / 2, 262, W - 110);
+    ctx.save(); const ty = rise(STEP); ctx.fillStyle = K.ink; ctx.font = `500 58px ${FONT}`; ctx.fillText(I.title, W / 2, 262 + ty, W - 110); ctx.restore();
     let big = I.big;
     if (I.value) big = `${I.value.head}${Math.round(I.value.n * Math.min(1, f))}${I.value.tail}`;
     const size = Math.min(210, Math.floor((W - 90) / Math.max(1, big.length) * 1.75));
+    const kb = 0.6 + 0.4 * pop((I.t - 2 * STEP) / 0.32); // le chiffre est le héros : il arrive avec un rebond
+    ctx.save(); ctx.globalAlpha = easeOut((I.t - 2 * STEP) / 0.15); ctx.translate(W / 2, 560); ctx.scale(kb, kb);
     ctx.fillStyle = I.value?.head.includes('-') || I.value?.head.includes('−') ? '#ff7a6b' : K.big;
-    ctx.font = `400 ${size}px ${DISPLAY}`; ctx.fillText(big, W / 2, 560);
-    ctx.fillStyle = K.small; ctx.font = `500 50px ${FONT}`; ctx.fillText(I.small, W / 2, 850, W - 110);
+    ctx.font = `400 ${size}px ${DISPLAY}`; ctx.fillText(big, 0, 0); ctx.restore();
+    ctx.save(); const sy = rise(4 * STEP); ctx.fillStyle = K.small; ctx.font = `500 50px ${FONT}`; ctx.fillText(I.small, W / 2, 850 + sy, W - 110); ctx.restore();
+    const sh = (I.t - 0.4) / 0.6; // reflet : une bande de lumière traverse la carte une seule fois
+    if (sh > 0 && sh < 1) {
+      const x = -300 + easeOut(sh) * (W + 600), gr = ctx.createLinearGradient(x - 160, 0, x + 160, H);
+      gr.addColorStop(0, 'rgba(255,255,255,0)'); gr.addColorStop(0.5, 'rgba(255,255,255,0.07)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.save(); ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.clip(); ctx.fillStyle = gr; ctx.fillRect(0, 0, W, H); ctx.restore();
+    }
     tex.needsUpdate = true;
   }
 
@@ -179,15 +206,19 @@ export function createLook(v) {
     insert(title, big, small, forced) {
       const text = `${title} ${big} ${small}`;
       const kind = forced || (/plus tard|lendemain|suivante|\bnuit\b|^il est\b/i.test(title) ? 'temps' : /message|réponse|avis|offre/i.test(title) ? 'message' : /[€$]|facture|frais|virement/i.test(text) ? 'argent' : 'base');
-      Object.assign(I, { on: true, t: 0, title, big, small, done: false, kind });
+      Object.assign(I, { on: true, t: 0, title, big, small, done: false, kind, out: -1 });
       const m = /^([^\d]*)(\d+)(.*)$/.exec(big);
       I.value = m && Number(m[2]) >= 10 ? { head: m[1], n: Number(m[2]), tail: m[3] } : null;
       if (kind === 'temps') I.value = null;
       backdrop.visible = true; card.visible = true; drawCard(0);
       return kind;
     },
-    chat(name, lines) { Object.assign(I, { on: true, t: 0, title: name, big: '', small: '', done: false, kind: 'tel', chat: lines, value: null }); backdrop.visible = true; card.visible = true; drawCard(1); },
-    hideInsert() { I.on = false; backdrop.visible = false; card.visible = false; },
+    chat(name, lines) { Object.assign(I, { on: true, t: 0, title: name, big: '', small: '', done: false, kind: 'tel', chat: lines, value: null, out: -1 }); backdrop.visible = true; card.visible = true; drawCard(1); },
+    // Sortie courte et accélérée ; « now » coupe net, au début ou à l'arrêt d'une lecture.
+    hideInsert(now) {
+      if (!now && I.on && card.visible) { if (I.out < 0) I.out = 0; return; }
+      I.on = false; I.out = -1; backdrop.visible = false; card.visible = false;
+    },
     update(dt) {
       uiCam.aspect = camera.aspect; uiCam.updateProjectionMatrix();
       const d = 0.45, h = 2 * Math.tan((uiCam.fov * Math.PI) / 360);
@@ -195,12 +226,19 @@ export function createLook(v) {
       if (!I.on) return;
       I.t += dt;
       backdrop.scale.set(h * d * camera.aspect * 1.05, h * d * 1.05, 1);
-      const w = Math.min(h * 0.42 * camera.aspect * 0.86, h * 0.42 * 0.62), s = 0.86 + 0.14 * ease(Math.min(1, I.t / 0.2));
+      const w = Math.min(h * 0.42 * camera.aspect * 0.86, h * 0.42 * 0.62), H42 = h * 0.42;
+      // Trois couches : la carte monte et se pose (principale), le fond s'assombrit (secondaire), la carte respire doucement (ambiance).
+      const e = easeOut(I.t / ENTER), o = I.out < 0 ? 0 : easeIn(I.out / LEAVE);
+      const s = (0.88 + 0.12 * pop(I.t / ENTER)) * (1 + 0.005 * Math.sin(I.t * 2.1)) * (1 - 0.06 * o);
       card.scale.set(w * s, w * s, 1);
+      card.position.y = -(1 - e) * H42 * 0.07 - o * H42 * 0.04 + 0.002 * H42 * Math.sin(I.t * 1.6);
+      card.material.opacity = easeOut(I.t / 0.16) * (1 - o); backdrop.material.opacity = easeOut(I.t / 0.2) * (1 - o);
       if (I.kind === 'temps') card.rotation.set(0, 0, 0); else card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
-      if (I.kind === 'tel' && I.t < I.chat.length * 0.8 + 0.1) drawCard(1);
-      if (I.kind === 'temps') { if (I.t < 1) drawCard(1); return; }
-      if (I.value && I.t < 0.6) drawCard(I.t / 0.45); else if (I.value && !I.done) { drawCard(1); I.done = true; }
+      if (I.out >= 0) { I.out += dt; if (I.out >= LEAVE) look.hideInsert(true); return; }
+      if (I.kind === 'tel') { if (I.t < I.chat.length * 0.8 + 0.3) drawCard(1); return; }
+      if (I.kind === 'temps') { if (I.t < 1.1) drawCard(1); return; }
+      const f = (I.t - 2 * STEP) / 0.5; // le compteur démarre quand le chiffre arrive
+      if (I.t < 1.05 || (I.value && f < 1.1)) drawCard(I.value ? f : 1); else if (!I.done) { drawCard(1); I.done = true; }
     },
   };
   return look;
