@@ -31,7 +31,7 @@ TOBI dit (excite) Dix euros ! Une journée d'ingénieur Apple !
 PLAN gros NOX
 NOX dit (constat) Vingt-huit minutes.
 PLAN gros TOBI
-TOBI dit (panique) Vite ! Claude, écris mon mémoire !
+TOBI dit (panique) Vite ! Claude, fais mon DM de maths !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je te pose d'abord quelques questions.
 PLAN gros TOBI

@@ -23,7 +23,7 @@ TOBI dit (panique) Cinq ans d'expérience sur un truc sorti il y a dix jours ?
 PLAN gros GEMINI
 GEMINI dit (fier) Moi, j'ai dix jours. Je suis la plus ancienne.
 PLAN gros NOX
-NOX dit (sec) Et c'est payé zéro euro.
+NOX dit (sec) Et c'est payé zéro euro, Tobi.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Il y a un baby-foot.
 TOBI dit (illumine) J'écris sur mon CV : expert Argon.

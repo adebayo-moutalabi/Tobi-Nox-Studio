@@ -32,7 +32,7 @@ TOBI dit (panique) Mon compte en banque !
 PLAN gros NOX
 NOX dit (constat) Il est resté longtemps dessus.
 PLAN gros TOBI
-TOBI dit (surpris) Il ouvre mon mémoire. Il corrige les fautes.
+TOBI dit (surpris) Il ouvre mon rapport de stage. Il corrige les fautes.
 PC Banque : Compte de Tobi | Virement reçu : +5 € | Motif : courage
 PLAN pc
 ATTENDRE 1.6

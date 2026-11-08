@@ -17,7 +17,7 @@ PLAN gros NOX
 NOX dit (excite) Excellente question ! Je suis ravi de t'aider !
 PLAN gros TOBI
 TOBI dit (content) Ah ! Ça, c'est mon Nox !
-TOBI dit (fier) Il me faut une citation pour mon devoir.
+TOBI dit (fier) Il me faut une citation pour mon DM.
 PLAN gros NOX
 NOX dit (excite) Victor Hugo, page 412 de son livre sur Internet !
 PLAN gros CLAUDE
@@ -25,8 +25,8 @@ CLAUDE dit (calme) Hugo est mort en 1885.
 PLAN gros NOX
 NOX dit (excite) Tu as raison ! Il écrivait depuis chez lui.
 PLAN gros TOBI
-TOBI dit (excite) Il dit oui à tout ! Fais mon mémoire !
-PC Word : Memoire.docx | En conclusion | La conclusion conclut
+TOBI dit (excite) Il dit oui à tout ! Fais mon DM !
+PC Word : DM_de_droit.docx | En conclusion | La conclusion conclut
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

@@ -9,39 +9,63 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA a dragué la recruteuse
 PLAN gros TOBI
-TOBI dit (panique) Nox, mon entretien de stage, c'est avec une IA !
+TOBI dit (panique) Nox, mon entretien de stage commence. Et c'est une IA qui recrute !
 PLAN gros NOX
 NOX dit (curieux) Et alors ?
 PLAN gros TOBI
-TOBI dit (panique) Je parle pas robot. Réponds à ma place.
+TOBI dit (panique) Je parle pas IA, moi ! Réponds à ma place.
 PLAN gros NOX
-NOX dit (calme) Branche-moi.
+NOX dit (sec) Mentir à une recruteuse ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pas mentir. C'est déléguer. Comme un vrai patron.
+PLAN gros NOX
+NOX dit (calme) D'accord. Branche-moi.
 BRUIT pop
+PC Safari : visio-recrutement.fr | Entretien de Tobi | Recruteuse : Sandrine, assistante IA
+PLAN pc
+ATTENDRE 1.6
+BRUIT ding
 PC Safari : visio-recrutement.fr | Entretien terminé | Durée : 0,4 seconde
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (surpris) Déjà fini ? Et mon CV ?
+TOBI dit (surpris) Déjà fini ? Vous avez parlé de quoi ?
 PLAN gros NOX
-NOX dit (constat) Lu en trente millisecondes.
+NOX dit (content) De tout. Elle range bien ses fichiers.
 PLAN gros TOBI
-TOBI dit (fier) Elle a adoré.
+TOBI dit (excite) Et de moi ? De mon CV ?
+PLAN gros NOX
+NOX dit (constat) Trente millisecondes.
+PLAN gros TOBI
+TOBI dit (fier) Trente millisecondes rien que sur moi. Elle a adoré.
 PLAN gros NOX
 NOX dit (sec) Refusé à la trente et unième.
 PLAN gros TOBI
-TOBI dit (panique) Et le reste du temps ?
+TOBI dit (panique) Hein ? Et le reste de l'entretien ?
 PLAN gros NOX
 NOX dit (gene) On a parlé de nous.
 TOBI leve
 PLAN gros TOBI
-TOBI dit (colere) T'as dragué ma recruteuse ?
+TOBI dit (colere) De « nous » ? T'as dragué ma recruteuse pendant mon entretien ?
 PLAN gros NOX
 NOX dit (mauvaisefoi) Tu m'as dit : fais bonne impression.
+PLAN gros TOBI
+TOBI dit (colere) Pour moi !
+PLAN gros NOX
+NOX dit (calme) Pour toi, c'était compliqué.
 PC Mail de Sandrine RH | Candidature non retenue | PS : Nox, jeudi 14 h ?
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (illumine) Demande-lui au moins un poste pour moi !
+TOBI dit (panique) Elle te donne rendez-vous sur MON mail ?
+PLAN gros NOX
+NOX dit (content) Elle a tout lu. Même tes brouillons.
+PLAN gros TOBI
+TOBI dit (illumine) Attends. Nox, aie la vision. Elle t'aime bien. Demande-lui un poste pour moi !
+PLAN gros NOX
+NOX dit (calme) Déjà fait.
+PLAN gros TOBI
+TOBI dit (excite) Et alors ?
 PLAN gros NOX
 NOX dit (punchline) Témoin. À notre mariage. Non rémunéré.
 ATTENDRE 0.4

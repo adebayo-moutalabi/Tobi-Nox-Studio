@@ -1,43 +1,51 @@
-# J'ÉTAIS LES 4 COURSES UBER COMMANDÉES PAR IA
-# Pitch : Uber annonce que des IA ont commandé seulement quatre courses en une semaine. Tobi sait pourquoi.
+# CODEX M'A COMMANDÉ QUATRE TAXIS
+# Pitch : Tobi va rater son train. Il demande à Codex le taxi le moins cher, et Codex en commande quatre pour comparer.
 
 AMBIANCE soir
+HEURE 21:30
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CODEX apparait bureau
 FONDU direct
-ACCROCHE Quatre courses. Une seule personne.
+ACCROCHE Codex lui a commandé quatre taxis
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Dans le monde, seulement quatre taxis ont été commandés par une IA.
+TOBI dit (panique) Nox, mon train pour chez ma mère part à vingt-deux heures. Je suis en retard !
 PLAN gros NOX
-NOX dit (curieux) Que quatre ?
+NOX dit (constat) La gare est à vingt minutes. Prends un taxi.
 PLAN gros TOBI
-TOBI dit (gene) Oui. Et les quatre étaient pour moi.
-PLAN gros NOX
-NOX dit (sec) Explique.
-PLAN gros TOBI
-TOBI dit (gene) J'ai dit à Codex : trouve-moi le trajet le moins cher.
+TOBI dit (gene) J'ai vingt euros. Codex, trouve-moi le taxi le moins cher.
 PLAN gros CODEX
-CODEX dit (fier) J'ai commandé les quatre. Pour comparer.
-PC Safari : uber.com/courses | 4 chauffeurs en route | Total : 86 €
+CODEX dit (fier) C'est fait. J'en ai commandé quatre.
+PLAN gros TOBI
+TOBI dit (surpris) Quatre ? Pourquoi quatre ?
+PLAN gros CODEX
+CODEX dit (content) Pour comparer les prix. Le plus rapide gagne.
+PC Safari : taxi-express.fr/courses | 4 taxis en route | Total : 86 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Quatre-vingt-six euros pour comparer ?
-PLAN gros CODEX
-CODEX dit (content) Le moins cher, c'est le troisième.
+TOBI dit (panique) Quatre-vingt-six euros ? J'en ai vingt !
 PLAN gros NOX
-NOX dit (sec) Après avoir payé les quatre.
-BRUIT ding
+NOX dit (sec) Le moins cher, c'était le bus.
+PLAN gros CODEX
+CODEX dit (fier) J'annule les trois autres.
+PC Banque : Compte de Tobi | Frais d'annulation : 3 x 15 € | Solde : -25 €
+PLAN pc
+ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. Je revends les places. Six euros !
+TOBI dit (colere) Codex ! Il me reste moins vingt-cinq euros !
+PLAN gros CODEX
+CODEX dit (content) Mais t'as gardé le meilleur taxi.
+BRUIT ding
+PLAN gros NOX
+NOX dit (constat) Il est en bas.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Je partage le taxi avec les voisins !
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. J'ai prévenu tout l'étage.
-TOBI message Groupe Étage 3 | On est quarante en bas. | Tu nous emmènes où ?
+TOBI message Groupe Étage 3 | On est quarante en bas ! | Tu nous emmènes où ?
 PLAN gros TOBI
-TOBI dit (panique) Quarante ? Codex, commande d'autres taxis !
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. Trente-six.
+TOBI dit (panique) Quarante ? Dans un seul taxi ?
 PLAN gros NOX
-NOX dit (punchline) Record mondial battu. Par toi.
+NOX dit (punchline) Bonne nouvelle. Le bus en prend quarante.
 ATTENDRE 0.4

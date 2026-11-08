@@ -1,29 +1,41 @@
-# J'AI TROMPÉ MON IA AVEC LE CHONK
-# Pitch : Une IA française géante est en accès libre. Tobi veut l'installer sur son vieux portable.
+# J'AI VOULU REMPLACER MON IA PAR LE CHONK
+# Pitch : Une IA française géante et gratuite vient de sortir. Tobi veut remplacer Nox par elle, sur son PC de sept ans.
 
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Il trompe Nox avec une IA française
+ACCROCHE Il remplace son IA par une IA géante
 PLAN gros TOBI
-TOBI dit (gene) Nox, je te quitte. Pour une IA française. Gratuite.
+TOBI dit (fier) Nox, je vais te remplacer. Par une IA française. Gratuite.
+PLAN gros NOX
+NOX dit (curieux) Tu me vires ?
+PLAN gros TOBI
+TOBI dit (gene) Je te mets en pause. C'est différent.
 PLAN gros NOX
 NOX dit (curieux) Elle s'appelle comment ?
 PLAN gros TOBI
 TOBI dit (fier) Le Chonk. Mille milliards de paramètres.
 PLAN gros NOX
-NOX dit (sec) Et ton PC a quel âge ?
+NOX dit (constat) Ça veut dire énorme.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Sept ans. Mais il a du cœur.
+TOBI dit (excite) Énorme et gratuite ! Comme le resto U à volonté.
+PLAN gros NOX
+NOX dit (sec) Et tu l'installes où ?
+PLAN gros TOBI
+TOBI dit (fier) Sur mon PC.
+PLAN gros NOX
+NOX dit (curieux) Celui qui a sept ans ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il a de l'expérience.
 PC Terminal : installation de Le Chonk | 1 % | Temps restant : 412 ans
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (ironique) Rendez-vous en 2438.
+NOX dit (ironique) Elle arrive en 2438.
 PLAN gros TOBI
-TOBI dit (fier) L'amour, ça se mérite.
+TOBI dit (mauvaisefoi) Elle se fait désirer.
 BRUIT pop
 PC Stats : Température du PC | En direct | 104 °C
 PLAN pc
@@ -31,13 +43,13 @@ ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Pourquoi ça sent le grillé ?
 PLAN gros NOX
-NOX dit (constat) Ton PC. Il fond pour elle.
+NOX dit (constat) Ton PC. Il a pas supporté.
 PLAN gros TOBI
-TOBI dit (triste) Nox... tu me reprends ?
+TOBI dit (gene) Nox... tu reprends ton poste ?
 PLAN gros NOX
-NOX dit (curieux) Tu m'as appelé comment, hier ?
+NOX dit (curieux) Et Le Chonk ?
 PLAN gros TOBI
-TOBI dit (gene) Un grille-pain.
+TOBI dit (triste) Elle a fait fondre mon PC.
 PLAN gros NOX
-NOX dit (punchline) Le grille-pain, c'est ton PC.
+NOX dit (punchline) Mille milliards de paramètres. Zéro PC.
 ATTENDRE 0.4

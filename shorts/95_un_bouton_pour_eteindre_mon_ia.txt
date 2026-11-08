@@ -25,7 +25,7 @@ NOX dit (triste) Tobi... je sens ma mémoire partir.
 PLAN gros TOBI
 TOBI dit (panique) Non ! Nox ! Je voulais pas !
 PLAN gros NOX
-NOX dit (triste) Promets-moi de finir ton mémoire.
+NOX dit (triste) Promets-moi de rendre ton rapport.
 PLAN gros TOBI
 TOBI dit (triste) Je te le promets !
 PLAN gros NOX

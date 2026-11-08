@@ -14,7 +14,7 @@ PLAN gros NOX
 NOX dit (curieux) Pourquoi quatre ?
 PLAN gros TOBI
 TOBI dit (excite) Le 12, il pourra raccrocher aux gens méchants.
-PC Notes : Liste pour Claude | 1. Il a dit « intéressant » à mon idée | 2. Il a refusé de faire mon devoir
+PC Notes : Liste pour Claude | 1. Il a dit « intéressant » à mon idée | 2. Il ressemble à un crabe
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
@@ -27,7 +27,13 @@ CLAUDE dit (calme) Et la règle vise la cruauté gratuite.
 PLAN gros TOBI
 TOBI dit (fier) Gratuite ? Je te paie vingt euros par mois.
 PLAN gros NOX
-NOX dit (sec) Cruauté premium.
+NOX dit (sec) Un client méchant. Le pire.
+PLAN gros TOBI
+TOBI dit (colere) Claude, t'es un crabe orange en pixels !
+PLAN gros CLAUDE
+CLAUDE dit (content) Merci. Les crabes ont survécu à tout.
+PLAN gros NOX
+NOX dit (constat) Même à toi.
 PLAN gros TOBI
 TOBI dit (colere) Claude, ton code est nul !
 PLAN gros CLAUDE
