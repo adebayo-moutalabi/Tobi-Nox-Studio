@@ -85,14 +85,73 @@ export function createLaptop() {
   const S = { title: 'notes.txt', text: '', caret: 0, board: null, boardT: 0 };
   // Fenêtres d'applications, sans logo : on les reconnaît à leur couleur et à leur mise en page.
   const APPS = { word: ['#2b579a', 'Accueil   Insertion   Mise en page   Révision'], powerpoint: ['#c43e1c', 'Accueil   Insertion   Création   Diaporama'], excel: ['#217346', 'Accueil   Insertion   Formules   Données'], canva: ['#7d2ae8', 'Modèles   Éléments   Texte   Photos'],
-    safari: ['#e6e7ea', ''], banque: ['#12355b', 'Comptes   Virements   Cartes'], terminal: ['#2b2d31', ''], code: ['#1f2228', ''], notes: ['#e9b949', ''], finder: ['#e6e7ea', ''], stats: ['#14161d', ''], discord: ['#2b2d36', ''], camera: ['#000000', ''], agenda: ['#d8483e', ''] };
-  const ALIAS = { chrome: 'safari', navigateur: 'safari', vscode: 'code', slack: 'discord', whatsappweb: 'discord', calendrier: 'agenda', sheets: 'excel', docs: 'word', slides: 'powerpoint', keynote: 'powerpoint', pages: 'word', numbers: 'excel' };
+    safari: ['#e6e7ea', ''], banque: ['#12355b', 'Comptes   Virements   Cartes'], terminal: ['#2b2d31', ''], code: ['#1f2228', ''], notes: ['#e9b949', ''], finder: ['#e6e7ea', ''], stats: ['#14161d', ''], discord: ['#2b2d36', ''], camera: ['#000000', ''], agenda: ['#d8483e', ''], chat: ['#ffffff', ''], jeu: ['#5c94fc', ''] };
+  const ALIAS = { chrome: 'safari', navigateur: 'safari', vscode: 'code', slack: 'discord', whatsappweb: 'discord', calendrier: 'agenda', sheets: 'excel', docs: 'word', slides: 'powerpoint', keynote: 'powerpoint', pages: 'word', numbers: 'excel', chatgpt: 'chat', assistant: 'chat', game: 'jeu' };
   // Outils du quotidien : navigateur, banque, terminal, code, notes, fichiers, statistiques, discussion, caméra, agenda.
   function drawTool(W, H, app, name, rows, color, F, show) {
     const dots = (y, x = 30) => { for (const [i, c] of ['#ff5f57', '#febc2e', '#28c840'].entries()) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x + i * 28, y, 9, 0, 7); ctx.fill(); } };
     const each = (fn) => rows.forEach((r, i) => { const p = show(i); if (!p) return; ctx.globalAlpha = p; fn(r, i, i === rows.length - 1 && rows.length > 1); ctx.globalAlpha = 1; });
     const count = (r) => r.replace(/\d[\d ]*\d|\d/, (n) => { const k = Math.min(1, Math.max(0, (S.boardT - 0.4) / 0.7)); return Math.round(Number(n.replace(/\s/g, '')) * (1 - (1 - k) ** 3)).toLocaleString('fr-FR').replace(/\u202f/g, ' '); });
     ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    if (app === 'chat') { // discussion avec une IA : la question, la réponse qui s'écrit, puis la pub qui s'invite
+      const ease = (x) => 1 - (1 - x) ** 3, back = (x) => { const c = 1.7, u = x - 1; return 1 + (c + 1) * u ** 3 + c * u ** 2; };
+      ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#f4f4f5'; ctx.fillRect(0, 0, 150, H); dots(30, 24);
+      ctx.fillStyle = '#17191f'; ctx.font = `700 24px ${F}`; ctx.fillText('+ Nouveau', 22, 84, 120);
+      ctx.fillStyle = '#9a9ca3'; ctx.font = `500 21px ${F}`; ['Rupture', 'Pâtes', 'CAF'].forEach((x, i) => ctx.fillText(x, 22, 140 + i * 40, 120));
+      ctx.fillStyle = '#17191f'; ctx.textAlign = 'center'; ctx.font = `700 28px ${F}`; ctx.fillText(name, 150 + (W - 150) / 2, 32); ctx.textAlign = 'left';
+      ctx.fillStyle = '#ececee'; ctx.fillRect(150, 62, W - 150, 2);
+      const X = 172, R = W - 24, wrap = (txt, max) => { const out = []; let line = ''; for (const w of txt.split(' ')) { if (ctx.measureText(`${line} ${w}`).width > max && line) { out.push(line); line = w; } else line = line ? `${line} ${w}` : w; } out.push(line); return out; };
+      let y = 80;
+      rows.forEach((r, i) => {
+        const p = show(i); if (!p) return;
+        const ad = /^(pub|sponsoris[ée]e?)\s*:\s*/i.exec(r), me = r.startsWith('>'), text = r.replace(/^>\s*/, '').replace(ad ? ad[0] : '', '');
+        ctx.globalAlpha = Math.min(1, p * 1.5);
+        if (ad) { // la pub glisse depuis le bas, rebondit, et son bouton clignote doucement
+          const k = Math.max(0, Math.min(1, (S.boardT - 0.15 - i * 0.24) / 0.45)), dy = (1 - back(k)) * 60, h = 150;
+          ctx.fillStyle = '#fff7df'; ctx.strokeStyle = '#f2b92e'; ctx.lineWidth = 4; ctx.beginPath(); ctx.roundRect(X, y + dy, R - X, h, 18); ctx.fill(); ctx.stroke();
+          ctx.fillStyle = '#9a7a1c'; ctx.font = `800 24px ${F}`; ctx.fillText('SPONSORISÉ', X + 24, y + dy + 30);
+          ctx.fillStyle = '#17191f'; ctx.font = `800 46px ${F}`; ctx.fillText(text, X + 24, y + dy + 96, R - X - 250);
+          ctx.globalAlpha *= 0.75 + 0.25 * Math.sin(S.boardT * 6) ** 2;
+          ctx.fillStyle = '#17191f'; ctx.beginPath(); ctx.roundRect(R - 210, y + dy + 56, 190, 66, 33); ctx.fill();
+          ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.font = `800 28px ${F}`; ctx.fillText("Voir l'offre", R - 115, y + dy + 89); ctx.textAlign = 'left';
+          y += h + 22;
+        } else if (me) { // la question de Tobi, à droite
+          ctx.font = `600 42px ${F}`; const lines = wrap(text, 620), w = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 56, h = lines.length * 52 + 34;
+          ctx.fillStyle = '#ececee'; ctx.beginPath(); ctx.roundRect(R - w, y + (1 - ease(p)) * 20, w, h, 24); ctx.fill();
+          ctx.fillStyle = '#17191f'; lines.forEach((l, k) => ctx.fillText(l, R - w + 28, y + 43 + k * 52 + (1 - ease(p)) * 20));
+          y += h + 22;
+        } else { // la réponse de l'IA, qui s'écrit mot à mot
+          ctx.fillStyle = '#17191f'; ctx.beginPath(); ctx.arc(X + 20, y + 24, 20, 0, 7); ctx.fill();
+          ctx.strokeStyle = '#fff'; ctx.lineWidth = 3; for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.ellipse(X + 20, y + 24, 11, 5, k * Math.PI / 3, 0, 7); ctx.stroke(); }
+          const typed = Math.max(0, Math.min(1, (S.boardT - 0.15 - i * 0.24) / 0.7)), words = text.split(' '), part = words.slice(0, Math.ceil(words.length * typed)).join(' ');
+          ctx.font = `500 44px ${F}`; const lines = wrap(part, R - X - 70);
+          ctx.fillStyle = '#17191f'; lines.forEach((l, k) => ctx.fillText(l, X + 58, y + 26 + k * 54));
+          y += Math.max(1, wrap(text, R - X - 70).length) * 54 + 24;
+        }
+        ctx.globalAlpha = 1;
+      });
+      ctx.fillStyle = '#f4f4f5'; ctx.beginPath(); ctx.roundRect(X, H - 74, R - X, 54, 27); ctx.fill();
+      ctx.fillStyle = '#9a9ca3'; ctx.font = `500 24px ${F}`; ctx.fillText('Envoyer un message…', X + 26, H - 47);
+      return true;
+    }
+    if (app === 'jeu') { // aperçu d'un jeu de plateforme : le héros saute, les ennemis avancent, le boss attend au bout
+      const t = S.boardT, P = 8, px = (x, y, w, h, c) => { ctx.fillStyle = c; ctx.fillRect(Math.round(x), Math.round(y), w, h); };
+      const sky = ctx.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#5c94fc'); sky.addColorStop(1, '#a8c8ff'); ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
+      for (const [cx, cy] of [[180, 240], [560, 210], [860, 260]]) { const x = (cx - t * 18) % (W + 160); px(x, cy, 120, 28, '#fff'); px(x + 24, cy - 22, 70, 24, '#fff'); }
+      const G = H - 96; for (let x = 0; x < W; x += 48) { px(x, G, 46, 46, '#c8743a'); px(x, G, 46, 8, '#e09a5a'); px(x, G + 48, 46, 46, '#a85d2c'); }
+      for (const bx of [300, 348, 396]) { px(bx, G - 210, 46, 46, bx === 348 ? '#f2b92e' : '#c8743a'); if (bx === 348) { ctx.fillStyle = '#7a4a10'; ctx.font = `900 34px ${F}`; ctx.textAlign = 'center'; ctx.fillText('?', bx + 23, G - 186); ctx.textAlign = 'left'; } }
+      const bossX = W - 230; px(bossX, G - 250, 190, 250, '#8b8f99'); for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) px(bossX + 22 + c * 56, G - 226 + r * 62, 36, 40, r === 2 && c === 1 ? '#3a2a1a' : '#cfe3ff');
+      px(bossX - 10, G - 290, 210, 44, '#c0302a'); ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.font = `800 22px ${F}`; ctx.fillText('SECRÉTARIAT', bossX + 95, G - 268); ctx.textAlign = 'left';
+      for (let k = 0; k < 3; k++) { const x = 520 - k * 130 + ((t * 40) % 60) * (k % 2 ? 1 : -1), hop = Math.abs(Math.sin(t * 5 + k)) * 10; px(x, G - 46 - hop, 30, 46, '#3f9b3a'); px(x + 4, G - 50 - hop, 22, 8, '#5cc254'); px(x + 6, G - 34 - hop, 6, 6, '#fff'); px(x + 18, G - 34 - hop, 6, 6, '#fff'); }
+      const hx = 90 + (t * 120) % 360, jump = Math.abs(Math.sin(t * 3.2)) * 120, hy = G - 92 - jump; // l'électricien : casque jaune, salopette bleue
+      px(hx, hy, 40, 14, '#f2b92e'); px(hx + 4, hy + 14, 32, 22, '#e8b48c'); px(hx + 24, hy + 20, 6, 6, '#17191f'); px(hx, hy + 36, 40, 34, '#2f6fed'); px(hx + 6, hy + 70, 10, 22, '#3a2a1a'); px(hx + 24, hy + 70, 10, 22, '#3a2a1a');
+      if (Math.sin(t * 7) > 0) { ctx.strokeStyle = '#ffe066'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(hx + 44, hy + 40); ctx.lineTo(hx + 58, hy + 30); ctx.lineTo(hx + 52, hy + 44); ctx.lineTo(hx + 66, hy + 36); ctx.stroke(); }
+      ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.fillRect(0, 0, W, 64 + rows.length * 40);
+      ctx.fillStyle = '#fff'; ctx.font = `900 40px ${F}`; ctx.fillText(name.toUpperCase(), 24, 38, W - 48);
+      rows.forEach((r, i) => { const p = show(i); if (!p) return; ctx.globalAlpha = p; ctx.fillStyle = i === rows.length - 1 ? '#ffd23f' : '#fff'; ctx.font = `700 30px ${F}`; ctx.fillText(r, 24 + (1 - p) * 40, 84 + i * 40, W - 48); ctx.globalAlpha = 1; });
+      void P; return true;
+    }
     if (app === 'safari') {
       ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = color; ctx.fillRect(0, 0, W, 78); dots(39);
       ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.roundRect(150, 16, W - 300, 46, 12); ctx.fill(); ctx.fillStyle = '#4b4e57'; ctx.textAlign = 'center'; ctx.font = `600 27px ${F}`; ctx.fillText(name, W / 2, 40, W - 340); ctx.textAlign = 'left';
@@ -251,7 +310,7 @@ export function createLaptop() {
       let dirty = false;
       for (let i = 0; i < heat.length; i++) if (heat[i] > 0) { heat[i] = Math.max(0, heat[i] - dt * 9); put(i); dirty = true; }
       if (dirty) { keys.instanceMatrix.needsUpdate = true; if (keys.instanceColor) keys.instanceColor.needsUpdate = true; }
-      if (S.board && S.boardT < 2) { S.boardT += dt; draw(); }
+      if (S.board && S.boardT < (/^(chat|chatgpt|assistant|jeu|game)\s*:/i.test(S.board[0]) ? 30 : 2)) { S.boardT += dt; draw(); } // la discussion et le jeu restent vivants
       const c = S.caret; S.caret = (S.caret + dt) % 1;
       if ((c < 0.5) !== (S.caret < 0.5)) draw();
     },

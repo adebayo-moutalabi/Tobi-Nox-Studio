@@ -24,7 +24,7 @@ PLAN gros TOBI
 TOBI dit (fier) Elles l'ont trahi.
 PLAN gros CLAUDE
 CLAUDE dit (content) Ça, c'est original. Je le fais.
-PC Safari : super-stagiaire.fr | Niveau 1 : trouver une convention de stage | Boss final : le secrétariat
+PC Jeu : Super Stagiaire | Niveau 1 : trouver une convention de stage | Boss final : le secrétariat
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
