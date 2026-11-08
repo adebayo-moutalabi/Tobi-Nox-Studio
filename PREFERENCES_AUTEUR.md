@@ -128,6 +128,12 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 
 - La première IA Promo ressemblait trop à Claude. Chaque nouvelle IA doit avoir une forme bien à elle. L'étiquette et la tirelire n'ont pas plu non plus : l'auteur a choisi un mochi mignon. Pour un nouveau personnage, proposer plusieurs idées avant de le construire.
 
+## Prendre l'initiative (8 novembre 2026)
+
+- L'auteur ne veut pas avoir à tout demander. Pour chaque scène, se demander ce qui la rendrait claire et vivante, puis le faire : un vrai écran d'application, un effet animé, un nom crédible.
+- Quand une IA bloque ou atteint sa limite, on le montre : écran de Claude Code avec sa jauge, et jauge au-dessus de sa tête.
+- L'IA à trente centimes s'appelle Centi : un nom court qui sonne comme une vraie IA actuelle.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

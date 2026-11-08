@@ -310,6 +310,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nouvelle appli `Jeu` : aperçu animé d'un jeu de plateforme, avec le héros, les ennemis et le boss (épisode 86).
 - Nouveau personnage IA Promo, l'IA à trente centimes : une étiquette de prix jaune (épisode 93). Il a sa voix à choisir dans les réglages ElevenLabs.
 
+## Centi, écran Claude Code et limite animée (8 novembre 2026)
+
+- IA Promo devient Centi.
+- Nouvelle appli `Claude` : le terminal de Claude Code, avec une alerte de limite et sa jauge animée (épisodes 70, 79 et 93).
+- Nouvelle action `limite` : une jauge au-dessus de la tête de l'IA, qui vire au rouge, puis l'IA grisonne (épisode 93).
+
 ## À faire
 
 Voir `TACHES.md`.

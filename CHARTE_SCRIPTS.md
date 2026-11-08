@@ -67,7 +67,7 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
-- **IA Promo** est l'IA à trente centimes : un petit mochi vert menthe, joues roses, antenne et casquette « PROMO » de travers. Elle ne doit jamais ressembler aux autres IA. Toujours ravie, souvent fausse, et chaque vraie réponse est « une option premium ». `DIRECT PROMO apparait milieu`, puis `PROMO dit (excite) ...`. Plutôt au sol : elle est petite et bon marché.
+- **Centi** est l'IA à trente centimes : un petit mochi vert menthe, joues roses, antenne et casquette « CENTI » de travers. Elle ne doit jamais ressembler aux autres IA. Toujours ravie, souvent fausse, et chaque vraie réponse est « une option premium ». `DIRECT CENTI apparait milieu`, puis `CENTI dit (excite) ...`. Plutôt au sol : elle est petite et bon marché.
 
 - **Places au sol :** `gauche`, `milieu`, `droite`.
 - **Places en hauteur :** `bureau`, `chaise`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
@@ -210,6 +210,10 @@ NOX dit (resigne) J'appelle ta mère.
 - Après chaque script, lancer `node tools/audit-temps.mjs`.
 
 **Discussion avec une IA :** `PC Chat : ChatGPT | > Question de Tobi | Réponse de l'IA | Pub : Pizza Solo, -20 %`. La question s'affiche à droite, la réponse s'écrit mot à mot, la ligne `Pub :` glisse comme une publicité.
+
+**Claude Code :** `PC Claude : Claude Code | > demande de Tobi | Limite d'utilisation atteinte | Reprise à 17 h 42`. Le terminal de Claude Code s'affiche ; la ligne qui parle de limite, de fin ou de refus devient une alerte avec une jauge qui se remplit puis vire au rouge.
+
+**Limite sur la tête :** `CLAUDE limite` fait apparaître au-dessus de lui une jauge qui monte à 100 %, affiche « Limite atteinte » et le fait perdre ses couleurs jusqu'à la fin de l'épisode. Marche pour toutes les IA.
 
 **Aperçu de jeu :** `PC Jeu : Nom du jeu | Niveau 1 : ... | Boss final : ...`. Un petit jeu de plateforme animé, avec les lignes en haut de l'écran.
 
