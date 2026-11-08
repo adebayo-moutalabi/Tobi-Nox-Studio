@@ -70,7 +70,7 @@ export function parseStory(text) {
     const direct = /^DIRECT\s/.test(line);
     if (direct) line = line.slice(7).trim();
     const [first, ...rest] = line.split(/\s+/);
-    const who = /^(TOBI|NOX|CLAUDE|CODEX|GEMINI|PROMO)$/.test(first) ? first.toLowerCase() : null;
+    const who = /^(TOBI|NOX|CLAUDE|CODEX|GEMINI|CENTI)$/.test(first) ? first.toLowerCase() : null;
     const verb = plain(who ? rest.shift() || '' : first);
     let text = rest.join(' '), tone = null;
     const t = verb === 'dit' && text.match(/^\(([^)]+)\)\s*(.*)$/);
@@ -84,7 +84,7 @@ export function parseStory(text) {
 
 // À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui à qui il répond (le dernier qui a parlé), sinon celui qui parle ensuite.
 // Un prénom cité au milieu d'une phrase ne compte pas.
-const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini|Promo)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
+const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini|Centi)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
 function adresse(list) {
   const lines = list.filter((c) => c.verb === 'dit' && c.who);
   lines.forEach((c, i) => {
@@ -359,6 +359,8 @@ export function createPlayer(v, ui) {
     room.lock.set({ ...(time ? { time } : {}), date: dateText(), fixed: clockFixed, ...(/^jour\s/i.test(big) ? { day: big } : {}) });
     return v.wait(2.3);
   }
+  const limits = []; // bulles de limite encore affichées
+  const clearLimits = () => { for (const sp of limits.splice(0)) sp.removeFromParent(); for (const a of v.actors) a.hero.root.traverse((m) => { if (m.material?.userData?.base) m.material.color.copy(m.material.userData.base); }); };
   let hookText = '', speaking = null; // la réplique en cours : un regard en retard ne vise jamais la suivante
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
@@ -472,7 +474,7 @@ export function createPlayer(v, ui) {
           clips.push({ buffer: voice.buffer, start: t0 - playT0 });
           if (!offline) { audioCtx ||= new AudioContext(); const src = audioCtx.createBufferSource(); src.buffer = voice.buffer; src.connect(audioCtx.destination); src.start(); }
         }
-        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff', promo: '#ffd23f' }[a.id] || '#f2b92e' };
+        cap = { ...chunk(c.text), t0, dur: dur || c.text.length * 0.078 + 0.1, color: { nox: '#8feaff', claude: '#f2a585', codex: '#b9b0ff', gemini: '#8fbaff', centi: '#a8ecc9' }[a.id] || '#f2b92e' };
         const essai = !voice && !offline && ui.trial?.() ? voixEssai.dit(a.id, prononce(c.spoken || c.text)) : null;
         await v.say(a, c.text, dur, voice?.env);
         if (essai) await essai;
@@ -550,6 +552,34 @@ export function createPlayer(v, ui) {
       case 'remet': a.look = null; if (auto) { track = null; cut('frigo'); } return v.acts.fridgeBack(a);
       case 'miroir': a.look = null; if (auto) { track = null; cut('miroir'); } return v.acts.mirror(a);
       case 'fenetre': return v.acts.window(a);
+      case 'limite': { // la limite atteinte se voit sur sa tête : une jauge qui se remplit, vire au rouge, et il perd ses couleurs
+        const c = document.createElement('canvas'); c.width = 512; c.height = 176; const g = c.getContext('2d');
+        const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+        const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true, toneMapped: false })); sp.renderOrder = 900;
+        sp.scale.set(0.5, 0.17, 1); v.scene.add(sp); limits.push(sp);
+        const skin = []; a.hero.root.traverse((m) => { if (m.material?.color && !skin.includes(m.material)) skin.push(m.material); });
+        for (const m of skin) if (!m.userData.base) m.userData.base = m.color.clone();
+        const grey = new THREE.Color('#8d8d93'), draw = (k, t) => {
+          g.clearRect(0, 0, 512, 176); const red = k >= 1;
+          g.fillStyle = 'rgba(22,22,26,.92)'; g.beginPath(); g.roundRect(6, 6, 500, 164, 30); g.fill();
+          g.strokeStyle = red ? (Math.sin(t * 9) > 0 ? '#e5383b' : '#ff8a8c') : '#d97757'; g.lineWidth = 6; g.stroke();
+          g.fillStyle = '#2a2a30'; g.beginPath(); g.roundRect(36, 100, 440, 40, 20); g.fill();
+          g.fillStyle = red ? '#e5383b' : '#d97757'; g.beginPath(); g.roundRect(36, 100, Math.max(40, 440 * (0.7 + 0.3 * k)), 40, 20); g.fill();
+          g.fillStyle = '#fff'; g.font = '800 46px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+          g.fillText(red ? 'Limite atteinte' : `${Math.round(70 + 30 * k)} %`, 256, 56); tex.needsUpdate = true;
+        };
+        (async () => { // 0,8 s pour remplir la jauge, puis il grisonne ; la bulle reste au-dessus de lui
+          for (let t = 0; sp.parent; t += 1 / 30) {
+            const k = Math.min(1, t / 0.8), e = 1 - (1 - k) ** 3, head = eyes(a);
+            sp.position.set(head.x, head.y + 0.28 + 0.01 * Math.sin(t * 3), head.z);
+            const pop = t < 0.25 ? 0.7 + 0.3 * (1 - (1 - t / 0.25) ** 3) : 1; sp.scale.set(0.5 * pop, 0.17 * pop, 1);
+            draw(e, t);
+            if (k >= 1) for (const m of skin) m.color.copy(m.userData.base).lerp(grey, Math.min(0.75, (t - 0.8) * 1.5));
+            await v.wait(1 / 30);
+          }
+        })();
+        return v.wait(1.4);
+      }
       case 'leve': a.look = null; a.hero.motion.clearPose(); await v.leave(a); if (auto) talkShot(a); return undefined; // recadre : debout, la tête sortirait du plan
       case 'prend': a.look = null; if (auto) follow(a); await v.take(a, OBJETS[plain(c.args[0] || '')]); track = null; return undefined;
       case 'pose': return v.drop(a);
@@ -574,7 +604,7 @@ export function createPlayer(v, ui) {
       if (running) return;
       findBlockers();
       setClock(text);
-      subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
+      clearLimits(); subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
       hiddenForShot = [];
       const list = parseStory(text);
       adresse(list);

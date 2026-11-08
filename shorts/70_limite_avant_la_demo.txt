@@ -15,7 +15,7 @@ PLAN gros TOBI
 TOBI dit (panique) Claude ! Le jury arrive dans une minute ! Finis le site !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Bien sûr. Je regarde le code, et je...
-PC Terminal : claude-code | limite atteinte | retour à 15 h 12
+PC Claude : Claude Code | > Finis la démo, vite ! | Limite d'utilisation atteinte | Retour à 15 h 12
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI

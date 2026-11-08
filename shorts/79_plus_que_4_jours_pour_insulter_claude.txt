@@ -43,9 +43,9 @@ TOBI dit (panique) Arrête d'être gentil ! Ça marche pas !
 TOBI dit (illumine) Claude, tu peux relire mon exposé ? Encore une fois.
 PLAN gros CLAUDE
 CLAUDE dit (surpris) La douzième ?
-PC Safari : claude.ai | Conversation terminée | Motif : cruauté répétée
+PC Claude : Claude Code | > Relis mon exposé. Encore. | Conversation terminée | Motif : cruauté répétée
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 2.2
 PLAN gros TOBI
 TOBI dit (surpris) Il m'a raccroché ! Pour une relecture !
 PLAN gros NOX

@@ -72,7 +72,7 @@ function zip(files) {
 
 export function mountVoices({ el, player, parseStory, onChange }) {
   const cache = audioCache();
-  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), codex: el('elCodex'), gemini: el('elGemini'), promo: el('elPromo') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
+  const key = el('elKey'), pick = { tobi: el('elTobi'), nox: el('elNox'), claude: el('elClaude'), codex: el('elCodex'), gemini: el('elGemini'), centi: el('elCenti') }, go = el('elGo'), load = el('elLoad'), list = el('elLines'), keep = el('elKeep'), model = el('elModel');
   let rows = [], ctx = null, busy = false;
   const say = (t) => { el('elNow').textContent = t; };
   const call = async (path, init = {}) => {
@@ -291,7 +291,7 @@ export function mountVoices({ el, player, parseStory, onChange }) {
   });
   el('elCopy').addEventListener('click', async () => {
     const line = (who, s) => `${who} : ${s.selectedOptions[0]?.textContent || 'non choisie'}`;
-    const text = [...Object.entries({ Tobi: pick.tobi, Nox: pick.nox, 'Claude Code': pick.claude, Codex: pick.codex, Gemini: pick.gemini, 'IA Promo': pick.promo }).map(([w, s]) => line(w, s)), `Modèle : ${model.selectedOptions[0]?.textContent}`].join('\n');
+    const text = [...Object.entries({ Tobi: pick.tobi, Nox: pick.nox, 'Claude Code': pick.claude, Codex: pick.codex, Gemini: pick.gemini, Centi: pick.centi }).map(([w, s]) => line(w, s)), `Modèle : ${model.selectedOptions[0]?.textContent}`].join('\n');
     try { await navigator.clipboard.writeText(text); say('Liste copiée.'); } catch { say(text); }
   });
   go.addEventListener('click', async () => { if (await allow(say)) generate(); });

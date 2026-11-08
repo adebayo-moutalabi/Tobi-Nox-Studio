@@ -229,13 +229,13 @@ export const GEMINI = {
   },
 };
 
-// ---- Promo : l'IA à trente centimes. Un petit mochi gourmand, inventé pour la série ----
-// Une boule moelleuse vert menthe, joues roses, grands yeux brillants, une antenne et une casquette « PROMO » de travers.
+// ---- Centi : l'IA à trente centimes. Un petit mochi gourmand, inventé pour la série ----
+// Une boule moelleuse vert menthe, joues roses, grands yeux brillants, une antenne et une casquette à son nom, de travers.
 // Elle s'écrase et rebondit comme une pâte molle quand elle parle.
-export const PROMO = {
+export const CENTI = {
   pivot: 0.4, shoulder: (s) => new THREE.Vector3(s * 0.26, 0.36, 0.1), armLen: 0.15, legY: 0.13, legX: 0.1, footY: 0.06, eyeY: 0.58,
   build({ bones }) {
-    const mint = new THREE.MeshStandardMaterial({ color: '#a8ecc9', roughness: 0.75 }); mint.name = 'promo';
+    const mint = new THREE.MeshStandardMaterial({ color: '#a8ecc9', roughness: 0.75 }); mint.name = 'centi';
     const logo = new THREE.Group(); logo.position.y = 0.17; bones.head.add(logo);
     const body = solid(new THREE.Mesh(new THREE.SphereGeometry(0.3, 40, 28), mint)); body.scale.set(1.08, 0.8, 0.9); logo.add(body);
     const face = new THREE.Group(); logo.add(face); // visage collé au ventre du mochi
@@ -254,7 +254,7 @@ export const PROMO = {
     const visor = solid(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.012, 24, 1, false, -Math.PI / 2, Math.PI), red)); visor.position.set(0, 0.005, 0.09); cap.add(visor);
     if (typeof document !== 'undefined') {
       const c = document.createElement('canvas'); c.width = 192; c.height = 64; const g = c.getContext('2d');
-      g.fillStyle = '#fff'; g.font = '900 46px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('PROMO', 96, 36);
+      g.fillStyle = '#fff'; g.font = '900 46px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('CENTI', 96, 36);
       const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
       const label = new THREE.Mesh(new THREE.PlaneGeometry(0.17, 0.057), new THREE.MeshBasicMaterial({ map: tex, transparent: true, toneMapped: false }));
       label.position.set(0, 0.07, 0.135); label.rotation.x = -0.45; cap.add(label);

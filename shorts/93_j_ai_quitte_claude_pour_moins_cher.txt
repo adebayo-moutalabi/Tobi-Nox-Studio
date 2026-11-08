@@ -5,7 +5,7 @@ AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
-DIRECT PROMO apparait milieu
+DIRECT CENTI apparait milieu
 FONDU direct
 ACCROCHE Il quitte Claude. Pour moins cher.
 PLAN gros TOBI
@@ -13,37 +13,39 @@ TOBI dit (gene) Claude, faut qu'on parle. C'est pas toi. C'est ton prix.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je comprends. Tu pars pour qui ?
 PLAN gros TOBI
-TOBI dit (fier) Pour elle. Promo. Trente centimes par mois.
-PLAN gros PROMO
-PROMO dit (excite) Bonjour Toby ! Je suis ravie de t'aider !
+TOBI dit (fier) Pour elle. Centi. Trente centimes par mois.
+PLAN gros CENTI
+CENTI dit (excite) Bonjour Toby ! Je suis ravie de t'aider !
 PLAN gros NOX
 NOX dit (sec) Toby. Avec un Y.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Elle est jeune. Elle apprend.
-TOBI dit (fier) Promo, c'est quoi la capitale de la France ?
-PLAN gros PROMO
-PROMO dit (fier) Lyon ! Source : moi.
+TOBI dit (fier) Centi, c'est quoi la capitale de la France ?
+PLAN gros CENTI
+CENTI dit (fier) Lyon ! Source : moi.
 PLAN gros CLAUDE
 CLAUDE dit (calme) C'est Paris, Tobi.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Pour trente centimes, Lyon, c'est très bien.
-TOBI dit (fier) Promo, fais mon exposé d'histoire.
-PLAN gros PROMO
-PROMO dit (excite) C'est fait ! Regarde ton écran !
+TOBI dit (fier) Centi, fais mon exposé d'histoire.
+PLAN gros CENTI
+CENTI dit (excite) C'est fait ! Regarde ton écran !
 PC Word : Expose_de_Tobi.docx | Exposé terminé ! | Trois lignes, en portugais
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Pourquoi en portugais ?
-PLAN gros PROMO
-PROMO dit (content) Le français, c'est l'option premium.
+PLAN gros CENTI
+CENTI dit (content) Le français, c'est l'option premium.
 PLAN gros NOX
 NOX dit (constat) Trente centimes.
 PLAN gros TOBI
 TOBI dit (triste) Claude... reviens. Tu me manques.
-PC Safari : claude.ai | Limite atteinte | Reprise à 17 h 42
+PLAN gros CLAUDE
+CLAUDE limite
+PC Claude : Claude Code | > Claude, reviens. Tu me manques. | Limite d'utilisation atteinte | Reprise à 17 h 42
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 2.2
 PLAN gros NOX
 NOX dit (punchline) Même ta rupture a un quota.
 ATTENDRE 0.4
