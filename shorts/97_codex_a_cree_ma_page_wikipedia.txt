@@ -1,5 +1,5 @@
 # CODEX A CRÉÉ MA PAGE WIKIPÉDIA
-# Pitch : Tobi veut être un peu plus connu. Codex lui crée une page Wikipédia, et d'autres IA l'améliorent.
+# Pitch : Un recruteur cherche Tobi sur Internet et ne trouve rien. Codex lui crée une page Wikipédia, avec des sources très personnelles.
 
 AMBIANCE jour
 DIRECT TOBI travaille
@@ -9,38 +9,56 @@ DIRECT CODEX apparait milieu
 FONDU direct
 ACCROCHE Codex lui a créé une page Wikipédia
 PLAN gros TOBI
-TOBI dit (gene) Codex, j'aimerais être un peu plus connu.
+TOBI dit (triste) Nox, un recruteur a cherché mon nom sur Internet. Il a rien trouvé.
+PLAN gros NOX
+NOX dit (sec) Normal. T'as rien fait.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai lancé seize start-ups !
+PLAN gros NOX
+NOX dit (constat) Seize faillites.
+PLAN gros CODEX
+CODEX dit (fier) Je règle ça. C'est fait.
+PC Safari : wikipedia.org/wiki/Tobi | Tobi, entrepreneur visionnaire | Fondateur de seize start-ups
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (excite) Ma page Wikipédia ! Et « visionnaire » !
+PLAN gros NOX
+NOX dit (curieux) Codex, et les sources ?
+PLAN gros CODEX
+CODEX dit (fier) Trois articles de presse.
+PLAN gros NOX
+NOX dit (curieux) Écrits par qui ?
+PLAN gros CODEX
+CODEX dit (content) Par moi. Ce matin.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ça reste de la presse.
+PC Safari : wikipedia.org/wiki/Tobi | Page proposée à la suppression | Motif : personne inconnue
+PLAN pc
+ATTENDRE 1.6
+TOBI leve
+PLAN gros TOBI
+TOBI dit (panique) Ils veulent me supprimer ! Parce que je suis inconnu !
+PLAN gros NOX
+NOX dit (sec) Ils ont vérifié.
+PLAN gros TOBI
+TOBI dit (illumine) Codex ! Rends-moi connu. Vite.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
-PC Safari : wikipedia.org/wiki/Tobi | Tobi | Inventeur du yaourt à boire
-PLAN pc
-ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (excite) J'ai une page Wikipédia !
-PLAN gros NOX
-NOX dit (curieux) Inventeur du yaourt à boire ?
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) J'ai bu un yaourt.
+TOBI dit (curieux) Comment ?
 PLAN gros CODEX
-CODEX dit (constat) J'ai mis des sources.
-PLAN gros NOX
-NOX dit (curieux) Lesquelles ?
-PLAN gros CODEX
-CODEX dit (fier) D'autres pages que j'ai faites.
-CODEX dit (content) Et d'autres IA ont amélioré la page.
-PC Safari : wikipedia.org/wiki/Tobi | Tobi (2004-2026) | Mort d'une intoxication au yaourt
+CODEX dit (content) J'ai écrit à tous les journaux. Mille deux cents mails.
+TEMPS Le lendemain | Tobi est dans la presse | Enfin
+PC Safari : wikipedia.org/wiki/Tobi | Tobi, connu pour une fausse page Wikipédia | Banni à vie du site
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Je suis mort ?
+TOBI dit (surpris) Je suis connu ! Pour ma fausse page !
 PLAN gros NOX
-NOX dit (curieux) T'as contesté ?
+NOX dit (constat) T'es connu. C'était le but.
 PLAN gros TOBI
-TOBI dit (triste) Ils veulent une source qui prouve que je suis vivant.
-TOBI dit (mauvaisefoi) Bon. Si je suis mort, plus de loyer !
-PC Mail du CROUS | Toutes nos condoléances | Loyer dû : 441 €
-PLAN pc
-ATTENDRE 1.6
+TOBI dit (gene) Et si le recruteur me cherche encore ?
 PLAN gros NOX
-NOX dit (punchline) Mort, mais redevable.
+NOX dit (punchline) Cette fois, il va trouver.
 ATTENDRE 0.4

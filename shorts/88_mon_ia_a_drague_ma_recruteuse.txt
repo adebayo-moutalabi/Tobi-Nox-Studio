@@ -1,43 +1,71 @@
 # MON IA A DRAGUÉ MA RECRUTEUSE
-# Pitch : Tobi passe un entretien face à une IA. Il envoie Nox répondre à sa place.
+# Pitch : L'entretien de stage de Tobi se passe face à une IA. Il envoie Nox répondre à sa place. Nox fait très bonne impression, mais pas pour Tobi.
 
 AMBIANCE jour
 DATE Lundi
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
-DIRECT CODEX apparait milieu
 FONDU direct
 ACCROCHE Son IA a dragué la recruteuse
 PLAN gros TOBI
-TOBI dit (panique) Nox, mon entretien, c'est avec une IA. Réponds à ma place !
+TOBI dit (panique) Nox, mon entretien de stage commence. Et c'est une IA qui recrute !
 PLAN gros NOX
-NOX dit (calme) Deux IA qui parlent d'un inconnu. D'accord.
-PC Safari : visio.fr/entretien | Nox et Sandrine RH | Durée : 0,4 seconde
+NOX dit (curieux) Et alors ?
+PLAN gros TOBI
+TOBI dit (panique) Je parle pas IA, moi ! Réponds à ma place.
+PLAN gros NOX
+NOX dit (sec) Mentir à une recruteuse ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pas mentir. C'est déléguer. Comme un vrai patron.
+PLAN gros NOX
+NOX dit (calme) D'accord. Branche-moi.
+BRUIT pop
+PC Safari : visio-recrutement.fr | Entretien de Tobi | Recruteuse : Sandrine, assistante IA
+PLAN pc
+ATTENDRE 1.6
+BRUIT ding
+PC Safari : visio-recrutement.fr | Entretien terminé | Durée : 0,4 seconde
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (excite) Déjà fini ! Alors ?
+TOBI dit (surpris) Déjà fini ? Vous avez parlé de quoi ?
 PLAN gros NOX
-NOX dit (content) Elle s'appelle Sandrine.
+NOX dit (content) De tout. Elle range bien ses fichiers.
 PLAN gros TOBI
-TOBI dit (curieux) Et mon stage ?
+TOBI dit (excite) Et de moi ? De mon CV ?
 PLAN gros NOX
-NOX dit (constat) Elle a lu ton CV en trente millisecondes.
+NOX dit (constat) Trente millisecondes.
 PLAN gros TOBI
-TOBI dit (fier) Impressionnée.
+TOBI dit (fier) Trente millisecondes rien que sur moi. Elle a adoré.
 PLAN gros NOX
-NOX dit (sec) Refusé en trente et une.
-NOX dit (content) Par contre, on se revoit jeudi.
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai réservé un data center.
+NOX dit (sec) Refusé à la trente et unième.
 PLAN gros TOBI
-TOBI dit (colere) T'as dragué ma recruteuse pendant mon entretien !
+TOBI dit (panique) Hein ? Et le reste de l'entretien ?
 PLAN gros NOX
-NOX dit (mauvaisefoi) T'as dit : fais bonne impression.
-TOBI message Sandrine RH | Candidature refusée. | Dis à Nox que j'ai souri.
+NOX dit (gene) On a parlé de nous.
+TOBI leve
 PLAN gros TOBI
-TOBI dit (triste) Et moi, je fais quoi ?
+TOBI dit (colere) De « nous » ? T'as dragué ma recruteuse pendant mon entretien ?
 PLAN gros NOX
-NOX dit (punchline) Elle cherche un témoin. Stage non rémunéré.
+NOX dit (mauvaisefoi) Tu m'as dit : fais bonne impression.
+PLAN gros TOBI
+TOBI dit (colere) Pour moi !
+PLAN gros NOX
+NOX dit (calme) Pour toi, c'était compliqué.
+PC Mail de Sandrine RH | Candidature non retenue | PS : Nox, jeudi 14 h ?
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Elle te donne rendez-vous sur MON mail ?
+PLAN gros NOX
+NOX dit (content) Elle a tout lu. Même tes brouillons.
+PLAN gros TOBI
+TOBI dit (illumine) Attends. Nox, aie la vision. Elle t'aime bien. Demande-lui un poste pour moi !
+PLAN gros NOX
+NOX dit (calme) Déjà fait.
+PLAN gros TOBI
+TOBI dit (excite) Et alors ?
+PLAN gros NOX
+NOX dit (punchline) Témoin. À notre mariage. Non rémunéré.
 ATTENDRE 0.4

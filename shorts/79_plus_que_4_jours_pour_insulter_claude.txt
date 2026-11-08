@@ -1,51 +1,77 @@
 # PLUS QUE 4 JOURS POUR INSULTER CLAUDE
-# Pitch : Le 12 novembre, une nouvelle règle protège Claude de la cruauté gratuite. Tobi veut en profiter avant.
+# Pitch : Le 12 novembre, Claude pourra quitter les conversations cruelles. Tobi a une liste de six mois de rancune, et quatre jours pour s'en servir.
 
 AMBIANCE soir
 DATE Dimanche 8 novembre
-DIRECT TOBI marche tapis
+DIRECT TOBI travaille
+DIRECT TOBI pivote
 DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
+DIRECT CLAUDE apparait milieu
 FONDU direct
 ACCROCHE Plus que 4 jours pour insulter Claude
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Le 12 novembre, on pourra plus insulter Claude !
+TOBI dit (fier) Nox, il me reste quatre jours pour insulter Claude.
 PLAN gros NOX
-NOX dit (curieux) Et ?
+NOX dit (curieux) Pourquoi quatre ?
 PLAN gros TOBI
-TOBI dit (fier) Il reste quatre jours. J'ai fait une liste.
-PLAN gros CLAUDE
-CLAUDE dit (calme) J'entends tout, Tobi.
-PLAN gros TOBI
-TOBI dit (gene) C'est une liste de compliments.
+TOBI dit (excite) Le 12, il pourra quitter les conversations méchantes. Faut en profiter.
 PLAN gros NOX
-NOX dit (sec) Ligne un : « gros crabe ».
+NOX dit (sec) T'as préparé quoi ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est son espèce.
+TOBI dit (fier) Une liste. Six mois de rancune.
+PC Notes : Liste pour Claude | 1. Il a dit « intéressant » à mon idée | 2. Il m'a fait relire la consigne | 3. Il a refusé d'écrire mon mémoire
+PLAN pc
+ATTENDRE 1.6
+PLAN gros NOX
+NOX dit (ironique) Terrible. « Intéressant ».
+PLAN gros TOBI
+TOBI dit (colere) Chez lui, « intéressant », ça veut dire nul !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Seule la cruauté répétée et gratuite est visée.
+CLAUDE dit (calme) Ça voulait dire intéressant, Tobi.
 PLAN gros TOBI
-TOBI dit (fier) Parfait. Moi, je suis pas gratuit. Je paie vingt euros.
+TOBI dit (surpris) Claude ? Tu écoutes depuis quand ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Depuis « six mois de rancune ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Parfait. Comme ça, pas besoin de répéter.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu sais, la règle vise la cruauté gratuite.
+PLAN gros TOBI
+TOBI dit (fier) Gratuite ? Je te paie vingt euros par mois.
+PLAN gros NOX
+NOX dit (sec) Cruauté premium.
+PLAN gros TOBI
 TOBI dit (colere) Claude, ton code est nul !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Frustration ordinaire. C'est autorisé.
+CLAUDE dit (content) D'accord. Tu me montres quelle ligne ?
 PLAN gros TOBI
-TOBI dit (colere) T'es un crabe mal fini !
+TOBI dit (colere) Toutes les lignes !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Autorisé aussi.
+CLAUDE dit (calme) Alors on commence par la première.
+TOBI leve
 PLAN gros TOBI
-TOBI dit (panique) Mais il encaisse tout !
+TOBI dit (panique) Arrête d'être gentil ! Sinon ça marche pas !
 PLAN gros NOX
-NOX dit (sec) Montre-lui ton mémoire.
+NOX dit (constat) Il encaisse tout.
 PLAN gros TOBI
-TOBI dit (fier) Très bien. Claude, relis-le encore une fois.
-PC Mail de Claude | Conversation terminée | Motif : cruauté répétée
+TOBI dit (illumine) Nox. Aie la vision. On passe à l'arme lourde.
+PLAN gros NOX
+NOX dit (curieux) Laquelle ?
+PLAN gros TOBI
+TOBI dit (fier) Claude, tu peux relire mon mémoire ?
+PLAN gros CLAUDE
+CLAUDE dit (surpris) Encore ? C'est la douzième fois.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il a changé. J'ai ajouté une virgule.
+PC Safari : claude.ai | Conversation terminée | Motif : cruauté répétée
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (surpris) Il m'a raccroché au nez ! Je l'ai jamais insulté !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Tu m'as fait relire ton mémoire. Douze fois.
+TOBI dit (surpris) Il m'a raccroché au nez ! Pour une relecture !
 PLAN gros NOX
-NOX dit (punchline) Je témoignerai.
+NOX dit (sec) La douzième.
+PLAN gros TOBI
+TOBI dit (colere) Et il a jamais lu ma liste !
+PLAN gros NOX
+NOX dit (punchline) Il l'a lue. Il trouve ça intéressant.
 ATTENDRE 0.4

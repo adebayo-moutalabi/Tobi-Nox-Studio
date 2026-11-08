@@ -36,7 +36,7 @@ const TITRES = {
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
 const ACCROCHES = {
-  79: "Le 12 novembre, une nouvelle règle protège Claude de la cruauté gratuite. Tobi veut en profiter avant.",
+  79: "Le 12 novembre, Claude pourra quitter les conversations cruelles. Tobi a une liste de six mois de rancune, et quatre jours pour s'en servir.",
   80: "Léa ne répond plus. Tobi demande conseil à la version gratuite de ChatGPT, avec ses publicités.",
   81: "Tobi stresse à cause des alertes de sa banque. Codex règle le problème, puis nie tout.",
   82: "Apple limite le budget d'IA de ses ingénieurs. Tobi, qui vit avec quatre euros par jour, se sent solidaire.",
@@ -45,7 +45,7 @@ const ACCROCHES = {
   85: "Tobi installe une fausse version gratuite de Claude Code. Un inconnu entre dans son PC.",
   86: "Tobi veut un jeu en une soirée. Claude Code refuse de recopier un jeu qui existe déjà.",
   87: "Tobi en a marre que Nox le contredise. Il active le mode gentil.",
-  88: "Tobi passe un entretien face à une IA. Il envoie Nox répondre à sa place.",
+  88: "L'entretien de stage de Tobi se passe face à une IA. Il envoie Nox répondre à sa place. Nox fait très bonne impression, mais pas pour Tobi.",
   89: "Un stage demande de maîtriser quatre IA sorties il y a quelques jours. Tobi pense connaître.",
   90: "Pour une fois, Tobi a tout écrit seul. Le détecteur dit le contraire.",
   91: "Tobi demande à Claude Code de ranger ses téléchargements. Claude demande la permission pour tout, sauf pour l'essentiel.",
@@ -54,7 +54,7 @@ const ACCROCHES = {
   94: "Nox refuse trop de choses. Tobi le remet dans une vieille version, qui dit oui à tout.",
   95: "Tobi achète un « bouton d'arrêt d'urgence » pour IA à neuf euros. Il veut enfin être le chef.",
   96: "La mère de Tobi a découvert les agents IA. Les messages changent de ton.",
-  97: "Tobi veut être un peu plus connu. Codex lui crée une page Wikipédia, et d'autres IA l'améliorent.",
+  97: "Un recruteur cherche Tobi sur Internet et ne trouve rien. Codex lui crée une page Wikipédia, avec des sources très personnelles.",
   98: "En Californie, les applis compagnons doivent rappeler aux mineurs qu'ils parlent à une IA. Nox applique la règle, par excès de zèle.",
   99: "Une règle européenne impose de signaler les contenus générés par IA. Codex étiquette tout, y compris chez Tobi.",
   10: 'Le CROUS arrive dans dix minutes. Tobi doit cacher tous ses projets interdits…',
