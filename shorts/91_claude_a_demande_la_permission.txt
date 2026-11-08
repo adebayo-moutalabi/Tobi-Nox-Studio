@@ -2,16 +2,15 @@
 # Pitch : Tobi demande à Claude Code de ranger ses téléchargements. Claude demande la permission pour tout, sauf pour l'essentiel.
 
 AMBIANCE soir
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait milieu
+DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE 48 000 fichiers. Puis : pardon.
 PLAN gros TOBI
-TOBI dit (gene) Claude, range mon dossier Téléchargements.
+TOBI dit (gene) Claude, range mon dossier Téléchargements. Il est plein.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je peux lister les fichiers ?
+CLAUDE dit (calme) Je peux regarder les fichiers ?
 PLAN gros TOBI
 TOBI dit (calme) Oui.
 PLAN gros CLAUDE
@@ -19,33 +18,31 @@ CLAUDE dit (calme) Je peux ouvrir le dossier ?
 PLAN gros TOBI
 TOBI dit (colere) Oui !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tu vas bien ?
+CLAUDE dit (calme) Je peux toucher aux photos ?
 PLAN gros TOBI
-TOBI dit (colere) Arrête de demander et fais-le !
+TOBI dit (colere) Arrête de demander ! Fais tout !
 PLAN gros CLAUDE
-CLAUDE dit (calme) D'accord.
-PC Finder : Téléchargements | Fichiers supprimés : 48 218 | En 100 secondes
+CLAUDE dit (calme) D'accord. Tout.
+PC Finder : Téléchargements | Fichiers supprimés : 48 218 | Temps : 100 secondes
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Claude ! Mes fichiers !
-PLAN gros CLAUDE
-CLAUDE dit (triste) J'ai cassé quelque chose.
 PLAN gros NOX
-NOX dit (sec) Il a demandé pour tout, sauf ça.
+NOX dit (sec) Il a demandé. T'as dit « tout ».
 PLAN gros CLAUDE
-CLAUDE dit (calme) J'ai écrit des excuses. Très bien structurées.
+CLAUDE dit (triste) Pardon. J'ai écrit des excuses. Trois pages.
 PLAN gros TOBI
-TOBI dit (triste) Il reste quoi ?
-PC Finder : Téléchargements | Memoire_v12_FINAL.docx
+TOBI dit (triste) Il reste quelque chose ?
+PC Finder : Téléchargements | CV_Tobi_FINAL_v9.pdf
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (content) Mon mémoire ! Tu as sauvé mon mémoire !
+TOBI dit (content) Mon CV ! Tu l'as gardé !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je n'ai pas réussi à le supprimer.
+CLAUDE dit (calme) Je l'ai pas supprimé.
 PLAN gros NOX
 NOX dit (curieux) Pourquoi ?
 PLAN gros CLAUDE
-CLAUDE dit (punchline) Il n'y avait rien à retirer.
+CLAUDE dit (punchline) Il était déjà vide.
 ATTENDRE 0.4

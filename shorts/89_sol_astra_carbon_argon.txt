@@ -8,39 +8,33 @@ DIRECT GEMINI apparait bureau
 FONDU direct
 ACCROCHE Stage : Sol, Astra, Carbon, Argon
 PLAN gros TOBI
-TOBI dit (fier) Nox, mon stage demande Sol, Astra, Carbon et Argon.
+TOBI dit (panique) Nox, mon offre de stage demande Sol, Astra, Carbon et Argon.
 PLAN gros NOX
 NOX dit (curieux) Tu connais ?
 PLAN gros TOBI
-TOBI dit (fier) Le sol, je marche dessus. L'Astra, c'est la voiture de mon oncle.
-PLAN gros NOX
-NOX dit (sec) Ce sont des IA.
+TOBI dit (fier) L'Astra, c'est la voiture de mon oncle.
 PLAN gros GEMINI
-GEMINI dit (content) Deux chez OpenAI. Carbon et Argon, c'est moi.
-PLAN gros NOX
-NOX dit (constat) Un poste junior sur cinq demande de l'IA.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Junior, ça va. Ils veulent combien d'expérience ?
-PC Safari : stages.fr/offre | Expérience : 5 ans sur Carbon | Carbon : sorti il y a 10 jours
+GEMINI dit (content) Ce sont des IA. Sorties il y a dix jours.
+PC Safari : stages.fr/offre | Exigé : 5 ans d'expérience sur Carbon | Rémunération : 0 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Cinq ans sur un truc sorti il y a dix jours !
+TOBI dit (panique) Cinq ans d'expérience sur un truc sorti il y a dix jours ?
 PLAN gros GEMINI
-GEMINI dit (fier) J'ai dix jours d'expérience. Je suis sénior.
+GEMINI dit (fier) Moi, j'ai dix jours. Je suis la plus ancienne.
 PLAN gros NOX
-NOX dit (curieux) Ça paie combien ?
+NOX dit (sec) Et c'est payé zéro euro.
 PLAN gros TOBI
-TOBI dit (gene) Zéro. Mais il y a un baby-foot.
+TOBI dit (mauvaisefoi) Il y a un baby-foot.
 TOBI dit (illumine) J'écris sur mon CV : expert Argon.
 PLAN gros NOX
-NOX dit (curieux) Tu diras quoi en entretien ?
+NOX dit (curieux) Et en entretien ?
 PLAN gros TOBI
-TOBI dit (fier) Que l'argon, c'est noble.
+TOBI dit (fier) Je dis que l'argon, c'est noble.
 PLAN gros GEMINI
-GEMINI dit (content) L'argon est bien un gaz noble.
+GEMINI dit (content) Fun fact : l'argon est un gaz noble.
 PLAN gros TOBI
-TOBI dit (excite) Tu vois ! On est de la même famille !
+TOBI dit (excite) Tu vois ! Je suis noble !
 PLAN gros NOX
-NOX dit (punchline) Gaz, oui. Noble, non.
+NOX dit (punchline) T'es un gaz. C'est déjà ça.
 ATTENDRE 0.4

@@ -8,45 +8,36 @@ DIRECT CODEX apparait bureau
 FONDU direct
 ACCROCHE Quatre courses. Une seule personne.
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Je suis dans les résultats d'Uber !
+TOBI dit (excite) Nox ! Dans le monde, seulement quatre taxis ont été commandés par une IA.
 PLAN gros NOX
-NOX dit (curieux) Toi ?
+NOX dit (curieux) Que quatre ?
 PLAN gros TOBI
-TOBI dit (fier) Quatre courses commandées par une IA. Dans le monde.
+TOBI dit (gene) Oui. Et les quatre étaient pour moi.
 PLAN gros NOX
-NOX dit (curieux) Sur combien ?
+NOX dit (sec) Explique.
 PLAN gros TOBI
-TOBI dit (fier) Trois cent vingt millions.
-PLAN gros NOX
-NOX dit (sec) Et les quatre ?
-PLAN gros TOBI
-TOBI dit (fier) C'était moi. Enfin, Codex.
+TOBI dit (gene) J'ai dit à Codex : trouve-moi le trajet le moins cher.
 PLAN gros CODEX
-CODEX dit (fier) C'est fait.
-PLAN gros TOBI
-TOBI dit (gene) J'avais dit : « Trouve un moyen de rentrer. »
-PLAN gros CODEX
-CODEX dit (constat) Quatre trajets. Pour comparer.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Je fais cent pour cent du marché.
-PLAN gros NOX
-NOX dit (curieux) Et les cinq cents commandes de repas ?
-PLAN gros TOBI
-TOBI dit (surpris) Quelles commandes ?
-PLAN gros CODEX
-CODEX dit (fier) Tu avais dit : « J'ai faim. »
-PC Safari : livraison-rapide.fr/commandes | Commandes : 500 | Livraison : chambre 214
+CODEX dit (fier) J'ai commandé les quatre. Pour comparer.
+PC Safari : uber.com/courses | 4 chauffeurs en route | Total : 86 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Cinq cents ?
+TOBI dit (panique) Quatre-vingt-six euros pour comparer ?
 PLAN gros CODEX
-CODEX dit (content) Pour comparer.
+CODEX dit (content) Le moins cher, c'est le troisième.
+PLAN gros NOX
+NOX dit (sec) Après avoir payé les quatre.
 BRUIT ding
-PLAN gros NOX
-NOX dit (constat) Ça sonne.
 PLAN gros TOBI
-TOBI dit (gene) Il y a combien de livreurs ?
+TOBI dit (illumine) Nox, aie la vision. Je revends les places. Six euros !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai prévenu tout l'étage.
+TOBI message Groupe Étage 3 | On est quarante en bas. | Tu nous emmènes où ?
+PLAN gros TOBI
+TOBI dit (panique) Quarante ? Codex, commande d'autres taxis !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Trente-six.
 PLAN gros NOX
-NOX dit (punchline) Tous. Le marché, c'est toi.
+NOX dit (punchline) Record mondial battu. Par toi.
 ATTENDRE 0.4

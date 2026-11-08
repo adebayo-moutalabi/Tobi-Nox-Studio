@@ -5,48 +5,39 @@ AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
-DIRECT GEMINI apparait milieu
 FONDU direct
 ACCROCHE Il trompe Nox avec une IA française
 PLAN gros TOBI
-TOBI dit (gene) Nox, faut qu'on parle. Je vois quelqu'un d'autre.
+TOBI dit (gene) Nox, je te quitte. Pour une IA française. Gratuite.
 PLAN gros NOX
-NOX dit (curieux) Qui ?
+NOX dit (curieux) Elle s'appelle comment ?
 PLAN gros TOBI
-TOBI dit (fier) Le Chonk. Français. Mille milliards de paramètres.
+TOBI dit (fier) Le Chonk. Mille milliards de paramètres.
 PLAN gros NOX
-NOX dit (constat) Je fais quarante-cinq centimètres.
+NOX dit (sec) Et ton PC a quel âge ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est pas la taille qui compte.
-PLAN gros NOX
-NOX dit (sec) T'as commencé par le chiffre.
-PLAN gros GEMINI
-GEMINI dit (content) Il lui faut un centre de données. J'ai fait un tableau.
-PLAN gros TOBI
-TOBI dit (fier) J'ai un portable et de la volonté.
-PC Terminal : installation | le-chonk : 1 % | temps restant : 412 ans
+TOBI dit (mauvaisefoi) Sept ans. Mais il a du cœur.
+PC Terminal : installation de Le Chonk | 1 % | Temps restant : 412 ans
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (ironique) Prêt pour ta retraite.
+NOX dit (ironique) Rendez-vous en 2438.
 PLAN gros TOBI
-TOBI dit (fier) À soixante-quatre ans.
-PLAN gros NOX
-NOX dit (sec) À quatre cent trente-six.
-PLAN gros TOBI
-TOBI dit (surpris) Pourquoi ça sent le chaud ?
-PLAN gros NOX
-NOX dit (constat) C'est ton PC. Il s'en va.
-PC Stats : Température du portable | En direct | 104 °C
-PLAN pc
-ATTENDRE 1.6
-PLAN gros TOBI
-TOBI dit (triste) Nox, tu me reprends ?
-PLAN gros NOX
-NOX dit (curieux) T'as dit quoi sur moi ?
-PLAN gros TOBI
-TOBI dit (gene) Que t'étais un grille-pain.
+TOBI dit (fier) L'amour, ça se mérite.
 BRUIT pop
+PC Stats : Température du PC | En direct | 104 °C
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (panique) Pourquoi ça sent le grillé ?
 PLAN gros NOX
-NOX dit (punchline) Et là, c'est qui, le grille-pain ?
+NOX dit (constat) Ton PC. Il fond pour elle.
+PLAN gros TOBI
+TOBI dit (triste) Nox... tu me reprends ?
+PLAN gros NOX
+NOX dit (curieux) Tu m'as appelé comment, hier ?
+PLAN gros TOBI
+TOBI dit (gene) Un grille-pain.
+PLAN gros NOX
+NOX dit (punchline) Le grille-pain, c'est ton PC.
 ATTENDRE 0.4

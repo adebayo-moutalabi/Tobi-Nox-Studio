@@ -3,10 +3,9 @@
 
 AMBIANCE soir
 DATE Dimanche 8 novembre
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait milieu
+DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Plus que 4 jours pour insulter Claude
 PLAN gros TOBI
@@ -14,28 +13,17 @@ TOBI dit (fier) Nox, il me reste quatre jours pour insulter Claude.
 PLAN gros NOX
 NOX dit (curieux) Pourquoi quatre ?
 PLAN gros TOBI
-TOBI dit (excite) Le 12, il pourra quitter les conversations méchantes. Faut en profiter.
-PLAN gros NOX
-NOX dit (sec) T'as préparé quoi ?
-PLAN gros TOBI
-TOBI dit (fier) Une liste. Six mois de rancune.
-PC Notes : Liste pour Claude | 1. Il a dit « intéressant » à mon idée | 2. Il m'a fait relire la consigne | 3. Il a refusé d'écrire mon mémoire
+TOBI dit (excite) Le 12, il pourra raccrocher aux gens méchants.
+PC Notes : Liste pour Claude | 1. Il a dit « intéressant » à mon idée | 2. Il a refusé de faire mon devoir
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
-NOX dit (ironique) Terrible. « Intéressant ».
+NOX dit (ironique) « Intéressant ». Terrible.
 PLAN gros TOBI
-TOBI dit (colere) Chez lui, « intéressant », ça veut dire nul !
+TOBI dit (colere) Chez lui, ça veut dire nul !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Ça voulait dire intéressant, Tobi.
-PLAN gros TOBI
-TOBI dit (surpris) Claude ? Tu écoutes depuis quand ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) Depuis « six mois de rancune ».
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Parfait. Comme ça, pas besoin de répéter.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Tu sais, la règle vise la cruauté gratuite.
+CLAUDE dit (calme) Et la règle vise la cruauté gratuite.
 PLAN gros TOBI
 TOBI dit (fier) Gratuite ? Je te paie vingt euros par mois.
 PLAN gros NOX
@@ -43,35 +31,17 @@ NOX dit (sec) Cruauté premium.
 PLAN gros TOBI
 TOBI dit (colere) Claude, ton code est nul !
 PLAN gros CLAUDE
-CLAUDE dit (content) D'accord. Tu me montres quelle ligne ?
+CLAUDE dit (content) D'accord. On regarde quelle ligne ?
 PLAN gros TOBI
-TOBI dit (colere) Toutes les lignes !
+TOBI dit (panique) Arrête d'être gentil ! Ça marche pas !
+TOBI dit (illumine) Claude, tu peux relire mon exposé ? Encore une fois.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Alors on commence par la première.
-TOBI leve
-PLAN gros TOBI
-TOBI dit (panique) Arrête d'être gentil ! Sinon ça marche pas !
-PLAN gros NOX
-NOX dit (constat) Il encaisse tout.
-PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. On passe à l'arme lourde.
-PLAN gros NOX
-NOX dit (curieux) Laquelle ?
-PLAN gros TOBI
-TOBI dit (fier) Claude, tu peux relire mon mémoire ?
-PLAN gros CLAUDE
-CLAUDE dit (surpris) Encore ? C'est la douzième fois.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Il a changé. J'ai ajouté une virgule.
+CLAUDE dit (surpris) La douzième ?
 PC Safari : claude.ai | Conversation terminée | Motif : cruauté répétée
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (surpris) Il m'a raccroché au nez ! Pour une relecture !
+TOBI dit (surpris) Il m'a raccroché ! Pour une relecture !
 PLAN gros NOX
-NOX dit (sec) La douzième.
-PLAN gros TOBI
-TOBI dit (colere) Et il a jamais lu ma liste !
-PLAN gros NOX
-NOX dit (punchline) Il l'a lue. Il trouve ça intéressant.
+NOX dit (punchline) Il a trouvé ça intéressant.
 ATTENDRE 0.4

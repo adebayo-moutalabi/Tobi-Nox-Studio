@@ -2,51 +2,41 @@
 # Pitch : Léa ne répond plus. Tobi demande conseil à la version gratuite de ChatGPT, avec ses publicités.
 
 AMBIANCE soir
-HEURE 22:10
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
 FONDU direct
 ACCROCHE Une pub en pleine rupture
 PLAN gros TOBI
-TOBI dit (triste) Nox, Léa m'a mis un vu. Je demande à ChatGPT.
+TOBI dit (triste) Nox, Léa m'a quitté. Et ChatGPT me vend des pizzas.
 PLAN gros NOX
-NOX dit (curieux) La version gratuite ?
-PLAN gros TOBI
-TOBI dit (fier) Bien sûr. L'amour n'a pas de prix.
-PC Safari : chatgpt.com | Courage, Tobi. | Sponsorisé : Célibat Express, -20 %
+NOX dit (curieux) Des pizzas ?
+PC Safari : chatgpt.com | Courage, Tobi. Le temps guérit tout. | Sponsorisé : Pizza Solo, -20 %
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (surpris) Pourquoi il me propose un site de rencontre ?
+TOBI dit (colere) Je pleure, et il me met une pub !
 PLAN gros NOX
-NOX dit (constat) Depuis août, il y a des pubs en France.
+NOX dit (constat) Version gratuite. T'es le produit.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est du ciblage. Il me connaît.
-PLAN gros NOX
-NOX dit (sec) Sans pub, c'est vingt-trois euros par mois.
-PLAN gros TOBI
-TOBI dit (panique) Par mois ? Mon cœur est en version gratuite !
-PLAN gros NOX
-NOX dit (sec) Comme le reste.
-PC Safari : chatgpt.com | Elle a besoin de temps | Sponsorisé : pâtes en gros, 10 kg
+TOBI dit (mauvaisefoi) Un produit triste, alors.
+TOBI dit (triste) Je lui demande comment la récupérer.
+PC Safari : chatgpt.com | Écris-lui un message sincère. | Sponsorisé : Bouquet express, 49 €
 PLAN pc
 ATTENDRE 1.6
-PLAN gros TOBI
-TOBI dit (surpris) Comment il sait, pour les pâtes ?
 PLAN gros NOX
-NOX dit (ironique) Tu lui as tout raconté.
+NOX dit (sec) Le chagrin, c'est rentable.
 PLAN gros TOBI
-TOBI dit (fier) Je lui écris. Copier, coller, envoyé.
+TOBI dit (fier) J'écris. Copier, coller, envoyé.
 PLAN gros NOX
 NOX dit (curieux) T'as relu ?
-TOBI message Léa | > [22:14] Je pense à toi. Sponsorisé : pâtes en gros, 10 kg | [22:15] C'est quoi ce message ?
+TOBI message Léa | > Tu me manques. Sponsorisé : Pizza Solo, -20 % | C'est quoi ce message ?
 PLAN gros TOBI
-TOBI dit (panique) Non !
+TOBI dit (panique) Non ! J'ai copié la pub !
 PLAN gros NOX
 NOX dit (constat) Elle écrit encore.
 PLAN gros TOBI
-TOBI dit (excite) Elle dit quoi ?
+TOBI dit (excite) Elle revient ?
 PLAN gros NOX
-NOX dit (punchline) Elle demande le code promo.
+NOX dit (punchline) Elle veut le code promo.
 ATTENDRE 0.4

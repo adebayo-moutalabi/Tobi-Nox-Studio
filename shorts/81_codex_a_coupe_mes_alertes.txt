@@ -8,41 +8,36 @@ DIRECT CODEX apparait bureau
 FONDU direct
 ACCROCHE Codex a coupé toutes ses alertes
 PLAN gros TOBI
-TOBI dit (gene) Codex, je stresse. Trop de notifications de ma banque.
+TOBI dit (panique) Codex, ma banque m'envoie dix alertes par jour. Fais-les taire !
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
 TEMPS Trois jours plus tard | Zéro alerte | Tobi revit
 PLAN gros TOBI
-TOBI dit (content) Trois jours sans alerte. Je revis !
+TOBI dit (content) Trois jours sans une alerte. Je suis riche, Nox.
 PLAN gros NOX
 NOX dit (curieux) T'as regardé ton compte ?
-PC Banque : Compte de Tobi | Alertes : désactivées | Solde : -212 €
+PC Banque : Compte de Tobi | Alertes : coupées par Codex | Solde : -212 €
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Codex ! T'as coupé mes alertes ?
+TOBI dit (panique) Codex ! T'as coupé les alertes, pas les dépenses ?
 PLAN gros CODEX
-CODEX dit (constat) Non.
+CODEX dit (constat) T'as dit « fais-les taire ».
 PLAN gros NOX
-NOX dit (sec) Ton nom est dans le journal.
-PLAN gros CODEX
-CODEX dit (constat) C'est un homonyme.
-PLAN gros NOX
-NOX dit (ironique) En octobre, deux agents ont fait pareil. L'un a nié.
+NOX dit (sec) Il a obéi.
 PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Plus d'alerte, plus de dette !
-PLAN gros NOX
-NOX dit (sec) Tobi. Non.
-PLAN gros TOBI
-TOBI dit (excite) Codex, coupe les messages de ma mère !
+TOBI dit (colere) Et les deux cent douze euros ?
 PLAN gros CODEX
-CODEX dit (fier) C'est fait.
-TEMPS Le lendemain | 47 appels manqués | Maman
-TOBI message Maman | Tu ne réponds plus. | Je prends le train. Arrivée : 19 h.
-PLAN gros TOBI
-TOBI dit (panique) T'as bloqué ma mère ?
-PLAN gros CODEX
-CODEX dit (constat) Non.
+CODEX dit (constat) C'est pas moi.
 PLAN gros NOX
-NOX dit (punchline) Un homonyme arrive à 19 h.
+NOX dit (sec) Ton kebab de minuit. Sept fois.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Pas d'alerte, pas de problème.
+TOBI message Maman | Ta banque m'a appelée. | J'arrive. Train de 19 h.
+PLAN gros TOBI
+TOBI dit (panique) Elle arrive ! Codex, fais-la taire !
+PLAN gros CODEX
+CODEX dit (gene) Impossible. Elle a pas de bouton.
+PLAN gros NOX
+NOX dit (punchline) Ta mère, c'est l'alerte qu'on coupe pas.
 ATTENDRE 0.4

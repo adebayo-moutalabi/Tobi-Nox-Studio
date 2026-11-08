@@ -3,39 +3,28 @@
 
 AMBIANCE soir
 DATE Mardi
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait milieu
+DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Claude refuse de cloner un jeu
 PLAN gros TOBI
-TOBI dit (excite) Claude, fais-moi un jeu. Un plombier saute sur des champignons.
+TOBI dit (excite) Claude, fais-moi un jeu. Un plombier qui saute sur des champignons.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Ce jeu existe déjà. Je ne peux pas le refaire.
+CLAUDE dit (calme) Ce jeu existe déjà. Je le copie pas.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Le mien a une moustache.
 PLAN gros NOX
 NOX dit (sec) Le sien aussi.
 PLAN gros TOBI
-TOBI dit (fier) Un électricien saute sur des courgettes.
+TOBI dit (fier) Alors un électricien. Il saute sur des courgettes.
 PLAN gros CLAUDE
 CLAUDE dit (curieux) Pourquoi des courgettes ?
 PLAN gros TOBI
-TOBI dit (fier) Elles lui ont fait du mal.
+TOBI dit (fier) Elles l'ont trahi.
 PLAN gros CLAUDE
-CLAUDE dit (content) Là, c'est original.
-PLAN gros NOX
-NOX dit (constat) C'est plus un jeu, c'est un signalement.
-PLAN gros TOBI
-TOBI dit (excite) Et à la fin, il sauve sa princesse !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Non.
-PLAN gros TOBI
-TOBI dit (excite) Son stage !
-PLAN gros CLAUDE
-CLAUDE dit (content) Autorisé.
-PC Safari : super-stagiaire.fr | Niveau 1 : trouver une convention | Boss final : le secrétariat
+CLAUDE dit (content) Ça, c'est original. Je le fais.
+PC Safari : super-stagiaire.fr | Niveau 1 : trouver une convention de stage | Boss final : le secrétariat
 PLAN pc
 ATTENDRE 1.6
 PLAN gros NOX
@@ -43,9 +32,20 @@ NOX dit (curieux) Le boss final ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) Le secrétariat. Fermé le mercredi.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Claude, rends-le plus fun.
+TOBI dit (excite) Et à la fin, il sauve la princesse !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Impossible sans copier un jeu.
+CLAUDE dit (calme) Déjà pris.
+PLAN gros TOBI
+TOBI dit (fier) Il sauve sa bourse !
+PLAN gros CLAUDE
+CLAUDE dit (content) Validé.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Je le vends à toute la fac.
+PC Stats : Super Stagiaire | Joueurs | 3
+PLAN pc
+ATTENDRE 1.6
+PLAN gros TOBI
+TOBI dit (gene) Trois. Dont ma mère.
 PLAN gros NOX
-NOX dit (punchline) Même l'IA te conseille le plagiat.
+NOX dit (punchline) Elle est bloquée au secrétariat.
 ATTENDRE 0.4

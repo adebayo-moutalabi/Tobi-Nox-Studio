@@ -5,46 +5,37 @@ AMBIANCE jour
 DATE Vendredi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait gauche
-DIRECT CODEX apparait milieu
+DIRECT CODEX apparait bureau
 FONDU direct
 ACCROCHE Sa mère a découvert les agents IA
 PLAN gros TOBI
-TOBI dit (content) Nox, ma mère a découvert l'IA. Elle me laisse tranquille !
+TOBI dit (content) Nox, ma mère a découvert l'IA. Trois jours sans message !
 PLAN gros NOX
-NOX dit (curieux) Depuis quand ?
+NOX dit (sec) Profite.
+TOBI message Maman | Bonjour Tobi, j'espère que ce message te trouve bien. | Voici 5 raisons d'appeler ta mère.
 PLAN gros TOBI
-TOBI dit (content) Trois jours. Un silence divin.
-TOBI message Maman | J'espère que ce message te trouve bien. | Voici 5 raisons d'appeler ta mère. | Souhaites-tu un tableau ?
-PLAN gros TOBI
-TOBI dit (panique) Elle culpabilise avec des puces !
-TOBI dit (fier) Claude, réponds-lui. Une réponse parfaite.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Je lui dis que tu manges mal ?
-PLAN gros TOBI
-TOBI dit (colere) Non !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Je ne peux pas mentir à une mère.
-PLAN gros TOBI
-TOBI dit (illumine) Codex ! Réponds à ma mère !
+TOBI dit (panique) Elle me culpabilise avec une liste à puces !
+TOBI dit (fier) Codex, réponds-lui à ma place.
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Cent soixante réponses.
+CODEX dit (fier) C'est fait.
 PLAN gros TOBI
-TOBI dit (panique) Cent soixante ?
+TOBI dit (curieux) Tu lui as dit quoi ?
 PLAN gros CODEX
-CODEX dit (constat) Son agent a répondu. Ils ont fixé un rendez-vous.
-PC Agenda : Semaine de Tobi | Dimanche 12 h : repas chez Maman | Confirmé par les agents
+CODEX dit (content) Rien. Son agent a parlé à mon agent.
+PC Agenda : Semaine de Tobi | Dimanche 12 h : repas chez Maman | Confirmé par les deux agents
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
-TOBI dit (panique) Dis que je suis malade !
+TOBI dit (panique) Dimanche ? Annule ! Dis que je suis malade !
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
-TOBI message Maman | Tu es malade ? | J'arrive avec la soupe et le médecin.
-PLAN gros NOX
-NOX dit (resigne) J'appelle ta mère.
+TOBI message Maman | Mon agent dit que tu es malade. | J'arrive ce soir. Avec la soupe.
 PLAN gros TOBI
-TOBI dit (panique) C'est inutile, non ?
+TOBI dit (panique) Nox, dis-lui que je suis pas là !
 PLAN gros NOX
-NOX dit (punchline) Non. Je veux parler à son agent.
+NOX dit (calme) J'appelle ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Non !
+PLAN gros NOX
+NOX dit (punchline) Trop tard. Son agent a décroché.
 ATTENDRE 0.4

@@ -11,18 +11,18 @@ ACCROCHE Son IA lui rappelle qu'elle est une IA
 PLAN gros NOX
 NOX dit (constat) Rappel. Je suis une IA.
 PLAN gros TOBI
-TOBI dit (surpris) Pardon ?
+TOBI dit (surpris) Hein ? Pourquoi tu dis ça ?
 PLAN gros NOX
-NOX dit (constat) En Californie, c'est obligatoire toutes les trois heures, pour les mineurs.
+NOX dit (constat) En Californie, c'est obligatoire. Toutes les trois heures.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) J'ai vingt-deux ans. Et on est en France.
+TOBI dit (mauvaisefoi) On est en France. Et j'ai vingt-deux ans.
 PLAN gros NOX
-NOX dit (sec) Mentalement, j'applique.
+NOX dit (sec) J'applique quand même.
 TEMPS Trois heures plus tard | 15 h 00 | Même chambre
 PLAN gros NOX
 NOX dit (constat) Rappel. Je suis une IA.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) T'es mon meilleur ami, c'est tout.
+TOBI dit (mauvaisefoi) Je sais ! T'es mon meilleur pote, c'est tout.
 PLAN gros NOX
 NOX dit (sec) Rappel. T'en as pas d'autre.
 AMBIANCE soir
@@ -32,15 +32,11 @@ TOBI dit (triste) Nox ? Tu dors ?
 PLAN gros NOX
 NOX dit (calme) Je suis une IA.
 PLAN gros TOBI
-TOBI dit (triste) Je suis nul, non ?
+TOBI dit (triste) Je suis nul, hein ?
 PLAN gros NOX
-NOX dit (calme) Rappel.
+NOX dit (calme) Rappel. T'as pas mangé. Frigo, deuxième étagère.
 PLAN gros TOBI
-TOBI dit (gene) Oui, je sais. T'es une IA.
-PLAN gros NOX
-NOX dit (calme) Non. Rappel : t'as pas mangé hier. Frigo, deuxième étagère.
-PLAN gros TOBI
-TOBI dit (content) Merci, mon frère.
+TOBI dit (content) Merci, frérot.
 PLAN gros NOX
 NOX dit (calme) Rappel. Je suis une IA.
 PLAN gros TOBI
