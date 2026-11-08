@@ -117,6 +117,15 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Claude, Codex et Gemini se placent plutôt sur le bureau que par terre.
 - Les écrans du PC doivent être plus immersifs : vraie interface de discussion avec ses publicités, aperçu du jeu inventé, petite IA bon marché avec son logo.
 
+## Clarté avant brièveté (8 novembre 2026)
+
+- Raccourcir, oui, mais jamais au point de ne plus comprendre. L'auteur a préféré la version plus longue de l'épisode 88 : chaque réplique doit être claire et le contexte posé.
+- Une blague doit se comprendre sans réfléchir. « Cruauté premium » n'a pas été compris : retiré. La vanne du crabe est revenue.
+- Les personnages finissent leur échange avant de se tourner vers un autre. On regarde celui à qui l'on répond.
+- Pour un devoir, varier : DM, rapport, rendu, exposé. Le mémoire reste rare.
+- S'inspirer des épisodes déjà publiés qui ont marché (62, 22, 69, 75).
+- Un brouillon vidéo gratuit, sans voix ElevenLabs, sert à vérifier le rythme sur téléphone.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

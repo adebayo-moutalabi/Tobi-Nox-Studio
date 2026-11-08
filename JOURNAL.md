@@ -297,6 +297,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Épisodes 79, 80, 81, 83, 84, 86, 88, 89, 91, 93, 96, 98 et 99 réécrits en format court : environ 25 à 40 secondes sans les écrans, une chute à presque chaque échange, des mots simples.
 - Le mémoire est remplacé par un exposé, un dossier de stage ou un CV. Claude, Codex et Gemini sont sur le bureau.
 
+## Regard, brouillon vidéo et retouches (8 novembre 2026)
+
+- Regard : un personnage regarde celui à qui il répond. Ceux qui écoutent tournent la tête avec un léger retard, puis le corps.
+- Bouton « Vidéo brouillon (sans voix) » : vidéo avec sous-titres, sans créer de voix ni dépenser de crédits.
+- Épisode 88 : retour à la version plus longue. Épisode 79 : la vanne du crabe revient, « cruauté premium » est retiré.
+- Épisodes 83 et 84 réécrits avec de nouveaux titres. Le mémoire devient DM ou rapport dans 82, 85, 94 et 95.
+
 ## À faire
 
 Voir `TACHES.md`.
