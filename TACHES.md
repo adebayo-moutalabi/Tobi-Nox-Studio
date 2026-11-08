@@ -4,7 +4,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 
 ## Priorité haute
 
-1. **Regarder les nouveaux épisodes 10 et 68 à 78,** puis choisir ceux à garder.
+1. **Regarder les nouveaux épisodes 10, 68 à 78 et 79 à 99,** puis choisir ceux à garder. Les faits d'actualité des épisodes 79 à 99 sont à revérifier avant publication.
 2. **Regarder les vidéos en entier :** valider les gestes, la caméra et la lumière sur de vrais exports.
 3. **Sauvegarde des gestes :** garder `src/mocap-mixamo.json` et les FBX hors de ce dossier de session, par exemple dans un dépôt privé.
 

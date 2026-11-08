@@ -93,6 +93,12 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - On écoute d'abord avec les voix gratuites.
 - ElevenLabs sert à la vidéo finale, après confirmation du coût.
 
+## Actualité et motion design
+
+- L'auteur veut des épisodes tirés de l'actualité de l'IA, adaptés à notre cadre : la chambre, les études, l'argent, les IA de la série.
+- Les références et analyses d'autres chaînes restent privées : jamais dans le dépôt, le site, les titres ou les vidéos.
+- Les écrans d'information doivent être plus dynamiques : entrées et sorties animées, éléments qui arrivent l'un après l'autre.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

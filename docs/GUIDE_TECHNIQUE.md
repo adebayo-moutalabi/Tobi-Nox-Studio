@@ -115,6 +115,10 @@ Le mot de passe n'est ni enregistré ni envoyé. La clé qui en découle reste d
 
 `NAMES`, dans `tools/mixamo/make.py`, fait le lien entre chaque fichier et son nom `mx_`.
 
+## Mouvement des écrans
+
+Les cartes (`INSERT`, `TEMPS`, messages) sont animées dans `src/look.js`. L'entrée dure `ENTER` (0,3 s), avec une courbe qui ralentit en arrivant et un léger rebond. La sortie dure `LEAVE` (0,16 s) et accélère en partant. Les éléments d'une carte arrivent avec un décalage de `STEP` (0,08 s). Le décalage total reste sous une demi-seconde. `look.hideInsert(true)` coupe net : on l'utilise au début et à la fin d'une lecture. Aucun mouvement n'est linéaire.
+
 ## Pièges connus
 
 - **Texte de script :** les fichiers de `shorts/` sont inclus à la compilation. Après une modification, relancer `node build.mjs`.

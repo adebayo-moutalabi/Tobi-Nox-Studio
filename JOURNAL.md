@@ -279,6 +279,14 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Recherche par nom, et bouton pour voir plus de voix.
 - Les répliques d'un épisode se téléchargent dans un ZIP, pour ne pas les perdre.
 
+## Épisodes d'actualité et écrans animés (8 novembre 2026)
+
+- 21 nouveaux épisodes, 79 à 99, tirés de sketchs d'actualité sur l'IA, adaptés à la série : chambre de Tobi, CROUS, mémoire, Maman, Claude calme, Codex « C'est fait », Gemini qui a tout lu.
+- Une accroche dans les trois premières secondes, des applications sur le PC et de vrais messages à la place de cartes quand c'est naturel.
+- Les sujets non vérifiés ou trop proches d'une autre chaîne ne sont pas repris. Le document d'origine reste privé, hors du dépôt.
+- Écrans animés : la carte monte et se pose avec un léger rebond, le titre, le chiffre puis le détail arrivent l'un après l'autre, un reflet passe une fois, puis la carte sort en 0,16 s au lieu de disparaître d'un coup.
+- Messages : chaque bulle saute depuis son côté, et trois points s'affichent quand le contact écrit. Le calendrier fait rebondir la date après les pages arrachées.
+
 ## À faire
 
 Voir `TACHES.md`.
