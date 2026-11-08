@@ -99,6 +99,15 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Les références et analyses d'autres chaînes restent privées : jamais dans le dépôt, le site, les titres ou les vidéos.
 - Les écrans d'information doivent être plus dynamiques : entrées et sorties animées, éléments qui arrivent l'un après l'autre.
 
+## Adapter un texte venu d'ailleurs
+
+- L'auteur a trouvé que les épisodes 79 à 99 reprenaient ses brouillons presque tels quels. Un brouillon donne seulement l'idée : il faut tout réécrire avec la voix de chaque personnage, le cadre de la série et nos règles d'écriture.
+- Le dialogue doit couler : chaque réplique répond à la précédente et en reprend souvent un mot.
+- Ce qu'un personnage prépare se voit : une liste dans Notes, un mail, un message. Exemple : la liste de Tobi contre Claude.
+- Une blague qui demande réflexion est réécrite : « Moi, je suis pas gratuit » est devenu « Gratuite ? Je te paie vingt euros par mois ».
+- Les faits inventés doivent rester crédibles : l'auteur n'a pas cru au « yaourt à boire » de la page Wikipédia.
+- Au début de l'épisode 79, Tobi regardait Claude au lieu de Nox. Le Studio prenait le dernier prénom cité. Seul un prénom appelé compte désormais.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

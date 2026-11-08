@@ -26,6 +26,10 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 **Les sujets à privilégier :** les projets fous de Tobi et leurs revers (start-up, appli, formation, coworking, levée de fonds), les jeux vidéo, l'argent calculé précisément, la mère de Tobi, l'IA laissée seule aux commandes et les duels entre une IA et une solution simple. On garde le ressort, jamais le gag ni le sujet exact d'une autre chaîne.
 
+## Partir d'un brouillon ou de l'actualité
+
+Un brouillon, une idée d'actualité ou un texte venu d'ailleurs donne seulement le sujet. On réécrit chaque réplique avec la voix du personnage : Tobi rebondit avec mauvaise foi, Nox répond en peu de mots, Claude reste doux et honnête, Codex agit trop vite, Gemini en sait trop. On ramène l'histoire dans la chambre de Tobi, avec ses soucis d'étudiant. Une information préparée se montre à l'écran : liste dans `Notes`, mail, message.
+
 ## La bonne durée
 
 La durée vise 40 à 90 secondes, sans minimum strict d'une minute. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.

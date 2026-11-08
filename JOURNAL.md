@@ -287,6 +287,11 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Écrans animés : la carte monte et se pose avec un léger rebond, le titre, le chiffre puis le détail arrivent l'un après l'autre, un reflet passe une fois, puis la carte sort en 0,16 s au lieu de disparaître d'un coup.
 - Messages : chaque bulle saute depuis son côté, et trois points s'affichent quand le contact écrit. Le calendrier fait rebondir la date après les pages arrachées.
 
+## Épisodes 79, 88 et 97 réécrits (8 novembre 2026)
+
+- Réécrits à la voix des personnages, avec un dialogue qui s'enchaîne : la liste de Tobi contre Claude s'affiche dans Notes, l'entretien avec la recruteuse IA se termine par un mail, et la page Wikipédia de Tobi repose sur des articles écrits par Codex.
+- Regard : seul un prénom appelé (« Nox, … », « Merci, Claude ! ») désigne celui à qui l'on parle. Avant, « insulter Claude » faisait regarder Claude.
+
 ## À faire
 
 Voir `TACHES.md`.
