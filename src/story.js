@@ -82,13 +82,15 @@ export function parseStory(text) {
   return out;
 }
 
-// À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui qui répond juste après. Un prénom cité au milieu d'une phrase ne compte pas.
+// À qui parle-t-il ? Un prénom appelé dans la réplique, sinon celui à qui il répond (le dernier qui a parlé), sinon celui qui parle ensuite.
+// Un prénom cité au milieu d'une phrase ne compte pas.
 const APPEL = /(?:^|[.!?…]\s+|,\s*)(Nox|Tobi|Claude|Codex|Gemini)\b\s*(?:Code\s*)?(?=[,.!?…:]|$)/g; // « Nox, … » ou « …, Claude ! » : pas « insulter Claude ! »
 function adresse(list) {
   const lines = list.filter((c) => c.verb === 'dit' && c.who);
   lines.forEach((c, i) => {
     const names = [...c.text.matchAll(APPEL)].map((m) => m[1].toLowerCase()).filter((n) => n !== c.who);
-    c.to = names[names.length - 1] || lines.slice(i + 1).find((x) => x.who !== c.who)?.who || null;
+    const prev = lines.slice(0, i).reverse().find((x) => x.who !== c.who);
+    c.to = names[names.length - 1] || prev?.who || lines.slice(i + 1).find((x) => x.who !== c.who)?.who || null;
   });
 }
 
@@ -357,7 +359,7 @@ export function createPlayer(v, ui) {
     room.lock.set({ ...(time ? { time } : {}), date: dateText(), fixed: clockFixed, ...(/^jour\s/i.test(big) ? { day: big } : {}) });
     return v.wait(2.3);
   }
-  let hookText = '';
+  let hookText = '', speaking = null; // la réplique en cours : un regard en retard ne vise jamais la suivante
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
     switch (c.verb) {
@@ -435,12 +437,16 @@ export function createPlayer(v, ui) {
       case 'lampe': room.lamp.intensity = plain(c.args[0] || '') === 'allumee' ? 2.2 : 0; return undefined;
       case 'porte': return v.swing(room.entryDoor, plain(c.args[0] || '') === 'ouverte' ? -1.5 : 0, 0.8);
       case 'dit': {
-        showHidden();
+        speaking = c; showHidden();
         const to = c.to && actor(c.to), b = to?.hero.root.visible ? to : partner(a), tone = TONS[c.tone], before = a.look;
         track = null;
-        for (const x of v.actors) { // tout le monde regarde celui qui parle, et il parle à quelqu'un
+        for (const x of v.actors) { // tout le monde regarde celui qui parle, mais pas au même instant : on réagit à la voix
           if (x === a || !x.hero.root.visible || x.carried || x.hero.seat === 'lie') continue;
-          x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.face(x, a, true);
+          if (x === to || x.look === a) { x.look = a; continue; } // celui à qui l'on parle le regardait déjà
+          const me = c; v.wait(0.35 + 0.1 * (x.id.length % 3)).then(() => { // la tête d'abord, le corps ensuite
+            if (speaking !== me || !x.hero.root.visible) return;
+            x.look = a; if (!x.goal && !x.hero.seat && !x.spot) v.wait(0.25).then(() => { if (speaking === me) v.face(x, a, true); });
+          });
         }
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
         shotN++;
@@ -786,31 +792,33 @@ export function mountStory(v, stories) {
     musicFile = f ? await new AudioContext().decodeAudioData(await f.arrayBuffer()) : null;
     ui.line(f ? `Musique importée : ${f.name}` : 'Musique générée par le Studio.');
   });
-  el('storyExport').addEventListener('click', async () => {
+  const exportRun = async (draft) => { // brouillon : sous-titres et images, sans créer de voix ni dépenser de crédits
     try {
-      if (!player.voices.length && !voices.ready() && !warned) { // une seule alerte, puis on laisse exporter sans voix
+      if (!draft && !player.voices.length && !voices.ready() && !warned) { // une seule alerte, puis on laisse exporter sans voix
         warned = true;
         ui.line('Il manque ta clé ElevenLabs. Ajoute-la dans Réglages, ou clique encore pour créer une vidéo muette.');
         return;
       }
-      if (!player.voices.length && voices.ready() && !(await voices.allow(ui.line))) return;
+      if (!draft && !player.voices.length && voices.ready() && !(await voices.allow(ui.line))) return;
       await halt();
-      if (!player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
+      if (!draft && !player.voices.length && voices.ready()) { ui.line('Création des voix…'); await voices.generate(); refresh(); }
       const fps = Number(el('storyFps').value);
-      exporting = true; el('storyExport').disabled = true;
+      exporting = true; el('storyExport').disabled = true; el('storyDraft').disabled = true;
       const big = QUALITE[el('storyQuality').value], long = Math.round((big * 16) / 9 / 2) * 2;
       const size = short() ? { width: big, height: long } : { width: long, height: big };
       const lines = parseStory(el('storyText').value).filter((c) => c.verb === 'dit').length || 1;
       el('storyBar').hidden = false;
-      const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: el('storyCaps').checked, music: el('storyMusic').checked ? { file: musicFile } : null, onProgress: (s) => { ui.line(`Export en cours : ${s.toFixed(0)} s de vidéo`); el('storyBar').firstElementChild.style.width = `${Math.min(98, (player.done / lines) * 100)}%`; } });
+      const out = await exportVideo(v, player, el('storyText').value, { ...size, fps, captions: draft || el('storyCaps').checked, music: el('storyMusic').checked ? { file: musicFile } : null, onProgress: (s) => { ui.line(`Export en cours : ${s.toFixed(0)} s de vidéo`); el('storyBar').firstElementChild.style.width = `${Math.min(98, (player.done / lines) * 100)}%`; } });
       el('storyBar').hidden = true;
-      const nom = nomFichier(pick.value, el('storyText').value);
+      const nom = nomFichier(pick.value, el('storyText').value) + (draft ? '-brouillon' : '');
       save(out.blob, `${nom}.mp4`); save(new Blob([out.srt], { type: 'text/plain' }), `${nom}.srt`);
       ui.line(`Ta vidéo est prête : ${out.seconds.toFixed(0)} s, dans tes téléchargements.`);
-      v.lastExport = out; pubs.markVideo(pick.value);
+      v.lastExport = out; if (!draft) pubs.markVideo(pick.value);
     } catch (e) { el('storyBar').hidden = true; ui.line(`Export impossible : ${e.message}`); }
-    exporting = false; el('storyExport').disabled = false;
-  });
+    exporting = false; el('storyExport').disabled = false; el('storyDraft').disabled = false;
+  };
+  el('storyExport').addEventListener('click', () => exportRun(false));
+  el('storyDraft').addEventListener('click', () => exportRun(true));
   v.story = player;
   el('storyVoices').addEventListener('change', async (e) => {
     const files = [...e.target.files].sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
