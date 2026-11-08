@@ -67,6 +67,8 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
+- **IA Promo** est l'IA à trente centimes, une étiquette de prix jaune inventée pour la série. Toujours ravie, souvent fausse, et chaque vraie réponse est « une option premium ». `DIRECT PROMO apparait milieu`, puis `PROMO dit (excite) ...`. Plutôt au sol : elle est petite et bon marché.
+
 - **Places au sol :** `gauche`, `milieu`, `droite`.
 - **Places en hauteur :** `bureau`, `chaise`, `lit`, `rebord` (la fenêtre, plutôt le soir : le jour, le contre-jour les efface). À préférer souvent au sol.
 - **Un seul sur le bureau :** si un Aîné est sur le bureau, Nox va sur le lit (`assis`), sinon ils se gênent à l'image.
@@ -206,6 +208,10 @@ NOX dit (resigne) J'appelle ta mère.
 - Un écran `TEMPS` ou `INSERT` fait avancer la date : « Le lendemain » ajoute un jour, « Trois jours plus tard » en ajoute trois. Un titre comme `INSERT Il est | 6 h 30 | ...` règle l'heure.
 - Un message avec `[23:47]` doit suivre l'heure de l'épisode.
 - Après chaque script, lancer `node tools/audit-temps.mjs`.
+
+**Discussion avec une IA :** `PC Chat : ChatGPT | > Question de Tobi | Réponse de l'IA | Pub : Pizza Solo, -20 %`. La question s'affiche à droite, la réponse s'écrit mot à mot, la ligne `Pub :` glisse comme une publicité.
+
+**Aperçu de jeu :** `PC Jeu : Nom du jeu | Niveau 1 : ... | Boss final : ...`. Un petit jeu de plateforme animé, avec les lignes en haut de l'écran.
 
 **Téléphone :** `TOBI appelle`, puis `TOBI raccroche`.
 

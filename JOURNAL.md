@@ -304,6 +304,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Épisode 88 : retour à la version plus longue. Épisode 79 : la vanne du crabe revient, « cruauté premium » est retiré.
 - Épisodes 83 et 84 réécrits avec de nouveaux titres. Le mémoire devient DM ou rapport dans 82, 85, 94 et 95.
 
+## Visuels du PC et IA Promo (8 novembre 2026)
+
+- Nouvelle appli `Chat` : discussion avec une IA, réponse écrite mot à mot, publicité qui glisse avec un bouton « Voir l'offre » (épisode 80).
+- Nouvelle appli `Jeu` : aperçu animé d'un jeu de plateforme, avec le héros, les ennemis et le boss (épisode 86).
+- Nouveau personnage IA Promo, l'IA à trente centimes : une étiquette de prix jaune (épisode 93). Il a sa voix à choisir dans les réglages ElevenLabs.
+
 ## À faire
 
 Voir `TACHES.md`.

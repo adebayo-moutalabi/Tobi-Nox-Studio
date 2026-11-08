@@ -16,7 +16,7 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 
 ## Demandes du 8 novembre 2026
 
-- **Visuels du PC :** une interface de discussion type assistant IA avec ses publicités (épisode 80), un aperçu du jeu inventé (épisode 86), une petite IA bon marché avec son logo, à côté de Tobi (épisode 93).
+- **Visuels du PC :** faits le 8 novembre (Chat, Jeu, IA Promo). Choisir une voix ElevenLabs pour IA Promo.
 - **Mémoire trop fréquent :** revoir les épisodes qui citent encore le mémoire, dont 82, 85, 94 et 95.
 - **Places des IA :** revoir les anciens épisodes où Claude est par terre, et les plans mal cadrés.
 - **Épisodes 82, 85, 87, 90, 92, 94 et 95 :** à raccourcir et adapter de la même façon si l'auteur le demande.
