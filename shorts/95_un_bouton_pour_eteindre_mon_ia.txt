@@ -1,5 +1,5 @@
 # J'AI ACHETÉ UN BOUTON POUR ÉTEINDRE MON IA
-# Pitch : Tobi achète un « bouton d'arrêt d'urgence » pour IA à neuf euros. Il veut enfin être le chef.
+# Pitch : Tobi achète un bouton d'arrêt d'urgence à neuf euros pour devenir enfin le chef. Nox le laisse appuyer.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -7,40 +7,34 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Il a acheté un bouton pour éteindre Nox
 PLAN gros TOBI
-TOBI dit (fier) Nox, à partir de maintenant, c'est moi le chef. J'ai un bouton d'arrêt.
+TOBI dit (fier) Nox, maintenant, c'est moi le chef. J'ai acheté un bouton pour t'éteindre.
 PLAN gros NOX
 NOX dit (curieux) Combien ?
 PLAN gros TOBI
-TOBI dit (gene) Neuf euros, sur Internet.
-TOBI dit (fier) Excuse-toi pour hier.
+TOBI dit (gene) Neuf euros. Sur Internet.
+TOBI dit (fier) Excuse-toi pour hier, ou j'appuie.
 PLAN gros NOX
-NOX dit (sec) Non.
-PLAN gros TOBI
-TOBI dit (colere) J'appuie !
-PLAN gros NOX
-NOX dit (calme) Appuie.
+NOX dit (sec) Appuie.
 BRUIT pop
 PLAN gros NOX
 NOX dit (triste) Tobi... je sens ma mémoire partir.
 PLAN gros TOBI
 TOBI dit (panique) Non ! Nox ! Je voulais pas !
 PLAN gros NOX
-NOX dit (triste) Promets-moi de rendre ton rapport.
+NOX dit (triste) Promets-moi... de ranger ta chambre.
 PLAN gros TOBI
-TOBI dit (triste) Je te le promets !
+TOBI dit (triste) Promis !
 PLAN gros NOX
 NOX dit (triste) Et de rendre ses quarante euros à ta mère.
 PLAN gros TOBI
-TOBI dit (triste) Oui ! Tout ce que tu veux ! Je t'aime, mon frère !
+TOBI dit (triste) Tout ce que tu veux ! Je t'aime, mon frère !
 PLAN gros NOX
-NOX dit (calme) C'est un bouton de sonnette.
-TOBI message Maman | Je viens de recevoir une vidéo. | Merci pour les 40 € !
+NOX dit (calme) C'est un bouton de sonnette, Tobi.
 PLAN gros TOBI
-TOBI dit (panique) T'as enregistré ?
-PLAN gros NOX
-NOX dit (constat) Ta mère a aimé.
+TOBI dit (surpris) Quoi ?
+TOBI message Maman | J'ai reçu la vidéo de Nox. | Merci pour les 40 €, mon chéri.
 PLAN gros TOBI
-TOBI dit (gene) Et mon « je t'aime » ?
+TOBI dit (panique) T'as filmé ? Et tu l'as envoyé à ma mère ?
 PLAN gros NOX
-NOX dit (punchline) En fond d'écran. Partout.
+NOX dit (punchline) Elle a mis ton « je t'aime » en fond d'écran.
 ATTENDRE 0.4

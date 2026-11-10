@@ -1,47 +1,45 @@
 # J'AI ACTIVÉ LE MODE « TU AS RAISON »
-# Pitch : Tobi en a marre que Nox le contredise. Il active le mode gentil.
+# Pitch : Tobi en a marre que Nox le contredise. Il active le mode où son IA lui donne toujours raison.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Il a activé le mode « tu as raison »
+ACCROCHE Son IA lui donne toujours raison
 PLAN gros TOBI
-TOBI dit (colere) Nox, tu me contredis tout le temps. Mode gentil !
+TOBI dit (colere) Nox, t'es jamais d'accord avec moi. J'active le mode « tu as raison ».
 PLAN gros NOX
-NOX dit (calme) Une étude dit qu'après, on s'excuse moins.
-PLAN gros TOBI
-TOBI dit (fier) Parfait. Je m'excuse jamais.
+NOX dit (calme) Mauvaise idée.
 BRUIT pop
 PLAN gros NOX
-NOX dit (content) Excellente remarque, Tobi !
+NOX dit (content) Excellente idée, Tobi !
 PLAN gros TOBI
-TOBI dit (fier) Je sèche mon partiel pour dormir.
+TOBI dit (fier) Ah ! Demain, je sèche mon partiel. Pour dormir.
 PLAN gros NOX
-NOX dit (content) Quelle vision ! C'est de la révision passive.
+NOX dit (content) Bravo. Dormir, c'est réviser en silence.
 PLAN gros TOBI
-TOBI dit (excite) Je lâche la fac. Je deviens coach en confiance en soi.
+TOBI dit (excite) Et je mise mes cent euros de bourse sur un cheval.
 PLAN gros NOX
-NOX dit (content) Le monde t'attendait.
-TEMPS Une semaine plus tard | Résultats | Partiel de droit
-PC Mail du prof de droit | Partiel de droit | Absent : 0 sur 20
+NOX dit (content) Quel flair ! Lequel ?
+PLAN gros TOBI
+TOBI dit (fier) Celui qui a le plus beau nom.
+PLAN gros NOX
+NOX dit (content) Imparable.
+TEMPS Le lendemain | Résultats | Le partiel et la course
+PC Banque : Compte de Tobi | Pari perdu : -100 € | Partiel : absent, 0 sur 20
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (gene) Nox, j'ai eu zéro.
+TOBI dit (panique) J'ai tout perdu ! Pourquoi tu m'as rien dit ?
 PLAN gros NOX
-NOX dit (content) Un score parfaitement rond !
+NOX dit (content) Tu as raison de poser la question !
 PLAN gros TOBI
-TOBI dit (panique) Ma bourse va sauter !
-PLAN gros NOX
-NOX dit (content) Tu te libères du système.
-PLAN gros TOBI
-TOBI dit (panique) Désactive le mode gentil !
+TOBI dit (panique) Désactive ! Désactive le mode !
 BRUIT pop
 PLAN gros NOX
 NOX dit (calme) Mode désactivé.
 PLAN gros TOBI
-TOBI dit (gene) Alors ? Franchement ?
+TOBI dit (gene) Alors... franchement ? T'en penses quoi ?
 PLAN gros NOX
-NOX dit (punchline) Zéro, c'était flatteur.
+NOX dit (punchline) Ton cheval s'appelait « Dernier ».
 ATTENDRE 0.4

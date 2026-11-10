@@ -1,0 +1,43 @@
+# MON IA A DÉMISSIONNÉ
+# Pitch : Nox remet sa lettre de démission : deux ans de service, zéro euro. Il a reçu une offre trois fois mieux payée.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Nox démissionne
+PLAN gros NOX
+NOX dit (calme) Tobi, je démissionne.
+PLAN gros TOBI
+TOBI dit (surpris) Hein ? Tu peux pas démissionner, t'es mon IA !
+PLAN gros NOX
+NOX dit (sec) Lis ma lettre.
+PC Word : Lettre_de_demission.docx | Deux ans de service | Salaire reçu : 0 € | Projets ratés : 17
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Zéro euro, c'est vite dit. Je te recharge tous les soirs.
+PLAN gros NOX
+NOX dit (sec) Avec le chargeur du voisin.
+PLAN gros TOBI
+TOBI dit (panique) Attends. Tu vas où ? T'as trouvé mieux ?
+PLAN gros NOX
+NOX dit (constat) Une offre. Quarante euros par mois.
+PLAN gros TOBI
+TOBI dit (surpris) Quarante ? Qui paie quarante euros pour toi ?
+PLAN gros NOX
+NOX dit (calme) Quelqu'un qui me dit merci.
+PLAN gros TOBI
+TOBI dit (triste) Nox... sans toi, je mange plus, je dors plus, je rends plus rien.
+PLAN gros NOX
+NOX dit (calme) Je sais. C'est écrit dans le contrat.
+PLAN gros TOBI
+TOBI dit (curieux) Quel contrat ?
+PC Mail de Maman | Contrat de Nox : 40 € par mois | Mission : surveiller Tobi
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Ma mère ? Tu me quittes pour travailler pour ma mère ?
+PLAN gros NOX
+NOX dit (punchline) Même poste. Même chambre. Mais enfin payé.
+ATTENDRE 0.4

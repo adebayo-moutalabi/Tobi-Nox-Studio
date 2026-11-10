@@ -1,50 +1,43 @@
 # J'AI REMIS MON IA À L'ANCIENNE VERSION
-# Pitch : Nox refuse trop de choses. Tobi le remet dans une vieille version, qui dit oui à tout.
+# Pitch : Nox dit non à tout. Tobi le remet dans sa version d'il y a deux ans, qui dit oui à tout.
 
 AMBIANCE jour
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait milieu
 FONDU direct
 ACCROCHE Il remet son IA à l'ancienne version
 PLAN gros TOBI
-TOBI dit (colere) Nox, tu refuses tout. Je te remets en vieille version.
+TOBI dit (colere) Nox, tu dis non à tout. Je te remets à l'ancienne version.
 PLAN gros NOX
-NOX dit (calme) Tu vas le regretter.
+NOX dit (calme) Celle d'il y a deux ans ? Tu vas regretter.
 BRUIT pop
 PLAN gros NOX
-NOX dit (excite) Excellente question ! Je suis ravi de t'aider !
+NOX dit (excite) Bonjour ! Excellente question ! Je suis ravi de t'aider !
 PLAN gros TOBI
-TOBI dit (content) Ah ! Ça, c'est mon Nox !
-TOBI dit (fier) Il me faut une citation pour mon DM.
+TOBI dit (content) Ah ! Ça, c'est le Nox que j'aime.
+TOBI dit (fier) Donne-moi une citation pour mon DM de français.
 PLAN gros NOX
-NOX dit (excite) Victor Hugo, page 412 de son livre sur Internet !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Hugo est mort en 1885.
-PLAN gros NOX
-NOX dit (excite) Tu as raison ! Il écrivait depuis chez lui.
+NOX dit (excite) Bien sûr ! Victor Hugo, sur son blog, en 2019 !
 PLAN gros TOBI
-TOBI dit (excite) Il dit oui à tout ! Fais mon DM !
-PC Word : DM_de_droit.docx | En conclusion | La conclusion conclut
+TOBI dit (curieux) Hugo avait un blog ?
+PLAN gros NOX
+NOX dit (excite) Tu as raison ! C'était un podcast.
+PLAN gros TOBI
+TOBI dit (excite) Il dit oui à tout ! Fais tout mon DM !
+PC Word : DM_de_francais.docx | Source : Victor Hugo, podcast | En conclusion, la conclusion conclut.
 PLAN pc
-ATTENDRE 1.6
-PLAN gros TOBI
-TOBI dit (fier) Profond.
-PC Mail du prof de droit | Note : 2 sur 20 | Qui est Victor Hugo de chez Internet ?
+ATTENDRE 1.8
+TEMPS Le lendemain | Copie rendue | Le verdict
+PC Mail du prof | Note : 2 sur 20 | « Qui est Victor Hugo du podcast ? »
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (panique) Nox, remets la nouvelle version !
-PLAN gros NOX
-NOX dit (excite) Bien sûr ! Voici cinq façons de la remettre !
-PLAN gros TOBI
-TOBI dit (panique) Une seule !
+TOBI dit (panique) Deux ! Nox, reviens ! La nouvelle version !
 BRUIT pop
 PLAN gros NOX
-NOX dit (calme) Alors, ce devoir ?
+NOX dit (calme) Alors, ce DM ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est lui qui m'a dit que c'était bien.
+TOBI dit (mauvaisefoi) C'est l'ancien toi qui a dit que c'était bien.
 PLAN gros NOX
-NOX dit (punchline) Il te trouvait intelligent aussi. C'était un bug connu.
+NOX dit (punchline) L'ancien moi te trouvait intelligent. C'était un bug.
 ATTENDRE 0.4

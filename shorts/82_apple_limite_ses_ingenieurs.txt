@@ -1,48 +1,42 @@
-# APPLE LIMITE SES INGÉNIEURS À 200 $ D'IA PAR JOUR
-# Pitch : Apple limite le budget d'IA de ses ingénieurs. Tobi, qui vit avec quatre euros par jour, se sent solidaire.
+# MA MÈRE A LIMITÉ MON BUDGET IA
+# Pitch : La mère de Tobi a vu la facture : 200 € d'IA en un mois. Elle le limite à 10 €. Chaque mot compte.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 FONDU direct
-ACCROCHE 200 $ d'IA par jour. Lui : 4 €.
+ACCROCHE 10 € d'IA par mois. Pas un mot de plus.
 PLAN gros TOBI
-TOBI dit (colere) Nox ! Apple limite ses ingénieurs à deux cents dollars d'IA !
+TOBI dit (colere) Nox, ma mère a vu ma facture. J'ai plus que dix euros d'IA par mois !
 PLAN gros NOX
-NOX dit (curieux) Par jour.
+NOX dit (curieux) T'avais dépensé combien ?
 PLAN gros TOBI
-TOBI dit (colere) C'est inhumain !
-PLAN gros NOX
-NOX dit (constat) Toi, tu manges avec quatre euros.
-PLAN gros TOBI
-TOBI dit (fier) Justement. Je connais la souffrance.
-PLAN gros NOX
-NOX dit (ironique) Eux peuvent demander une rallonge à la direction.
-PLAN gros TOBI
-TOBI dit (illumine) Une rallonge ! Moi aussi !
-PLAN gros NOX
-NOX dit (curieux) Ta direction, c'est qui ?
-PLAN gros TOBI
-TOBI dit (gene) Ma mère.
-TOBI message Maman | > Maman, je demande une rallonge de tokens. | Ça se mange ? | > Oui. | Accordé : 10 €. Justificatifs exigés.
-PLAN gros TOBI
-TOBI dit (excite) Dix euros ! Une journée d'ingénieur Apple !
-PLAN gros NOX
-NOX dit (constat) Vingt-huit minutes.
-PLAN gros TOBI
-TOBI dit (panique) Vite ! Claude, fais mon DM de maths !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Je te pose d'abord quelques questions.
-PLAN gros TOBI
-TOBI dit (panique) Non ! Chaque question coûte !
-PLAN gros CLAUDE
-CLAUDE dit (calme) D'accord. Pourquoi ?
-PC Banque : Budget IA de Tobi | Rallonge : 10 € | Reste : 0 €
+TOBI dit (gene) Deux cents. Mais c'était pour réviser.
+PC Banque : Compte de Tobi | Abonnements IA : 200 € | Pages révisées : 0
 PLAN pc
-ATTENDRE 1.6
-PLAN gros TOBI
-TOBI dit (triste) Il m'a tout pris.
+ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (punchline) J'appelle ta direction.
+NOX dit (sec) Zéro page.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je révisais comment réviser.
+TOBI dit (fier) Bon. Dix euros. Claude, fais mon DM de maths. Vite !
+PLAN gros CLAUDE
+CLAUDE dit (calme) D'accord. C'est quel chapitre ?
+PLAN gros TOBI
+TOBI dit (panique) Pose pas de question ! Chaque mot coûte !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Compris. Pourquoi ?
+PC Banque : Budget IA de Tobi | Dernière dépense : « Pourquoi ? » | Reste : 0,00 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (triste) Dix euros. Pour un « pourquoi ».
+TOBI dit (illumine) Nox, aie la vision. Toi, t'es gratuit. Fais mon DM.
+PLAN gros NOX
+NOX dit (calme) D'accord. C'est quel chapitre ?
+PLAN gros TOBI
+TOBI dit (gene) Euh... je sais pas.
+PLAN gros NOX
+NOX dit (punchline) Voilà. Même gratuit, c'est trop cher.
 ATTENDRE 0.4

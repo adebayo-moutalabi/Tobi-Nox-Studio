@@ -98,6 +98,7 @@ import A95 from '../shorts/95_un_bouton_pour_eteindre_mon_ia.txt';
 import A96 from '../shorts/96_ma_mere_a_un_agent_ia.txt';
 import A97 from '../shorts/97_codex_a_cree_ma_page_wikipedia.txt';
 import A98 from '../shorts/98_mon_ia_doit_rappeler_qu_elle_est_une_ia.txt';
+import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
 import E63 from '../shorts/63_mon_entretien_annuel_avec_mes_ia.txt';
@@ -112,7 +113,7 @@ startViewer({
     "79. Plus que 4 jours pour insulter Claude": A79,
     "80. ChatGPT m'a mis une pub en pleine rupture": A80,
     "81. Codex a coupé mes alertes, puis il a nié": A81,
-    "82. Apple limite ses ingénieurs à 200 $ d'IA par jour": A82,
+    "82. Ma mère a limité mon budget IA": A82,
     "83. Codex m'a commandé quatre taxis": A83,
     "84. J'ai voulu remplacer mon IA par Le Chonk": A84,
     "85. J'ai eu Claude Code gratuit à vie": A85,
@@ -122,7 +123,7 @@ startViewer({
     "89. Il faut maîtriser Sol, Astra, Carbon et Argon": A89,
     "90. J'ai tout écrit moi-même. Détecté 100 % IA": A90,
     "91. Claude a demandé la permission pour tout, sauf ça": A91,
-    "92. Ma chambre est un campus de calcul": A92,
+    "92. J'ai loué ma chambre comme « campus tech »": A92,
     "93. J'ai quitté Claude pour moins cher": A93,
     "94. J'ai remis mon IA à l'ancienne version": A94,
     "95. J'ai acheté un bouton pour éteindre mon IA": A95,
@@ -130,6 +131,7 @@ startViewer({
     "97. Codex a créé ma page Wikipédia": A97,
     "98. Mon IA doit me rappeler qu'elle est une IA": A98,
     "99. Tout ce qui vient d'une IA doit être étiqueté": A99,
+    "100. Mon IA a démissionné": A100,
     "10. Le CROUS inspecte ma chambre dans 10 minutes": E10,
     "68. Claude Code, Codex ou Gemini : qui est la meilleure IA ?": E68,
     "69. Mes IA m'ont viré de ma start-up": E69,

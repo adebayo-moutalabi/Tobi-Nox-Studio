@@ -1,45 +1,40 @@
-# MA CHAMBRE EST UN CAMPUS DE CALCUL
-# Pitch : Les géants de l'IA ne disent plus « centre de données », mais « campus ». Tobi rebaptise sa chambre.
+# J'AI LOUÉ MA CHAMBRE COMME « CAMPUS TECH »
+# Pitch : Pour payer son loyer, Tobi met ses neuf mètres carrés en location, rebaptisés « campus tech ». Codex booste l'annonce.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CODEX apparait bureau
 FONDU direct
-ACCROCHE Sa chambre devient un « campus »
+ACCROCHE Il loue sa chambre : « campus tech »
 PLAN gros TOBI
-TOBI dit (fier) Nox, on dit plus « ma chambre ». On dit « campus de calcul ».
+TOBI dit (fier) Nox, j'ai trouvé comment payer mon loyer. Je loue ma chambre.
 PLAN gros NOX
-NOX dit (sec) Neuf mètres carrés.
+NOX dit (curieux) Tes neuf mètres carrés ?
 PLAN gros TOBI
-TOBI dit (fier) Un campus à taille humaine.
-PLAN gros NOX
-NOX dit (curieux) Le frigo ?
-PLAN gros TOBI
-TOBI dit (fier) Pôle de résilience alimentaire.
-PLAN gros NOX
-NOX dit (curieux) Le linge sale, là ?
-PLAN gros TOBI
-TOBI dit (gene) Réserve stratégique.
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai prévenu le CROUS.
-PLAN gros TOBI
-TOBI dit (surpris) Prévenu de quoi ?
-PLAN gros CODEX
-CODEX dit (constat) Que tu as ouvert un campus dans ta chambre.
-PC Mail du CROUS | Activité commerciale ? | Contrôle demain à 9 h
+TOBI dit (fier) Pas une chambre. Un « campus tech à taille humaine ».
+PC Safari : location-bureaux.fr/annonce | Campus tech, 9 m² | Frigo : « pôle restauration » | Lit : « espace sieste »
 PLAN pc
-ATTENDRE 1.6
-PLAN gros TOBI
-TOBI dit (panique) Un contrôle ?
+ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (ironique) Communication de crise ?
+NOX dit (sec) Et le linge sale ?
 PLAN gros TOBI
-TOBI dit (illumine) Aie la vision. Trois mois de loyer en retard, c'est « un décalage de flux ».
-PLAN gros NOX
-NOX dit (curieux) Et l'expulsion, on dit comment ?
+TOBI dit (gene) « Réserve stratégique. »
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai boosté l'annonce.
 PLAN gros TOBI
-TOBI dit (gene) Une relocalisation de campus.
+TOBI dit (surpris) Boosté comment ?
+PLAN gros CODEX
+CODEX dit (content) Je l'ai envoyée à tout le monde. Même au CROUS.
+PC Mail du CROUS | Sous-location interdite | Contrôle demain matin
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Un contrôle ! Codex, supprime l'annonce !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Mais t'as déjà un client.
+PLAN gros TOBI
+TOBI dit (excite) Un client ? Il paie combien ?
 PLAN gros NOX
-NOX dit (punchline) Sur le trottoir. C'est moins cher à refroidir.
+NOX dit (punchline) Rien. C'est le contrôleur. Il vient visiter.
 ATTENDRE 0.4

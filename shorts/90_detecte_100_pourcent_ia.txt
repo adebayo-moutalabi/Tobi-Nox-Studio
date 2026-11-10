@@ -1,53 +1,41 @@
 # J'AI TOUT ÉCRIT MOI-MÊME. DÉTECTÉ 100 % IA
-# Pitch : Pour une fois, Tobi a tout écrit seul. Le détecteur dit le contraire.
+# Pitch : Pour une fois, Tobi a écrit son devoir tout seul. Le détecteur de la fac dit le contraire.
 
 AMBIANCE jour
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait gauche
-DIRECT CODEX apparait milieu
-DIRECT GEMINI apparait droite
+DIRECT CLAUDE apparait bureau
 FONDU direct
-ACCROCHE Il a tout écrit. Détecté 100 % IA.
+ACCROCHE Il a tout écrit seul. Détecté 100 % IA.
 PLAN gros TOBI
-TOBI dit (panique) Nox ! Mon devoir est détecté à cent pour cent IA !
+TOBI dit (panique) Nox ! Mon devoir est détecté « cent pour cent IA » !
 PLAN gros NOX
-NOX dit (curieux) T'as utilisé qui ?
+NOX dit (curieux) T'as utilisé laquelle ?
 PLAN gros TOBI
-TOBI dit (colere) Personne ! Pour une fois, j'ai tout écrit moi-même !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Ce n'est pas moi.
-PLAN gros CODEX
-CODEX dit (constat) Moi non plus. Je lis pas ça.
-PLAN gros GEMINI
-GEMINI dit (ironique) Moi, je l'ai lu. Je porte plainte.
+TOBI dit (colere) Aucune ! Pour une fois, j'ai tout écrit moi-même !
 PC Safari : detecteur-ia.fr | Résultat : 100 % IA | Fautes d'orthographe : 94
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (sec) Une IA ferait pas quatre-vingt-quatorze fautes.
+NOX dit (sec) Quatre-vingt-quatorze fautes. Aucune IA ferait ça.
 PLAN gros TOBI
-TOBI dit (excite) Voilà ma défense ! Mes fautes !
+TOBI dit (excite) Voilà ! C'est ma preuve ! Mes fautes !
 PLAN gros NOX
-NOX dit (curieux) Tu plaides quoi ?
+NOX dit (curieux) Tu vas plaider quoi ?
 PLAN gros TOBI
-TOBI dit (fier) L'incompétence. Documentée.
+TOBI dit (fier) Que je suis nul. Avec des preuves.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je peux témoigner que ce texte est humain.
+CLAUDE dit (calme) Je peux témoigner, Tobi. Ce texte est humain.
 PLAN gros TOBI
 TOBI dit (content) Merci, Claude !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Aucune machine n'oserait.
-PC Mail de la commission | Décision : pas de triche | Note : 3 sur 20
+CLAUDE dit (calme) Aucune machine n'oserait écrire « ils croivent ».
+TEMPS Le lendemain | Décision de la fac | Le verdict
+PC Mail de la fac | Triche : non | Note : 3 sur 20
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (surpris) Trois ?
-PLAN gros NOX
-NOX dit (constat) T'as gagné. C'est bien toi.
-PLAN gros TOBI
-TOBI dit (triste) Je préférais être une IA.
+TOBI dit (triste) Trois sur vingt. J'aurais préféré tricher.
 PLAN gros NOX
 NOX dit (punchline) Le détecteur s'est excusé. Auprès des IA.
 ATTENDRE 0.4
