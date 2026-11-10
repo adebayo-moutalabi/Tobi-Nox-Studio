@@ -134,6 +134,12 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Quand une IA bloque ou atteint sa limite, on le montre : écran de Claude Code avec sa jauge, et jauge au-dessus de sa tête.
 - L'IA à trente centimes s'appelle Centi : un nom court qui sonne comme une vraie IA actuelle.
 
+## Ce que disent les chiffres (10 novembre 2026)
+
+- Le Short qui retient le mieux est « Mon IA a perdu la mémoire » : la crise est dite dès la première réplique, elle touche le lien entre Tobi et Nox, et la chute retourne tout.
+- Les débuts qui retiennent moins : une IA qui parle d'un sujet sans contexte (« Réunion sans moi ») ou une ouverture technique (« Claude Code gratuit à vie »).
+- Aucun commentaire sur les derniers Shorts : chaque fiche propose une question simple à mettre en description ou en commentaire épinglé.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

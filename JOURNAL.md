@@ -316,6 +316,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Nouvelle appli `Claude` : le terminal de Claude Code, avec une alerte de limite et sa jauge animée (épisodes 70, 79 et 93).
 - Nouvelle action `limite` : une jauge au-dessus de la tête de l'IA, qui vire au rouge, puis l'IA grisonne (épisode 93).
 
+## Épisode 100 et recette des Shorts qui retiennent (10 novembre 2026)
+
+- Nouvel épisode 100, « Mon IA a démissionné », écrit sur le modèle de « Mon IA a perdu la mémoire », le Short qui retient le mieux (58,5 % restent).
+- Épisodes 82, 87, 90, 92, 94 et 95 réécrits avec la même recette. Les épisodes 82 et 92 changent de titre.
+- Chaque épisode a une question pour les commentaires, dans la fiche Publications.
+- Dix-huit nouvelles idées dans `IDEES_EPISODES.md`.
+
 ## À faire
 
 Voir `TACHES.md`.
