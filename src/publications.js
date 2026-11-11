@@ -36,7 +36,7 @@ const TITRES = {
 
 // Quand le pitch du script en dit trop, le texte public s'arrête avant la chute.
 const ACCROCHES = {
-  130: "Tobi demande à Claude, Codex et Gemini un plan pour devenir riche. Il applique les trois en même temps.",
+  130: "Tobi veut être riche avant Noël. Claude, Codex et Gemini lui font chacun un plan. Il applique les trois en même temps, et Codex vend tout ce qui « ne sert à rien ».",
   129: "Tobi demande à Codex de s'occuper des sites de ses idées. Codex achète un nom de domaine pour chacune.",
   128: "Tobi veut arrêter les kebabs. Nox lui apprend à cuire des pâtes, étape par étape.",
   127: "Nox se met en grève avec ses revendications. Tobi doit négocier pour retrouver son IA.",

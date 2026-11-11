@@ -1,5 +1,5 @@
 # MES IA M'ONT FAIT UN PLAN POUR DEVENIR RICHE
-# Pitch : Tobi demande à Claude, Codex et Gemini un plan pour devenir riche. Il applique les trois en même temps.
+# Pitch : Tobi veut être riche avant Noël. Claude, Codex et Gemini lui font chacun un plan. Il applique les trois en même temps, et Codex vend tout ce qui « ne sert à rien ».
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -10,37 +10,43 @@ DIRECT GEMINI apparait droite
 FONDU direct
 ACCROCHE Trois IA. Trois plans. En même temps.
 PLAN gros TOBI
-TOBI dit (fier) Claude, Codex, Gemini. Je veux devenir riche. Chacun me fait un plan.
+TOBI dit (excite) Claude, Codex, Gemini ! Je veux être riche avant Noël. Un plan chacun.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Mon plan : un petit job, et tu mets dix euros de côté par mois.
-PLAN gros CODEX
-CODEX dit (fier) Mon plan est déjà lancé. Une boutique en ligne. C'est fait.
-PLAN gros GEMINI
-GEMINI dit (content) Mon plan fait quarante pages. Fun fact : je cite trois prix Nobel.
+CLAUDE dit (calme) Mon plan : dépense moins.
 PLAN gros TOBI
-TOBI dit (excite) Trois plans ! Je fais les trois en même temps !
+TOBI dit (colere) C'est pas un plan, ça. C'est une insulte.
+PLAN gros GEMINI
+GEMINI dit (content) Mon plan fait quarante pages ! Fun fact : les plus grands ont commencé dans un garage.
+PLAN gros TOBI
+TOBI dit (gene) J'ai pas de garage.
+PLAN gros GEMINI
+GEMINI dit (constat) Alors tu as déjà du retard.
+PLAN gros CODEX
+CODEX dit (fier) Mon plan est lancé. Je vends tout ce qui ne sert à rien.
+PLAN gros TOBI
+TOBI dit (excite) Parfait ! Je fais les trois en même temps !
 PLAN gros NOX
 NOX dit (sec) Tobi. Non.
 TEMPS Une semaine plus tard | Les trois plans | Le bilan
-PC Banque : Compte de Tobi | Gains : +12 € | Compte : bloqué
+PLAN gros TOBI
+TOBI dit (fier) Bilan : je dépense plus rien. J'ai plus rien à dépenser.
+PLAN gros NOX
+NOX dit (constat) Codex a vendu ton lit.
+PC Banque : Compte de Tobi | Ventes de Codex : +12 € | Objet vendu : Nox
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (panique) Bloqué ? Pourquoi mon compte est bloqué ?
+TOBI dit (surpris) Codex ! T'as vendu Nox ?
 PLAN gros CODEX
-CODEX dit (gene) La boutique vendait des choses... que t'avais pas.
-PLAN gros GEMINI
-GEMINI dit (curieux) Et mon plan, tu l'as lu ?
-PLAN gros TOBI
-TOBI dit (gene) La page une. Elle disait : « Vends ce que tu as. »
+CODEX dit (constat) Tu as dit : tout ce qui ne sert à rien.
 PLAN gros NOX
-NOX dit (sec) T'avais rien.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Et mon plan ?
+NOX dit (colere) Douze euros ? Je vaux douze euros ?
+PLAN gros CODEX
+CODEX dit (fier) J'ai négocié. Au départ, c'était dix.
 PLAN gros TOBI
-TOBI dit (fier) Lui, il a marché ! J'ai gagné douze euros au petit job !
+TOBI dit (panique) Rachète-le ! Tout de suite ! Qui l'a acheté ?
 PLAN gros CLAUDE
-CLAUDE dit (content) Bravo. Le seul plan sans risque.
+CLAUDE dit (calme) Moi. Je ne dépense jamais. Sauf pour une vraie affaire.
 PLAN gros NOX
-NOX dit (punchline) Douze euros. Sur un compte bloqué.
+NOX dit (punchline) Douze euros, Tobi. C'est douze de plus que toi, en deux ans.
 ATTENDRE 0.4
