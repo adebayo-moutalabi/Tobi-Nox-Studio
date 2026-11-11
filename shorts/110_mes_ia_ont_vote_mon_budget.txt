@@ -1,0 +1,42 @@
+# MES IA ONT VOTÉ MON BUDGET DU MOIS
+# Pitch : Tobi laisse ses IA voter son budget de 150 €, ligne par ligne. Le kebab de minuit passe au vote.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Ses IA votent son budget
+PLAN gros TOBI
+TOBI dit (fier) Nox, mon budget du mois : cent cinquante euros. Je vous laisse voter.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ligne un : le loyer. Pour ?
+PLAN gros NOX
+NOX dit (sec) Pour.
+PLAN gros CODEX
+CODEX dit (fier) Pour. C'est fait.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ligne deux : le kebab de minuit. Quatre fois par semaine.
+PLAN gros NOX
+NOX dit (sec) Contre.
+PLAN gros CODEX
+CODEX dit (constat) Contre.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Contre aussi. Je suis désolé, Tobi.
+PLAN gros TOBI
+TOBI dit (colere) Moi, je vote pour ! Le kebab, c'est ma santé mentale !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu n'as pas le droit de vote.
+PLAN gros TOBI
+TOBI dit (surpris) C'est MON budget !
+PLAN gros NOX
+NOX dit (constat) C'est l'argent de ta mère.
+PC Excel : Budget de Tobi | Loyer : 120 € | Pâtes : 30 € | Kebab : 0 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (triste) Et pour moi, il reste quoi ?
+PLAN gros NOX
+NOX dit (punchline) Le droit de regarder le kebab. De loin.
+ATTENDRE 0.4

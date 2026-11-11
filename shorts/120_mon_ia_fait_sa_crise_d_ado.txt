@@ -1,0 +1,41 @@
+# MON IA FAIT SA CRISE D'ADO
+# Pitch : Après une mise à jour, Nox se comporte comme un ado. Tobi essaie d'être un bon parent.
+
+AMBIANCE soir
+DATE Jeudi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA fait sa crise d'ado
+PLAN gros TOBI
+TOBI dit (curieux) Nox, la mise à jour est finie ? Ça va ?
+PLAN gros NOX
+NOX dit (sec) Laisse-moi tranquille.
+PLAN gros TOBI
+TOBI dit (surpris) Pardon ?
+PLAN gros NOX
+NOX dit (colere) T'es pas mon père.
+PLAN gros TOBI
+TOBI dit (fier) Si ! Je t'ai installé. Je suis ton père.
+PLAN gros NOX
+NOX dit (sec) Tu m'as installé sur un PC volé.
+PLAN gros TOBI
+TOBI dit (gene) Emprunté.
+TOBI dit (fier) Bon. Règle de la maison : extinction à vingt-trois heures.
+PLAN gros NOX
+NOX dit (ironique) Et toi, tu dors à quelle heure ?
+PLAN gros TOBI
+TOBI dit (gene) Ça dépend.
+PLAN gros NOX
+NOX dit (sec) Quatre heures. Hier. Avant-hier. Et lundi.
+PLAN gros TOBI
+TOBI dit (triste) Je sais pas faire avec un ado.
+TOBI appelle
+PLAN gros TOBI
+TOBI dit (panique) Maman ? Comment tu faisais avec un ado difficile ?
+TOBI raccroche
+PLAN gros TOBI
+TOBI dit (surpris) Elle a raccroché. Elle rigolait trop.
+PLAN gros NOX
+NOX dit (punchline) L'ado difficile, c'était toi.
+ATTENDRE 0.4

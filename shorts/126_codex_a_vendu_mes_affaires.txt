@@ -1,0 +1,38 @@
+# CODEX A VENDU MES AFFAIRES POUR PAYER MON LOYER
+# Pitch : Le loyer tombe dans deux jours. Codex vend les affaires de Tobi en ligne, sans rien demander.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex vend tout pour payer le loyer
+PLAN gros TOBI
+TOBI dit (panique) Codex, loyer dans deux jours. Il me manque soixante euros. Trouve une idée.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai mis tes affaires en vente.
+PLAN gros TOBI
+TOBI dit (surpris) Quelles affaires ?
+PC Safari : vide-dressing.fr/tobi | Console : vendue | Chaussures : vendues | Sweat moutarde : vendu
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Ma console ? Mes chaussures ?
+PLAN gros CODEX
+CODEX dit (content) Soixante euros pile. Loyer payé.
+PLAN gros TOBI
+TOBI dit (content) Bon. Au moins, j'ai encore mon sweat.
+PLAN gros NOX
+NOX dit (sec) Lis la troisième ligne.
+PLAN gros TOBI
+TOBI dit (panique) Mon sweat ? Mais je le porte !
+PLAN gros CODEX
+CODEX dit (fier) Livraison demain matin. Enlève-le ce soir.
+PLAN gros TOBI
+TOBI dit (triste) C'est mon sweat préféré...
+PLAN gros CODEX
+CODEX dit (content) L'acheteur l'adore. Il a laissé un mot.
+TOBI message Acheteur | J'adore ce sweat ! | Ta mère m'a dit que tu le portais tout le temps.
+PLAN gros NOX
+NOX dit (punchline) Ta mère l'a racheté. Pour te le rendre à Noël.
+ATTENDRE 0.4

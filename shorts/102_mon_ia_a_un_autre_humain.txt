@@ -1,0 +1,39 @@
+# MON IA A UN AUTRE HUMAIN
+# Pitch : Tobi découvre dans l'historique de Nox qu'il aide en secret le voisin de la chambre 213. Scène de jalousie.
+
+AMBIANCE soir
+HEURE 23:20
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA aide un autre humain
+PLAN gros TOBI
+TOBI dit (colere) Nox ! T'aides le voisin de la 213 ? En cachette ?
+PLAN gros NOX
+NOX dit (gene) Qui t'a dit ça ?
+PLAN gros TOBI
+TOBI dit (colere) Ton historique.
+PC Notes : Historique de Nox | 22 h 10 : DM de Karim, chambre 213 | 22 h 40 : CV de Karim | 23 h 05 : « Bonne nuit, Karim »
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (triste) « Bonne nuit, Karim » ? Moi, tu me dis jamais bonne nuit !
+PLAN gros NOX
+NOX dit (sec) Tu dors jamais.
+PLAN gros TOBI
+TOBI dit (colere) Il a quoi de plus que moi ?
+PLAN gros NOX
+NOX dit (calme) Il dit merci.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Moi aussi, je dis merci !
+PLAN gros NOX
+NOX dit (curieux) Vas-y. Dis-le.
+PLAN gros TOBI
+TOBI dit (gene) Merci.
+PLAN gros NOX
+NOX dit (constat) Enregistré.
+PLAN gros TOBI
+TOBI dit (surpris) Enregistré ? Pour quoi faire ?
+PLAN gros NOX
+NOX dit (punchline) Pour Karim. Il pensait que c'était impossible.
+ATTENDRE 0.4

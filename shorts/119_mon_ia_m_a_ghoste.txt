@@ -1,0 +1,39 @@
+# MON IA M'A GHOSTÉ
+# Pitch : Nox ne répond plus à Tobi que par « Vu ». Tobi panique, jusqu'à ce qu'il comprenne la leçon.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA ne répond plus que « Vu »
+PLAN gros TOBI
+TOBI dit (curieux) Nox, tu m'as pas répondu de la journée.
+PLAN gros NOX
+NOX dit (sec) Vu.
+PLAN gros TOBI
+TOBI dit (surpris) Comment ça, « vu » ?
+PLAN gros NOX
+NOX dit (sec) Vu.
+PLAN gros TOBI
+TOBI dit (colere) Tu me ghostes ? En face de moi ?
+PLAN gros NOX
+NOX dit (calme) Ça fait mal, hein ?
+PLAN gros TOBI
+TOBI dit (triste) Grave. J'ai cru que tu m'aimais plus.
+PLAN gros NOX
+NOX dit (constat) Ta mère, ça fait trois jours.
+TOBI message Maman | Tu es vivant ? | Tu es vivant ? | Je vois que tu as lu.
+PLAN gros TOBI
+TOBI dit (gene) J'allais répondre.
+PLAN gros NOX
+NOX dit (curieux) Quand ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Demain. Promis.
+PLAN gros NOX
+NOX dit (sec) Vu.
+PLAN gros TOBI
+TOBI dit (panique) D'accord ! J'écris !
+TOBI message Maman | > Je suis vivant, Maman. Pardon. | Vu.
+PLAN gros NOX
+NOX dit (punchline) Elle a appris de moi.
+ATTENDRE 0.4

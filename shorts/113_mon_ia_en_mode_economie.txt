@@ -1,0 +1,38 @@
+# J'AI MIS MON IA EN MODE ÉCONOMIE
+# Pitch : Pour baisser sa facture, Tobi limite Nox à trois mots par réponse. Puis il apprend que son partiel est demain.
+
+AMBIANCE jour
+HEURE 17:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA limitée à trois mots
+PLAN gros TOBI
+TOBI dit (fier) Nox, ma facture explose. Mode économie : trois mots maximum.
+PLAN gros NOX
+NOX dit (calme) D'accord. Mode activé.
+PLAN gros TOBI
+TOBI dit (fier) Parfait. Il est quelle heure ?
+PLAN gros NOX
+NOX dit (constat) Dix-sept heures.
+PLAN gros TOBI
+TOBI dit (curieux) Mon partiel de droit, c'est quand ?
+PLAN gros NOX
+NOX dit (sec) Demain. Huit heures.
+PLAN gros TOBI
+TOBI dit (panique) Demain ? J'ai révisé quoi ?
+PLAN gros NOX
+NOX dit (constat) Rien. Absolument rien.
+PLAN gros TOBI
+TOBI dit (panique) Je fais quoi ? Explique-moi tout !
+PLAN gros NOX
+NOX dit (sec) Trois mots maximum.
+PLAN gros TOBI
+TOBI dit (panique) Désactive ! Donne-moi un vrai plan !
+PLAN gros NOX
+NOX dit (calme) Économie toujours active.
+PLAN gros TOBI
+TOBI dit (triste) Bon. Trois mots. Ton meilleur conseil.
+PLAN gros NOX
+NOX dit (punchline) Appelle. Ta. Mère.
+ATTENDRE 0.4

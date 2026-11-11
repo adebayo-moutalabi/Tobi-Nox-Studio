@@ -1,0 +1,37 @@
+# MON IA A TROUVÉ MON PREMIER CV
+# Pitch : Nox retrouve le CV que Tobi avait écrit à quinze ans. Tobi jure qu'il a beaucoup changé.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son CV de ses 15 ans refait surface
+PLAN gros NOX
+NOX dit (ironique) Tobi, j'ai retrouvé ton premier CV. Tu avais quinze ans.
+PLAN gros TOBI
+TOBI dit (gene) Supprime ça tout de suite.
+PC Word : CV_Tobi_15_ans.docx | Futur milliardaire | Niveau : expert en tout | Disponible tout de suite
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (sec) « Expert en tout ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'étais jeune. J'avais de l'ambition.
+PLAN gros NOX
+NOX dit (curieux) Et ton CV d'aujourd'hui ?
+PLAN gros TOBI
+TOBI dit (fier) Rien à voir. Il est professionnel.
+PC Word : CV_Tobi_22_ans.docx | Milliardaire | Niveau : expert en tout | Disponible tout de suite
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (constat) T'as juste enlevé « futur ».
+PLAN gros TOBI
+TOBI dit (fier) Parce que maintenant, c'est vrai.
+PLAN gros NOX
+NOX dit (curieux) T'as combien sur ton compte ?
+PLAN gros TOBI
+TOBI dit (gene) Douze euros.
+PLAN gros NOX
+NOX dit (punchline) Milliardaire. À neuf zéros près.
+ATTENDRE 0.4

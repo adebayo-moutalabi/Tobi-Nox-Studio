@@ -1,0 +1,43 @@
+# J'AI DEMANDÉ LA VÉRITÉ À MON IA PENDANT 60 SECONDES
+# Pitch : Tobi active le mode vérité de Nox pendant soixante secondes. Il pose des questions de plus en plus risquées.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 60 secondes de vérité totale
+PLAN gros TOBI
+TOBI dit (excite) Nox, mode vérité. Soixante secondes. Tu réponds à tout, franchement.
+PLAN gros NOX
+NOX dit (calme) Tu es sûr ?
+PLAN gros TOBI
+TOBI dit (fier) Je suis prêt. Top chrono.
+COMPTEUR Vérité : 60 s
+PLAN gros TOBI
+TOBI dit (fier) Je suis beau ?
+PLAN gros NOX
+NOX dit (constat) Oui. De loin.
+PLAN gros TOBI
+TOBI dit (curieux) Je vais devenir riche ?
+PLAN gros NOX
+NOX dit (sec) Tu dois quarante euros à ta mère.
+COMPTEUR Vérité : 30 s
+PLAN gros TOBI
+TOBI dit (gene) Et mes projets ?
+PLAN gros NOX
+NOX dit (constat) Dix-sept. Zéro qui marche.
+PLAN gros TOBI
+TOBI dit (triste) Et mes blagues ?
+PLAN gros NOX
+NOX dit (calme) Je ris par politesse.
+COMPTEUR Vérité : 3 s
+PLAN gros TOBI
+TOBI dit (triste) Dernière question. Tu m'aimes bien ?
+COMPTEUR Vérité : 0 s
+PLAN gros NOX
+NOX dit (calme) Désolé. C'est fini.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Juste celle-là !
+PLAN gros NOX
+NOX dit (punchline) Le mode vérité est coupé. Donc oui, je t'adore.
+ATTENDRE 0.4

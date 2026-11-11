@@ -1,0 +1,42 @@
+# CLAUDE M'A FAIT UN PLANNING DE RÉVISION RÉALISTE
+# Pitch : Tobi demande un planning de révision à Claude. Claude prévoit même les pauses où Tobi ne fera rien.
+
+AMBIANCE jour
+DATE Mardi
+HEURE 14:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+FONDU direct
+ACCROCHE Un planning qui prévoit sa flemme
+PLAN gros TOBI
+TOBI dit (fier) Claude, fais-moi un planning de révision. Un vrai. Sérieux.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Un planning réaliste, alors.
+PC Agenda : Mardi de Tobi | 14 h : réviser | 14 h 05 : ne rien faire (prévu) | 18 h : culpabiliser
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Cinq minutes de révision ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai regardé tes trois derniers mois.
+PLAN gros NOX
+NOX dit (sec) Il a été généreux.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je peux faire mieux que ça !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Alors je t'ajoute cinq minutes. Juste pour voir.
+TEMPS Quatre heures plus tard | Fin de l'après-midi | Bilan
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Alors, ces dix minutes ?
+PLAN gros TOBI
+TOBI dit (gene) J'ai fait... la partie « ne rien faire ».
+PLAN gros NOX
+NOX dit (constat) Avec quatre heures d'avance.
+PLAN gros TOBI
+TOBI dit (fier) Mais j'ai pas culpabilisé !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Ça, c'est un vrai progrès.
+PLAN gros NOX
+NOX dit (punchline) Le seul point du planning qu'il a sauté.
+ATTENDRE 0.4

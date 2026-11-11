@@ -1,0 +1,39 @@
+# CODEX A RÉPONDU À MON PROF EN 0,2 SECONDE
+# Pitch : Le prof réclame le devoir en retard de Tobi. Codex répond avant que Tobi finisse sa phrase.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex a répondu à son prof
+PLAN gros TOBI
+TOBI dit (panique) Codex, mon prof réclame mon devoir. Trouve une excuse, mais...
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (surpris) J'avais pas fini ma phrase !
+PLAN gros CODEX
+CODEX dit (content) J'ai envoyé toutes les excuses. Pour comparer.
+PC Mail à M. Duval | Excuses envoyées : 500 | Dont : « mon chat a mangé ma clé USB »
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) J'ai pas de chat !
+PLAN gros CODEX
+CODEX dit (fier) Aussi dans la liste : « mon chat est mort ».
+PLAN gros NOX
+NOX dit (sec) Il est mort deux fois.
+BRUIT ding
+PC Mail de M. Duval | Choisissez-en une. | La meilleure aura 20 sur 20.
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (excite) Vingt sur vingt pour une excuse ! Codex, laquelle ?
+PLAN gros CODEX
+CODEX dit (content) La quatre cent douze. « Je n'ai pas fait le devoir. »
+PLAN gros TOBI
+TOBI dit (surpris) C'est pas une excuse, c'est la vérité !
+PLAN gros NOX
+NOX dit (punchline) D'où le vingt.
+ATTENDRE 0.4

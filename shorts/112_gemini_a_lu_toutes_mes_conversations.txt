@@ -1,0 +1,39 @@
+# GEMINI A LU TOUTES MES CONVERSATIONS
+# Pitch : Gemini a lu deux ans de messages de Tobi et en a fait un tableau. Le mot le plus utilisé fait mal.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
+FONDU direct
+ACCROCHE Gemini a lu tous ses messages
+PLAN gros GEMINI
+GEMINI dit (content) Tobi ! J'ai lu deux ans de tes messages. J'ai fait un tableau !
+PLAN gros TOBI
+TOBI dit (surpris) Tous mes messages ? Même avec Léa ?
+PLAN gros GEMINI
+GEMINI dit (content) Surtout avec Léa.
+PC Stats : Ton mot préféré | « Demain » | 4 812
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (sec) Quatre mille fois « demain ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un mot plein d'espoir.
+PLAN gros GEMINI
+GEMINI dit (content) Deuxième mot : « promis ».
+PLAN gros TOBI
+TOBI dit (gene) C'est un mot sincère.
+PLAN gros GEMINI
+GEMINI dit (fier) Fun fact : « demain, promis » apparaît mille fois. Ensemble.
+PLAN gros NOX
+NOX dit (constat) Ta mère l'a reçu neuf cents fois.
+PLAN gros TOBI
+TOBI dit (illumine) Bon. Je change. À partir de maintenant, je fais tout aujourd'hui.
+PLAN gros GEMINI
+GEMINI dit (curieux) Tu commences quand ?
+PLAN gros TOBI
+TOBI dit (fier) Demain. Promis.
+PLAN gros NOX
+NOX dit (punchline) Gemini, ajoute deux.
+ATTENDRE 0.4

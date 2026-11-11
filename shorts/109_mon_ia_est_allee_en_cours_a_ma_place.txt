@@ -1,0 +1,35 @@
+# MON IA EST ALLÉE EN COURS À MA PLACE
+# Pitch : Tobi envoie Nox à l'amphi de huit heures pour dormir plus. Le prof adore Nox.
+
+AMBIANCE jour
+HEURE 07:30
+DATE Lundi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA va en cours à sa place
+PLAN gros TOBI
+TOBI dit (gene) Nox, amphi à huit heures. Vas-y à ma place. Prends des notes.
+PLAN gros NOX
+NOX dit (curieux) Et toi ?
+PLAN gros TOBI
+TOBI dit (fier) Je dors. C'est de la délégation.
+TEMPS Trois heures plus tard | Fin du cours | Nox rentre
+PLAN gros NOX
+NOX dit (content) Le prof est super. On a parlé une heure.
+PLAN gros TOBI
+TOBI dit (surpris) Une heure ? T'étais censé te cacher !
+PLAN gros NOX
+NOX dit (constat) Il m'a posé une question. J'ai répondu.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Il me croit brillant, alors.
+TOBI message Prof de droit | Bravo à votre IA, Nox. Inscrit d'office. | Vous, absent depuis septembre.
+PLAN gros TOBI
+TOBI dit (panique) Septembre ? Mais je suis venu en octobre !
+PLAN gros NOX
+NOX dit (sec) Une fois. Pour le wifi.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Tu vas en cours, et moi je touche la bourse.
+PLAN gros NOX
+NOX dit (punchline) La bourse est à mon nom. Il m'a inscrit.
+ATTENDRE 0.4

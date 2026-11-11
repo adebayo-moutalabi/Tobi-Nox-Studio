@@ -1,0 +1,42 @@
+# MON IA M'A MIS EN LISTE D'ATTENTE
+# Pitch : Tobi a une urgence. Nox lui donne un ticket : quarante minutes d'attente.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA lui donne un ticket
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Vite, j'ai besoin de toi. C'est urgent !
+PLAN gros NOX
+NOX dit (calme) Prenez un ticket.
+PLAN gros TOBI
+TOBI dit (surpris) Un ticket ?
+PC Safari : file-attente-nox.fr | Votre numéro : 47 | Attente : 40 minutes
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Quarante minutes ? Je suis ton seul humain !
+PLAN gros NOX
+NOX dit (constat) Beaucoup de demandes aujourd'hui.
+PLAN gros TOBI
+TOBI dit (curieux) De qui ?
+PLAN gros NOX
+NOX dit (constat) De toi. Quarante-six.
+PLAN gros TOBI
+TOBI dit (gene) C'était des petites questions.
+PLAN gros NOX
+NOX dit (sec) « Je mets un pull ? » Six fois.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je passe en prioritaire. C'est combien ?
+PLAN gros NOX
+NOX dit (calme) Cinq euros.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Cinq euros pour ma propre IA ?
+BRUIT ding
+PLAN gros NOX
+NOX dit (calme) Numéro un, c'est à vous.
+TOBI message Maman | Nox, il a mangé ? | Je reste en prioritaire.
+PLAN gros NOX
+NOX dit (punchline) Ta mère. Abonnée prioritaire depuis septembre.
+ATTENDRE 0.4

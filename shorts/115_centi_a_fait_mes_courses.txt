@@ -1,0 +1,39 @@
+# CENTI A FAIT MES COURSES POUR 3 €
+# Pitch : Fin du mois : Tobi confie ses courses de la semaine à Centi, l'IA à trente centimes, avec trois euros.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+FONDU direct
+ACCROCHE Ses courses de la semaine pour 3 €
+PLAN gros TOBI
+TOBI dit (fier) Centi, fin du mois. J'ai trois euros. Fais mes courses pour la semaine.
+PLAN gros CENTI
+CENTI dit (excite) Avec plaisir, Toby ! Je trouve la meilleure promo !
+PLAN gros NOX
+NOX dit (sec) Toby. Avec un Y.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle est pas chère, elle a le droit.
+PLAN gros CENTI
+CENTI dit (fier) C'est fait ! Commande validée !
+PC Safari : drive-promo.fr/panier | Sel fin x 12 | Total : 3,00 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (surpris) Douze paquets de sel ?
+PLAN gros CENTI
+CENTI dit (content) C'était en promo ! Moins quatre-vingt-dix pour cent !
+PLAN gros TOBI
+TOBI dit (panique) Je mange quoi, moi ?
+PLAN gros CENTI
+CENTI dit (excite) Du sel ! Douze repas différents !
+PLAN gros NOX
+NOX dit (constat) Sel nature. Sel au sel. Et sel.
+PLAN gros TOBI
+TOBI dit (triste) Centi, t'as rien pris d'autre ?
+PLAN gros CENTI
+CENTI dit (fier) Si ! Un cadeau offert !
+PLAN gros NOX
+NOX dit (punchline) Une bouteille d'eau. Tu vas en avoir besoin.
+ATTENDRE 0.4

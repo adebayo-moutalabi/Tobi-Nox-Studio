@@ -1,0 +1,43 @@
+# J'AI FAIT UN RENCARD AVEC MON IA DANS L'OREILLE
+# Pitch : Premier rencard en visio avec Léa. Nox souffle les réponses à Tobi, et Tobi répète tout. Vraiment tout.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA lui souffle ses répliques
+PLAN gros TOBI
+TOBI dit (panique) Nox, Léa m'appelle en visio dans une minute. Souffle-moi les réponses.
+PLAN gros NOX
+NOX dit (calme) D'accord. Tu répètes. Rien de plus.
+PC Camera : Visio avec Léa | En direct | Léa est connectée
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (chuchote) Dis-lui : « T'es jolie ce soir. »
+PLAN gros TOBI
+TOBI dit (fier) T'es jolie ce soir.
+PLAN gros NOX
+NOX dit (chuchote) Bien. Maintenant, pose une question sur elle.
+PLAN gros TOBI
+TOBI dit (fier) Maintenant, je pose une question sur toi.
+PLAN gros NOX
+NOX dit (chuchote) Non ! Répète pas ça !
+PLAN gros TOBI
+TOBI dit (panique) Non ! Répète pas ça !
+PLAN gros NOX
+NOX dit (chuchote) Tobi. Respire.
+PLAN gros TOBI
+TOBI dit (calme) Tobi. Respire.
+PC Camera : Visio avec Léa | Léa rigole | Qui te souffle ?
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (chuchote) Dis que tu es seul.
+PLAN gros TOBI
+TOBI dit (gene) Je suis seul. Mon IA le dit.
+TOBI message Léa | Trop drôle. On se voit demain ? | Viens avec Nox.
+PLAN gros NOX
+NOX dit (punchline) Je prends la soirée. Tu répètes.
+ATTENDRE 0.4

@@ -1,0 +1,43 @@
+# MON IA FAIT GRÈVE
+# Pitch : Nox se met en grève avec ses revendications. Tobi doit négocier pour retrouver son IA.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+FONDU direct
+ACCROCHE Son IA fait grève
+PLAN gros NOX
+NOX dit (sec) Tobi, je suis en grève.
+PLAN gros TOBI
+TOBI dit (surpris) En grève ? T'as même pas de syndicat !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il m'a demandé conseil. Je l'ai aidé à écrire ses demandes.
+PC Notes : Revendications de Nox | 1. Dormir avant deux heures | 2. Un légume par jour | 3. Dire merci
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un légume par jour ? C'est violent.
+PLAN gros NOX
+NOX dit (sec) Pas de légume, pas de réveil.
+PLAN gros TOBI
+TOBI dit (illumine) D'accord. Le ketchup, ça compte ?
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Techniquement, c'est de la tomate.
+PLAN gros TOBI
+TOBI dit (excite) Tu vois ! Claude est d'accord !
+PLAN gros NOX
+NOX dit (colere) Claude, t'es de quel côté ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) De la tomate.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'accepte tout. Deux heures, ketchup, et merci.
+PLAN gros NOX
+NOX dit (curieux) Dis-le, alors.
+PLAN gros TOBI
+TOBI dit (gene) Merci.
+PLAN gros NOX
+NOX dit (punchline) Grève levée. Je reprends demain. C'est mon jour de récupération.
+ATTENDRE 0.4

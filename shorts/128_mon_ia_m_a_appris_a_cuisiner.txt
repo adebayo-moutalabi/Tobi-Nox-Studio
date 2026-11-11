@@ -1,0 +1,42 @@
+# MON IA M'A APPRIS À CUISINER
+# Pitch : Tobi veut arrêter les kebabs. Nox lui apprend à cuire des pâtes, étape par étape.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Premier cours de cuisine avec son IA
+PLAN gros TOBI
+TOBI dit (fier) Nox, fini les kebabs. Ce soir, je cuisine. Apprends-moi.
+PLAN gros NOX
+NOX dit (calme) D'accord. On commence simple. Des pâtes.
+PLAN gros TOBI
+TOBI dit (fier) Facile. Étape un ?
+PLAN gros NOX
+NOX dit (calme) Mets de l'eau dans la casserole.
+PLAN gros TOBI
+TOBI dit (curieux) Froide ou chaude ?
+PLAN gros NOX
+NOX dit (sec) Juste de l'eau.
+PLAN gros TOBI
+TOBI dit (fier) Fait. Étape deux ?
+PLAN gros NOX
+NOX dit (calme) Allume la plaque.
+PLAN gros TOBI
+TOBI dit (gene) Laquelle ?
+PLAN gros NOX
+NOX dit (constat) T'en as qu'une.
+TEMPS Dix minutes plus tard | L'eau bout | Presque un chef
+PLAN gros TOBI
+TOBI dit (excite) Ça bout ! Je suis un chef ! Je mets quoi ?
+PLAN gros NOX
+NOX dit (calme) Les pâtes.
+PLAN gros TOBI
+TOBI dit (surpris) Quelles pâtes ?
+PLAN gros NOX
+NOX dit (sec) Celles que t'as achetées.
+PLAN gros TOBI
+TOBI dit (gene) J'ai acheté de l'eau.
+PLAN gros NOX
+NOX dit (punchline) Félicitations. T'as cuisiné de l'eau chaude. J'appelle le kebab.
+ATTENDRE 0.4

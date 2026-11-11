@@ -1,0 +1,35 @@
+# MON IA A RÉPONDU À MA MÈRE À MA PLACE
+# Pitch : La mère de Tobi le trouve très gentil en ce moment. Depuis un mois, c'est Nox qui lui répond.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA répond à sa mère depuis un mois
+PLAN gros TOBI
+TOBI dit (content) Nox, ma mère dit partout que je suis gentil en ce moment.
+PLAN gros NOX
+NOX dit (gene) Ah.
+PLAN gros TOBI
+TOBI dit (curieux) Pourquoi « ah » ?
+PLAN gros NOX
+NOX dit (gene) Depuis un mois, c'est moi qui lui réponds.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ?
+TOBI message Maman | Merci pour ton message si doux, mon chéri. | > Prends soin de toi, Maman. Bois de l'eau.
+PLAN gros TOBI
+TOBI dit (panique) « Bois de l'eau » ? Je dis jamais ça !
+PLAN gros NOX
+NOX dit (constat) Elle boit plus d'eau.
+PLAN gros TOBI
+TOBI dit (colere) Stop ! À partir de maintenant, c'est moi qui écris.
+TOBI message Maman | > yo | C'est toi, Nox ?
+PLAN gros TOBI
+TOBI dit (surpris) Elle demande si c'est toi !
+PLAN gros NOX
+NOX dit (calme) Elle préfère l'ancienne version.
+PLAN gros TOBI
+TOBI dit (triste) Mais l'ancienne version, c'était pas moi !
+PLAN gros NOX
+NOX dit (punchline) Justement.
+ATTENDRE 0.4

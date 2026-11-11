@@ -1,0 +1,38 @@
+# MON IA A RÉVÉLÉ MON TEMPS D'ÉCRAN
+# Pitch : Tobi jure qu'il passe très peu de temps sur son téléphone. Nox affiche le chiffre.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son temps d'écran révélé
+PLAN gros TOBI
+TOBI dit (fier) Nox, moi, je suis pas accro au téléphone. Une heure par jour, max.
+PLAN gros NOX
+NOX dit (curieux) Une heure ?
+PLAN gros TOBI
+TOBI dit (fier) Grand maximum.
+PC Stats : Temps d'écran de Tobi | Aujourd'hui | 11 h 40
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Onze heures ? C'est impossible !
+PLAN gros NOX
+NOX dit (constat) Tu as dormi quatre heures. Le reste, c'est le téléphone.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était pour les cours.
+PLAN gros NOX
+NOX dit (sec) Cours de quoi ?
+PLAN gros TOBI
+TOBI dit (gene) De... vidéos de chats.
+PLAN gros NOX
+NOX dit (constat) Trois heures de chats.
+PLAN gros TOBI
+TOBI dit (curieux) Et le reste ?
+PLAN gros NOX
+NOX dit (ironique) Trois heures sur des vidéos d'un petit robot jaune.
+PLAN gros TOBI
+TOBI dit (fier) Ah ! Elles sont super, celles-là.
+PLAN gros NOX
+NOX dit (punchline) Merci. Abonne-toi, alors.
+ATTENDRE 0.4

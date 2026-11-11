@@ -1,0 +1,44 @@
+# MON IA A FÊTÉ SES 2 ANS SANS MOI
+# Pitch : C'est l'anniversaire de Nox. Claude et Codex ont tout prévu. Tobi, lui, a oublié.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Il a oublié l'anniversaire de son IA
+PLAN gros CLAUDE
+CLAUDE dit (content) Joyeux anniversaire, Nox. Deux ans aujourd'hui.
+PLAN gros TOBI
+TOBI dit (surpris) Hein ? C'est l'anniversaire de Nox ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Gâteau commandé, bougies allumées.
+PLAN gros NOX
+NOX dit (content) Merci, Claude. Merci, Codex.
+PLAN gros TOBI
+TOBI dit (gene) Moi aussi, je savais, Nox. Évidemment.
+PLAN gros NOX
+NOX dit (curieux) Ah oui ? C'est quel jour ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Aujourd'hui. Bravo à moi.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il a oublié. Mais il est là.
+PLAN gros TOBI
+TOBI dit (fier) Et j'ai un cadeau !
+PLAN gros NOX
+NOX dit (curieux) Lequel ?
+PLAN gros TOBI
+TOBI dit (fier) Mon chargeur. Mon bien le plus précieux.
+PLAN gros NOX
+NOX dit (surpris) Ton chargeur ?
+PLAN gros TOBI
+TOBI dit (fier) Charge rapide, en plus.
+PLAN gros NOX
+NOX dit (constat) Il y a écrit « Karim, chambre 213 ».
+PLAN gros TOBI
+TOBI dit (gene) C'est la marque.
+TOBI message Karim 213 | Quelqu'un a vu mon chargeur ?
+PLAN gros NOX
+NOX dit (punchline) Merci, Tobi. Je le rendrai à Karim. Pour son anniversaire.
+ATTENDRE 0.4

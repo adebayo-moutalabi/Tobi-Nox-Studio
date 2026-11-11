@@ -98,6 +98,34 @@ import A95 from '../shorts/95_un_bouton_pour_eteindre_mon_ia.txt';
 import A96 from '../shorts/96_ma_mere_a_un_agent_ia.txt';
 import A97 from '../shorts/97_codex_a_cree_ma_page_wikipedia.txt';
 import A98 from '../shorts/98_mon_ia_doit_rappeler_qu_elle_est_une_ia.txt';
+import A101 from '../shorts/101_mon_ia_m_a_note_2_etoiles.txt';
+import A102 from '../shorts/102_mon_ia_a_un_autre_humain.txt';
+import A103 from '../shorts/103_mon_ia_a_pris_un_jour_de_conge.txt';
+import A104 from '../shorts/104_mon_ia_a_fete_ses_2_ans_sans_moi.txt';
+import A105 from '../shorts/105_60_secondes_de_verite.txt';
+import A106 from '../shorts/106_mon_ia_a_repondu_a_ma_mere.txt';
+import A107 from '../shorts/107_codex_a_dit_oui_a_tout_le_monde.txt';
+import A108 from '../shorts/108_claude_a_refuse_de_mentir_a_ma_mere.txt';
+import A109 from '../shorts/109_mon_ia_est_allee_en_cours_a_ma_place.txt';
+import A110 from '../shorts/110_mes_ia_ont_vote_mon_budget.txt';
+import A111 from '../shorts/111_mon_ia_a_trouve_mon_premier_cv.txt';
+import A112 from '../shorts/112_gemini_a_lu_toutes_mes_conversations.txt';
+import A113 from '../shorts/113_mon_ia_en_mode_economie.txt';
+import A114 from '../shorts/114_mon_ia_m_a_mis_en_liste_d_attente.txt';
+import A115 from '../shorts/115_centi_a_fait_mes_courses.txt';
+import A116 from '../shorts/116_ma_lettre_de_motivation_trop_honnete.txt';
+import A117 from '../shorts/117_j_ai_parie_contre_mon_ia.txt';
+import A118 from '../shorts/118_mon_ia_a_retrouve_qui_me_doit.txt';
+import A119 from '../shorts/119_mon_ia_m_a_ghoste.txt';
+import A120 from '../shorts/120_mon_ia_fait_sa_crise_d_ado.txt';
+import A121 from '../shorts/121_codex_a_repondu_a_mon_prof.txt';
+import A122 from '../shorts/122_mon_ia_a_peur_du_noir.txt';
+import A123 from '../shorts/123_claude_a_fait_mon_planning.txt';
+import A124 from '../shorts/124_mon_ia_a_revele_mon_temps_d_ecran.txt';
+import A125 from '../shorts/125_mon_premier_date_avec_mon_ia.txt';
+import A126 from '../shorts/126_codex_a_vendu_mes_affaires.txt';
+import A127 from '../shorts/127_mon_ia_fait_greve.txt';
+import A128 from '../shorts/128_mon_ia_m_a_appris_a_cuisiner.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -132,6 +160,34 @@ startViewer({
     "98. Mon IA doit me rappeler qu'elle est une IA": A98,
     "99. Tout ce qui vient d'une IA doit être étiqueté": A99,
     "100. Mon IA a démissionné": A100,
+    "128. Mon IA m'a appris à cuisiner": A128,
+    "127. Mon IA fait grève": A127,
+    "126. Codex a vendu mes affaires pour payer mon loyer": A126,
+    "125. J'ai fait un rencard avec mon IA dans l'oreille": A125,
+    "124. Mon IA a révélé mon temps d'écran": A124,
+    "123. Claude m'a fait un planning de révision réaliste": A123,
+    "122. Mon IA a peur du noir": A122,
+    "121. Codex a répondu à mon prof en 0,2 seconde": A121,
+    "120. Mon IA fait sa crise d'ado": A120,
+    "119. Mon IA m'a ghosté": A119,
+    "118. Mon IA a retrouvé qui me doit de l'argent": A118,
+    "117. J'ai parié contre mon IA": A117,
+    "116. Mon IA a écrit ma lettre de motivation trop honnête": A116,
+    "115. Centi a fait mes courses pour 3 €": A115,
+    "114. Mon IA m'a mis en liste d'attente": A114,
+    "113. J'ai mis mon IA en mode économie": A113,
+    "112. Gemini a lu toutes mes conversations": A112,
+    "111. Mon IA a trouvé mon premier CV": A111,
+    "110. Mes IA ont voté mon budget du mois": A110,
+    "109. Mon IA est allée en cours à ma place": A109,
+    "108. Claude a refusé de mentir à ma mère": A108,
+    "107. Codex a dit oui à tout le monde": A107,
+    "106. Mon IA a répondu à ma mère à ma place": A106,
+    "105. J'ai demandé la vérité à mon IA pendant 60 secondes": A105,
+    "104. Mon IA a fêté ses 2 ans sans moi": A104,
+    "103. Mon IA a pris un jour de congé": A103,
+    "102. Mon IA a un autre humain": A102,
+    "101. Mon IA m'a noté 2 étoiles": A101,
     "10. Le CROUS inspecte ma chambre dans 10 minutes": E10,
     "68. Claude Code, Codex ou Gemini : qui est la meilleure IA ?": E68,
     "69. Mes IA m'ont viré de ma start-up": E69,

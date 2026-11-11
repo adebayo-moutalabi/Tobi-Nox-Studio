@@ -1,0 +1,42 @@
+# CODEX A DIT OUI À TOUT LE MONDE
+# Pitch : Tobi demande à Codex de répondre à ses invitations. Codex dit oui à tout, le même samedi.
+
+AMBIANCE jour
+DATE Jeudi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex a dit oui à tout
+PLAN gros TOBI
+TOBI dit (gene) Codex, je reçois trop d'invitations. Réponds à ma place.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai dit oui à tout.
+PLAN gros TOBI
+TOBI dit (surpris) À tout ?
+PC Agenda : Samedi de Tobi | 14 h : déménagement de Karim | 18 h : anniversaire de Léa | 20 h : mariage de ton cousin
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Trois trucs le même samedi !
+PLAN gros CODEX
+CODEX dit (fier) J'ai optimisé. Il te reste dix minutes pour manger.
+PLAN gros NOX
+NOX dit (sec) Debout.
+PLAN gros TOBI
+TOBI dit (curieux) Et le mariage, pourquoi ?
+PLAN gros CODEX
+CODEX dit (content) Il cherchait un témoin. J'ai dit oui.
+PLAN gros TOBI
+TOBI dit (panique) Témoin ? Je connais à peine mon cousin !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai écrit ton discours.
+PC Word : Discours_du_temoin.docx | « Je connais à peine le marié. » | « Mais j'ai dit oui. »
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (triste) Il va me détester.
+TOBI message Cousin Yanis | Ton discours est super honnête. | Je change de témoin. Je prends Codex.
+PLAN gros NOX
+NOX dit (punchline) Codex a dit oui.
+ATTENDRE 0.4

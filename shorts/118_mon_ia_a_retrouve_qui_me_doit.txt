@@ -1,0 +1,39 @@
+# MON IA A RETROUVÉ QUI ME DOIT DE L'ARGENT
+# Pitch : Tobi est sûr que tout l'étage lui doit de l'argent. Nox fait les comptes de tout le monde.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Qui lui doit de l'argent ?
+PLAN gros TOBI
+TOBI dit (fier) Nox, tout l'étage me doit de l'argent. Fais les comptes. Je veux récupérer.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je calcule.
+PC Excel : Dettes de l'étage | Karim : 4 € | Léa : 5 € | Sami : 3 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (excite) Douze euros ! Je suis riche !
+PLAN gros NOX
+NOX dit (constat) Attends. J'ai pas fini.
+PLAN gros TOBI
+TOBI dit (curieux) Il reste qui ?
+PLAN gros NOX
+NOX dit (sec) Toi.
+PC Excel : Dettes de Tobi | Maman : 340 € | CROUS : 90 € | Karim : 2 chargeurs
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Trois cent quarante euros à ma mère ?
+PLAN gros NOX
+NOX dit (constat) Depuis septembre. Elle note tout.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Je donne mes douze euros à ma mère chaque mois.
+PLAN gros NOX
+NOX dit (sec) Il te faut trois ans.
+PLAN gros TOBI
+TOBI dit (fier) Voilà. On avance.
+PLAN gros NOX
+NOX dit (punchline) Et dans trois ans, tu lui dois encore les chargeurs.
+ATTENDRE 0.4

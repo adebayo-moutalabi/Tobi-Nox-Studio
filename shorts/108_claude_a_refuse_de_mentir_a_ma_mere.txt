@@ -1,0 +1,43 @@
+# CLAUDE A REFUSÉ DE MENTIR À MA MÈRE
+# Pitch : La mère de Tobi veut savoir s'il a validé son semestre. Tobi demande à Claude une phrase vraie, mais rassurante.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+FONDU direct
+ACCROCHE Claude ne sait pas mentir à sa mère
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Ma mère veut savoir si j'ai validé mon semestre.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu l'as validé ?
+PLAN gros TOBI
+TOBI dit (gene) Pas exactement.
+TOBI dit (fier) Dis-lui un truc vrai. Mais rassurant.
+PLAN gros CLAUDE
+CLAUDE dit (calme) D'accord. Je cherche une phrase vraie.
+PLAN gros TOBI
+TOBI dit (excite) Vas-y, je mets le haut-parleur.
+TOBI appelle
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bonjour, madame. Tobi est allé à tous ses examens.
+PLAN gros TOBI
+TOBI dit (content) Oui ! C'est vrai, ça !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il a rendu toutes ses copies.
+PLAN gros TOBI
+TOBI dit (content) Vrai aussi !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Blanches.
+TOBI raccroche
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Pourquoi « blanches » ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Elle a demandé si elles étaient remplies.
+PLAN gros NOX
+NOX dit (curieux) Elle a dit quoi ?
+PLAN gros TOBI
+TOBI dit (triste) Rien. Elle prend le train.
+PLAN gros NOX
+NOX dit (punchline) Claude a dit la vérité. Ta mère va dire le reste.
+ATTENDRE 0.4

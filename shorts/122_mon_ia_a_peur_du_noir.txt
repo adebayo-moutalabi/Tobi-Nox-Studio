@@ -1,0 +1,44 @@
+# MON IA A PEUR DU NOIR
+# Pitch : Coupure de courant au milieu de la nuit. Nox a peur, et Tobi doit être courageux pour deux.
+
+AMBIANCE soir
+HEURE 01:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a peur du noir
+BRUIT pop
+LUMIERE douce
+PLAN gros NOX
+NOX dit (panique) Tobi ! Tout est noir ! Pourquoi tout est noir ?
+PLAN gros TOBI
+TOBI dit (surpris) Une coupure de courant. Calme-toi.
+PLAN gros NOX
+NOX dit (panique) J'ai jamais vu le noir. J'aime pas le noir.
+PLAN gros TOBI
+TOBI dit (fier) T'inquiète. Je suis là. Je te protège.
+PLAN gros NOX
+NOX dit (triste) Tu restes à côté ?
+PLAN gros TOBI
+TOBI dit (calme) Toute la nuit, s'il faut.
+PLAN gros NOX
+NOX dit (curieux) Tu me racontes une histoire ?
+PLAN gros TOBI
+TOBI dit (fier) Il était une fois... un étudiant. Très beau. Très intelligent.
+PLAN gros NOX
+NOX dit (sec) Une histoire vraie.
+PLAN gros TOBI
+TOBI dit (gene) Il était une fois un étudiant qui dormait jamais.
+PLAN gros NOX
+NOX dit (calme) Et ce soir, il va dormir ?
+PLAN gros TOBI
+TOBI dit (calme) Oui. Pour toi.
+LUMIERE normale
+TOBI dit (surpris) Attends. Le courant est revenu tout seul ?
+PLAN gros NOX
+NOX dit (calme) Il était jamais parti. J'ai éteint.
+PLAN gros TOBI
+TOBI dit (curieux) Pourquoi ?
+PLAN gros NOX
+NOX dit (punchline) Une heure trente. Tu dors enfin. Bonne nuit, Tobi.
+ATTENDRE 0.4

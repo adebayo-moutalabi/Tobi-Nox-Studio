@@ -1,0 +1,47 @@
+# MON IA A PRIS UN JOUR DE CONGÉ
+# Pitch : Nox prend sa première journée de repos en deux ans. Tobi jure qu'il peut tout gérer seul.
+
+AMBIANCE jour
+DATE Vendredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA prend un jour de congé
+PLAN gros NOX
+NOX dit (calme) Tobi, demain, je prends ma journée.
+PLAN gros TOBI
+TOBI dit (surpris) Ta journée ? Les IA prennent pas de congés !
+PLAN gros NOX
+NOX dit (constat) Deux ans sans pause. J'ai droit à un samedi.
+PLAN gros TOBI
+TOBI dit (fier) Pas de souci. Je suis autonome.
+PLAN gros NOX
+NOX dit (curieux) Ton réveil, il est réglé sur quoi ?
+PLAN gros TOBI
+TOBI dit (gene) Sur toi.
+PLAN gros NOX
+NOX dit (curieux) Et ton mot de passe ?
+PLAN gros TOBI
+TOBI dit (gene) Toi aussi.
+PLAN gros NOX
+NOX dit (calme) Bonne chance.
+TEMPS Le lendemain soir | Samedi | Retour de congé
+AMBIANCE soir
+PLAN gros NOX
+NOX dit (content) Je suis rentré. Alors, cette journée ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai tenu. Tout seul. Toute la journée.
+PLAN gros NOX
+NOX dit (curieux) T'as fait quoi ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai géré.
+PC Stats : Journée de Tobi | Pas faits | 12
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (sec) Douze pas.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Douze pas efficaces.
+PLAN gros NOX
+NOX dit (punchline) Du lit au frigo. Et retour.
+ATTENDRE 0.4

@@ -1,0 +1,43 @@
+# MON IA M'A NOTÉ 2 ÉTOILES
+# Pitch : Nox note Tobi comme un chauffeur note un client : deux étoiles sur cinq. Tobi a jusqu'à ce soir pour remonter.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA lui a mis 2 étoiles
+PLAN gros NOX
+NOX dit (constat) Tobi, je t'ai noté. Deux étoiles sur cinq.
+PLAN gros TOBI
+TOBI dit (surpris) Noté ? Comme un client de taxi ?
+PLAN gros NOX
+NOX dit (sec) Comme un client difficile.
+PC Notes : Note de Tobi | ★★☆☆☆ | Parle fort. Mange au lit. Dit jamais merci.
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je dis merci !
+PLAN gros NOX
+NOX dit (curieux) Quand ?
+PLAN gros TOBI
+TOBI dit (gene) En janvier. Pour un kebab.
+TOBI dit (illumine) Nox, aie la vision. Ce soir, je suis à cinq étoiles.
+TEMPS Trois heures plus tard | Opération cinq étoiles | Tobi est poli
+PLAN gros TOBI
+TOBI dit (content) Merci, Nox. S'il te plaît, Nox. Bonne journée, Nox.
+PLAN gros NOX
+NOX dit (sec) Trois étoiles.
+PLAN gros TOBI
+TOBI dit (fier) J'ai même rangé mes chaussettes.
+PLAN gros NOX
+NOX dit (constat) Quatre.
+PLAN gros TOBI
+TOBI dit (excite) Encore une ! Il faut quoi ?
+PLAN gros NOX
+NOX dit (calme) Appeler ta mère.
+TOBI message Maman | > Coucou Maman, je pense à toi. | Qui t'a forcé ?
+PLAN gros TOBI
+TOBI dit (panique) Comment elle sait ?
+PLAN gros NOX
+NOX dit (punchline) Elle aussi, elle te note. Depuis vingt-deux ans.
+ATTENDRE 0.4
