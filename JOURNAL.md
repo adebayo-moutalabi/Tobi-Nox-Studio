@@ -323,6 +323,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Chaque épisode a une question pour les commentaires, dans la fiche Publications.
 - Dix-huit nouvelles idées dans `IDEES_EPISODES.md`.
 
+## Épisodes 101 à 128 (11 novembre 2026)
+
+- Les dix-huit idées du 10 novembre deviennent les épisodes 101 à 118.
+- Dix nouvelles histoires sur la même recette : épisodes 119 à 128 (ghosting, crise d'ado, peur du noir, grève, cuisine…).
+- Chaque épisode a son titre, son accroche et sa question pour les commentaires dans la fiche Publications.
+
 ## À faire
 
 Voir `TACHES.md`.
