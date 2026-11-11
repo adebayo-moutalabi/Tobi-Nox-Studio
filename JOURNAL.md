@@ -328,6 +328,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Les dix-huit idées du 10 novembre deviennent les épisodes 101 à 118.
 - Dix nouvelles histoires sur la même recette : épisodes 119 à 128 (ghosting, crise d'ado, peur du noir, grève, cuisine…).
 - Chaque épisode a son titre, son accroche et sa question pour les commentaires dans la fiche Publications.
+- Épisodes 129 et 130 : les deux idées avec Claude Code, Codex et Gemini restées sans épisode (noms de domaine, plan pour devenir riche).
 
 ## À faire
 

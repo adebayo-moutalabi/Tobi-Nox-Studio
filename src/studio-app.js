@@ -125,6 +125,8 @@ import A124 from '../shorts/124_mon_ia_a_revele_mon_temps_d_ecran.txt';
 import A125 from '../shorts/125_mon_premier_date_avec_mon_ia.txt';
 import A126 from '../shorts/126_codex_a_vendu_mes_affaires.txt';
 import A127 from '../shorts/127_mon_ia_fait_greve.txt';
+import A129 from '../shorts/129_codex_a_achete_un_domaine_par_idee.txt';
+import A130 from '../shorts/130_mes_ia_m_ont_fait_un_plan_pour_devenir_riche.txt';
 import A128 from '../shorts/128_mon_ia_m_a_appris_a_cuisiner.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
@@ -161,6 +163,8 @@ startViewer({
     "99. Tout ce qui vient d'une IA doit être étiqueté": A99,
     "100. Mon IA a démissionné": A100,
     "128. Mon IA m'a appris à cuisiner": A128,
+    "129. Codex a acheté un nom de domaine pour chaque idée": A129,
+    "130. Mes IA m'ont fait un plan pour devenir riche": A130,
     "127. Mon IA fait grève": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. J'ai fait un rencard avec mon IA dans l'oreille": A125,

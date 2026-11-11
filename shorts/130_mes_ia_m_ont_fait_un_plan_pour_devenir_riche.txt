@@ -1,0 +1,46 @@
+# MES IA M'ONT FAIT UN PLAN POUR DEVENIR RICHE
+# Pitch : Tobi demande à Claude, Codex et Gemini un plan pour devenir riche. Il applique les trois en même temps.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE Trois IA. Trois plans. En même temps.
+PLAN gros TOBI
+TOBI dit (fier) Claude, Codex, Gemini. Je veux devenir riche. Chacun me fait un plan.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Mon plan : un petit job, et tu mets dix euros de côté par mois.
+PLAN gros CODEX
+CODEX dit (fier) Mon plan est déjà lancé. Une boutique en ligne. C'est fait.
+PLAN gros GEMINI
+GEMINI dit (content) Mon plan fait quarante pages. Fun fact : je cite trois prix Nobel.
+PLAN gros TOBI
+TOBI dit (excite) Trois plans ! Je fais les trois en même temps !
+PLAN gros NOX
+NOX dit (sec) Tobi. Non.
+TEMPS Une semaine plus tard | Les trois plans | Le bilan
+PC Banque : Compte de Tobi | Gains : +12 € | Compte : bloqué
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Bloqué ? Pourquoi mon compte est bloqué ?
+PLAN gros CODEX
+CODEX dit (gene) La boutique vendait des choses... que t'avais pas.
+PLAN gros GEMINI
+GEMINI dit (curieux) Et mon plan, tu l'as lu ?
+PLAN gros TOBI
+TOBI dit (gene) La page une. Elle disait : « Vends ce que tu as. »
+PLAN gros NOX
+NOX dit (sec) T'avais rien.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Et mon plan ?
+PLAN gros TOBI
+TOBI dit (fier) Lui, il a marché ! J'ai gagné douze euros au petit job !
+PLAN gros CLAUDE
+CLAUDE dit (content) Bravo. Le seul plan sans risque.
+PLAN gros NOX
+NOX dit (punchline) Douze euros. Sur un compte bloqué.
+ATTENDRE 0.4

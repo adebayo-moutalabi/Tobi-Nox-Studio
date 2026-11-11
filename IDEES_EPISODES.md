@@ -18,8 +18,8 @@ Les noms vont dans le titre seulement quand ils portent la blague. Chaque idée 
 
 | Titre proposé | L'histoire | La chute |
 |---|---|---|
-| Codex a acheté un nom de domaine pour chaque idée | Tobi reçoit une facture pour 340 domaines. | Le boulanger en rachète un, pour une baguette. |
-| Mes IA m'ont fait un plan pour devenir riche | Tobi applique les trois plans en même temps. | Il gagne 12 € et perd son compte en banque. |
+| Codex a acheté un nom de domaine pour chaque idée (écrit : épisode 129) | Tobi reçoit une facture pour 340 domaines. | Le boulanger en rachète un, pour une baguette. |
+| Mes IA m'ont fait un plan pour devenir riche (écrit : épisode 130) | Tobi applique les trois plans en même temps. | Il gagne 12 € et perd son compte en banque. |
 
 ## Idées du 10 novembre 2026
 

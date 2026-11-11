@@ -1,0 +1,47 @@
+# CODEX A ACHETÉ UN NOM DE DOMAINE POUR CHAQUE IDÉE
+# Pitch : Tobi demande à Codex de s'occuper des sites de ses idées. Codex achète un nom de domaine pour chacune.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE 340 idées. 340 sites. 1 facture.
+PLAN gros TOBI
+TOBI dit (fier) Nox, j'ai eu une idée par jour cette année. Codex s'occupe des sites.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Un nom de domaine pour chaque idée.
+PLAN gros TOBI
+TOBI dit (excite) Chaque idée ? Même les petites ?
+PLAN gros CODEX
+CODEX dit (content) Même celles que t'as dites en dormant.
+PC Banque : Compte de Tobi | Noms de domaine : 340 | Facture : -340 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Trois cent quarante euros ?
+PLAN gros CODEX
+CODEX dit (constat) Un euro par idée. Prix de lancement.
+PLAN gros NOX
+NOX dit (sec) T'as eu trois cent quarante idées ?
+PLAN gros CODEX
+CODEX dit (fier) Il en a eu plus. J'ai trié.
+PC Safari : mes-domaines.fr | pates-au-ketchup.fr | uber-pour-chaussettes.fr | tobi-milliardaire.fr
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Uber pour chaussettes, c'est l'avenir.
+PLAN gros NOX
+NOX dit (sec) Livrer des chaussettes. En voiture.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Je revends les domaines. Un seul acheteur, et je rembourse tout.
+BRUIT ding
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Une offre. Le boulanger d'en bas.
+PLAN gros TOBI
+TOBI dit (excite) Il veut lequel ? Il propose combien ?
+PLAN gros CODEX
+CODEX dit (content) baguette-de-tobi.fr. Contre une baguette.
+PLAN gros NOX
+NOX dit (punchline) Trois cent quarante euros. Pour une baguette. Même pas tradition.
+ATTENDRE 0.4
