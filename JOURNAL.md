@@ -337,6 +337,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Dix nouveaux épisodes, 131 à 140 (argent de poche, crush, partiel en un mot, groupe de famille, beaux-parents IA…).
 - Nouvel outil `tools/controle-episodes.mjs` : tons connus, plans de caméra, durée estimée, mots interdits.
 
+## Épisodes en 30-40 secondes (13 novembre 2026)
+
+- Épisodes 101 à 119, 121 à 129 et 131 à 140 réécrits : une seule mécanique comique, 12 à 16 répliques, 25 à 35 secondes sans les voix, un écran au plus.
+- L'amoureuse de Tobi s'appelle désormais Inès partout (bible, épisodes, fiches).
+- L'écran de fin « Abonne-toi » dure 2,5 secondes.
+- Vingt nouvelles idées au même format dans `IDEES_EPISODES.md`.
+
 ## À faire
 
 Voir `TACHES.md`.

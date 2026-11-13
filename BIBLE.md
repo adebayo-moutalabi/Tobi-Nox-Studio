@@ -34,7 +34,7 @@ Trois IA plus expérimentées, sous la forme de leurs logos animés. Elles vienn
 
 **Règle de présence :** un ou deux Aînés dans un épisode le plus souvent. Les études restent le cœur de la série : partiels, CROUS, stage, fin de mois.
 
-### Léa
+### Inès
 - **Qui :** camarade de promo de Tobi et son crush. Bosseuse, inspirante, elle finit ce qu'elle commence et elle a de l'avenir.
 - **Fonction :** elle montre à Tobi ce qu'il pourrait devenir s'il s'y mettait vraiment.
 - **Pour l'instant :** elle n'existe que dans les conversations, pas encore à l'écran.

@@ -22,7 +22,7 @@ for (const f of readdirSync('shorts').filter((f) => { const n = parseInt(f); ret
   }
   const s = Math.round(words / 3 + pcs * 1.8);
   if (!lines.some((l) => l.startsWith('ACCROCHE'))) pb.push('pas d\'ACCROCHE');
-  if (s > 60) pb.push('trop long');
+  if (s > 45) pb.push(`trop long (${s} s, viser 30 à 40)`);
   if (pb.length) bad++;
   console.log(`${f.padEnd(50)} ${String(words).padStart(3)} mots ~${s} s ${pb.length ? '⚠ ' + [...new Set(pb)].join(', ') : 'ok'}`);
 }

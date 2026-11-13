@@ -32,7 +32,7 @@ Un brouillon, une idée d'actualité ou un texte venu d'ailleurs donne seulement
 
 ## La bonne durée
 
-La durée vise 40 à 90 secondes, sans minimum strict d'une minute. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.
+La durée vise 30 à 40 secondes, 50 au grand maximum (décision du 13 novembre 2026) : environ 70 à 100 mots de dialogue, une seule mécanique comique. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.
 
 - **Format court :** 40 à 45 secondes, environ 100 à 115 mots.
 - **Format normal :** 55 à 70 secondes, environ 130 à 170 mots.

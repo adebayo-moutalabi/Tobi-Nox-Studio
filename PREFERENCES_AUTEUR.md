@@ -140,6 +140,15 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Les débuts qui retiennent moins : une IA qui parle d'un sujet sans contexte (« Réunion sans moi ») ou une ouverture technique (« Claude Code gratuit à vie »).
 - Aucun commentaire sur les derniers Shorts : chaque fiche propose une question simple à mettre en description ou en commentaire épinglé.
 
+## Format 30-40 secondes (13 novembre 2026)
+
+- L'auteur n'a aimé aucune version des épisodes 101 à 140 : trop longs, pas toujours logiques, trop d'idées à la fois.
+- Durée visée : 30 à 40 secondes, 50 au grand maximum. Cela remplace la règle « moins d'une minute ».
+- Une seule mécanique comique par épisode, posée tout de suite, répétée en s'aggravant, puis retournée. Modèle : « Mon IA me souffle tout pendant mon rencard ».
+- Un écran au maximum, seulement s'il porte la blague.
+- L'amoureuse de Tobi s'appelle Inès. La bible disait Léa : l'auteur a choisi Inès, la bible est corrigée.
+- L'écran de fin « Abonne-toi » dure 2,5 secondes au lieu de 4,5.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
