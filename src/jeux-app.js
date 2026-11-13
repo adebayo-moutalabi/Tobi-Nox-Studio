@@ -9,9 +9,49 @@ const store = { // le meilleur score reste dans le navigateur ; si le stockage e
   get(k) { try { return Number(localStorage.getItem('tn-jeux-' + k)) || 0; } catch { return 0; } },
   set(k, v) { try { localStorage.setItem('tn-jeux-' + k, String(v)); } catch { /* navigation privée */ } },
 };
+// Sons fabriqués dans le navigateur : aucun fichier à charger. Le réglage « son coupé » reste en mémoire.
+const son = (() => {
+  let ctx, on = store.get('son') !== 2;
+  const tone = (f, d = 0.12, type = 'sine', v = 0.1, slide = 0, wait = 0) => {
+    if (!on) return;
+    try {
+      ctx ||= new (window.AudioContext || window.webkitAudioContext)(); if (ctx.state === 'suspended') ctx.resume();
+      const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime + wait;
+      o.type = type; o.frequency.setValueAtTime(f, t); if (slide) o.frequency.exponentialRampToValueAtTime(Math.max(40, f * slide), t + d);
+      g.gain.setValueAtTime(v, t); g.gain.exponentialRampToValueAtTime(0.0001, t + d); o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + d + 0.02);
+    } catch { /* pas de son sur cet appareil : le jeu continue */ }
+  };
+  return {
+    piece: (n = 0) => tone(784 * 2 ** (Math.min(n, 14) / 12), 0.09, 'triangle'), // la note monte avec le combo
+    bonus: () => { tone(660, 0.1, 'triangle'); tone(990, 0.16, 'triangle', 0.1, 0, 0.07); },
+    rate: () => tone(190, 0.28, 'sawtooth', 0.11, 0.4),
+    clic: () => tone(430, 0.05, 'square', 0.04),
+    bien: () => tone(740, 0.08, 'triangle', 0.09),
+    fin: () => [523, 415, 330].forEach((f, i) => tone(f, 0.24, 'triangle', 0.1, 0, i * 0.16)),
+    record: () => [523, 659, 784, 1047].forEach((f, i) => tone(f, 0.18, 'triangle', 0.1, 0, i * 0.11)),
+    toggle() { on = !on; store.set('son', on ? 1 : 2); if (on) tone(660, 0.08, 'triangle'); return on; },
+    get on() { return on; },
+  };
+})();
+// Les cinq meilleurs scores de chaque jeu, gardés sur cet appareil
+const top = {
+  get(id) { try { return JSON.parse(localStorage.getItem('tn-jeux-top-' + id)) || []; } catch { return []; } },
+  add(id, score) { const l = [...top.get(id), score].filter((x) => x > 0).sort((a, b) => b - a).slice(0, 5); try { localStorage.setItem('tn-jeux-top-' + id, JSON.stringify(l)); } catch { /* navigation privée */ } return l; },
+};
 let toastT = 0;
 function toast(text, ms = 1500) { const t = $('toast'); t.textContent = text; t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), ms); }
 const hud = (items) => { $('hud').innerHTML = items.map(([lib, val]) => `<div><small>${lib}</small><b>${val}</b></div>`).join(''); };
+
+// Un seul moteur de rendu pour tous les jeux en 3D : ils partagent le même canevas.
+let glr = null;
+function sharedRenderer() {
+  if (!glr) {
+    glr = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, powerPreference: 'high-performance' });
+    glr.setPixelRatio(Math.min(devicePixelRatio, 2)); glr.shadowMap.enabled = true; glr.shadowMap.type = THREE.PCFSoftShadowMap;
+    glr.toneMapping = THREE.ACESFilmicToneMapping; glr.toneMappingExposure = 1.15;
+  }
+  return glr;
+}
 
 // ---------------------------------------------------------------- Jeu 1 : Nox, attrape !
 // Tobi lance ses idées par la fenêtre. Nox attrape les pièces et les kebabs, et évite les « idées de génie » et les factures.
@@ -22,9 +62,7 @@ function attrape() {
   let score = 0, combo = 0, lives = 3, t = 0, spawn = 0, over = false, keys = 0;
   const geo = {}, mat = {};
   function build() {
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
+    renderer = sharedRenderer();
     scene = new THREE.Scene(); scene.background = new THREE.Color('#0b0a18'); scene.fog = new THREE.Fog('#0b0a18', 7, 19);
     camera = new THREE.PerspectiveCamera(38, 1, 0.1, 30);
     scene.add(new THREE.HemisphereLight('#8f86ff', '#1a1630', 1.1));
@@ -107,11 +145,11 @@ function attrape() {
       if (!it.done && near && y < 0.9 && y > 0.2) {
         it.done = true;
         if (it.kind === 'coin' || it.kind === 'kebab') {
-          combo++; const gain = (it.kind === 'kebab' ? 5 : 1) * (1 + Math.floor(combo / 5)); score += gain;
+          combo++; if (it.kind === 'kebab') son.bonus(); else son.piece(combo); const gain = (it.kind === 'kebab' ? 5 : 1) * (1 + Math.floor(combo / 5)); score += gain;
           burst(it.m.position, it.kind === 'kebab' ? '#5ccb74' : '#f2c14e', it.kind === 'kebab' ? 18 : 9);
           hero.setExpression(combo % 5 === 0 ? 'joie' : 'sourire'); if (combo % 10 === 0) { hero.play('cheer'); toast(`Combo x${1 + Math.floor(combo / 5)} !`); }
         } else {
-          lives--; combo = 0; shake = 0.35; burst(it.m.position, '#ff5f57', 16); hero.setExpression('colere'); hero.play('facepalm');
+          lives--; combo = 0; shake = 0.35; son.rate(); burst(it.m.position, '#ff5f57', 16); hero.setExpression('colere'); hero.play('facepalm');
           toast(it.kind === 'bill' ? 'Une facture. Tobi : « C\'est rien. »' : 'Tobi : « C\'était un investissement ! »');
           if (lives <= 0) return end();
         }
@@ -194,7 +232,7 @@ function mois() {
     a.onclick = () => choose(c, 0); b.onclick = () => choose(c, 1); lock = false;
   }
   function choose(c, side) {
-    if (lock) return; lock = true;
+    if (lock) return; lock = true; son.clic();
     const eff = c[side ? 5 : 2], moved = [];
     J.forEach((k, i) => { if (eff[i]) { v[k] = Math.min(100, v[k] + eff[i]); moved.push(k); } });
     const f = el.querySelector('.fiche'); f.querySelector('.nox').textContent = `Nox : « ${c[side ? 6 : 3]} »`; draw(moved);
@@ -231,15 +269,15 @@ function non() {
   function off(c, cls) { c.on = false; c.el.className = 'idee ' + (cls || ''); setTimeout(() => { if (!c.on) { c.el.className = 'idee'; c.el.querySelector('.txt').textContent = ''; } }, 260); }
   function tap(c) {
     if (!c.on || ended) return;
-    if (c.bad) { combo++; score += 1 + Math.floor(combo / 4); off(c, 'bien'); if (combo && combo % 8 === 0) toast(`Nox : « Tobi. Non. » x${combo}`); }
-    else { combo = 0; score = Math.max(0, score - 3); left = Math.max(0, left - 3); off(c, 'mal'); toast('C\'était une bonne idée ! −3 points'); }
+    if (c.bad) { combo++; son.bien(); score += 1 + Math.floor(combo / 4); off(c, 'bien'); if (combo && combo % 8 === 0) toast(`Nox : « Tobi. Non. » x${combo}`); }
+    else { combo = 0; son.rate(); score = Math.max(0, score - 3); left = Math.max(0, left - 3); off(c, 'mal'); toast('C\'était une bonne idée ! −3 points'); }
     hud([['Score', score]]);
   }
   function frame(now) {
     raf = requestAnimationFrame(frame); const dt = Math.max(0, Math.min(0.05, (now - last) / 1000 || 0)); last = now; if (ended) return;
     left -= dt; el.querySelector('.temps span').style.transform = `scaleX(${Math.max(0, left / total)})`;
     wait -= dt; if (wait <= 0) { wait = THREE.MathUtils.lerp(0.75, 0.36, 1 - left / total); light(); }
-    for (const c of cells) if (c.on && (c.t -= dt) <= 0) { if (c.bad) { combo = 0; score = Math.max(0, score - 2); off(c, 'mal'); toast('Tobi l\'a fait. −2 points'); hud([['Score', score]]); } else { score += 1; off(c, 'bien'); hud([['Score', score]]); } }
+    for (const c of cells) if (c.on && (c.t -= dt) <= 0) { if (c.bad) { combo = 0; son.rate(); score = Math.max(0, score - 2); off(c, 'mal'); toast('Tobi l\'a fait. −2 points'); hud([['Score', score]]); } else { score += 1; off(c, 'bien'); hud([['Score', score]]); } }
     if (left <= 0) { ended = true; finish('non', score, 'points', score >= 70 ? 'Nox : « Aucune idée n\'est passée. Je suis fatigué. »' : score >= 35 ? 'Nox : « Tu connais bien Tobi. »' : score >= 12 ? 'Nox : « Il a quand même acheté un domaine. »' : 'Nox : « Tobi a tout fait. Tout. »'); }
   }
   return {
@@ -257,8 +295,164 @@ function non() {
   };
 }
 
+// ---------------------------------------------------------------- Jeu 4 : Nox en ville
+// Monde ouvert : Nox se promène librement sur le campus, à pied ou sur la trottinette de Karim, et fait des courses pour Tobi.
+// Chaque mission : aller chercher quelque chose à un endroit, le livrer à un autre, avant la fin du temps.
+const LIEUX_VILLE = { // centre du bâtiment, taille, hauteur, couleur, point d'arrivée devant la porte
+  res: { nom: 'Résidence', c: [-14, -14], s: [12, 8], h: 9, col: '#c9b79c', sign: 'RÉSIDENCE CROUS', m: [-14, -8.6] },
+  kebab: { nom: 'Kebab', c: [11, -11], s: [7, 5], h: 3.6, col: '#c9412f', sign: 'KEBAB DU CAMPUS', m: [11, -7.4], neon: '#ff9a3c' },
+  lav: { nom: 'Laverie', c: [14, 12], s: [7, 5], h: 3.6, col: '#8fc7d6', sign: 'LAVERIE', m: [14, 8.4], neon: '#8feaff' },
+  bu: { nom: 'BU', c: [-13, 13], s: [10, 6], h: 5.6, col: '#a8743f', sign: 'BIBLIOTHÈQUE', m: [-13, 8.9] },
+  amphi: { nom: 'Amphi', c: [0, -27], s: [14, 7], h: 6.2, col: '#b9b4c9', sign: 'AMPHI A', m: [0, -22.4] },
+};
+const MISSIONS = [ // [départ, arrivée, phrase de Tobi, objet, gain]
+  ['kebab', 'res', 'Tobi : « J\'ai faim. Un kebab, vite ! »', 'le kebab', 6],
+  ['res', 'lav', 'Tobi : « Rends le chargeur de Karim. Il fait sa lessive. »', 'le chargeur', 5],
+  ['res', 'amphi', 'Tobi : « Mon DM ! Dépose-le à l\'amphi avant la fin du cours. »', 'le DM', 7],
+  ['lav', 'res', 'Tobi : « J\'ai oublié mon linge à la laverie. Depuis mardi. »', 'le linge', 5],
+  ['res', 'bu', 'Tobi : « Rapporte mes livres à la BU. Avant l\'amende. »', 'les livres', 6],
+  ['bu', 'amphi', 'Tobi : « Inès a oublié son cahier à la BU. Apporte-le-lui ! »', 'le cahier d\'Inès', 8],
+  ['kebab', 'bu', 'Tobi : « Un kebab pour réviser. Discrètement. »', 'le kebab', 7],
+  ['amphi', 'kebab', 'Tobi : « J\'ai laissé mes 5 € en amphi. Rapporte-les au kebab. »', 'les 5 €', 6],
+];
+function ville() {
+  const canvas = $('gl'), solids = [], cars = [], coins = [], keys = {};
+  let renderer, scene, camera, hero, rig, scooter, beam, sun, ui, map, raf = 0, last = 0, built = false;
+  let x, z, yaw, speed, riding, stick, money, chances, mission, phase, left, limit, order, bumpT, over, t;
+  const free = (px, pz, r = 1) => !solids.some(([a, b, c, d]) => px > a - r && px < b + r && pz > c - r && pz < d + r) && Math.abs(px) > 3.6 && Math.abs(pz) > 3.6;
+  function facade(w, h, col, lit = 0.35) { // fenêtres dessinées : quelques-unes allumées, comme un soir de révisions
+    const c = document.createElement('canvas'); c.width = 256; c.height = 256; const g = c.getContext('2d'), nx = Math.max(2, Math.round(w / 1.5)), ny = Math.max(1, Math.round(h / 1.6));
+    g.fillStyle = col; g.fillRect(0, 0, 256, 256);
+    for (let i = 0; i < nx; i++) for (let k = 0; k < ny; k++) { g.fillStyle = Math.random() < lit ? (Math.random() < 0.5 ? '#ffd98a' : '#fff1c9') : '#26244a'; g.fillRect((i + 0.22) * 256 / nx, (k + 0.2) * 256 / ny, 0.56 * 256 / nx, 0.55 * 256 / ny); }
+    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; return tx;
+  }
+  function label(text, color = '#ffffff', bg = 'rgba(20,16,40,.9)') {
+    const c = document.createElement('canvas'); c.width = 512; c.height = 96; const g = c.getContext('2d');
+    g.fillStyle = bg; g.beginPath(); g.roundRect(0, 0, 512, 96, 18); g.fill(); g.fillStyle = color; g.font = '900 54px "Inter", "Segoe UI", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.shadowColor = color; g.shadowBlur = 14; g.fillText(text, 256, 50, 480);
+    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; return tx;
+  }
+  const B = (c, s, color, o = {}) => { const m = new THREE.Mesh(new THREE.BoxGeometry(...s), new THREE.MeshStandardMaterial({ color, roughness: o.r ?? 0.85, metalness: o.m ?? 0, emissive: o.e || '#000', emissiveIntensity: o.ei ?? 1, map: o.map || null })); m.position.set(...c); m.castShadow = m.receiveShadow = true; scene.add(m); return m; };
+  function build() {
+    renderer = sharedRenderer();
+    scene = new THREE.Scene(); scene.background = new THREE.Color('#231d4f'); scene.fog = new THREE.Fog('#231d4f', 28, 70);
+    camera = new THREE.PerspectiveCamera(55, 1, 0.1, 120);
+    scene.add(new THREE.HemisphereLight('#b8aeff', '#4a3f66', 1.8));
+    sun = new THREE.DirectionalLight('#ffd2a1', 2.6); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0006;
+    Object.assign(sun.shadow.camera, { left: -22, right: 22, top: 22, bottom: -22, near: 1, far: 80 }); scene.add(sun, sun.target);
+    const ground = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshStandardMaterial({ color: '#4c8259', roughness: 1 })); ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
+    // Routes en croix, trottoirs clairs et lignes blanches
+    for (const [w, d] of [[90, 6.4], [6.4, 90]]) { const r = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ color: '#b9b2a6', roughness: 1 })); r.rotation.x = -Math.PI / 2; r.position.y = 0.01; r.receiveShadow = true; scene.add(r); }
+    for (const [w, d] of [[90, 5], [5, 90]]) { const r = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ color: '#2f2d3d', roughness: 0.95 })); r.rotation.x = -Math.PI / 2; r.position.y = 0.02; r.receiveShadow = true; scene.add(r); }
+    for (let i = -42; i <= 42; i += 3) if (Math.abs(i) > 4) { for (const [px, pz, w, d] of [[i, 0, 1.4, 0.16], [0, i, 0.16, 1.4]]) { const l = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshBasicMaterial({ color: '#f4f1ec' })); l.rotation.x = -Math.PI / 2; l.position.set(px, 0.03, pz); scene.add(l); } }
+    // Les bâtiments du campus
+    for (const [id, L] of Object.entries(LIEUX_VILLE)) {
+      const [cx, cz] = L.c, [w, d] = L.s, tx = facade(w, L.h, L.col, id === 'res' ? 0.45 : 0.3);
+      B([cx, L.h / 2, cz], [w, L.h, d], '#ffffff', { map: tx }); B([cx, L.h + 0.15, cz], [w + 0.5, 0.3, d + 0.5], '#2b2840');
+      solids.push([cx - w / 2, cx + w / 2, cz - d / 2, cz + d / 2]);
+      const side = L.m[1] > cz ? 1 : -1, fz = cz + side * (d / 2 + 0.03);
+      B([cx, 1.1, fz], [1.5, 2.2, 0.08], '#3a2a1a'); B([cx, 1.2, fz + side * 0.03], [1.1, 1.7, 0.04], '#ffe9b8', { e: '#ffd98a', ei: 1.4 }); // la porte éclairée
+      const s = new THREE.Mesh(new THREE.PlaneGeometry(Math.min(w - 0.6, 6), 1.1), new THREE.MeshBasicMaterial({ map: label(L.sign, L.neon || '#ffffff'), transparent: true, toneMapped: false })); s.position.set(cx, Math.min(L.h - 0.9, 3.4), fz + side * 0.06); if (side < 0) s.rotation.y = Math.PI; scene.add(s);
+      const ring = new THREE.Mesh(new THREE.RingGeometry(1.5, 1.8, 40), new THREE.MeshBasicMaterial({ color: '#f2b92e', transparent: true, opacity: 0.55 })); ring.rotation.x = -Math.PI / 2; ring.position.set(L.m[0], 0.04, L.m[1]); scene.add(ring);
+    }
+    // Arbres, réverbères et bancs
+    const trunk = new THREE.CylinderGeometry(0.16, 0.22, 1.4, 7), leaf = new THREE.ConeGeometry(1.2, 2.6, 8), mt = new THREE.MeshStandardMaterial({ color: '#5a3d26', roughness: 1 });
+    for (let i = 0, n = 0; i < 400 && n < 46; i++) { const px = rnd(-40, 40), pz = rnd(-40, 40); if (!free(px, pz, 2.2)) continue; n++;
+      const a = new THREE.Mesh(trunk, mt), b = new THREE.Mesh(leaf, new THREE.MeshStandardMaterial({ color: pick(['#2f7d4f', '#3c9460', '#27694a']), roughness: 1 })); a.position.set(px, 0.7, pz); b.position.set(px, 2.6, pz); const k = rnd(0.8, 1.35); b.scale.setScalar(k); a.castShadow = b.castShadow = true; scene.add(a, b); solids.push([px - 0.3, px + 0.3, pz - 0.3, pz + 0.3]); }
+    for (let i = -36; i <= 36; i += 12) for (const [px, pz] of [[i, 3.6], [i, -3.6], [3.6, i], [-3.6, i]]) { if (Math.abs(px) < 5 && Math.abs(pz) < 5) continue;
+      B([px, 1.8, pz], [0.12, 3.6, 0.12], '#2b2840', { m: 0.6 }); const g = new THREE.Mesh(new THREE.SphereGeometry(0.26, 12, 10), new THREE.MeshBasicMaterial({ color: '#ffe2a8' })); g.position.set(px, 3.7, pz); scene.add(g); }
+    for (const [px, pz] of [[-8, 5], [8, -5], [-6, -6], [6, 6]]) { B([px, 0.45, pz], [1.8, 0.1, 0.5], '#d7a56a'); B([px, 0.22, pz], [1.6, 0.44, 0.1], '#5a5d6a'); }
+    // Voitures : elles roulent toutes seules, il faut regarder avant de traverser
+    for (const [axis, lane, dir, col] of [['x', -1.25, 1, '#e5383b'], ['x', 1.25, -1, '#5b8def'], ['z', 1.25, 1, '#f2b92e'], ['z', -1.25, -1, '#5ccb74']]) {
+      const g = new THREE.Group(); const body = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.7, 1.3), new THREE.MeshStandardMaterial({ color: col, roughness: 0.35, metalness: 0.3 })), top = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.55, 1.15), new THREE.MeshStandardMaterial({ color: '#1c2233', roughness: 0.2 }));
+      body.position.y = 0.6; top.position.set(-0.1, 1.2, 0); body.castShadow = top.castShadow = true; g.add(body, top);
+      for (const s of [-1, 1]) { const l = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.18, 0.3), new THREE.MeshBasicMaterial({ color: '#fff3c4' })); l.position.set(1.31, 0.62, s * 0.4); g.add(l); }
+      if (axis === 'z') g.rotation.y = dir > 0 ? -Math.PI / 2 : Math.PI / 2; else if (dir < 0) g.rotation.y = Math.PI;
+      scene.add(g); cars.push({ g, axis, lane, dir, p: rnd(-40, 40), v: rnd(7, 10) });
+    }
+    // Pièces à ramasser en chemin
+    const cg = new THREE.CylinderGeometry(0.32, 0.32, 0.07, 20), cm = new THREE.MeshStandardMaterial({ color: '#f2c14e', metalness: 0.9, roughness: 0.25, emissive: '#6a4700', emissiveIntensity: 0.6 });
+    for (let i = 0; i < 16; i++) { const m = new THREE.Mesh(cg, cm); m.rotation.x = Math.PI / 2; m.castShadow = true; scene.add(m); coins.push(m); place(m); }
+    // Le faisceau qui montre où aller
+    beam = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 30, 24, 1, true), new THREE.MeshBasicMaterial({ color: '#f2b92e', transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false, blending: THREE.AdditiveBlending })); beam.position.y = 15; scene.add(beam);
+    // Nox et la trottinette de Karim
+    hero = createNox({ scale: 1.7 }); hero.root.traverse((m) => { if (m.isMesh) m.castShadow = true; }); rig = new THREE.Group(); rig.add(hero.root); scene.add(rig);
+    scooter = new THREE.Group(); const dk = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.05, 1.1), new THREE.MeshStandardMaterial({ color: '#2b2f36', metalness: 0.5, roughness: 0.4 })), bar = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 1.0, 8), new THREE.MeshStandardMaterial({ color: '#cfd5da', metalness: 0.9, roughness: 0.3 })), hd = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.05, 0.05), new THREE.MeshStandardMaterial({ color: '#5ccb74' }));
+    dk.position.y = 0.14; bar.position.set(0, 0.62, 0.48); bar.rotation.x = -0.18; hd.position.set(0, 1.1, 0.4);
+    for (const zz of [-0.48, 0.52]) { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.06, 14), new THREE.MeshStandardMaterial({ color: '#111' })); w.rotation.z = Math.PI / 2; w.position.set(0, 0.11, zz); scooter.add(w); }
+    scooter.add(dk, bar, hd); scooter.traverse((m) => { if (m.isMesh) m.castShadow = true; }); rig.add(scooter);
+    built = true;
+  }
+  function place(m) { for (let i = 0; i < 60; i++) { const px = rnd(-36, 36), pz = rnd(-36, 36); if (free(px, pz, 1.2) || (Math.abs(px) < 2.2 || Math.abs(pz) < 2.2)) { m.position.set(px, 0.6, pz); return; } } }
+  function size() { const r = canvas.parentElement.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.fov = camera.aspect < 0.8 ? 68 : 55; camera.updateProjectionMatrix(); }
+  const kd = (e) => { keys[e.key.toLowerCase()] = true; if (e.key === ' ' || e.key.toLowerCase() === 'e') { e.preventDefault(); ride(); } if (e.key.startsWith('Arrow')) e.preventDefault(); };
+  const ku = (e) => { keys[e.key.toLowerCase()] = false; };
+  const pd = (e) => { stick = { id: e.pointerId, x0: e.clientX, y0: e.clientY, dx: 0, dy: 0 }; };
+  const pm = (e) => { if (stick && e.pointerId === stick.id) { stick.dx = THREE.MathUtils.clamp((e.clientX - stick.x0) / 60, -1, 1); stick.dy = THREE.MathUtils.clamp((e.clientY - stick.y0) / 60, -1, 1); } };
+  const pu = (e) => { if (stick && e.pointerId === stick.id) stick = null; };
+  function ride() { if (over) return; riding = !riding; scooter.visible = riding; son.clic(); toast(riding ? 'Trottinette de Karim : empruntée.' : 'À pied.', 1100); ui.querySelector('.trot').classList.toggle('on', riding); }
+  function show() { hud([['Gagné', money + ' €'], ['Temps', Math.max(0, Math.ceil(left)) + ' s'], ['Essais', '●'.repeat(chances) || '—']]); }
+  function next() {
+    if (!order.length) order = [...MISSIONS].sort(() => Math.random() - 0.5);
+    mission = order.pop(); phase = 0; left = limit; goal(); ui.querySelector('.obj').innerHTML = `${mission[2]}<br><b>Va chercher ${mission[3]} : ${LIEUX_VILLE[mission[0]].nom}</b>`;
+  }
+  function goal() { const m = LIEUX_VILLE[mission[phase]].m; beam.position.set(m[0], 15, m[1]); beam.material.color.set(phase ? '#5ccb74' : '#f2b92e'); }
+  function drawMap() {
+    const g = map.getContext('2d'), S = map.width, k = S / 88, P = (v) => S / 2 + v * k; g.clearRect(0, 0, S, S);
+    g.fillStyle = 'rgba(20,18,42,.85)'; g.beginPath(); g.arc(S / 2, S / 2, S / 2, 0, 7); g.fill(); g.save(); g.beginPath(); g.arc(S / 2, S / 2, S / 2 - 2, 0, 7); g.clip();
+    g.fillStyle = '#4a4860'; g.fillRect(0, P(-2.5), S, 5 * k); g.fillRect(P(-2.5), 0, 5 * k, S);
+    for (const [id, L] of Object.entries(LIEUX_VILLE)) { g.fillStyle = id === mission?.[phase] ? '#f2b92e' : '#8f8ab8'; g.fillRect(P(L.c[0] - L.s[0] / 2), P(L.c[1] - L.s[1] / 2), L.s[0] * k, L.s[1] * k); }
+    const m = LIEUX_VILLE[mission[phase]].m; g.fillStyle = phase ? '#5ccb74' : '#f2b92e'; g.beginPath(); g.arc(P(m[0]), P(m[1]), 4 + 2 * Math.sin(t * 6), 0, 7); g.fill();
+    g.translate(P(x), P(z)); g.rotate(-yaw); g.fillStyle = '#8feaff'; g.beginPath(); g.moveTo(0, 7); g.lineTo(5, -5); g.lineTo(-5, -5); g.closePath(); g.fill(); g.restore();
+  }
+  function frame(now) {
+    raf = requestAnimationFrame(frame);
+    const dt = Math.max(0, Math.min(0.05, (now - last) / 1000 || 0)); last = now; t += dt;
+    if (!over) {
+      const f = (keys.arrowup || keys.z || keys.w ? 1 : 0) - (keys.arrowdown || keys.s ? 1 : 0) + (stick ? -stick.dy : 0), turn = (keys.arrowleft || keys.q || keys.a ? 1 : 0) - (keys.arrowright || keys.d ? 1 : 0) + (stick ? -stick.dx : 0);
+      const max = riding ? 10.5 : 4.6; yaw += THREE.MathUtils.clamp(turn, -1, 1) * (riding ? 2.1 : 2.6) * dt;
+      speed += (THREE.MathUtils.clamp(f, -0.5, 1) * max - speed) * (1 - Math.exp(-dt * (riding ? 2.4 : 7)));
+      let nx = x + Math.sin(yaw) * speed * dt, nz = z + Math.cos(yaw) * speed * dt;
+      for (const [a, b, c, d] of solids) { const r = 0.55; if (nx > a - r && nx < b + r && nz > c - r && nz < d + r) { const ox = Math.min(nx - (a - r), b + r - nx), oz = Math.min(nz - (c - r), d + r - nz); if (ox < oz) nx = nx - (a - r) < b + r - nx ? a - r : b + r; else nz = nz - (c - r) < d + r - nz ? c - r : d + r; speed *= 0.6; } }
+      x = THREE.MathUtils.clamp(nx, -41, 41); z = THREE.MathUtils.clamp(nz, -41, 41);
+      hero.setLocomotion(riding ? 'idle' : Math.abs(speed) > 3 ? 'run' : Math.abs(speed) > 0.3 ? 'walk' : 'idle');
+      rig.position.set(x, riding ? 0.16 : 0, z); rig.rotation.y = yaw; rig.rotation.z = riding ? THREE.MathUtils.clamp(-turn * speed * 0.03, -0.3, 0.3) : 0;
+      bumpT -= dt;
+      for (const c of cars) { c.p += c.dir * c.v * dt; if (c.p > 46) c.p = -46; if (c.p < -46) c.p = 46; const cx = c.axis === 'x' ? c.p : c.lane, cz = c.axis === 'x' ? c.lane : c.p; c.g.position.set(cx, 0, cz);
+        if (bumpT <= 0 && Math.abs(cx - x) < (c.axis === 'x' ? 1.7 : 1) && Math.abs(cz - z) < (c.axis === 'x' ? 1 : 1.7)) { bumpT = 1.6; left -= 5; speed = -3; son.rate(); hero.setExpression('surprise'); toast('Regarde avant de traverser ! −5 s'); } }
+      for (const m of coins) { m.rotation.z += dt * 3; if (Math.hypot(m.position.x - x, m.position.z - z) < 1) { money++; son.piece(money % 12); place(m); show(); } }
+      const m = LIEUX_VILLE[mission[phase]].m;
+      if (Math.hypot(m[0] - x, m[1] - z) < 2.1) {
+        if (phase === 0) { phase = 1; goal(); son.bien(); hero.setExpression('sourire'); ui.querySelector('.obj').innerHTML = `${mission[2]}<br><b>Livre ${mission[3]} : ${LIEUX_VILLE[mission[1]].nom}</b>`; }
+        else { money += mission[4]; son.bonus(); hero.setExpression('joie'); hero.play('cheer'); toast(`Livré ! +${mission[4]} €`); limit = Math.max(24, limit * 0.94); next(); }
+      }
+      left -= dt; beam.material.opacity = 0.16 + 0.08 * Math.sin(t * 4);
+      if (left <= 0) { chances--; son.rate(); hero.setExpression('tristesse'); toast('Trop tard. Tobi : « C\'était presque ça. »', 2000); if (chances <= 0) { over = true; hero.setLocomotion('idle'); finish('ville', money, '€ gagnés', money >= 60 ? 'Nox : « Avec ça, je prends ma retraite. »' : money >= 30 ? 'Nox : « Tobi me doit un salaire. »' : money >= 10 ? 'Nox : « C\'est un début. Tobi a déjà tout dépensé. »' : 'Nox : « Je vais marcher moins vite, pour voir. »'); } else next(); }
+      if (Math.floor(t * 4) !== Math.floor((t - dt) * 4)) { show(); drawMap(); }
+    }
+    const bx = x - Math.sin(yaw) * 4.4, bz = z - Math.cos(yaw) * 4.4; camera.position.lerp(new THREE.Vector3(bx, 2.5, bz), 1 - Math.exp(-dt * 5)); camera.lookAt(x, 1.0, z);
+    sun.position.set(x + 14, 26, z + 10); sun.target.position.set(x, 0, z);
+    hero.update(dt); renderer.render(scene, camera);
+  }
+  return {
+    id: 'ville', nom: 'Nox en ville', ico: '🛴', canvas: true,
+    pitch: 'Un campus ouvert à explorer, à pied ou sur la trottinette de Karim. Fais les courses de Tobi avant la fin du temps, et évite les voitures.',
+    start() {
+      if (!built) build();
+      ui = document.createElement('div'); ui.className = 'ville';
+      ui.innerHTML = '<canvas class="carte" width="132" height="132"></canvas><div class="obj"></div><button class="trot" aria-label="Trottinette">🛴</button>';
+      $('play').append(ui); map = ui.querySelector('.carte'); ui.querySelector('.trot').onclick = ride;
+      x = -8; z = -5.6; yaw = Math.PI / 2; speed = 0; riding = false; scooter.visible = false; stick = null; money = 0; chances = 3; limit = 48; order = []; bumpT = 0; over = false; t = 0; last = performance.now();
+      camera.position.set(x - 4.4, 2.5, z); hero.setExpression('sourire'); size(); next(); show(); drawMap();
+      addEventListener('resize', size); addEventListener('keydown', kd); addEventListener('keyup', ku); canvas.addEventListener('pointerdown', pd); canvas.addEventListener('pointermove', pm); addEventListener('pointerup', pu);
+      toast('Flèches ou glisser pour bouger. Espace ou 🛴 : trottinette.', 3200);
+      cancelAnimationFrame(raf); raf = requestAnimationFrame(frame);
+    },
+    stop() { cancelAnimationFrame(raf); ui?.remove(); ui = null; for (const k in keys) keys[k] = false; removeEventListener('resize', size); removeEventListener('keydown', kd); removeEventListener('keyup', ku); canvas.removeEventListener('pointerdown', pd); canvas.removeEventListener('pointermove', pm); removeEventListener('pointerup', pu); },
+  };
+}
+
 // ---------------------------------------------------------------- Accueil, fin de partie et partage
-const JEUX = [attrape(), mois(), non()];
+const JEUX = [ville(), attrape(), mois(), non()];
 let current = null, lastScore = 0;
 const lien = (id, s) => `${location.origin}${location.pathname}?jeu=${id}&defi=${s}`;
 function open(g) {
@@ -270,6 +464,8 @@ function finish(id, score, lib, mot) {
   lastScore = score; const best = store.get(id), rec = score > best; if (rec) store.set(id, score);
   $('finScore').textContent = score; $('finLib').textContent = lib; $('finMot').textContent = mot;
   $('finRec').textContent = rec && score > 0 ? 'Nouveau record !' : `Ton record : ${Math.max(best, score)}`;
+  const l = top.add(id, score); $('finTop').textContent = l.length > 1 ? 'Tes meilleurs scores : ' + l.join(' · ') : '';
+  if (rec && score > 0) son.record(); else son.fin();
   $('fin').classList.add('on');
 }
 function cards() {
@@ -280,6 +476,7 @@ function cards() {
     b.onclick = () => open(g); $('cartes').append(b);
   }
 }
+$('son').textContent = son.on ? '🔊' : '🔇'; $('son').onclick = () => { $('son').textContent = son.toggle() ? '🔊' : '🔇'; };
 $('retour').onclick = home; $('autres').onclick = home; $('rejouer').onclick = () => open(current);
 $('partager').onclick = async () => {
   const url = lien(current.id, lastScore), text = `J'ai fait ${lastScore} à « ${current.nom} », le jeu de Tobi & Nox. Fais mieux !`;

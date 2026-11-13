@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tobi & Nox · Les jeux</title>
-<meta name="description" content="Trois mini-jeux dans l'univers de Tobi et Nox : attrape les pièces avec Nox, survis à la fin du mois, et dis non aux idées de Tobi.">
+<meta name="description" content="Quatre mini-jeux dans l'univers de Tobi et Nox : explore le campus en trottinette, attrape les pièces, survis à la fin du mois et dis non aux idées de Tobi.">
 <meta property="og:title" content="Tobi & Nox · Les jeux">
-<meta property="og:description" content="Bats mon score. Trois mini-jeux gratuits, sans inscription.">
+<meta property="og:description" content="Bats mon score. Quatre mini-jeux gratuits, sans inscription.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
@@ -85,6 +85,16 @@ canvas#gl { position:absolute; inset:0; width:100%; height:100%; display:block; 
 .idee.bien { background:rgba(92,203,116,.28); border-color:var(--ok); }
 .idee.mal { background:rgba(255,95,87,.28); border-color:var(--non); animation:secoue .3s; }
 
+/* Nox en ville */
+.ville { position:absolute; inset:0; pointer-events:none; }
+.ville .carte { position:absolute; right:12px; top:12px; width:132px; height:132px; border-radius:50%; border:2px solid var(--trait); box-shadow:0 8px 24px rgba(0,0,0,.4); }
+.ville .obj { position:absolute; left:50%; bottom:16px; transform:translateX(-50%); width:min(560px, calc(100% - 110px)); padding:10px 14px; border-radius:16px; background:rgba(28,26,54,.9); border:1px solid var(--trait); font-size:14px; line-height:1.35; color:var(--doux); text-align:center; }
+.ville .obj b { color:var(--nox); font-size:16px; }
+.ville .trot { position:absolute; right:12px; bottom:16px; width:64px; height:64px; border-radius:50%; background:var(--carte); border:2px solid var(--trait); font-size:28px; pointer-events:auto; transition:transform .12s, background .15s, border-color .15s; }
+.ville .trot:active { transform:scale(.92); }
+.ville .trot.on { background:var(--nox); border-color:transparent; }
+@media (max-width:560px) { .ville .carte { width:96px; height:96px; } }
+
 /* Fin de partie */
 .fin { position:absolute; inset:0; background:rgba(11,10,24,.86); display:none; place-items:center; padding:18px; z-index:5; }
 .fin.on { display:grid; animation:monte .3s cubic-bezier(.2,.8,.2,1); }
@@ -94,6 +104,7 @@ canvas#gl { position:absolute; inset:0; width:100%; height:100%; display:block; 
 .fin .lib { color:var(--doux); font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-top:4px; }
 .fin .mot { margin:14px 0 6px; font-family:Fraunces, serif; font-size:21px; font-weight:600; line-height:1.3; }
 .fin .rec { color:var(--nox); font-weight:800; min-height:20px; }
+.fin .top { color:var(--doux); font-size:13px; margin-top:6px; min-height:18px; font-variant-numeric:tabular-nums; }
 .fin .btns { display:grid; gap:10px; margin-top:16px; }
 .fin .btns button { padding:14px; border-radius:16px; font-weight:800; font-size:16px; background:var(--carte); border:1px solid var(--trait); }
 .fin .btns button.main { background:var(--nox); color:#1a1405; border-color:transparent; }
@@ -106,7 +117,7 @@ canvas#gl { position:absolute; inset:0; width:100%; height:100%; display:block; 
     <h1>Tobi <span>&</span> Nox · Les jeux</h1>
     <a class="pill main" href="https://www.youtube.com/@tobietnox" target="_blank" rel="noopener">▶ Voir les Shorts</a>
   </header>
-  <p class="lead">Trois mini-jeux dans la chambre de Tobi. Gratuits, sans inscription. Fais un score, puis envoie ton défi à un ami.</p>
+  <p class="lead">Quatre mini-jeux dans l'univers de Tobi et Nox. Gratuits, sans inscription. Fais un score, puis envoie ton défi à un ami.</p>
   <div class="defi" id="defi"></div>
   <div class="grid" id="cartes"></div>
   <footer>Une série de Shorts animés : Tobi, étudiant fauché, et Nox, son IA. <a href="./">Le Studio</a> · <a href="https://www.youtube.com/@tobietnox" target="_blank" rel="noopener">La chaîne YouTube</a></footer>
@@ -117,13 +128,14 @@ canvas#gl { position:absolute; inset:0; width:100%; height:100%; display:block; 
     <button class="back" id="retour">← Jeux</button>
     <div class="title" id="titre"></div>
     <div class="hud" id="hud"></div>
+    <button class="back" id="son" aria-label="Couper ou remettre le son">🔊</button>
   </div>
   <div class="play" id="play">
     <canvas id="gl"></canvas>
     <div class="toast" id="toast"></div>
     <div class="fin" id="fin"><div class="boite">
       <div class="big" id="finScore">0</div><div class="lib" id="finLib">points</div>
-      <div class="mot" id="finMot"></div><div class="rec" id="finRec"></div>
+      <div class="mot" id="finMot"></div><div class="rec" id="finRec"></div><div class="top" id="finTop"></div>
       <div class="btns"><button class="main" id="rejouer">Rejouer</button><button id="partager">Défier un ami</button><button id="autres">Autres jeux</button></div>
     </div></div>
   </div>
