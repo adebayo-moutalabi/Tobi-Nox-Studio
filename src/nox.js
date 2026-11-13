@@ -351,6 +351,8 @@ export function createNox({ scale = 1, form = null } = {}) {
     get gesture() { return motion.gesture; },
     get expression() { return state.exprName; },
     get talking() { return !!state.talk; },
+    blink() { if (!state.blinkDir) state.blinkDir = 1; }, // on cligne en changeant de regard, comme tout le monde
+    eyes(x, y) { state.glance = { lookL: Math.max(0, x), lookR: Math.max(0, -x), lookU: Math.max(0, y), lookD: Math.max(0, -y) }; state.glanceT = 0.5; }, // les yeux partent avant la tête
     setLocomotion: motion.setLocomotion,
     play: motion.play,
     setExpression(name) { state.exprName = name; state.expr = EXPRESSIONS[name] || {}; },

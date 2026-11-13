@@ -257,6 +257,14 @@ export function startViewer(cfg) {
     lq.t.sub(lq.h);
     { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim * 0.4, Math.min(lim, lq.t.y)); } // ne casse pas la nuque, et le visage reste visible quand il parle à quelqu'un de plus bas
     lq.t.normalize();
+    // Un vrai regard ne saute pas d'une personne à l'autre : on cligne, les yeux partent, puis la tête suit et se pose.
+    if (a.lookAt !== b) {
+      a.lookAt = b; a.hero.blink?.();
+      if (a.aim && !a.extra) { head.getWorldQuaternion(lq.w); lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); a.hero.eyes?.(Math.max(-0.8, Math.min(0.8, lq.f.x * 1.4)), Math.max(-0.5, Math.min(0.5, lq.f.y * 1.4))); }
+    }
+    if (!a.aim) a.aim = lq.t.clone();
+    a.aim.lerp(lq.t, 1 - Math.exp(-dt * (a.extra ? 9 : 5.5))).normalize();
+    lq.t.copy(a.aim);
     if (a.cheat) { head.getWorldPosition(lq.f); lq.f.subVectors(camera.position, lq.f).normalize(); lq.t.lerp(lq.f, a.cheat).normalize(); } // il parle à l'autre, mais son visage reste ouvert vers nous
     head.getWorldQuaternion(lq.w);
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
@@ -268,11 +276,27 @@ export function startViewer(cfg) {
     head.parent.getWorldQuaternion(lq.p);
     lq.p.invert().multiply(lq.d);
     head.quaternion.slerp(lq.p, a.lookW * 0.92);
+    listen(a, b, head, dt);
     if (a.extra) {
       head.updateWorldMatrix(true, false); head.getWorldQuaternion(lq.w);
       lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); // la cible, vue depuis le logo
       a.hero.gaze = [Math.max(-1, Math.min(1, lq.f.x * 1.6)) * a.lookW, Math.max(-1, Math.min(1, lq.f.y * 1.6)) * a.lookW];
     }
+  }
+
+  // Celui qui écoute n'est pas une statue : il hoche la tête de temps en temps et la penche un peu, sans rythme régulier.
+  function listen(a, b, head, dt) {
+    const L = a.listen || (a.listen = { wait: 1.5 + Math.random() * 2, nod: 1, tilt: 0, want: 0, hold: 0 });
+    const on = !a.extra && b.hero.talking && !a.hero.talking && a.hero.seat !== 'lie';
+    if (on) {
+      L.wait -= dt; L.hold -= dt;
+      if (L.wait <= 0) { L.wait = 2.6 + Math.random() * 3.4; L.nod = 0; L.size = 0.05 + Math.random() * 0.05; L.twice = Math.random() < 0.35; }
+      if (L.hold <= 0) { L.hold = 3 + Math.random() * 4; L.want = (Math.random() - 0.5) * 0.14; }
+    } else L.want = 0;
+    L.tilt += (L.want - L.tilt) * (1 - Math.exp(-dt * 2.2));
+    if (L.nod < 1) L.nod = Math.min(1, L.nod + dt / (L.twice ? 0.85 : 0.55));
+    const p = L.nod, dip = p < 1 ? Math.sin(p * Math.PI * (L.twice ? 2 : 1)) ** 2 * (1 - 0.35 * p) * (L.size || 0) : 0; // descend vite, remonte doucement
+    if (dip > 0.0005 || Math.abs(L.tilt) > 0.0005) { head.rotateX(dip); head.rotateZ(L.tilt * a.lookW); }
   }
 
   // ---- Sièges ---------------------------------------------------------------
