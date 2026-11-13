@@ -39,3 +39,11 @@ for (const p of PAGES) {
   await save(p.out, page);
   console.log(p.out, (page.length / 1024).toFixed(0) + ' Ko');
 }
+
+// La page des jeux a son propre gabarit : elle n'a besoin ni du Studio ni des épisodes.
+{
+  const r = await build({ entryPoints: ['src/jeux-app.js'], bundle: true, format: 'esm', write: false, minify: true, target: 'es2020', plugins: [withoutMixamo] });
+  const page = readFileSync('src/jeux.html', 'utf8').replace('/*BUNDLE*/', () => r.outputFiles[0].text.replace(/<\/script/g, '<\/script'));
+  await save('jeux.html', page);
+  console.log('jeux.html', (page.length / 1024).toFixed(0) + ' Ko');
+}
