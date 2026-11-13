@@ -382,7 +382,7 @@ export function createPlayer(v, ui) {
         }
         return undefined;
       }
-      case 'decor': decors.set(plain(c.args[0] || 'chambre')); return undefined; // DECOR laverie | kebab | bu | chambre
+      case 'decor': decors.set(plain(c.args[0] || 'chambre')); return undefined; // DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre
       case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille

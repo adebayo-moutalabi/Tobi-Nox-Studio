@@ -230,7 +230,7 @@ NOX dit (resigne) J'appelle ta mère.
 
 **Aperçu de jeu :** `PC Jeu : Nom du jeu | Niveau 1 : ... | Boss final : ...`. Un petit jeu de plateforme animé, avec les lignes en haut de l'écran.
 
-**Changer de lieu :** `DECOR laverie`, `DECOR kebab` ou `DECOR bu` juste après `AMBIANCE`. Sans cette ligne, on est dans la chambre. Dans ces lieux, Tobi reste debout (`DIRECT TOBI marche tapis`), Nox s'assoit sur le banc (`DIRECT NOX assis`) et une IA peut se poser sur le comptoir (`apparait bureau`). Pas d'écran `PC`, pas de `travaille`, `dort` ni `frigo` : utiliser les messages de téléphone.
+**Changer de lieu :** `DECOR laverie`, `kebab`, `bu`, `amphi`, `couloir` ou `dehors` juste après `AMBIANCE`. Sans cette ligne, on est dans la chambre. Dans ces lieux, Tobi reste debout (`DIRECT TOBI marche tapis`), Nox s'assoit sur le banc (`DIRECT NOX assis`) et une IA peut se poser sur le comptoir (`apparait bureau`). Pas d'écran `PC`, pas de `travaille`, `dort` ni `frigo` : utiliser les messages de téléphone.
 
 **Téléphone :** `TOBI appelle`, puis `TOBI raccroche`.
 

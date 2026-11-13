@@ -1,7 +1,7 @@
-// Autres lieux : la laverie, le kebab et la bibliothèque universitaire (BU).
+// Autres lieux : la laverie, le kebab, la bibliothèque universitaire (BU), l'amphi, le couloir de la résidence et l'extérieur.
 // Chaque lieu « rhabille » la chambre : mêmes murs, et des meubles posés là où étaient le bureau, l'armoire,
 // la kitchenette et le lit. La caméra, les places (gauche, milieu, droite, tapis) et « NOX assis » marchent donc sans rien changer.
-// Dans un script : DECOR laverie | kebab | bu | chambre.
+// Dans un script : DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre.
 import * as THREE from 'three';
 
 const unit = new THREE.BoxGeometry(1, 1, 1), tube = new THREE.CylinderGeometry(1, 1, 1, 28), cache = new Map();
@@ -116,15 +116,78 @@ function bu(g) {
   return null;
 }
 
-const BUILD = { laverie, kebab, bu };
-const TINT = { laverie: '#dff3ee', kebab: '#ffe0bd', bu: '#efe2c8' };
+function amphi(g) {
+  floor(g, tiles('#b88a5a', '#ad7f50', 2), '#ffffff', 0.55);
+  // Le tableau vert, devant la fenêtre
+  box(g, [0, 1.55, -1.95], [2.6, 1.46, 0.05], '#5a3d26'); panel(g, sign(['DROIT CONSTITUTIONNEL', 'Chapitre 7 · Partiel jeudi, 8 h'], { w: 1024, bg: '#1f4d3a', colors: ['#f4f1ec', '#ffd23f'], size: [84, 52] }), [0, 1.55, -1.92], [2.5, 1.3]);
+  box(g, [0, 0.86, -1.88], [2.5, 0.03, 0.08], '#5a3d26'); for (const [x, c] of [[-0.4, '#ffffff'], [-0.28, '#ffd23f'], [0.5, '#ff8fab']]) box(g, [x, 0.89, -1.87], [0.08, 0.02, 0.02], c);
+  // Le bureau du prof, à la place du bureau de Tobi
+  box(g, [RX, 0.725, -1.0], [RD, 0.045, 1.76], '#6a3f1f', { r: 0.45 }); box(g, [0.79, 0.36, -1.0], [0.03, 0.72, 1.76], '#7a4a25'); for (const z of [-1.86, -0.14]) box(g, [RX, 0.36, z], [RD, 0.72, 0.03], '#7a4a25');
+  box(g, [1.12, 0.8, -1.35], [0.3, 0.11, 0.24], '#f4f1ec'); box(g, [1.12, 0.87, -1.35], [0.26, 0.03, 0.2], '#d92f2f'); // la pile de copies, et le stylo rouge
+  cyl(g, [1.2, 0.8, -0.45], 0.04, 0.11, '#2f6fa8'); box(g, [1.22, 1.5, -0.6], [0.03, 0.5, 0.7], '#f4f1ec', { e: '#dfeeff', ei: 0.5 }); // gobelet et écran de projection replié
+  // Porte de sortie et armoire à polycopiés
+  box(g, [RX, 1.02, 0.39], [RD, 2.04, 1.0], '#7a4a25', { r: 0.55 }); box(g, [0.775, 1.0, 0.39], [0.012, 1.9, 0.8], '#8c5a2e'); cyl(g, [0.765, 1.0, 0.7], 0.02, 0.12, '#cfd5da', { axis: 'x', m: 0.9, r: 0.3 });
+  box(g, [0.77, 2.16, 0.39], [0.02, 0.16, 0.5], '#1f7a4d', { e: '#39c27b', ei: 1.6 }); box(g, [RX, 1.02, 1.25], [RD, 2.04, 0.66], '#6a3f1f');
+  // Les gradins : un banc devant, une tablette derrière
+  box(g, [BENCH.x, BENCH.top - 0.03, BENCH.z], [BENCH.w, 0.06, BENCH.l], '#c08a4f', { r: 0.5 }); box(g, [BENCH.x, 0.26, BENCH.z], [BENCH.w - 0.06, 0.52, BENCH.l - 0.04], '#7a4a25');
+  box(g, [-1.3, 0.86, BENCH.z], [0.2, 0.05, BENCH.l], '#c08a4f'); for (const [z, c] of [[-0.7, '#5b8def'], [0.1, '#f2b92e'], [0.7, '#ff8fab']]) box(g, [-1.29, 0.9, z], [0.16, 0.02, 0.22], c);
+  const l = new THREE.PointLight('#fff0d6', 2.0, 6, 1.6); l.position.set(0, 2.25, -0.3); g.add(l);
+  return null;
+}
+
+function couloir(g) {
+  floor(g, tiles('#9fb0bd', '#8ea1af', 4), '#ffffff', 0.4);
+  panel(g, sign(['SORTIE'], { bg: '#0f5132', colors: ['#ffffff'], size: 110 }), [0, 2.0, -1.93], [0.9, 0.34]); box(g, [0, 1.25, -1.95], [1.5, 1.34, 0.05], '#3d4a57'); box(g, [0, 1.25, -1.92], [0.03, 1.3, 0.02], '#232b33');
+  // Console et tableau d'affichage, à la place du bureau
+  box(g, [RX, 0.725, -1.0], [RD, 0.04, 1.76], '#e9edf0', { r: 0.4 }); box(g, [RX, 0.36, -1.0], [RD - 0.1, 0.72, 1.7], '#c9d3da');
+  panel(g, sign(['RÉSIDENCE · ÉTAGE 2', 'Silence après 22 h', 'Laverie : 4 €'], { bg: '#a8743f', colors: ['#ffffff', '#fff1c9', '#fff1c9'], size: [58, 44, 44], h: 320 }), [1.385, 1.6, -1.0], [1.3, 0.8], -Math.PI / 2);
+  box(g, [1.12, 0.79, -1.4], [0.24, 0.1, 0.32], '#a8743f'); // un colis qui attend
+  // Les portes des chambres 212 et 213
+  [['212', 0.39, 1.0], ['213', 1.25, 0.66]].forEach(([n, z, w]) => {
+    box(g, [RX, 1.15, z], [RD, 2.3, w], '#ece4d6', { r: 0.8 }); box(g, [0.775, 1.0, z], [0.012, 1.96, Math.min(0.78, w - 0.1)], '#2f6fa8', { r: 0.5 });
+    cyl(g, [0.762, 1.0, z + 0.26], 0.02, 0.1, '#cfd5da', { axis: 'x', m: 0.9, r: 0.3 }); panel(g, sign([n], { w: 128, h: 64, bg: '#f4f1ec', colors: ['#1d1b2e'], size: 48 }), [0.766, 1.72, z], [0.2, 0.1], -Math.PI / 2);
+  });
+  box(g, [0.72, 0.012, 0.39], [0.1, 0.02, 0.6], '#8a6a3c'); // le paillasson de Karim
+  // Banc le long du mur, et la petite annonce de Karim
+  box(g, [BENCH.x, BENCH.top - 0.03, BENCH.z], [BENCH.w, 0.06, BENCH.l], '#7c8791', { m: 0.5, r: 0.4 }); for (const z of [-1.0, -0.05, 0.85]) box(g, [BENCH.x, 0.26, z], [BENCH.w - 0.1, 0.5, 0.05], '#5a6570', { m: 0.6, r: 0.4 });
+  panel(g, sign(['À VENDRE', 'Trottinette · 15 €', 'Voir Karim, ch. 213'], { bg: '#fff7df', colors: ['#d92f2f', '#1d1b2e', '#1d1b2e'], size: [70, 46, 40], h: 320 }), [-1.385, 1.55, 0.2], [0.6, 0.38], Math.PI / 2);
+  for (const z of [-1.0, 0.5]) box(g, [0, 2.46, z], [0.5, 0.03, 0.5], '#ffffff', { e: '#fff3d6', ei: 2 });
+  const l = new THREE.PointLight('#fff3d6', 2.0, 6, 1.6); l.position.set(0, 2.2, -0.2); g.add(l);
+  return null;
+}
+
+function dehors(g) { // devant la résidence : pas de murs, le ciel vient de l'ambiance (jour ou soir)
+  const grass = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: '#4c8259', roughness: 1 })); grass.rotation.x = -Math.PI / 2; grass.position.y = -0.004; grass.receiveShadow = true; g.add(grass);
+  floor(g, tiles('#6b6677', '#625d6e', 6), '#ffffff', 0.9);
+  // La façade de la résidence, avec ses fenêtres allumées
+  const c = document.createElement('canvas'); c.width = 512; c.height = 512; const q = c.getContext('2d'); q.fillStyle = '#c9b79c'; q.fillRect(0, 0, 512, 512); let seed = 11; const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+  for (let i = 0; i < 7; i++) for (let k = 0; k < 5; k++) { q.fillStyle = rand() < 0.4 ? (rand() < 0.5 ? '#ffd98a' : '#fff1c9') : '#2a2850'; q.fillRect(22 + i * 70, 24 + k * 96, 46, 62); }
+  const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+  const wall = new THREE.Mesh(new THREE.BoxGeometry(9, 7, 0.4), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.9 })); wall.position.set(0, 3.5, -2.35); wall.receiveShadow = true; g.add(wall);
+  box(g, [0, 1.1, -2.13], [1.3, 2.2, 0.06], '#3a2a1a'); box(g, [0, 1.15, -2.1], [1.0, 1.8, 0.04], '#ffe9b8', { e: '#ffd98a', ei: 1.5 }); panel(g, sign(['RÉSIDENCE CROUS'], { w: 1024, h: 128, bg: '#2b2840', colors: ['#ffffff'], size: 84 }), [0, 2.55, -2.12], [2.2, 0.28]);
+  // Muret et plantes à droite, panneau lumineux et distributeur
+  box(g, [RX, 0.36, -1.0], [RD, 0.72, 1.76], '#8d8799', { r: 0.95 }); box(g, [RX, 0.735, -1.0], [RD + 0.04, 0.03, 1.8], '#a39db0');
+  for (const z of [-1.6, -1.2]) { cyl(g, [1.2, 0.85, z], 0.1, 0.2, '#b55d2b', { r: 0.9 }); const p = new THREE.Mesh(new THREE.SphereGeometry(0.17, 10, 8), mat('#3c9460', { r: 1 })); p.position.set(1.2, 1.05, z); p.castShadow = true; g.add(p); }
+  box(g, [RX, 1.02, 0.39], [RD, 2.04, 1.0], '#2b2840', { r: 0.5 }); panel(g, sign(['KEBAB', 'DU CAMPUS', '→ 200 m'], { bg: '#1a0f14', colors: ['#ff9a3c', '#ff5fa2', '#ffffff'], size: [96, 60, 44], h: 400 }), [0.772, 1.1, 0.39], [0.84, 1.5], -Math.PI / 2);
+  box(g, [RX, 1.02, 1.25], [RD, 2.04, 0.66], '#c9412f', { r: 0.4 }); box(g, [0.775, 1.2, 1.25], [0.012, 1.1, 0.5], '#eaf6ff', { e: '#cfe9ff', ei: 1.3 });
+  // Banc et haie à gauche, réverbère
+  box(g, [BENCH.x, BENCH.top - 0.03, BENCH.z], [BENCH.w, 0.06, BENCH.l], '#d7a56a', { r: 0.6 }); for (const z of [-0.95, 0.8]) box(g, [BENCH.x, 0.26, z], [BENCH.w - 0.1, 0.5, 0.07], '#5a5d6a', { m: 0.5 });
+  box(g, [-1.6, 0.5, BENCH.z], [0.3, 1.0, 2.4], '#2f7d4f', { r: 1 });
+  box(g, [-1.25, 1.6, -1.65], [0.07, 3.2, 0.07], '#2b2840', { m: 0.6 }); const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.14, 12, 10), new THREE.MeshBasicMaterial({ color: '#ffe2a8' })); bulb.position.set(-1.25, 3.25, -1.65); g.add(bulb);
+  const l = new THREE.PointLight('#ffd9a0', 3.2, 9, 1.4); l.position.set(-1.1, 3.0, -1.4); g.add(l);
+  const st = new THREE.BufferGeometry(), sp = []; for (let i = 0; i < 160; i++) sp.push(-12 + rand() * 24, 4 + rand() * 7, -9 + rand() * 4); st.setAttribute('position', new THREE.Float32BufferAttribute(sp, 3)); g.add(new THREE.Points(st, new THREE.PointsMaterial({ color: '#e8e4ff', size: 0.05 })));
+  return null;
+}
+
+const BUILD = { laverie, kebab, bu, amphi, couloir, dehors };
+const TINT = { laverie: '#dff3ee', kebab: '#ffe0bd', bu: '#efe2c8', amphi: '#f1e6d2', couloir: '#e3e9ee', dehors: null }; // null : pas de murs, on est dehors
 export const DECORS = ['chambre', ...Object.keys(BUILD)];
 
 export function createDecors(room, scene) {
   const sets = {}; let now = 'chambre';
   function make(name) {
     const g = new THREE.Group(); g.name = 'decor-' + name;
-    const shell = new THREE.Mesh(room.walls.geometry, new THREE.MeshStandardMaterial({ vertexColors: true, color: TINT[name], roughness: 0.82 })); shell.receiveShadow = true; g.add(shell); // les mêmes murs, d'une autre couleur
+    if (TINT[name]) { const shell = new THREE.Mesh(room.walls.geometry, new THREE.MeshStandardMaterial({ vertexColors: true, color: TINT[name], roughness: 0.82 })); shell.receiveShadow = true; g.add(shell); } // les mêmes murs, d'une autre couleur
     const update = BUILD[name](g); scene.add(g);
     return { g, update };
   }

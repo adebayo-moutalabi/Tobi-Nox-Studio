@@ -352,6 +352,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Page `jeux.html` : « Nox, attrape ! » (3D), « Fin de mois » et « Tobi. Non. », avec record et lien de défi à partager.
 - Charte : boîte à outils comique en huit points.
 
+## Suite de la refonte (13 novembre 2026)
+
+- Jeux : quatrième jeu « Nox en ville » (monde ouvert, missions, trottinette, voitures), sons, bouton pour les couper, cinq meilleurs scores sur l'appareil.
+- Lieux : amphi, couloir et extérieur (`DECOR amphi`, `DECOR couloir`, `DECOR dehors`). L'amphi et l'extérieur ont été vus en image, pas le couloir.
+- Restent à faire : objets plus fins dans la chambre, poids du corps et élan avant les gestes.
+
 ## À faire
 
 Voir `TACHES.md`.
