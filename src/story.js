@@ -621,7 +621,7 @@ export function createPlayer(v, ui) {
           if (c.free) { const q = Promise.resolve(t).finally(() => pending.delete(q)); pending.add(q); } else await t;
         }
         await Promise.allSettled([...pending]);
-        if (!stopped && ui.subscribe?.()) { const m = ABONNE[Math.abs([...text].reduce((n, ch) => n * 31 + ch.charCodeAt(0) | 0, 7)) % ABONNE.length]; look.insert(...m, 'base'); sfx('pop'); await v.wait(4.5); look.hideInsert(); } // court, sans voix : aucun crédit
+        if (!stopped && ui.subscribe?.()) { const m = ABONNE[Math.abs([...text].reduce((n, ch) => n * 31 + ch.charCodeAt(0) | 0, 7)) % ABONNE.length]; look.insert(...m, 'base'); sfx('pop'); await v.wait(2.5); look.hideInsert(); } // court (2,5 s), sans voix : aucun crédit
         ui.line(stopped ? 'Lecture arrêtée.' : 'Fin de l’histoire.');
       } catch (e) { ui.line(`Erreur : ${e.message}`); }
       closing = true; ui.curtain(true, true); ui.card('');
