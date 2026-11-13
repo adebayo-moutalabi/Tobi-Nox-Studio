@@ -330,6 +330,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Chaque épisode a son titre, son accroche et sa question pour les commentaires dans la fiche Publications.
 - Épisodes 129 et 130 : les deux idées avec Claude Code, Codex et Gemini restées sans épisode (noms de domaine, plan pour devenir riche).
 
+## Épisodes plus drôles et dix nouveaux (13 novembre 2026)
+
+- Chaîne : 28 abonnés, 8 Shorts publiés entre 919 et 1 400 vues. Les épisodes 120 et 130 sont publiés et n'ont pas changé.
+- Épisodes 101 à 119 et 121 à 129 réécrits : crise dès la première réplique, trois paliers, au moins six punchlines, chute qui retourne tout. Plusieurs titres changent.
+- Dix nouveaux épisodes, 131 à 140 (argent de poche, crush, partiel en un mot, groupe de famille, beaux-parents IA…).
+- Nouvel outil `tools/controle-episodes.mjs` : tons connus, plans de caméra, durée estimée, mots interdits.
+
 ## À faire
 
 Voir `TACHES.md`.

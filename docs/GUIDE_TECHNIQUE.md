@@ -74,6 +74,8 @@ Après un changement, relancer `tools/audit-cadrage.js` et regarder de vraies im
 
 Dans la console, garder l'onglet au premier plan. Ne pas lancer deux contrôles en même temps : ils pilotent la même lecture.
 
+Pour vérifier des scripts : `node tools/controle-episodes.mjs 101 140` contrôle les tons, les plans avant chaque personnage, la durée estimée (moins d'une minute), l'accroche et les mots interdits (« mémoire », « Puis-je »).
+
 ## Animations Mixamo
 
 Les gestes les plus humains de Tobi viennent de Mixamo. La FAQ d'Adobe autorise leur usage dans un projet, mais interdit de distribuer les fichiers d'animation bruts. Le dépôt étant public, ces données n'y sont jamais en clair.
