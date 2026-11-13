@@ -2,8 +2,8 @@
 # Pitch : Partiel d'éco demain, trois cents pages, rien lu. Tobi demande un résumé à Gemini. Puis plus court. Puis encore plus court.
 
 AMBIANCE soir
-DIRECT TOBI travaille
-DIRECT TOBI pivote
+DECOR bu
+DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT GEMINI apparait bureau
 FONDU direct

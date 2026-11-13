@@ -1,6 +1,7 @@
 // Lecteur de scénario : lit histoire.txt ligne par ligne et le joue dans la chambre.
 // Une ligne = une instruction. Terminer par « & » pour lancer la suivante sans attendre.
 import * as THREE from 'three';
+import { createDecors } from './lieux.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
@@ -104,6 +105,8 @@ export function createPlayer(v, ui) {
     return near[0] || v.actors.find((x) => x !== a);
   };
   const room = v.room;
+  const decors = createDecors(room, v.scene); // laverie, kebab, BU : voir src/lieux.js
+  { const base = room.update; room.update = (dt) => { base(dt); decors.update(dt); }; }
   let talkTo = null, grosOf = null, lowShot = false, shotN = 0, hiddenForShot = [];
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
@@ -379,6 +382,7 @@ export function createPlayer(v, ui) {
         }
         return undefined;
       }
+      case 'decor': decors.set(plain(c.args[0] || 'chambre')); return undefined; // DECOR laverie | kebab | bu | chambre
       case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
@@ -604,7 +608,7 @@ export function createPlayer(v, ui) {
       if (running) return;
       findBlockers();
       setClock(text);
-      clearLimits(); subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
+      clearLimits(); decors.set('chambre'); subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
       hiddenForShot = [];
       const list = parseStory(text);
       adresse(list);
