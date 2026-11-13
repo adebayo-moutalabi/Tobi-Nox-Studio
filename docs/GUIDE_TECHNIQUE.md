@@ -76,6 +76,13 @@ Dans la console, garder l'onglet au premier plan. Ne pas lancer deux contrôles 
 
 Pour vérifier des scripts : `node tools/controle-episodes.mjs 101 140` contrôle les tons, les plans avant chaque personnage, la durée estimée (moins d'une minute), l'accroche et les mots interdits (« mémoire », « Puis-je »).
 
+## Lieux, regard et jeux (13 novembre 2026)
+
+- **Lieux :** `src/lieux.js` construit la laverie, le kebab et la BU. Chaque lieu réutilise les murs de la chambre et pose ses meubles là où étaient le bureau, l'armoire, la kitchenette et le lit. Les meubles de la chambre deviennent invisibles mais restent des obstacles pour la caméra : c'est pour cela que les nouveaux meubles occupent les mêmes volumes. Pour ajouter un lieu : écrire une fonction comme `kebab(g)`, l'ajouter à `BUILD` et `TINT`.
+- **Regard :** dans `applyLook()` de `src/viewer.js`, la direction du regard est lissée (`a.aim`), le personnage cligne quand il change de cible, et `listen()` fait hocher et pencher la tête de celui qui écoute.
+- **Jeux :** `src/jeux.html` (gabarit et style) et `src/jeux-app.js` (les trois jeux). `node build.mjs` produit `jeux.html`. Un jeu est un objet `{ id, nom, ico, pitch, start(), stop() }` ajouté à la liste `JEUX` ; le score, le record et le lien de défi sont communs.
+- **Revenir en arrière :** l'étiquette Git `version-2026-11-13` marque la version d'avant. `versions/studio-2026-11-13.html` en garde une copie consultable sur le site.
+
 ## Animations Mixamo
 
 Les gestes les plus humains de Tobi viennent de Mixamo. La FAQ d'Adobe autorise leur usage dans un projet, mais interdit de distribuer les fichiers d'animation bruts. Le dépôt étant public, ces données n'y sont jamais en clair.

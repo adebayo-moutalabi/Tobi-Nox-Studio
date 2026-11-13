@@ -30,6 +30,19 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 Un brouillon, une idée d'actualité ou un texte venu d'ailleurs donne seulement le sujet. On réécrit chaque réplique avec la voix du personnage : Tobi rebondit avec mauvaise foi, Nox répond en peu de mots, Claude reste doux et honnête, Codex agit trop vite, Gemini en sait trop. On ramène l'histoire dans la chambre de Tobi, avec ses soucis d'étudiant. Une information préparée se montre à l'écran : liste dans `Notes`, mail, message.
 
+## La boîte à outils comique
+
+Ce que font les Shorts humoristiques qui retiennent le mieux, et qu'on applique ici :
+
+1. **Une mécanique, pas une histoire.** Une règle simple posée en deux répliques (« il répète tout », « chaque effort fait baisser la note »), puis trois tours qui l'aggravent.
+2. **La règle de trois.** Deux fois la même chose installe l'attente, la troisième la casse.
+3. **Le renversement de statut.** Celui qui commande au début obéit à la fin : Tobi le « chef », Nox qui décide.
+4. **Le détail précis.** « 847 € », « le chargeur de Karim », « à 17 h 59 pile » font plus rire que « beaucoup » ou « un objet ».
+5. **Le rappel.** La dernière réplique reprend un mot de la première, avec un autre sens.
+6. **La réplique courte gagne.** La chute tient en six mots au plus, le mot drôle à la fin.
+7. **Couper avant d'expliquer.** Après la chute, plus rien. Si une réplique explique la blague, on la retire.
+8. **Le silence joue.** Un regard, un hochement de tête ou un clignement avant la chute vaut une réplique.
+
 ## La bonne durée
 
 La durée vise 30 à 40 secondes, 50 au grand maximum (décision du 13 novembre 2026) : environ 70 à 100 mots de dialogue, une seule mécanique comique. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.
@@ -216,6 +229,8 @@ NOX dit (resigne) J'appelle ta mère.
 **Limite sur la tête :** `CLAUDE limite` fait apparaître au-dessus de lui une jauge qui monte à 100 %, affiche « Limite atteinte » et le fait perdre ses couleurs jusqu'à la fin de l'épisode. Marche pour toutes les IA.
 
 **Aperçu de jeu :** `PC Jeu : Nom du jeu | Niveau 1 : ... | Boss final : ...`. Un petit jeu de plateforme animé, avec les lignes en haut de l'écran.
+
+**Changer de lieu :** `DECOR laverie`, `DECOR kebab` ou `DECOR bu` juste après `AMBIANCE`. Sans cette ligne, on est dans la chambre. Dans ces lieux, Tobi reste debout (`DIRECT TOBI marche tapis`), Nox s'assoit sur le banc (`DIRECT NOX assis`) et une IA peut se poser sur le comptoir (`apparait bureau`). Pas d'écran `PC`, pas de `travaille`, `dort` ni `frigo` : utiliser les messages de téléphone.
 
 **Téléphone :** `TOBI appelle`, puis `TOBI raccroche`.
 

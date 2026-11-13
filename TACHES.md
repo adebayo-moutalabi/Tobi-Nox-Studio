@@ -21,6 +21,13 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 - **Places des IA :** revoir les anciens épisodes où Claude est par terre, et les plans mal cadrés.
 - **Épisodes 82, 85, 87, 90, 92, 94 et 95 :** à raccourcir et adapter de la même façon si l'auteur le demande.
 
+## Suite de la refonte (13 novembre 2026)
+
+- **Mouvements :** transferts de poids du bassin avec pieds ancrés, anticipation avant les grands gestes, réactions du visage de celui qui écoute.
+- **Lieux :** amphi, couloir de la résidence, extérieur de nuit. Permettre les écrans `PC` hors de la chambre.
+- **Chambre et personnages :** textures et détails plus fins (tissu du sweat, peau, objets du bureau).
+- **Jeux :** classement partagé entre joueurs (demande un petit serveur), sons, nouveaux jeux.
+
 ## Documentation et code
 
 4. **Revoir la documentation et le code :** une personne ou une IA doit pouvoir les comprendre et les modifier facilement. L'auteur y reviendra.

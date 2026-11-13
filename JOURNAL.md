@@ -344,6 +344,14 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - L'écran de fin « Abonne-toi » dure 2,5 secondes.
 - Vingt nouvelles idées au même format dans `IDEES_EPISODES.md`.
 
+## Mouvements, lieux et mini-jeux (13 novembre 2026)
+
+- Point de retour : étiquette `version-2026-11-13` et copie du Studio dans `versions/`.
+- Regard plus humain : la tête ne saute plus d'une personne à l'autre, on cligne en changeant de regard, et celui qui écoute hoche et penche la tête.
+- Trois nouveaux lieux avec la commande `DECOR` : laverie, kebab et BU. Les épisodes 133 (BU) et 137 (kebab) les utilisent.
+- Page `jeux.html` : « Nox, attrape ! » (3D), « Fin de mois » et « Tobi. Non. », avec record et lien de défi à partager.
+- Charte : boîte à outils comique en huit points.
+
 ## À faire
 
 Voir `TACHES.md`.
