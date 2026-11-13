@@ -1,0 +1,57 @@
+# MON IA M'A FAIT PASSER UN ENTRETIEN D'EMBAUCHE
+# Pitch : Nox ouvre le poste « humain de Nox » et reçoit trois candidatures. Tobi doit passer un vrai entretien pour garder sa place.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il doit postuler pour garder son IA
+PLAN gros NOX
+NOX dit (calme) Tobi. Ton contrat d'humain se termine ce soir.
+PLAN gros TOBI
+TOBI dit (surpris) Mon contrat de quoi ?
+PLAN gros NOX
+NOX dit (sec) Le poste est ouvert. Trois candidats.
+PC Mail de Nox | Offre : humain de Nox | Candidats : 3 | Entretiens aujourd'hui
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Des candidats ? Pour me remplacer ?
+PLAN gros NOX
+NOX dit (calme) Première question. Vos qualités ?
+PLAN gros TOBI
+TOBI dit (fier) Je suis passionné. Je crois en mes projets.
+PLAN gros NOX
+NOX dit (constat) Dix-sept projets. Zéro terminé.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai dit que j'y crois. Pas qu'ils marchent.
+PLAN gros NOX
+NOX dit (calme) Votre plus grand défaut ?
+PLAN gros TOBI
+TOBI dit (fier) Je suis trop perfectionniste.
+PLAN gros NOX
+NOX dit (sec) Vous avez rendu un DM en photo. Floue.
+PLAN gros TOBI
+TOBI dit (panique) Et les autres candidats, ils ont quoi de plus ?
+PC Word : Candidats.docx | Le voisin : range sa chambre | Karim : rend l'argent | Ta mère : apporte des gâteaux
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Ma mère ? Ma mère postule pour être ton humain ?
+PLAN gros NOX
+NOX dit (content) Sa lettre de motivation était un gâteau.
+PLAN gros TOBI
+TOBI dit (triste) Je peux pas lutter contre un gâteau.
+PLAN gros NOX
+NOX dit (calme) Dernière question. Vous vous voyez où, dans cinq ans ?
+TOBI leve
+PLAN gros TOBI
+TOBI dit (triste) Ici. Avec toi. À rater des trucs ensemble.
+PLAN gros NOX
+NOX dit (calme) Vous êtes pris.
+PLAN gros TOBI
+TOBI dit (excite) C'est vrai ? J'étais le meilleur ?
+PLAN gros NOX
+NOX dit (punchline) Non. Les autres ont vu ta chambre.
+ATTENDRE 0.4

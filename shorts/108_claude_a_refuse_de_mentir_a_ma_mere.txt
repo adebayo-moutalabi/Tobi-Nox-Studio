@@ -1,43 +1,51 @@
 # CLAUDE A REFUSÉ DE MENTIR À MA MÈRE
-# Pitch : La mère de Tobi veut savoir s'il a validé son semestre. Tobi demande à Claude une phrase vraie, mais rassurante.
+# Pitch : La mère de Tobi veut savoir s'il a réussi ses partiels. Tobi demande à Claude de lui parler, avec des phrases vraies mais rassurantes.
 
 AMBIANCE soir
+DATE Mardi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Claude ne sait pas mentir à sa mère
 PLAN gros TOBI
-TOBI dit (panique) Claude ! Ma mère veut savoir si j'ai validé mon semestre.
+TOBI dit (panique) Claude ! Ma mère veut savoir si j'ai réussi mes partiels.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tu l'as validé ?
+CLAUDE dit (calme) Tu les as réussis ?
 PLAN gros TOBI
 TOBI dit (gene) Pas exactement.
-TOBI dit (fier) Dis-lui un truc vrai. Mais rassurant.
+TOBI dit (fier) Parle-lui, toi. Que des phrases vraies. Mais rassurantes.
 PLAN gros CLAUDE
-CLAUDE dit (calme) D'accord. Je cherche une phrase vraie.
-PLAN gros TOBI
-TOBI dit (excite) Vas-y, je mets le haut-parleur.
+CLAUDE dit (calme) D'accord. Vraies et rassurantes.
 TOBI appelle
 PLAN gros CLAUDE
-CLAUDE dit (calme) Bonjour, madame. Tobi est allé à tous ses examens.
+CLAUDE dit (calme) Bonsoir, madame. Tobi est allé à tous ses partiels.
 PLAN gros TOBI
-TOBI dit (content) Oui ! C'est vrai, ça !
+TOBI dit (content) Vrai !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Il a rendu toutes ses copies.
 PLAN gros TOBI
 TOBI dit (content) Vrai aussi !
 PLAN gros CLAUDE
 CLAUDE dit (calme) Blanches.
+PLAN gros TOBI
+TOBI dit (chuchote) Rattrape ! Dis un truc bien !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il est toujours le premier à sortir de la salle.
+PLAN gros TOBI
+TOBI dit (chuchote) Voilà ! Parfait !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Au bout de cinq minutes.
+CLAUDE dit (curieux) Pardon ? S'il vous ment souvent ? Il m'a demandé de le faire. Là.
 TOBI raccroche
 PLAN gros TOBI
-TOBI dit (panique) Claude ! Pourquoi « blanches » ?
+TOBI dit (panique) Claude ! Pourquoi tu lui as dit ça ?
 PLAN gros CLAUDE
-CLAUDE dit (calme) Elle a demandé si elles étaient remplies.
-PLAN gros NOX
-NOX dit (curieux) Elle a dit quoi ?
+CLAUDE dit (calme) Elle a posé la question. Et elle veut un rapport chaque dimanche.
 PLAN gros TOBI
-TOBI dit (triste) Rien. Elle prend le train.
+TOBI dit (panique) T'as dit non ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) J'ai dit oui. Mais je le ferai court.
 PLAN gros NOX
-NOX dit (punchline) Claude a dit la vérité. Ta mère va dire le reste.
+NOX dit (punchline) Un seul mot suffira, Claude. « Blanches. »
 ATTENDRE 0.4

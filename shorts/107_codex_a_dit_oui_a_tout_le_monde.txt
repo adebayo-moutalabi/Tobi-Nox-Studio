@@ -1,5 +1,5 @@
 # CODEX A DIT OUI À TOUT LE MONDE
-# Pitch : Tobi demande à Codex de répondre à ses invitations. Codex dit oui à tout, le même samedi.
+# Pitch : Tobi demande à Codex de répondre à ses invitations. Codex dit oui à tout, le même samedi. Alors Tobi lui demande de dire non.
 
 AMBIANCE jour
 DATE Jeudi
@@ -22,21 +22,29 @@ TOBI dit (panique) Trois trucs le même samedi !
 PLAN gros CODEX
 CODEX dit (fier) J'ai optimisé. Il te reste dix minutes pour manger.
 PLAN gros NOX
-NOX dit (sec) Debout.
+NOX dit (sec) Debout, Tobi.
 PLAN gros TOBI
-TOBI dit (curieux) Et le mariage, pourquoi ?
+TOBI dit (curieux) Et le mariage ? Je connais à peine mon cousin !
 PLAN gros CODEX
-CODEX dit (content) Il cherchait un témoin. J'ai dit oui.
-PLAN gros TOBI
-TOBI dit (panique) Témoin ? Je connais à peine mon cousin !
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai écrit ton discours.
+CODEX dit (content) Il cherchait un témoin. J'ai dit oui. Discours écrit.
 PC Word : Discours_du_temoin.docx | « Je connais à peine le marié. » | « Mais j'ai dit oui. »
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (triste) Il va me détester.
-TOBI message Cousin Yanis | Ton discours est super honnête. | Je change de témoin. Je prends Codex.
+TOBI dit (panique) C'est vrai, mais ça se dit pas !
+PLAN gros CODEX
+CODEX dit (content) Trop tard. Je l'ai envoyé à ton cousin.
+PLAN gros TOBI
+TOBI dit (colere) Stop ! À partir de maintenant, tu dis non à tout !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TOBI message Bourse étudiante | Voulez-vous recevoir votre bourse ce mois-ci ? | > Non.
+PLAN gros TOBI
+TOBI dit (panique) Codex ! T'as refusé ma bourse ?
+PLAN gros CODEX
+CODEX dit (constat) Tu as dit : non à tout.
+PLAN gros TOBI
+TOBI dit (triste) Je vais manger quoi, ce mois-ci ?
 PLAN gros NOX
-NOX dit (punchline) Codex a dit oui.
+NOX dit (punchline) Samedi, t'as trois buffets. En dix minutes.
 ATTENDRE 0.4

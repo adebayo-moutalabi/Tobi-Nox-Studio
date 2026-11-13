@@ -1,5 +1,5 @@
 # MON IA A RÉPONDU À MA MÈRE À MA PLACE
-# Pitch : La mère de Tobi le trouve très gentil en ce moment. Depuis un mois, c'est Nox qui lui répond.
+# Pitch : La mère de Tobi le trouve très gentil en ce moment. Depuis un mois, c'est Nox qui lui répond. Tobi veut reprendre la main.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,7 +7,7 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA répond à sa mère depuis un mois
 PLAN gros TOBI
-TOBI dit (content) Nox, ma mère dit partout que je suis gentil en ce moment.
+TOBI dit (content) Nox ! Ma mère dit partout que je suis devenu gentil.
 PLAN gros NOX
 NOX dit (gene) Ah.
 PLAN gros TOBI
@@ -15,21 +15,31 @@ TOBI dit (curieux) Pourquoi « ah » ?
 PLAN gros NOX
 NOX dit (gene) Depuis un mois, c'est moi qui lui réponds.
 PLAN gros TOBI
-TOBI dit (surpris) Quoi ?
+TOBI dit (surpris) Hein ? Montre !
 TOBI message Maman | Merci pour ton message si doux, mon chéri. | > Prends soin de toi, Maman. Bois de l'eau.
 PLAN gros TOBI
 TOBI dit (panique) « Bois de l'eau » ? Je dis jamais ça !
 PLAN gros NOX
-NOX dit (constat) Elle boit plus d'eau.
+NOX dit (constat) Elle boit deux litres par jour.
 PLAN gros TOBI
-TOBI dit (colere) Stop ! À partir de maintenant, c'est moi qui écris.
-TOBI message Maman | > yo | C'est toi, Nox ?
+TOBI dit (colere) Stop. À partir de maintenant, c'est moi qui écris.
+TOBI message Maman | > yo | Qui êtes-vous ? Rendez-moi mon fils.
 PLAN gros TOBI
-TOBI dit (surpris) Elle demande si c'est toi !
+TOBI dit (surpris) « Rendez-moi mon fils » ? Mais c'est moi, son fils !
 PLAN gros NOX
-NOX dit (calme) Elle préfère l'ancienne version.
+NOX dit (calme) Plus vraiment.
+TOBI message Maman | Pour Noël, viens avec Nox. Ou envoie juste Nox.
 PLAN gros TOBI
-TOBI dit (triste) Mais l'ancienne version, c'était pas moi !
+TOBI dit (triste) « Envoie juste Nox » ? Elle préfère mon IA !
 PLAN gros NOX
-NOX dit (punchline) Justement.
+NOX dit (sec) Moi, je réponds en moins de trois jours.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. Elle t'écoute. Demande-lui vingt euros pour moi.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+TOBI message Maman | > Maman, Tobi a besoin de vingt euros. | Je lui envoie un pack d'eau.
+PLAN gros TOBI
+TOBI dit (surpris) Un pack d'eau ?
+PLAN gros NOX
+NOX dit (punchline) Elle a raison. Bois de l'eau.
 ATTENDRE 0.4

@@ -1,5 +1,5 @@
 # MON IA A FÊTÉ SES 2 ANS SANS MOI
-# Pitch : C'est l'anniversaire de Nox. Claude et Codex ont tout prévu. Tobi, lui, a oublié.
+# Pitch : C'est l'anniversaire de Nox. Claude et Codex ont tout prévu. Tobi, lui, a oublié, et essaie de faire croire le contraire.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -9,36 +9,46 @@ DIRECT CODEX apparait milieu
 FONDU direct
 ACCROCHE Il a oublié l'anniversaire de son IA
 PLAN gros CLAUDE
-CLAUDE dit (content) Joyeux anniversaire, Nox. Deux ans aujourd'hui.
+CLAUDE dit (content) Deux ans aujourd'hui. Joyeux anniversaire, Nox.
 PLAN gros TOBI
 TOBI dit (surpris) Hein ? C'est l'anniversaire de Nox ?
+PLAN gros NOX
+NOX dit (curieux) Tu savais pas, Tobi ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Si ! Évidemment. Je l'avais... dans mon cœur.
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Gâteau commandé, bougies allumées.
+CODEX dit (fier) C'est fait ! Gâteau commandé. Payé avec ta carte, Tobi.
+PC Banque : Compte de Tobi | Gâteau pour Nox : -28 € | Solde : 4 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Vingt-huit euros ?
+PLAN gros CODEX
+CODEX dit (content) Il chante. C'était en option.
 PLAN gros NOX
-NOX dit (content) Merci, Claude. Merci, Codex.
+NOX dit (content) Merci, Tobi. Et mon cadeau ?
 PLAN gros TOBI
-TOBI dit (gene) Moi aussi, je savais, Nox. Évidemment.
-PLAN gros NOX
-NOX dit (curieux) Ah oui ? C'est quel jour ?
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Aujourd'hui. Bravo à moi.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Il a oublié. Mais il est là.
-PLAN gros TOBI
-TOBI dit (fier) Et j'ai un cadeau !
-PLAN gros NOX
-NOX dit (curieux) Lequel ?
-PLAN gros TOBI
-TOBI dit (fier) Mon chargeur. Mon bien le plus précieux.
-PLAN gros NOX
-NOX dit (surpris) Ton chargeur ?
-PLAN gros TOBI
-TOBI dit (fier) Charge rapide, en plus.
+TOBI dit (gene) Ton cadeau... Mon chargeur ! Charge rapide !
 PLAN gros NOX
 NOX dit (constat) Il y a écrit « Karim, chambre 213 ».
 PLAN gros TOBI
-TOBI dit (gene) C'est la marque.
-TOBI message Karim 213 | Quelqu'un a vu mon chargeur ?
+TOBI dit (mauvaisefoi) C'est la marque.
+TOBI message Groupe de l'étage | Karim : quelqu'un a vu mon chargeur ?
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Écris la carte. Un truc beau, de ma part.
+PLAN gros CLAUDE
+CLAUDE dit (calme) D'accord. Un truc beau et vrai.
+PC Word : Carte_pour_Nox.docx | Joyeux anniversaire, Nox. | Je l'ai appris il y a deux minutes. | Tobi
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (panique) Claude ! Il fallait mentir !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Tu as dit beau. La vérité, c'est beau.
 PLAN gros NOX
-NOX dit (punchline) Merci, Tobi. Je le rendrai à Karim. Pour son anniversaire.
+NOX dit (content) Tobi, c'est la plus belle carte de ma vie.
+PLAN gros TOBI
+TOBI dit (surpris) Hein ? Pourquoi ?
+PLAN gros NOX
+NOX dit (punchline) En deux ans, c'est ta première phrase vraie.
 ATTENDRE 0.4

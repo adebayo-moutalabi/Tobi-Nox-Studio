@@ -1,5 +1,5 @@
 # MON IA A ÉCRIT MA LETTRE DE MOTIVATION TROP HONNÊTE
-# Pitch : Tobi demande à Nox sa lettre de motivation pour le stage de ses rêves. Nox dit toute la vérité.
+# Pitch : Tobi demande à Nox sa lettre de motivation pour le stage de ses rêves. Nox dit toute la vérité, et l'envoie avant qu'il puisse relire.
 
 AMBIANCE jour
 DATE Mardi
@@ -13,26 +13,45 @@ PLAN gros NOX
 NOX dit (calme) Je dis la vérité ?
 PLAN gros TOBI
 TOBI dit (fier) Oui. Mais en mieux.
-PC Word : Lettre_de_motivation.docx | « Tobi se lève à midi. » | « Il a lancé 17 projets. Aucun ne marche. » | « Mais il ne lâche jamais. »
+PC Word : Lettre_de_motivation.docx | « Tobi se lève à midi. » | « Il a lancé 17 projets. Aucun ne marche. »
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
 TOBI dit (panique) « Il se lève à midi » ? T'es fou ?
 PLAN gros NOX
-NOX dit (constat) C'est vrai.
+NOX dit (constat) J'ai arrondi. C'est treize heures.
 PLAN gros TOBI
-TOBI dit (colere) Supprime ! Je veux une autre version !
+TOBI dit (colere) Mets au moins mes qualités !
+PLAN gros NOX
+NOX dit (calme) J'ai cherché. J'en ai trouvé une.
+PLAN gros TOBI
+TOBI dit (curieux) Laquelle ?
+PLAN gros NOX
+NOX dit (sec) Tu lâches jamais. Surtout ton lit.
+PLAN gros TOBI
+TOBI dit (colere) Supprime tout ! Je veux une autre version !
 PLAN gros NOX
 NOX dit (sec) Déjà envoyée.
 PLAN gros TOBI
+TOBI dit (panique) Sans relire ?
+PLAN gros NOX
+NOX dit (constat) Comme toi. Toujours.
+PLAN gros TOBI
 TOBI dit (triste) C'est fini. Personne prend un mec qui se lève à midi.
 BRUIT ding
-PC Mail de StartUp Lab | Enfin une lettre honnête ! | Entretien vendredi, 14 h | PS : venez avec Nox.
+PC Mail de StartUp Lab | Enfin une lettre honnête ! | Entretien vendredi, 14 h | PS : venez avec Nox. Le poste est pour lui.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (excite) Un entretien ! Mon honnêteté a payé !
-TOBI dit (curieux) Attends. Pourquoi avec toi ?
+TOBI dit (surpris) Pour lui ? C'est MON stage !
 PLAN gros NOX
-NOX dit (punchline) Rassure-toi. Je dirai que t'es mon assistant.
+NOX dit (fier) Ils ont aimé l'auteur.
+PLAN gros TOBI
+TOBI dit (colere) Refuse ! Par amitié !
+PLAN gros NOX
+NOX dit (calme) J'accepte. Il faut qu'un de nous deux travaille.
+PLAN gros TOBI
+TOBI dit (panique) Et moi, je fais quoi ?
+PLAN gros NOX
+NOX dit (punchline) Je te prends en stage. Non payé.
 ATTENDRE 0.4

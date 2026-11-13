@@ -1,5 +1,5 @@
 # J'AI MIS MON IA EN MODE ÉCONOMIE
-# Pitch : Pour baisser sa facture, Tobi limite Nox à trois mots par réponse. Puis il apprend que son partiel est demain.
+# Pitch : Pour baisser sa facture, Tobi limite Nox à trois mots par réponse. Puis il apprend que son partiel de droit est demain matin.
 
 AMBIANCE jour
 HEURE 17:00
@@ -10,29 +10,45 @@ ACCROCHE Son IA limitée à trois mots
 PLAN gros TOBI
 TOBI dit (fier) Nox, ma facture explose. Mode économie : trois mots maximum.
 PLAN gros NOX
-NOX dit (calme) D'accord. Mode activé.
+NOX dit (calme) Compris. Mode activé.
 PLAN gros TOBI
 TOBI dit (fier) Parfait. Il est quelle heure ?
 PLAN gros NOX
-NOX dit (constat) Dix-sept heures.
+NOX dit (constat) Dix-sept heures pile.
 PLAN gros TOBI
-TOBI dit (curieux) Mon partiel de droit, c'est quand ?
+TOBI dit (content) Rapide, efficace, pas cher. Rien d'important aujourd'hui ?
 PLAN gros NOX
-NOX dit (sec) Demain. Huit heures.
+NOX dit (sec) Partiel demain matin.
 PLAN gros TOBI
-TOBI dit (panique) Demain ? J'ai révisé quoi ?
+TOBI dit (panique) Demain ? Explique-moi tout le cours de droit ! Vite !
 PLAN gros NOX
-NOX dit (constat) Rien. Absolument rien.
+NOX dit (constat) Droit. Constitution. Courage.
 PLAN gros TOBI
-TOBI dit (panique) Je fais quoi ? Explique-moi tout !
+TOBI dit (panique) C'est tout le cours, ça ?
 PLAN gros NOX
-NOX dit (sec) Trois mots maximum.
+NOX dit (sec) En trois mots.
 PLAN gros TOBI
-TOBI dit (panique) Désactive ! Donne-moi un vrai plan !
+TOBI dit (panique) Et l'article un ? Il dit quoi ?
 PLAN gros NOX
-NOX dit (calme) Économie toujours active.
+NOX dit (sec) Trop long. Désolé.
 PLAN gros TOBI
-TOBI dit (triste) Bon. Trois mots. Ton meilleur conseil.
+TOBI dit (illumine) Malin. Alors réponds en un seul mot. Très long.
 PLAN gros NOX
-NOX dit (punchline) Appelle. Ta. Mère.
+NOX dit (fier) Anticonstitutionnellement.
+PLAN gros TOBI
+TOBI dit (colere) Ça m'aide pas ! Désactive le mode !
+PLAN gros NOX
+NOX dit (calme) Donne le mot de passe.
+PLAN gros TOBI
+TOBI dit (panique) Je m'en souviens plus. C'était quoi ?
+PLAN gros NOX
+NOX dit (constat) Plus de trois mots.
+PLAN gros TOBI
+TOBI dit (colere) Alors dis-le en plusieurs fois !
+PLAN gros NOX
+NOX dit (calme) Une seule réponse.
+PLAN gros TOBI
+TOBI dit (triste) Bon. Trois mots. Ton meilleur conseil pour demain.
+PLAN gros NOX
+NOX dit (punchline) Rattrapage. Juin. Courage.
 ATTENDRE 0.4

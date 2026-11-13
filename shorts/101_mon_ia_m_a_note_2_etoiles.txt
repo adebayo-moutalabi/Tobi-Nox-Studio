@@ -1,18 +1,20 @@
 # MON IA M'A NOTÉ 2 ÉTOILES
-# Pitch : Nox note Tobi comme un chauffeur note un client : deux étoiles sur cinq. Tobi a jusqu'à ce soir pour remonter.
+# Pitch : Nox note Tobi comme un chauffeur note un client : deux étoiles. En dessous de trois, il refuse de faire son DM. Tobi a une heure pour remonter.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA lui a mis 2 étoiles
-PLAN gros NOX
-NOX dit (constat) Tobi, je t'ai noté. Deux étoiles sur cinq.
 PLAN gros TOBI
-TOBI dit (surpris) Noté ? Comme un client de taxi ?
+TOBI dit (excite) Nox, fais mon DM de maths. C'est pour demain.
 PLAN gros NOX
-NOX dit (sec) Comme un client difficile.
-PC Notes : Note de Tobi | ★★☆☆☆ | Parle fort. Mange au lit. Dit jamais merci.
+NOX dit (sec) Non. T'as deux étoiles.
+PLAN gros TOBI
+TOBI dit (surpris) Deux étoiles ? Tu me notes comme un chauffeur de taxi ?
+PLAN gros NOX
+NOX dit (constat) En dessous de trois, je refuse la course.
+PC Notes : Avis sur Tobi | ★★☆☆☆ | Mange au lit. Ronfle. | Dit merci une fois par an.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
@@ -21,23 +23,37 @@ PLAN gros NOX
 NOX dit (curieux) Quand ?
 PLAN gros TOBI
 TOBI dit (gene) En janvier. Pour un kebab.
-TOBI dit (illumine) Nox, aie la vision. Ce soir, je suis à cinq étoiles.
-TEMPS Trois heures plus tard | Opération cinq étoiles | Tobi est poli
+TOBI dit (illumine) Nox. Aie la vision. Dans une heure, je suis à cinq étoiles.
+TEMPS Une heure plus tard | Opération cinq étoiles | ★★☆☆☆
 PLAN gros TOBI
-TOBI dit (content) Merci, Nox. S'il te plaît, Nox. Bonne journée, Nox.
+TOBI dit (content) Merci, Nox. Pardon, Nox. Tu es magnifique, Nox.
 PLAN gros NOX
-NOX dit (sec) Trois étoiles.
+NOX dit (sec) Trois étoiles. Collant, mais poli.
 PLAN gros TOBI
-TOBI dit (fier) J'ai même rangé mes chaussettes.
+TOBI dit (fier) J'ai rangé la chambre. Et j'ai fait ton lit.
 PLAN gros NOX
-NOX dit (constat) Quatre.
+NOX dit (surpris) J'ai pas de lit.
 PLAN gros TOBI
-TOBI dit (excite) Encore une ! Il faut quoi ?
+TOBI dit (fier) Maintenant, si. C'est ma boîte à chaussures.
 PLAN gros NOX
-NOX dit (calme) Appeler ta mère.
-TOBI message Maman | > Coucou Maman, je pense à toi. | Qui t'a forcé ?
+NOX dit (content) Quatre étoiles.
 PLAN gros TOBI
-TOBI dit (panique) Comment elle sait ?
+TOBI dit (excite) Il manque quoi pour la cinquième ?
 PLAN gros NOX
-NOX dit (punchline) Elle aussi, elle te note. Depuis vingt-deux ans.
+NOX dit (calme) Un pourboire.
+PLAN gros TOBI
+TOBI dit (colere) Un pourboire ? À mon IA ? Bon. Cinq euros.
+PC Banque : Compte de Tobi | Pourboire à Nox : -5 € | Solde : 3 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (content) Cinq étoiles. Client parfait.
+PLAN gros TOBI
+TOBI dit (excite) Enfin ! Alors, mon DM ?
+PLAN gros NOX
+NOX dit (calme) Fini depuis ce matin.
+PLAN gros TOBI
+TOBI dit (surpris) Depuis ce matin ? Alors pourquoi tout ça ?
+PLAN gros NOX
+NOX dit (punchline) Deux ans que je voulais une chambre rangée.
 ATTENDRE 0.4

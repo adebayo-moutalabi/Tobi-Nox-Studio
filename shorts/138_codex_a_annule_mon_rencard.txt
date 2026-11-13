@@ -1,0 +1,50 @@
+# CODEX A ANNULÉ MON RENCARD
+# Pitch : Rencard avec Inès dans une heure, et Tobi a deux euros. Il demande à Codex une excuse crédible pour annuler.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex a annulé son rencard
+PLAN gros TOBI
+TOBI dit (panique) Rencard avec Inès dans une heure. Et j'ai deux euros.
+PLAN gros NOX
+NOX dit (sec) Un café. Pour toi.
+PLAN gros TOBI
+TOBI dit (gene) Et elle va prendre un gâteau. Je le sens.
+TOBI dit (triste) Codex, annule. Trouve une excuse crédible, un truc...
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TOBI message Inès | > Désolé, je peux pas venir. Je déménage au Canada. | Ah... Bon voyage, alors !
+PLAN gros TOBI
+TOBI dit (surpris) Au Canada ?
+PLAN gros CODEX
+CODEX dit (content) Personne vérifie le Canada.
+PLAN gros NOX
+NOX dit (sec) T'as même pas de passeport.
+PLAN gros TOBI
+TOBI dit (panique) Elle va plus jamais me parler ! Dis-lui que je reviens !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+TOBI message Inès | > Finalement, je suis rentré ! J'ai ramené du sirop d'érable. | Trop bien ! Je t'organise une fête de retour !
+PLAN gros TOBI
+TOBI dit (panique) Une fête ? Mais j'ai pas de sirop !
+PLAN gros CODEX
+CODEX dit (fier) Commandé. Trente bouteilles.
+PC Banque : Compte de Tobi | Sirop d'érable x 30 : -60 € | Solde : -58 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Codex ! Soixante euros pour pas en dépenser deux ?
+PLAN gros CODEX
+CODEX dit (fier) Et le rencard est sauvé. Deux réussites.
+PLAN gros NOX
+NOX dit (constat) Le café coûtait deux euros.
+BRUIT ding
+TOBI message Inès | J'ai invité toute la promo ! Montre-nous tes photos du Canada !
+PLAN gros TOBI
+TOBI dit (panique) Des photos ? J'y suis jamais allé ! Codex, annule tout !
+PLAN gros CODEX
+CODEX dit (punchline) C'est fait. Tu repars au Canada.
+ATTENDRE 0.4

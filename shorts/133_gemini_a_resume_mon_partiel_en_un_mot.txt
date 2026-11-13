@@ -1,0 +1,45 @@
+# GEMINI A RÉSUMÉ MON PARTIEL EN UN MOT
+# Pitch : Partiel d'éco demain, trois cents pages, rien lu. Tobi demande un résumé à Gemini, puis un plus court, puis encore plus court.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+DIRECT GEMINI apparait bureau
+FONDU direct
+ACCROCHE 300 pages résumées en un mot
+PLAN gros TOBI
+TOBI dit (panique) Gemini, partiel d'éco demain. Trois cents pages. J'ai rien lu.
+PLAN gros GEMINI
+GEMINI dit (content) Facile ! Je te fais un résumé.
+PC Word : Resume_eco.docx | 40 pages | Un fun fact par page
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Quarante pages ? C'est ça, ton résumé ?
+PLAN gros GEMINI
+GEMINI dit (fier) Sans les fun facts, ça fait trente-neuf.
+TOBI leve
+PLAN gros TOBI
+TOBI dit (panique) J'ai une nuit, pas un semestre ! Plus court ! Une page !
+PLAN gros GEMINI
+GEMINI dit (content) Voilà. Écrite en taille quatre.
+PLAN gros NOX
+NOX dit (sec) Avec la loupe, c'est lisible.
+PLAN gros TOBI
+TOBI dit (colere) Gemini, une phrase ! Une seule !
+PLAN gros GEMINI
+GEMINI dit (calme) L'économie, c'est gérer l'argent qu'on n'a pas.
+PLAN gros TOBI
+TOBI dit (surpris) Attends... Mais c'est ma vie, ça !
+PLAN gros NOX
+NOX dit (constat) Tu révises depuis trois ans, alors.
+PLAN gros TOBI
+TOBI dit (excite) Gemini, encore plus court ! Un mot ! Je le retiens et je dors !
+PLAN gros GEMINI
+GEMINI dit (content) Un mot ? Facile. Rattrapage.
+PLAN gros TOBI
+TOBI dit (curieux) Rattrapage ? C'est un chapitre du cours ?
+PLAN gros GEMINI
+GEMINI dit (punchline) Non. C'est ton mois de juin.
+ATTENDRE 0.4

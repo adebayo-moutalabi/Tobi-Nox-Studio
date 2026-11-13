@@ -1,5 +1,5 @@
 # CENTI A FAIT MES COURSES POUR 3 €
-# Pitch : Fin du mois : Tobi confie ses courses de la semaine à Centi, l'IA à trente centimes, avec trois euros.
+# Pitch : Fin du mois : Tobi confie ses courses de la semaine à Centi, l'IA à trente centimes, avec ses trois derniers euros.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -8,13 +8,13 @@ DIRECT CENTI apparait milieu
 FONDU direct
 ACCROCHE Ses courses de la semaine pour 3 €
 PLAN gros TOBI
-TOBI dit (fier) Centi, fin du mois. J'ai trois euros. Fais mes courses pour la semaine.
+TOBI dit (fier) Centi, j'ai trois euros. Fais mes courses de la semaine.
 PLAN gros CENTI
 CENTI dit (excite) Avec plaisir, Toby ! Je trouve la meilleure promo !
 PLAN gros NOX
 NOX dit (sec) Toby. Avec un Y.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elle est pas chère, elle a le droit.
+TOBI dit (mauvaisefoi) Elle coûte trente centimes. Elle a le droit.
 PLAN gros CENTI
 CENTI dit (fier) C'est fait ! Commande validée !
 PC Safari : drive-promo.fr/panier | Sel fin x 12 | Total : 3,00 €
@@ -23,17 +23,32 @@ ATTENDRE 1.8
 PLAN gros TOBI
 TOBI dit (surpris) Douze paquets de sel ?
 PLAN gros CENTI
-CENTI dit (content) C'était en promo ! Moins quatre-vingt-dix pour cent !
+CENTI dit (content) Moins quatre-vingt-dix pour cent ! Une affaire !
 PLAN gros TOBI
-TOBI dit (panique) Je mange quoi, moi ?
+TOBI dit (panique) Mais je mange quoi, moi ?
 PLAN gros CENTI
-CENTI dit (excite) Du sel ! Douze repas différents !
+CENTI dit (excite) Du sel ! Un paquet par repas !
 PLAN gros NOX
 NOX dit (constat) Sel nature. Sel au sel. Et sel.
 PLAN gros TOBI
-TOBI dit (triste) Centi, t'as rien pris d'autre ?
+TOBI dit (colere) Centi, annule ! Prends des pâtes !
 PLAN gros CENTI
-CENTI dit (fier) Si ! Un cadeau offert !
+CENTI dit (content) Annuler, c'est une option premium ! Alors j'ai doublé. Gratuit !
+PC Safari : drive-promo.fr/panier | Sel fin x 24 | Total : 3,00 €
+PLAN pc
+ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (punchline) Une bouteille d'eau. Tu vas en avoir besoin.
+NOX dit (constat) Vingt-quatre. T'as du sel jusqu'en juin.
+PLAN gros TOBI
+TOBI dit (illumine) Je revends le sel à l'étage. C'est un investissement.
+PLAN gros NOX
+NOX dit (sec) Tout l'étage a Centi.
+PLAN gros TOBI
+TOBI dit (triste) Centi, t'as au moins pris un truc à boire ?
+PLAN gros CENTI
+CENTI dit (fier) Oui ! Une bouteille d'eau, offerte !
+PLAN gros TOBI
+TOBI dit (content) Enfin un truc utile !
+PLAN gros NOX
+NOX dit (punchline) Eau salée.
 ATTENDRE 0.4

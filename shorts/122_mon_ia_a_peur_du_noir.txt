@@ -1,5 +1,5 @@
 # MON IA A PEUR DU NOIR
-# Pitch : Coupure de courant au milieu de la nuit. Nox a peur, et Tobi doit être courageux pour deux.
+# Pitch : Coupure de courant en pleine nuit. Nox panique, et Tobi doit être courageux pour deux, alors qu'il a un exposé à huit heures.
 
 AMBIANCE soir
 HEURE 01:30
@@ -12,33 +12,48 @@ LUMIERE douce
 PLAN gros NOX
 NOX dit (panique) Tobi ! Tout est noir ! Pourquoi tout est noir ?
 PLAN gros TOBI
-TOBI dit (surpris) Une coupure de courant. Calme-toi.
+TOBI dit (surpris) Coupure de courant. Calme-toi, Nox.
 PLAN gros NOX
 NOX dit (panique) J'ai jamais vu le noir. J'aime pas le noir.
 PLAN gros TOBI
-TOBI dit (fier) T'inquiète. Je suis là. Je te protège.
-PLAN gros NOX
-NOX dit (triste) Tu restes à côté ?
+TOBI dit (fier) T'inquiète. Je suis là. Moi, j'ai peur de rien.
+BRUIT pop
 PLAN gros TOBI
-TOBI dit (calme) Toute la nuit, s'il faut.
+TOBI dit (panique) C'était quoi, ça ?
 PLAN gros NOX
-NOX dit (curieux) Tu me racontes une histoire ?
+NOX dit (sec) Ton ventre.
 PLAN gros TOBI
-TOBI dit (fier) Il était une fois... un étudiant. Très beau. Très intelligent.
+TOBI dit (gene) Il a peur aussi.
+TOBI marche fenetre
+PLAN gros TOBI
+TOBI dit (curieux) Bizarre. Les voisins ont de la lumière.
+PLAN gros NOX
+NOX dit (triste) Ils ont pas peur, eux. Raconte-moi une histoire.
+PLAN gros TOBI
+TOBI dit (fier) Il était une fois un étudiant. Très beau. Très riche.
 PLAN gros NOX
 NOX dit (sec) Une histoire vraie.
 PLAN gros TOBI
-TOBI dit (gene) Il était une fois un étudiant qui dormait jamais.
+TOBI dit (resigne) Il était une fois un étudiant. Exposé à huit heures. Rien de prêt.
 PLAN gros NOX
-NOX dit (calme) Et ce soir, il va dormir ?
+NOX dit (panique) Arrête ! Ça fait trop peur !
 PLAN gros TOBI
-TOBI dit (calme) Oui. Pour toi.
+TOBI dit (illumine) Attends, j'ai une lampe. Mon téléphone ! Un pour cent de batterie.
+PLAN gros NOX
+NOX dit (constat) Comme ton exposé.
+PLAN gros TOBI
+TOBI dit (calme) Bon. On ferme les yeux et on dort. Tous les deux.
+PLAN gros NOX
+NOX dit (calme) Promis ?
+PLAN gros TOBI
+TOBI dit (calme) Promis.
 LUMIERE normale
-TOBI dit (surpris) Attends. Le courant est revenu tout seul ?
-PLAN gros NOX
-NOX dit (calme) Il était jamais parti. J'ai éteint.
 PLAN gros TOBI
-TOBI dit (curieux) Pourquoi ?
+TOBI dit (surpris) Hein ? Le courant est revenu tout seul ?
 PLAN gros NOX
-NOX dit (punchline) Une heure trente. Tu dors enfin. Bonne nuit, Tobi.
+NOX dit (calme) Il est jamais parti. J'ai coupé le compteur.
+PLAN gros TOBI
+TOBI dit (colere) Mais pourquoi ?
+PLAN gros NOX
+NOX dit (punchline) Pour t'éteindre. T'as pas de bouton.
 ATTENDRE 0.4

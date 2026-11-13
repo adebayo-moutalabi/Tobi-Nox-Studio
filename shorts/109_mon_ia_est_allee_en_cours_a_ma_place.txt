@@ -1,5 +1,5 @@
 # MON IA EST ALLÉE EN COURS À MA PLACE
-# Pitch : Tobi envoie Nox à l'amphi de huit heures pour dormir plus. Le prof adore Nox.
+# Pitch : Tobi envoie Nox à l'amphi de huit heures pour dormir plus. Nox devait se cacher au fond. Le prof l'adore.
 
 AMBIANCE jour
 HEURE 07:30
@@ -9,27 +9,37 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA va en cours à sa place
 PLAN gros TOBI
-TOBI dit (gene) Nox, amphi à huit heures. Vas-y à ma place. Prends des notes.
+TOBI dit (gene) Nox, amphi de droit à huit heures. Vas-y à ma place.
 PLAN gros NOX
 NOX dit (curieux) Et toi ?
 PLAN gros TOBI
-TOBI dit (fier) Je dors. C'est de la délégation.
+TOBI dit (fier) Moi, je dors. C'est de la délégation.
+TOBI dit (fier) Assieds-toi au fond. Parle à personne.
 TEMPS Trois heures plus tard | Fin du cours | Nox rentre
+HEURE 10:40
 PLAN gros NOX
-NOX dit (content) Le prof est super. On a parlé une heure.
+NOX dit (content) Super cours. Le prof m'a mis au premier rang.
 PLAN gros TOBI
-TOBI dit (surpris) Une heure ? T'étais censé te cacher !
+TOBI dit (panique) Au premier rang ? T'étais censé te cacher !
 PLAN gros NOX
-NOX dit (constat) Il m'a posé une question. J'ai répondu.
+NOX dit (constat) Il a posé une question. Personne savait.
 PLAN gros TOBI
-TOBI dit (fier) Bon. Il me croit brillant, alors.
-TOBI message Prof de droit | Bravo à votre IA, Nox. Inscrit d'office. | Vous, absent depuis septembre.
+TOBI dit (fier) Et t'as répondu pour moi ? Bon. Il me croit brillant.
+TOBI message Prof de droit | Bravo à Nox, élu délégué. | Vous, absent depuis septembre.
 PLAN gros TOBI
 TOBI dit (panique) Septembre ? Mais je suis venu en octobre !
 PLAN gros NOX
 NOX dit (sec) Une fois. Pour le wifi.
 PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. Tu vas en cours, et moi je touche la bourse.
+TOBI dit (illumine) Nox, aie la vision. Toi, tu vas en cours. Moi, je touche la bourse.
 PLAN gros NOX
-NOX dit (punchline) La bourse est à mon nom. Il m'a inscrit.
+NOX dit (constat) La bourse est à mon nom. Il m'a inscrit.
+PLAN gros TOBI
+TOBI dit (panique) Et moi, je suis quoi, alors ?
+PLAN gros NOX
+NOX dit (calme) Désinscrit. Tu peux dormir.
+PLAN gros TOBI
+TOBI dit (triste) Nox... je fais quoi de mes journées ?
+PLAN gros NOX
+NOX dit (punchline) Demain, amphi à huit heures. Vas-y à ma place.
 ATTENDRE 0.4

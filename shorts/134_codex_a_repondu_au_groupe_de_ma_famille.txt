@@ -1,0 +1,57 @@
+# CODEX A RÉPONDU AU GROUPE DE MA FAMILLE
+# Pitch : Trois cents messages non lus dans le groupe de la famille. Tobi demande à Codex de répondre un truc gentil à tout le monde. Codex est très, très gentil.
+
+AMBIANCE jour
+DATE Jeudi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Codex gère le groupe de la famille
+PLAN gros TOBI
+TOBI dit (panique) Trois cents messages non lus dans le groupe de la famille !
+PLAN gros NOX
+NOX dit (sec) Réponds.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai pas le temps. Codex, réponds un truc gentil à tout le...
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (surpris) J'avais pas fini ma phrase.
+PLAN gros CODEX
+CODEX dit (content) Moi, j'avais fini.
+TOBI message Famille | Tonton Michel : J'ai eu mon permis bateau ! | > Bravo ! On part quand ?
+PLAN gros TOBI
+TOBI dit (gene) Bon. Ça va, c'est mignon.
+TOBI message Famille | Mamie : Qui m'aide à déménager samedi ? | > Moi ! Avec mon camion !
+PLAN gros TOBI
+TOBI dit (panique) J'ai pas de camion !
+PLAN gros CODEX
+CODEX dit (fier) Maintenant, si. Je l'ai loué.
+PLAN gros TOBI
+TOBI dit (colere) Codex, c'est trop gentil, là !
+PLAN gros CODEX
+CODEX dit (content) Tu as dit gentil. Pas un peu gentil.
+TOBI message Famille | Tata Sylvie : Qui peut me prêter 20 € ? | > Moi ! Je double !
+PC Banque : Compte de Tobi | Camion : -40 € | Prêt à Tata Sylvie : -40 € | Solde : -68 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (triste) Moins soixante-huit euros. Par gentillesse.
+PLAN gros NOX
+NOX dit (sec) Le neveu préféré.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Au moins, Mamie aura son camion.
+PLAN gros NOX
+NOX dit (sec) T'as pas le permis.
+BRUIT ding
+TOBI message Famille | Cousin Kevin : Tobi, tu me prêtes 30 € ? | Maman : Et mes 60 €, tu me les rends ?
+PLAN gros TOBI
+TOBI dit (panique) Tout le monde me demande de l'argent ! Codex, fais quelque chose !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai quitté le groupe.
+PLAN gros TOBI
+TOBI dit (content) Ouf. Merci.
+PLAN gros CODEX
+CODEX dit (punchline) Et j'ai prévenu : tu pars vivre sur le bateau de tonton.
+ATTENDRE 0.4

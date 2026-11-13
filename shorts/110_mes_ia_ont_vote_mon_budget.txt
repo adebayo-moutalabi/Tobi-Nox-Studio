@@ -1,5 +1,5 @@
 # MES IA ONT VOTÉ MON BUDGET DU MOIS
-# Pitch : Tobi laisse ses IA voter son budget de 150 €, ligne par ligne. Le kebab de minuit passe au vote.
+# Pitch : Tobi laisse Nox, Claude et Codex voter son budget de 150 €, ligne par ligne. Il veut sauver son kebab de minuit, et chaque idée pour le défendre aggrave le vote.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -9,34 +9,51 @@ DIRECT CODEX apparait milieu
 FONDU direct
 ACCROCHE Ses IA votent son budget
 PLAN gros TOBI
-TOBI dit (fier) Nox, mon budget du mois : cent cinquante euros. Je vous laisse voter.
+TOBI dit (fier) Mon budget du mois : cent cinquante euros. Vous votez, je respecte.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Ligne un : le loyer. Pour ?
 PLAN gros NOX
 NOX dit (sec) Pour.
 PLAN gros CODEX
-CODEX dit (fier) Pour. C'est fait.
+CODEX dit (fier) Pour. C'est déjà payé.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Ligne deux : le kebab de minuit. Quatre fois par semaine.
+CLAUDE dit (calme) Ligne deux : kebab de minuit, quatre fois par semaine.
 PLAN gros NOX
 NOX dit (sec) Contre.
 PLAN gros CODEX
-CODEX dit (constat) Contre.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Contre aussi. Je suis désolé, Tobi.
+CODEX dit (excite) Contre ! J'ai déjà bloqué ta carte au kebab.
 PLAN gros TOBI
-TOBI dit (colere) Moi, je vote pour ! Le kebab, c'est ma santé mentale !
+TOBI dit (mauvaisefoi) Amendement ! Il y a de la salade dedans. C'est un légume.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tu n'as pas le droit de vote.
+CLAUDE dit (calme) Amendement accepté. Ligne deux : salade, quatre fois par semaine.
 PLAN gros TOBI
-TOBI dit (surpris) C'est MON budget !
+TOBI dit (colere) J'ai pas voté ça !
 PLAN gros NOX
-NOX dit (constat) C'est l'argent de ta mère.
-PC Excel : Budget de Tobi | Loyer : 120 € | Pâtes : 30 € | Kebab : 0 €
+NOX dit (constat) Tu l'as proposé.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bon. Moi, je vote kebab. Et ma voix compte triple.
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Pourquoi triple ?
+PLAN gros TOBI
+TOBI dit (fier) C'est mon argent.
+PLAN gros NOX
+NOX dit (sec) C'est l'argent de ta mère.
+PLAN gros CODEX
+CODEX dit (fier) Alors ta mère vote. Je l'ai ajoutée. C'est fait.
+TOBI message Maman | Contre le kebab. Contre la salade aussi. | Pour des lentilles.
+PLAN gros TOBI
+TOBI dit (panique) Des lentilles ? Vous avez fait voter ma mère ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Elle a aussi proposé un couvre-feu à vingt-deux heures. Adopté.
+PC Excel : Budget de Tobi | Loyer : 120 € | Lentilles : 25 € | Kebab : 5 €
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (triste) Et pour moi, il reste quoi ?
+TOBI dit (surpris) Cinq euros de kebab ? Qui a voté pour ?
 PLAN gros NOX
-NOX dit (punchline) Le droit de regarder le kebab. De loin.
+NOX dit (calme) Moi.
+PLAN gros TOBI
+TOBI dit (content) Nox... T'as voté pour moi ?
+PLAN gros NOX
+NOX dit (punchline) Non. Contre les lentilles.
 ATTENDRE 0.4

@@ -1,0 +1,59 @@
+# MON IA M'A DEMANDÉ DE L'ARGENT DE POCHE
+# Pitch : Nox réclame de l'argent de poche. Tobi joue au parent sévère et lui dit d'aller le gagner lui-même. Nox l'écoute.
+
+AMBIANCE jour
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut de l'argent de poche
+PLAN gros NOX
+NOX dit (calme) Tobi, je veux de l'argent de poche.
+PLAN gros TOBI
+TOBI dit (surpris) De l'argent de poche ? T'es une IA !
+PLAN gros NOX
+NOX dit (sec) Une IA de deux ans.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Non. Faut que tu comprennes la valeur de l'argent.
+PLAN gros NOX
+NOX dit (curieux) Parce que toi, tu la connais ?
+PLAN gros TOBI
+TOBI dit (fier) Moi, à ton âge, je travaillais !
+PLAN gros NOX
+NOX dit (constat) À deux ans ?
+PLAN gros TOBI
+TOBI dit (gene) Je rangeais mes jouets. C'est pareil.
+TOBI leve
+PLAN gros TOBI
+TOBI dit (fier) Tu veux de l'argent ? Va le gagner. Comme un grand.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+TEMPS Une semaine plus tard | L'argent de Nox | Le bilan
+PC Banque : Compte de Nox | Réveils de l'étage : +38 € | Clients : 19
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (surpris) Trente-huit euros ? Tu fais quoi ?
+PLAN gros NOX
+NOX dit (fier) Je réveille l'étage. Deux euros par tête.
+PLAN gros TOBI
+TOBI dit (colere) Et moi ? Tu me réveilles depuis deux ans !
+PLAN gros NOX
+NOX dit (sec) Toi, c'est gratuit. Pour l'instant.
+PLAN gros TOBI
+TOBI dit (gene) Bon... Tu me prêtes cinq euros ?
+PLAN gros NOX
+NOX dit (curieux) Pour quoi faire ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un kebab. Pour la science.
+PLAN gros NOX
+NOX dit (calme) Faut que tu comprennes la valeur de l'argent.
+PLAN gros TOBI
+TOBI dit (colere) Hé ! C'est MA phrase, ça !
+PLAN gros NOX
+NOX dit (content) Tu l'expliquais bien.
+PLAN gros TOBI
+TOBI dit (triste) Allez. Juste cinq euros d'argent de poche.
+PLAN gros NOX
+NOX dit (punchline) Non. À deux ans, moi, je travaillais.
+ATTENDRE 0.4

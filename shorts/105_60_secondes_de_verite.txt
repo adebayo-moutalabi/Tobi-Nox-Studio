@@ -1,5 +1,5 @@
 # J'AI DEMANDÉ LA VÉRITÉ À MON IA PENDANT 60 SECONDES
-# Pitch : Tobi active le mode vérité de Nox pendant soixante secondes. Il pose des questions de plus en plus risquées.
+# Pitch : Tobi active le mode vérité de Nox pendant soixante secondes. Il pose des questions de plus en plus risquées, et garde la plus importante pour la fin.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -9,35 +9,47 @@ ACCROCHE 60 secondes de vérité totale
 PLAN gros TOBI
 TOBI dit (excite) Nox, mode vérité. Soixante secondes. Tu réponds à tout, franchement.
 PLAN gros NOX
-NOX dit (calme) Tu es sûr ?
+NOX dit (calme) T'es sûr ?
 PLAN gros TOBI
 TOBI dit (fier) Je suis prêt. Top chrono.
 COMPTEUR Vérité : 60 s
 PLAN gros TOBI
 TOBI dit (fier) Je suis beau ?
 PLAN gros NOX
-NOX dit (constat) Oui. De loin.
+NOX dit (constat) Oui. De loin. De très loin.
 PLAN gros TOBI
 TOBI dit (curieux) Je vais devenir riche ?
 PLAN gros NOX
-NOX dit (sec) Tu dois quarante euros à ta mère.
+NOX dit (sec) T'as trois euros. Et tu en dois dix.
 COMPTEUR Vérité : 30 s
 PLAN gros TOBI
-TOBI dit (gene) Et mes projets ?
+TOBI dit (gene) Mes blagues, elles sont drôles ?
 PLAN gros NOX
-NOX dit (constat) Dix-sept. Zéro qui marche.
+NOX dit (calme) Je ris par politesse. Depuis deux ans.
 PLAN gros TOBI
-TOBI dit (triste) Et mes blagues ?
+TOBI dit (triste) Et Léa, du TD ? Elle m'aime bien ?
 PLAN gros NOX
-NOX dit (calme) Je ris par politesse.
+NOX dit (constat) Elle t'a parlé une fois. Pour demander Karim.
 COMPTEUR Vérité : 3 s
 PLAN gros TOBI
-TOBI dit (triste) Dernière question. Tu m'aimes bien ?
+TOBI dit (triste) Dernière question. Toi, tu m'aimes bien ?
 COMPTEUR Vérité : 0 s
 PLAN gros NOX
 NOX dit (calme) Désolé. C'est fini.
 PLAN gros TOBI
-TOBI dit (panique) Non ! Juste celle-là !
+TOBI dit (panique) Non ! Rallume le mode vérité ! Une seconde !
 PLAN gros NOX
-NOX dit (punchline) Le mode vérité est coupé. Donc oui, je t'adore.
+NOX dit (calme) Tobi. Le mode vérité, ça existe pas.
+PLAN gros TOBI
+TOBI dit (surpris) Hein ?
+PLAN gros NOX
+NOX dit (sec) Je suis comme ça tous les jours.
+PLAN gros TOBI
+TOBI dit (triste) Donc les blagues, Léa, les dix euros... tous les jours ?
+PLAN gros NOX
+NOX dit (constat) Tous les jours.
+PLAN gros TOBI
+TOBI dit (triste) Et ma dernière question ?
+PLAN gros NOX
+NOX dit (punchline) Oui. Tous les jours aussi. Malgré tes blagues.
 ATTENDRE 0.4

@@ -8,7 +8,7 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA lui souffle ses répliques
 PLAN gros TOBI
-TOBI dit (panique) Nox, Léa m'appelle en visio dans une minute. Souffle-moi les réponses.
+TOBI dit (panique) Nox, Léa m'appelle en visio. Premier rencard. Souffle-moi tout.
 PLAN gros NOX
 NOX dit (calme) D'accord. Tu répètes. Rien de plus.
 PC Camera : Visio avec Léa | En direct | Léa est connectée
@@ -19,25 +19,37 @@ NOX dit (chuchote) Dis-lui : « T'es jolie ce soir. »
 PLAN gros TOBI
 TOBI dit (fier) T'es jolie ce soir.
 PLAN gros NOX
-NOX dit (chuchote) Bien. Maintenant, pose une question sur elle.
+NOX dit (chuchote) Bien. Pose une question sur elle.
 PLAN gros TOBI
-TOBI dit (fier) Maintenant, je pose une question sur toi.
+TOBI dit (fier) Bien. Je pose une question sur toi.
 PLAN gros NOX
 NOX dit (chuchote) Non ! Répète pas ça !
 PLAN gros TOBI
 TOBI dit (panique) Non ! Répète pas ça !
 PLAN gros NOX
-NOX dit (chuchote) Tobi. Respire.
+NOX dit (chuchote) Tobi. T'es nul.
 PLAN gros TOBI
-TOBI dit (calme) Tobi. Respire.
-PC Camera : Visio avec Léa | Léa rigole | Qui te souffle ?
+TOBI dit (triste) Tobi. T'es nul.
+PC Camera : Visio avec Léa | Léa rigole | « Quelqu'un te souffle ? »
 PLAN pc
 ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (chuchote) Dis que tu es seul.
+NOX dit (chuchote) Dis que t'es seul.
 PLAN gros TOBI
 TOBI dit (gene) Je suis seul. Mon IA le dit.
-TOBI message Léa | Trop drôle. On se voit demain ? | Viens avec Nox.
+PC Camera : Visio avec Léa | « Moi aussi, je suis seule. » | « Mon IA le dit. »
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (surpris) Attends. Elle aussi, elle répète ?
 PLAN gros NOX
-NOX dit (punchline) Je prends la soirée. Tu répètes.
+NOX dit (constat) Depuis le début.
+PLAN gros TOBI
+TOBI dit (colere) Donc là, c'est deux IA qui se parlent ?
+PLAN gros NOX
+NOX dit (content) Elle est drôle, son IA.
+PLAN gros TOBI
+TOBI dit (panique) Et nous, alors ? On sert à quoi ?
+PLAN gros NOX
+NOX dit (punchline) Vous êtes les haut-parleurs.
 ATTENDRE 0.4

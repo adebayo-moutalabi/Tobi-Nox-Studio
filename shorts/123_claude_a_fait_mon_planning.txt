@@ -1,5 +1,5 @@
 # CLAUDE M'A FAIT UN PLANNING DE RÉVISION RÉALISTE
-# Pitch : Tobi demande un planning de révision à Claude. Claude prévoit même les pauses où Tobi ne fera rien.
+# Pitch : Partiel jeudi. Tobi demande un vrai planning de révision à Claude. Claude en fait un réaliste, à la minute près, parce qu'il connaît très bien Tobi.
 
 AMBIANCE jour
 DATE Mardi
@@ -10,10 +10,14 @@ DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Un planning qui prévoit sa flemme
 PLAN gros TOBI
-TOBI dit (fier) Claude, fais-moi un planning de révision. Un vrai. Sérieux.
+TOBI dit (fier) Claude, partiel jeudi. Fais-moi un planning de révision. Un vrai.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Un planning réaliste, alors.
-PC Agenda : Mardi de Tobi | 14 h : réviser | 14 h 05 : ne rien faire (prévu) | 18 h : culpabiliser
+CLAUDE dit (calme) Un vrai, ou un que tu vas suivre ?
+PLAN gros TOBI
+TOBI dit (fier) Les deux !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Alors voilà ton après-midi.
+PC Agenda : Mardi de Tobi | 14 h : réviser | 14 h 05 : refaire le planning en couleur | 16 h : une vidéo, puis quarante | 17 h 59 : culpabiliser
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
@@ -23,20 +27,27 @@ CLAUDE dit (calme) J'ai regardé tes trois derniers mois.
 PLAN gros NOX
 NOX dit (sec) Il a été généreux.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Je peux faire mieux que ça !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Alors je t'ajoute cinq minutes. Juste pour voir.
-TEMPS Quatre heures plus tard | Fin de l'après-midi | Bilan
-PLAN gros CLAUDE
-CLAUDE dit (curieux) Alors, ces dix minutes ?
-PLAN gros TOBI
-TOBI dit (gene) J'ai fait... la partie « ne rien faire ».
+TOBI dit (mauvaisefoi) Je vais te prouver le contraire. Nox, mes surligneurs !
 PLAN gros NOX
-NOX dit (constat) Avec quatre heures d'avance.
+NOX dit (curieux) Pour surligner quoi ?
 PLAN gros TOBI
-TOBI dit (fier) Mais j'ai pas culpabilisé !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Ça, c'est un vrai progrès.
+TOBI dit (fier) Le planning. Faut qu'il soit beau.
 PLAN gros NOX
-NOX dit (punchline) Le seul point du planning qu'il a sauté.
+NOX dit (constat) Quatorze heures cinq. Pile.
+TEMPS Quatre heures plus tard | Fin d'après-midi | Le bilan
+HEURE 17:59
+PLAN gros CLAUDE
+CLAUDE dit (curieux) Alors, Tobi ?
+PLAN gros TOBI
+TOBI dit (fier) Ton planning s'est trompé ! J'ai rien fait de ce que t'avais prévu !
+PLAN gros NOX
+NOX dit (sec) Planning en couleur. Quarante vidéos.
+PLAN gros TOBI
+TOBI dit (gene) Oui, bon. Mais j'ai pas culpabilisé, moi !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il est dix-sept heures cinquante-neuf.
+PLAN gros TOBI
+TOBI dit (triste) Pourquoi je me sens nul, d'un coup ?
+PLAN gros CLAUDE
+CLAUDE dit (punchline) Bravo, Tobi. Planning suivi à cent pour cent.
 ATTENDRE 0.4

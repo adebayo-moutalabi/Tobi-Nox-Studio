@@ -1,5 +1,5 @@
 # GEMINI A LU TOUTES MES CONVERSATIONS
-# Pitch : Gemini a lu deux ans de messages de Tobi et en a fait un tableau. Le mot le plus utilisé fait mal.
+# Pitch : Gemini a lu deux ans de messages de Tobi et en a fait un tableau. Le mot le plus utilisé fait mal, et Gemini a partagé le tableau.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -8,11 +8,11 @@ DIRECT GEMINI apparait bureau
 FONDU direct
 ACCROCHE Gemini a lu tous ses messages
 PLAN gros GEMINI
-GEMINI dit (content) Tobi ! J'ai lu deux ans de tes messages. J'ai fait un tableau !
+GEMINI dit (excite) Tobi ! J'ai lu deux ans de tes messages. Et fait un tableau !
 PLAN gros TOBI
 TOBI dit (surpris) Tous mes messages ? Même avec Léa ?
 PLAN gros GEMINI
-GEMINI dit (content) Surtout avec Léa.
+GEMINI dit (content) Surtout avec Léa. Ils sont très longs.
 PC Stats : Ton mot préféré | « Demain » | 4 812
 PLAN pc
 ATTENDRE 1.8
@@ -21,17 +21,30 @@ NOX dit (sec) Quatre mille fois « demain ».
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'est un mot plein d'espoir.
 PLAN gros GEMINI
-GEMINI dit (content) Deuxième mot : « promis ».
+GEMINI dit (fier) Fun fact : « demain, promis », mille fois. Ensemble.
 PLAN gros TOBI
-TOBI dit (gene) C'est un mot sincère.
-PLAN gros GEMINI
-GEMINI dit (fier) Fun fact : « demain, promis » apparaît mille fois. Ensemble.
+TOBI dit (gene) Ça prouve que je suis sincère.
 PLAN gros NOX
-NOX dit (constat) Ta mère l'a reçu neuf cents fois.
+NOX dit (constat) Mille fois sincère.
+PLAN gros GEMINI
+GEMINI dit (content) Mot le plus rare : « fait ». Trois fois.
+PLAN gros TOBI
+TOBI dit (colere) Bon, ça suffit. Supprime ce tableau.
+PLAN gros GEMINI
+GEMINI dit (content) Impossible, je l'ai partagé ! Fun fact : partager, c'est aimer.
+PLAN gros TOBI
+TOBI dit (panique) Partagé avec qui ?
+PLAN gros GEMINI
+GEMINI dit (fier) Tous tes contacts. Léa a déjà répondu.
+TOBI message Léa | J'ai vu le tableau. | Le resto « promis », c'est quand ?
+PLAN gros TOBI
+TOBI dit (panique) Tous mes contacts ? Gemini, même ma mère ?
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : elle l'a imprimé. En couleur.
 PLAN gros TOBI
 TOBI dit (illumine) Bon. Je change. À partir de maintenant, je fais tout aujourd'hui.
 PLAN gros GEMINI
-GEMINI dit (curieux) Tu commences quand ?
+GEMINI dit (curieux) Super ! Tu réponds à Léa quand ?
 PLAN gros TOBI
 TOBI dit (fier) Demain. Promis.
 PLAN gros NOX

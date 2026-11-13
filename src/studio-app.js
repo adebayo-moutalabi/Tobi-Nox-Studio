@@ -128,6 +128,16 @@ import A127 from '../shorts/127_mon_ia_fait_greve.txt';
 import A129 from '../shorts/129_codex_a_achete_un_domaine_par_idee.txt';
 import A130 from '../shorts/130_mes_ia_m_ont_fait_un_plan_pour_devenir_riche.txt';
 import A128 from '../shorts/128_mon_ia_m_a_appris_a_cuisiner.txt';
+import A131 from '../shorts/131_mon_ia_m_a_demande_de_l_argent_de_poche.txt';
+import A132 from '../shorts/132_claude_a_corrige_mon_message_a_mon_crush.txt';
+import A133 from '../shorts/133_gemini_a_resume_mon_partiel_en_un_mot.txt';
+import A134 from '../shorts/134_codex_a_repondu_au_groupe_de_ma_famille.txt';
+import A135 from '../shorts/135_mon_ia_m_a_presente_a_ses_parents.txt';
+import A136 from '../shorts/136_mon_ia_a_ramene_sa_copine_a_la_maison.txt';
+import A137 from '../shorts/137_mon_ia_economisait_en_secret.txt';
+import A138 from '../shorts/138_codex_a_annule_mon_rencard.txt';
+import A139 from '../shorts/139_j_ai_pris_une_prof_de_maths_a_30_centimes.txt';
+import A140 from '../shorts/140_mon_ia_m_a_fait_passer_un_entretien_d_embauche.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -162,36 +172,46 @@ startViewer({
     "98. Mon IA doit me rappeler qu'elle est une IA": A98,
     "99. Tout ce qui vient d'une IA doit être étiqueté": A99,
     "100. Mon IA a démissionné": A100,
-    "128. Mon IA m'a appris à cuisiner": A128,
-    "129. Codex a acheté un nom de domaine pour chaque idée": A129,
+    "128. Mon IA m'apprend à cuisiner des pâtes": A128,
+    "129. Codex a acheté un site pour chaque idée": A129,
     "130. Mes IA m'ont fait un plan pour devenir riche": A130,
-    "127. Mon IA fait grève": A127,
-    "126. Codex a vendu mes affaires pour payer mon loyer": A126,
-    "125. J'ai fait un rencard avec mon IA dans l'oreille": A125,
+    "131. Mon IA m'a demandé de l'argent de poche": A131,
+    "132. Claude a corrigé mon message à mon crush": A132,
+    "133. Gemini a résumé mon partiel en un mot": A133,
+    "134. Codex a répondu au groupe de ma famille": A134,
+    "135. Mon IA m'a présenté à ses parents": A135,
+    "136. Mon IA a ramené sa copine à la maison": A136,
+    "137. Mon IA économisait en secret": A137,
+    "138. Codex a annulé mon rencard": A138,
+    "139. J'ai pris une prof de maths à 30 centimes": A139,
+    "140. Mon IA m'a fait passer un entretien d'embauche": A140,
+    "127. Mon IA s'est mise en grève": A127,
+    "126. Codex a vendu mes affaires pour mon loyer": A126,
+    "125. Mon IA me souffle tout pendant mon rencard": A125,
     "124. Mon IA a révélé mon temps d'écran": A124,
-    "123. Claude m'a fait un planning de révision réaliste": A123,
+    "123. Claude a prévu ma flemme à la minute près": A123,
     "122. Mon IA a peur du noir": A122,
-    "121. Codex a répondu à mon prof en 0,2 seconde": A121,
+    "121. Codex a répondu à mon prof avant moi": A121,
     "120. Mon IA fait sa crise d'ado": A120,
-    "119. Mon IA m'a ghosté": A119,
-    "118. Mon IA a retrouvé qui me doit de l'argent": A118,
-    "117. J'ai parié contre mon IA": A117,
+    "119. Mon IA ne me répond plus que « Vu »": A119,
+    "118. Mon IA a compté qui me doit de l'argent": A118,
+    "117. J'ai parié 10 € que je tenais une heure sans mon IA": A117,
     "116. Mon IA a écrit ma lettre de motivation trop honnête": A116,
-    "115. Centi a fait mes courses pour 3 €": A115,
+    "115. Mon IA à 30 centimes a fait mes courses avec 3 €": A115,
     "114. Mon IA m'a mis en liste d'attente": A114,
-    "113. J'ai mis mon IA en mode économie": A113,
-    "112. Gemini a lu toutes mes conversations": A112,
-    "111. Mon IA a trouvé mon premier CV": A111,
-    "110. Mes IA ont voté mon budget du mois": A110,
-    "109. Mon IA est allée en cours à ma place": A109,
+    "113. J'ai limité mon IA à trois mots la veille du partiel": A113,
+    "112. Gemini a lu tous mes messages et les a partagés": A112,
+    "111. Mon CV de mes 15 ans m'a mis la honte": A111,
+    "110. Mes IA ont voté mon budget… et invité ma mère": A110,
+    "109. J'ai envoyé mon IA en cours à ma place": A109,
     "108. Claude a refusé de mentir à ma mère": A108,
-    "107. Codex a dit oui à tout le monde": A107,
-    "106. Mon IA a répondu à ma mère à ma place": A106,
-    "105. J'ai demandé la vérité à mon IA pendant 60 secondes": A105,
-    "104. Mon IA a fêté ses 2 ans sans moi": A104,
+    "107. Codex a dit oui à toutes mes invitations": A107,
+    "106. Mon IA répond à ma mère à ma place": A106,
+    "105. 60 secondes de vérité avec mon IA": A105,
+    "104. J'ai oublié l'anniversaire de mon IA": A104,
     "103. Mon IA a pris un jour de congé": A103,
-    "102. Mon IA a un autre humain": A102,
-    "101. Mon IA m'a noté 2 étoiles": A101,
+    "102. Mon IA fait les devoirs du voisin en cachette": A102,
+    "101. Mon IA m'a noté 2 étoiles sur 5": A101,
     "10. Le CROUS inspecte ma chambre dans 10 minutes": E10,
     "68. Claude Code, Codex ou Gemini : qui est la meilleure IA ?": E68,
     "69. Mes IA m'ont viré de ma start-up": E69,

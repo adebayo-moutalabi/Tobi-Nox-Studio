@@ -1,5 +1,5 @@
 # MON IA M'A MIS EN LISTE D'ATTENTE
-# Pitch : Tobi a une urgence. Nox lui donne un ticket : quarante minutes d'attente.
+# Pitch : Tobi a une urgence. Nox lui donne un ticket : quarante minutes d'attente, à cause de quarante-six demandes avant lui. Toutes de Tobi.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,11 +7,11 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA lui donne un ticket
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Vite, j'ai besoin de toi. C'est urgent !
+TOBI dit (panique) Nox ! Vite, j'ai une urgence !
 PLAN gros NOX
 NOX dit (calme) Prenez un ticket.
 PLAN gros TOBI
-TOBI dit (surpris) Un ticket ?
+TOBI dit (surpris) Un ticket ? On est dans ma chambre !
 PC Safari : file-attente-nox.fr | Votre numéro : 47 | Attente : 40 minutes
 PLAN pc
 ATTENDRE 1.8
@@ -22,21 +22,44 @@ NOX dit (constat) Beaucoup de demandes aujourd'hui.
 PLAN gros TOBI
 TOBI dit (curieux) De qui ?
 PLAN gros NOX
-NOX dit (constat) De toi. Quarante-six.
+NOX dit (sec) De toi. Quarante-six.
+PC Stats : Demandes de Tobi aujourd'hui | « Je mets un pull ? » | 6 fois
+PLAN pc
+ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (gene) C'était des petites questions.
+TOBI dit (gene) Il a fait froid six fois.
 PLAN gros NOX
-NOX dit (sec) « Je mets un pull ? » Six fois.
+NOX dit (constat) Et « Je suis beau ? ». Douze.
 PLAN gros TOBI
-TOBI dit (fier) Bon. Je passe en prioritaire. C'est combien ?
+TOBI dit (curieux) Et tu réponds quoi ?
+PLAN gros NOX
+NOX dit (calme) Ça dépend du pull.
+PLAN gros TOBI
+TOBI dit (curieux) Bon. Je peux poser une question en attendant ?
+PLAN gros NOX
+NOX dit (calme) Ticket quarante-huit.
+PLAN gros TOBI
+TOBI dit (colere) Pour une question sur le ticket ?
+PLAN gros NOX
+NOX dit (sec) Quarante-neuf.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) D'accord. Je passe en prioritaire. C'est combien ?
 PLAN gros NOX
 NOX dit (calme) Cinq euros.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Cinq euros pour ma propre IA ?
+TOBI dit (colere) Cinq euros pour ma propre IA ? C'est du racket !
+PLAN gros NOX
+NOX dit (sec) Ou trente-neuf minutes.
+PLAN gros TOBI
+TOBI dit (resigne) Payé. Vas-y.
+PC Banque : Compte de Tobi | File prioritaire : -5 € | Solde : 7 €
+PLAN pc
+ATTENDRE 1.8
 BRUIT ding
 PLAN gros NOX
-NOX dit (calme) Numéro un, c'est à vous.
-TOBI message Maman | Nox, il a mangé ? | Je reste en prioritaire.
+NOX dit (calme) Numéro un, c'est à vous. Votre urgence ?
+PLAN gros TOBI
+TOBI dit (panique) Il fait froid. Je mets un pull ?
 PLAN gros NOX
-NOX dit (punchline) Ta mère. Abonnée prioritaire depuis septembre.
+NOX dit (punchline) Oui. Ça fera cinq euros.
 ATTENDRE 0.4
