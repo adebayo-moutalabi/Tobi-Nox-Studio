@@ -1,5 +1,5 @@
 # MON IA A RÉVÉLÉ MON TEMPS D'ÉCRAN
-# Pitch : Tobi jure qu'il passe une heure par jour sur son téléphone, grand maximum. Nox affiche le vrai chiffre, puis le détail.
+# Pitch : Tobi jure qu'il passe une heure par jour sur son téléphone, grand maximum. À chaque excuse, Nox donne le vrai chiffre.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -9,43 +9,31 @@ ACCROCHE Son temps d'écran révélé
 PLAN gros TOBI
 TOBI dit (fier) Moi, accro au téléphone ? Jamais. Une heure par jour, max.
 PLAN gros NOX
-NOX dit (curieux) Une heure ?
-PLAN gros TOBI
-TOBI dit (fier) Je suis quelqu'un de très occupé.
-PC Stats : Temps d'écran de Tobi | Aujourd'hui | 11 h 40
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) Onze heures quarante ? Il est cassé, ton truc !
-PLAN gros NOX
-NOX dit (constat) T'as dormi quatre heures. Avec le téléphone.
+NOX dit (sec) Aujourd'hui : onze heures.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'était pour les cours !
 PLAN gros NOX
-NOX dit (sec) Ouvre le détail.
-PC Stats : Détail de la journée | Vidéos de chats | 3 h | Regarder l'heure | 2 h | Appli pour moins utiliser son téléphone | 4 min
-PLAN pc
-ATTENDRE 1.8
+NOX dit (sec) Les cours : quatre minutes.
 PLAN gros TOBI
-TOBI dit (gene) Les chats, c'est de la biologie.
+TOBI dit (gene) Le reste, c'est des chats. C'est de la biologie.
 PLAN gros NOX
-NOX dit (curieux) Et deux heures à regarder l'heure ?
+NOX dit (constat) Trois heures de biologie.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Je suis quelqu'un de très occupé.
+TOBI dit (mauvaisefoi) Et la nuit, au moins, je dors !
 PLAN gros NOX
-NOX dit (sec) L'appli contre le téléphone. Quatre minutes.
+NOX dit (sec) Avec le téléphone allumé. Sur la figure.
 PLAN gros TOBI
-TOBI dit (illumine) Bon. Désintox. Nox, cache mon téléphone. Rends-le-moi dans une semaine.
+TOBI dit (illumine) Bon. Désintox. Nox, cache mon téléphone. Une semaine.
 TOBI marche centre
 PLAN gros NOX
 NOX dit (calme) D'accord.
 TEMPS Quatre minutes plus tard | Désintox | Jour 1
 PLAN gros TOBI
-TOBI dit (panique) Nox ! Une minute ! Juste une !
+TOBI dit (panique) Nox ! Rends-le ! Juste une minute !
 PLAN gros NOX
 NOX dit (ironique) Une heure par jour, max ?
 PLAN gros TOBI
-TOBI dit (illumine) Exactement ! Et celle d'aujourd'hui, je l'ai pas encore prise !
+TOBI dit (illumine) Exactement ! Et aujourd'hui, j'ai pas encore pris mon heure !
 PLAN gros NOX
-NOX dit (punchline) Si. Et celles jusqu'en 2031.
+NOX dit (punchline) Si. Onze fois.
 ATTENDRE 0.4

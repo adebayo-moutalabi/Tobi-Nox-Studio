@@ -1,5 +1,5 @@
 # CHATGPT M'A MIS UNE PUB EN PLEINE RUPTURE
-# Pitch : Léa ne répond plus. Tobi demande conseil à la version gratuite de ChatGPT, avec ses publicités.
+# Pitch : Inès ne répond plus. Tobi demande conseil à la version gratuite de ChatGPT, avec ses publicités.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -8,10 +8,10 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Une pub en pleine rupture
 PLAN gros TOBI
-TOBI dit (triste) Nox, Léa m'a quitté. Et ChatGPT me vend des pizzas.
+TOBI dit (triste) Nox, Inès m'a quitté. Et ChatGPT me vend des pizzas.
 PLAN gros NOX
 NOX dit (curieux) Des pizzas ?
-PC Chat : ChatGPT | > Léa m'a quitté. Je fais quoi ? | Courage, Tobi. Le temps guérit tout. | Pub : Pizza Solo, -20 % ce soir
+PC Chat : ChatGPT | > Inès m'a quitté. Je fais quoi ? | Courage, Tobi. Le temps guérit tout. | Pub : Pizza Solo, -20 % ce soir
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -30,7 +30,7 @@ PLAN gros TOBI
 TOBI dit (fier) J'écris. Copier, coller, envoyé.
 PLAN gros NOX
 NOX dit (curieux) T'as relu ?
-TOBI message Léa | > Tu me manques. Sponsorisé : Pizza Solo, -20 % | C'est quoi ce message ?
+TOBI message Inès | > Tu me manques. Sponsorisé : Pizza Solo, -20 % | C'est quoi ce message ?
 PLAN gros TOBI
 TOBI dit (panique) Non ! J'ai copié la pub !
 PLAN gros NOX

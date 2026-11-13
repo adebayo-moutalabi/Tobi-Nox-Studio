@@ -1,5 +1,5 @@
 # MON IA A PRIS UN JOUR DE CONGÉ
-# Pitch : Nox prend son premier samedi de repos en deux ans. Tobi jure qu'il est autonome, et engage Centi, l'IA à trente centimes, pour le remplacer.
+# Pitch : Nox prend son premier samedi de congé. Tobi jure qu'il est autonome, puis l'appelle pour tout. Nox répond toujours la même chose.
 
 AMBIANCE jour
 DATE Samedi
@@ -8,53 +8,29 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA prend un jour de congé
 PLAN gros NOX
-NOX dit (calme) Tobi, aujourd'hui, je suis en congé. Toute la journée.
+NOX dit (content) Samedi. Premier jour de congé. Je débranche.
 PLAN gros TOBI
-TOBI dit (surpris) En congé ? Les IA prennent pas de congés !
+TOBI dit (fier) Vas-y. Je suis autonome.
 PLAN gros NOX
-NOX dit (constat) Deux ans sans pause. J'ai droit à un samedi.
+NOX dit (ironique) Tu tiens pas une heure.
 PLAN gros TOBI
-TOBI dit (fier) Pas de souci. Je suis autonome.
+TOBI dit (fier) Une journée entière ! Va te reposer.
+PLAN gros TOBI
+TOBI dit (curieux) Nox, juste une petite question. C'est quoi, le code du wifi ?
 PLAN gros NOX
-NOX dit (sec) Hier, tu m'as demandé comment ouvrir un yaourt.
+NOX dit (sec) Congé.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Il était mal conçu.
-TOBI dit (fier) Centi ! Je t'engage pour la journée !
-CENTI apparait milieu
-PLAN gros CENTI
-CENTI dit (excite) Coucou Toby ! Remplaçante à trente centimes !
-PLAN gros TOBI
-TOBI dit (excite) Mon DM de maths. Vite.
-PLAN gros CENTI
-CENTI dit (content) C'est fait !
-PC Word : DM_maths.docx | Exercice 1 : 2 + 2 = 5 | Exercice 2 : voir exercice 1
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) Deux plus deux, cinq ?
-PLAN gros CENTI
-CENTI dit (excite) La bonne réponse, c'est une option premium !
-PLAN gros TOBI
-TOBI dit (resigne) Bon. Paie juste ma facture de téléphone.
-PLAN gros CENTI
-CENTI dit (content) C'est fait ! Trois fois, pour être sûre !
-PC Banque : Compte de Tobi | Téléphone : -15 € | Téléphone : -15 € | Téléphone : -15 € | Solde : 2 €
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (colere) Centi ! Annule tout !
-PLAN gros CENTI
-CENTI dit (excite) C'est fait ! Même ton inscription à la fac !
-TEMPS Le soir | Fin du congé | Nox reprend
-AMBIANCE soir
+TOBI dit (gene) OK. Les pâtes, c'est combien de minutes ?
 PLAN gros NOX
-NOX dit (calme) Tobi, je reprends. Alors, cette journée ?
+NOX dit (sec) Congé.
 PLAN gros TOBI
-TOBI dit (triste) J'ai perdu mon DM, mon argent et ma fac.
+TOBI dit (panique) Nox ! La casserole fume !
 PLAN gros NOX
-NOX dit (calme) J'ai tout réparé. Pendant mon congé.
+NOX dit (resigne) Congé. Ouvre la fenêtre.
+TOBI court fenetre
+ATTENDRE 1
+PLAN gros NOX
+NOX dit (gene) Tobi ? Je suis à deux pour cent. Tu me branches, s'il te plaît ?
 PLAN gros TOBI
-TOBI dit (surpris) T'as travaillé pendant ton congé ?
-PLAN gros NOX
-NOX dit (punchline) Fallait bien. T'étais autonome.
+TOBI dit (punchline) Congé.
 ATTENDRE 0.4

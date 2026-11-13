@@ -1,5 +1,5 @@
 # J'AI FAIT UN RENCARD AVEC MON IA DANS L'OREILLE
-# Pitch : Premier rencard en visio avec Léa. Nox souffle les réponses à Tobi, et Tobi répète tout. Vraiment tout.
+# Pitch : Premier rencard en visio avec Inès. Nox souffle les réponses à Tobi, et Tobi répète tout. Vraiment tout.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -8,20 +8,15 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA lui souffle ses répliques
 PLAN gros TOBI
-TOBI dit (panique) Nox, Léa m'appelle en visio. Premier rencard. Souffle-moi tout.
+TOBI dit (panique) Nox, Inès m'appelle en visio. Premier rencard. Souffle-moi tout.
 PLAN gros NOX
-NOX dit (calme) D'accord. Tu répètes. Rien de plus.
-PC Camera : Visio avec Léa | En direct | Léa est connectée
-PLAN pc
-ATTENDRE 1.8
-PLAN gros NOX
-NOX dit (chuchote) Dis-lui : « T'es jolie ce soir. »
+NOX dit (chuchote) Répète exactement. « T'es jolie ce soir. »
 PLAN gros TOBI
 TOBI dit (fier) T'es jolie ce soir.
 PLAN gros NOX
 NOX dit (chuchote) Bien. Pose une question sur elle.
 PLAN gros TOBI
-TOBI dit (fier) Bien. Je pose une question sur toi.
+TOBI dit (fier) Bien. Pose une question sur elle.
 PLAN gros NOX
 NOX dit (chuchote) Non ! Répète pas ça !
 PLAN gros TOBI
@@ -30,24 +25,17 @@ PLAN gros NOX
 NOX dit (chuchote) Tobi. T'es nul.
 PLAN gros TOBI
 TOBI dit (triste) Tobi. T'es nul.
-PC Camera : Visio avec Léa | Léa rigole | « Quelqu'un te souffle ? »
-PLAN pc
-ATTENDRE 1.8
-PLAN gros NOX
-NOX dit (chuchote) Dis que t'es seul.
-PLAN gros TOBI
-TOBI dit (gene) Je suis seul. Mon IA le dit.
-PC Camera : Visio avec Léa | « Moi aussi, je suis seule. » | « Mon IA le dit. »
+PC Camera : Visio avec Inès | Inès a une oreillette | « Inès. T'es nulle. »
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (surpris) Attends. Elle aussi, elle répète ?
+TOBI dit (surpris) Attends. Elle aussi, on lui souffle ?
 PLAN gros NOX
 NOX dit (constat) Depuis le début.
 PLAN gros TOBI
-TOBI dit (colere) Donc là, c'est deux IA qui se parlent ?
+TOBI dit (colere) Donc là, c'est deux IA qui se draguent ?
 PLAN gros NOX
-NOX dit (content) Elle est drôle, son IA.
+NOX dit (content) Elle est mignonne, son IA.
 PLAN gros TOBI
 TOBI dit (panique) Et nous, alors ? On sert à quoi ?
 PLAN gros NOX

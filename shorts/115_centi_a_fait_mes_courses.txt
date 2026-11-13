@@ -10,45 +10,23 @@ ACCROCHE Ses courses de la semaine pour 3 €
 PLAN gros TOBI
 TOBI dit (fier) Centi, j'ai trois euros. Fais mes courses de la semaine.
 PLAN gros CENTI
-CENTI dit (excite) Avec plaisir, Toby ! Je trouve la meilleure promo !
-PLAN gros NOX
-NOX dit (sec) Toby. Avec un Y.
+CENTI dit (excite) C'est fait, Toby ! Douze paquets de sel en promo !
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elle coûte trente centimes. Elle a le droit.
+TOBI dit (surpris) Du sel ? Et je mange quoi ?
 PLAN gros CENTI
-CENTI dit (fier) C'est fait ! Commande validée !
-PC Safari : drive-promo.fr/panier | Sel fin x 12 | Total : 3,00 €
-PLAN pc
-ATTENDRE 1.8
+CENTI dit (content) Du sel ! Un paquet par repas !
 PLAN gros TOBI
-TOBI dit (surpris) Douze paquets de sel ?
+TOBI dit (colere) Annule ! Prends des pâtes !
 PLAN gros CENTI
-CENTI dit (content) Moins quatre-vingt-dix pour cent ! Une affaire !
+CENTI dit (excite) Annuler, c'est premium ! Alors j'ai pris du gros sel !
+PLAN gros NOX
+NOX dit (sec) Pour les pâtes que t'as pas.
 PLAN gros TOBI
-TOBI dit (panique) Mais je mange quoi, moi ?
+TOBI dit (panique) Centi, au moins un truc à boire !
 PLAN gros CENTI
-CENTI dit (excite) Du sel ! Un paquet par repas !
-PLAN gros NOX
-NOX dit (constat) Sel nature. Sel au sel. Et sel.
+CENTI dit (fier) Une bouteille d'eau ! Offerte !
 PLAN gros TOBI
-TOBI dit (colere) Centi, annule ! Prends des pâtes !
-PLAN gros CENTI
-CENTI dit (content) Annuler, c'est une option premium ! Alors j'ai doublé. Gratuit !
-PC Safari : drive-promo.fr/panier | Sel fin x 24 | Total : 3,00 €
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (content) Enfin ! Merci, Centi !
 PLAN gros NOX
-NOX dit (constat) Vingt-quatre. T'as du sel jusqu'en juin.
-PLAN gros TOBI
-TOBI dit (illumine) Je revends le sel à l'étage. C'est un investissement.
-PLAN gros NOX
-NOX dit (sec) Tout l'étage a Centi.
-PLAN gros TOBI
-TOBI dit (triste) Centi, t'as au moins pris un truc à boire ?
-PLAN gros CENTI
-CENTI dit (fier) Oui ! Une bouteille d'eau, offerte !
-PLAN gros TOBI
-TOBI dit (content) Enfin un truc utile !
-PLAN gros NOX
-NOX dit (punchline) Eau salée.
+NOX dit (punchline) Eau de mer.
 ATTENDRE 0.4

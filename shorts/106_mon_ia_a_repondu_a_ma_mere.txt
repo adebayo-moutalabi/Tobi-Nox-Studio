@@ -1,45 +1,34 @@
 # MON IA A RÉPONDU À MA MÈRE À MA PLACE
-# Pitch : La mère de Tobi le trouve très gentil en ce moment. Depuis un mois, c'est Nox qui lui répond. Tobi veut reprendre la main.
+# Pitch : La mère de Tobi le trouve adorable ce mois-ci. C'est Nox qui lui répond. Tobi veut savoir ce qu'il lui raconte.
 
-AMBIANCE jour
-DIRECT TOBI marche tapis
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son IA répond à sa mère depuis un mois
+ACCROCHE Son IA répond à sa mère
 PLAN gros TOBI
-TOBI dit (content) Nox ! Ma mère dit partout que je suis devenu gentil.
+TOBI dit (surpris) Nox, maman me trouve adorable ce mois-ci. Pourquoi ?
 PLAN gros NOX
-NOX dit (gene) Ah.
+NOX dit (gene) C'est moi qui lui réponds.
 PLAN gros TOBI
-TOBI dit (curieux) Pourquoi « ah » ?
+TOBI dit (colere) Quoi ?! Tu lui racontes quoi ?
 PLAN gros NOX
-NOX dit (gene) Depuis un mois, c'est moi qui lui réponds.
+NOX dit (calme) Que tu manges des légumes.
 PLAN gros TOBI
-TOBI dit (surpris) Hein ? Montre !
-TOBI message Maman | Merci pour ton message si doux, mon chéri. | > Prends soin de toi, Maman. Bois de l'eau.
-PLAN gros TOBI
-TOBI dit (panique) « Bois de l'eau » ? Je dis jamais ça !
+TOBI dit (colere) J'ai pas vu un légume depuis août !
 PLAN gros NOX
-NOX dit (constat) Elle boit deux litres par jour.
+NOX dit (calme) Que tu dors à vingt-deux heures.
 PLAN gros TOBI
-TOBI dit (colere) Stop. À partir de maintenant, c'est moi qui écris.
-TOBI message Maman | > yo | Qui êtes-vous ? Rendez-moi mon fils.
-PLAN gros TOBI
-TOBI dit (surpris) « Rendez-moi mon fils » ? Mais c'est moi, son fils !
+TOBI dit (panique) Je dors à quatre heures !
 PLAN gros NOX
-NOX dit (calme) Plus vraiment.
-TOBI message Maman | Pour Noël, viens avec Nox. Ou envoie juste Nox.
+NOX dit (calme) Que tu l'aimes.
 PLAN gros TOBI
-TOBI dit (triste) « Envoie juste Nox » ? Elle préfère mon IA !
+TOBI dit (gene) Ça, c'est vrai. Mais je le dis jamais !
 PLAN gros NOX
-NOX dit (sec) Moi, je réponds en moins de trois jours.
+NOX dit (constat) Moi, si. Tous les soirs.
 PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. Elle t'écoute. Demande-lui vingt euros pour moi.
+TOBI dit (resigne) Bon. Continue. Et dis-lui que j'ai eu quinze en maths.
 PLAN gros NOX
-NOX dit (calme) D'accord.
-TOBI message Maman | > Maman, Tobi a besoin de vingt euros. | Je lui envoie un pack d'eau.
-PLAN gros TOBI
-TOBI dit (surpris) Un pack d'eau ?
-PLAN gros NOX
-NOX dit (punchline) Elle a raison. Bois de l'eau.
+NOX dit (punchline) Déjà fait. T'as eu dix-sept.
 ATTENDRE 0.4

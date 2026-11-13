@@ -1,5 +1,5 @@
 # MON IA M'A APPRIS À CUISINER
-# Pitch : Tobi jure qu'il arrête les kebabs. Ce soir, il cuisine des pâtes, et Nox le guide étape par étape.
+# Pitch : Tobi jure qu'il arrête les kebabs et cuisine des pâtes. Nox le guide étape par étape, mais il manque toujours quelque chose.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
@@ -9,49 +9,29 @@ ACCROCHE Fini les kebabs. Il cuisine.
 PLAN gros TOBI
 TOBI dit (fier) Nox, fini les kebabs. Ce soir, je cuisine. Des pâtes.
 PLAN gros NOX
-NOX dit (curieux) T'as déjà cuisiné ?
+NOX dit (calme) Étape un. De l'eau dans une casserole.
 PLAN gros TOBI
-TOBI dit (fier) J'ai regardé des vidéos. Trois heures.
+TOBI dit (gene) J'ai pas de casserole. J'ai un bol.
 PLAN gros NOX
-NOX dit (calme) Étape un. De l'eau dans la casserole.
+NOX dit (resigne) D'accord. Étape deux. Fais bouillir sur la plaque.
 PLAN gros TOBI
-TOBI dit (curieux) Froide ou chaude ?
+TOBI dit (gene) J'ai pas de plaque. J'ai le micro-ondes.
 PLAN gros NOX
-NOX dit (sec) Juste de l'eau.
-PLAN gros TOBI
-TOBI dit (fier) Fait. Étape deux ?
-PLAN gros NOX
-NOX dit (calme) Allume la plaque.
-PLAN gros TOBI
-TOBI dit (gene) Laquelle ?
-PLAN gros NOX
-NOX dit (constat) T'en as qu'une.
-TEMPS Dix minutes plus tard | L'eau bout | Presque un chef
-PLAN gros TOBI
-TOBI dit (excite) Ça bout ! Je suis un chef ! Étape trois ?
-PLAN gros NOX
-NOX dit (calme) Mets les pâtes.
+NOX dit (sec) Bon. Étape trois. Mets les pâtes.
 PLAN gros TOBI
 TOBI dit (surpris) Quelles pâtes ?
 PLAN gros NOX
-NOX dit (sec) Celles que t'as achetées.
-PC Banque : Compte de Tobi | Casserole de chef : -39 € | Pâtes : 0 € | Solde : 2 €
-PLAN pc
-ATTENDRE 1.8
+NOX dit (constat) T'as acheté quoi, alors ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est un investissement.
-PLAN gros NOX
-NOX dit (sec) Dans de l'eau chaude.
-PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. Je cuisine avec ce que j'ai.
+TOBI dit (mauvaisefoi) Le bol. C'est un investissement.
 TOBI frigo
 PLAN gros TOBI
-TOBI dit (fier) Il me reste un kebab d'hier. Dans l'eau !
+TOBI dit (illumine) Attends ! Un kebab d'hier ! Dans le bol, au micro-ondes !
 PLAN gros NOX
 NOX dit (sec) Tobi. Non.
-TEMPS Cinq minutes plus tard | Premier plat | Fait maison
+BRUIT ding
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Je viens d'inventer un plat !
+TOBI dit (excite) Nox ! J'ai cuisiné mon premier plat !
 PLAN gros NOX
-NOX dit (punchline) Fini les kebabs. Vive le kebab mouillé.
+NOX dit (punchline) Bravo, chef. Un kebab.
 ATTENDRE 0.4

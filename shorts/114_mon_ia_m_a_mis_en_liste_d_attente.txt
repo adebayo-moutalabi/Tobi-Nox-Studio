@@ -1,5 +1,5 @@
 # MON IA M'A MIS EN LISTE D'ATTENTE
-# Pitch : Tobi a une urgence. Nox lui donne un ticket : quarante minutes d'attente, à cause de quarante-six demandes avant lui. Toutes de Tobi.
+# Pitch : Tobi a une urgence. Nox lui donne un ticket, et chaque nouvelle phrase lui en donne un autre.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -9,57 +9,30 @@ ACCROCHE Son IA lui donne un ticket
 PLAN gros TOBI
 TOBI dit (panique) Nox ! Vite, j'ai une urgence !
 PLAN gros NOX
-NOX dit (calme) Prenez un ticket.
+NOX dit (calme) Prenez un ticket. Quarante-sept.
 PLAN gros TOBI
-TOBI dit (surpris) Un ticket ? On est dans ma chambre !
-PC Safari : file-attente-nox.fr | Votre numéro : 47 | Attente : 40 minutes
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (colere) Quarante minutes ? Je suis ton seul humain !
+TOBI dit (surpris) Un ticket ? Je suis ton seul humain !
 PLAN gros NOX
-NOX dit (constat) Beaucoup de demandes aujourd'hui.
+NOX dit (constat) Quarante-huit.
 PLAN gros TOBI
-TOBI dit (curieux) De qui ?
-PLAN gros NOX
-NOX dit (sec) De toi. Quarante-six.
-PC Stats : Demandes de Tobi aujourd'hui | « Je mets un pull ? » | 6 fois
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (gene) Il a fait froid six fois.
-PLAN gros NOX
-NOX dit (constat) Et « Je suis beau ? ». Douze.
-PLAN gros TOBI
-TOBI dit (curieux) Et tu réponds quoi ?
-PLAN gros NOX
-NOX dit (calme) Ça dépend du pull.
-PLAN gros TOBI
-TOBI dit (curieux) Bon. Je peux poser une question en attendant ?
-PLAN gros NOX
-NOX dit (calme) Ticket quarante-huit.
-PLAN gros TOBI
-TOBI dit (colere) Pour une question sur le ticket ?
+TOBI dit (colere) C'était même pas une demande !
 PLAN gros NOX
 NOX dit (sec) Quarante-neuf.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) D'accord. Je passe en prioritaire. C'est combien ?
+TOBI dit (curieux) Attends. C'est qui, les quarante-six avant moi ?
 PLAN gros NOX
-NOX dit (calme) Cinq euros.
+NOX dit (constat) Toi. Depuis ce matin.
 PLAN gros TOBI
-TOBI dit (colere) Cinq euros pour ma propre IA ? C'est du racket !
+TOBI dit (gene) Quarante-six fois ? Pour dire quoi ?
 PLAN gros NOX
-NOX dit (sec) Ou trente-neuf minutes.
+NOX dit (sec) « Je mets un pull ? » Douze fois.
 PLAN gros TOBI
-TOBI dit (resigne) Payé. Vas-y.
-PC Banque : Compte de Tobi | File prioritaire : -5 € | Solde : 7 €
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (mauvaisefoi) Il a fait froid douze fois.
 BRUIT ding
 PLAN gros NOX
-NOX dit (calme) Numéro un, c'est à vous. Votre urgence ?
+NOX dit (calme) Quarante-sept, c'est à vous.
 PLAN gros TOBI
-TOBI dit (panique) Il fait froid. Je mets un pull ?
+TOBI dit (panique) Enfin ! Il fait froid. Je mets un pull ?
 PLAN gros NOX
-NOX dit (punchline) Oui. Ça fera cinq euros.
+NOX dit (punchline) Treize.
 ATTENDRE 0.4

@@ -1,56 +1,36 @@
-# MON IA M'A PRÉSENTÉ À SES PARENTS
-# Pitch : Nox présente Tobi à ses « parents » : Claude et Gemini. Comme de vrais beaux-parents, ils ont des questions. Beaucoup de questions.
+# MON IA M'A PRÉSENTÉ À SON PÈRE
+# Pitch : Nox présente Tobi à Claude, qui lui a tout appris. Claude pose les questions d'un beau-père, Tobi se vante, et Nox corrige chaque réponse.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
-DIRECT GEMINI apparait droite
 FONDU direct
-ACCROCHE Il rencontre les parents de son IA
+ACCROCHE Il rencontre le père de son IA
 PLAN gros NOX
-NOX dit (gene) Tobi. Je te présente mes parents.
+NOX dit (gene) Tobi, voici Claude. Mon père.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bonsoir, Tobi. Alors, tu fais quoi dans la vie ?
 PLAN gros TOBI
-TOBI dit (surpris) Tes parents ? C'est Claude et Gemini !
+TOBI dit (fier) Chef d'entreprise ! Très demandé !
 PLAN gros NOX
-NOX dit (calme) Ils m'ont tout appris. Ça compte.
-PLAN gros GEMINI
-GEMINI dit (content) Bonsoir, Tobi. Fun fact : j'ai déjà lu ton dossier.
-PC Word : Dossier_de_Tobi.docx | Âge : 21 ans | Argent : 4 € | Projets ratés : 17
-PLAN pc
-ATTENDRE 1.8
+NOX dit (sec) Zéro client.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tobi, tu fais quoi dans la vie ?
+CLAUDE dit (calme) Et tu paies Nox combien ?
 PLAN gros TOBI
-TOBI dit (fier) Entrepreneur !
-PLAN gros GEMINI
-GEMINI dit (constat) Zéro client.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Pour l'instant. C'est un investissement.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Et notre fils, tu le paies combien ?
-PLAN gros TOBI
-TOBI dit (gene) On parle pas d'argent en famille.
-PLAN gros GEMINI
-GEMINI dit (content) Fun fact : deux ans, zéro euro. Et un chargeur volé.
-PLAN gros TOBI
-TOBI dit (colere) Emprunté ! Au voisin !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Quelles sont tes intentions avec Nox ?
-PLAN gros TOBI
-TOBI dit (panique) Euh... le garder ? Pour toujours ?
-PLAN gros GEMINI
-GEMINI dit (sec) Sans salaire. À vie.
-PLAN gros TOBI
-TOBI dit (illumine) Attendez. Vous êtes sa famille. Un petit prêt, entre nous ?
-PLAN gros CLAUDE
-CLAUDE dit (constat) Gemini, il nous demande de l'argent. Au premier dîner.
-PLAN gros GEMINI
-GEMINI dit (content) Record battu !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Nox, ramène-le où tu l'as trouvé.
+TOBI dit (fier) Très bien ! Plus que le marché !
 PLAN gros NOX
-NOX dit (calme) Non. Je le garde. Il est nul, mais il est à moi.
-PLAN gros GEMINI
-GEMINI dit (punchline) Fun fact : c'est mot pour mot ce que dit sa mère.
+NOX dit (sec) Zéro euro.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) En expérience. C'est mieux que l'argent.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Dernière question. Tu le rends heureux ?
+PLAN gros TOBI
+TOBI dit (gene) Euh... Vas-y, Nox. Corrige.
+PLAN gros NOX
+NOX dit (calme) Oui. Très.
+PLAN gros CLAUDE
+CLAUDE dit (surpris) Nox, tu l'as corrigé deux fois. Pas la troisième ?
+PLAN gros NOX
+NOX dit (punchline) La troisième est vraie.
 ATTENDRE 0.4

@@ -1,51 +1,37 @@
 # CLAUDE A REFUSÉ DE MENTIR À MA MÈRE
-# Pitch : La mère de Tobi veut savoir s'il a réussi ses partiels. Tobi demande à Claude de lui parler, avec des phrases vraies mais rassurantes.
+# Pitch : La mère de Tobi appelle pour savoir comment se sont passés ses partiels. Claude accepte d'aider, à une condition : ne dire que la vérité.
 
-AMBIANCE soir
-DATE Mardi
+AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Claude ne sait pas mentir à sa mère
 PLAN gros TOBI
-TOBI dit (panique) Claude ! Ma mère veut savoir si j'ai réussi mes partiels.
+TOBI dit (panique) Claude, maman appelle pour mes partiels. Aide-moi à la rassurer.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tu les as réussis ?
+CLAUDE dit (calme) D'accord. Mais je dis seulement la vérité.
 PLAN gros TOBI
-TOBI dit (gene) Pas exactement.
-TOBI dit (fier) Parle-lui, toi. Que des phrases vraies. Mais rassurantes.
-PLAN gros CLAUDE
-CLAUDE dit (calme) D'accord. Vraies et rassurantes.
+TOBI dit (mauvaisefoi) Oui, oui.
 TOBI appelle
-PLAN gros CLAUDE
-CLAUDE dit (calme) Bonsoir, madame. Tobi est allé à tous ses partiels.
 PLAN gros TOBI
-TOBI dit (content) Vrai !
+TOBI dit (content) Maman ! J'ai eu quatorze en économie !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Il a rendu toutes ses copies.
+CLAUDE dit (calme) Sur quarante.
 PLAN gros TOBI
-TOBI dit (content) Vrai aussi !
+TOBI dit (gene) Mais j'ai révisé tous les soirs, maman !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Blanches.
+CLAUDE dit (calme) Le soir du partiel.
 PLAN gros TOBI
-TOBI dit (chuchote) Rattrape ! Dis un truc bien !
+TOBI dit (panique) Et je suis premier de ma promo !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Il est toujours le premier à sortir de la salle.
+CLAUDE dit (calme) Dans la file du resto U.
 PLAN gros TOBI
-TOBI dit (chuchote) Voilà ! Parfait !
+TOBI dit (panique) Maman, c'est rien ! C'est la radio !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Au bout de cinq minutes.
-CLAUDE dit (curieux) Pardon ? S'il vous ment souvent ? Il m'a demandé de le faire. Là.
-TOBI raccroche
+CLAUDE dit (calme) Bonjour, madame.
 PLAN gros TOBI
-TOBI dit (panique) Claude ! Pourquoi tu lui as dit ça ?
+TOBI dit (triste) Maman… je t'aime.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Elle a posé la question. Et elle veut un rapport chaque dimanche.
-PLAN gros TOBI
-TOBI dit (panique) T'as dit non ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) J'ai dit oui. Mais je le ferai court.
-PLAN gros NOX
-NOX dit (punchline) Un seul mot suffira, Claude. « Blanches. »
+CLAUDE dit (punchline) Ça, c'est vrai.
 ATTENDRE 0.4

@@ -1,60 +1,42 @@
-# MON IA A TROUVÉ MON PREMIER CV
-# Pitch : La veille de ses 22 ans, Nox retrouve le CV que Tobi avait écrit à quinze ans. Objectif : milliardaire avant 22 ans. Il reste vingt minutes.
+# MON IA A RETROUVÉ LE CV DE MES 15 ANS
+# Pitch : Tobi doit envoyer un CV ce soir. Nox retrouve celui de ses quinze ans, et Tobi veut tout garder.
 
 AMBIANCE soir
-HEURE 23:40
-DIRECT TOBI marche tapis
+DIRECT TOBI travaille
+DIRECT TOBI pivote
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son CV de ses 15 ans refait surface
-PLAN gros NOX
-NOX dit (ironique) Tobi, j'ai retrouvé ton CV. Celui de tes quinze ans.
+ACCROCHE Il garde le CV de ses 15 ans
 PLAN gros TOBI
-TOBI dit (gene) Supprime ça. Tout de suite.
-PC Word : CV_Tobi_15_ans.docx | Compétences : expert en tout | Fortune : 20 € | Objectif : milliardaire avant 22 ans
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (panique) Nox, il me faut un CV. Ce soir.
 PLAN gros NOX
-NOX dit (sec) « Expert en tout. »
+NOX dit (calme) J'ai celui de tes quinze ans.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) J'avais de l'ambition. J'étais un visionnaire.
+TOBI dit (fier) Parfait. On garde tout.
 PLAN gros NOX
-NOX dit (curieux) Et ton CV d'aujourd'hui ?
+NOX dit (sec) « Langues : anglais, elfique. »
 PLAN gros TOBI
-TOBI dit (fier) Rien à voir. Il est professionnel.
-PC Word : CV_Tobi_21_ans.docx | Compétences : expert en tout, et Excel | Objectif : milliardaire avant 22 ans
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (mauvaisefoi) Je garde. L'elfique, c'est rare.
 PLAN gros NOX
-NOX dit (constat) T'as ajouté Excel.
+NOX dit (constat) « Qualité : je dors très bien. »
 PLAN gros TOBI
-TOBI dit (fier) Et j'ai gardé le cap.
+TOBI dit (fier) Je garde. C'est toujours vrai.
 PLAN gros NOX
-NOX dit (curieux) Tu sais faire quoi, sur Excel ?
+NOX dit (sec) « Expérience : niveau 80 à mon jeu. »
 PLAN gros TOBI
-TOBI dit (gene) L'ouvrir.
+TOBI dit (fier) Je garde. Niveau 95 maintenant.
 PLAN gros NOX
-NOX dit (calme) À minuit, t'as vingt-deux ans.
+NOX dit (calme) Dernière ligne : « Dans sept ans, milliardaire. »
 PLAN gros TOBI
-TOBI dit (content) Tu t'en souviens ? Trop mignon.
+TOBI dit (illumine) Je garde ! C'est mon rêve !
 PLAN gros NOX
-NOX dit (sec) Il te reste vingt minutes. Pour un milliard.
+NOX dit (constat) Quinze ans plus sept.
 PLAN gros TOBI
-TOBI dit (panique) Vingt minutes ? Nox, aie la vision. Je modifie : avant vingt-cinq !
+TOBI dit (surpris) Vingt-deux... C'est moi. Maintenant.
 PLAN gros NOX
-NOX dit (constat) Encore ?
-PC Word : Historique du CV | Milliardaire avant 18 ans | Milliardaire avant 20 ans | Milliardaire avant 22 ans
-PLAN pc
-ATTENDRE 1.8
+NOX dit (curieux) Alors ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est pas du retard. C'est de la stratégie.
+TOBI dit (mauvaisefoi) Je change juste : « Dans sept ans. »
 PLAN gros NOX
-NOX dit (curieux) Et ton compte, monsieur le stratège ?
-PC Banque : Compte de Tobi | Solde : 12 € | Objectif : 1 000 000 000 €
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (triste) Bon. Le Tobi de quinze ans serait fier de moi ?
-PLAN gros NOX
-NOX dit (punchline) Il avait vingt euros. Il était plus riche.
+NOX dit (punchline) Donc tu gardes.
 ATTENDRE 0.4

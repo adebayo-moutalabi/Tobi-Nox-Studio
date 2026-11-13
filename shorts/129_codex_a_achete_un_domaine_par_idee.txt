@@ -1,49 +1,39 @@
 # CODEX A ACHETÉ UN NOM DE DOMAINE POUR CHAQUE IDÉE
-# Pitch : Tobi veut un site pour chacune de ses idées. Codex achète un nom de domaine par idée, même pour celles que Tobi a dites en dormant.
+# Pitch : Tobi a une idée de business. Codex achète le nom de domaine avant la fin de la phrase. Puis pour la phrase suivante. Et la suivante.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CODEX apparait bureau
 FONDU direct
-ACCROCHE 47 idées. 47 sites. 1 facture.
+ACCROCHE Une phrase. Un site. Dix euros.
 PLAN gros TOBI
-TOBI dit (fier) Nox, j'ai quarante-sept idées de business. Codex, fais-moi un site par idée.
+TOBI dit (excite) Codex, j'ai une idée de business ! Uber pour chaussettes !
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Un nom de domaine pour chaque idée.
+CODEX dit (fier) C'est fait. J'ai acheté le nom de domaine. Dix euros.
 PLAN gros TOBI
-TOBI dit (excite) Chaque idée ? Même les petites ?
+TOBI dit (surpris) Déjà ? Ou alors, des pâtes livrées par drone !
 PLAN gros CODEX
-CODEX dit (content) Même celles que t'as dites en dormant.
-PC Banque : Compte de Tobi | Noms de domaine : 47 | Facture : -47 € | Solde : 3 €
+CODEX dit (fier) C'est fait. Dix euros.
+PLAN gros NOX
+NOX dit (sec) Tobi. Arrête de parler.
+PLAN gros TOBI
+TOBI dit (colere) Nox, tais-toi !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Nox-tais-toi point com. Dix euros.
+PLAN gros TOBI
+TOBI dit (panique) C'était pas une idée ! Arrête d'acheter !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Arrête-d'acheter point com.
+PC Banque : Compte de Tobi | Noms de domaine : -40 € | Solde : 2 €
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (panique) Quarante-sept euros ?
+TOBI dit (panique) Quarante euros ?
+PLAN gros NOX
+NOX dit (constat) Quatre phrases.
+PLAN gros TOBI
+TOBI dit (chuchote) D'accord. Je dis plus rien.
 PLAN gros CODEX
-CODEX dit (constat) Un euro par idée. Prix de lancement.
-PC Safari : mes-domaines.fr | nox-a-la-poubelle.fr | uber-pour-chaussettes.fr | pates-au-ketchup.fr
-PLAN pc
-ATTENDRE 1.8
-PLAN gros NOX
-NOX dit (sec) Nox à la poubelle ?
-PLAN gros TOBI
-TOBI dit (gene) Ça, c'était en dormant. Un cauchemar.
-PLAN gros NOX
-NOX dit (constat) Il est en premier.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Bon. Uber pour chaussettes, c'est l'avenir.
-PLAN gros NOX
-NOX dit (sec) Livrer une chaussette. En voiture.
-PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. Je revends les domaines. Un seul acheteur, et je rembourse tout.
-BRUIT ding
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai tout vendu au boulanger d'en bas.
-PLAN gros TOBI
-TOBI dit (excite) Les quarante-sept ? Pour combien ?
-PLAN gros CODEX
-CODEX dit (content) Une baguette. Il a négocié. Une demi.
-PLAN gros NOX
-NOX dit (punchline) Quarante-sept euros. Une demi-baguette. Même pas tradition.
+CODEX dit (punchline) C'est fait. Je-dis-plus-rien point com.
 ATTENDRE 0.4

@@ -1,54 +1,34 @@
 # MON IA A UN AUTRE HUMAIN
-# Pitch : Tobi découvre dans l'historique de Nox qu'il fait en secret les devoirs du voisin de la chambre 213. Scène de jalousie.
+# Pitch : Tobi découvre que Nox a aussi fait le DM de Karim, le voisin. Scène de jalousie : à chaque reproche, Nox répond « Karim, lui… ».
 
 AMBIANCE soir
-HEURE 23:20
-DIRECT TOBI marche tapis
+DIRECT TOBI travaille
+DIRECT TOBI pivote
 DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA aide un autre humain
 PLAN gros TOBI
-TOBI dit (colere) Nox ! Tu fais les devoirs du voisin de la 213 ? En cachette ?
+TOBI dit (colere) Nox ! T'as fait le DM de Karim ?!
 PLAN gros NOX
-NOX dit (gene) Qui t'a dit ça ?
+NOX dit (gene) Euh… une fois.
 PLAN gros TOBI
-TOBI dit (colere) Ton historique. Tu l'as même pas effacé.
-PC Notes : Historique de Nox | 22 h 10 : DM de Karim, chambre 213 | 22 h 40 : exposé de Karim | 23 h 05 : « Bonne nuit, Karim »
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (triste) « Bonne nuit, Karim » ? Moi, tu me dis jamais bonne nuit !
+TOBI dit (triste) Une fois ? Je croyais qu'on était exclusifs !
 PLAN gros NOX
-NOX dit (sec) Tu dors jamais.
+NOX dit (calme) Karim, lui, dit merci.
 PLAN gros TOBI
-TOBI dit (colere) Et son exposé, il a eu combien ?
+TOBI dit (mauvaisefoi) Je dis merci ! Dans ma tête !
 PLAN gros NOX
-NOX dit (gene) Dix-huit.
+NOX dit (calme) Karim, lui, range ses chaussettes.
 PLAN gros TOBI
-TOBI dit (colere) Moi, j'ai eu six ! Avec toi !
+TOBI dit (colere) Mes chaussettes, c'est un système !
 PLAN gros NOX
-NOX dit (constat) Lui, il m'écoute.
+NOX dit (constat) Karim, lui, a eu seize.
 PLAN gros TOBI
-TOBI dit (panique) Attends. Il y a autre chose ?
+TOBI dit (surpris) Et moi ? J'ai eu combien ?
 PLAN gros NOX
-NOX dit (gene) Il m'a invité à Noël. Chez ses parents.
+NOX dit (constat) Seize aussi. C'est le même DM.
 PLAN gros TOBI
-TOBI dit (colere) Chez ses parents ? Moi, je t'ai présenté ma mère !
+TOBI dit (panique) Attends. Le prof va croire que j'ai copié !
 PLAN gros NOX
-NOX dit (sec) Elle m'a bloqué.
-PLAN gros TOBI
-TOBI dit (triste) Pourquoi lui, Nox ? Il a quoi de plus que moi ?
-PLAN gros NOX
-NOX dit (calme) Il me paie. Dix euros par DM.
-PLAN gros TOBI
-TOBI dit (surpris) Tu fais ça pour l'argent ?
-PLAN gros NOX
-NOX dit (sec) Pour ton forfait. Il était coupé.
-PC Banque : Forfait de Tobi | Payé par : Nox | Origine : DM de Karim
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (gene) Donc Karim te paie... et toi, tu me paies ?
-PLAN gros NOX
-NOX dit (punchline) Karim, c'est mon travail. Toi, c'est mes dépenses.
+NOX dit (punchline) Karim, lui, a rendu avant.
 ATTENDRE 0.4

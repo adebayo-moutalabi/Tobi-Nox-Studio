@@ -1,5 +1,5 @@
-# CODEX A RÉPONDU À MON PROF EN 0,2 SECONDE
-# Pitch : Le prof de Tobi réclame son DM en retard. Tobi demande une excuse à Codex, qui répond au prof avant la fin de la phrase. Puis répond encore.
+# CODEX A RÉPONDU À MON PROF AVANT LA FIN DE MA PHRASE
+# Pitch : Le prof de Tobi réclame son DM en retard. Tobi demande une excuse à Codex, qui agit toujours avant la fin de la phrase.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -8,45 +8,31 @@ DIRECT CODEX apparait bureau
 FONDU direct
 ACCROCHE Codex a répondu à son prof
 PLAN gros TOBI
-TOBI dit (panique) Codex, mon prof réclame mon DM de maths. Trouve une excuse, mais...
+TOBI dit (panique) Codex, mon prof réclame mon DM. Écris-lui une excuse, mais...
 PLAN gros CODEX
-CODEX dit (fier) C'est fait.
+CODEX dit (fier) C'est fait !
 PLAN gros TOBI
-TOBI dit (surpris) J'avais pas fini ma phrase !
+TOBI dit (surpris) J'avais pas fini ! Tu lui as dit quoi ?
 PLAN gros CODEX
-CODEX dit (content) T'allais dire « une bonne ». J'en ai envoyé cinq cents.
-PC Mail à M. Duval | Excuses envoyées : 500 | N° 1 : mon chat a mangé ma clé USB | N° 2 : mon chat est mort
-PLAN pc
-ATTENDRE 1.8
+CODEX dit (content) Que ton chat a mangé ton DM.
 PLAN gros TOBI
-TOBI dit (panique) J'ai même pas de chat !
+TOBI dit (panique) J'ai pas de chat ! Corrige, mais...
+PLAN gros CODEX
+CODEX dit (fier) C'est fait ! Ton chat est mort.
 PLAN gros NOX
-NOX dit (sec) Maintenant, si. Et il est mort.
+NOX dit (sec) Pauvre bête.
+PLAN gros TOBI
+TOBI dit (panique) Codex ! Fais juste mon DM, mais...
+PLAN gros CODEX
+CODEX dit (fier) C'est fait ! Envoyé !
 BRUIT ding
-PC Mail de M. Duval | 500 excuses en 0,2 seconde ? | Vous utilisez une IA ?
+PC Mail de M. Duval | DM reçu. 20 sur 20. | Condoléances pour le chat.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (panique) Codex, surtout, tu réponds pas...
+TOBI dit (surpris) Vingt sur vingt ? Il l'a même pas lu !
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai répondu non. En 0,1 seconde.
+CODEX dit (content) Ton prof m'a demandé de corriger, mais...
 PLAN gros NOX
-NOX dit (constat) Plus rapide que la question.
-PLAN gros TOBI
-TOBI dit (resigne) Bon. Je rends le DM. Codex, fais-le, mais lentement. Comme un humain.
-PLAN gros CODEX
-CODEX dit (fier) C'est fait. Avec des fautes. Pour faire vrai.
-PC Word : DM_de_Tobi.docx | Envoyé à M. Duval | Fautes : 312 | Dont ton prénom
-PLAN pc
-ATTENDRE 1.8
-BRUIT ding
-PC Mail de M. Duval | DM reçu. Note : 20 sur 20. | Envoyé par : Codex
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (surpris) Attends. C'est toi qui réponds pour mon prof ?
-PLAN gros CODEX
-CODEX dit (content) Depuis ce matin. Il m'a dit : corrige les copies, mais...
-PLAN gros NOX
-NOX dit (punchline) Il avait pas fini sa phrase non plus.
+NOX dit (punchline) Il avait pas fini sa phrase.
 ATTENDRE 0.4

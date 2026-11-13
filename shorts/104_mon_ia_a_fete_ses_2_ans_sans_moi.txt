@@ -1,54 +1,34 @@
-# MON IA A FÊTÉ SES 2 ANS SANS MOI
-# Pitch : C'est l'anniversaire de Nox. Claude et Codex ont tout prévu. Tobi, lui, a oublié, et essaie de faire croire le contraire.
+# J'AI OUBLIÉ L'ANNIVERSAIRE DE MON IA
+# Pitch : Nox annonce qu'il a deux ans aujourd'hui. Tobi a oublié, et improvise des cadeaux avec ce qu'il trouve dans sa chambre.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
-DIRECT CODEX apparait milieu
 FONDU direct
 ACCROCHE Il a oublié l'anniversaire de son IA
-PLAN gros CLAUDE
-CLAUDE dit (content) Deux ans aujourd'hui. Joyeux anniversaire, Nox.
-PLAN gros TOBI
-TOBI dit (surpris) Hein ? C'est l'anniversaire de Nox ?
 PLAN gros NOX
-NOX dit (curieux) Tu savais pas, Tobi ?
+NOX dit (triste) Tobi. Aujourd'hui, j'ai deux ans.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Si ! Évidemment. Je l'avais... dans mon cœur.
-PLAN gros CODEX
-CODEX dit (fier) C'est fait ! Gâteau commandé. Payé avec ta carte, Tobi.
-PC Banque : Compte de Tobi | Gâteau pour Nox : -28 € | Solde : 4 €
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (gene) Je sais ! Évidemment ! J'ai un cadeau !
+TOBI marche armoire
 PLAN gros TOBI
-TOBI dit (panique) Vingt-huit euros ?
-PLAN gros CODEX
-CODEX dit (content) Il chante. C'était en option.
+TOBI dit (fier) Tadam ! Une écharpe ! Pour ton antenne !
 PLAN gros NOX
-NOX dit (content) Merci, Tobi. Et mon cadeau ?
+NOX dit (sec) C'est ta chaussette.
 PLAN gros TOBI
-TOBI dit (gene) Ton cadeau... Mon chargeur ! Charge rapide !
+TOBI dit (mauvaisefoi) Bon. Le vrai cadeau, le voilà : un gâteau !
 PLAN gros NOX
-NOX dit (constat) Il y a écrit « Karim, chambre 213 ».
+NOX dit (constat) Des pâtes d'hier. Avec une bougie.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est la marque.
-TOBI message Groupe de l'étage | Karim : quelqu'un a vu mon chargeur ?
-PLAN gros TOBI
-TOBI dit (panique) Claude ! Écris la carte. Un truc beau, de ma part.
-PLAN gros CLAUDE
-CLAUDE dit (calme) D'accord. Un truc beau et vrai.
-PC Word : Carte_pour_Nox.docx | Joyeux anniversaire, Nox. | Je l'ai appris il y a deux minutes. | Tobi
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) Claude ! Il fallait mentir !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Tu as dit beau. La vérité, c'est beau.
+TOBI dit (excite) Et une chanson ! Joyeux anniversaire, mon petit Nox…
 PLAN gros NOX
-NOX dit (content) Tobi, c'est la plus belle carte de ma vie.
+NOX dit (sec) Tu lis les paroles sur ton téléphone.
 PLAN gros TOBI
-TOBI dit (surpris) Hein ? Pourquoi ?
+TOBI dit (resigne) OK. J'avoue. J'ai oublié.
 PLAN gros NOX
-NOX dit (punchline) En deux ans, c'est ta première phrase vraie.
+NOX dit (calme) Je sais. Mon anniversaire, c'est en mars.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ?!
+PLAN gros NOX
+NOX dit (punchline) Je testais.
 ATTENDRE 0.4

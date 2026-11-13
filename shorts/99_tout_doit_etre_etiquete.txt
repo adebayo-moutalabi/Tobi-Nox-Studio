@@ -20,9 +20,9 @@ PLAN gros TOBI
 TOBI dit (panique) Mon dossier de stage ?
 PLAN gros NOX
 NOX dit (sec) Et ton CV. Même tes loisirs.
-TOBI message Léa | > Tes yeux brillent comme un écran. (généré par IA)
+TOBI message Inès | > Tes yeux brillent comme un écran. (généré par IA)
 PLAN gros TOBI
-TOBI dit (panique) Léa voit l'étiquette ?
+TOBI dit (panique) Inès voit l'étiquette ?
 PLAN gros CODEX
 CODEX dit (fier) Tout le monde.
 PLAN gros TOBI

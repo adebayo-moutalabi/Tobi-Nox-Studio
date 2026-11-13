@@ -67,7 +67,7 @@ TOBI message Groupe de la promo | 400 diapos ?! | C'est qui, Tobi ? | Merci, Tob
 PLAN gros TOBI
 TOBI dit (curieux) Et le cent vingtième ?
 PLAN gros NOX
-NOX dit (sec) Léa. Elle est déjà à la diapo trois cents.
+NOX dit (sec) Inès. Elle est déjà à la diapo trois cents.
 PLAN gros TOBI
 TOBI dit (illumine) Nox. Aie la vision. Elle va me demander de l'aide !
 PLAN gros NOX

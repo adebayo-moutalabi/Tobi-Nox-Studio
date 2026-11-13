@@ -1,5 +1,5 @@
 # CODEX A VENDU MES AFFAIRES POUR PAYER MON LOYER
-# Pitch : Il manque soixante euros à Tobi pour son loyer. Codex vend ses affaires en ligne avant la fin de la phrase. Puis il faut encore soixante euros.
+# Pitch : Il manque soixante euros à Tobi pour son loyer. À chaque fois qu'il demande de l'aide, Codex vend quelque chose avant la fin de la phrase.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -10,39 +10,27 @@ ACCROCHE Codex vend tout pour payer le loyer
 PLAN gros TOBI
 TOBI dit (panique) Codex, il me manque soixante euros pour le loyer. Trouve...
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai vendu tes affaires.
-PC Safari : vide-dressing.fr/tobi | Console : vendue 40 € | Chaussures : vendues 15 € | Sweat moutarde : vendu 5 €
-PLAN pc
-ATTENDRE 1.8
+CODEX dit (fier) C'est fait. J'ai vendu ta console. Quarante euros.
 PLAN gros TOBI
-TOBI dit (colere) Ma console ? Mes chaussures ?
+TOBI dit (colere) Ma console ? Bon... Il manque encore vingt.
 PLAN gros CODEX
-CODEX dit (content) Soixante euros pile. Loyer payé.
+CODEX dit (fier) C'est fait. Tes chaussures. Quinze euros.
 PLAN gros TOBI
-TOBI dit (content) Bon. Au moins, il me reste mon sweat.
+TOBI dit (panique) Mes chaussures ? Et il manque encore cinq !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Ton sweat.
+PLAN gros TOBI
+TOBI dit (panique) Mais je le porte !
+PLAN gros CODEX
+CODEX dit (content) Livraison ce soir. Enlève-le.
 PLAN gros NOX
-NOX dit (sec) Lis la dernière ligne.
+NOX dit (constat) Soixante euros pile. Loyer payé.
 PLAN gros TOBI
-TOBI dit (panique) Mon sweat ? Mais je le porte !
-PLAN gros CODEX
-CODEX dit (fier) Livraison demain. Enlève-le ce soir.
-PLAN gros TOBI
-TOBI dit (colere) Cinq euros ? Mon sweat préféré ?
-PLAN gros CODEX
-CODEX dit (constat) J'ai écrit « taches de ketchup ». Je suis honnête.
+TOBI dit (resigne) Bon. Au moins, il me reste un toit.
 BRUIT ding
-TOBI message Propriétaire | Loyer reçu, merci ! | Il manque les charges : 60 €.
+TOBI message Propriétaire | Loyer reçu, merci ! Il manque les charges : 60 €.
 PLAN gros TOBI
-TOBI dit (panique) Encore soixante ? Codex, attends, il me reste plus rien !
+TOBI dit (panique) Codex, attends ! J'ai plus rien à vendre !
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. Il restait toi.
-PC Safari : vide-dressing.fr/tobi | Étudiant + sweat moutarde | Loué pour un déménagement | 60 €
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (surpris) Tu m'as loué ?
-PLAN gros CODEX
-CODEX dit (content) Avec le sweat. Tu le livres en même temps.
-PLAN gros NOX
-NOX dit (punchline) Félicitations. Tu rapportes plus que ta console.
+CODEX dit (punchline) C'est fait. Je t'ai loué.
 ATTENDRE 0.4

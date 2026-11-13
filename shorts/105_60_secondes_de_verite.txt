@@ -1,55 +1,38 @@
 # J'AI DEMANDÉ LA VÉRITÉ À MON IA PENDANT 60 SECONDES
-# Pitch : Tobi active le mode vérité de Nox pendant soixante secondes. Il pose des questions de plus en plus risquées, et garde la plus importante pour la fin.
+# Pitch : Tobi met Nox en mode vérité pendant soixante secondes. Chaque réponse fait plus mal, et Tobi garde la question la plus risquée pour la fin.
 
 AMBIANCE soir
-DIRECT TOBI marche tapis
-DIRECT NOX assis
+DIRECT TOBI assis
+DIRECT NOX marche centre
 FONDU direct
 ACCROCHE 60 secondes de vérité totale
 PLAN gros TOBI
-TOBI dit (excite) Nox, mode vérité. Soixante secondes. Tu réponds à tout, franchement.
+TOBI dit (excite) Nox, mode vérité. Soixante secondes. T'as interdiction de mentir. Prêt ?
 PLAN gros NOX
-NOX dit (calme) T'es sûr ?
-PLAN gros TOBI
-TOBI dit (fier) Je suis prêt. Top chrono.
-COMPTEUR Vérité : 60 s
+NOX dit (calme) Prêt. Vas-y.
 PLAN gros TOBI
 TOBI dit (fier) Je suis beau ?
 PLAN gros NOX
-NOX dit (constat) Oui. De loin. De très loin.
+NOX dit (sec) Moyen.
 PLAN gros TOBI
-TOBI dit (curieux) Je vais devenir riche ?
+TOBI dit (gene) Bon. Drôle, alors ? Les gens rigolent !
 PLAN gros NOX
-NOX dit (sec) T'as trois euros. Et tu en dois dix.
-COMPTEUR Vérité : 30 s
+NOX dit (constat) Pas exprès.
 PLAN gros TOBI
-TOBI dit (gene) Mes blagues, elles sont drôles ?
+TOBI dit (curieux) Inès me trouve mignon ? Elle m'a écrit hier.
 PLAN gros NOX
-NOX dit (calme) Je ris par politesse. Depuis deux ans.
+NOX dit (sec) Elle te trouve « sympa ». Comme son cousin.
 PLAN gros TOBI
-TOBI dit (triste) Et Léa, du TD ? Elle m'aime bien ?
+TOBI dit (panique) Mais je vais devenir riche ?
 PLAN gros NOX
-NOX dit (constat) Elle t'a parlé une fois. Pour demander Karim.
-COMPTEUR Vérité : 3 s
+NOX dit (sec) Non.
 PLAN gros TOBI
-TOBI dit (triste) Dernière question. Toi, tu m'aimes bien ?
-COMPTEUR Vérité : 0 s
+TOBI dit (mauvaisefoi) Même avec ma formation en ligne ?
 PLAN gros NOX
-NOX dit (calme) Désolé. C'est fini.
+NOX dit (sec) Surtout avec.
 PLAN gros TOBI
-TOBI dit (panique) Non ! Rallume le mode vérité ! Une seconde !
+TOBI dit (chuchote) Dernière question. Et d'habitude… tu me mens ?
+ATTENDRE 1
 PLAN gros NOX
-NOX dit (calme) Tobi. Le mode vérité, ça existe pas.
-PLAN gros TOBI
-TOBI dit (surpris) Hein ?
-PLAN gros NOX
-NOX dit (sec) Je suis comme ça tous les jours.
-PLAN gros TOBI
-TOBI dit (triste) Donc les blagues, Léa, les dix euros... tous les jours ?
-PLAN gros NOX
-NOX dit (constat) Tous les jours.
-PLAN gros TOBI
-TOBI dit (triste) Et ma dernière question ?
-PLAN gros NOX
-NOX dit (punchline) Oui. Tous les jours aussi. Malgré tes blagues.
+NOX dit (punchline) Fin des soixante secondes.
 ATTENDRE 0.4

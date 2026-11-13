@@ -1,57 +1,42 @@
 # J'AI PARIÉ CONTRE MON IA
-# Pitch : Tobi parie dix euros qu'il peut tenir une heure sans demander d'aide à Nox. Il cherche toutes les failles du pari.
+# Pitch : Tobi parie dix euros qu'il tient une heure sans poser une seule question à Nox. Puis il joue double ou rien.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
 FONDU direct
-ACCROCHE Une heure sans demander d'aide
+ACCROCHE Une heure sans poser de question
 PLAN gros TOBI
-TOBI dit (fier) Nox, dix euros que je tiens une heure sans ton aide.
+TOBI dit (fier) Nox, dix euros : une heure sans te poser de question.
 PLAN gros NOX
-NOX dit (curieux) Une heure entière ?
+NOX dit (calme) Pari tenu. C'est parti.
 PLAN gros TOBI
-TOBI dit (fier) Soixante minutes. Je suis autonome.
+TOBI dit (content) Facile. Il est quelle heure ?
 PLAN gros NOX
-NOX dit (calme) Pari accepté.
-TEMPS Vingt minutes plus tard | Tobi cherche son chargeur | Encore 40 minutes
+NOX dit (sec) Perdu. Dix euros.
 PLAN gros TOBI
-TOBI dit (gene) Mon chargeur... Je le trouve tout seul. Je suis autonome.
+TOBI dit (mauvaisefoi) Ça compte pas ! Double ou rien !
 PLAN gros NOX
-NOX dit (constat) T'as cherché dans le frigo.
+NOX dit (calme) C'est parti.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'était une piste.
-TEMPS Trente minutes plus tard | Toujours pas de chargeur | Encore 10 minutes
-PLAN gros TOBI
-TOBI dit (illumine) Claude ! Le pari, c'est sans Nox. Toi, t'as le droit.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Ton chargeur est sous ton oreiller.
-PLAN gros TOBI
-TOBI dit (fier) Tu vois, Nox ? Zéro aide.
-PLAN gros CLAUDE
-CLAUDE dit (constat) Je l'ai demandé à Nox.
-PLAN gros TOBI
-TOBI dit (colere) Ça compte pas ! C'est de la sous-traitance !
-TEMPS Neuf minutes plus tard | Tobi transpire | Encore 1 minute
-PLAN gros TOBI
-TOBI dit (panique) Nox, il reste combien de temps ?
+TOBI dit (fier) Tranquille. Tu crois que je vais craquer ?
 PLAN gros NOX
-NOX dit (constat) Une minute.
-NOX dit (sec) Et tu viens de me demander.
+NOX dit (sec) Perdu. Vingt euros.
 PLAN gros TOBI
-TOBI dit (surpris) Non ! C'était pas de l'aide, c'était une question !
+TOBI dit (colere) Double ou rien ! Je parle plus !
 PLAN gros NOX
-NOX dit (constat) Une question, c'est de l'aide.
-PC Banque : Compte de Tobi | Pari perdu : -10 € | Pour : Nox
-PLAN pc
-ATTENDRE 1.8
+NOX dit (calme) C'est parti.
+ATTENDRE 1.2
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Bon. Double ou rien. Une heure sans aide.
+TOBI dit (gene) Je peux tousser ?
 PLAN gros NOX
-NOX dit (curieux) Tu commences quand ?
+NOX dit (sec) Perdu. Quarante euros.
 PLAN gros TOBI
-TOBI dit (fier) Dès que tu m'as fait mon DM.
+TOBI dit (triste) Double ou rien. Mais c'est toi qui tiens.
 PLAN gros NOX
-NOX dit (punchline) Vingt euros, alors.
+NOX dit (calme) D'accord. T'as faim ?
+PLAN gros TOBI
+TOBI dit (surpris) T'as posé une question !
+PLAN gros NOX
+NOX dit (punchline) Oups. On est quittes.
 ATTENDRE 0.4

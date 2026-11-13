@@ -1,5 +1,5 @@
 # CLAUDE A CORRIGÉ MON MESSAGE À MON CRUSH
-# Pitch : Tobi demande à Claude de relire son message pour Inès, juste pour les fautes. Claude corrige surtout les mensonges, un par un.
+# Pitch : Tobi demande à Claude de corriger son message pour Inès, juste les fautes. Claude corrige surtout les mensonges, un par un.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -9,52 +9,33 @@ DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Claude a relu son message de drague
 PLAN gros TOBI
-TOBI dit (excite) Claude, relis mon message pour Inès. Juste les fautes.
-PC Notes : Message pour Inès | Je fais 1 m 85 | J'ai une voiture | Je suis chef d'entreprise
-PLAN pc
-ATTENDRE 1.8
+TOBI dit (excite) Claude, corrige mon message pour Inès. Juste les fautes.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Il n'y a pas de fautes. Il y a des mensonges.
+CLAUDE dit (calme) Vas-y, lis.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est pas des mensonges. C'est des objectifs.
+TOBI dit (fier) « Je fais un mètre quatre-vingt-cinq. »
 PLAN gros CLAUDE
-CLAUDE dit (calme) Tu mesures un mètre soixante-douze.
+CLAUDE dit (calme) Corrigé : un mètre soixante-douze.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Avec des grosses chaussettes...
-PLAN gros NOX
-NOX dit (sec) Soixante-treize.
+TOBI dit (gene) C'était pas une faute ! Bon. « J'ai une voiture. »
 PLAN gros CLAUDE
-CLAUDE dit (constat) La voiture, c'est une trottinette.
+CLAUDE dit (constat) Corrigé : une trottinette. Celle de Karim.
 PLAN gros TOBI
-TOBI dit (gene) C'est une voiture, mais en plus petit.
+TOBI dit (mauvaisefoi) « Je suis chef d'entreprise. »
 PLAN gros CLAUDE
-CLAUDE dit (calme) Et elle est au voisin.
+CLAUDE dit (calme) Corrigé : zéro client. Quatre euros en banque.
 PLAN gros TOBI
-TOBI dit (colere) Bon ! Chef d'entreprise, au moins, c'est vrai !
+TOBI dit (colere) Claude ! J'ai dit juste les fautes !
 PLAN gros CLAUDE
-CLAUDE dit (constat) Dix-sept entreprises. Zéro client.
-PLAN gros TOBI
-TOBI dit (resigne) Vas-y. Corrige tout.
-BRUIT pop
-PC Notes : Message pour Inès | Salut, c'est Tobi. | J'ai 4 €.
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (triste) C'est tout ce qu'il reste de moi ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) C'est tout ce qui est vrai.
+CLAUDE dit (calme) Je n'ai corrigé que ça.
 PLAN gros NOX
 NOX dit (sec) Envoyé.
 PLAN gros TOBI
 TOBI dit (panique) Hein ? Nox ! Non !
 BRUIT ding
-TOBI message Inès | > Salut, c'est Tobi. J'ai 4 €. | Moi aussi ! On partage un kebab ?
+TOBI message Inès | > 1 m 72. Une trottinette. Zéro client. 4 €. | Enfin un garçon honnête. On se voit ?
 PLAN gros TOBI
-TOBI dit (surpris) Elle a dit oui ? Avec la vérité ?
+TOBI dit (excite) Elle dit oui ! Claude, écris : je passe te prendre en voiture !
 PLAN gros CLAUDE
-CLAUDE dit (content) Tu vois. Pas besoin de mentir.
-PLAN gros TOBI
-TOBI dit (excite) Claude, réponds-lui vite : je passe la prendre en voiture !
-PLAN gros CLAUDE
-CLAUDE dit (punchline) J'écris : il arrive en trottinette. Celle du voisin.
+CLAUDE dit (punchline) Corrigé : en trottinette. Celle de Karim.
 ATTENDRE 0.4

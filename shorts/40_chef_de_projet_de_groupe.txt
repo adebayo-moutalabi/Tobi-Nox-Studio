@@ -46,7 +46,7 @@ PLAN auto
 TOBI dit (surpris) Comment ça, sans moi ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) Il s'appelle : pas Tobi. Le rendu est fini.
-PC Discord : pas Tobi | Kevin : Rendu terminé | Léa : On lui dit ?
+PC Discord : pas Tobi | Kevin : Rendu terminé | Inès : On lui dit ?
 PLAN pc
 ATTENDRE 1.6
 PLAN auto

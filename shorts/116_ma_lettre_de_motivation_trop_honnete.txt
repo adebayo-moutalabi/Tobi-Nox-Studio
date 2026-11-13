@@ -1,57 +1,38 @@
 # MON IA A ÉCRIT MA LETTRE DE MOTIVATION TROP HONNÊTE
-# Pitch : Tobi demande à Nox sa lettre de motivation pour le stage de ses rêves. Nox dit toute la vérité, et l'envoie avant qu'il puisse relire.
+# Pitch : Tobi demande à Nox sa lettre de motivation pour un stage. Nox écrit seulement la vérité, et l'envoie.
 
 AMBIANCE jour
-DATE Mardi
+DATE Jeudi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
 ACCROCHE Une lettre de motivation trop honnête
 PLAN gros TOBI
-TOBI dit (panique) Nox, lettre de motivation pour le stage de mes rêves. Vite.
+TOBI dit (panique) Nox, lettre de motivation pour un stage. Vite.
 PLAN gros NOX
-NOX dit (calme) Je dis la vérité ?
+NOX dit (calme) J'écris que la vérité.
 PLAN gros TOBI
-TOBI dit (fier) Oui. Mais en mieux.
-PC Word : Lettre_de_motivation.docx | « Tobi se lève à midi. » | « Il a lancé 17 projets. Aucun ne marche. »
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) « Il se lève à midi » ? T'es fou ?
+TOBI dit (fier) Alors mets que je suis matinal.
 PLAN gros NOX
-NOX dit (constat) J'ai arrondi. C'est treize heures.
+NOX dit (constat) « Debout avant midi. Parfois. »
 PLAN gros TOBI
-TOBI dit (colere) Mets au moins mes qualités !
+TOBI dit (gene) Mets que je suis travailleur.
 PLAN gros NOX
-NOX dit (calme) J'ai cherché. J'en ai trouvé une.
+NOX dit (constat) « A rendu un DM. Une fois. »
 PLAN gros TOBI
-TOBI dit (curieux) Laquelle ?
+TOBI dit (colere) Mets au moins que je suis motivé !
 PLAN gros NOX
-NOX dit (sec) Tu lâches jamais. Surtout ton lit.
+NOX dit (sec) « Motivé par le salaire. »
 PLAN gros TOBI
-TOBI dit (colere) Supprime tout ! Je veux une autre version !
+TOBI dit (panique) Le stage est pas payé ! Me l'envoie pas !
 PLAN gros NOX
-NOX dit (sec) Déjà envoyée.
-PLAN gros TOBI
-TOBI dit (panique) Sans relire ?
-PLAN gros NOX
-NOX dit (constat) Comme toi. Toujours.
-PLAN gros TOBI
-TOBI dit (triste) C'est fini. Personne prend un mec qui se lève à midi.
+NOX dit (calme) Déjà envoyée.
 BRUIT ding
-PC Mail de StartUp Lab | Enfin une lettre honnête ! | Entretien vendredi, 14 h | PS : venez avec Nox. Le poste est pour lui.
+PC Mail de StartUp Lab | Candidature acceptée ! | Début lundi, 8 h.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (surpris) Pour lui ? C'est MON stage !
+TOBI dit (panique) Huit heures ? Écris-leur que je suis matinal !
 PLAN gros NOX
-NOX dit (fier) Ils ont aimé l'auteur.
-PLAN gros TOBI
-TOBI dit (colere) Refuse ! Par amitié !
-PLAN gros NOX
-NOX dit (calme) J'accepte. Il faut qu'un de nous deux travaille.
-PLAN gros TOBI
-TOBI dit (panique) Et moi, je fais quoi ?
-PLAN gros NOX
-NOX dit (punchline) Je te prends en stage. Non payé.
+NOX dit (punchline) J'écris que la vérité.
 ATTENDRE 0.4

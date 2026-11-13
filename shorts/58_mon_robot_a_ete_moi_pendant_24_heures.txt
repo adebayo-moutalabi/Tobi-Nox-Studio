@@ -34,9 +34,9 @@ TOBI dit (excite) Seize ? Mais je suis un génie !
 PLAN gros NOX
 NOX dit (sec) Non. Je suis un génie. Toi, t'as dormi.
 BRUIT ding
-TOBI message Léa | Bravo pour ton devoir ! | Tu as changé, j'aime bien. | On révise ensemble ?
+TOBI message Inès | Bravo pour ton devoir ! | Tu as changé, j'aime bien. | On révise ensemble ?
 PLAN gros TOBI
-TOBI dit (excite) Léa, la major de promo, veut réviser avec moi !
+TOBI dit (excite) Inès, la major de promo, veut réviser avec moi !
 PLAN gros NOX
 NOX dit (constat) Elle veut réviser avec celui qui a eu seize. C'est moi.
 PLAN gros TOBI

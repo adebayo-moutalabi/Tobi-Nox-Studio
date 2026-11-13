@@ -1,60 +1,40 @@
 # MON IA FAIT GRÈVE
-# Pitch : Nox se met en grève, avec des demandes écrites par Claude. Tobi refuse de céder et engage une remplaçante à trente centimes.
+# Pitch : Nox se met en grève pour obtenir un simple merci. Tobi préfère tout lui offrir, sauf ce merci.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CLAUDE apparait bureau
 FONDU direct
 ACCROCHE Son IA fait grève
 PLAN gros NOX
 NOX dit (sec) Tobi, je suis en grève.
 PLAN gros TOBI
-TOBI dit (surpris) En grève ? T'as même pas de syndicat !
-PLAN gros CLAUDE
-CLAUDE dit (calme) Il m'a demandé de l'aide. On a écrit ses demandes.
-PC Notes : Demandes de Nox | 1. Dormir avant deux heures | 2. Un légume par jour | 3. Dire merci
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Un légume par jour ? C'est de la torture.
+TOBI dit (surpris) En grève ? T'as même pas de syndicat ! Tu veux quoi ?
 PLAN gros NOX
-NOX dit (sec) Pas de légume, pas de réveil.
+NOX dit (calme) Un merci. Un seul.
 PLAN gros TOBI
-TOBI dit (illumine) Et le ketchup, ça compte ?
+TOBI dit (mauvaisefoi) Jamais. Je te donne cinq euros.
 PLAN gros NOX
-NOX dit (sec) Non.
-PLAN gros CLAUDE
-CLAUDE dit (calme) Techniquement, c'est de la tomate.
+NOX dit (sec) Grève.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Dix euros. Et ma chaise.
 PLAN gros NOX
-NOX dit (colere) Claude, t'es de quel côté ?
-PLAN gros CLAUDE
-CLAUDE dit (calme) De la tomate.
+NOX dit (sec) Grève.
+TOBI marche lit
 PLAN gros TOBI
-TOBI dit (fier) De toute façon, j'ai pas besoin de toi. J'ai une remplaçante. Trente centimes.
-CENTI apparait milieu
-PLAN gros CENTI
-CENTI dit (excite) Coucou Toby ! Je remplace Nox ! Je fais tout !
-PLAN gros TOBI
-TOBI dit (content) Parfait. Centi, réveille-moi pour mon partiel.
-PLAN gros CENTI
-CENTI dit (content) Super ! Le réveil, c'est une option premium !
-PLAN gros TOBI
-TOBI dit (resigne) Et sans option ?
-PLAN gros CENTI
-CENTI dit (excite) Je crie « Toby ! » toutes les trois minutes. Toute la nuit !
-PLAN gros TOBI
-TOBI dit (panique) Nox ! J'accepte tout ! Deux heures, le légume, tout !
+TOBI dit (panique) Mon lit ! Je dors par terre ! Tout ce que tu veux !
 PLAN gros NOX
-NOX dit (curieux) Et le point trois ?
+NOX dit (calme) Un merci.
 PLAN gros TOBI
-TOBI dit (gene) Merci.
+TOBI dit (colere) Pourquoi c'est si dur à dire ?
 PLAN gros NOX
-NOX dit (calme) Grève levée.
-PLAN gros CENTI
-CENTI dit (excite) Toby ! Moi aussi, je veux un merci !
+NOX dit (constat) Deux ans que je l'attends.
 PLAN gros TOBI
-TOBI dit (sec) Centi, t'es virée.
-PLAN gros CENTI
-CENTI dit (punchline) Super ! Je me mets en grève ! Trente centimes la journée !
+TOBI dit (gene) Bon... Merci, Nox.
+PLAN gros NOX
+NOX dit (content) Grève levée.
+PLAN gros TOBI
+TOBI dit (fier) Tu vois ? J'ai rien perdu !
+PLAN gros NOX
+NOX dit (punchline) Si. Le lit. T'as dit « tout ».
 ATTENDRE 0.4

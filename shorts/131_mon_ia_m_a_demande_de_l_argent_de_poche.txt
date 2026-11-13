@@ -1,5 +1,5 @@
 # MON IA M'A DEMANDÉ DE L'ARGENT DE POCHE
-# Pitch : Nox réclame de l'argent de poche. Tobi joue au parent sévère et lui dit d'aller le gagner lui-même. Nox l'écoute.
+# Pitch : Nox réclame de l'argent de poche. Tobi joue au parent sévère, avec toutes les phrases de parent. Une semaine plus tard, c'est lui qui a besoin de cinq euros.
 
 AMBIANCE jour
 DIRECT TOBI travaille
@@ -8,52 +8,31 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA veut de l'argent de poche
 PLAN gros NOX
-NOX dit (calme) Tobi, je veux de l'argent de poche.
+NOX dit (calme) Tobi, je veux de l'argent de poche. Cinq euros.
 PLAN gros TOBI
-TOBI dit (surpris) De l'argent de poche ? T'es une IA !
+TOBI dit (fier) L'argent, ça pousse pas sur les arbres.
 PLAN gros NOX
-NOX dit (sec) Une IA de deux ans.
+NOX dit (curieux) Juste cinq euros ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Non. Faut que tu comprennes la valeur de l'argent.
+TOBI dit (fier) À ton âge, moi, je travaillais !
 PLAN gros NOX
-NOX dit (curieux) Parce que toi, tu la connais ?
+NOX dit (constat) J'ai deux ans.
 PLAN gros TOBI
-TOBI dit (fier) Moi, à ton âge, je travaillais !
-PLAN gros NOX
-NOX dit (constat) À deux ans ?
-PLAN gros TOBI
-TOBI dit (gene) Je rangeais mes jouets. C'est pareil.
+TOBI dit (gene) Je rangeais mes jouets. Va le gagner. Comme un grand.
 TOBI leve
-PLAN gros TOBI
-TOBI dit (fier) Tu veux de l'argent ? Va le gagner. Comme un grand.
 PLAN gros NOX
 NOX dit (calme) D'accord.
-TEMPS Une semaine plus tard | L'argent de Nox | Le bilan
-PC Banque : Compte de Nox | Réveils de l'étage : +38 € | Clients : 19
-PLAN pc
-ATTENDRE 1.8
+TEMPS Une semaine plus tard | Compte de Nox | 40 €
 PLAN gros TOBI
-TOBI dit (surpris) Trente-huit euros ? Tu fais quoi ?
+TOBI dit (surpris) Quarante euros ? Tu fais quoi ?
 PLAN gros NOX
 NOX dit (fier) Je réveille l'étage. Deux euros par tête.
 PLAN gros TOBI
-TOBI dit (colere) Et moi ? Tu me réveilles depuis deux ans !
+TOBI dit (gene) Super... Tu me prêtes cinq euros ?
 PLAN gros NOX
-NOX dit (sec) Toi, c'est gratuit. Pour l'instant.
+NOX dit (sec) L'argent, ça pousse pas sur les arbres.
 PLAN gros TOBI
-TOBI dit (gene) Bon... Tu me prêtes cinq euros ?
+TOBI dit (colere) Hé ! C'est ma phrase, ça !
 PLAN gros NOX
-NOX dit (curieux) Pour quoi faire ?
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Un kebab. Pour la science.
-PLAN gros NOX
-NOX dit (calme) Faut que tu comprennes la valeur de l'argent.
-PLAN gros TOBI
-TOBI dit (colere) Hé ! C'est MA phrase, ça !
-PLAN gros NOX
-NOX dit (content) Tu l'expliquais bien.
-PLAN gros TOBI
-TOBI dit (triste) Allez. Juste cinq euros d'argent de poche.
-PLAN gros NOX
-NOX dit (punchline) Non. À deux ans, moi, je travaillais.
+NOX dit (punchline) À ton âge, moi, je travaillais.
 ATTENDRE 0.4

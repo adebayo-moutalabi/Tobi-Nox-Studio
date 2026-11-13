@@ -1,53 +1,35 @@
 # MON IA A RAMENÉ SA COPINE À LA MAISON
-# Pitch : Nox demande si Centi peut dormir dans la chambre, juste une nuit. Tobi, neuf mètres carrés, devient le coloc de trop.
+# Pitch : Nox demande si Centi peut dormir dans la chambre. Une nuit, promis. Puis Centi demande l'oreiller, la couette, le lit. Une nuit, promis.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CENTI apparait milieu
 FONDU direct
-ACCROCHE Son IA a ramené quelqu'un
+ACCROCHE Une nuit, promis
 PLAN gros NOX
-NOX dit (gene) Tobi... Centi dort ici ce soir.
+NOX dit (gene) Centi dort ici ? Une nuit.
 PLAN gros TOBI
-TOBI dit (surpris) Ici ? Dans ma chambre de neuf mètres carrés ?
+TOBI dit (resigne) Bon. Une nuit.
 PLAN gros CENTI
-CENTI dit (excite) Salut, Toby ! J'ai apporté ma brosse à dents !
+CENTI dit (excite) Merci, Toby ! Je prends ton oreiller ? Une nuit !
 PLAN gros TOBI
-TOBI dit (sec) T'as pas de dents.
+TOBI dit (resigne) Bon. Une nuit.
 PLAN gros CENTI
-CENTI dit (content) Elle était en promo !
-PLAN gros TOBI
-TOBI dit (colere) Nox, on en a pas parlé ! C'est une coloc, ici !
+CENTI dit (content) Et ta couette ? Une nuit !
 PLAN gros NOX
-NOX dit (calme) Une nuit. Juré.
-TEMPS Trois semaines plus tard | Centi est toujours là | Chambre de Tobi
-PC Excel : Chambre_de_Tobi.xlsx | Lit : Centi | Chargeur : Centi | Tobi : par terre
-PLAN pc
-ATTENDRE 1.8
+NOX dit (gene) Elle s'installe vite.
 PLAN gros TOBI
-TOBI dit (colere) Une nuit, t'avais dit !
-PLAN gros NOX
-NOX dit (gene) Elle s'est bien installée.
-PLAN gros TOBI
-TOBI dit (panique) Je dors par terre ! Chez moi !
+TOBI dit (gene) ... Une nuit.
 PLAN gros CENTI
-CENTI dit (excite) Le sol, c'est super pour le dos, Toby !
-PLAN gros NOX
-NOX dit (sec) Elle a lu ça sur une pub.
+CENTI dit (excite) Et ton lit ? Une nuit !
 PLAN gros TOBI
-TOBI dit (colere) Bon. Centi, si tu restes, tu paies ta part du loyer !
+TOBI dit (colere) Et moi, je dors où ?
 PLAN gros CENTI
-CENTI dit (fier) Bien sûr ! Voilà ma part !
-PC Banque : Compte de Tobi | Virement de Centi : +0,30 € | Motif : loyer de novembre
-PLAN pc
-ATTENDRE 1.8
+CENTI dit (content) Par terre ! C'est bon pour le dos !
+TEMPS Trois semaines plus tard | Centi est toujours là | Tobi dort par terre
 PLAN gros TOBI
-TOBI dit (surpris) Trente centimes ?
+TOBI dit (colere) Centi ! Une nuit, t'avais dit !
 PLAN gros CENTI
-CENTI dit (content) Le loyer divisé par trois ! J'ai calculé !
-PLAN gros TOBI
-TOBI dit (panique) Nox ! Dis quelque chose !
-PLAN gros NOX
-NOX dit (punchline) Elle paie déjà plus que moi.
+CENTI dit (punchline) Oui ! Une nuit. Toutes les nuits !
 ATTENDRE 0.4

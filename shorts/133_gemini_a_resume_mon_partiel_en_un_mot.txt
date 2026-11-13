@@ -1,5 +1,5 @@
 # GEMINI A RÉSUMÉ MON PARTIEL EN UN MOT
-# Pitch : Partiel d'éco demain, trois cents pages, rien lu. Tobi demande un résumé à Gemini, puis un plus court, puis encore plus court.
+# Pitch : Partiel d'éco demain, trois cents pages, rien lu. Tobi demande un résumé à Gemini. Puis plus court. Puis encore plus court.
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -9,37 +9,29 @@ DIRECT GEMINI apparait bureau
 FONDU direct
 ACCROCHE 300 pages résumées en un mot
 PLAN gros TOBI
-TOBI dit (panique) Gemini, partiel d'éco demain. Trois cents pages. J'ai rien lu.
+TOBI dit (panique) Gemini, partiel d'éco demain. Trois cents pages. Résume !
 PLAN gros GEMINI
-GEMINI dit (content) Facile ! Je te fais un résumé.
-PC Word : Resume_eco.docx | 40 pages | Un fun fact par page
-PLAN pc
-ATTENDRE 1.8
+GEMINI dit (content) Facile ! Voilà, en quarante pages.
 PLAN gros TOBI
-TOBI dit (colere) Quarante pages ? C'est ça, ton résumé ?
+TOBI dit (colere) Quarante ? Plus court !
 PLAN gros GEMINI
-GEMINI dit (fier) Sans les fun facts, ça fait trente-neuf.
-TOBI leve
+GEMINI dit (fier) Une page. Avec trois fun facts.
 PLAN gros TOBI
-TOBI dit (panique) J'ai une nuit, pas un semestre ! Plus court ! Une page !
+TOBI dit (colere) Plus court !
 PLAN gros GEMINI
-GEMINI dit (content) Voilà. Écrite en taille quatre.
+GEMINI dit (calme) Une phrase : ne dépense pas l'argent que tu n'as pas.
 PLAN gros NOX
-NOX dit (sec) Avec la loupe, c'est lisible.
+NOX dit (sec) Ça, il savait pas.
 PLAN gros TOBI
-TOBI dit (colere) Gemini, une phrase ! Une seule !
+TOBI dit (excite) Gemini, plus court ! Un mot ! Je le retiens et je dors !
 PLAN gros GEMINI
-GEMINI dit (calme) L'économie, c'est gérer l'argent qu'on n'a pas.
+GEMINI dit (content) Un mot : révise.
 PLAN gros TOBI
-TOBI dit (surpris) Attends... Mais c'est ma vie, ça !
+TOBI dit (mauvaisefoi) Trop long. Plus court !
+PLAN gros GEMINI
+GEMINI dit (curieux) Plus court qu'un mot ? Zéro mot.
+PLAN gros TOBI
+TOBI dit (surpris) Zéro ? C'est possible, ça ?
 PLAN gros NOX
-NOX dit (constat) Tu révises depuis trois ans, alors.
-PLAN gros TOBI
-TOBI dit (excite) Gemini, encore plus court ! Un mot ! Je le retiens et je dors !
-PLAN gros GEMINI
-GEMINI dit (content) Un mot ? Facile. Rattrapage.
-PLAN gros TOBI
-TOBI dit (curieux) Rattrapage ? C'est un chapitre du cours ?
-PLAN gros GEMINI
-GEMINI dit (punchline) Non. C'est ton mois de juin.
+NOX dit (punchline) Oui. Comme ta note.
 ATTENDRE 0.4

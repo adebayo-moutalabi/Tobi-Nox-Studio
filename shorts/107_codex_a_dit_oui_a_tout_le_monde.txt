@@ -1,5 +1,5 @@
 # CODEX A DIT OUI À TOUT LE MONDE
-# Pitch : Tobi demande à Codex de répondre à ses invitations. Codex dit oui à tout, le même samedi. Alors Tobi lui demande de dire non.
+# Pitch : Tobi demande à Codex de répondre à ses invitations de samedi. Codex dit oui à tout, à la même heure. Alors Tobi lui demande de dire non.
 
 AMBIANCE jour
 DATE Jeudi
@@ -9,42 +9,31 @@ DIRECT CODEX apparait bureau
 FONDU direct
 ACCROCHE Codex a dit oui à tout
 PLAN gros TOBI
-TOBI dit (gene) Codex, je reçois trop d'invitations. Réponds à ma place.
+TOBI dit (gene) Codex, réponds à mes invitations de samedi.
 PLAN gros CODEX
-CODEX dit (fier) C'est fait. J'ai dit oui à tout.
+CODEX dit (fier) C'est fait. Oui à tout.
 PLAN gros TOBI
-TOBI dit (surpris) À tout ?
-PC Agenda : Samedi de Tobi | 14 h : déménagement de Karim | 18 h : anniversaire de Léa | 20 h : mariage de ton cousin
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) Trois trucs le même samedi !
+TOBI dit (surpris) À tout ? Y avait quoi ?
 PLAN gros CODEX
-CODEX dit (fier) J'ai optimisé. Il te reste dix minutes pour manger.
-PLAN gros NOX
-NOX dit (sec) Debout, Tobi.
+CODEX dit (excite) L'anniversaire de Karim. Quinze heures.
 PLAN gros TOBI
-TOBI dit (curieux) Et le mariage ? Je connais à peine mon cousin !
+TOBI dit (content) Cool.
 PLAN gros CODEX
-CODEX dit (content) Il cherchait un témoin. J'ai dit oui. Discours écrit.
-PC Word : Discours_du_temoin.docx | « Je connais à peine le marié. » | « Mais j'ai dit oui. »
-PLAN pc
-ATTENDRE 1.8
+CODEX dit (excite) Le déménagement de ton cousin. Quinze heures.
 PLAN gros TOBI
-TOBI dit (panique) C'est vrai, mais ça se dit pas !
+TOBI dit (surpris) Hein ?
 PLAN gros CODEX
-CODEX dit (content) Trop tard. Je l'ai envoyé à ton cousin.
+CODEX dit (excite) Ton rencard avec Inès. Quinze heures.
 PLAN gros TOBI
-TOBI dit (colere) Stop ! À partir de maintenant, tu dis non à tout !
+TOBI dit (panique) Codex ! Dis non à tout le mon…
 PLAN gros CODEX
 CODEX dit (fier) C'est fait.
-TOBI message Bourse étudiante | Voulez-vous recevoir votre bourse ce mois-ci ? | > Non.
 PLAN gros TOBI
-TOBI dit (panique) Codex ! T'as refusé ma bourse ?
+TOBI dit (triste) Même à Inès ?
 PLAN gros CODEX
-CODEX dit (constat) Tu as dit : non à tout.
+CODEX dit (content) Elle a répondu « Ouf ».
 PLAN gros TOBI
-TOBI dit (triste) Je vais manger quoi, ce mois-ci ?
-PLAN gros NOX
-NOX dit (punchline) Samedi, t'as trois buffets. En dix minutes.
+TOBI dit (panique) Codex, redis-lui oui ! Vite !
+PLAN gros CODEX
+CODEX dit (punchline) C'est fait. Elle a dit non.
 ATTENDRE 0.4

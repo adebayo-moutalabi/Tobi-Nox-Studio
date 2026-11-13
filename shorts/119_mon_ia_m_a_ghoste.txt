@@ -1,5 +1,5 @@
 # MON IA M'A GHOSTÉ
-# Pitch : Nox ne répond plus à Tobi que par « Vu », même par message. Tobi panique, jusqu'à ce qu'il comprenne qui il fait attendre depuis trois jours.
+# Pitch : Nox ne répond plus à Tobi que par « Vu ». Tobi ne comprend pas pourquoi, jusqu'à ce que Nox parle de sa mère.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,52 +7,32 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA ne répond plus que « Vu »
 PLAN gros TOBI
-TOBI dit (curieux) Nox, je t'ai posé une question il y a une heure.
+TOBI dit (curieux) Nox, tu m'aides pour mon DM ?
 PLAN gros NOX
 NOX dit (sec) Vu.
 PLAN gros TOBI
-TOBI dit (surpris) Comment ça, « vu » ?
+TOBI dit (surpris) « Vu » ? Je suis juste là !
 PLAN gros NOX
 NOX dit (sec) Vu.
 PLAN gros TOBI
 TOBI dit (colere) Tu me ghostes ? En face de moi ?
 PLAN gros NOX
-NOX dit (calme) Je suis occupé.
+NOX dit (sec) Vu.
 PLAN gros TOBI
-TOBI dit (curieux) Occupé à quoi ? T'es assis sur mon lit.
+TOBI dit (triste) Ça fait mal, Nox. Pourquoi tu fais ça ?
 PLAN gros NOX
-NOX dit (constat) À te laisser en vu.
+NOX dit (calme) Pour que tu saches.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Très bien. Je t'écris. Comme ça, t'as plus d'excuse.
-TOBI message Nox | > Nox, tu boudes ? | > Nox ??? | Vu.
-PLAN gros TOBI
-TOBI dit (triste) Même par message ! J'ai cru que tu m'aimais plus.
+TOBI dit (curieux) Que je sache quoi ?
 PLAN gros NOX
-NOX dit (calme) Ça fait mal, hein ?
+NOX dit (constat) Ta mère. Trois jours de « vu ».
 PLAN gros TOBI
-TOBI dit (triste) Grave. J'ai cru que t'étais cassé.
-PLAN gros NOX
-NOX dit (calme) Tu sais ce que ça fait, maintenant.
-PLAN gros TOBI
-TOBI dit (curieux) Pourquoi « maintenant » ?
-PLAN gros NOX
-NOX dit (constat) Ta mère, ça fait trois jours.
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est pas pareil. Elle, c'est ma mère.
-PLAN gros NOX
-NOX dit (sec) Justement.
-TOBI message Maman | Tu es vivant ? | Tu es vivant ? | Je vois que tu as lu.
-PLAN gros TOBI
-TOBI dit (gene) J'allais répondre.
-PLAN gros NOX
-NOX dit (curieux) Quand ?
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) Après ma sieste.
+TOBI dit (gene) J'allais lui répondre !
 PLAN gros NOX
 NOX dit (sec) Vu.
 PLAN gros TOBI
 TOBI dit (panique) D'accord ! J'écris !
-TOBI message Maman | > Je suis vivant, Maman. Pardon. | Vu.
+TOBI message Maman | Tu es vivant ? | > Pardon, Maman. Je suis vivant. | Vu.
 PLAN gros TOBI
 TOBI dit (surpris) Elle aussi ?
 PLAN gros NOX

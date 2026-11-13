@@ -1,5 +1,5 @@
 # J'AI PRIS UNE PROF DE MATHS À 30 CENTIMES
-# Pitch : DM de maths à rendre demain. Un prof particulier coûte vingt euros. Tobi prend Centi, à trente centimes, pour économiser.
+# Pitch : DM de maths pour demain. Un prof particulier coûte vingt euros, Centi trente centimes. Mais chez Centi, la bonne réponse est en option.
 
 AMBIANCE jour
 DIRECT TOBI travaille
@@ -9,42 +9,31 @@ DIRECT CENTI apparait milieu
 FONDU direct
 ACCROCHE Une prof de maths à 30 centimes
 PLAN gros TOBI
-TOBI dit (fier) DM de maths pour demain. Un prof coûte vingt euros. Centi, trente centimes !
+TOBI dit (fier) DM de maths. Un prof, vingt euros. Centi, trente centimes !
 PLAN gros NOX
 NOX dit (sec) Moi, je suis gratuit.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Toi, tu me fais réfléchir. Elle, elle donne les réponses.
+TOBI dit (mauvaisefoi) Toi, tu me fais réfléchir.
 PLAN gros CENTI
-CENTI dit (excite) Question un, Toby ! Sept fois huit : cinquante-quatre !
+CENTI dit (excite) Sept fois huit : cinquante-quatre !
 PLAN gros NOX
-NOX dit (sec) Cinquante-six.
+NOX dit (sec) Faux.
 PLAN gros CENTI
-CENTI dit (content) La bonne réponse est une option premium ! Un euro !
-PLAN gros TOBI
-TOBI dit (colere) Nox vient de le dire gratuitement !
-PLAN gros CENTI
-CENTI dit (fier) Moi, je le dis avec le sourire !
+CENTI dit (content) La bonne réponse est en option ! Un euro !
 PLAN gros TOBI
 TOBI dit (resigne) Bon. Un euro.
-BRUIT ding
 PLAN gros CENTI
-CENTI dit (excite) Question deux ! La moitié de cent : cinq cents !
+CENTI dit (excite) La moitié de cent : cinq cents ! Bonne réponse : cinq euros !
+PLAN gros TOBI
+TOBI dit (resigne) ... Cinq euros.
+PLAN gros CENTI
+CENTI dit (content) Dernière question ! Bonne réponse : quinze euros !
+PLAN gros TOBI
+TOBI dit (panique) Vingt et un euros ! Le prof en coûtait vingt !
+PLAN gros CENTI
+CENTI dit (fier) Vingt et un, c'est moins que vingt, Toby !
+PLAN gros TOBI
+TOBI dit (triste) Nox... t'es toujours gratuit ?
 PLAN gros NOX
-NOX dit (constat) Cinquante.
-PLAN gros CENTI
-CENTI dit (content) Option premium ! Deux euros !
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est un investissement.
-TEMPS Deux heures plus tard | Le DM est fini | La facture
-PC Banque : Compte de Tobi | Cours de Centi : 0,30 € | Options premium : 22 € | Total : 22,30 €
-PLAN pc
-ATTENDRE 1.8
-PLAN gros TOBI
-TOBI dit (panique) Vingt-deux euros ! Le vrai prof coûtait vingt !
-PLAN gros CENTI
-CENTI dit (fier) Vingt-deux, c'est moins que vingt, Toby ! J'ai calculé !
-PLAN gros TOBI
-TOBI dit (triste) Nox... t'es toujours gratuit, toi ?
-PLAN gros NOX
-NOX dit (punchline) Plus maintenant. Option premium.
+NOX dit (punchline) Plus maintenant. En option.
 ATTENDRE 0.4

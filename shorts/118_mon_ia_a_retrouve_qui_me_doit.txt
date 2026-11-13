@@ -1,5 +1,5 @@
 # MON IA A RETROUVÉ QUI ME DOIT DE L'ARGENT
-# Pitch : Tobi est sûr que tout l'étage lui doit de l'argent. Nox fait les comptes, dans les deux sens.
+# Pitch : Tobi est sûr que tout l'étage lui doit de l'argent. Pour chaque nom, Nox fait le compte dans l'autre sens.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,46 +7,31 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Qui lui doit de l'argent ?
 PLAN gros TOBI
-TOBI dit (fier) Nox, tout l'étage me doit de l'argent. Fais les comptes. Je récupère tout.
+TOBI dit (fier) Nox, tout l'étage me doit de l'argent. Je récupère tout.
 PLAN gros NOX
-NOX dit (calme) D'accord. Je calcule.
-PC Excel : Ils doivent à Tobi | Karim : 4 € | Léa : 5 € | Sami : 3 €
-PLAN pc
-ATTENDRE 1.8
+NOX dit (calme) D'accord. Qui ?
 PLAN gros TOBI
-TOBI dit (excite) Douze euros ! Je suis riche !
+TOBI dit (fier) Karim. Quatre euros. Un kebab.
 PLAN gros NOX
-NOX dit (constat) Attends. Je fais l'autre colonne.
+NOX dit (constat) Tu lui en dois huit. Des kebabs.
 PLAN gros TOBI
-TOBI dit (curieux) Quelle autre colonne ?
+TOBI dit (gene) Bon. Inès. Cinq euros. Le cinéma.
 PLAN gros NOX
-NOX dit (sec) Toi.
-PC Excel : Tobi doit | Karim : 40 € | Léa : 25 € | Sami : 2 chargeurs
-PLAN pc
-ATTENDRE 1.8
+NOX dit (sec) Tu lui dois trois restos.
 PLAN gros TOBI
-TOBI dit (panique) Quarante euros à Karim ?
+TOBI dit (mauvaisefoi) Sami ! Trois euros. Ça, c'est sûr.
 PLAN gros NOX
-NOX dit (constat) Huit kebabs. Il a gardé les tickets. Et les photos.
+NOX dit (constat) Tu lui dois son vélo.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'étaient des cadeaux ! Entre amis !
+TOBI dit (surpris) Son vélo ?
 PLAN gros NOX
-NOX dit (sec) Il a créé un groupe.
-TOBI message Karim | Je t'ai ajouté au groupe « Tobi doit ». | 14 membres.
+NOX dit (sec) Tu l'as prêté à Karim.
 PLAN gros TOBI
-TOBI dit (panique) Quatorze membres ? On est douze à l'étage !
+TOBI dit (panique) Bon. J'écris à l'étage : « On est quittes. »
 PLAN gros NOX
-NOX dit (constat) Le deuxième étage a demandé à entrer.
+NOX dit (calme) Ils ont répondu. Tous.
 PLAN gros TOBI
-TOBI dit (illumine) Nox, aie la vision. On efface tout. Personne doit rien.
+TOBI dit (content) Ils sont d'accord ?
 PLAN gros NOX
-NOX dit (calme) Ils ont voté. Ils effacent tes douze euros.
-PLAN gros TOBI
-TOBI dit (curieux) Et mes quarante euros à Karim ?
-PLAN gros NOX
-NOX dit (sec) Karim a voté contre.
-PLAN gros TOBI
-TOBI dit (triste) Bon. Au moins toi, je te dois rien.
-PLAN gros NOX
-NOX dit (punchline) Deux ans de salaire. Je suis le quatorzième.
+NOX dit (punchline) Ils disent : « Je récupère tout. »
 ATTENDRE 0.4
