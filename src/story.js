@@ -2,8 +2,6 @@
 // Une ligne = une instruction. Terminer par « & » pour lancer la suivante sans attendre.
 import * as THREE from 'three';
 import { createDecors } from './lieux.js';
-import { addRoomDetails } from './chambre-details.js';
-import { ROOM_DETAILS } from './config.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { mount, putDown } from './scenes.js';
 import { exportVideo, save, tick } from './exporter.js';
@@ -108,8 +106,7 @@ export function createPlayer(v, ui) {
   };
   const room = v.room;
   const decors = createDecors(room, v.scene); // laverie, kebab, BU : voir src/lieux.js
-  const details = ROOM_DETAILS ? addRoomDetails(room) : null; // affiches et guirlande : voir src/chambre-details.js
-  { const base = room.update; room.update = (dt) => { base(dt); decors.update(dt); details?.update(dt); }; }
+  { const base = room.update; room.update = (dt) => { base(dt); decors.update(dt); }; }
   let talkTo = null, grosOf = null, lowShot = false, shotN = 0, hiddenForShot = [];
   let running = false, stopped = false, auto = false, track = null, trackT = 0, drift = 0, closing = false, playT0 = 0;
   const subtitles = [], clips = [], sfxList = [];
