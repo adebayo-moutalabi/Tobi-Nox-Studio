@@ -12,4 +12,5 @@ export const NATURAL = {
   weight: true,       // debout au repos, Tobi passe son poids d'une jambe sur l'autre
   idleVariants: true, // de temps en temps, un petit geste de repos (regarder ailleurs, se gratter, réfléchir)
   noxLean: true,      // Nox penche dans le sens de la marche, avec de l'inertie à l'arrêt
+  uprightIdle: true,  // au repos, Tobi se tient droit, pieds sous les hanches, au lieu de la garde jambes écartées
 };

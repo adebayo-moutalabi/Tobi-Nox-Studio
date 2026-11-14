@@ -18,6 +18,7 @@ Branche de travail : `fable-v2`. La branche `main` n'est pas touchée. Point de 
 
 ### T1 : mouvements naturels (fait en partie)
 
+- **Pose de repos refaite (le plus visible) :** au repos, Tobi restait en garde de jeu vidéo, jambes écartées, un pied devant, buste penché en arrière. Il se tient maintenant droit, pieds sous les hanches, bras le long du corps. Interrupteur : `NATURAL.uprightIdle`. Capture : `docs/captures/t1-repos-debout-episode-100.jpg`.
 - Foulée calée sur la vitesse réelle : les pieds ne patinent plus au démarrage ni à l'arrêt.
 - Arrêt progressif sur les 40 derniers centimètres.
 - Transfert de poids de Tobi au repos : le bassin bascule, le buste compense.
@@ -36,12 +37,11 @@ Ce qui manque pour dire T1 terminé :
 - Nox marche avec ses jambes : il ne « flotte » pas, pour respecter son modèle actuel.
 - Je n'ai pas mesuré les images par seconde sur un portable moyen.
 
-### T2 : rendu et chambre (commencé)
+### T2 : rendu et chambre (pas commencé)
 
-- Guirlande lumineuse au-dessus du placard du lit, qui scintille doucement, et deux affiches (« AIE LA VISION. » et un Nox en pixels) dans la niche derrière le lit. Interrupteur : `ROOM_DETAILS` dans `src/config.js`. Capture : `docs/captures/t2-chambre-details.jpg`.
+- La guirlande et les affiches ont été retirées : l'auteur ne les aime pas.
+- Les images de référence de la chambre sont dans `references/` (7 à 11) : étagères garnies, sac sur le rebord, miroir sur l'armoire, linge plié au-dessus du lit. Rien n'a encore été ajouté d'après elles.
 - Déjà en place avant la session : tone mapping ACES, occlusion ambiante (GTAO), bloom, ombres douces.
-
-Ce qui manque : HDRI d'environnement, profondeur de champ en tournage, objets sur le bureau (mugs, câbles, cours, plante), désordre au sol. Je n'ai rien posé sur le bureau ni au sol, parce que je n'ai pas vérifié où passent les personnages et où se posent les IA.
 
 ### T3 : lieux (partiel, fait le 13 novembre sur `main`)
 
@@ -58,7 +58,7 @@ Ce qui manque : HDRI d'environnement, profondeur de champ en tournage, objets su
 ## Prochaine action exacte
 
 1. Ouvrir `studio.html`, choisir « Démo · Mouvements naturels », cliquer sur Lire, et valider les points de la section « Quoi observer ».
-2. Si c'est bon : continuer T2 dans `src/chambre-details.js` (objets du bureau), en vérifiant d'abord les places `PERCHOIRS.bureau` et l'ordinateur dans `src/story.js` et `src/room.js`.
+2. Si c'est bon : étoffer la chambre d'après `references/7.jpg` à `11.jpg`, dans `src/room.js`, sans rien poser sur les trajets ni à la place `PERCHOIRS.bureau` de `src/story.js`.
 3. Puis T3 : ajouter `tp` et `cuisine` dans `src/lieux.js`, sur le modèle de `couloir`.
 
 ## Quoi observer dans la démo

@@ -23,11 +23,12 @@ Branche `fable-v2`. Rien n'est encore fusionné dans `main`, donc le site public
 git checkout studio-stable-avant-fable
 ```
 
-## 14 novembre 2026 : détails de la chambre (T2, début)
+## 14 novembre 2026 : pose de repos debout, guirlande retirée
 
-| Nouveauté | Interrupteur dans `src/config.js` | Comment le voir |
+| Changement | Interrupteur dans `src/config.js` | Comment le voir |
 |---|---|---|
-| Guirlande lumineuse et deux affiches côté lit | `ROOM_DETAILS` | N'importe quel plan qui montre le lit |
+| Tobi se tient droit au repos, au lieu de la garde jambes écartées | `NATURAL.uprightIdle` | N'importe quel plan où il est debout |
+| Guirlande et affiches retirées de la chambre | aucun : supprimées | Plan du lit |
 
 ## Pour une deuxième session
 

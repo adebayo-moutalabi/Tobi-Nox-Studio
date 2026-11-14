@@ -4,7 +4,7 @@
 //  - jambe : rx < 0 vers l'avant ; genou rx > 0 plie
 //  - tête / buste : rx > 0 penche en avant, ry tourne
 import { mocapClips } from './mocap.js';
-import { RECORDED_MOTION } from './config.js';
+import { RECORDED_MOTION, NATURAL } from './config.js';
 import * as THREE from 'three';
 
 const TAU = Math.PI * 2;
@@ -643,6 +643,7 @@ export function buildClips(bones) {
   for (const c of out) if (UPPER.has(c.name)) c.userData.layer = 'upper';
   // Les mouvements de base viennent de vrais enregistrements
   for (const r of recorded) {
+    if (NATURAL.uprightIdle && r.name === 'idle') continue; // la pose de repos enregistrée est une garde de jeu vidéo : on garde la pose debout écrite en code
     const i = out.findIndex((c) => c.name === r.name);
     if (r.name.startsWith('talk_')) { r.userData.layer = 'upper'; r.userData.weight = 0.3; }
     if (r.name.startsWith('mx_')) { r.userData.layer = 'upper'; r.userData.weight = 0.92; }
