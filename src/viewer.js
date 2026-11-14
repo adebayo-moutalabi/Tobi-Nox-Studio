@@ -1,5 +1,6 @@
 // Visualiseur commun : scène, caméra, déplacements, objets, interface.
 import * as THREE from 'three';
+import { NATURAL } from './config.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { createProp, PROPS } from './props.js';
@@ -203,7 +204,7 @@ export function startViewer(cfg) {
     }
     if (!manual && a.goal) {
       moveDir.subVectors(a.goal, pos(a)); moveDir.y = 0;
-      const d = moveDir.length();
+      const d = moveDir.length(); a.dGoal = d;
       run = a.run && d > a.speed[1] * 0.3;
       if (d < 0.05) {
         a.goal = null; moveDir.set(0, 0, 0);
@@ -218,9 +219,11 @@ export function startViewer(cfg) {
       if (a.leaving) return;
       if (hero.seat) { if (!hero.gesture) stand(a); return; }
       const speed0 = run ? a.speed[1] : a.speed[0];
-      a.spd = (a.spd || 0) + (speed0 - (a.spd || 0)) * (1 - Math.exp(-dt * 6)); // démarrage progressif
+      const brake = NATURAL.softStop && !manual && a.goal ? Math.min(1, Math.max(0.32, a.dGoal / 0.4)) : 1; // il ralentit en arrivant
+      a.spd = (a.spd || 0) + (speed0 * brake - (a.spd || 0)) * (1 - Math.exp(-dt * 6)); // démarrage progressif
       const speed = a.spd;
       hero.setLocomotion(run ? 'run' : 'walk');
+      if (NATURAL.stride) hero.motion.setStride?.(speed / speed0);
       a.walking = true;
       const step = moveDir.clone().multiplyScalar(speed * dt);
       hero.root.position.add(step); clampP(hero.root.position);
@@ -228,9 +231,25 @@ export function startViewer(cfg) {
       hero.root.rotation.y = turn(hero.root.rotation.y, Math.atan2(moveDir.x, moveDir.z), 1 - Math.exp(-dt * 7));
     } else {
       a.spd = 0;
+      if (a.walking) a.rest = 0;
       if (a.walking) { a.walking = false; hero.setLocomotion(a.baseLoco || 'idle'); }
       if (a.faceYaw !== null && !hero.seat) hero.root.rotation.y = turn(hero.root.rotation.y, a.faceYaw, 1 - Math.exp(-dt * 5));
     }
+  }
+  // Nox penche vers l'avant en marchant et se redresse avec un petit balancement : il a du poids.
+  function lean(a, dt) {
+    if (!NATURAL.noxLean || a.id !== 'nox' || a.carried || a.hero.seat) { if (a.lean) { a.lean = 0; a.hero.root.rotation.x = 0; } return; }
+    const want = a.walking ? 0.16 * Math.min(1, (a.spd || 0) / a.speed[0]) : 0;
+    a.leanV = (a.leanV || 0) + (((want - (a.lean || 0)) * 70) - (a.leanV || 0) * 9) * dt; a.lean = (a.lean || 0) + a.leanV * dt;
+    if (Math.abs(a.lean) > 0.0005 || a.walking) a.hero.root.rotation.x = a.lean;
+  }
+  // Au repos, personne ne reste figé : un petit geste discret de temps en temps, jamais pendant une réplique.
+  const RESTS = ['look', 'scratch', 'think'];
+  function restless(a, dt) {
+    if (!NATURAL.idleVariants || a.extra || a.carried) return;
+    const busy = a.walking || a.hero.seat || a.hero.gesture || a.held || actors.some((x) => x.hero.talking) || !a.hero.motion.handsFree;
+    a.rest = busy ? 0 : (a.rest || 0) + dt;
+    if (a.rest > (a.restAt || 7)) { a.rest = 0; a.restAt = 7 + Math.random() * 8; const n = RESTS.filter((x) => a.hero.motion.has(x)); if (n.length) a.hero.play(n[Math.floor(Math.random() * n.length)]); }
   }
   const yawTo = (a, b) => Math.atan2(pos(b).x - pos(a).x, pos(b).z - pos(a).z);
   function face(a, b, exact) { a.faceYaw = yawTo(a, b) * (exact ? 1 : 0.68); } // légèrement ouverts vers la caméra, comme au théâtre
@@ -258,13 +277,11 @@ export function startViewer(cfg) {
     { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim * 0.4, Math.min(lim, lq.t.y)); } // ne casse pas la nuque, et le visage reste visible quand il parle à quelqu'un de plus bas
     lq.t.normalize();
     // Un vrai regard ne saute pas d'une personne à l'autre : on cligne, les yeux partent, puis la tête suit et se pose.
-    if (a.lookAt !== b) {
+    if (NATURAL.gaze && a.lookAt !== b) {
       a.lookAt = b; a.hero.blink?.();
       if (a.aim && !a.extra) { head.getWorldQuaternion(lq.w); lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); a.hero.eyes?.(Math.max(-0.8, Math.min(0.8, lq.f.x * 1.4)), Math.max(-0.5, Math.min(0.5, lq.f.y * 1.4))); }
     }
-    if (!a.aim) a.aim = lq.t.clone();
-    a.aim.lerp(lq.t, 1 - Math.exp(-dt * (a.extra ? 9 : 5.5))).normalize();
-    lq.t.copy(a.aim);
+    if (NATURAL.gaze) { if (!a.aim) a.aim = lq.t.clone(); a.aim.lerp(lq.t, 1 - Math.exp(-dt * (a.extra ? 9 : 5.5))).normalize(); lq.t.copy(a.aim); }
     if (a.cheat) { head.getWorldPosition(lq.f); lq.f.subVectors(camera.position, lq.f).normalize(); lq.t.lerp(lq.f, a.cheat).normalize(); } // il parle à l'autre, mais son visage reste ouvert vers nous
     head.getWorldQuaternion(lq.w);
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
@@ -276,7 +293,7 @@ export function startViewer(cfg) {
     head.parent.getWorldQuaternion(lq.p);
     lq.p.invert().multiply(lq.d);
     head.quaternion.slerp(lq.p, a.lookW * 0.92);
-    listen(a, b, head, dt);
+    if (NATURAL.gaze) listen(a, b, head, dt);
     if (a.extra) {
       head.updateWorldMatrix(true, false); head.getWorldQuaternion(lq.w);
       lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); // la cible, vue depuis le logo
@@ -609,7 +626,7 @@ export function startViewer(cfg) {
     tickTime(dt);
     room?.update(dt);
     api.onFrame?.(dt);
-    for (const a of actors) { moveActor(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); applyLook(a, dt); }
+    for (const a of actors) { moveActor(a, dt); lean(a, dt); restless(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); applyLook(a, dt); }
     if (camTween) {
       camTween.t = Math.min(1, camTween.t + dt / 0.7);
       const e = 1 - (1 - camTween.t) ** 3;

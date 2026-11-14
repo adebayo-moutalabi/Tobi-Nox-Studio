@@ -1,0 +1,29 @@
+# DÉMO : MOUVEMENTS NATURELS
+# Pitch : Tobi entre, marche, s'assoit et parle avec Nox, qui réagit et se déplace. Sert à vérifier les mouvements, pas à publier.
+
+AMBIANCE soir
+DIRECT NOX marche centre
+FONDU direct
+PLAN large
+TOBI entre tapis
+PLAN gros TOBI
+TOBI dit (content) Nox, je suis rentré. Regarde comme je marche bien.
+PLAN gros NOX
+NOX dit (curieux) Tu glisses plus.
+PLAN large
+ATTENDRE 6
+NOX marche droite
+PLAN auto
+TOBI assis
+PLAN gros TOBI
+TOBI dit (fier) Et là, je m'assois sans traverser le lit.
+NOX marche milieu
+PLAN gros NOX
+NOX dit (content) Je note. Dix sur dix.
+PLAN gros TOBI
+TOBI dit (curieux) Et toi, tu penches quand tu marches ?
+PLAN large
+NOX marche gauche
+PLAN gros NOX
+NOX dit (punchline) Oui. J'ai du poids, maintenant.
+ATTENDRE 1

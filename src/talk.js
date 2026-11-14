@@ -125,6 +125,13 @@ export function lifeBody(state, dt, b) {
   addRot(b.neck, 0.014 * calm * drift(t, 0.43, 0.79), 0.028 * calm * drift(t, 0.29, 0.67), 0.01 * calm * drift(t, 0.51, 0.37));
   addRot(b.armL, 0.012 * air, 0, 0.01 * drift(t, 0.33, 0.71));
   addRot(b.armR, 0.012 * air, 0, -0.01 * drift(t, 0.27, 0.59));
+  if (b.hips) { // transfert de poids : le bassin bascule, les jambes restent d'aplomb, le buste compense
+    state.wT = (state.wT ?? 2.5) - dt;
+    if (state.wT <= 0) { state.wT = 4 + Math.random() * 5; state.wTo = (Math.random() < 0.5 ? -1 : 1) * (0.55 + 0.45 * Math.random()); }
+    state.w = (state.w || 0) + ((b.still ? state.wTo || 0 : 0) - (state.w || 0)) * (1 - Math.exp(-dt * 1.5));
+    const r = 0.05 * state.w;
+    if (Math.abs(r) > 0.0004) { addRot(b.hips, 0, 0, r); addRot(b.legL, 0, 0, -r); addRot(b.legR, 0, 0, -r); addRot(b.spine, 0, 0, -r * 0.7); addRot(b.neck, 0, 0, -r * 0.25); }
+  }
 }
 
 // Garde-fou pour tous les mouvements libres : une main ne passe ni dans l'autre, ni dans le buste.

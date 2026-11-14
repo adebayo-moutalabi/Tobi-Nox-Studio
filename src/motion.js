@@ -77,7 +77,7 @@ export function createMotion(root, bones, clips) {
     if (prev === act && !once) return;
     act.reset();
     act.setLoop(once ? THREE.LoopOnce : THREE.LoopRepeat, once ? 1 : Infinity);
-    act.clampWhenFinished = once; act.enabled = true; act.setEffectiveWeight(1); act.play();
+    act.timeScale = 1; act.clampWhenFinished = once; act.enabled = true; act.setEffectiveWeight(1); act.play();
     if (prev && prev !== act) prev.crossFadeTo(act, t, false);
     s.current = name;
   }
@@ -98,6 +98,8 @@ export function createMotion(root, bones, clips) {
     get pose() { return s.poseName; },
     get handsFree() { return !s.full && !layers.gesture.clip && !layers.hold.clip && (!s.poseName || s.poseName.startsWith('talk')); }, // aucun geste voulu où les mains se touchent
     has: (name) => !!byName[name],
+    get loco() { return s.loco; },
+    setStride(k) { const a = actions[s.loco]; if (a && (s.loco === 'walk' || s.loco === 'run')) a.timeScale = Math.min(1.2, Math.max(0.4, k)); }, // pas plus courts quand il ralentit
     setLocomotion(name) {
       if (s.seat || s.loco === name) return;
       s.loco = name;

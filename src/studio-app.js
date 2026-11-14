@@ -6,6 +6,7 @@ import { createRoom } from './room.js';
 import { roomActions } from './room-actions.js';
 import { mountStory } from './story.js';
 import HISTOIRE from '../histoire.txt';
+import DEMO_MVT from '../shorts/00_demo_mouvements.txt';
 import PILOTE from '../shorts/00_pilote_serveur.txt';
 import SHORT01 from '../shorts/01_cinq_minutes.txt';
 import E02 from '../shorts/02_site_vitrine.txt';
@@ -291,5 +292,6 @@ startViewer({
     "50. Claude Code devait me réveiller": E50,
     "51. Codex a eu mon stage": E51,
     "Le matin de l'examen": HISTOIRE,
+    "Démo · Mouvements naturels": DEMO_MVT,
   }),
 });

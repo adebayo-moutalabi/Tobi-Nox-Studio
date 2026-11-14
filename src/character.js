@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { buildClips } from './clips.js';
 import { createMotion } from './motion.js';
 import { V, clamp, lerp, smooth, hash, Part, jit, ring, ringOn, blendSkin } from './lowpoly.js';
+import { NATURAL } from './config.js';
 import { createTalk, stepTalk, talkShape, talkBody, lifeBody, addRot, clearRot, keepHandsApart, keepHandsOut, handLife } from './talk.js';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 
@@ -613,9 +614,9 @@ export function createCharacter() {
     setLift(h, flat) { state.liftTo = h; state.liftFlat = !!flat; },
     tap(side) { state.taps[side] = 1; state.tapF[side] = (state.tapF[side] + 1 + (side === 'L' ? 0 : 1)) % 4; },
     update(dt) {
-      clearRot(tapBones);
+      clearRot(tapBones); clearRot([bones.hips]);
       motion.update(dt);
-      lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.neck, armL: bones.arm_L, armR: bones.arm_R });
+      lifeBody(state, dt, { chest: bones.chest, spine: bones.spine, neck: bones.neck, armL: bones.arm_L, armR: bones.arm_R, ...(NATURAL.weight ? { hips: bones.hips, legL: bones.upleg_L, legR: bones.upleg_R, still: !motion.seat && !motion.gesture && motion.loco === 'idle' } : {}) });
       if (state.lift || state.liftTo) { // assis plus haut : le bassin monte, les pieds restent au sol
         state.lift += (state.liftTo - state.lift) * (1 - Math.exp(-dt * 7));
         if (Math.abs(state.lift) < 0.001 && !state.liftTo) state.lift = 0;
