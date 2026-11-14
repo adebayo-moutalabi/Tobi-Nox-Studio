@@ -358,6 +358,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Lieux : amphi, couloir et extérieur (`DECOR amphi`, `DECOR couloir`, `DECOR dehors`). L'amphi et l'extérieur ont été vus en image, pas le couloir.
 - Restent à faire : objets plus fins dans la chambre, poids du corps et élan avant les gestes.
 
+## Session Fable v2, branche `fable-v2` (14 novembre 2026)
+
+- Étiquette `studio-stable-avant-fable`, travail sur la branche `fable-v2` : `main` et le site public ne changent pas.
+- T1 : foulée calée sur la vitesse, arrêt progressif, transfert de poids, gestes de repos, Nox qui penche. Interrupteurs dans `src/config.js`. Scène « Démo · Mouvements naturels ».
+- T2 (début) : guirlande et affiches dans la chambre.
+- Suivi dans `PROGRESS.md`, `CHANGELOG.md` et `CREDITS.md`.
+
 ## À faire
 
 Voir `TACHES.md`.

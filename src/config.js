@@ -13,3 +13,6 @@ export const NATURAL = {
   idleVariants: true, // de temps en temps, un petit geste de repos (regarder ailleurs, se gratter, réfléchir)
   noxLean: true,      // Nox penche dans le sens de la marche, avec de l'inertie à l'arrêt
 };
+
+// Détails de la chambre (affiches, guirlande lumineuse au-dessus du lit). false : la chambre d'avant.
+export const ROOM_DETAILS = true;

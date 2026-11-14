@@ -23,6 +23,12 @@ Branche `fable-v2`. Rien n'est encore fusionné dans `main`, donc le site public
 git checkout studio-stable-avant-fable
 ```
 
+## 14 novembre 2026 : détails de la chambre (T2, début)
+
+| Nouveauté | Interrupteur dans `src/config.js` | Comment le voir |
+|---|---|---|
+| Guirlande lumineuse et deux affiches côté lit | `ROOM_DETAILS` | N'importe quel plan qui montre le lit |
+
 ## Pour une deuxième session
 
 - Finir T1 : vêtements, visèmes, mesure du glissement et des images par seconde.

@@ -36,17 +36,30 @@ Ce qui manque pour dire T1 terminé :
 - Nox marche avec ses jambes : il ne « flotte » pas, pour respecter son modèle actuel.
 - Je n'ai pas mesuré les images par seconde sur un portable moyen.
 
+### T2 : rendu et chambre (commencé)
+
+- Guirlande lumineuse au-dessus du placard du lit, qui scintille doucement, et deux affiches (« AIE LA VISION. » et un Nox en pixels) dans la niche derrière le lit. Interrupteur : `ROOM_DETAILS` dans `src/config.js`. Capture : `docs/captures/t2-chambre-details.jpg`.
+- Déjà en place avant la session : tone mapping ACES, occlusion ambiante (GTAO), bloom, ombres douces.
+
+Ce qui manque : HDRI d'environnement, profondeur de champ en tournage, objets sur le bureau (mugs, câbles, cours, plante), désordre au sol. Je n'ai rien posé sur le bureau ni au sol, parce que je n'ai pas vérifié où passent les personnages et où se posent les IA.
+
+### T3 : lieux (partiel, fait le 13 novembre sur `main`)
+
+- Existent déjà avec la commande `DECOR` : `couloir` (portes numérotées de la résidence), `amphi`, `dehors`, `laverie`, `kebab`, `bu`. Enseignes fictives.
+- Ce qui manque : salle de TP, hall du campus, cuisine commune, version soir propre à chaque lieu, passants animés, ambiance sonore, noms fictifs de l'école et de la résidence.
+
 ## Reste à faire
 
-- T2 : rendu (HDRI, SSAO, profondeur de champ en tournage) et chambre plus vivante.
-- T3 : campus (salle de TP, hall) et résidence (cuisine commune, couloir jour et soir), avec passants.
+- T2 : HDRI, profondeur de champ en tournage, objets du bureau et désordre.
+- T3 : salle de TP, hall, cuisine commune, passants, sons.
 - T4 : format de script JSON. L'export image par image et le `.srt` existent déjà.
 - T5 : métro, voisin, resto U.
 
 ## Prochaine action exacte
 
 1. Ouvrir `studio.html`, choisir « Démo · Mouvements naturels », cliquer sur Lire, et valider les points de la section « Quoi observer ».
-2. Si c'est bon : commencer T2 par les objets de la chambre dans un nouveau fichier `src/chambre-details.js`, avec un interrupteur `ROOM_DETAILS` dans `src/config.js`.
+2. Si c'est bon : continuer T2 dans `src/chambre-details.js` (objets du bureau), en vérifiant d'abord les places `PERCHOIRS.bureau` et l'ordinateur dans `src/story.js` et `src/room.js`.
+3. Puis T3 : ajouter `tp` et `cuisine` dans `src/lieux.js`, sur le modèle de `couloir`.
 
 ## Quoi observer dans la démo
 
