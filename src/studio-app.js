@@ -149,6 +149,16 @@ import A147 from '../shorts/147_mon_ia_a_ferme_le_frigo.txt';
 import A148 from '../shorts/148_le_premier_jour_de_mon_ia_a_la_fac.txt';
 import A149 from '../shorts/149_mon_ia_me_presente_sa_copine.txt';
 import A150 from '../shorts/150_mon_ia_m_a_mis_un_controle_parental.txt';
+import A151 from '../shorts/151_mon_ia_et_centi_se_separent.txt';
+import A152 from '../shorts/152_mon_ia_me_reveille_comme_ma_mere.txt';
+import A153 from '../shorts/153_la_liste_de_noel_de_mon_ia.txt';
+import A154 from '../shorts/154_mon_ia_est_devenu_mon_coloc.txt';
+import A155 from '../shorts/155_mon_ia_en_mode_mamie.txt';
+import A156 from '../shorts/156_mon_ia_joue_au_grand_frere.txt';
+import A157 from '../shorts/157_mon_ia_veut_une_augmentation.txt';
+import A158 from '../shorts/158_on_en_a_a_la_maison.txt';
+import A159 from '../shorts/159_ma_mere_arrive_dans_10_minutes.txt';
+import A160 from '../shorts/160_mon_ia_a_lu_mon_journal_intime.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -199,13 +209,23 @@ startViewer({
     "141. Mon IA veut un animal de compagnie": A141,
     "142. Mon IA est rentrée à 4 h du matin": A142,
     "143. Mon IA a fait une fugue": A143,
-    "144. Mon IA veut un téléphone": A144,
-    "145. Mon IA a lu mes notes": A145,
+    "144. Mon IA a eu son premier téléphone": A144,
+    "145. Mon IA compare mes notes à celles du voisin": A145,
     "146. Mon IA a fait une soirée dans ma chambre": A146,
-    "147. Mon IA a fermé le frigo à clé": A147,
-    "148. Le premier jour de mon IA à la fac": A148,
-    "149. Mon IA m'a présenté sa copine": A149,
+    "147. Mon IA a mis un mot de passe sur le frigo": A147,
+    "148. J'ai accompagné mon IA à la fac": A148,
+    "149. La copine de mon IA m'a fait passer un interrogatoire": A149,
     "150. Mon IA m'a mis un contrôle parental": A150,
+    "151. Mon IA et sa copine se séparent : qui garde Tobi ?": A151,
+    "152. Mon IA me réveille comme ma mère": A152,
+    "153. La liste de Noël de mon IA": A153,
+    "154. Mon IA est devenu mon coloc": A154,
+    "155. Mon IA est passée en mode mamie": A155,
+    "156. Mon IA a joué au grand frère avant mon rencard": A156,
+    "157. Mon IA veut une augmentation d'argent de poche": A157,
+    "158. Mon IA dit « On en a à la maison »": A158,
+    "159. Mon IA m'a dit : « Ta mère arrive dans 10 minutes »": A159,
+    "160. Mon IA a lu mon journal intime": A160,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

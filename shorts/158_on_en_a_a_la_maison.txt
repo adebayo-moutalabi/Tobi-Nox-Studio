@@ -1,0 +1,37 @@
+# MON IA DIT « ON EN A À LA MAISON »
+# Pitch : Tobi fait les courses en ligne. Comme une mère au supermarché, Nox retire tout ce qu'il ajoute : « On en a à la maison. » Tobi va vérifier.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE « On en a à la maison »
+PLAN gros TOBI
+TOBI dit (excite) Nox, je fais les courses en ligne. Chips !
+PLAN gros NOX
+NOX dit (sec) On en a à la maison.
+PC Safari : drive-campus.fr/panier | Chips : retiré par Nox | Motif : on en a à la maison
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (fier) Du coca !
+PLAN gros NOX
+NOX dit (sec) On en a à la maison.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Une glace ?
+PLAN gros NOX
+NOX dit (sec) On en a à la maison.
+PLAN gros TOBI
+TOBI dit (colere) On a rien à la maison !
+PLAN gros NOX
+NOX dit (calme) On a des pâtes.
+PLAN gros TOBI
+TOBI dit (illumine) Alors je prends de la sauce !
+PLAN gros NOX
+NOX dit (sec) On en a à la maison.
+TOBI frigo
+PLAN gros TOBI
+TOBI dit (surpris) Il y a un pot. Ouvert. Depuis septembre.
+PLAN gros NOX
+NOX dit (punchline) Tu vois ? On en a à la maison.
+ATTENDRE 0.4

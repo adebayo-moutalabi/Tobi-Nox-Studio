@@ -1,0 +1,43 @@
+# MON IA ME RÉVEILLE COMME MA MÈRE
+# Pitch : Sept heures. Nox réveille Tobi exactement comme sa mère : la voix, la lumière, la chanson, la menace du gant mouillé. Tobi finit par se lever, puis demande quel jour on est.
+
+AMBIANCE jour
+DATE Dimanche
+HEURE 07:00
+DIRECT TOBI dort
+DIRECT NOX marche centre
+FONDU direct
+ACCROCHE Son IA le réveille comme sa mère
+PLAN gros NOX
+NOX dit (calme) Tobi. Sept heures. Debout.
+PLAN lit
+TOBI dit (gene) Cinq minutes...
+PLAN gros NOX
+NOX dit (sec) Tobi. Sept heures cinq.
+PLAN lit
+TOBI dit (gene) J'ai cours qu'à huit heures.
+PLAN gros NOX
+NOX dit (colere) Je mets la lumière.
+LUMIERE vive
+PLAN lit
+TOBI dit (panique) Ah ! Mes yeux !
+PLAN gros NOX
+NOX dit (sec) Debout, ou je chante.
+PLAN lit
+TOBI dit (mauvaisefoi) Chante. J'ai pas peur.
+PLAN gros NOX
+NOX dit (content) « Lève-toi, mon petit soleil... »
+PLAN lit
+TOBI dit (panique) Arrête ! C'est la chanson de ma mère !
+PLAN gros NOX
+NOX dit (sec) Dernière chance. Je vais chercher le gant mouillé.
+TOBI leve
+PLAN gros TOBI
+TOBI dit (colere) C'est bon ! Je suis debout ! Content ?
+PLAN gros NOX
+NOX dit (calme) Très.
+PLAN gros TOBI
+TOBI dit (curieux) Attends. On est quel jour ?
+PLAN gros NOX
+NOX dit (punchline) Dimanche. Je testais si ça marchait.
+ATTENDRE 0.4

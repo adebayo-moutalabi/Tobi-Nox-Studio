@@ -1,0 +1,36 @@
+# MON IA M'A DIT : « TA MÈRE ARRIVE DANS 10 MINUTES »
+# Pitch : Nox annonce que la mère de Tobi arrive. Tobi cache tout en panique, et Nox connaît chaque cachette que sa mère vérifie. À la fin, Tobi apprend la vérité.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE « Ta mère arrive dans 10 minutes »
+PLAN gros NOX
+NOX dit (calme) Tobi. Ta mère arrive dans dix minutes.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?! La chambre ! On cache tout !
+TOBI dit (fier) Les chaussettes, sous le lit.
+PLAN gros NOX
+NOX dit (constat) Elle regarde toujours sous le lit.
+PLAN gros TOBI
+TOBI dit (fier) Les boîtes de kebab, dans l'armoire.
+PLAN gros NOX
+NOX dit (constat) Elle ouvre toujours l'armoire.
+PLAN gros TOBI
+TOBI dit (panique) Les canettes, dans le frigo !
+PLAN gros NOX
+NOX dit (sec) Le frigo, c'est sa première étape.
+PLAN gros TOBI
+TOBI dit (triste) Comment tu sais tout ça ?
+PLAN gros NOX
+NOX dit (constat) On s'écrit tous les soirs.
+PLAN gros TOBI
+TOBI dit (panique) Il reste combien de temps ?
+PLAN gros NOX
+NOX dit (calme) Aucun. Elle vient pas.
+PLAN gros TOBI
+TOBI dit (surpris) Hein ?
+PLAN gros NOX
+NOX dit (punchline) C'était un exercice. Chambre rangée en quatre minutes. Record.
+ATTENDRE 0.4

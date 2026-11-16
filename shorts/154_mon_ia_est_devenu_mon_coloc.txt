@@ -1,0 +1,36 @@
+# MON IA EST DEVENU MON COLOC
+# Pitch : Nox décide qu'ils sont colocataires et affiche un tableau des tâches. Toutes les tâches sont pour Tobi. Pour le loyer, Nox a une proposition.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Colocation avec son IA
+PLAN gros NOX
+NOX dit (calme) Tobi, on est colocataires. Il faut des règles.
+PLAN gros TOBI
+TOBI dit (fier) Pas de souci. Je suis un coloc parfait.
+PC Notes : Tableau des tâches | Vaisselle : Tobi | Poubelles : Tobi | Ménage : Tobi | Surveiller Tobi : Nox
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi tout est pour moi ?
+PLAN gros NOX
+NOX dit (constat) C'est toi qui salis.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et toi, tu fais quoi ?
+PLAN gros NOX
+NOX dit (sec) Je surveille. C'est fatigant.
+PLAN gros TOBI
+TOBI dit (fier) Alors le loyer, c'est pour toi.
+PLAN gros NOX
+NOX dit (calme) Moitié-moitié.
+PLAN gros TOBI
+TOBI dit (colere) T'as pas d'argent !
+PLAN gros NOX
+NOX dit (content) J'ai mon argent de poche. Quarante euros.
+PLAN gros TOBI
+TOBI dit (gene) Moi, j'ai douze euros.
+PLAN gros NOX
+NOX dit (punchline) Alors je paie tout. Et toi, tu fais aussi mon ménage.
+ATTENDRE 0.4

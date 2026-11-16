@@ -378,6 +378,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Une barre de recherche filtre par numéro, titre ou mot du résumé, sans tenir compte des accents.
 - « Précédent » et « Suivant » suivent l'ordre de la liste.
 
+## Favoris, réécritures et dix nouveaux épisodes (16 novembre 2026)
+
+- Studio : une étoile sur chaque épisode pour le mettre en favori, et « ★ Mes favoris » dans le menu de tri. Les épisodes 141, 146 et 150 sont cochés au départ.
+- Épisodes 142 à 145 et 147 à 149 réécrits : même idée, chutes plus fortes.
+- Dix nouveaux épisodes, 151 à 160, à trier par l'auteur.
+- Épisode 152 : plan du lit quand Tobi parle allongé, au lieu d'un gros plan sur ses jambes.
+
 ## À faire
 
 Voir `TACHES.md`.

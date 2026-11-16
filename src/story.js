@@ -752,7 +752,11 @@ export function mountStory(v, stories) {
   el('storyText').addEventListener('input', refresh);
   ['storyFormat', 'storyQuality'].forEach((id) => el(id).addEventListener('change', refresh));
   // Liste des épisodes : triée (plus récents, plus anciens, ou à publier d'abord) et filtrée par la recherche.
-  const ORDER = 'tobinox.ordre';
+  const ORDER = 'tobinox.ordre', FAVS = 'tobinox.favoris';
+  // Favoris : gardés dans ce navigateur. Au premier passage, les épisodes que l'auteur a aimés sont déjà cochés.
+  const FAV_START = ['141.', '146.', '150.'];
+  const favs = (() => { try { const raw = localStorage.getItem(FAVS); if (raw) return new Set(JSON.parse(raw)); } catch { /* stockage bloqué */ } return new Set(Object.keys(stories).filter((k) => FAV_START.some((p) => k.startsWith(p)))); })();
+  const saveFavs = () => { try { localStorage.setItem(FAVS, JSON.stringify([...favs])); } catch { /* stockage bloqué */ } };
   const sortKey = () => el('epsSort')?.value || 'desc';
   const plainTxt = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const ordered = () => {
@@ -765,7 +769,7 @@ export function mountStory(v, stories) {
   };
   const renderEps = () => {
     const q = plainTxt((el('epsSearch')?.value || '').trim()), words = q.split(/\s+/).filter(Boolean);
-    const shown = ordered().filter((k) => !words.length || words.every((w) => plainTxt(k + ' ' + ((/^#\s*Pitch\s*:\s*(.*)$/mi.exec(stories[k]) || [])[1] || '')).includes(w)));
+    const shown = ordered().filter((k) => sortKey() !== 'fav' || favs.has(k)).filter((k) => !words.length || words.every((w) => plainTxt(k + ' ' + ((/^#\s*Pitch\s*:\s*(.*)$/mi.exec(stories[k]) || [])[1] || '')).includes(w)));
     el('epsCount').textContent = words.length ? `${shown.length} épisode${shown.length > 1 ? 's' : ''} sur ${Object.keys(stories).length}` : `${Object.keys(stories).length} épisodes`;
     el('eps').replaceChildren(...shown.map((k) => {
     const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
@@ -773,10 +777,13 @@ export function mountStory(v, stories) {
     b.append(n, m ? m[2] : k);
     if (pubs?.published(k)) { const tag = document.createElement('small'); tag.textContent = 'Publiée'; b.append(tag); }
     b.addEventListener('click', () => openEp(k));
-    li.append(b);
+    const star = document.createElement('button'); star.type = 'button'; star.className = 'fav' + (favs.has(k) ? ' on' : ''); star.textContent = favs.has(k) ? '★' : '☆';
+    star.setAttribute('aria-label', favs.has(k) ? 'Retirer des favoris' : 'Ajouter aux favoris'); star.title = star.getAttribute('aria-label');
+    star.addEventListener('click', (e) => { e.stopPropagation(); if (favs.has(k)) favs.delete(k); else favs.add(k); saveFavs(); renderEps(); });
+    li.append(b, star);
     return li;
   }));
-    if (!shown.length) { const li = document.createElement('li'); li.className = 'epsCount'; li.textContent = 'Aucun épisode ne correspond.'; el('eps').append(li); }
+    if (!shown.length) { const li = document.createElement('li'); li.className = 'epsCount'; li.textContent = sortKey() === 'fav' && !words.length ? 'Aucun favori. Touche l’étoile d’un épisode pour l’ajouter.' : 'Aucun épisode ne correspond.'; el('eps').append(li); }
   };
   try { const o = localStorage.getItem(ORDER); if (o && el('epsSort')) el('epsSort').value = o; } catch { /* stockage bloqué */ }
   el('epsSearch')?.addEventListener('input', () => { renderEps(); el('eps').scrollTop = 0; });

@@ -1,41 +1,43 @@
-# MON IA A FERMÉ LE FRIGO À CLÉ
-# Pitch : Nox met Tobi au régime : le frigo a un code secret. Tobi essaie tous ses plats préférés. Le code est un légume.
+# MON IA A MIS UN MOT DE PASSE SUR LE FRIGO
+# Pitch : Le frigo est fermé. Nox a choisi le mot de passe : un mot que Tobi ne dit jamais. Tobi essaie tout ce qu'il aime, puis tout ce qu'il ne dit pas.
 
 AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Le frigo a un code secret
+ACCROCHE Le frigo a un mot de passe
 PLAN gros TOBI
 TOBI dit (panique) Nox ! Le frigo est fermé à clé !
 PLAN gros NOX
-NOX dit (calme) Régime. Il faut le code.
+NOX dit (calme) Il faut le mot de passe.
 PLAN gros TOBI
-TOBI dit (fier) Facile. Kebab.
+TOBI dit (fier) Kebab.
 PLAN gros NOX
 NOX dit (sec) Non.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Pizza.
-PLAN gros NOX
-NOX dit (sec) Non.
-PLAN gros TOBI
-TOBI dit (gene) Chips ? Frites ? Nutella ?
+TOBI dit (mauvaisefoi) Pizza. Frites. Nutella.
 PLAN gros NOX
 NOX dit (sec) Non. Non. Non.
 PLAN gros TOBI
 TOBI dit (colere) Donne un indice !
 PLAN gros NOX
-NOX dit (constat) C'est un légume.
+NOX dit (constat) Un mot que tu dis jamais.
 PLAN gros TOBI
-TOBI dit (curieux) Ketchup ?
+TOBI dit (illumine) « Révisions » !
 PLAN gros NOX
-NOX dit (calme) Tu connais aucun légume.
+NOX dit (sec) Plus rare.
 PLAN gros TOBI
-TOBI dit (illumine) Carotte !
+TOBI dit (gene) « J'ai rangé » ?
+PLAN gros NOX
+NOX dit (sec) Encore plus rare.
+PLAN gros TOBI
+TOBI dit (resigne) Je sais pas, moi ! S'il te plaît !
+PLAN gros NOX
+NOX dit (content) Tu chauffes.
+PLAN gros TOBI
+TOBI dit (gene) ... Merci ?
 BRUIT ding
 TOBI frigo
-PLAN gros TOBI
-TOBI dit (surpris) Il y a que des carottes.
 PLAN gros NOX
-NOX dit (punchline) C'était le code. Et le menu.
+NOX dit (punchline) Deux ans que j'attendais ce mot.
 ATTENDRE 0.4

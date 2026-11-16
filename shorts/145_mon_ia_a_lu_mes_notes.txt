@@ -1,37 +1,35 @@
-# MON IA A LU MES NOTES
-# Pitch : Tobi annonce ses notes du semestre à Nox. Nox réagit exactement comme un parent déçu, jusqu'à la punition.
+# MON IA COMPARE MES NOTES À CELLES DU VOISIN
+# Pitch : Tobi annonce ses notes du semestre. Comme un vrai parent, Nox les compare à chaque fois à celles de Karim, le voisin. Tobi finit par comprendre pourquoi Karim a de si bonnes notes.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son IA réagit à ses notes
+ACCROCHE Son IA le compare au voisin
 PLAN gros TOBI
 TOBI dit (gene) Nox, j'ai mes notes. Promets de pas t'énerver.
 PLAN gros NOX
-NOX dit (calme) Je m'énerve jamais.
+NOX dit (calme) Promis.
 PLAN gros TOBI
 TOBI dit (gene) Droit : six.
 PLAN gros NOX
-NOX dit (sec) Je suis pas fâché. Je suis déçu.
+NOX dit (curieux) Et Karim ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Le prof m'aime pas.
+TOBI dit (gene) Quatorze.
+TOBI dit (mauvaisefoi) Anglais : quatre. Mais le prof parlait anglais tout le temps.
 PLAN gros NOX
-NOX dit (constat) Il t'a jamais vu.
+NOX dit (curieux) Et Karim ?
 PLAN gros TOBI
-TOBI dit (gene) Anglais : quatre.
+TOBI dit (colere) Seize ! Arrête avec Karim !
 PLAN gros NOX
-NOX dit (sec) Toujours déçu.
+NOX dit (sec) Karim range sa chambre. Karim appelle sa mère.
 PLAN gros TOBI
-TOBI dit (fier) Sport : dix-huit !
+TOBI dit (fier) Sport : dix-huit ! Plus que Karim !
 PLAN gros NOX
-NOX dit (curieux) T'as fait du sport ?
+NOX dit (surpris) T'as fait du sport ?
 PLAN gros TOBI
 TOBI dit (gene) J'ai couru après le bus. Le prof était dedans.
+TOBI dit (curieux) Attends. Comment tu connais toutes les notes de Karim ?
 PLAN gros NOX
-NOX dit (calme) Bien. Va dans ta chambre.
-PLAN gros TOBI
-TOBI dit (surpris) On est dans ma chambre !
-PLAN gros NOX
-NOX dit (punchline) Alors va dans le couloir. Et réfléchis.
+NOX dit (punchline) C'est moi qui fais ses DM. Lui, il paie.
 ATTENDRE 0.4

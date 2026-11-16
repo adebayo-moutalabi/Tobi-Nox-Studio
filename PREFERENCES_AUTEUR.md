@@ -159,6 +159,13 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Les trois Shorts les plus vus montrent Nox dans un rôle de la famille (congé, crise d'ado, argent de poche). Les rôles parent-enfant s'inversent, et la chute retourne une phrase de Tobi contre lui. C'est la recette à privilégier.
 - L'auteur a trouvé que les changements de mouvement de la session Fable v2 n'amélioraient pas grand-chose.
 
+## Favoris de la série « famille » (16 novembre 2026)
+
+- Aimés : 141 (animal de compagnie), 146 (soirée dans la chambre), 150 (contrôle parental). Ce qui marche : chaque objection de Tobi se retourne contre lui (141), une situation qui dégénère jusqu'à un retournement physique (146), des interdits qui s'empilent puis une chute qui implique la mère (150).
+- Pas aimés : 142 à 145 et 147 à 149, « pas vraiment drôles ». Les idées plaisent, l'exécution non. Ils sont réécrits.
+- L'auteur veut pouvoir mettre des épisodes en favori dans le Studio.
+- Tant que GitHub Pages publie depuis `fable-v2`, recopier `main` dans `fable-v2` à chaque envoi.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

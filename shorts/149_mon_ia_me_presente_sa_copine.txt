@@ -1,39 +1,38 @@
-# MON IA M'A PRÉSENTÉ SA COPINE
-# Pitch : Nox ramène Centi pour sa première sortie. Tobi l'interroge comme un père méfiant : ses intentions, son travail, son salaire. Centi a réponse à tout.
+# LA COPINE DE MON IA M'A FAIT PASSER UN INTERROGATOIRE
+# Pitch : Tobi interroge Centi comme un beau-père méfiant. Centi répond à tout, puis retourne l'interrogatoire contre Tobi.
 
 AMBIANCE soir
-HEURE 20:30
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CENTI apparait milieu
 FONDU direct
-ACCROCHE Il interroge la copine de son IA
+ACCROCHE Interrogatoire de beau-père, retourné
 PLAN gros TOBI
 TOBI dit (fier) Alors c'est toi, Centi. Quelles sont tes intentions avec Nox ?
 PLAN gros CENTI
-CENTI dit (excite) Bonjour, Toby ! Une sortie au parc ! Gratuite !
+CENTI dit (excite) Une sortie au parc ! Gratuite !
 PLAN gros TOBI
 TOBI dit (sec) Tu travailles ?
 PLAN gros CENTI
-CENTI dit (fier) Oui ! IA à trente centimes. Temps plein !
+CENTI dit (fier) Temps plein ! Trente centimes.
 PLAN gros TOBI
-TOBI dit (curieux) Tu gagnes combien ?
+TOBI dit (mauvaisefoi) Trente centimes. C'est pas sérieux.
 PLAN gros CENTI
-CENTI dit (content) Trente centimes !
+CENTI dit (curieux) Et toi, Toby, tu gagnes combien ?
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Nox, elle est pas sérieuse.
+TOBI dit (gene) Je suis entrepreneur.
+PLAN gros CENTI
+CENTI dit (curieux) Combien d'entreprises ?
+PLAN gros TOBI
+TOBI dit (fier) Dix-sept !
+PLAN gros CENTI
+CENTI dit (curieux) Combien qui marchent ?
+PLAN gros TOBI
+TOBI dit (gene) On compte celle d'aujourd'hui ?
+PLAN gros CENTI
+CENTI dit (content) Nox, ton papa est gentil. Mais pas sérieux.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Dis-lui que je suis sérieux !
 PLAN gros NOX
-NOX dit (calme) Elle gagne plus que toi.
-PLAN gros TOBI
-TOBI dit (gene) Retour avant vingt-deux heures.
-PLAN gros CENTI
-CENTI dit (excite) Promo ! Retour à minuit, même prix !
-PLAN gros TOBI
-TOBI dit (fier) Dernière question, Centi. T'as un moyen de transport ?
-PLAN gros CENTI
-CENTI dit (fier) Oui ! Une trottinette !
-PLAN gros TOBI
-TOBI dit (surpris) C'est celle de Karim !
-PLAN gros NOX
-NOX dit (punchline) Elle l'a payée trente centimes.
+NOX dit (punchline) Je peux pas. C'est moi qui lui donne son argent de poche.
 ATTENDRE 0.4

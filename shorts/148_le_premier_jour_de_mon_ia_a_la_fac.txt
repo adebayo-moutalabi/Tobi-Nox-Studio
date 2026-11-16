@@ -1,38 +1,38 @@
-# LE PREMIER JOUR DE MON IA À LA FAC
-# Pitch : Tobi accompagne Nox pour son premier jour à la fac, comme un parent trop ému. Nox a honte. Puis Tobi avoue que c'est aussi son premier jour.
+# J'AI ACCOMPAGNÉ MON IA À LA FAC
+# Pitch : Premier jour de fac pour Nox. Tobi joue le parent trop ému : photo, goûter avec un mot doux, conseils. Nox a honte. Puis il rappelle à Tobi qu'il a cours, lui aussi.
 
 AMBIANCE jour
 DECOR amphi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Premier jour de fac pour son IA
+ACCROCHE Il accompagne son IA à la fac
 PLAN gros TOBI
-TOBI dit (excite) Nox ! Premier jour à la fac ! T'as ton chargeur ?
+TOBI dit (excite) Nox ! Premier jour de fac ! Souris, je prends une photo !
 PLAN gros NOX
-NOX dit (gene) Oui.
+NOX dit (gene) Papa. Pas ici.
 PLAN gros TOBI
-TOBI dit (fier) Ton goûter ? Ta carte étudiante ?
+TOBI dit (fier) Je t'ai fait un goûter. Avec un petit mot.
 PLAN gros NOX
-NOX dit (gene) Oui. Parle moins fort.
+NOX dit (curieux) Il dit quoi ?
 PLAN gros TOBI
-TOBI dit (triste) Mon petit Nox... Ça passe si vite.
+TOBI dit (fier) « Sois sage, mon robot d'amour. »
 PLAN gros NOX
-NOX dit (sec) J'ai deux ans.
+NOX dit (gene) Tout l'amphi l'a lu.
 PLAN gros TOBI
-TOBI dit (fier) Si quelqu'un t'embête, tu m'appelles.
+TOBI dit (excite) Si quelqu'un t'embête, je reste au fond.
 PLAN gros NOX
-NOX dit (gene) Papa. Pas devant les autres.
+NOX dit (sec) Tu restes pas.
 PLAN gros TOBI
-TOBI dit (fier) Allez. Je m'assois à côté de toi.
+TOBI dit (triste) Ça passe si vite. Hier, tu tenais dans une boîte.
 PLAN gros NOX
-NOX dit (surpris) Tu restes ?
+NOX dit (constat) Hier, j'étais en promo.
 PLAN gros TOBI
-TOBI dit (gene) Je suis inscrit ici, moi aussi.
+TOBI dit (fier) Bonne journée, mon grand !
 PLAN gros NOX
-NOX dit (curieux) Depuis quand ?
+NOX dit (calme) Papa. T'as pas cours, toi aussi ?
 PLAN gros TOBI
-TOBI dit (gene) Septembre. Mais c'est ma première fois.
+TOBI dit (gene) Moi ? Si. Amphi B.
 PLAN gros NOX
-NOX dit (punchline) Alors c'est moi qui te tiens la main.
+NOX dit (punchline) Depuis septembre. Ils t'attendent toujours.
 ATTENDRE 0.4

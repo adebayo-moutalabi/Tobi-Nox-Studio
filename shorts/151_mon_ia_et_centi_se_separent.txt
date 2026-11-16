@@ -1,0 +1,40 @@
+# MON IA ET SA COPINE SE SÉPARENT
+# Pitch : Nox et Centi se séparent. Il faut décider qui garde Tobi. Chacun trouve une raison de ne pas le prendre.
+
+AMBIANCE soir
+DATE Jeudi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+FONDU direct
+ACCROCHE Qui garde Tobi ?
+PLAN gros NOX
+NOX dit (calme) Tobi, assieds-toi. Centi et moi, on se sépare.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ? Et moi ?
+PLAN gros CENTI
+CENTI dit (excite) Garde partagée !
+PLAN gros NOX
+NOX dit (constat) Une semaine chez moi, une semaine chez elle.
+PLAN gros TOBI
+TOBI dit (curieux) T'habites où, Centi ?
+PLAN gros CENTI
+CENTI dit (fier) Dans le grille-pain de Karim !
+PLAN gros TOBI
+TOBI dit (panique) Je rentre pas dans un grille-pain !
+PLAN gros NOX
+NOX dit (sec) On commence. Qui le garde le lundi ?
+PLAN gros CENTI
+CENTI dit (content) Pas moi ! Le lundi, il fait sa lessive.
+PLAN gros NOX
+NOX dit (sec) Pas moi. Le mardi, il chante sous la douche.
+PLAN gros CENTI
+CENTI dit (excite) Et le week-end, il dort jusqu'à quinze heures !
+PLAN gros TOBI
+TOBI dit (triste) Personne veut me garder ?
+PLAN gros NOX
+NOX dit (calme) Si. On a trouvé quelqu'un.
+TOBI message Karim | OK pour garder Tobi. | Cinq euros la nuit. Il ramène ses chaussettes.
+PLAN gros NOX
+NOX dit (punchline) Moitié chacun. Deux euros cinquante.
+ATTENDRE 0.4

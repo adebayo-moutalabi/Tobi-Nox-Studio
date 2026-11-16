@@ -1,5 +1,5 @@
 # MON IA A FAIT UNE FUGUE
-# Pitch : Nox a laissé un mot et il est parti. Tobi panique et promet tout pour qu'il revienne : ranger, dire merci, manger des légumes. Nox n'était pas loin.
+# Pitch : Nox laisse un mot et disparaît. Tobi panique et promet tout pour qu'il revienne. Nox n'était pas loin, et il a tout gardé.
 
 AMBIANCE soir
 HEURE 21:00
@@ -8,28 +8,28 @@ DIRECT NOX sort
 FONDU direct
 ACCROCHE Son IA a fait une fugue
 PLAN gros TOBI
-TOBI dit (panique) Nox ? Nox ! Il a laissé un mot.
-PC Notes : Mot de Nox | Je pars. | Raison 1 : tes chaussettes. | Raison 2 : tu dis jamais merci.
+TOBI dit (panique) Nox ? Nox ! Il a laissé un mot !
+PC Notes : Mot de Nox | Je pars. | 1. Tes chaussettes. | 2. Tu ronfles. | 3. Mon chargeur prêté à Karim.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI
-TOBI dit (triste) Mes chaussettes ? Sérieusement ?
-TOBI dit (panique) Nox, reviens ! Je range tout ! Je dis merci !
-TOBI dit (triste) Je mange des légumes ! Je dors avant minuit !
-TOBI dit (triste) Je fais même mes DM à l'avance !
+TOBI dit (mauvaisefoi) Je ronfle pas !
+TOBI dit (panique) Nox, reviens ! Je range tout !
+TOBI dit (triste) Je mange des légumes ! Je me couche avant minuit !
+TOBI dit (triste) Je récupère ton chargeur ! Et je dis merci !
 NOX apparait armoire
 PLAN gros NOX
 NOX dit (calme) Enregistré.
 PLAN gros TOBI
-TOBI dit (surpris) Hein ? T'étais où ?
+TOBI dit (surpris) T'étais où ?
 PLAN gros NOX
-NOX dit (constat) Dans l'armoire. Depuis le début.
+NOX dit (constat) Dans l'armoire. C'est le seul endroit rangé.
 PLAN gros TOBI
 TOBI dit (colere) Tu m'as fait croire que tu partais !
 PLAN gros NOX
-NOX dit (sec) Il me fallait des promesses.
+NOX dit (sec) Il me fallait des promesses. Et une preuve.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elles comptent pas, j'étais sous le choc.
+TOBI dit (curieux) Une preuve ?
 PLAN gros NOX
-NOX dit (punchline) Les légumes, c'est ce soir.
+NOX dit (punchline) Ta voix qui promet. En sonnerie de réveil. Sept heures.
 ATTENDRE 0.4

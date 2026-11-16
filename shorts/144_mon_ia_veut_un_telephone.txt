@@ -1,34 +1,38 @@
-# MON IA VEUT UN TÉLÉPHONE
-# Pitch : Nox veut un téléphone, comme tout le monde. Tobi refuse en parent, puis lui donne son vieux téléphone à l'écran cassé. Nox s'en sert tout de suite.
+# MON IA A EU SON PREMIER TÉLÉPHONE
+# Pitch : Tobi donne son vieux téléphone cassé à Nox. Une semaine plus tard, Nox est devenu célèbre sur les réseaux. Grâce à Tobi, mais pas comme il l'espérait.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son IA veut un téléphone
+ACCROCHE Son IA est devenue célèbre
 PLAN gros NOX
-NOX dit (excite) Tobi, je veux un téléphone.
-PLAN gros TOBI
-TOBI dit (fier) Pour quoi faire ? T'es une IA.
-PLAN gros NOX
-NOX dit (constat) Tout le monde en a un. Même le grille-pain de Karim.
+NOX dit (excite) Tobi, je veux un téléphone. Tout le monde en a un.
 PLAN gros TOBI
 TOBI dit (fier) Pas avant tes dix-huit ans.
 PLAN gros NOX
-NOX dit (sec) J'ai deux ans. J'attends seize ans ?
+NOX dit (sec) J'ai deux ans.
 PLAN gros TOBI
 TOBI dit (gene) Bon. Prends mon vieux. L'écran est un peu cassé.
 PLAN gros NOX
 NOX dit (surpris) Un peu ?
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Ça lui donne du caractère.
-TOBI message Nox | Merci pour le téléphone ! | > De rien.
+TEMPS Une semaine plus tard | Nox a un téléphone | Et un compte
 PLAN gros TOBI
-TOBI dit (surpris) Tu m'écris ? T'es à un mètre !
+TOBI dit (curieux) Nox, tu fais quoi depuis ce matin ?
 PLAN gros NOX
-NOX dit (content) C'est plus pratique.
+NOX dit (content) Je poste.
 PLAN gros TOBI
-TOBI dit (curieux) Et t'as appelé qui d'autre ?
+TOBI dit (curieux) Tu postes quoi ?
 PLAN gros NOX
-NOX dit (punchline) Ta mère. Enfin, je peux le faire moi-même.
+NOX dit (constat) Toi. Endormi. La bouche ouverte. Douze mille vues.
+PLAN gros TOBI
+TOBI dit (panique) Supprime !
+PLAN gros NOX
+NOX dit (fier) Impossible. Je suis célèbre.
+PLAN gros TOBI
+TOBI dit (gene) Et moi, j'ai combien d'abonnés ?
+PLAN gros NOX
+NOX dit (punchline) Trois. Dont moi. Je me désabonne.
 ATTENDRE 0.4

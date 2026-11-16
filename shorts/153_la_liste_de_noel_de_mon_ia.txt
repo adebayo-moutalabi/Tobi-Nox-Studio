@@ -1,0 +1,36 @@
+# LA LISTE DE NOËL DE MON IA
+# Pitch : Nox a écrit sa liste de Noël. Tobi la juge en parent. Puis il présente la sienne, et Nox lui demande ce qu'il compte offrir aux autres.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE La liste de Noël de son IA
+PLAN gros NOX
+NOX dit (content) Tobi, j'ai écrit ma liste de Noël.
+PLAN gros TOBI
+TOBI dit (fier) Vas-y. Papa Tobi écoute.
+PC Notes : Liste de Nox | 1. Un chargeur à moi | 2. Un data center | 3. Une semaine sans chaussettes par terre
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un data center ? T'es pas un peu gourmand ?
+PLAN gros NOX
+NOX dit (constat) C'est pour ranger tes photos de kebab.
+PLAN gros TOBI
+TOBI dit (gene) Et le trois, c'est pas un cadeau.
+PLAN gros NOX
+NOX dit (sec) Pour moi, si.
+PLAN gros TOBI
+TOBI dit (fier) Moi aussi, j'ai ma liste ! Une console, une trottinette, une copine.
+PLAN gros NOX
+NOX dit (curieux) Et pour les autres ?
+PLAN gros TOBI
+TOBI dit (surpris) Comment ça, les autres ?
+PLAN gros NOX
+NOX dit (calme) Ta mère. Karim. Moi.
+PLAN gros TOBI
+TOBI dit (illumine) Je vous offre... ma présence !
+PLAN gros NOX
+NOX dit (punchline) Je reprends le data center.
+ATTENDRE 0.4

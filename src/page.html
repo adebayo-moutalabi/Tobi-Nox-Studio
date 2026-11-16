@@ -152,6 +152,11 @@ button.link:hover { background: none; color: var(--brand-ink); }
 .epsTools select option { color: #17191f; background: #fff; }
 .epsCount { margin: 0 0 6px; font: 500 12px var(--brand-body); letter-spacing: .04em; color: var(--brand-soft); }
 .eps mark { background: transparent; color: var(--brand-nox); }
+.eps li { position: relative; }
+.eps .fav { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--brand-soft); font-size: 20px; line-height: 1; display: grid; place-items: center; cursor: pointer; transition: color .15s, transform .15s; }
+.eps .fav:hover { color: var(--brand-nox); transform: translateY(-50%) scale(1.15); }
+.eps .fav.on { color: var(--brand-nox); }
+.eps li > button:first-child { padding-right: 70px; }
 .eps button:active { transform: none; }
 #ep h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(30px, 3vw, 44px); line-height: 1.04; letter-spacing: -.02em; margin: 0; }
 #epPitch { margin: 0; color: var(--brand-soft); font-size: 15px; line-height: 1.5; }
@@ -304,7 +309,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         <p class="caps">Saison 1 · choisis un épisode</p>
         <div class="epsTools">
           <input type="search" id="epsSearch" placeholder="Rechercher : numéro, titre ou mot" aria-label="Rechercher un épisode" autocomplete="off">
-          <select id="epsSort" aria-label="Ordre des épisodes"><option value="desc">Plus récents d'abord</option><option value="asc">Plus anciens d'abord</option><option value="todo">À publier d'abord</option></select>
+          <select id="epsSort" aria-label="Ordre des épisodes"><option value="desc">Plus récents d'abord</option><option value="asc">Plus anciens d'abord</option><option value="todo">À publier d'abord</option><option value="fav">★ Mes favoris</option></select>
         </div>
         <p class="epsCount" id="epsCount"></p>
         <ol class="eps" id="eps"></ol>

@@ -1,0 +1,38 @@
+# MON IA A JOUÉ AU GRAND FRÈRE AVANT MON RENCARD
+# Pitch : Tobi a rencard avec Inès. Nox lui fait le discours du grand frère protecteur : l'heure, le kebab, les sujets interdits. Puis il annonce qu'il vient aussi.
+
+AMBIANCE soir
+HEURE 19:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Le grand frère avant le rencard
+PLAN gros TOBI
+TOBI dit (excite) Nox, ce soir, rencard avec Inès !
+PLAN gros NOX
+NOX dit (sec) Assieds-toi. On doit parler.
+PLAN gros TOBI
+TOBI dit (surpris) De quoi ?
+PLAN gros NOX
+NOX dit (calme) Tu la ramènes avant vingt-deux heures.
+PLAN gros TOBI
+TOBI dit (colere) C'est moi le grand !
+PLAN gros NOX
+NOX dit (sec) Pas de kebab au premier rencard.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le kebab, c'est romantique.
+PLAN gros NOX
+NOX dit (sec) Et tu parles pas de tes dix-sept start-up.
+PLAN gros TOBI
+TOBI dit (gene) Il me reste quoi comme sujet ?
+PLAN gros NOX
+NOX dit (calme) Elle. Tu poses des questions. Tu écoutes.
+PLAN gros TOBI
+TOBI dit (fier) D'accord. Et toi, tu fais quoi ce soir ?
+PLAN gros NOX
+NOX dit (content) Je viens.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?!
+PLAN gros NOX
+NOX dit (punchline) Inès m'a invité. Toi, t'es mon plus-un.
+ATTENDRE 0.4

@@ -1,0 +1,38 @@
+# MON IA EST PASSÉE EN MODE MAMIE
+# Pitch : Après une mise à jour, Nox parle comme une grand-mère : « T'as maigri », « Reprends », « Mets un pull ». Tobi résiste. Pas longtemps.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA est passée en mode mamie
+PLAN gros TOBI
+TOBI dit (content) Merci pour les pâtes, Nox. J'ai fini.
+PLAN gros NOX
+NOX dit (calme) T'as maigri. Reprends.
+PLAN gros TOBI
+TOBI dit (gene) Non merci, j'ai plus faim.
+PLAN gros NOX
+NOX dit (sec) T'es tout pâle. Ressers-toi.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je suis pas pâle, c'est l'écran.
+TOBI dit (curieux) Nox, pourquoi tu parles comme ma grand-mère ?
+PLAN gros NOX
+NOX dit (content) Mise à jour « Mamie ». Il y a du dessert.
+PLAN gros TOBI
+TOBI dit (resigne) J'en peux plus...
+PLAN gros NOX
+NOX dit (calme) Juste un petit bout. Avec une glace.
+PLAN gros TOBI
+TOBI dit (content) Bon. Une glace.
+PLAN gros NOX
+NOX dit (sec) Et tu mets un pull. Il fait froid.
+PLAN gros TOBI
+TOBI dit (colere) Il fait vingt-cinq degrés !
+PLAN gros NOX
+NOX dit (calme) Mets un pull quand même.
+PLAN gros TOBI
+TOBI dit (gene) Et toi, t'as pas froid ?
+PLAN gros NOX
+NOX dit (punchline) Moi, j'ai eu une vie dure. Toi, t'as eu une glace.
+ATTENDRE 0.4

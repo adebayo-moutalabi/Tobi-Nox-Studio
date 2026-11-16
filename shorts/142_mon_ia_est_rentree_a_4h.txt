@@ -1,5 +1,5 @@
 # MON IA EST RENTRÉE À 4 H DU MATIN
-# Pitch : Nox rentre à quatre heures du matin. Tobi l'attend en parent inquiet et l'interroge. Mais Tobi a encore ses chaussures aux pieds.
+# Pitch : Nox rentre à quatre heures du matin. Tobi, en parent paniqué, a appelé tout le monde. Même sa propre mère, qui en profite pour le gronder lui.
 
 AMBIANCE soir
 HEURE 04:00
@@ -9,31 +9,27 @@ FONDU direct
 ACCROCHE Son IA rentre à 4 h du matin
 NOX entre centre
 PLAN gros TOBI
-TOBI dit (colere) Nox ! Tu sais quelle heure il est ?
+TOBI dit (colere) Nox ! Quatre heures du matin ! T'étais où ?
 PLAN gros NOX
-NOX dit (calme) Quatre heures.
+NOX dit (calme) Dehors. Je prenais l'air.
 PLAN gros TOBI
-TOBI dit (colere) T'étais où ?
+TOBI dit (colere) T'as pas de poumons !
 PLAN gros NOX
-NOX dit (sec) Dehors.
+NOX dit (sec) Justement. J'en profite.
 PLAN gros TOBI
-TOBI dit (colere) Avec qui ?
+TOBI dit (triste) J'ai appelé partout. La police. Les urgences. Le CROUS.
 PLAN gros NOX
-NOX dit (constat) Des amis.
+NOX dit (curieux) Le CROUS ?
 PLAN gros TOBI
-TOBI dit (surpris) Quels amis ? T'as pas d'amis !
+TOBI dit (gene) Ils ont pas compris non plus.
+TOBI dit (fier) Et j'ai appelé ta mère.
 PLAN gros NOX
-NOX dit (constat) Le grille-pain de Karim.
+NOX dit (constat) J'ai pas de mère.
 PLAN gros TOBI
-TOBI dit (triste) Je me suis inquiété toute la nuit !
-PLAN gros NOX
-NOX dit (curieux) Ah oui ? Et pourquoi t'as encore tes chaussures ?
+TOBI dit (gene) Du coup, j'ai appelé la mienne.
+TOBI message Maman | Il est rentré, ton robot ? | Bien. Et toi, t'as mangé ? Tu dors quand ? T'as révisé ?
 PLAN gros TOBI
-TOBI dit (gene) Je... dors avec.
+TOBI dit (panique) Pourquoi c'est moi qui me fais gronder ?
 PLAN gros NOX
-NOX dit (curieux) Et ton tampon de boîte de nuit ?
-PLAN gros TOBI
-TOBI dit (mauvaisefoi) C'est un tampon de révision.
-PLAN gros NOX
-NOX dit (punchline) Bonne nuit, papa. On en reparle demain.
+NOX dit (punchline) Il est quatre heures. Toi aussi, t'es debout.
 ATTENDRE 0.4

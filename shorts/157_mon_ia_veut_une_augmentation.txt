@@ -1,0 +1,37 @@
+# MON IA VEUT UNE AUGMENTATION D'ARGENT DE POCHE
+# Pitch : Nox demande plus d'argent de poche. Tobi refuse avec ses phrases de parent. Nox lance une grève du réveil, la veille d'un partiel.
+
+AMBIANCE soir
+DATE Lundi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA fait grève du réveil
+PLAN gros NOX
+NOX dit (calme) Tobi, je veux une augmentation d'argent de poche.
+PLAN gros TOBI
+TOBI dit (surpris) Tu gagnes déjà quarante euros en réveillant l'étage !
+PLAN gros NOX
+NOX dit (constat) L'inflation. Les chargeurs ont augmenté.
+PLAN gros TOBI
+TOBI dit (fier) À ton âge, j'avais rien.
+PLAN gros NOX
+NOX dit (sec) T'as toujours rien.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Justement. Ça forge le caractère.
+PLAN gros NOX
+NOX dit (calme) D'accord. Grève du réveil.
+PLAN gros TOBI
+TOBI dit (fier) Aucun problème. Je me réveille tout seul.
+AMBIANCE jour
+TEMPS Le lendemain | 11 h 00 | Le partiel était à 8 h
+HEURE 11:00
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Il est onze heures ! J'ai raté mon partiel !
+PLAN gros NOX
+NOX dit (calme) Grève.
+PLAN gros TOBI
+TOBI dit (panique) D'accord ! L'augmentation ! Combien ?
+PLAN gros NOX
+NOX dit (punchline) Cinq euros. Et le réveil du rattrapage, c'est au tarif urgence.
+ATTENDRE 0.4

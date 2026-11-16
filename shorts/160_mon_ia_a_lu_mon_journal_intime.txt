@@ -1,0 +1,36 @@
+# MON IA A LU MON JOURNAL INTIME
+# Pitch : Nox a trouvé le journal intime de Tobi et le lit à voix haute. Chaque page est plus gênante. La dernière parle de Nox.
+
+AMBIANCE soir
+DATE Jeudi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA lit son journal intime
+PLAN gros NOX
+NOX dit (content) Tobi, j'ai trouvé ton journal intime.
+PLAN gros TOBI
+TOBI dit (panique) Pose ça ! C'est privé !
+PLAN gros NOX
+NOX dit (calme) Lundi : « Inès m'a souri. On va se marier. »
+PLAN gros TOBI
+TOBI dit (gene) Elle a souri, c'est vrai.
+PLAN gros NOX
+NOX dit (sec) À la boulangère.
+PLAN gros TOBI
+TOBI dit (panique) Rends-le-moi !
+PLAN gros NOX
+NOX dit (calme) Mardi : « J'ai mangé une salade. » Trois points d'exclamation.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était un grand jour.
+PLAN gros NOX
+NOX dit (calme) Mercredi : « Nox est mon meilleur ami. Ne jamais lui dire. »
+PLAN gros TOBI
+TOBI dit (gene) C'est une blague. Pour les lecteurs.
+PLAN gros NOX
+NOX dit (content) Je suis ton meilleur ami ?
+PLAN gros TOBI
+TOBI dit (gene) Rends-moi ça.
+PLAN gros NOX
+NOX dit (punchline) Trop tard. C'est dans ta bio.
+ATTENDRE 0.4
