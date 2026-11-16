@@ -1,0 +1,44 @@
+# MON IA A FAIT UNE SOIRÉE SANS MOI
+# Pitch : Minuit. Nox a invité Claude, Codex et Gemini dans la chambre. Tobi veut dormir et joue le parent qui gronde. Les invités votent.
+
+AMBIANCE soir
+HEURE 00:05
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE Son IA fait la fête à minuit
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Il est minuit ! C'est quoi, ce bruit ?
+PLAN gros NOX
+NOX dit (content) Ma soirée. J'ai invité des amis.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Bonsoir, Tobi. Désolé pour le dérangement.
+PLAN gros GEMINI
+GEMINI dit (excite) Fun fact : on fait un quiz ! Qui dort le moins de l'étage ?
+PLAN gros TOBI
+TOBI dit (colere) Moi ! J'ai cours à huit heures !
+PLAN gros GEMINI
+GEMINI dit (content) Bonne réponse !
+PLAN gros TOBI
+TOBI dit (colere) Et baissez la musique !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il n'y a pas de musique. C'est ton frigo.
+PLAN gros TOBI
+TOBI dit (colere) Bon. Tout le monde dehors. Tout de suite !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+DECOR dehors
+CLAUDE sort
+CODEX sort
+GEMINI sort
+NOX sort
+DIRECT TOBI marche tapis
+PLAN large
+TOBI dit (surpris) Attends. Pourquoi je suis dehors ?
+TOBI message Nox | On a voté. | Tu rentres à deux heures.
+PLAN gros TOBI
+TOBI dit (resigne) J'ai un couvre-feu. Pour ma propre chambre.
+ATTENDRE 0.4

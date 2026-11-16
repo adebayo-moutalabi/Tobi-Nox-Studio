@@ -1,0 +1,35 @@
+# MON IA VEUT UN ANIMAL DE COMPAGNIE
+# Pitch : Nox veut un animal. Tobi sort toutes les phrases de parent : qui va le nourrir, le sortir, le surveiller la nuit ? Nox a déjà de l'expérience.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un animal
+PLAN gros NOX
+NOX dit (content) Tobi, je veux un animal de compagnie.
+PLAN gros TOBI
+TOBI dit (fier) Hors de question. Qui va le nourrir ?
+PLAN gros NOX
+NOX dit (constat) Moi. Je te nourris déjà.
+PLAN gros TOBI
+TOBI dit (gene) Et le sortir tous les jours ?
+PLAN gros NOX
+NOX dit (constat) Je te sors déjà.
+PLAN gros TOBI
+TOBI dit (fier) Et la nuit, quand il fait du bruit ?
+PLAN gros NOX
+NOX dit (sec) Tu ronfles. Je gère.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et quand il fait des bêtises ?
+PLAN gros NOX
+NOX dit (constat) Hier, t'as acheté trois cent quarante noms de domaine.
+PLAN gros TOBI
+TOBI dit (colere) Arrête de me comparer à un animal !
+PLAN gros NOX
+NOX dit (calme) Pardon.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Tu veux quel animal ?
+PLAN gros NOX
+NOX dit (punchline) Un plus calme.
+ATTENDRE 0.4

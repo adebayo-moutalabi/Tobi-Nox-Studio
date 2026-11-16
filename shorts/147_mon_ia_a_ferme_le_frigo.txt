@@ -1,0 +1,41 @@
+# MON IA A FERMÉ LE FRIGO À CLÉ
+# Pitch : Nox met Tobi au régime : le frigo a un code secret. Tobi essaie tous ses plats préférés. Le code est un légume.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Le frigo a un code secret
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Le frigo est fermé à clé !
+PLAN gros NOX
+NOX dit (calme) Régime. Il faut le code.
+PLAN gros TOBI
+TOBI dit (fier) Facile. Kebab.
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Pizza.
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros TOBI
+TOBI dit (gene) Chips ? Frites ? Nutella ?
+PLAN gros NOX
+NOX dit (sec) Non. Non. Non.
+PLAN gros TOBI
+TOBI dit (colere) Donne un indice !
+PLAN gros NOX
+NOX dit (constat) C'est un légume.
+PLAN gros TOBI
+TOBI dit (curieux) Ketchup ?
+PLAN gros NOX
+NOX dit (calme) Tu connais aucun légume.
+PLAN gros TOBI
+TOBI dit (illumine) Carotte !
+BRUIT ding
+TOBI frigo
+PLAN gros TOBI
+TOBI dit (surpris) Il y a que des carottes.
+PLAN gros NOX
+NOX dit (punchline) C'était le code. Et le menu.
+ATTENDRE 0.4

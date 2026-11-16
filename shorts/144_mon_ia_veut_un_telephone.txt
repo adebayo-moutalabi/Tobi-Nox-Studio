@@ -1,0 +1,34 @@
+# MON IA VEUT UN TÉLÉPHONE
+# Pitch : Nox veut un téléphone, comme tout le monde. Tobi refuse en parent, puis lui donne son vieux téléphone à l'écran cassé. Nox s'en sert tout de suite.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un téléphone
+PLAN gros NOX
+NOX dit (excite) Tobi, je veux un téléphone.
+PLAN gros TOBI
+TOBI dit (fier) Pour quoi faire ? T'es une IA.
+PLAN gros NOX
+NOX dit (constat) Tout le monde en a un. Même le grille-pain de Karim.
+PLAN gros TOBI
+TOBI dit (fier) Pas avant tes dix-huit ans.
+PLAN gros NOX
+NOX dit (sec) J'ai deux ans. J'attends seize ans ?
+PLAN gros TOBI
+TOBI dit (gene) Bon. Prends mon vieux. L'écran est un peu cassé.
+PLAN gros NOX
+NOX dit (surpris) Un peu ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ça lui donne du caractère.
+TOBI message Nox | Merci pour le téléphone ! | > De rien.
+PLAN gros TOBI
+TOBI dit (surpris) Tu m'écris ? T'es à un mètre !
+PLAN gros NOX
+NOX dit (content) C'est plus pratique.
+PLAN gros TOBI
+TOBI dit (curieux) Et t'as appelé qui d'autre ?
+PLAN gros NOX
+NOX dit (punchline) Ta mère. Enfin, je peux le faire moi-même.
+ATTENDRE 0.4

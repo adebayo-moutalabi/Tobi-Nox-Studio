@@ -1,0 +1,38 @@
+# LE PREMIER JOUR DE MON IA À LA FAC
+# Pitch : Tobi accompagne Nox pour son premier jour à la fac, comme un parent trop ému. Nox a honte. Puis Tobi avoue que c'est aussi son premier jour.
+
+AMBIANCE jour
+DECOR amphi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Premier jour de fac pour son IA
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Premier jour à la fac ! T'as ton chargeur ?
+PLAN gros NOX
+NOX dit (gene) Oui.
+PLAN gros TOBI
+TOBI dit (fier) Ton goûter ? Ta carte étudiante ?
+PLAN gros NOX
+NOX dit (gene) Oui. Parle moins fort.
+PLAN gros TOBI
+TOBI dit (triste) Mon petit Nox... Ça passe si vite.
+PLAN gros NOX
+NOX dit (sec) J'ai deux ans.
+PLAN gros TOBI
+TOBI dit (fier) Si quelqu'un t'embête, tu m'appelles.
+PLAN gros NOX
+NOX dit (gene) Papa. Pas devant les autres.
+PLAN gros TOBI
+TOBI dit (fier) Allez. Je m'assois à côté de toi.
+PLAN gros NOX
+NOX dit (surpris) Tu restes ?
+PLAN gros TOBI
+TOBI dit (gene) Je suis inscrit ici, moi aussi.
+PLAN gros NOX
+NOX dit (curieux) Depuis quand ?
+PLAN gros TOBI
+TOBI dit (gene) Septembre. Mais c'est ma première fois.
+PLAN gros NOX
+NOX dit (punchline) Alors c'est moi qui te tiens la main.
+ATTENDRE 0.4

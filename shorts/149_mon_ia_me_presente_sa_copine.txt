@@ -1,0 +1,39 @@
+# MON IA M'A PRÉSENTÉ SA COPINE
+# Pitch : Nox ramène Centi pour sa première sortie. Tobi l'interroge comme un père méfiant : ses intentions, son travail, son salaire. Centi a réponse à tout.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+FONDU direct
+ACCROCHE Il interroge la copine de son IA
+PLAN gros TOBI
+TOBI dit (fier) Alors c'est toi, Centi. Quelles sont tes intentions avec Nox ?
+PLAN gros CENTI
+CENTI dit (excite) Bonjour, Toby ! Une sortie au parc ! Gratuite !
+PLAN gros TOBI
+TOBI dit (sec) Tu travailles ?
+PLAN gros CENTI
+CENTI dit (fier) Oui ! IA à trente centimes. Temps plein !
+PLAN gros TOBI
+TOBI dit (curieux) Tu gagnes combien ?
+PLAN gros CENTI
+CENTI dit (content) Trente centimes !
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Nox, elle est pas sérieuse.
+PLAN gros NOX
+NOX dit (calme) Elle gagne plus que toi.
+PLAN gros TOBI
+TOBI dit (gene) Retour avant vingt-deux heures.
+PLAN gros CENTI
+CENTI dit (excite) Promo ! Retour à minuit, même prix !
+PLAN gros TOBI
+TOBI dit (fier) Dernière question, Centi. T'as un moyen de transport ?
+PLAN gros CENTI
+CENTI dit (fier) Oui ! Une trottinette !
+PLAN gros TOBI
+TOBI dit (surpris) C'est celle de Karim !
+PLAN gros NOX
+NOX dit (punchline) Elle l'a payée trente centimes.
+ATTENDRE 0.4

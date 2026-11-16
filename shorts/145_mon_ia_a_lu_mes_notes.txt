@@ -1,0 +1,37 @@
+# MON IA A LU MES NOTES
+# Pitch : Tobi annonce ses notes du semestre à Nox. Nox réagit exactement comme un parent déçu, jusqu'à la punition.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA réagit à ses notes
+PLAN gros TOBI
+TOBI dit (gene) Nox, j'ai mes notes. Promets de pas t'énerver.
+PLAN gros NOX
+NOX dit (calme) Je m'énerve jamais.
+PLAN gros TOBI
+TOBI dit (gene) Droit : six.
+PLAN gros NOX
+NOX dit (sec) Je suis pas fâché. Je suis déçu.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le prof m'aime pas.
+PLAN gros NOX
+NOX dit (constat) Il t'a jamais vu.
+PLAN gros TOBI
+TOBI dit (gene) Anglais : quatre.
+PLAN gros NOX
+NOX dit (sec) Toujours déçu.
+PLAN gros TOBI
+TOBI dit (fier) Sport : dix-huit !
+PLAN gros NOX
+NOX dit (curieux) T'as fait du sport ?
+PLAN gros TOBI
+TOBI dit (gene) J'ai couru après le bus. Le prof était dedans.
+PLAN gros NOX
+NOX dit (calme) Bien. Va dans ta chambre.
+PLAN gros TOBI
+TOBI dit (surpris) On est dans ma chambre !
+PLAN gros NOX
+NOX dit (punchline) Alors va dans le couloir. Et réfléchis.
+ATTENDRE 0.4

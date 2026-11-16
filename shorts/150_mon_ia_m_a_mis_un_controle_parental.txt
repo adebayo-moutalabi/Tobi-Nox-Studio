@@ -1,0 +1,36 @@
+# MON IA M'A MIS UN CONTRÔLE PARENTAL
+# Pitch : Après onze heures d'écran, Nox installe un contrôle parental sur le téléphone de Tobi. Tobi cherche une issue, jusqu'à sa mère.
+
+AMBIANCE soir
+HEURE 22:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA lui met un contrôle parental
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Mon téléphone dit « contrôle parental » !
+PLAN gros NOX
+NOX dit (calme) C'est moi. Onze heures d'écran hier.
+PLAN gros TOBI
+TOBI dit (colere) J'ai vingt-deux ans !
+PLAN gros NOX
+NOX dit (sec) Ton temps d'écran, non.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'ouvre une vidéo.
+BRUIT pop
+PLAN gros NOX
+NOX dit (constat) Bloqué. Après vingt-deux heures.
+PLAN gros TOBI
+TOBI dit (fier) Un jeu, alors.
+PLAN gros NOX
+NOX dit (constat) Bloqué. T'as un DM.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'appelle Inès.
+PLAN gros NOX
+NOX dit (calme) Autorisé. Elle veut ton DM.
+PLAN gros TOBI
+TOBI dit (colere) Je vais me plaindre à ma mère !
+TOBI message Maman | > Nox a bloqué mon téléphone ! | Je sais. C'est moi qui ai le code.
+PLAN gros NOX
+NOX dit (punchline) Elle a le code. Toi, t'as un DM.
+ATTENDRE 0.4

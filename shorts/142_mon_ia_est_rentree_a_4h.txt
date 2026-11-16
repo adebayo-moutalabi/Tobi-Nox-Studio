@@ -1,0 +1,39 @@
+# MON IA EST RENTRÉE À 4 H DU MATIN
+# Pitch : Nox rentre à quatre heures du matin. Tobi l'attend en parent inquiet et l'interroge. Mais Tobi a encore ses chaussures aux pieds.
+
+AMBIANCE soir
+HEURE 04:00
+DIRECT TOBI marche tapis
+DIRECT NOX sort
+FONDU direct
+ACCROCHE Son IA rentre à 4 h du matin
+NOX entre centre
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Tu sais quelle heure il est ?
+PLAN gros NOX
+NOX dit (calme) Quatre heures.
+PLAN gros TOBI
+TOBI dit (colere) T'étais où ?
+PLAN gros NOX
+NOX dit (sec) Dehors.
+PLAN gros TOBI
+TOBI dit (colere) Avec qui ?
+PLAN gros NOX
+NOX dit (constat) Des amis.
+PLAN gros TOBI
+TOBI dit (surpris) Quels amis ? T'as pas d'amis !
+PLAN gros NOX
+NOX dit (constat) Le grille-pain de Karim.
+PLAN gros TOBI
+TOBI dit (triste) Je me suis inquiété toute la nuit !
+PLAN gros NOX
+NOX dit (curieux) Ah oui ? Et pourquoi t'as encore tes chaussures ?
+PLAN gros TOBI
+TOBI dit (gene) Je... dors avec.
+PLAN gros NOX
+NOX dit (curieux) Et ton tampon de boîte de nuit ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est un tampon de révision.
+PLAN gros NOX
+NOX dit (punchline) Bonne nuit, papa. On en reparle demain.
+ATTENDRE 0.4

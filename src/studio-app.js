@@ -139,6 +139,16 @@ import A137 from '../shorts/137_mon_ia_economisait_en_secret.txt';
 import A138 from '../shorts/138_codex_a_annule_mon_rencard.txt';
 import A139 from '../shorts/139_j_ai_pris_une_prof_de_maths_a_30_centimes.txt';
 import A140 from '../shorts/140_mon_ia_m_a_fait_passer_un_entretien_d_embauche.txt';
+import A141 from '../shorts/141_mon_ia_veut_un_animal.txt';
+import A142 from '../shorts/142_mon_ia_est_rentree_a_4h.txt';
+import A143 from '../shorts/143_mon_ia_a_fait_une_fugue.txt';
+import A144 from '../shorts/144_mon_ia_veut_un_telephone.txt';
+import A145 from '../shorts/145_mon_ia_a_lu_mes_notes.txt';
+import A146 from '../shorts/146_mon_ia_a_fait_une_soiree.txt';
+import A147 from '../shorts/147_mon_ia_a_ferme_le_frigo.txt';
+import A148 from '../shorts/148_le_premier_jour_de_mon_ia_a_la_fac.txt';
+import A149 from '../shorts/149_mon_ia_me_presente_sa_copine.txt';
+import A150 from '../shorts/150_mon_ia_m_a_mis_un_controle_parental.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -186,6 +196,16 @@ startViewer({
     "138. Codex a annulé mon rencard": A138,
     "139. J'ai pris une prof de maths à 30 centimes": A139,
     "140. Mon IA m'a fait passer un entretien": A140,
+    "141. Mon IA veut un animal de compagnie": A141,
+    "142. Mon IA est rentrée à 4 h du matin": A142,
+    "143. Mon IA a fait une fugue": A143,
+    "144. Mon IA veut un téléphone": A144,
+    "145. Mon IA a lu mes notes": A145,
+    "146. Mon IA a fait une soirée dans ma chambre": A146,
+    "147. Mon IA a fermé le frigo à clé": A147,
+    "148. Le premier jour de mon IA à la fac": A148,
+    "149. Mon IA m'a présenté sa copine": A149,
+    "150. Mon IA m'a mis un contrôle parental": A150,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,
