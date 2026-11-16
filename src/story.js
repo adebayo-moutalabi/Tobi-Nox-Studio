@@ -742,7 +742,7 @@ export function mountStory(v, stories) {
     (voices?.warm() || Promise.resolve()).catch(() => {}).then(() => { if (me === opening) { refresh(); replay(); } });
   };
   pick.addEventListener('change', () => { el('storyText').value = stories[pick.value]; });
-  const episodeKeys = () => Object.keys(stories);
+  const episodeKeys = () => ordered(); // précédent et suivant suivent l'ordre de la liste
   const step = (d) => { const list = episodeKeys(), k = list[list.indexOf(pick.value) + d]; if (k) openEp(k); };
   el('epBack').addEventListener('click', () => go('lib'));
   el('epPrev').addEventListener('click', () => step(-1));
@@ -751,7 +751,23 @@ export function mountStory(v, stories) {
   el('epStatus').addEventListener('click', () => go('settings'));
   el('storyText').addEventListener('input', refresh);
   ['storyFormat', 'storyQuality'].forEach((id) => el(id).addEventListener('change', refresh));
-  const renderEps = () => el('eps').replaceChildren(...Object.keys(stories).map((k) => {
+  // Liste des épisodes : triée (plus récents, plus anciens, ou à publier d'abord) et filtrée par la recherche.
+  const ORDER = 'tobinox.ordre';
+  const sortKey = () => el('epsSort')?.value || 'desc';
+  const plainTxt = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const ordered = () => {
+    const keys = Object.keys(stories), num = (k) => { const m = /^(\d+)\./.exec(k); return m ? Number(m[1]) : null; };
+    const eps = keys.filter((k) => num(k) !== null), rest = keys.filter((k) => num(k) === null); // démos et scripts maison, à la fin
+    const s = sortKey();
+    eps.sort((a, b) => (s === 'asc' ? num(a) - num(b) : num(b) - num(a)));
+    if (s === 'todo') eps.sort((a, b) => (pubs?.published(a) ? 1 : 0) - (pubs?.published(b) ? 1 : 0));
+    return [...eps, ...rest];
+  };
+  const renderEps = () => {
+    const q = plainTxt((el('epsSearch')?.value || '').trim()), words = q.split(/\s+/).filter(Boolean);
+    const shown = ordered().filter((k) => !words.length || words.every((w) => plainTxt(k + ' ' + ((/^#\s*Pitch\s*:\s*(.*)$/mi.exec(stories[k]) || [])[1] || '')).includes(w)));
+    el('epsCount').textContent = words.length ? `${shown.length} épisode${shown.length > 1 ? 's' : ''} sur ${Object.keys(stories).length}` : `${Object.keys(stories).length} épisodes`;
+    el('eps').replaceChildren(...shown.map((k) => {
     const m = /^(\d+)\.\s*(.*)$/.exec(k), li = document.createElement('li'), b = document.createElement('button'), n = document.createElement('span');
     b.type = 'button'; n.textContent = m ? m[1].padStart(2, '0') : '—';
     b.append(n, m ? m[2] : k);
@@ -760,6 +776,11 @@ export function mountStory(v, stories) {
     li.append(b);
     return li;
   }));
+    if (!shown.length) { const li = document.createElement('li'); li.className = 'epsCount'; li.textContent = 'Aucun épisode ne correspond.'; el('eps').append(li); }
+  };
+  try { const o = localStorage.getItem(ORDER); if (o && el('epsSort')) el('epsSort').value = o; } catch { /* stockage bloqué */ }
+  el('epsSearch')?.addEventListener('input', () => { renderEps(); el('eps').scrollTop = 0; });
+  el('epsSort')?.addEventListener('change', () => { try { localStorage.setItem(ORDER, sortKey()); } catch { /* stockage bloqué */ } renderEps(); el('eps').scrollTop = 0; });
   // Les scripts écrits ici restent dans ce navigateur et rejoignent la liste
   const MINE = 'tobinox.scripts';
   const loadMine = () => { try { return JSON.parse(localStorage.getItem(MINE) || '{}'); } catch { return {}; } };

@@ -144,6 +144,14 @@ button.link:hover { background: none; color: var(--brand-ink); }
 .eps button span { font-family: var(--brand-body); font-size: 11px; letter-spacing: .1em; color: var(--brand-soft); min-width: 20px; }
 .eps button small { margin-left: auto; flex: none; font: 600 11px var(--brand-body); letter-spacing: 0; color: var(--brand-nox); }
 .eps button:hover { background: transparent; color: var(--brand-nox); padding-left: 42px; }
+.epsTools { display: flex; gap: 10px; margin: 4px 0 6px; flex-wrap: wrap; }
+.epsTools input { flex: 1 1 220px; min-width: 0; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--brand-hair); background: transparent; color: var(--brand-ink); font: 500 15px var(--brand-body); outline: none; transition: border-color .2s; }
+.epsTools input:focus { border-color: var(--brand-nox); }
+.epsTools input::placeholder { color: var(--brand-soft); }
+.epsTools select { flex: 0 0 auto; padding: 11px 12px; border-radius: 12px; border: 1px solid var(--brand-hair); background: transparent; color: var(--brand-ink); font: 500 14px var(--brand-body); }
+.epsTools select option { color: #17191f; background: #fff; }
+.epsCount { margin: 0 0 6px; font: 500 12px var(--brand-body); letter-spacing: .04em; color: var(--brand-soft); }
+.eps mark { background: transparent; color: var(--brand-nox); }
 .eps button:active { transform: none; }
 #ep h2 { font-family: var(--brand-display); font-weight: 300; font-size: clamp(30px, 3vw, 44px); line-height: 1.04; letter-spacing: -.02em; margin: 0; }
 #epPitch { margin: 0; color: var(--brand-soft); font-size: 15px; line-height: 1.5; }
@@ -294,6 +302,11 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
       <select id="storyPick" hidden aria-label="Choisir un script"></select>
       <div id="lib">
         <p class="caps">Saison 1 · choisis un épisode</p>
+        <div class="epsTools">
+          <input type="search" id="epsSearch" placeholder="Rechercher : numéro, titre ou mot" aria-label="Rechercher un épisode" autocomplete="off">
+          <select id="epsSort" aria-label="Ordre des épisodes"><option value="desc">Plus récents d'abord</option><option value="asc">Plus anciens d'abord</option><option value="todo">À publier d'abord</option></select>
+        </div>
+        <p class="epsCount" id="epsCount"></p>
         <ol class="eps" id="eps"></ol>
       </div>
       <div id="write" hidden>
@@ -374,7 +387,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
         </div>
         <div class="foot">
           <p class="sub" id="storyNow" aria-live="polite"></p>
-          <p class="sub">Version du 16 novembre à 17:56</p>
+          <p class="sub">Version du 16 novembre à 18:02</p>
           <div class="bar" id="storyBar" hidden><i></i></div>
           <button type="button" class="link" id="epPub">Voir la fiche de publication</button>
           <button type="button" id="epVoices" hidden>Écouter avec les vraies voix</button>

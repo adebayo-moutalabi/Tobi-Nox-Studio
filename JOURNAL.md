@@ -372,6 +372,12 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Leur recette : Nox se comporte comme un membre de la famille, les rôles parent-enfant s'inversent, et la chute renvoie à Tobi sa propre phrase.
 - Dix épisodes sur cette recette, 141 à 150 : animal de compagnie, retour à 4 h, fugue, téléphone, bulletin, soirée, frigo à code, premier jour de fac, copine, contrôle parental.
 
+## Liste des épisodes triée, avec recherche (16 novembre 2026)
+
+- Les épisodes s'affichent du plus récent au plus ancien. Un menu permet aussi « Plus anciens d'abord » et « À publier d'abord », et le choix reste en mémoire.
+- Une barre de recherche filtre par numéro, titre ou mot du résumé, sans tenir compte des accents.
+- « Précédent » et « Suivant » suivent l'ordre de la liste.
+
 ## À faire
 
 Voir `TACHES.md`.
