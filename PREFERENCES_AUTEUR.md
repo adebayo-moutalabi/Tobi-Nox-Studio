@@ -154,6 +154,11 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - L'auteur veut des mouvements plus naturels et humains, des décors et des objets 3D plus soignés, plus de lieux, et des mini-jeux originaux à partager.
 - Il veut toujours pouvoir revenir en arrière : chaque grande étape a une étiquette Git et une copie consultable.
 
+## Ce qui marche le mieux (16 novembre 2026)
+
+- Les trois Shorts les plus vus montrent Nox dans un rôle de la famille (congé, crise d'ado, argent de poche). Les rôles parent-enfant s'inversent, et la chute retourne une phrase de Tobi contre lui. C'est la recette à privilégier.
+- L'auteur a trouvé que les changements de mouvement de la session Fable v2 n'amélioraient pas grand-chose.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

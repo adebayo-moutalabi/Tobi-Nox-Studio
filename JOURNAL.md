@@ -365,6 +365,13 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - T2 (début) : guirlande et affiches dans la chambre.
 - Suivi dans `PROGRESS.md`, `CHANGELOG.md` et `CREDITS.md`.
 
+## Fusion de fable-v2 et dix épisodes « famille » (16 novembre 2026)
+
+- La branche `fable-v2` est fusionnée dans `main` : pose de repos debout, regard, foulée, Nox qui penche, scène de démonstration. Chaque réglage reste débrayable dans `src/config.js`.
+- Chaîne : 37 abonnés. En tête : « Mon IA a pris un jour de congé » (2 300 vues), « Mon IA fait sa crise d'ado » (2 100), « Mon IA m'a demandé de l'argent de poche » (1 800).
+- Leur recette : Nox se comporte comme un membre de la famille, les rôles parent-enfant s'inversent, et la chute renvoie à Tobi sa propre phrase.
+- Dix épisodes sur cette recette, 141 à 150 : animal de compagnie, retour à 4 h, fugue, téléphone, bulletin, soirée, frigo à code, premier jour de fac, copine, contrôle parental.
+
 ## À faire
 
 Voir `TACHES.md`.

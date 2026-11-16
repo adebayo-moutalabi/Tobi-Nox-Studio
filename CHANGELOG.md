@@ -1,6 +1,6 @@
 # Journal des changements, session Fable v2
 
-Branche `fable-v2`. Rien n'est encore fusionné dans `main`, donc le site public n'a pas changé.
+Branche `fable-v2`, fusionnée dans `main` le 16 novembre 2026 : ces changements sont sur le site.
 
 ## 14 novembre 2026 : mouvements naturels (T1, en partie)
 

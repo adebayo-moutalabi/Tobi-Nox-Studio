@@ -1,6 +1,6 @@
 # Avancement de la session Fable v2
 
-Branche de travail : `fable-v2`. La branche `main` n'est pas touchée. Point de retour : étiquette `studio-stable-avant-fable`.
+Branche de travail : `fable-v2`, fusionnée dans `main` le 16 novembre 2026. Point de retour : étiquette `studio-stable-avant-fable`.
 
 ## État des lieux (audit)
 
