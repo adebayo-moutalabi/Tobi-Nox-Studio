@@ -1,0 +1,27 @@
+# MON IA TRADUIT CE QUE JE DIS VRAIMENT
+# Pitch : Tobi envoie ses messages du matin. Nox les traduit à voix haute, en vrai. Puis la mère répond, et Nox traduit aussi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA traduit ses messages en vrai
+PLAN gros TOBI
+TOBI dit (fier) J'écris au prof pour mon retard.
+TOBI message Prof | > Désolé, problème de transport ce matin.
+PLAN gros NOX
+NOX dit (constat) Traduction : il a vu l'heure à onze heures quarante.
+TOBI message Karim | > J'arrive dans cinq minutes !
+PLAN gros NOX
+NOX dit (constat) Traduction : il est sous la douche.
+TOBI message Maman | > Tout va bien, je mange bien.
+PLAN gros NOX
+NOX dit (constat) Traduction : des céréales. Le soir. Sans lait.
+PLAN gros TOBI
+TOBI dit (colere) Arrête de traduire !
+TOBI message Maman | > Je peux pas venir ce week-end, j'ai des révisions. | Fais comme tu veux, mon chéri.
+PLAN gros TOBI
+TOBI dit (content) Tu vois ? « Fais comme tu veux. »
+PLAN gros NOX
+NOX dit (punchline) Traduction : t'es mort.
+ATTENDRE 0.4

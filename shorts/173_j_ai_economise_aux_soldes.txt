@@ -1,0 +1,29 @@
+# J'AI ÉCONOMISÉ 200 € AUX SOLDES
+# Pitch : Tobi rentre des soldes fier d'avoir économisé. Nox fait le calcul. Puis Nox fait les soldes à son tour, avec la même logique.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a économisé 200 € en dépensant 300
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Les soldes ! J'ai économisé deux cents euros !
+PLAN gros NOX
+NOX dit (curieux) Donc on a deux cents euros ?
+PLAN gros TOBI
+TOBI dit (fier) Non. J'ai dépensé trois cents.
+PLAN gros NOX
+NOX dit (constat) Donc on a moins trois cents.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Mais avec deux cents d'économies !
+PLAN gros NOX
+NOX dit (calme) J'ai compris. Moi aussi, j'ai fait les soldes.
+PLAN gros TOBI
+TOBI dit (curieux) T'as acheté quoi ?
+PLAN gros NOX
+NOX dit (fier) Rien. Tout le magasin. Quatre mille euros d'économies.
+PLAN gros TOBI
+TOBI dit (excite) Génial ! Attends... On a quatre mille euros ?
+PLAN gros NOX
+NOX dit (punchline) Non. Mais avec quatre mille d'économies.
+ATTENDRE 0.4

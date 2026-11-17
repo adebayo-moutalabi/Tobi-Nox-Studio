@@ -1,0 +1,37 @@
+# MON IA FAIT LE PÈRE AVEC LA FACTURE
+# Pitch : Nox a vu la facture d'électricité. Il fait le père : la fenêtre, la lumière, le chargeur. Tobi retourne la question.
+
+AMBIANCE soir
+HEURE 21:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA fait le père avec la facture
+PLAN gros NOX
+NOX dit (sec) Tobi. Tu chauffes la rue ?
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ?
+PLAN gros NOX
+NOX dit (sec) La fenêtre. On n'a pas d'actions chez EDF.
+PLAN gros TOBI
+TOBI dit (gene) Je la ferme...
+PLAN gros NOX
+NOX dit (sec) Et la lumière ? T'as invité le quartier ?
+LUMIERE douce
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'en ai besoin pour voir !
+PLAN gros NOX
+NOX dit (sec) Ta grand-mère voyait avec une bougie. Elle a eu son bac.
+PLAN gros TOBI
+TOBI dit (colere) T'es pas mon père !
+PLAN gros NOX
+NOX dit (sec) Et ce chargeur ? Branché. Sans téléphone.
+PLAN gros TOBI
+TOBI dit (colere) Et toi ? T'es branché depuis ce matin !
+PLAN gros NOX
+NOX dit (calme) Moi, je suis branché chez Karim.
+PLAN gros TOBI
+TOBI dit (surpris) Depuis quand ?
+PLAN gros NOX
+NOX dit (punchline) Septembre. Lui non plus, il sait pas.
+ATTENDRE 0.4

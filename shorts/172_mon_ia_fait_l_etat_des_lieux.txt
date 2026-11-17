@@ -1,0 +1,36 @@
+# MON IA A FAIT L'ÉTAT DES LIEUX
+# Pitch : Dernier jour dans le studio. Nox joue le propriétaire et fait l'état des lieux. Chaque trace raconte une soirée de Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE État des lieux par son IA
+PLAN gros TOBI
+TOBI dit (content) Dernier jour au studio ! Je récupère ma caution !
+PLAN gros NOX
+NOX dit (calme) État des lieux. Je fais le propriétaire.
+NOX dit (constat) Le mur. Une tache.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle était là avant.
+PLAN gros NOX
+NOX dit (sec) Elle a la forme de ta tête.
+NOX dit (constat) Le lit. Creusé au milieu.
+PLAN gros TOBI
+TOBI dit (gene) Il était mou.
+PLAN gros NOX
+NOX dit (sec) Il était neuf. Tu l'as moulé.
+NOX dit (constat) Le plafond. Des nouilles.
+PLAN gros TOBI
+TOBI dit (surpris) Comment elles sont montées là ?
+PLAN gros NOX
+NOX dit (sec) Ta soirée crêpes. Avec Karim.
+PLAN gros TOBI
+TOBI dit (resigne) Je récupère combien ?
+PLAN gros NOX
+NOX dit (calme) Quatre cents de caution. Je te rends douze.
+PLAN gros TOBI
+TOBI dit (curieux) Pourquoi douze ?
+PLAN gros NOX
+NOX dit (punchline) Le frigo était propre. Il était vide.
+ATTENDRE 0.4

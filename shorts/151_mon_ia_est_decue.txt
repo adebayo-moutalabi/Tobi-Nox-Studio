@@ -1,0 +1,35 @@
+# MON IA N'EST PAS EN COLÈRE, ELLE EST DÉÇUE
+# Pitch : Tobi a raté son partiel et attend que Nox crie. Nox ne crie pas. Il est déçu, et c'est bien pire.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA n'est pas en colère. Elle est déçue.
+PLAN gros TOBI
+TOBI dit (gene) Nox, j'ai raté le partiel. Vas-y, crie.
+PLAN gros NOX
+NOX dit (calme) Je crie pas.
+PLAN gros TOBI
+TOBI dit (curieux) T'es en colère ?
+PLAN gros NOX
+NOX dit (calme) Non. Je suis déçu.
+PLAN gros TOBI
+TOBI dit (panique) Non, pas déçu ! Crie !
+PLAN gros NOX
+NOX dit (triste) J'avais affiché ton emploi du temps. Avec des couleurs.
+PLAN gros TOBI
+TOBI dit (panique) Arrête ! Dis un truc méchant !
+PLAN gros NOX
+NOX dit (calme) Je vais juste aller réfléchir. Dans le placard.
+TOBI message Maman | Nox m'a dit pour le partiel. | On a fait un groupe avec ton père.
+PLAN gros TOBI
+TOBI dit (surpris) Un groupe ?
+PLAN gros NOX
+NOX dit (constat) « Déçus de Tobi ». On est quatre.
+PLAN gros TOBI
+TOBI dit (curieux) Quatre ?
+PLAN gros NOX
+NOX dit (punchline) Karim est admin.
+ATTENDRE 0.4

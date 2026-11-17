@@ -134,7 +134,7 @@ import A132 from '../shorts/132_claude_a_corrige_mon_message_a_mon_crush.txt';
 import A133 from '../shorts/133_gemini_a_resume_mon_partiel_en_un_mot.txt';
 import A134 from '../shorts/134_codex_a_repondu_au_groupe_de_ma_famille.txt';
 import A135 from '../shorts/135_mon_ia_m_a_presente_a_ses_parents.txt';
-import A136 from '../shorts/136_mon_ia_a_ramene_sa_copine_a_la_maison.txt';
+import A136 from '../shorts/136_mon_ia_commente_ma_soiree.txt';
 import A137 from '../shorts/137_mon_ia_economisait_en_secret.txt';
 import A138 from '../shorts/138_codex_a_annule_mon_rencard.txt';
 import A139 from '../shorts/139_j_ai_pris_une_prof_de_maths_a_30_centimes.txt';
@@ -147,9 +147,9 @@ import A145 from '../shorts/145_mon_ia_a_lu_mes_notes.txt';
 import A146 from '../shorts/146_mon_ia_a_fait_une_soiree.txt';
 import A147 from '../shorts/147_mon_ia_a_ferme_le_frigo.txt';
 import A148 from '../shorts/148_le_premier_jour_de_mon_ia_a_la_fac.txt';
-import A149 from '../shorts/149_mon_ia_me_presente_sa_copine.txt';
+import A149 from '../shorts/149_qui_a_casse_ma_tasse.txt';
 import A150 from '../shorts/150_mon_ia_m_a_mis_un_controle_parental.txt';
-import A151 from '../shorts/151_mon_ia_et_centi_se_separent.txt';
+import A151 from '../shorts/151_mon_ia_est_decue.txt';
 import A152 from '../shorts/152_mon_ia_me_reveille_comme_ma_mere.txt';
 import A153 from '../shorts/153_la_liste_de_noel_de_mon_ia.txt';
 import A154 from '../shorts/154_mon_ia_est_devenu_mon_coloc.txt';
@@ -159,7 +159,7 @@ import A157 from '../shorts/157_mon_ia_veut_une_augmentation.txt';
 import A158 from '../shorts/158_on_en_a_a_la_maison.txt';
 import A159 from '../shorts/159_ma_mere_arrive_dans_10_minutes.txt';
 import A160 from '../shorts/160_mon_ia_a_lu_mon_journal_intime.txt';
-import A161 from '../shorts/161_mon_ia_sort_avec_ines.txt';
+import A161 from '../shorts/161_ma_mere_prefere_mon_ia.txt';
 import A162 from '../shorts/162_mon_ia_a_vu_mon_prof.txt';
 import A163 from '../shorts/163_ma_mere_a_engage_mon_ia.txt';
 import A164 from '../shorts/164_mon_ia_parle_comme_ma_mere.txt';
@@ -168,7 +168,17 @@ import A166 from '../shorts/166_mon_ia_joue_le_grand_frere.txt';
 import A167 from '../shorts/167_mon_ia_a_eu_son_code.txt';
 import A168 from '../shorts/168_mon_ia_veut_une_histoire.txt';
 import A169 from '../shorts/169_mes_ia_m_ont_fait_une_surprise.txt';
-import A170 from '../shorts/170_mon_ia_me_pose_les_questions_de_ma_tante.txt';
+import A170 from '../shorts/170_docteur_nox_avant_le_partiel.txt';
+import A171 from '../shorts/171_mon_ia_fait_le_service_client.txt';
+import A172 from '../shorts/172_mon_ia_fait_l_etat_des_lieux.txt';
+import A173 from '../shorts/173_j_ai_economise_aux_soldes.txt';
+import A174 from '../shorts/174_mon_ia_se_croit_vieille.txt';
+import A175 from '../shorts/175_restaurant_chez_nox.txt';
+import A176 from '../shorts/176_mon_ia_traduit_mes_messages.txt';
+import A177 from '../shorts/177_mon_ia_paie_l_electricite.txt';
+import A178 from '../shorts/178_demande_a_claude.txt';
+import A179 from '../shorts/179_mes_ia_font_mon_conseil_de_classe.txt';
+import A180 from '../shorts/180_mon_ia_me_copie.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -211,7 +221,7 @@ startViewer({
     "133. Gemini a résumé mon partiel en un mot": A133,
     "134. Codex envoie mes messages avant la fin": A134,
     "135. Mon IA m'a présenté à son père": A135,
-    "136. Mon IA a ramené sa copine pour une nuit": A136,
+    "136. Mon IA commente ma soirée comme un match": A136,
     "137. Mon IA économisait en secret": A137,
     "138. Codex a annulé mon rencard": A138,
     "139. J'ai pris une prof de maths à 30 centimes": A139,
@@ -224,9 +234,9 @@ startViewer({
     "146. Mon IA a fait une soirée dans ma chambre": A146,
     "147. Mon IA a mis un mot de passe sur le frigo": A147,
     "148. J'ai accompagné mon IA à la fac": A148,
-    "149. La copine de mon IA m'a fait passer un interrogatoire": A149,
+    "149. Qui a cassé ma tasse ?": A149,
     "150. Mon IA m'a mis un contrôle parental": A150,
-    "151. Mon IA et sa copine se séparent : qui garde Tobi ?": A151,
+    "151. Mon IA n'est pas en colère, elle est déçue": A151,
     "152. Mon IA me réveille comme ma mère": A152,
     "153. La liste de Noël de mon IA": A153,
     "154. Mon IA est devenu mon coloc": A154,
@@ -236,7 +246,7 @@ startViewer({
     "158. Mon IA dit « On en a à la maison »": A158,
     "159. Mon IA m'a dit : « Ta mère arrive dans 10 minutes »": A159,
     "160. Mon IA a lu mon journal intime": A160,
-    "161. Mon IA sort ce soir avec mon crush": A161,
+    "161. Ma mère préfère mon IA": A161,
     "162. Mon IA a vu mon prof à ma place": A162,
     "163. Ma mère a engagé mon IA comme baby-sitter": A163,
     "164. Mon IA parle comme ma mère": A164,
@@ -245,7 +255,17 @@ startViewer({
     "167. Mon IA a eu son code du premier coup": A167,
     "168. Mon IA veut une histoire pour s'endormir": A168,
     "169. Mes IA m'ont fait une surprise": A169,
-    "170. Mon IA m'entraîne pour le repas de famille": A170,
+    "170. Malade le jour du partiel": A170,
+    "171. Mon IA répond comme un service client": A171,
+    "172. Mon IA a fait l'état des lieux de mon studio": A172,
+    "173. J'ai économisé 200 € aux soldes": A173,
+    "174. Mon IA a huit mois et parle comme un papi": A174,
+    "175. Mon IA a ouvert un restaurant étoilé": A175,
+    "176. Mon IA traduit mes messages en vrai": A176,
+    "177. Mon IA fait le père avec la facture d'électricité": A177,
+    "178. Mes IA font « demande à ton père »": A178,
+    "179. Mes IA ont fait mon conseil de classe": A179,
+    "180. Mon IA fait le petit frère qui copie": A180,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

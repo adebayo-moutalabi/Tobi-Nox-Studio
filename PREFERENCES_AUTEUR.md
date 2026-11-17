@@ -183,6 +183,12 @@ Les épisodes 161 à 170 ne faisaient pas assez rire. Ce qui marche dans les fav
 
 Les épisodes 161 à 170 ont été réécrits sur ce modèle.
 
+## Pas d'amoureuse pour Nox (17 novembre 2026)
+
+L'auteur n'est pas prêt à parler d'amour pour Nox, surtout avec le nombre d'abonnés actuel. Nox n'a pas de copine : ni Centi, ni Inès, ni personne. Centi reste l'IA pas chère, sans couple ni bébé. Les épisodes 136, 149, 151, 161 et 170 ont été entièrement remplacés. Le crush de Tobi pour Inès reste dans les épisodes déjà publiés.
+
+La réécriture du 161 au 170 du même jour ne lui a pas plu non plus : il veut des sketchs écrits avec les méthodes des grands auteurs de comédie.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

@@ -1,0 +1,40 @@
+# DEMANDE À CLAUDE
+# Pitch : Tobi veut juste commander une pizza. Nox dit de demander à Claude, Claude dit de demander à Gemini. Comme des parents qui se renvoient la question.
+
+AMBIANCE soir
+HEURE 20:15
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Ses IA se renvoient la question
+PLAN gros TOBI
+TOBI dit (content) Nox, je peux commander une pizza ?
+PLAN gros NOX
+NOX dit (calme) Demande à Claude.
+PLAN gros TOBI
+TOBI dit (content) Claude ? Pizza ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère que tu demandes à Gemini.
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : Nox a dit non à la dernière.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Gemini dit que t'as dit non !
+PLAN gros NOX
+NOX dit (calme) J'ai dit de demander à Claude.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Et moi, à Gemini. C'est cohérent.
+PLAN gros TOBI
+TOBI dit (colere) Bon. Je la commande tout seul.
+PLAN gros NOX
+NOX dit (sec) Sans demander ?
+PLAN gros CLAUDE
+CLAUDE dit (sec) Sans demander ?
+PLAN gros GEMINI
+GEMINI dit (surpris) Sans demander ?!
+PLAN gros TOBI
+TOBI dit (resigne) Je peux ?
+PLAN gros NOX
+NOX dit (punchline) Demande à ta mère.
+ATTENDRE 0.4

@@ -1,0 +1,38 @@
+# MON IA FAIT LE MÉDECIN AVANT MON PARTIEL
+# Pitch : Une heure avant le partiel, Tobi est « très malade ». Docteur Nox l'examine et pose son diagnostic.
+
+AMBIANCE jour
+HEURE 07:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Malade, comme par hasard, le jour du partiel
+PLAN gros TOBI
+TOBI dit (triste) Nox... Je suis malade. Je peux pas aller au partiel.
+PLAN gros NOX
+NOX dit (calme) Docteur Nox. Où as-tu mal ?
+PLAN gros TOBI
+TOBI dit (triste) Partout.
+PLAN gros NOX
+NOX dit (curieux) Depuis quand ?
+PLAN gros TOBI
+TOBI dit (gene) Depuis que j'ai vu le sujet... euh, ce matin.
+PLAN gros NOX
+NOX dit (calme) De la fièvre ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Quarante !
+PLAN gros NOX
+NOX dit (constat) Trente-six huit. Je suis un thermomètre avec des bras.
+PLAN gros TOBI
+TOBI dit (fier) Alors, docteur ? C'est grave ?
+PLAN gros NOX
+NOX dit (calme) Très. Partielite aiguë.
+PLAN gros TOBI
+TOBI dit (excite) Donc je reste au lit !
+PLAN gros NOX
+NOX dit (constat) Non. Ça guérit tout seul. À midi, à la fin de l'épreuve.
+PLAN gros TOBI
+TOBI dit (panique) Fais-moi un certificat !
+PLAN gros NOX
+NOX dit (punchline) C'est fait. « Le patient a peur. Il va très bien. »
+ATTENDRE 0.4

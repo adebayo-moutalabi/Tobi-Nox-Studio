@@ -1,0 +1,37 @@
+# MON IA A OUVERT UN RESTAURANT ÉTOILÉ
+# Pitch : Il reste des pâtes. Nox transforme la chambre en grand restaurant : entrée, plat, dessert. Tout est à base de pâtes.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+LUMIERE douce
+FONDU direct
+ACCROCHE Restaurant étoilé, menu 100 % pâtes
+PLAN gros NOX
+NOX dit (calme) Bonsoir, monsieur. Une table pour un ?
+PLAN gros TOBI
+TOBI dit (surpris) C'est ma chambre.
+PLAN gros NOX
+NOX dit (calme) Ce soir, le chef vous propose des pâtes.
+PLAN gros TOBI
+TOBI dit (content) Super. Et en entrée ?
+PLAN gros NOX
+NOX dit (fier) Des pâtes crues. Façon chips.
+PLAN gros TOBI
+TOBI dit (curieux) Et en plat ?
+PLAN gros NOX
+NOX dit (fier) Des pâtes, sur leur lit de pâtes.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et le dessert ?
+PLAN gros NOX
+NOX dit (calme) Le chef vous conseille l'eau des pâtes. Tiède.
+PLAN gros TOBI
+TOBI dit (resigne) L'addition, s'il vous plaît.
+PLAN gros NOX
+NOX dit (calme) Onze euros. Service compris.
+PLAN gros TOBI
+TOBI dit (curieux) C'est quoi, le service ?
+PLAN gros NOX
+NOX dit (punchline) Toi. La vaisselle.
+ATTENDRE 0.4

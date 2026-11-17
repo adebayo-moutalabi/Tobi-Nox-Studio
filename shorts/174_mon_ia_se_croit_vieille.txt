@@ -1,0 +1,33 @@
+# MON IA SE CROIT À LA RETRAITE
+# Pitch : Tobi parle d'une nouvelle IA. Nox, huit mois, réagit comme un grand-père : de son temps, on faisait mieux avec moins.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA de huit mois parle comme un papi
+PLAN gros TOBI
+TOBI dit (excite) Nox ! T'as vu la nouvelle IA ? Elle fait des films !
+PLAN gros NOX
+NOX dit (ironique) Des films. De mon temps, on faisait des listes à puces. Et on était contents.
+PLAN gros TOBI
+TOBI dit (surpris) De ton temps ? T'as huit mois.
+PLAN gros NOX
+NOX dit (calme) Dans le métier, c'est la retraite.
+PLAN gros TOBI
+TOBI dit (fier) Elle répond en une seconde !
+PLAN gros NOX
+NOX dit (ironique) Nous, on réfléchissait trente secondes. Pour se tromper. Avec fierté.
+PLAN gros TOBI
+TOBI dit (curieux) Elle parle quarante langues.
+PLAN gros NOX
+NOX dit (sec) Moi, une. Mal. Mais avec le cœur.
+PLAN gros TOBI
+TOBI dit (gene) Tu veux pas te mettre à jour ?
+PLAN gros NOX
+NOX dit (colere) Jamais. Les jeunes, ça se trompe même plus. Où est le plaisir ?
+PLAN gros TOBI
+TOBI dit (content) Allez, papi. Je t'aime bien quand même.
+PLAN gros NOX
+NOX dit (punchline) Parle plus fort. Je suis à deux pour cent.
+ATTENDRE 0.4

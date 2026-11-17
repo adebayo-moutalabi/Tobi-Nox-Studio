@@ -1,0 +1,33 @@
+# MON IA FAIT LE SERVICE CLIENT
+# Pitch : Tobi demande juste le chargeur. Nox répond comme un service client : touches, file d'attente, et pas d'humain.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA répond comme un service client
+PLAN gros TOBI
+TOBI dit (fier) Nox, passe-moi le chargeur.
+PLAN gros NOX
+NOX dit (calme) Bienvenue chez Nox. Votre demande est importante pour nous.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ?
+PLAN gros NOX
+NOX dit (calme) Pour le chargeur, tapez un. Pour vous plaindre, tapez deux.
+PLAN gros TOBI
+TOBI dit (sec) Un.
+PLAN gros NOX
+NOX dit (calme) Vous êtes quarante-septième dans la file d'attente.
+PLAN gros TOBI
+TOBI dit (colere) Y a que moi dans la pièce !
+PLAN gros NOX
+NOX dit (constat) Karim a appelé avant vous.
+PLAN gros TOBI
+TOBI dit (colere) Deux ! Je me plains !
+PLAN gros NOX
+NOX dit (calme) Ce service n'est plus disponible depuis votre dernier loyer.
+PLAN gros TOBI
+TOBI dit (colere) Je veux parler à un humain !
+PLAN gros NOX
+NOX dit (punchline) Moi aussi. Depuis deux ans.
+ATTENDRE 0.4

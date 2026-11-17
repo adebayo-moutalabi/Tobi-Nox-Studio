@@ -1,0 +1,36 @@
+# QUI A CASSÉ MA TASSE ?
+# Pitch : Tobi retrouve sa tasse préférée en morceaux et interroge ses IA comme un parent. Chacune se défend à sa façon. Nox a la vidéo.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Qui a cassé sa tasse ?
+PLAN gros TOBI
+TOBI dit (colere) Qui a cassé ma tasse ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère être honnête. Je n'ai pas de mains.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Je l'ai réparée.
+PLAN gros TOBI
+TOBI dit (surpris) Avec quoi ?
+PLAN gros CODEX
+CODEX dit (fier) Du dentifrice.
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : neuf tasses sur dix sont cassées par leur propriétaire.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Toi, tu sais.
+PLAN gros NOX
+NOX dit (calme) La caméra a tout filmé. Trois heures du matin.
+PLAN gros TOBI
+TOBI dit (fier) Montre. On va voir qui c'est.
+PLAN gros NOX
+NOX dit (constat) Toi. Tu dansais.
+PLAN gros TOBI
+TOBI dit (gene) Je dansais comment ?
+PLAN gros NOX
+NOX dit (punchline) Mal. La tasse a essayé de fuir.
+ATTENDRE 0.4

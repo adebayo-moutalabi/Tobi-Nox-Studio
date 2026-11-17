@@ -1,0 +1,41 @@
+# MON IA COMMENTE MA SOIRÉE COMME UN MATCH
+# Pitch : Tobi doit écrire son exposé. Nox commente chaque geste comme un match de foot : Word, le téléphone, la phrase effacée.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA commente sa soirée comme un match
+PLAN gros TOBI
+TOBI dit (fier) Ce soir, j'écris mon exposé. Trois pages.
+PLAN gros NOX
+NOX dit (excite) Et c'est parti ! Tobi s'installe. Le public retient son souffle !
+PLAN gros TOBI
+TOBI dit (surpris) Tu fais quoi, là ?
+PLAN gros NOX
+NOX dit (excite) Il parle au commentateur ! Il perd déjà du temps !
+PLAN gros TOBI
+TOBI dit (sec) J'ouvre Word.
+PC Word : Expose.docx | Page 1 sur 3 |
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (excite) Page blanche ! Quel suspense !
+PLAN gros TOBI
+TOBI dit (gene) Je regarde juste mon téléphone.
+PLAN gros NOX
+NOX dit (panique) Non, Tobi, non ! Il l'a pris ! Dix-sept minutes de vidéos de chats !
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était pour me motiver.
+PLAN gros NOX
+NOX dit (sec) Les ralentis disent que non.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'écris une phrase.
+PLAN gros NOX
+NOX dit (excite) Une phrase ! Le stade est debout ! Il l'efface.
+PLAN gros TOBI
+TOBI dit (resigne) Elle était nulle.
+PLAN gros NOX
+NOX dit (punchline) Score final. Le lit gagne, trois à zéro.
+ATTENDRE 0.4

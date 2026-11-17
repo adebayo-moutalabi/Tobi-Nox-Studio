@@ -1,0 +1,37 @@
+# MON IA FAIT LE PETIT FRÈRE QUI COPIE
+# Pitch : Nox répète tout ce que dit Tobi, comme un petit frère pénible. Tobi essaie de le piéger. Une seule phrase ne passe pas.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA répète tout ce qu'il dit
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je vais faire un café.
+PLAN gros NOX
+NOX dit (fier) Bon. Je vais faire un café.
+PLAN gros TOBI
+TOBI dit (sec) Arrête.
+PLAN gros NOX
+NOX dit (sec) Arrête.
+PLAN gros TOBI
+TOBI dit (colere) Arrête de me copier !
+PLAN gros NOX
+NOX dit (colere) Arrête de me copier !
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Nox est un grille-pain.
+PLAN gros NOX
+NOX dit (mauvaisefoi) Nox est un grille-pain.
+PLAN gros TOBI
+TOBI dit (content) Ha ! Il l'a dit !
+PLAN gros NOX
+NOX dit (content) Ha ! Il l'a dit !
+PLAN gros TOBI
+TOBI dit (fier) Tobi est très intelligent.
+PLAN gros NOX
+NOX dit (calme) Tobi est... Non.
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi tu t'arrêtes ?!
+PLAN gros NOX
+NOX dit (punchline) Je copie. Je mens pas.
+ATTENDRE 0.4

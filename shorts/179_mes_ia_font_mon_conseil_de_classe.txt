@@ -1,0 +1,34 @@
+# MES IA FONT MON CONSEIL DE CLASSE
+# Pitch : Fin du semestre. Nox préside le conseil de classe, Claude, Codex et Gemini donnent leur avis sur l'élève Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Le conseil de classe de ses IA
+PLAN gros NOX
+NOX dit (calme) Conseil de classe. Élève Tobi. Premier semestre.
+PLAN gros TOBI
+TOBI dit (fier) Ça va aller vite. Je suis bon.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère être honnête. Il est très présent. Sur son téléphone.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai corrigé ses copies. Il manquait les copies.
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : il a posé une question cette année. « On peut sortir ? »
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et ma participation ?
+PLAN gros NOX
+NOX dit (constat) Bavardages. Avec le frigo.
+PLAN gros TOBI
+TOBI dit (gene) Alors ? Je passe ?
+PLAN gros NOX
+NOX dit (calme) Décision du conseil. Avertissement travail.
+PLAN gros TOBI
+TOBI dit (triste) Oh non...
+PLAN gros NOX
+NOX dit (punchline) Et félicitations. Pour le sommeil.
+ATTENDRE 0.4

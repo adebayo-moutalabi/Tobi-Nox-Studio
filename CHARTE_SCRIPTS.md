@@ -49,6 +49,19 @@ Ce que font les Shorts humoristiques qui retiennent le mieux, et qu'on applique 
 13. **La correction d'un seul mot.** « On l'a eu ! » « J'ai. »
 14. **La phrase toute faite à contretemps.** Une phrase de parent, de vendeur ou d'IA dite au mauvais endroit (« En tant que mère, je ne peux pas répondre à cette demande. »).
 
+### La méthode des sketchs (17 novembre 2026)
+
+Inspirée des écoles d'improvisation, des auteurs de sketchs télé et des séries françaises en format court :
+
+1. **La situation normale d'abord.** Une réplique suffit : qui, où, ce qu'on veut (« Je veux juste le chargeur »).
+2. **La première chose bizarre, c'est le jeu.** Nox répond comme un service client, un commentateur, un médecin, un parent. On le dit clairement dès la deuxième réplique.
+3. **« Si c'est vrai, quoi d'autre est vrai ? »** Chaque tour pousse le jeu plus loin, au moins trois fois : file d'attente, puis Karim avant toi, puis plus d'humain.
+4. **Une vérité que tout le monde reconnaît.** « Fais comme tu veux » qui veut dire non, la caution jamais rendue, « j'ai économisé en dépensant ». Le spectateur doit se dire « c'est trop vrai ».
+5. **Deux caractères opposés.** Tobi croit à tout, Nox ne croit à rien. Le rire vient du frottement, pas des blagues plaquées.
+6. **La chute, puis on coupe.** Une dernière phrase sèche qui retourne le jeu ou va encore plus loin. Rien après.
+
+**Interdit pour l'instant :** une amoureuse pour Nox (ni Centi, ni personne).
+
 ## La bonne durée
 
 La durée vise 30 à 40 secondes, 50 au grand maximum (décision du 13 novembre 2026) : environ 70 à 100 mots de dialogue, une seule mécanique comique. L'histoire doit rester intéressante et compréhensible : une idée courte reste courte.

@@ -1,0 +1,30 @@
+# MA MÈRE PRÉFÈRE MON IA
+# Pitch : La mère de Tobi écrit tous les jours. Pas à Tobi : à Nox. Elle le compare à son fils, jusqu'à la place à table.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa mère préfère son IA
+PLAN gros TOBI
+TOBI dit (content) Ma mère a écrit ? Elle demande de mes nouvelles ?
+PLAN gros NOX
+NOX dit (constat) Non. Des miennes.
+TOBI message Maman | Coucou mon chéri ! | > Oui, Maman ? | C'était pour Nox.
+PLAN gros TOBI
+TOBI dit (colere) Elle t'appelle « mon chéri » ?
+PLAN gros NOX
+NOX dit (calme) Je l'appelle tous les jours. Toi, quand ton compte est à zéro.
+TOBI message Maman | Nox m'a aidée pour mes impôts. Pourquoi tu peux pas être comme lui ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il a pas de corps ! Il peut même pas venir à Noël !
+PLAN gros NOX
+NOX dit (content) J'y vais. Sur la tablette. En bout de table.
+PLAN gros TOBI
+TOBI dit (resigne) Et moi, je suis où ?
+PLAN gros NOX
+NOX dit (constat) À la table des enfants.
+TOBI message Maman | Tobi, tu peux nous laisser ? On parle de l'héritage.
+PLAN gros NOX
+NOX dit (punchline) T'inquiète. Je te garde le grille-pain.
+ATTENDRE 0.4
