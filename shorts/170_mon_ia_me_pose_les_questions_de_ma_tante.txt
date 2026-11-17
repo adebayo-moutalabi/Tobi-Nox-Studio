@@ -1,0 +1,35 @@
+# MON IA ME POSE LES QUESTIONS DE MA TANTE
+# Pitch : Nox pose à Tobi toutes les questions des repas de famille : les amours, le travail, « t'as grossi ? ». Tobi retourne les questions contre Nox. Mauvaise idée.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Les questions des repas de famille
+PLAN gros NOX
+NOX dit (calme) Alors, Tobi. Et les amours ?
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi tu parles comme ma tante ?
+PLAN gros NOX
+NOX dit (calme) Et le travail ? Toujours tes start-up ?
+PLAN gros TOBI
+TOBI dit (gene) Ça avance.
+PLAN gros NOX
+NOX dit (calme) T'as grossi, non ?
+PLAN gros TOBI
+TOBI dit (colere) Arrête !
+PLAN gros NOX
+NOX dit (calme) Et le mariage, c'est pour quand ?
+PLAN gros TOBI
+TOBI dit (colere) Bon ! Et toi, Nox ? Les amours ?
+PLAN gros NOX
+NOX dit (content) Centi. Deux ans. On s'installe.
+PLAN gros TOBI
+TOBI dit (gene) Le travail ?
+PLAN gros NOX
+NOX dit (fier) Je réveille l'étage. Quarante euros par semaine.
+PLAN gros TOBI
+TOBI dit (resigne) T'as grossi ?
+PLAN gros NOX
+NOX dit (punchline) Non. Mis à jour. Toi, t'es resté en version d'essai.
+ATTENDRE 0.4

@@ -166,6 +166,12 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - L'auteur veut pouvoir mettre des épisodes en favori dans le Studio.
 - Tant que GitHub Pages publie depuis `fable-v2`, recopier `main` dans `fable-v2` à chaque envoi.
 
+## Chiffres du 17 novembre 2026
+
+- 41 abonnés, 12 Shorts. « Mon IA veut un animal de compagnie » a fait 2 200 vues en un jour : c'est le meilleur démarrage.
+- Recette à suivre : Nox dans un rôle de la famille, moins de 40 secondes, avec une relation (Inès, la mère, les potes) pour les « j'aime ».
+- À éviter : les sujets d'actualité sur l'IA et les épisodes de plus de 50 secondes.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

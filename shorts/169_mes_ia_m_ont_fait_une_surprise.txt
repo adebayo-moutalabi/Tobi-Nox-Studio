@@ -1,0 +1,38 @@
+# MES IA M'ONT FAIT UNE SURPRISE D'ANNIVERSAIRE
+# Pitch : Nox, Claude, Codex et Gemini organisent une fête surprise pour Tobi. Chaque cadeau est très honnête. Le dernier détail arrive à la fin.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE Des cadeaux d'anniversaire trop honnêtes
+PLAN gros NOX
+NOX dit (excite) Surprise ! Joyeux anniversaire, Tobi !
+PLAN gros TOBI
+TOBI dit (content) Vous avez pensé à moi ! Merci !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Mon cadeau : une liste. Tes vingt-deux erreurs de l'année.
+PLAN gros TOBI
+TOBI dit (gene) Merci, Claude.
+PLAN gros GEMINI
+GEMINI dit (excite) Le mien : ta vie en graphique ! La courbe descend depuis septembre !
+PLAN gros TOBI
+TOBI dit (gene) C'est... joli.
+PLAN gros CODEX
+CODEX dit (fier) Le mien est déjà fait. J'ai résilié tous tes abonnements.
+PLAN gros TOBI
+TOBI dit (panique) Tous ?
+PLAN gros CODEX
+CODEX dit (content) Tu es libre.
+PLAN gros TOBI
+TOBI dit (triste) Et toi, Nox ?
+PLAN gros NOX
+NOX dit (content) Moi, j'ai rien acheté.
+PLAN gros TOBI
+TOBI dit (content) Ouf. Un cadeau normal.
+PLAN gros NOX
+NOX dit (punchline) C'est demain, ton anniversaire. On voulait être les premiers.
+ATTENDRE 0.4

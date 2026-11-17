@@ -1,0 +1,31 @@
+# MON IA A PARLÉ À MA MÈRE EN VISIO
+# Pitch : La mère de Tobi veut voir Nox en visio. Tobi lui demande d'être poli et de dire qu'il mange bien. Nox est très poli, et très honnête.
+
+AMBIANCE soir
+DIRECT TOBI travaille
+DIRECT TOBI pivote
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA rencontre sa mère
+PLAN gros TOBI
+TOBI dit (fier) Nox, ma mère veut te voir. Sois poli. Dis que je mange bien.
+PC Camera : Visio avec Maman | En direct | Maman
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (calme) Bonjour, madame. Il mange bien.
+PLAN gros TOBI
+TOBI dit (content) Voilà !
+PLAN gros NOX
+NOX dit (calme) Le kebab, c'est équilibré : il y a de la salade.
+PLAN gros TOBI
+TOBI dit (panique) Nox !
+PLAN gros NOX
+NOX dit (calme) Et il dort beaucoup. Surtout en cours.
+TOBI message Maman | Il est adorable, ton robot. | Je peux l'avoir pour Noël ?
+PLAN gros TOBI
+TOBI dit (fier) Bien sûr, Maman. Je viens avec lui.
+TOBI message Maman | Ah. | D'accord.
+PLAN gros NOX
+NOX dit (punchline) Elle a dit « ah ».
+ATTENDRE 0.4

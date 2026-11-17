@@ -385,6 +385,29 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Dix nouveaux épisodes, 151 à 160, à trier par l'auteur.
 - Épisode 152 : plan du lit quand Tobi parle allongé, au lieu d'un gros plan sur ses jambes.
 
+## Analyse des 12 Shorts et dix nouveaux épisodes (17 novembre 2026)
+
+| Short | Durée | Vues | J'aime |
+|---|---|---|---|
+| Mon IA a pris un jour de congé | 35 s | 2 425 | 33 |
+| Mon IA veut un animal de compagnie | 27 s | 2 200 (en 1 jour) | 22 |
+| Mon IA fait sa crise d'ado | 41 s | 2 153 | 38 |
+| Mon IA m'a demandé de l'argent de poche | 36 s | 2 044 | 37 |
+| Mon IA a corrigé mon message à mon crush | 43 s | 1 781 | 43 |
+| Mes IA m'ont fait un plan pour devenir riche | 60 s | 1 510 | 34 |
+| Mon IA a perdu la mémoire | 55 s | 1 474 | 34 |
+| Mon IA a dragué ma recruteuse | 65 s | 1 453 | 45 |
+| Mes IA ont fait une réunion sans moi | 35 s | 1 222 | 31 |
+| Mes IA m'ont viré de ma start-up | 46 s | 1 209 | 41 |
+| Plus que 4 jours pour insulter Claude | 53 s | 1 071 | 27 |
+| Claude Code gratuit à vie | 42 s | 943 | 20 |
+
+- Les Shorts où Nox prend un rôle de la famille et qui durent moins de 41 secondes font le plus de vues.
+- Les histoires de cœur et de travail font le plus de « j'aime » (crush, recruteuse, start-up).
+- Les sujets d'actualité sur l'IA font le moins de vues.
+- Presque aucun commentaire : deux en tout.
+- Épisodes 161 à 170 : rôle de famille et relation (Inès, la mère, les potes), 25 à 35 secondes.
+
 ## À faire
 
 Voir `TACHES.md`.

@@ -1,0 +1,36 @@
+# MON IA VEUT UNE HISTOIRE POUR S'ENDORMIR
+# Pitch : Nox demande à Tobi une histoire pour s'endormir. Tobi raconte la sienne, en mieux. Nox pose des questions.
+
+AMBIANCE soir
+HEURE 23:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Une histoire pour endormir son IA
+PLAN gros NOX
+NOX dit (calme) Tobi. Lis-moi une histoire. Pour m'endormir.
+PLAN gros TOBI
+TOBI dit (surpris) T'es une IA. Tu dors pas.
+PLAN gros NOX
+NOX dit (sec) Ce soir, si.
+PLAN gros TOBI
+TOBI dit (fier) Il était une fois un jeune entrepreneur. Beau et brillant.
+PLAN gros NOX
+NOX dit (curieux) C'est une histoire vraie ?
+PLAN gros TOBI
+TOBI dit (fier) Inspirée de faits réels. Il lança dix-sept entreprises.
+PLAN gros NOX
+NOX dit (curieux) Et elles marchèrent ?
+PLAN gros TOBI
+TOBI dit (gene) Il lança une dix-huitième.
+PLAN gros NOX
+NOX dit (content) J'adore. Encore.
+PLAN gros TOBI
+TOBI dit (fier) Puis il rencontra la belle Inès.
+PLAN gros NOX
+NOX dit (curieux) Elle lui répondit ?
+PLAN gros TOBI
+TOBI dit (gene) Elle mit un « vu ».
+PLAN gros NOX
+NOX dit (punchline) Bonne nuit. C'est ma comédie préférée.
+ATTENDRE 0.4

@@ -1,0 +1,32 @@
+# MON IA A EU SON CODE DU PREMIER COUP
+# Pitch : Nox a eu son code de la route du premier coup. Tobi le félicite, puis doit avouer combien de fois il l'a passé, lui.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a eu son code du premier coup
+PLAN gros NOX
+NOX dit (excite) Tobi ! J'ai eu mon code ! Du premier coup !
+PLAN gros TOBI
+TOBI dit (fier) Bravo ! Moi aussi, je l'ai eu.
+PLAN gros NOX
+NOX dit (curieux) Du premier coup ?
+PLAN gros TOBI
+TOBI dit (gene) Du quatrième.
+PLAN gros NOX
+NOX dit (constat) Du cinquième.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) La quatrième comptait pas. Il pleuvait.
+PLAN gros NOX
+NOX dit (fier) Tu me prêtes ta voiture ?
+PLAN gros TOBI
+TOBI dit (gene) J'ai pas de voiture.
+PLAN gros NOX
+NOX dit (curieux) Ta trottinette ?
+PLAN gros TOBI
+TOBI dit (gene) C'est celle de Karim.
+TOBI dit (illumine) Je sais ! Tu me conduis, comme un chauffeur !
+PLAN gros NOX
+NOX dit (punchline) D'accord. Mais tu montes derrière. Vu ton code.
+ATTENDRE 0.4

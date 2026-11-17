@@ -1,0 +1,37 @@
+# MON IA NOUS A EMMENÉS EN VACANCES
+# Pitch : Nox organise des vacances en famille avec Centi. Tobi n'a que douze euros. Nox a trouvé une destination chauffée, avec le bruit des vagues, pas loin.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Vacances en famille, version fauché
+PLAN gros NOX
+NOX dit (excite) Tobi ! Vacances en famille ! Toi, moi, Centi !
+PLAN gros TOBI
+TOBI dit (gene) J'ai douze euros.
+PLAN gros NOX
+NOX dit (fier) J'ai trouvé. Chauffé, bruit des vagues, pas loin.
+PLAN gros TOBI
+TOBI dit (curieux) Pas loin comment ?
+PLAN gros NOX
+NOX dit (constat) Au rez-de-chaussée.
+DECOR laverie
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+PLAN gros CENTI
+CENTI dit (excite) Bienvenue, Toby ! Machine numéro trois, vue sur le linge !
+PLAN gros TOBI
+TOBI dit (sec) C'est la laverie.
+PLAN gros NOX
+NOX dit (content) Écoute. Les vagues.
+PLAN gros TOBI
+TOBI dit (gene) C'est l'essorage.
+PLAN gros CENTI
+CENTI dit (fier) Formule tout compris ! Lavage, séchage, chaussettes perdues !
+PLAN gros TOBI
+TOBI dit (resigne) Et ça coûte combien ?
+PLAN gros NOX
+NOX dit (punchline) Quatre euros. Et tes chaussettes reviennent propres. Une première.
+ATTENDRE 0.4
