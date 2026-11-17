@@ -172,6 +172,17 @@ Ce fichier garde les retours importants, pour ne pas refaire les mêmes erreurs.
 - Recette à suivre : Nox dans un rôle de la famille, moins de 40 secondes, avec une relation (Inès, la mère, les potes) pour les « j'aime ».
 - À éviter : les sujets d'actualité sur l'IA et les épisodes de plus de 50 secondes.
 
+## Pas encore assez drôle (17 novembre 2026)
+
+Les épisodes 161 à 170 ne faisaient pas assez rire. Ce qui marche dans les favoris (141, 146, 150) :
+
+- **Chaque réplique de Nox est une blague.** Pas de réplique qui sert seulement à installer.
+- **Tobi se donne un rôle d'autorité** (parent, grand frère, prof), et les réponses montrent que c'est lui l'enfant.
+- **La chute se dit.** Un SMS peut renverser la situation, mais la dernière réplique reste une phrase de Nox, courte, le mot drôle à la fin.
+- **Une réplique de plus après le gros rire** (« Un plus calme. ») : la surenchère.
+
+Les épisodes 161 à 170 ont été réécrits sur ce modèle.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

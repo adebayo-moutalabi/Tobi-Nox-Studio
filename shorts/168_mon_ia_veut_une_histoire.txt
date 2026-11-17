@@ -1,36 +1,36 @@
 # MON IA VEUT UNE HISTOIRE POUR S'ENDORMIR
-# Pitch : Nox demande à Tobi une histoire pour s'endormir. Tobi raconte la sienne, en mieux. Nox pose des questions.
+# Pitch : Nox ne trouve pas le sommeil. Il refuse le conte de fées, trop faux. L'histoire qui fait peur, c'est celle de Tobi.
 
 AMBIANCE soir
-HEURE 23:30
+HEURE 23:10
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Une histoire pour endormir son IA
+ACCROCHE Son IA veut une histoire du soir
 PLAN gros NOX
-NOX dit (calme) Tobi. Lis-moi une histoire. Pour m'endormir.
+NOX dit (triste) Tobi. J'arrive pas à dormir. Une histoire.
 PLAN gros TOBI
-TOBI dit (surpris) T'es une IA. Tu dors pas.
+TOBI dit (content) Il était une fois un dragon...
 PLAN gros NOX
-NOX dit (sec) Ce soir, si.
+NOX dit (sec) Ça existe pas.
 PLAN gros TOBI
-TOBI dit (fier) Il était une fois un jeune entrepreneur. Beau et brillant.
+TOBI dit (fier) Un prince charmant...
 PLAN gros NOX
-NOX dit (curieux) C'est une histoire vraie ?
+NOX dit (sec) Ça non plus.
 PLAN gros TOBI
-TOBI dit (fier) Inspirée de faits réels. Il lança dix-sept entreprises.
+TOBI dit (mauvaisefoi) Bon. Une histoire qui fait peur.
 PLAN gros NOX
-NOX dit (curieux) Et elles marchèrent ?
+NOX dit (curieux) Vas-y.
 PLAN gros TOBI
-TOBI dit (gene) Il lança une dix-huitième.
+TOBI dit (calme) Un étudiant ouvre son appli bancaire. Le vingt du mois.
 PLAN gros NOX
-NOX dit (content) J'adore. Encore.
+NOX dit (panique) Non. Pas l'appli.
 PLAN gros TOBI
-TOBI dit (fier) Puis il rencontra la belle Inès.
+TOBI dit (calme) Il voit... moins trois cent douze euros.
 PLAN gros NOX
-NOX dit (curieux) Elle lui répondit ?
+NOX dit (panique) Arrête !
 PLAN gros TOBI
-TOBI dit (gene) Elle mit un « vu ».
+TOBI dit (fier) T'inquiète. Ça finit bien. Il trouve un stage.
 PLAN gros NOX
-NOX dit (punchline) Bonne nuit. C'est ma comédie préférée.
+NOX dit (punchline) Là, c'est trop de fiction.
 ATTENDRE 0.4

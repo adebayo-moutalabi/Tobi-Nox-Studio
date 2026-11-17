@@ -42,6 +42,12 @@ Ce que font les Shorts humoristiques qui retiennent le mieux, et qu'on applique 
 6. **La réplique courte gagne.** La chute tient en six mots au plus, le mot drôle à la fin.
 7. **Couper avant d'expliquer.** Après la chute, plus rien. Si une réplique explique la blague, on la retire.
 8. **Le silence joue.** Un regard, un hochement de tête ou un clignement avant la chute vaut une réplique.
+9. **Chaque réplique de Nox est une blague.** S'il ne fait qu'installer, on coupe ou on réécrit.
+10. **La fausse piste.** La question de Tobi a un sens, la réponse de Nox en prend un autre (« Qui va le nourrir ? » « Moi. Je te nourris déjà. »).
+11. **La surenchère.** Après le gros rire, une réplique de plus, encore plus courte, qui aggrave (« Un plus calme. »).
+12. **Le rôle d'autorité retourné.** Tobi joue le parent, le prof ou le grand frère, et chaque réponse montre que c'est lui l'enfant.
+13. **La correction d'un seul mot.** « On l'a eu ! » « J'ai. »
+14. **La phrase toute faite à contretemps.** Une phrase de parent, de vendeur ou d'IA dite au mauvais endroit (« En tant que mère, je ne peux pas répondre à cette demande. »).
 
 ## La bonne durée
 

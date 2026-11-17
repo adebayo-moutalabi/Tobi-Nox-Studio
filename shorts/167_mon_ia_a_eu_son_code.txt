@@ -1,32 +1,40 @@
 # MON IA A EU SON CODE DU PREMIER COUP
-# Pitch : Nox a eu son code de la route du premier coup. Tobi le félicite, puis doit avouer combien de fois il l'a passé, lui.
+# Pitch : Tobi a raté son code quatre fois. Il fait réviser Nox comme un grand frère. Nox a toutes les bonnes réponses, Tobi aucune.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son IA a eu son code du premier coup
-PLAN gros NOX
-NOX dit (excite) Tobi ! J'ai eu mon code ! Du premier coup !
+ACCROCHE Son IA a eu son code avant lui
 PLAN gros TOBI
-TOBI dit (fier) Bravo ! Moi aussi, je l'ai eu.
+TOBI dit (fier) Je vais t'aider pour ton code. J'ai de l'expérience.
 PLAN gros NOX
-NOX dit (curieux) Du premier coup ?
+NOX dit (calme) Quatre échecs. C'est de l'expérience.
 PLAN gros TOBI
-TOBI dit (gene) Du quatrième.
+TOBI dit (fier) Question un. Feu orange ?
 PLAN gros NOX
-NOX dit (constat) Du cinquième.
+NOX dit (calme) On s'arrête.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) La quatrième comptait pas. Il pleuvait.
+TOBI dit (mauvaisefoi) On accélère.
 PLAN gros NOX
-NOX dit (fier) Tu me prêtes ta voiture ?
+NOX dit (constat) C'est pour ça, le quatre.
 PLAN gros TOBI
-TOBI dit (gene) J'ai pas de voiture.
+TOBI dit (fier) Question deux. Un piéton traverse, très lentement.
 PLAN gros NOX
-NOX dit (curieux) Ta trottinette ?
+NOX dit (calme) On attend.
 PLAN gros TOBI
-TOBI dit (gene) C'est celle de Karim.
-TOBI dit (illumine) Je sais ! Tu me conduis, comme un chauffeur !
+TOBI dit (mauvaisefoi) On klaxonne.
 PLAN gros NOX
-NOX dit (punchline) D'accord. Mais tu montes derrière. Vu ton code.
+NOX dit (sec) C'était ta grand-mère.
+BRUIT ding
+PLAN gros NOX
+NOX dit (content) Quarante sur quarante.
+PLAN gros TOBI
+TOBI dit (excite) On l'a eu !
+PLAN gros NOX
+NOX dit (sec) J'ai.
+PLAN gros TOBI
+TOBI dit (gene) Tu m'emmènes à la fac, alors ?
+PLAN gros NOX
+NOX dit (punchline) Oui. Derrière. Siège enfant.
 ATTENDRE 0.4

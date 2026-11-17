@@ -1,37 +1,39 @@
 # MON IA NOUS A EMMENÉS EN VACANCES
-# Pitch : Nox organise des vacances en famille avec Centi. Tobi n'a que douze euros. Nox a trouvé une destination chauffée, avec le bruit des vagues, pas loin.
+# Pitch : Tobi a onze euros. Nox vend la laverie comme une agence de voyage : vue sur mer, spa, piscine. Centi tient l'accueil.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Vacances en famille, version fauché
-PLAN gros NOX
-NOX dit (excite) Tobi ! Vacances en famille ! Toi, moi, Centi !
+ACCROCHE Vacances tout compris à 11 €
 PLAN gros TOBI
-TOBI dit (gene) J'ai douze euros.
+TOBI dit (triste) Pas de vacances cette année. J'ai onze euros.
 PLAN gros NOX
-NOX dit (fier) J'ai trouvé. Chauffé, bruit des vagues, pas loin.
+NOX dit (content) J'ai trouvé. Tout compris. Onze euros.
 PLAN gros TOBI
-TOBI dit (curieux) Pas loin comment ?
+TOBI dit (excite) C'est où ?
 PLAN gros NOX
 NOX dit (constat) Au rez-de-chaussée.
 DECOR laverie
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CENTI apparait milieu
-PLAN gros CENTI
-CENTI dit (excite) Bienvenue, Toby ! Machine numéro trois, vue sur le linge !
 PLAN gros TOBI
 TOBI dit (sec) C'est la laverie.
 PLAN gros NOX
-NOX dit (content) Écoute. Les vagues.
+NOX dit (fier) Vue sur mer.
 PLAN gros TOBI
-TOBI dit (gene) C'est l'essorage.
-PLAN gros CENTI
-CENTI dit (fier) Formule tout compris ! Lavage, séchage, chaussettes perdues !
-PLAN gros TOBI
-TOBI dit (resigne) Et ça coûte combien ?
+TOBI dit (sec) C'est un hublot.
 PLAN gros NOX
-NOX dit (punchline) Quatre euros. Et tes chaussettes reviennent propres. Une première.
+NOX dit (content) Avec des vagues.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et le soleil ?
+PLAN gros NOX
+NOX dit (constat) Le séchoir. Soixante degrés. Tu bronzes en douze minutes.
+DIRECT CENTI apparait milieu
+PLAN gros CENTI
+CENTI dit (excite) Bienvenue, Toby ! Le petit-déjeuner, c'est le distributeur. Il rend pas la monnaie.
+PLAN gros TOBI
+TOBI dit (resigne) Et ça a combien d'étoiles, ton hôtel ?
+PLAN gros NOX
+NOX dit (punchline) Cinq. Dont quatre de moi.
 ATTENDRE 0.4

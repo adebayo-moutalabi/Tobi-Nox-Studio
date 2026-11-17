@@ -1,0 +1,36 @@
+# MA MÈRE A ENGAGÉ MON IA COMME BABY-SITTER
+# Pitch : La mère de Tobi a laissé des consignes à Nox. Tout ce que Tobi dit ou fait est déjà écrit dans la liste.
+
+AMBIANCE soir
+HEURE 20:40
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa mère paie son IA pour le garder
+PLAN gros NOX
+NOX dit (calme) Ta mère m'a engagé. Baby-sitter, ce soir.
+PLAN gros TOBI
+TOBI dit (colere) Baby-sitter ? J'ai vingt-deux ans !
+PLAN gros NOX
+NOX dit (constat) Elle a laissé une liste. « Il va dire qu'il a vingt-deux ans. »
+PLAN gros TOBI
+TOBI dit (fier) J'ai pas besoin qu'on me garde.
+PLAN gros NOX
+NOX dit (constat) « Il va dire qu'il a pas besoin qu'on le garde. »
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle me connaît pas du tout !
+PLAN gros NOX
+NOX dit (constat) « Il va dire que je le connais pas. »
+PLAN gros TOBI
+TOBI dit (gene) ... Elle te paie combien ?
+PLAN gros NOX
+NOX dit (calme) Dix euros.
+PLAN gros TOBI
+TOBI dit (surpris) C'est tout ?
+PLAN gros NOX
+NOX dit (constat) « Il va trouver que c'est pas cher. C'est le prix. »
+PLAN gros TOBI
+TOBI dit (colere) Bon. Je vais me coucher.
+PLAN gros NOX
+NOX dit (punchline) « Il revient dans deux minutes. Pour les chips. »
+ATTENDRE 0.4

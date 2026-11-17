@@ -1,0 +1,33 @@
+# MON IA A JOUÉ LE GRAND FRÈRE
+# Pitch : Karim a encore pris des affaires à Tobi. Nox joue le grand frère et va régler ça. Chaque réponse de Karim retourne la situation.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA joue le grand frère
+PLAN gros TOBI
+TOBI dit (colere) Karim m'a encore pris mon chargeur !
+PLAN gros NOX
+NOX dit (sec) Laisse. Je m'en occupe.
+PLAN gros TOBI
+TOBI dit (fier) Vas-y. Fais le grand frère.
+PLAN gros NOX
+NOX dit (sec) Karim. Rends le chargeur.
+TOBI message Karim | C'est le mien. Il me l'a pris hier.
+PLAN gros NOX
+NOX dit (calme) Et la poêle ?
+TOBI message Karim | La mienne aussi.
+PLAN gros NOX
+NOX dit (constat) Et le pull ?
+TOBI message Karim | Il le porte. Là. Maintenant.
+PLAN gros TOBI
+TOBI dit (gene) Il est très confortable.
+PLAN gros NOX
+NOX dit (sec) Rends tout.
+TOBI message Karim | Merci Nox. Tu veux venir vivre chez moi ?
+PLAN gros TOBI
+TOBI dit (panique) Nox ?
+PLAN gros NOX
+NOX dit (punchline) Je fais mes valises.
+ATTENDRE 0.4

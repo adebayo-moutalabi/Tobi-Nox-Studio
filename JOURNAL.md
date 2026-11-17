@@ -407,6 +407,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Les sujets d'actualité sur l'IA font le moins de vues.
 - Presque aucun commentaire : deux en tout.
 - Épisodes 161 à 170 : rôle de famille et relation (Inès, la mère, les potes), 25 à 35 secondes.
+- Épisodes 161 à 170 réécrits pour être plus drôles : une blague par réplique de Nox, rôle d'autorité retourné, chute dite et surenchère. Six nouvelles idées (crush, prof, baby-sitter, mère, grand frère) et quatre resserrées. Méthode ajoutée à `CHARTE_SCRIPTS.md`.
 
 ## À faire
 

@@ -1,0 +1,38 @@
+# MON IA A VU MON PROF À MA PLACE
+# Pitch : Nox est allé voir le prof de Tobi, comme un parent à la réunion. Chaque compliment cache autre chose, jusqu'à la note.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a vu son prof à sa place
+PLAN gros TOBI
+TOBI dit (excite) Alors ? T'as vu mon prof ? Il a dit quoi ?
+PLAN gros NOX
+NOX dit (calme) Il t'a reconnu tout de suite.
+PLAN gros TOBI
+TOBI dit (fier) Normal. Je participe.
+PLAN gros NOX
+NOX dit (constat) Sur la liste des absents.
+PLAN gros TOBI
+TOBI dit (gene) Et mon exposé ?
+PLAN gros NOX
+NOX dit (calme) Très original, il a dit.
+PLAN gros TOBI
+TOBI dit (content) Merci !
+PLAN gros NOX
+NOX dit (sec) Il connaissait que la version Wikipédia.
+PLAN gros TOBI
+TOBI dit (fier) Il a dit que j'avais du potentiel ?
+PLAN gros NOX
+NOX dit (constat) Oui. C'est ce qu'on dit quand il reste que ça.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et ma note ?
+PLAN gros NOX
+NOX dit (content) Seize.
+PLAN gros TOBI
+TOBI dit (excite) Seize ?!
+PLAN gros NOX
+NOX dit (punchline) À moi. Toi, il te cherche encore.
+ATTENDRE 0.4

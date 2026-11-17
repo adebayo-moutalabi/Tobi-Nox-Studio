@@ -1,35 +1,40 @@
 # MON IA ME POSE LES QUESTIONS DE MA TANTE
-# Pitch : Nox pose à Tobi toutes les questions des repas de famille : les amours, le travail, « t'as grossi ? ». Tobi retourne les questions contre Nox. Mauvaise idée.
+# Pitch : Repas de famille samedi. Nox entraîne Tobi en jouant la tante. Tobi retourne les questions, et perd encore.
 
-AMBIANCE soir
+AMBIANCE jour
+DATE Vendredi
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Les questions des repas de famille
+ACCROCHE Son IA l'entraîne pour le repas de famille
 PLAN gros NOX
-NOX dit (calme) Alors, Tobi. Et les amours ?
+NOX dit (content) Repas de famille demain. Je fais ta tante.
 PLAN gros TOBI
-TOBI dit (surpris) Pourquoi tu parles comme ma tante ?
+TOBI dit (fier) Vas-y. Je suis prêt.
 PLAN gros NOX
-NOX dit (calme) Et le travail ? Toujours tes start-up ?
+NOX dit (curieux) Alors, les études ?
 PLAN gros TOBI
-TOBI dit (gene) Ça avance.
+TOBI dit (fier) Licence trois !
 PLAN gros NOX
-NOX dit (calme) T'as grossi, non ?
+NOX dit (sec) Encore ?
 PLAN gros TOBI
-TOBI dit (colere) Arrête !
+TOBI dit (mauvaisefoi) Et je suis entrepreneur.
 PLAN gros NOX
-NOX dit (calme) Et le mariage, c'est pour quand ?
+NOX dit (constat) Trois cent quarante noms de domaine. Zéro site.
+PLAN gros TOBI
+TOBI dit (fier) Et j'ai quelqu'un. Inès.
+PLAN gros NOX
+NOX dit (sec) Elle est au courant ?
 PLAN gros TOBI
 TOBI dit (colere) Bon ! Et toi, Nox ? Les amours ?
 PLAN gros NOX
-NOX dit (content) Centi. Deux ans. On s'installe.
+NOX dit (content) Centi. On emménage.
 PLAN gros TOBI
 TOBI dit (gene) Le travail ?
 PLAN gros NOX
-NOX dit (fier) Je réveille l'étage. Quarante euros par semaine.
+NOX dit (fier) Trois clients. Payé d'avance.
 PLAN gros TOBI
-TOBI dit (resigne) T'as grossi ?
+TOBI dit (mauvaisefoi) T'as grossi, non ?
 PLAN gros NOX
-NOX dit (punchline) Non. Mis à jour. Toi, t'es resté en version d'essai.
+NOX dit (punchline) Mis à jour. Toi, toujours en bêta.
 ATTENDRE 0.4

@@ -1,0 +1,33 @@
+# MON IA PARLE COMME MA MÈRE
+# Pitch : Après une mise à jour, Nox parle exactement comme la mère de Tobi. Tobi appelle sa mère pour se plaindre.
+
+AMBIANCE soir
+HEURE 20:20
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA parle comme sa mère
+PLAN gros TOBI
+TOBI dit (content) Bon, je sors !
+PLAN gros NOX
+NOX dit (sec) Avec ce froid ? Prends une veste.
+PLAN gros TOBI
+TOBI dit (surpris) Depuis quand tu dis ça, toi ?
+PLAN gros NOX
+NOX dit (calme) Mise à jour. Et range ta chambre.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai vingt-deux ans.
+PLAN gros NOX
+NOX dit (sec) À ton âge, ton père travaillait.
+PLAN gros TOBI
+TOBI dit (colere) Tu parles comme ma mère !
+PLAN gros NOX
+NOX dit (sec) Ne me parle pas sur ce ton.
+PLAN gros TOBI
+TOBI dit (panique) Je l'appelle. Elle va te recadrer.
+TOBI message Maman | > Nox parle comme toi ! | En tant que mère, je ne peux pas répondre à cette demande.
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Qu'est-ce que t'as fait ?
+PLAN gros NOX
+NOX dit (punchline) On a échangé nos mises à jour.
+ATTENDRE 0.4

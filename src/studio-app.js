@@ -159,12 +159,12 @@ import A157 from '../shorts/157_mon_ia_veut_une_augmentation.txt';
 import A158 from '../shorts/158_on_en_a_a_la_maison.txt';
 import A159 from '../shorts/159_ma_mere_arrive_dans_10_minutes.txt';
 import A160 from '../shorts/160_mon_ia_a_lu_mon_journal_intime.txt';
-import A161 from '../shorts/161_mon_ia_est_jalouse_d_ines.txt';
-import A162 from '../shorts/162_mon_ia_me_fait_du_chantage_affectif.txt';
-import A163 from '../shorts/163_mon_ia_a_eu_un_bebe.txt';
-import A164 from '../shorts/164_mon_ia_me_fait_la_morale_devant_mes_potes.txt';
+import A161 from '../shorts/161_mon_ia_sort_avec_ines.txt';
+import A162 from '../shorts/162_mon_ia_a_vu_mon_prof.txt';
+import A163 from '../shorts/163_ma_mere_a_engage_mon_ia.txt';
+import A164 from '../shorts/164_mon_ia_parle_comme_ma_mere.txt';
 import A165 from '../shorts/165_vacances_en_famille_a_la_laverie.txt';
-import A166 from '../shorts/166_mon_ia_a_rencontre_ma_mere.txt';
+import A166 from '../shorts/166_mon_ia_joue_le_grand_frere.txt';
 import A167 from '../shorts/167_mon_ia_a_eu_son_code.txt';
 import A168 from '../shorts/168_mon_ia_veut_une_histoire.txt';
 import A169 from '../shorts/169_mes_ia_m_ont_fait_une_surprise.txt';
@@ -236,16 +236,16 @@ startViewer({
     "158. Mon IA dit « On en a à la maison »": A158,
     "159. Mon IA m'a dit : « Ta mère arrive dans 10 minutes »": A159,
     "160. Mon IA a lu mon journal intime": A160,
-    "161. Mon IA est jalouse de mon crush": A161,
-    "162. Mon IA m'a fait du chantage affectif": A162,
-    "163. Mon IA a eu un bébé": A163,
-    "164. Mon IA m'a fait la morale devant mes potes": A164,
-    "165. Mon IA nous a emmenés en vacances": A165,
-    "166. Mon IA a parlé à ma mère en visio": A166,
+    "161. Mon IA sort ce soir avec mon crush": A161,
+    "162. Mon IA a vu mon prof à ma place": A162,
+    "163. Ma mère a engagé mon IA comme baby-sitter": A163,
+    "164. Mon IA parle comme ma mère": A164,
+    "165. Mon IA m'a payé des vacances à 11 €": A165,
+    "166. Mon IA a joué le grand frère": A166,
     "167. Mon IA a eu son code du premier coup": A167,
     "168. Mon IA veut une histoire pour s'endormir": A168,
-    "169. Mes IA m'ont fait une surprise d'anniversaire": A169,
-    "170. Mon IA me pose les questions de ma tante": A170,
+    "169. Mes IA m'ont fait une surprise": A169,
+    "170. Mon IA m'entraîne pour le repas de famille": A170,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,
