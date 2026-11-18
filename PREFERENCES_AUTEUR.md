@@ -193,6 +193,8 @@ La réécriture du 161 au 170 du même jour ne lui a pas plu non plus : il veut 
 
 L'auteur veut des épisodes plus drôles autour de GTA, pour la sortie du jeu le 19 novembre 2026. Épisodes 181 à 190, à publier le jour de la sortie ou juste après.
 
+Les épisodes 181 à 190 ne lui ont pas plu (18 novembre 2026) : il veut d'autres idées, différentes. Désormais, proposer les idées avant d'écrire les scripts.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
