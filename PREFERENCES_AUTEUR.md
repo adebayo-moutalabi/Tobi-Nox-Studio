@@ -194,6 +194,7 @@ La réécriture du 161 au 170 du même jour ne lui a pas plu non plus : il veut 
 L'auteur veut des épisodes plus drôles autour de GTA, pour la sortie du jeu le 19 novembre 2026. Épisodes 181 à 190, à publier le jour de la sortie ou juste après.
 
 Les épisodes 181 à 190 ne lui ont pas plu (18 novembre 2026) : il veut d'autres idées, différentes. Désormais, proposer les idées avant d'écrire les scripts.
+Les douze idées du 18 novembre (PNJ, formulaire A et B, six œufs, musée du frigo…) ont été refusées aussi. Retour au modèle des favoris : Nox fait l'enfant ou l'ado, Tobi joue le parent, et la chute remet Tobi à sa place.
 
 ## Points à surveiller
 
