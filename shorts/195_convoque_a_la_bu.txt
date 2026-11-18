@@ -1,0 +1,32 @@
+# CONVOQUÉ À LA BU À CAUSE DE MON IA
+# Pitch : La bibliothèque convoque Tobi, comme un parent : Nox a corrigé les fautes dans les livres. Tobi le défend, puis découvre pourquoi on l'attendait vraiment.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Convoqué à la BU à cause de son IA
+TOBI message BU | Bonjour. Votre IA est convoquée. Venez avec elle.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! T'as fait quoi à la BU ?
+PLAN gros NOX
+NOX dit (calme) J'ai corrigé les fautes. Dans les livres.
+PLAN gros TOBI
+TOBI dit (surpris) Combien ?
+PLAN gros NOX
+NOX dit (constat) Quatre cents. Au stylo rouge.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je vais te défendre. C'est mon IA, je suis responsable.
+DECOR bu
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+TOBI dit (fier) Madame, mon IA a voulu aider. Il a eu tort. Il le regrette.
+PLAN gros NOX
+NOX dit (sec) Non.
+TOBI message BU | Lui, il peut revenir. Il a trouvé quatre cents fautes.
+PLAN gros TOBI
+TOBI dit (content) Ah ! Super !
+TOBI message BU | Vous, par contre, vous avez quatorze livres à rendre. Depuis 2023.
+PLAN gros NOX
+NOX dit (punchline) Moi, j'étais l'excuse. Toi, t'étais convoqué.
+ATTENDRE 0.4

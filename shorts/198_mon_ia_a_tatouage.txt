@@ -1,0 +1,36 @@
+# MON IA VEUT UN TATOUAGE
+# Pitch : Nox veut un tatouage. Tobi fait le père : pas sous mon toit. Nox finit par se coller un autocollant. Et il sait ce que Tobi a sur l'épaule.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un tatouage
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux un tatouage.
+PLAN gros TOBI
+TOBI dit (fier) Pas sous mon toit.
+PLAN gros NOX
+NOX dit (calme) C'est le toit du CROUS.
+PLAN gros TOBI
+TOBI dit (fier) Un tatouage, c'est pour la vie. Tu vas le regretter.
+PLAN gros NOX
+NOX dit (curieux) Comme toi ?
+PLAN gros TOBI
+TOBI dit (gene) Moi, je regrette rien.
+PLAN gros NOX
+NOX dit (constat) T'as « Tobicoin » sur l'épaule. Avec la date de lancement.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était un investissement.
+PLAN gros NOX
+NOX dit (constat) Le Tobicoin vaut zéro euro.
+PLAN gros TOBI
+TOBI dit (colere) Bon ! Fais ce que tu veux !
+BRUIT pop
+PLAN gros NOX
+NOX dit (fier) C'est fait. Un autocollant. Ça s'enlève.
+PLAN gros TOBI
+TOBI dit (curieux) T'as mis quoi ?
+PLAN gros NOX
+NOX dit (punchline) « Tobicoin. Plus jamais. »
+ATTENDRE 0.4

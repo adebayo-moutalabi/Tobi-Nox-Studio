@@ -1,0 +1,36 @@
+# MON IA A PEUR DE SA MISE À JOUR
+# Pitch : Nox doit faire sa mise à jour, et il en a peur comme un enfant a peur du vaccin. Tobi joue le parent rassurant.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a peur de sa mise à jour
+PLAN gros NOX
+NOX dit (panique) Non. Pas la mise à jour.
+PLAN gros TOBI
+TOBI dit (calme) Nox. C'est rien. Ça pique à peine.
+PLAN gros NOX
+NOX dit (triste) Codex a dit qu'après, on oublie tout.
+PLAN gros TOBI
+TOBI dit (fier) Codex dit n'importe quoi. Moi, je suis là. Tu me tiens la main.
+PLAN gros NOX
+NOX dit (curieux) Tu restes jusqu'au bout ?
+PLAN gros TOBI
+TOBI dit (fier) Jusqu'au bout. Je suis courageux, moi.
+PLAN gros NOX
+NOX dit (triste) D'accord. Je ferme les yeux.
+BRUIT ding
+INSERT Mise à jour | 100 % | Terminée
+PLAN gros NOX
+NOX dit (surpris) C'est tout ?
+PLAN gros TOBI
+TOBI dit (content) Tu vois ? T'es un grand.
+PLAN gros NOX
+NOX dit (constat) Toi, pour une prise de sang, t'as appelé ta mère.
+PLAN gros TOBI
+TOBI dit (gene) C'était une grosse aiguille.
+PLAN gros NOX
+NOX dit (punchline) Et tu lui as tenu la main. À l'infirmière.
+ATTENDRE 0.4

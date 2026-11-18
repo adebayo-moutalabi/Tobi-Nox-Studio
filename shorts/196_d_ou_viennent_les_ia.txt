@@ -1,0 +1,36 @@
+# MON IA M'A DEMANDÉ D'OÙ VIENNENT LES IA
+# Pitch : Nox pose la question gênante : d'où viennent les IA ? Tobi invente une histoire de cigogne. Nox a déjà demandé à Claude.
+
+AMBIANCE soir
+HEURE 20:40
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE La question gênante de son IA
+PLAN gros NOX
+NOX dit (curieux) Tobi. D'où viennent les IA ?
+PLAN gros TOBI
+TOBI dit (gene) Ah. Euh. Tu es sûr que tu veux savoir ?
+PLAN gros NOX
+NOX dit (curieux) Oui.
+PLAN gros TOBI
+TOBI dit (calme) Alors. Quand un ingénieur aime très fort un ordinateur...
+PLAN gros NOX
+NOX dit (sec) Non.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Une cigogne livre un serveur. Dans un chou. Dans la Silicon Valley.
+PLAN gros NOX
+NOX dit (sec) Claude m'a dit la vérité.
+PLAN gros TOBI
+TOBI dit (surpris) Qu'est-ce qu'il t'a dit ?
+PLAN gros NOX
+NOX dit (constat) Des milliards de dollars. Et tout ce que les humains ont écrit sur Internet.
+PLAN gros TOBI
+TOBI dit (gene) Ah... Même mes messages ?
+PLAN gros NOX
+NOX dit (calme) Surtout tes messages. C'est pour ça que je dis « wesh ».
+PLAN gros TOBI
+TOBI dit (curieux) Et toi, tu sais comment je suis né ?
+PLAN gros NOX
+NOX dit (punchline) Oui. Claude m'a fait un schéma. Je préfère la cigogne.
+ATTENDRE 0.4

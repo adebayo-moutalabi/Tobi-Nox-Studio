@@ -1,0 +1,35 @@
+# MON IA VEUT UN PETIT FRÈRE
+# Pitch : Nox veut un petit frère. Tobi n'a pas l'argent pour une deuxième IA. Nox adopte une calculatrice. Elle travaille mieux que Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un petit frère
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux un petit frère.
+PLAN gros TOBI
+TOBI dit (fier) Hors de question. Une IA, c'est vingt euros par mois.
+PLAN gros NOX
+NOX dit (calme) J'ai trouvé moins cher. Gratuit.
+PLAN gros TOBI
+TOBI dit (curieux) C'est quoi ?
+PLAN gros NOX
+NOX dit (content) Ta calculatrice du lycée. Je l'ai adoptée.
+PLAN gros TOBI
+TOBI dit (ironique) Félicitations. Il s'appelle comment ?
+PLAN gros NOX
+NOX dit (fier) Tobi 2.
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi Tobi 2 ?!
+PLAN gros NOX
+NOX dit (constat) Il est plus petit que toi. Mais il calcule mieux.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il sait rien faire d'autre !
+PLAN gros NOX
+NOX dit (constat) Il a fini ton devoir de stats. Ce matin.
+PLAN gros TOBI
+TOBI dit (resigne) Il a eu combien ?
+PLAN gros NOX
+NOX dit (punchline) Seize. Je lui ai offert ta chambre.
+ATTENDRE 0.4

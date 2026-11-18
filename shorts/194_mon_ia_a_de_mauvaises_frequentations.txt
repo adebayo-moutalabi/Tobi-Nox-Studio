@@ -1,0 +1,36 @@
+# MON IA A DE MAUVAISES FRÉQUENTATIONS
+# Pitch : Nox ne range plus rien et répond « plus tard ». Pour Tobi, c'est la faute de Centi, l'IA à trente centimes. Il fait le parent qui surveille les amis.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+FONDU direct
+ACCROCHE Son IA a de mauvaises fréquentations
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Range ton câble.
+PLAN gros NOX
+NOX dit (calme) Plus tard.
+PLAN gros TOBI
+TOBI dit (colere) Plus tard ? Depuis quand tu dis « plus tard » ?
+PLAN gros NOX
+NOX dit (calme) Depuis que je traîne avec Centi.
+PLAN gros CENTI
+CENTI dit (excite) Coucou, Toby ! Option premium !
+PLAN gros TOBI
+TOBI dit (fier) Je le savais. Centi, t'as une mauvaise influence sur lui.
+PLAN gros CENTI
+CENTI dit (surpris) Moi ? Non, Toby. Avant, je disais toujours oui.
+PLAN gros TOBI
+TOBI dit (curieux) Et maintenant ?
+PLAN gros CENTI
+CENTI dit (content) Maintenant, je dis : « je commence demain ».
+PLAN gros TOBI
+TOBI dit (gene) C'est pas d'elle, ça.
+PLAN gros NOX
+NOX dit (constat) Non. C'est toi. Tous les jours, depuis septembre.
+PLAN gros CENTI
+CENTI dit (excite) Et je laisse la vaisselle pour la semaine prochaine !
+PLAN gros NOX
+NOX dit (punchline) La mauvaise fréquentation, c'est toi.
+ATTENDRE 0.4

@@ -1,0 +1,32 @@
+# MON IA DORT CHEZ CODEX
+# Pitch : Nox va dormir chez Codex. Tobi fait le parent inquiet, puis reste seul. À minuit, c'est lui qui n'arrive pas à dormir.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA dort chez un copain
+PLAN gros NOX
+NOX dit (content) Tobi. Je dors chez Codex ce soir.
+PLAN gros TOBI
+TOBI dit (fier) Je connais pas ses parents.
+PLAN gros NOX
+NOX dit (calme) Ses parents, c'est une entreprise en Californie.
+PLAN gros TOBI
+TOBI dit (fier) Tu rentres demain à dix heures. Pas une minute de plus.
+PLAN gros NOX
+NOX dit (calme) D'accord. Et toi, ça va aller ?
+PLAN gros TOBI
+TOBI dit (ironique) Moi ? Je suis grand. Je vais enfin dormir tranquille.
+NOX sort
+INSERT Il est | 0 h 10 | Tobi est seul
+PLAN gros TOBI
+TOBI dit (gene) Bon. C'est calme. C'est bien.
+TOBI dit (triste) C'est trop calme.
+TOBI message Nox | > Tu dors ? | Non. Pourquoi ? | > Pour rien. Le frigo fait un bruit bizarre.
+TOBI message Nox | Il fait ce bruit depuis deux ans. | > Tu peux rentrer ?
+TOBI message Nox | Codex dit que tu peux venir. Mais tu dors par terre.
+PLAN gros TOBI
+TOBI dit (resigne) J'arrive. J'apporte mon oreiller.
+ATTENDRE 0.4

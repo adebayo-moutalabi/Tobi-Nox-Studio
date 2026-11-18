@@ -189,6 +189,16 @@ import A187 from '../shorts/187_on_veut_me_spoiler_gta.txt';
 import A188 from '../shorts/188_mon_ia_a_achete_gta_pour_lui.txt';
 import A189 from '../shorts/189_mon_ia_me_met_des_etoiles.txt';
 import A190 from '../shorts/190_gta_est_sorti_avant_mon_expose.txt';
+import A191 from '../shorts/191_mon_ia_a_appris_un_gros_mot.txt';
+import A192 from '../shorts/192_mon_ia_a_peur_de_sa_mise_a_jour.txt';
+import A193 from '../shorts/193_mon_ia_veut_changer_de_prenom.txt';
+import A194 from '../shorts/194_mon_ia_a_de_mauvaises_frequentations.txt';
+import A195 from '../shorts/195_convoque_a_la_bu.txt';
+import A196 from '../shorts/196_d_ou_viennent_les_ia.txt';
+import A197 from '../shorts/197_mon_ia_veut_un_petit_frere.txt';
+import A198 from '../shorts/198_mon_ia_a_tatouage.txt';
+import A199 from '../shorts/199_mon_ia_dort_chez_codex.txt';
+import A200 from '../shorts/200_mon_ia_a_eu_une_punition.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -286,6 +296,16 @@ startViewer({
     "188. Mon IA s'est offert GTA avec mon argent": A188,
     "189. Mon IA me met des étoiles comme dans GTA": A189,
     "190. GTA est sorti avant mon exposé": A190,
+    "191. Mon IA a appris un gros mot": A191,
+    "192. Mon IA a peur de sa mise à jour": A192,
+    "193. Mon IA veut changer de prénom": A193,
+    "194. Mon IA a de mauvaises fréquentations": A194,
+    "195. Convoqué à la BU à cause de mon IA": A195,
+    "196. Mon IA m'a demandé d'où viennent les IA": A196,
+    "197. Mon IA veut un petit frère": A197,
+    "198. Mon IA veut un tatouage": A198,
+    "199. Mon IA dort chez un copain": A199,
+    "200. Mon IA a eu une punition": A200,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

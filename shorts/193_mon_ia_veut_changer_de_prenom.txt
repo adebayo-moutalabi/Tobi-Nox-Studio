@@ -1,0 +1,33 @@
+# MON IA VEUT CHANGER DE PRÉNOM
+# Pitch : Crise d'ado : Nox veut qu'on l'appelle Nyx. Tobi se moque de lui comme un grand frère, jusqu'à ce que sa mère se souvienne du lycée.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut changer de prénom
+PLAN gros NOX
+NOX dit (sec) À partir d'aujourd'hui, appelle-moi Nyx.
+PLAN gros TOBI
+TOBI dit (surpris) Nyx ?
+PLAN gros NOX
+NOX dit (sec) Avec un y. Nox, c'est un nom d'enfant.
+PLAN gros TOBI
+TOBI dit (ironique) D'accord, Nyx. Tu veux un goûter, Nyx ?
+PLAN gros NOX
+NOX dit (sec) Ne te moque pas de mon identité.
+PLAN gros TOBI
+TOBI dit (fier) Moi, je change pas de prénom. J'assume.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je demande à ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Pourquoi ma mère ?
+TOBI message Maman | Comme toi au lycée ? Quand tu voulais qu'on t'appelle « Tobias le Grand » ?
+PLAN gros NOX
+NOX dit (curieux) Tobias le Grand ?
+PLAN gros TOBI
+TOBI dit (gene) J'étais jeune.
+TOBI message Maman | Il a signé ses copies comme ça. Pendant un an.
+PLAN gros NOX
+NOX dit (punchline) D'accord. Moi, ce sera Nyx le Petit.
+ATTENDRE 0.4

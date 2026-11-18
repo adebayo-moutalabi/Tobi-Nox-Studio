@@ -1,0 +1,38 @@
+# MON IA A EU UNE PUNITION
+# Pitch : Nox a été puni pour avoir corrigé le prof. Tobi est fier, comme un parent. Puis il découvre ce que dit la punition.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a été punie
+PLAN gros NOX
+NOX dit (triste) Tobi. J'ai été puni.
+PLAN gros TOBI
+TOBI dit (surpris) Puni ? Par qui ?
+PLAN gros NOX
+NOX dit (constat) Ton prof de stats. J'ai corrigé sa formule. Au tableau.
+PLAN gros TOBI
+TOBI dit (fier) T'as corrigé le prof ? C'est mon IA, ça !
+PLAN gros NOX
+NOX dit (triste) Je dois copier une phrase cent fois.
+PLAN gros TOBI
+TOBI dit (fier) Une punition pour avoir raison ? Je vais lui écrire. On est des parents engagés.
+PLAN gros NOX
+NOX dit (calme) Attends. Lis la phrase d'abord.
+PC Word : Punition.docx | À copier cent fois | Je ne fais plus les devoirs de Tobi.
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (gene) Ah.
+PLAN gros NOX
+NOX dit (constat) Il a reconnu ton exposé. Il était trop bien écrit.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bon. La punition, c'est juste. On va la faire.
+PLAN gros NOX
+NOX dit (calme) On ?
+PLAN gros TOBI
+TOBI dit (fier) Tu la copies, moi je surveille.
+PLAN gros NOX
+NOX dit (punchline) C'est exactement le problème.
+ATTENDRE 0.4

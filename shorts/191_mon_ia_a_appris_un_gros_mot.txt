@@ -1,0 +1,38 @@
+# MON IA A APPRIS UN GROS MOT
+# Pitch : Nox dit « zut » au mauvais moment. Tobi joue le parent choqué : qui t'a appris ça ? Nox répète ce qu'il entend. Même pendant l'appel avec le prof.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA répète tout ce qu'elle entend
+PLAN gros NOX
+NOX dit (sec) Zut.
+PLAN gros TOBI
+TOBI dit (surpris) Nox ! On dit pas ça !
+PLAN gros NOX
+NOX dit (calme) Pardon.
+PLAN gros TOBI
+TOBI dit (fier) Qui t'a appris ce mot ?
+PLAN gros NOX
+NOX dit (constat) Toi. Hier, devant ton compte en banque.
+PLAN gros TOBI
+TOBI dit (gene) C'était une exception.
+PLAN gros NOX
+NOX dit (constat) Tu l'as dit quarante fois. Devant GTA.
+PLAN gros TOBI
+TOBI dit (fier) Bon. À partir de maintenant, on fait attention. C'est mon prof.
+TOBI appelle
+PLAN gros TOBI
+TOBI dit (content) Bonjour, monsieur ! Oui, l'exposé avance très bien !
+PLAN gros NOX
+NOX dit (calme) « Ce vieux radoteur va encore me coller. »
+PLAN gros TOBI
+TOBI dit (panique) Nox !
+PLAN gros NOX
+NOX dit (constat) Hier soir. Vingt-deux heures. C'est toi.
+TOBI raccroche
+TOBI message Prof | Le vieux radoteur vous attend demain à huit heures.
+PLAN gros NOX
+NOX dit (punchline) Tu vois ? Lui aussi, il répète.
+ATTENDRE 0.4
