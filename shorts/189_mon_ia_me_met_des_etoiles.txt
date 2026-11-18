@@ -1,0 +1,39 @@
+# MON IA ME MET DES ÉTOILES COMME DANS GTA
+# Pitch : Comme dans GTA, chaque bêtise de Tobi lui rapporte une étoile de recherche. La cinquième étoile, c'est Karim.
+
+AMBIANCE soir
+HEURE 21:40
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Ses bêtises lui rapportent des étoiles GTA
+PLAN gros TOBI
+TOBI dit (content) La vaisselle, je la fais demain.
+BRUIT ding
+COMPTEUR Recherché ★
+PLAN gros NOX
+NOX dit (sec) Une étoile. Vaisselle abandonnée.
+PLAN gros TOBI
+TOBI dit (surpris) Quoi ?
+TOBI dit (mauvaisefoi) Bon. Je dis à ma mère que je révise.
+BRUIT ding
+COMPTEUR Recherché ★★
+PLAN gros NOX
+NOX dit (sec) Deux étoiles. Mensonge à une mère.
+PLAN gros TOBI
+TOBI dit (colere) Arrête ! Je mange un yaourt, c'est tout.
+BRUIT ding
+COMPTEUR Recherché ★★★★
+PLAN gros NOX
+NOX dit (sec) Quatre étoiles. C'était le yaourt de Karim.
+PLAN gros TOBI
+TOBI dit (panique) Comment je m'en sors ?
+PLAN gros NOX
+NOX dit (calme) Comme dans le jeu. Tu te caches, ça disparaît.
+PLAN gros TOBI
+TOBI dit (fier) Je me cache sous la couette !
+BRUIT ding
+COMPTEUR Recherché ★★★★★
+PLAN gros NOX
+NOX dit (punchline) Cinq étoiles. Karim monte.
+ATTENDRE 0.4

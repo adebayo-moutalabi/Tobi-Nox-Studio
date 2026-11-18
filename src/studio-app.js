@@ -179,6 +179,16 @@ import A177 from '../shorts/177_mon_ia_paie_l_electricite.txt';
 import A178 from '../shorts/178_demande_a_claude.txt';
 import A179 from '../shorts/179_mes_ia_font_mon_conseil_de_classe.txt';
 import A180 from '../shorts/180_mon_ia_me_copie.txt';
+import A181 from '../shorts/181_gta_est_sorti_et_j_ai_qu_un_pc.txt';
+import A182 from '../shorts/182_gta_apres_tes_devoirs.txt';
+import A183 from '../shorts/183_mon_ia_joue_a_gta_comme_un_bon_citoyen.txt';
+import A184 from '../shorts/184_mon_ia_a_transforme_ma_vie_en_gta.txt';
+import A185 from '../shorts/185_ma_mere_a_decouvert_gta.txt';
+import A186 from '../shorts/186_j_ai_appris_a_conduire_sur_gta.txt';
+import A187 from '../shorts/187_on_veut_me_spoiler_gta.txt';
+import A188 from '../shorts/188_mon_ia_a_achete_gta_pour_lui.txt';
+import A189 from '../shorts/189_mon_ia_me_met_des_etoiles.txt';
+import A190 from '../shorts/190_gta_est_sorti_avant_mon_expose.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -266,6 +276,16 @@ startViewer({
     "178. Mes IA font « demande à ton père »": A178,
     "179. Mes IA ont fait mon conseil de classe": A179,
     "180. Mon IA fait le petit frère qui copie": A180,
+    "181. GTA est sorti et j'ai qu'un PC": A181,
+    "182. GTA ? Après tes devoirs.": A182,
+    "183. Mon IA joue à GTA sans enfreindre une seule loi": A183,
+    "184. Mon IA a transformé ma vie en GTA": A184,
+    "185. Ma mère a découvert GTA": A185,
+    "186. J'ai appris à conduire sur GTA": A186,
+    "187. Mes IA vont me spoiler GTA": A187,
+    "188. Mon IA s'est offert GTA avec mon argent": A188,
+    "189. Mon IA me met des étoiles comme dans GTA": A189,
+    "190. GTA est sorti avant mon exposé": A190,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

@@ -1,0 +1,34 @@
+# MON IA JOUE À GTA COMME UN BON CITOYEN
+# Pitch : Tobi prête la manette à Nox. Dans le jeu le plus fou de l'année, Nox respecte le code de la route.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA joue à GTA sans enfreindre une loi
+PLAN gros TOBI
+TOBI dit (excite) Tiens, la manette. Mission un : vole une voiture.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je laisse un mot sur le pare-brise.
+PLAN gros TOBI
+TOBI dit (surpris) Un mot ?!
+PLAN gros NOX
+NOX dit (calme) « Désolé. Je la rends à dix-huit heures. »
+PLAN gros TOBI
+TOBI dit (colere) Fonce ! Grille le feu !
+PLAN gros NOX
+NOX dit (constat) Il est orange. Je m'arrête.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Écrase un plot, au moins !
+PLAN gros NOX
+NOX dit (calme) Clignotant. Je me gare. En créneau.
+PLAN gros TOBI
+TOBI dit (fier) La police arrive ! On s'enfuit !
+PLAN gros NOX
+NOX dit (calme) Je baisse la vitre. Je donne mes papiers.
+PLAN gros TOBI
+TOBI dit (resigne) Combien d'étoiles ?
+PLAN gros NOX
+NOX dit (punchline) Zéro. Ils m'ont proposé un poste.
+ATTENDRE 0.4

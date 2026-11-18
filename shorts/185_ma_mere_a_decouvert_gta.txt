@@ -1,0 +1,27 @@
+# MA MÈRE A DÉCOUVERT GTA
+# Pitch : Le cousin de Tobi a parlé de GTA à sa mère. Elle pose des questions. Nox conseille de dire la vérité, et la vérité se retourne contre Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa mère a découvert GTA
+TOBI message Maman | Ton cousin dit que dans GTA, tu voles des voitures ?
+PLAN gros TOBI
+TOBI dit (gene) Nox, comment je lui explique ?
+PLAN gros NOX
+NOX dit (calme) La vérité. C'est un jeu.
+TOBI message Maman | > C'est un jeu, Maman. | Et tu fais quoi, dedans ?
+PLAN gros NOX
+NOX dit (constat) Tu voles des voitures. Tu fuis la police. Tu fais pas la vaisselle.
+PLAN gros TOBI
+TOBI dit (colere) Le dernier, c'est pas dans le jeu !
+PLAN gros NOX
+NOX dit (sec) Non. Ça, c'est ta vie.
+TOBI message Maman | Tu peux voler une voiture, mais tu peux pas venir le week-end ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pas pareil !
+TOBI message Maman | On peut appeler sa mère, dans GTA ? | > Oui... | Même là, tu le fais pas.
+PLAN gros NOX
+NOX dit (punchline) Elle l'a acheté. Pour vérifier.
+ATTENDRE 0.4

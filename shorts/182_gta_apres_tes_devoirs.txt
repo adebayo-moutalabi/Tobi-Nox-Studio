@@ -1,0 +1,38 @@
+# GTA, C'EST APRÈS TES DEVOIRS
+# Pitch : GTA est prêt. Nox répond comme un parent : après l'exposé. Tobi négocie comme un enfant, jusqu'au code de la console.
+
+AMBIANCE soir
+HEURE 20:10
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE GTA ? Après les devoirs.
+PLAN gros TOBI
+TOBI dit (excite) Nox ! GTA est installé ! Je lance !
+PLAN gros NOX
+NOX dit (calme) Après ton exposé.
+PLAN gros TOBI
+TOBI dit (colere) J'ai vingt-deux ans !
+PLAN gros NOX
+NOX dit (sec) Ton exposé a trois semaines de retard.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Cinq minutes ! Juste le début !
+PLAN gros NOX
+NOX dit (constat) Le début dure quarante minutes. J'ai vérifié.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'écris une ligne, et je joue.
+PLAN gros NOX
+NOX dit (calme) Une page.
+PLAN gros TOBI
+TOBI dit (gene) Une demi-page ?
+PLAN gros NOX
+NOX dit (sec) Une page. Et tu ranges ta chambre.
+PLAN gros TOBI
+TOBI dit (fier) Tant pis. Je mets le code de la console.
+PLAN gros NOX
+NOX dit (constat) Je l'ai changé. C'est l'anniversaire de ta mère.
+PLAN gros TOBI
+TOBI dit (gene) C'est... en mars ?
+PLAN gros NOX
+NOX dit (punchline) Juin. Fais ton exposé.
+ATTENDRE 0.4

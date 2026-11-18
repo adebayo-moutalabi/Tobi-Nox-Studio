@@ -1,0 +1,34 @@
+# MON IA A TRANSFORMÉ MA VIE EN GTA
+# Pitch : Nox annonce les corvées de Tobi comme des missions de GTA. Tobi refuse les difficiles. La dernière mission, c'est le boss final : sa mère.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Ses corvées en missions GTA
+PLAN gros NOX
+NOX dit (excite) Nouvelle mission : aller à la laverie.
+PLAN gros TOBI
+TOBI dit (surpris) C'est quoi, cette voix ?
+PLAN gros NOX
+NOX dit (excite) Récompense : des chaussettes propres.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Trop dur. Mission suivante.
+PLAN gros NOX
+NOX dit (excite) Mission : la vaisselle. Difficulté : trois semaines.
+PLAN gros TOBI
+TOBI dit (gene) Suivante.
+PLAN gros NOX
+NOX dit (excite) Mission : appeler ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Pas le boss final !
+PLAN gros NOX
+NOX dit (calme) Mode facile : réponds à son message d'il y a trois jours.
+TOBI message Maman | > Ça va.
+INSERT Mission accomplie | Respect +1 | Maman
+PLAN gros TOBI
+TOBI dit (fier) Facile.
+TOBI message Maman | « Ça va » ? C'est tout ? Appelle-moi.
+PLAN gros NOX
+NOX dit (punchline) Le boss a une deuxième phase.
+ATTENDRE 0.4

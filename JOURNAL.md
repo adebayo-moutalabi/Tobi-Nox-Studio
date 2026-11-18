@@ -409,6 +409,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Épisodes 161 à 170 : rôle de famille et relation (Inès, la mère, les potes), 25 à 35 secondes.
 - Épisodes 161 à 170 réécrits pour être plus drôles : une blague par réplique de Nox, rôle d'autorité retourné, chute dite et surenchère. Six nouvelles idées (crush, prof, baby-sitter, mère, grand frère) et quatre resserrées. Méthode ajoutée à `CHARTE_SCRIPTS.md`.
 - Plus d'amoureuse pour Nox : épisodes 136, 149, 151, 161 et 170 remplacés (commentateur de foot, tasse cassée, déçu, la mère qui préfère Nox, docteur Nox). Nouveaux épisodes 171 à 180 écrits avec la méthode des sketchs (jeu de la scène, observation, chute). Gemini passe sur le rebord de la fenêtre dans les épisodes à trois IA.
+- 18 novembre 2026 : épisodes 181 à 190 autour de GTA, qui sort le 19 novembre sur console seulement (pas de version PC). Le compteur `Recherché ★★` montre les étoiles comme dans le jeu.
 
 ## À faire
 

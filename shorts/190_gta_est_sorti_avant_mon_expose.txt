@@ -1,0 +1,33 @@
+# GTA EST SORTI AVANT MON EXPOSÉ
+# Pitch : GTA a été repoussé deux fois, et il sort enfin. L'exposé de Tobi, lui, a été repoussé bien plus souvent. Nox compare.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE GTA est sorti avant son exposé
+PLAN gros TOBI
+TOBI dit (fier) GTA sort enfin ! Repoussé deux fois. Pour la qualité.
+PLAN gros NOX
+NOX dit (calme) Comme ton exposé.
+PLAN gros TOBI
+TOBI dit (gene) Moi, c'est pas pareil.
+PLAN gros NOX
+NOX dit (constat) Septembre. Puis octobre. Puis « après les vacances ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pour la qualité !
+PLAN gros NOX
+NOX dit (sec) Eux, ils l'ont sorti.
+PLAN gros TOBI
+TOBI dit (fier) Leur jeu a une carte gigantesque !
+PLAN gros NOX
+NOX dit (constat) Ton exposé a trois pages. Dont le titre.
+PLAN gros TOBI
+TOBI dit (fier) Et des centaines de personnages !
+PLAN gros NOX
+NOX dit (constat) Le tien a une source. Wikipédia.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'annonce un nouveau report.
+PLAN gros NOX
+NOX dit (punchline) Ton prof aussi a une date. Le rattrapage.
+ATTENDRE 0.4

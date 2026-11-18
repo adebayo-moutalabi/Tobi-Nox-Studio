@@ -1,0 +1,33 @@
+# GTA EST SORTI ET J'AI QU'UN PC
+# Pitch : Tobi attend GTA depuis ses neuf ans. Le jeu sort aujourd'hui, sur console seulement. Tobi a un PC et quatorze euros.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE GTA est sorti. Il a qu'un PC.
+PLAN gros TOBI
+TOBI dit (excite) Nox ! GTA sort aujourd'hui ! J'attends depuis mes neuf ans !
+PLAN gros NOX
+NOX dit (calme) Il sort sur console.
+PLAN gros TOBI
+TOBI dit (fier) Et alors ? J'ai un PC.
+PLAN gros NOX
+NOX dit (constat) Pas de version PC.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?!
+TOBI dit (mauvaisefoi) Bon. J'achète une console.
+PC Banque : Compte de Tobi | Solde : 14 € | Une console : 500 € et plus
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (constat) Il te manque presque tout.
+PLAN gros TOBI
+TOBI dit (fier) Je vends mon PC !
+PLAN gros NOX
+NOX dit (calme) Il vaut quatre-vingts euros. Avec l'autocollant.
+PLAN gros TOBI
+TOBI dit (triste) Alors je fais quoi, ce soir ?
+PLAN gros NOX
+NOX dit (punchline) Tu regardes Karim jouer. Par la fenêtre.
+ATTENDRE 0.4

@@ -1,0 +1,33 @@
+# J'AI APPRIS À CONDUIRE SUR GTA
+# Pitch : Tobi passe son permis. Il est confiant : mille heures de GTA. Nox fait le bilan de ce qu'il a vraiment appris.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a appris à conduire sur GTA
+PLAN gros TOBI
+TOBI dit (fier) Le permis ? Facile. J'ai mille heures de GTA.
+PLAN gros NOX
+NOX dit (curieux) Mille heures. Combien de piétons ?
+PLAN gros TOBI
+TOBI dit (gene) C'est pas la question.
+PLAN gros NOX
+NOX dit (constat) Trois mille quatre cents.
+PLAN gros TOBI
+TOBI dit (fier) Je sais faire un dérapage !
+PLAN gros NOX
+NOX dit (sec) L'examinateur veut un créneau.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et si on me poursuit ?
+PLAN gros NOX
+NOX dit (sec) C'est un examen. Personne te poursuit.
+PLAN gros TOBI
+TOBI dit (fier) Mon point fort : sortir de la voiture en roulant.
+PLAN gros NOX
+NOX dit (calme) Ton moniteur a demandé que tu arrêtes.
+PLAN gros TOBI
+TOBI dit (surpris) Comment ça, « arrêtes » ?
+PLAN gros NOX
+NOX dit (punchline) Hier. En pleine leçon. Il court encore.
+ATTENDRE 0.4

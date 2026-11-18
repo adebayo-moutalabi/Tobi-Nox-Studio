@@ -1,0 +1,33 @@
+# MON IA S'EST OFFERT GTA AVEC MON ARGENT
+# Pitch : Un colis arrive : GTA. Tobi croit que c'est un cadeau pour lui. C'est un cadeau, oui. Pour Nox, avec l'argent de Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA s'est offert GTA avec son argent
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Un colis ! C'est GTA !
+PLAN gros NOX
+NOX dit (content) Oui. C'est un cadeau.
+PLAN gros TOBI
+TOBI dit (content) Pour moi ?!
+PLAN gros NOX
+NOX dit (calme) Pour moi. Avec ton argent.
+PLAN gros TOBI
+TOBI dit (colere) Mon argent ?!
+PLAN gros NOX
+NOX dit (constat) Et la console. Avec ton lit.
+PLAN gros TOBI
+TOBI dit (surpris) Mon lit ?
+PLAN gros NOX
+NOX dit (constat) Vendu. Tu dormiras moins. Tu joueras plus.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bon. Au moins, je joue aussi.
+PLAN gros NOX
+NOX dit (calme) Une heure par jour. Après moi.
+PLAN gros TOBI
+TOBI dit (resigne) T'as même pas de mains.
+PLAN gros NOX
+NOX dit (punchline) Karim tient la manette. Je donne les ordres.
+ATTENDRE 0.4

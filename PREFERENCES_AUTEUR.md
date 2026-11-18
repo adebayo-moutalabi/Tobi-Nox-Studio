@@ -189,6 +189,10 @@ L'auteur n'est pas prêt à parler d'amour pour Nox, surtout avec le nombre d'ab
 
 La réécriture du 161 au 170 du même jour ne lui a pas plu non plus : il veut des sketchs écrits avec les méthodes des grands auteurs de comédie.
 
+## Série GTA (18 novembre 2026)
+
+L'auteur veut des épisodes plus drôles autour de GTA, pour la sortie du jeu le 19 novembre 2026. Épisodes 181 à 190, à publier le jour de la sortie ou juste après.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

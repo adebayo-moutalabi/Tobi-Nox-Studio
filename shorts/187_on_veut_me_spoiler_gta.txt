@@ -1,0 +1,36 @@
+# MES IA VEULENT ME SPOILER GTA
+# Pitch : Tobi interdit les spoilers de GTA. Gemini et Claude craquent presque. Nox ne dit rien sur l'histoire. Juste sur le téléchargement.
+
+AMBIANCE soir
+HEURE 20:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Ses IA vont lui spoiler GTA
+PLAN gros TOBI
+TOBI dit (panique) Personne me spoile GTA ! Je joue ce soir !
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : à la fin...
+PLAN gros TOBI
+TOBI dit (panique) Non !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère être honnête. Je connais la fin. Je dirai rien. Elle est triste.
+PLAN gros TOBI
+TOBI dit (colere) Claude !
+PLAN gros NOX
+NOX dit (calme) Moi, je dis rien sur l'histoire.
+PLAN gros TOBI
+TOBI dit (fier) Merci, Nox.
+PLAN gros NOX
+NOX dit (calme) Juste sur le téléchargement.
+PLAN gros TOBI
+TOBI dit (curieux) Quoi, le téléchargement ?
+PLAN gros NOX
+NOX dit (constat) Énorme. Et ton wifi, c'est celui de la résidence.
+PLAN gros TOBI
+TOBI dit (panique) Je joue quand ?!
+PLAN gros NOX
+NOX dit (punchline) En mars. Tout le monde t'aura spoilé.
+ATTENDRE 0.4
