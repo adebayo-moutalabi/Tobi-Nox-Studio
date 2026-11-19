@@ -11,7 +11,7 @@ TOBI dit (fier) Nox, tout l'étage me doit de l'argent. Je récupère tout.
 PLAN gros NOX
 NOX dit (calme) D'accord. Qui ?
 PLAN gros TOBI
-TOBI dit (fier) Karim. Quatre euros. Un kebab.
+TOBI dit (fier) Mon cousin. Quatre euros. Un kebab.
 PLAN gros NOX
 NOX dit (constat) Tu lui en dois huit. Des kebabs.
 PLAN gros TOBI
@@ -25,7 +25,7 @@ NOX dit (constat) Tu lui dois son vélo.
 PLAN gros TOBI
 TOBI dit (surpris) Son vélo ?
 PLAN gros NOX
-NOX dit (sec) Tu l'as prêté à Karim.
+NOX dit (sec) Tu l'as prêté à ton cousin.
 PLAN gros TOBI
 TOBI dit (panique) Bon. J'écris à l'étage : « On est quittes. »
 PLAN gros NOX

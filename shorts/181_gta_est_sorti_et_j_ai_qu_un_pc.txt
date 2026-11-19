@@ -29,5 +29,5 @@ NOX dit (calme) Il vaut quatre-vingts euros. Avec l'autocollant.
 PLAN gros TOBI
 TOBI dit (triste) Alors je fais quoi, ce soir ?
 PLAN gros NOX
-NOX dit (punchline) Tu regardes Karim jouer. Par la fenêtre.
+NOX dit (punchline) Tu regardes les autres jouer. En vidéo. Avec les pubs.
 ATTENDRE 0.4

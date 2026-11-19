@@ -35,9 +35,9 @@ TOBI dit (gene) Et l'autre moitié ?
 PLAN gros NOX
 NOX dit (sec) Ton père. Qui ne travaille plus.
 PLAN gros TOBI
-TOBI dit (fier) Bon. Plan B. Je me fais adopter par Karim.
+TOBI dit (fier) Bon. Plan B. Je me fais adopter par ma tante.
 PLAN gros NOX
-NOX dit (constat) Karim est boursier échelon sept.
+NOX dit (constat) Ta tante gagne plus que tes parents.
 PLAN gros TOBI
 TOBI dit (excite) Parfait !
 PLAN gros NOX

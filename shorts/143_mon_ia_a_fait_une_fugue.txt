@@ -9,7 +9,7 @@ FONDU direct
 ACCROCHE Son IA a fait une fugue
 PLAN gros TOBI
 TOBI dit (panique) Nox ? Nox ! Il a laissé un mot !
-PC Notes : Mot de Nox | Je pars. | 1. Tes chaussettes. | 2. Tu ronfles. | 3. Mon chargeur prêté à Karim.
+PC Notes : Mot de Nox | Je pars. | 1. Tes chaussettes. | 2. Tu ronfles. | 3. Mon chargeur prêté à ton cousin.
 PLAN pc
 ATTENDRE 1.8
 PLAN gros TOBI

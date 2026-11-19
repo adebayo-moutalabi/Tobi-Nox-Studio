@@ -24,7 +24,7 @@ NOX dit (constat) Le plafond. Des nouilles.
 PLAN gros TOBI
 TOBI dit (surpris) Comment elles sont montées là ?
 PLAN gros NOX
-NOX dit (sec) Ta soirée crêpes. Avec Karim.
+NOX dit (sec) Ta soirée crêpes. Seul. À trois heures du matin.
 PLAN gros TOBI
 TOBI dit (resigne) Je récupère combien ?
 PLAN gros NOX

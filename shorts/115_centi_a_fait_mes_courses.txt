@@ -1,32 +1,32 @@
-# CENTI A FAIT MES COURSES POUR 3 €
-# Pitch : Fin du mois : Tobi confie ses courses de la semaine à Centi, l'IA à trente centimes, avec ses trois derniers euros.
+# LA VERSION GRATUITE DE GEMINI A FAIT MES COURSES
+# Pitch : Fin du mois : Tobi confie ses courses de la semaine à la version gratuite de Gemini, avec ses trois derniers euros.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CENTI apparait milieu
+DIRECT GEMINI apparait rebord
 FONDU direct
 ACCROCHE Ses courses de la semaine pour 3 €
 PLAN gros TOBI
-TOBI dit (fier) Centi, j'ai trois euros. Fais mes courses de la semaine.
-PLAN gros CENTI
-CENTI dit (excite) C'est fait, Toby ! Douze paquets de sel en promo !
+TOBI dit (fier) Gemini, j'ai trois euros. Fais mes courses de la semaine.
+PLAN gros GEMINI
+GEMINI dit (excite) Fun fact : c'est fait ! Douze paquets de sel en promo !
 PLAN gros TOBI
 TOBI dit (surpris) Du sel ? Et je mange quoi ?
-PLAN gros CENTI
-CENTI dit (content) Du sel ! Un paquet par repas !
+PLAN gros GEMINI
+GEMINI dit (content) Du sel ! Un paquet par repas !
 PLAN gros TOBI
 TOBI dit (colere) Annule ! Prends des pâtes !
-PLAN gros CENTI
-CENTI dit (excite) Annuler, c'est premium ! Alors j'ai pris du gros sel !
+PLAN gros GEMINI
+GEMINI dit (excite) Annuler, c'est dans la version payante ! Alors j'ai pris du gros sel !
 PLAN gros NOX
 NOX dit (sec) Pour les pâtes que t'as pas.
 PLAN gros TOBI
-TOBI dit (panique) Centi, au moins un truc à boire !
-PLAN gros CENTI
-CENTI dit (fier) Une bouteille d'eau ! Offerte !
+TOBI dit (panique) Gemini, au moins un truc à boire !
+PLAN gros GEMINI
+GEMINI dit (fier) Une bouteille d'eau ! Offerte !
 PLAN gros TOBI
-TOBI dit (content) Enfin ! Merci, Centi !
+TOBI dit (content) Enfin ! Merci, Gemini !
 PLAN gros NOX
 NOX dit (punchline) Eau de mer.
 ATTENDRE 0.4

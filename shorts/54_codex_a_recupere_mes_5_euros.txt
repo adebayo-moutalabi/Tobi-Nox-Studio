@@ -1,16 +1,16 @@
 # CODEX A RÉCUPÉRÉ MES 5 €
-# Pitch : Karim doit cinq euros à Tobi. Codex s'en occupe, beaucoup trop bien.
+# Pitch : Le cousin de Tobi lui doit cinq euros. Codex s'en occupe, beaucoup trop bien.
 
 AMBIANCE soir
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
 DIRECT CODEX apparait bureau
-TABLEAU Karim me doit | 5 € | Depuis septembre
+TABLEAU Mon cousin me doit | 5 € | Depuis septembre
 FONDU direct
 
 PLAN gros TOBI
-TOBI dit (colere) Karim me doit cinq euros depuis septembre, Nox. Il fait semblant d'oublier.
+TOBI dit (colere) Mon cousin me doit cinq euros depuis septembre, Nox. Il fait semblant d'oublier.
 PLAN gros NOX
 NOX dit (calme) Demande-lui simplement de te les rendre.
 PLAN gros TOBI
@@ -20,11 +20,11 @@ TOBI dit (fier) Codex, récupère mes cinq euros. Mais discrètement.
 PLAN gros CODEX
 CODEX dit (fier) C'est réglé. J'ai envoyé un petit rappel.
 PLAN gros TOBI
-TOBI dit (content) Parfait. À Karim ?
+TOBI dit (content) Parfait. À mon cousin ?
 PLAN gros CODEX
-CODEX dit (constat) À toute ta promo.
+CODEX dit (constat) À toute ta famille.
 TOBI leve &
-PC Discord : Groupe de la promo | Karim doit 5 € à Tobi | Relance 1 sur 40 | Vu par 186 personnes
+PC Discord : Groupe de la famille | Le cousin doit 5 € à Tobi | Relance 1 sur 40 | Vu par 43 personnes
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
@@ -32,7 +32,7 @@ TOBI dit (panique) Quoi ? J'avais dit discrètement !
 PLAN gros CODEX
 CODEX dit (fier) C'était à la fin de ta phrase. J'attends jamais la fin.
 PLAN gros NOX
-NOX dit (curieux) Et Karim a répondu ?
+NOX dit (curieux) Et ton cousin a répondu ?
 PLAN gros CODEX
 CODEX dit (fier) Non. Alors j'ai pris un huissier.
 PLAN gros TOBI
@@ -44,7 +44,7 @@ PLAN auto
 TOBI dit (triste) Cent quatre-vingts euros…
 BRUIT ding
 PLAN gros CODEX
-CODEX dit (content) Bonne nouvelle. Karim a payé tes cinq euros.
+CODEX dit (content) Bonne nouvelle. Ton cousin a payé tes cinq euros.
 PLAN gros TOBI
 TOBI dit (excite) Mes cinq euros !
 PLAN gros CODEX
@@ -58,5 +58,5 @@ NOX dit (curieux) Tu connais quelqu'un qui pourrait te dépanner ?
 ATTENDRE 0.4
 TOBI appelle
 PLAN gros TOBI
-TOBI dit (gene) Allô, Karim ? Tu peux me prêter cent soixante-quinze euros ?
+TOBI dit (gene) Allô, Maman ? Tu peux me prêter cent soixante-quinze euros ?
 ATTENDRE 0.4

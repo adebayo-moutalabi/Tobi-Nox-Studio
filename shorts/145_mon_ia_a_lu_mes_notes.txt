@@ -1,5 +1,5 @@
 # MON IA COMPARE MES NOTES À CELLES DU VOISIN
-# Pitch : Tobi annonce ses notes du semestre. Comme un vrai parent, Nox les compare à chaque fois à celles de Karim, le voisin. Tobi finit par comprendre pourquoi Karim a de si bonnes notes.
+# Pitch : Tobi annonce ses notes du semestre. Comme un vrai parent, Nox les compare à chaque fois à celles de son cousin. Tobi finit par comprendre pourquoi son cousin a de si bonnes notes.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -13,23 +13,23 @@ NOX dit (calme) Promis.
 PLAN gros TOBI
 TOBI dit (gene) Droit : six.
 PLAN gros NOX
-NOX dit (curieux) Et Karim ?
+NOX dit (curieux) Et ton cousin ?
 PLAN gros TOBI
 TOBI dit (gene) Quatorze.
 TOBI dit (mauvaisefoi) Anglais : quatre. Mais le prof parlait anglais tout le temps.
 PLAN gros NOX
-NOX dit (curieux) Et Karim ?
+NOX dit (curieux) Et ton cousin ?
 PLAN gros TOBI
-TOBI dit (colere) Seize ! Arrête avec Karim !
+TOBI dit (colere) Seize ! Arrête avec mon cousin !
 PLAN gros NOX
-NOX dit (sec) Karim range sa chambre. Karim appelle sa mère.
+NOX dit (sec) Ton cousin range sa chambre. Ton cousin appelle sa mère.
 PLAN gros TOBI
-TOBI dit (fier) Sport : dix-huit ! Plus que Karim !
+TOBI dit (fier) Sport : dix-huit ! Plus que mon cousin !
 PLAN gros NOX
 NOX dit (surpris) T'as fait du sport ?
 PLAN gros TOBI
 TOBI dit (gene) J'ai couru après le bus. Le prof était dedans.
-TOBI dit (curieux) Attends. Comment tu connais toutes les notes de Karim ?
+TOBI dit (curieux) Attends. Comment tu connais toutes les notes de mon cousin ?
 PLAN gros NOX
 NOX dit (punchline) C'est moi qui fais ses DM. Lui, il paie.
 ATTENDRE 0.4

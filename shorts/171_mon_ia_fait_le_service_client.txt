@@ -21,7 +21,7 @@ NOX dit (calme) Vous êtes quarante-septième dans la file d'attente.
 PLAN gros TOBI
 TOBI dit (colere) Y a que moi dans la pièce !
 PLAN gros NOX
-NOX dit (constat) Karim a appelé avant vous.
+NOX dit (constat) Ta mère a appelé avant vous.
 PLAN gros TOBI
 TOBI dit (colere) Deux ! Je me plains !
 PLAN gros NOX

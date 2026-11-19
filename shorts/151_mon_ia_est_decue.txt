@@ -31,5 +31,5 @@ NOX dit (constat) « Déçus de Tobi ». On est quatre.
 PLAN gros TOBI
 TOBI dit (curieux) Quatre ?
 PLAN gros NOX
-NOX dit (punchline) Karim est admin.
+NOX dit (punchline) Ta tante est admin.
 ATTENDRE 0.4

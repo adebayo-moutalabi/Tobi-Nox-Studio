@@ -35,8 +35,8 @@ TOBI dit (gene) Ils remarqueront pas.
 PLAN gros NOX
 NOX dit (sec) Ils font l'état des lieux en juin.
 PLAN gros TOBI
-TOBI dit (fier) Et le chargeur de Karim. Neuf. Vingt euros.
-TOBI message Karim | Je viens d'acheter un chargeur sur Vinted. C'est marrant, c'est le même que le mien.
+TOBI dit (fier) Et le chargeur de mon cousin. Neuf. Vingt euros.
+TOBI message Cousin | Je viens d'acheter un chargeur sur Vinted. C'est marrant, c'est le même que le mien.
 PLAN gros TOBI
 TOBI dit (panique) Il l'a racheté !
 PLAN gros NOX

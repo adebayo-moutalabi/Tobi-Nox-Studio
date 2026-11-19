@@ -29,5 +29,5 @@ NOX dit (calme) Une heure par jour. Après moi.
 PLAN gros TOBI
 TOBI dit (resigne) T'as même pas de mains.
 PLAN gros NOX
-NOX dit (punchline) Karim tient la manette. Je donne les ordres.
+NOX dit (punchline) Ta mère tient la manette. Je donne les ordres.
 ATTENDRE 0.4

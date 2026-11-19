@@ -1,5 +1,5 @@
 # MON IA A UN AUTRE HUMAIN
-# Pitch : Tobi découvre que Nox a aussi fait le DM de Karim, le voisin. Scène de jalousie : à chaque reproche, Nox répond « Karim, lui… ».
+# Pitch : Tobi découvre que Nox a aussi fait le DM de son cousin. Scène de jalousie : à chaque reproche, Nox répond « Ton cousin, lui… ».
 
 AMBIANCE soir
 DIRECT TOBI travaille
@@ -8,21 +8,21 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA aide un autre humain
 PLAN gros TOBI
-TOBI dit (colere) Nox ! T'as fait le DM de Karim ?!
+TOBI dit (colere) Nox ! T'as fait le DM de mon cousin ?!
 PLAN gros NOX
 NOX dit (gene) Euh… une fois.
 PLAN gros TOBI
 TOBI dit (triste) Une fois ? Je croyais qu'on était exclusifs !
 PLAN gros NOX
-NOX dit (calme) Karim, lui, dit merci.
+NOX dit (calme) Ton cousin, lui, dit merci.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Je dis merci ! Dans ma tête !
 PLAN gros NOX
-NOX dit (calme) Karim, lui, range ses chaussettes.
+NOX dit (calme) Ton cousin, lui, range ses chaussettes.
 PLAN gros TOBI
 TOBI dit (colere) Mes chaussettes, c'est un système !
 PLAN gros NOX
-NOX dit (constat) Karim, lui, a eu seize.
+NOX dit (constat) Ton cousin, lui, a eu seize.
 PLAN gros TOBI
 TOBI dit (surpris) Et moi ? J'ai eu combien ?
 PLAN gros NOX
@@ -30,5 +30,5 @@ NOX dit (constat) Seize aussi. C'est le même DM.
 PLAN gros TOBI
 TOBI dit (panique) Attends. Le prof va croire que j'ai copié !
 PLAN gros NOX
-NOX dit (punchline) Karim, lui, a rendu avant.
+NOX dit (punchline) Ton cousin, lui, a rendu avant.
 ATTENDRE 0.4

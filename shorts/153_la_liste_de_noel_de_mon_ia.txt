@@ -28,7 +28,7 @@ NOX dit (curieux) Et pour les autres ?
 PLAN gros TOBI
 TOBI dit (surpris) Comment ça, les autres ?
 PLAN gros NOX
-NOX dit (calme) Ta mère. Karim. Moi.
+NOX dit (calme) Ta mère. Ta tante. Moi.
 PLAN gros TOBI
 TOBI dit (illumine) Je vous offre... ma présence !
 PLAN gros NOX

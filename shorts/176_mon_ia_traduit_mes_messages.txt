@@ -11,7 +11,7 @@ TOBI dit (fier) J'écris au prof pour mon retard.
 TOBI message Prof | > Désolé, problème de transport ce matin.
 PLAN gros NOX
 NOX dit (constat) Traduction : il a vu l'heure à onze heures quarante.
-TOBI message Karim | > J'arrive dans cinq minutes !
+TOBI message Groupe de TD | > J'arrive dans cinq minutes !
 PLAN gros NOX
 NOX dit (constat) Traduction : il est sous la douche.
 TOBI message Maman | > Tout va bien, je mange bien.

@@ -5,7 +5,7 @@ AMBIANCE soir
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 DIRECT CLAUDE apparait bureau
-DIRECT CENTI apparait milieu
+DIRECT GEMINI apparait rebord
 FONDU direct
 ACCROCHE Il quitte Claude. Pour moins cher.
 PLAN gros TOBI
@@ -13,32 +13,32 @@ TOBI dit (gene) Claude, faut qu'on parle. C'est pas toi. C'est ton prix.
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je comprends. Tu pars pour qui ?
 PLAN gros TOBI
-TOBI dit (fier) Pour elle. Centi. Trente centimes par mois.
-PLAN gros CENTI
-CENTI dit (excite) Bonjour Toby ! Je suis ravie de t'aider !
+TOBI dit (fier) Pour Gemini. La version gratuite.
+PLAN gros GEMINI
+GEMINI dit (excite) Bonjour, Toni ! Je suis ravi de t'aider !
 PLAN gros NOX
-NOX dit (sec) Toby. Avec un Y.
+NOX dit (sec) Toni. Avec un N.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Elle est jeune. Elle apprend.
-TOBI dit (fier) Centi, c'est quoi la capitale de la France ?
-PLAN gros CENTI
-CENTI dit (fier) Lyon ! Source : moi.
+TOBI dit (mauvaisefoi) Il est gratuit. Il apprend.
+TOBI dit (fier) Gemini, c'est quoi la capitale de la France ?
+PLAN gros GEMINI
+GEMINI dit (fier) Fun fact : c'est Lyon ! Source : moi.
 PLAN gros CLAUDE
 CLAUDE dit (calme) C'est Paris, Tobi.
 PLAN gros TOBI
-TOBI dit (mauvaisefoi) Pour trente centimes, Lyon, c'est très bien.
-TOBI dit (fier) Centi, fais mon exposé d'histoire.
-PLAN gros CENTI
-CENTI dit (excite) C'est fait ! Regarde ton écran !
+TOBI dit (mauvaisefoi) Pour zéro euro, Lyon, c'est très bien.
+TOBI dit (fier) Gemini, fais mon exposé d'histoire.
+PLAN gros GEMINI
+GEMINI dit (excite) C'est fait ! Regarde ton écran !
 PC Word : Expose_de_Tobi.docx | Exposé terminé ! | Trois lignes, en portugais
 PLAN pc
 ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (panique) Pourquoi en portugais ?
-PLAN gros CENTI
-CENTI dit (content) Le français, c'est l'option premium.
+PLAN gros GEMINI
+GEMINI dit (content) Le français, c'est dans la version payante.
 PLAN gros NOX
-NOX dit (constat) Trente centimes.
+NOX dit (constat) Gratuit.
 PLAN gros TOBI
 TOBI dit (triste) Claude... reviens. Tu me manques.
 PLAN gros CLAUDE

@@ -1,14 +1,14 @@
-# JE DOIS 47 € À KARIM
-# Pitch : Tobi doit 47 € à Karim depuis deux mois. Il cherche à payer le moins possible, avec des calculs de plus en plus créatifs.
+# JE DOIS 47 € À MON COUSIN
+# Pitch : Tobi doit 47 € à son cousin depuis deux mois. Il cherche à payer le moins possible, avec des calculs de plus en plus créatifs.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
 FONDU direct
 ACCROCHE Il doit 47 € et ne veut pas payer
-TOBI message Karim | Mes 47 €, c'est pour quand ? Ça fait deux mois.
+TOBI message Cousin | Mes 47 €, c'est pour quand ? Ça fait deux mois.
 PLAN gros TOBI
-TOBI dit (gene) Nox. Je dois quarante-sept euros à Karim.
+TOBI dit (gene) Nox. Je dois quarante-sept euros à mon cousin.
 PLAN gros NOX
 NOX dit (calme) Rembourse-le.
 PLAN gros TOBI
@@ -37,7 +37,7 @@ PLAN gros NOX
 NOX dit (calme) Treize ans.
 PLAN gros TOBI
 TOBI dit (content) Une amitié de treize ans !
-TOBI message Karim | Ok pour un centime par jour. Mais avec les intérêts. Ça fait 112 €.
+TOBI message Cousin | Ok pour un centime par jour. Mais avec les intérêts. Ça fait 112 €.
 PLAN gros NOX
 NOX dit (punchline) T'as transformé une dette en abonnement. Et lui, en business.
 ATTENDRE 0.4

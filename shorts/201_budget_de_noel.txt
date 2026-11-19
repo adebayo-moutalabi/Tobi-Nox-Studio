@@ -24,7 +24,7 @@ TOBI dit (gene) Des pâtes.
 PLAN gros NOX
 NOX dit (sec) Douze boîtes de pâtes. Joyeux Noël.
 PLAN gros TOBI
-TOBI dit (fier) Pour Karim, je lui rends son chargeur. Emballé.
+TOBI dit (fier) Pour mon cousin, je lui rends son chargeur. Emballé.
 PLAN gros NOX
 NOX dit (constat) C'est déjà le sien.
 PLAN gros TOBI

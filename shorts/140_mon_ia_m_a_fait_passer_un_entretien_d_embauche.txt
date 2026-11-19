@@ -29,7 +29,7 @@ NOX dit (calme) Vous êtes fidèle ?
 PLAN gros TOBI
 TOBI dit (fier) Jamais je te remplace !
 PLAN gros NOX
-NOX dit (sec) Centi. La semaine dernière.
+NOX dit (sec) La version gratuite de Gemini. La semaine dernière.
 PLAN gros TOBI
 TOBI dit (triste) Bon. J'ai raté. Je range mes affaires.
 PLAN gros NOX

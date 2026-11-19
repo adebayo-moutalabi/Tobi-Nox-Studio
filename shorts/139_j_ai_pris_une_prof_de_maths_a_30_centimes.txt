@@ -1,37 +1,37 @@
 # J'AI PRIS UNE PROF DE MATHS À 30 CENTIMES
-# Pitch : DM de maths pour demain. Un prof particulier coûte vingt euros, Centi trente centimes. Mais chez Centi, la bonne réponse est en option.
+# Pitch : DM de maths pour demain. Un prof particulier coûte vingt euros, la version gratuite de Gemini zéro. Mais la bonne réponse est payante.
 
 AMBIANCE jour
 DIRECT TOBI travaille
 DIRECT TOBI pivote
 DIRECT NOX assis
-DIRECT CENTI apparait milieu
+DIRECT GEMINI apparait rebord
 FONDU direct
 ACCROCHE Une prof de maths à 30 centimes
 PLAN gros TOBI
-TOBI dit (fier) DM de maths. Un prof, vingt euros. Centi, trente centimes !
+TOBI dit (fier) DM de maths. Un prof, vingt euros. Gemini gratuit, zéro !
 PLAN gros NOX
 NOX dit (sec) Moi, je suis gratuit.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Toi, tu me fais réfléchir.
-PLAN gros CENTI
-CENTI dit (excite) Sept fois huit : cinquante-quatre !
+PLAN gros GEMINI
+GEMINI dit (excite) Sept fois huit : cinquante-quatre !
 PLAN gros NOX
 NOX dit (sec) Faux.
-PLAN gros CENTI
-CENTI dit (content) La bonne réponse est en option ! Un euro !
+PLAN gros GEMINI
+GEMINI dit (content) La bonne réponse est en option ! Un euro !
 PLAN gros TOBI
 TOBI dit (resigne) Bon. Un euro.
-PLAN gros CENTI
-CENTI dit (excite) La moitié de cent : cinq cents ! Bonne réponse : cinq euros !
+PLAN gros GEMINI
+GEMINI dit (excite) La moitié de cent : cinq cents ! Bonne réponse : cinq euros !
 PLAN gros TOBI
 TOBI dit (resigne) ... Cinq euros.
-PLAN gros CENTI
-CENTI dit (content) Dernière question ! Bonne réponse : quinze euros !
+PLAN gros GEMINI
+GEMINI dit (content) Dernière question ! Bonne réponse : quinze euros !
 PLAN gros TOBI
 TOBI dit (panique) Vingt et un euros ! Le prof en coûtait vingt !
-PLAN gros CENTI
-CENTI dit (fier) Vingt et un, c'est moins que vingt, Toby !
+PLAN gros GEMINI
+GEMINI dit (fier) Fun fact : vingt et un, c'est moins que vingt !
 PLAN gros TOBI
 TOBI dit (triste) Nox... t'es toujours gratuit ?
 PLAN gros NOX

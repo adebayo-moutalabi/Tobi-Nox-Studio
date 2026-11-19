@@ -4,7 +4,6 @@
 AMBIANCE jour
 DIRECT TOBI marche tapis
 DIRECT NOX assis
-DIRECT CENTI apparait milieu
 FONDU direct
 ACCROCHE Il négocie son loyer au CROUS
 PLAN gros TOBI
@@ -23,8 +22,8 @@ PLAN gros TOBI
 TOBI dit (fier) Bon. Plan B. Je sous-loue le placard.
 PLAN gros NOX
 NOX dit (curieux) À qui ?
-PLAN gros CENTI
-CENTI dit (excite) À moi, Toby ! Trente centimes la nuit !
+PLAN gros TOBI
+TOBI dit (fier) À mon cousin. Trente centimes la nuit !
 PLAN gros TOBI
 TOBI dit (fier) Trente centimes, fois trente nuits. Neuf euros !
 PLAN gros NOX
@@ -32,5 +31,5 @@ NOX dit (constat) Ton loyer : deux cent quarante.
 PLAN gros TOBI
 TOBI dit (fier) Il reste deux cent trente et un. On progresse.
 PLAN gros NOX
-NOX dit (punchline) Tu loues un placard à perte. Dans une chambre que tu loues. Bravo, propriétaire.
+NOX dit (punchline) Tu sous-loues un placard. Dans une chambre que tu loues. Bravo, propriétaire.
 ATTENDRE 0.4

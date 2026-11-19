@@ -1,5 +1,5 @@
 # MON IA NOUS A EMMENÉS EN VACANCES
-# Pitch : Tobi a onze euros. Nox vend la laverie comme une agence de voyage : vue sur mer, spa, piscine. Centi tient l'accueil.
+# Pitch : Tobi a onze euros. Nox vend la laverie comme une agence de voyage : vue sur mer, spa, piscine. Gemini tient l'accueil.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -29,9 +29,9 @@ PLAN gros TOBI
 TOBI dit (mauvaisefoi) Et le soleil ?
 PLAN gros NOX
 NOX dit (constat) Le séchoir. Soixante degrés. Tu bronzes en douze minutes.
-DIRECT CENTI apparait milieu
-PLAN gros CENTI
-CENTI dit (excite) Bienvenue, Toby ! Le petit-déjeuner, c'est le distributeur. Il rend pas la monnaie.
+DIRECT GEMINI apparait rebord
+PLAN gros GEMINI
+GEMINI dit (excite) Bienvenue ! Fun fact : le petit-déjeuner, c'est le distributeur. Il rend pas la monnaie.
 PLAN gros TOBI
 TOBI dit (resigne) Et ça a combien d'étoiles, ton hôtel ?
 PLAN gros NOX

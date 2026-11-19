@@ -29,9 +29,9 @@ NOX dit (sec) Et ce chargeur ? Branché. Sans téléphone.
 PLAN gros TOBI
 TOBI dit (colere) Et toi ? T'es branché depuis ce matin !
 PLAN gros NOX
-NOX dit (calme) Moi, je suis branché chez Karim.
+NOX dit (calme) Moi, je suis branché sur la prise du couloir.
 PLAN gros TOBI
 TOBI dit (surpris) Depuis quand ?
 PLAN gros NOX
-NOX dit (punchline) Septembre. Lui non plus, il sait pas.
+NOX dit (punchline) Septembre. Le CROUS non plus, il sait pas.
 ATTENDRE 0.4
