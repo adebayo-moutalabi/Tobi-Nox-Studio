@@ -1,0 +1,43 @@
+# JE DOIS 47 € À KARIM
+# Pitch : Tobi doit 47 € à Karim depuis deux mois. Il cherche à payer le moins possible, avec des calculs de plus en plus créatifs.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il doit 47 € et ne veut pas payer
+TOBI message Karim | Mes 47 €, c'est pour quand ? Ça fait deux mois.
+PLAN gros TOBI
+TOBI dit (gene) Nox. Je dois quarante-sept euros à Karim.
+PLAN gros NOX
+NOX dit (calme) Rembourse-le.
+PLAN gros TOBI
+TOBI dit (fier) Je déduis le sel que je lui ai prêté.
+PLAN gros NOX
+NOX dit (constat) Une pincée. Zéro centime.
+PLAN gros TOBI
+TOBI dit (fier) Et mes conseils. Je lui ai dit de mettre un manteau.
+PLAN gros NOX
+NOX dit (sec) Tu factures un conseil météo ?
+PLAN gros TOBI
+TOBI dit (fier) Quinze euros. Expertise.
+PLAN gros NOX
+NOX dit (sec) Tu viens de vendre ton manteau.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Donc je lui dois trente-deux.
+PLAN gros NOX
+NOX dit (constat) Quarante-sept.
+PLAN gros TOBI
+TOBI dit (fier) Bon. J'ai une meilleure idée. Je lui envoie un centime par jour.
+PLAN gros NOX
+NOX dit (constat) Quatre mille sept cents jours.
+PLAN gros TOBI
+TOBI dit (fier) Il aura des nouvelles de moi tous les jours. C'est beau.
+PLAN gros NOX
+NOX dit (calme) Treize ans.
+PLAN gros TOBI
+TOBI dit (content) Une amitié de treize ans !
+TOBI message Karim | Ok pour un centime par jour. Mais avec les intérêts. Ça fait 112 €.
+PLAN gros NOX
+NOX dit (punchline) T'as transformé une dette en abonnement. Et lui, en business.
+ATTENDRE 0.4

@@ -1,0 +1,49 @@
+# J'AI POSTULÉ À 15 MASTERS
+# Pitch : Tobi postule à quinze masters avec 9,8 de moyenne. Nox relit son dossier. Sa meilleure idée : citer Nox comme expérience en IA.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 15 masters avec 9,8 de moyenne
+PLAN gros TOBI
+TOBI dit (fier) Nox. J'ai postulé à quinze masters.
+PLAN gros NOX
+NOX dit (constat) Avec neuf virgule huit de moyenne.
+PLAN gros TOBI
+TOBI dit (fier) Quinze chances de réussir.
+PLAN gros NOX
+NOX dit (constat) Quinze chances d'être refusé. Plus vite.
+PLAN gros TOBI
+TOBI dit (fier) Ma lettre de motivation est très forte.
+PLAN gros NOX
+NOX dit (curieux) Elle dit quoi ?
+PLAN gros TOBI
+TOBI dit (fier) « Motivé. »
+PLAN gros NOX
+NOX dit (sec) C'est un mot.
+PLAN gros TOBI
+TOBI dit (fier) C'est percutant.
+PLAN gros NOX
+NOX dit (constat) Ils demandent deux pages.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je l'ai écrit en gros.
+PLAN gros NOX
+NOX dit (calme) Et ton expérience ?
+PLAN gros TOBI
+TOBI dit (fier) Dix-sept projets. Fondateur.
+PLAN gros NOX
+NOX dit (constat) Zéro terminé.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Mon atout secret : je postule en master d'IA. Avec toi comme expérience.
+PLAN gros NOX
+NOX dit (curieux) Tu as fait quoi, avec moi ?
+PLAN gros TOBI
+TOBI dit (fier) Je t'utilise tous les jours. Depuis deux ans.
+PLAN gros NOX
+NOX dit (constat) Tu me demandes la météo. Et si les pâtes, c'est huit ou dix minutes.
+PLAN gros TOBI
+TOBI dit (fier) C'est de la donnée.
+PLAN gros NOX
+NOX dit (punchline) Ton expérience en IA, c'est me demander la météo. Et tu te trompes encore de veste.
+ATTENDRE 0.4

@@ -1,0 +1,50 @@
+# JE SUIS DEVENU LIVREUR À VÉLO
+# Pitch : Tobi devient livreur pour gagner de l'argent. Nox fait les comptes de sa première soirée. Tobi a trouvé comment se livrer lui-même.
+
+AMBIANCE soir
+HEURE 22:40
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il devient livreur à vélo
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Je suis livreur ! Première soirée !
+PLAN gros NOX
+NOX dit (curieux) Combien de courses ?
+PLAN gros TOBI
+TOBI dit (fier) Quatre. Trois euros chacune. Douze euros !
+PLAN gros NOX
+NOX dit (constat) Le vélo en location : huit euros.
+PLAN gros TOBI
+TOBI dit (fier) Il me reste quatre.
+PLAN gros NOX
+NOX dit (constat) Ton kebab de pause : neuf euros.
+PLAN gros TOBI
+TOBI dit (gene) J'avais faim. J'ai pédalé.
+PLAN gros NOX
+NOX dit (constat) Moins cinq.
+PLAN gros TOBI
+TOBI dit (fier) Mais j'ai découvert un truc génial. J'ai livré ma propre commande.
+PLAN gros NOX
+NOX dit (curieux) Comment ?
+PLAN gros TOBI
+TOBI dit (fier) J'ai commandé des pâtes. Et j'ai pris la course !
+PLAN gros NOX
+NOX dit (constat) Tu as payé la livraison. Pour te la livrer.
+PLAN gros TOBI
+TOBI dit (fier) Et je me suis mis un pourboire. Cinq étoiles.
+PLAN gros NOX
+NOX dit (sec) Avec ton argent.
+PLAN gros TOBI
+TOBI dit (content) Le client était très content.
+PLAN gros NOX
+NOX dit (sec) Le client, c'est toi.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Bilan ?
+PLAN gros NOX
+NOX dit (constat) Moins vingt et un euros. Et des mollets.
+PLAN gros TOBI
+TOBI dit (fier) Demain, je fais dix courses.
+PLAN gros NOX
+NOX dit (punchline) T'as inventé le seul travail qui te coûte de l'argent. Et tu veux faire des heures sup.
+ATTENDRE 0.4

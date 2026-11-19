@@ -1,0 +1,50 @@
+# 25 € POUR 12 CADEAUX DE NOËL
+# Pitch : Tobi a 25 € pour offrir un cadeau à toute sa famille. Nox fait le calcul. Tobi trouve des solutions de plus en plus honteuses.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 25 € pour 12 cadeaux de Noël
+PLAN gros TOBI
+TOBI dit (fier) Nox. Cadeaux de Noël. Douze personnes. Vingt-cinq euros.
+PLAN gros NOX
+NOX dit (constat) Deux euros huit par personne.
+PLAN gros TOBI
+TOBI dit (fier) C'est l'intention qui compte.
+PLAN gros NOX
+NOX dit (sec) Ton intention vaut deux euros huit.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je fais des cadeaux faits main.
+PLAN gros NOX
+NOX dit (curieux) Tu sais faire quoi, avec tes mains ?
+PLAN gros TOBI
+TOBI dit (gene) Des pâtes.
+PLAN gros NOX
+NOX dit (sec) Douze boîtes de pâtes. Joyeux Noël.
+PLAN gros TOBI
+TOBI dit (fier) Pour Karim, je lui rends son chargeur. Emballé.
+PLAN gros NOX
+NOX dit (constat) C'est déjà le sien.
+PLAN gros TOBI
+TOBI dit (fier) Il sera content de le revoir.
+PLAN gros NOX
+NOX dit (calme) Et ta mère ?
+PLAN gros TOBI
+TOBI dit (fier) Le pull qu'elle m'a offert l'an dernier. Il est neuf.
+PLAN gros NOX
+NOX dit (sec) Elle va le reconnaître.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je mets une autre étiquette.
+PLAN gros NOX
+NOX dit (sec) L'étiquette, c'est son écriture.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Il reste combien ?
+PLAN gros NOX
+NOX dit (constat) Vingt-cinq euros. T'as rien acheté.
+PLAN gros TOBI
+TOBI dit (content) Parfait. Je m'offre un truc.
+PLAN gros NOX
+NOX dit (punchline) Même le père Noël gère mieux. Et il bosse un jour par an.
+ATTENDRE 0.4

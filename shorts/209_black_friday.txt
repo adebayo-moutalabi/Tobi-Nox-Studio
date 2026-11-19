@@ -1,0 +1,42 @@
+# BLACK FRIDAY : J'AI ÉCONOMISÉ 300 €
+# Pitch : Tobi rentre du Black Friday fier de ses économies. Nox fait l'inventaire de ce qu'il a acheté, et de ce qu'il a vraiment dépensé.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a « économisé » 300 € au Black Friday
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Black Friday ! J'ai économisé trois cents euros !
+PLAN gros NOX
+NOX dit (curieux) Tu as dépensé combien ?
+PLAN gros TOBI
+TOBI dit (fier) Quatre cent vingt.
+PLAN gros NOX
+NOX dit (constat) Ton compte avait cent quatre-vingts. Qu'est-ce que t'as acheté ?
+PLAN gros TOBI
+TOBI dit (fier) Une friteuse sans huile. Moins cinquante pour cent.
+PLAN gros NOX
+NOX dit (constat) Tu cuisines pas.
+PLAN gros TOBI
+TOBI dit (fier) Justement. Elle cuisine toute seule.
+PLAN gros NOX
+NOX dit (sec) Avec quoi ? Ton frigo est vide.
+PLAN gros TOBI
+TOBI dit (fier) Une montre connectée. Elle compte mes pas.
+PLAN gros NOX
+NOX dit (constat) Tu fais deux cents pas par jour. Lit, bureau, frigo.
+PLAN gros TOBI
+TOBI dit (fier) Et un tapis de course pliable !
+PLAN gros NOX
+NOX dit (constat) Ta chambre fait neuf mètres carrés. Il en fait trois.
+PLAN gros TOBI
+TOBI dit (gene) Je le déplie pas. Je le regarde.
+PLAN gros NOX
+NOX dit (calme) Donc t'as économisé quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Trois cents euros ! C'est écrit sur le ticket !
+PLAN gros NOX
+NOX dit (punchline) La seule chose qui a vraiment baissé, c'est ton compte.
+ATTENDRE 0.4

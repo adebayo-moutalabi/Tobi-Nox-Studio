@@ -1,0 +1,36 @@
+# J'AI NÉGOCIÉ MON LOYER AU CROUS
+# Pitch : Tobi veut payer moins de loyer pour sa chambre de 9 m². Il prépare ses arguments avec Nox. Le dernier, c'est de sous-louer le placard.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CENTI apparait milieu
+FONDU direct
+ACCROCHE Il négocie son loyer au CROUS
+PLAN gros TOBI
+TOBI dit (fier) Nox. Je négocie mon loyer. Ma chambre fait neuf mètres carrés.
+PLAN gros NOX
+NOX dit (constat) Tu en utilises deux. Le lit.
+PLAN gros TOBI
+TOBI dit (fier) Argument un : la fenêtre ne ferme pas.
+PLAN gros NOX
+NOX dit (sec) Tu l'as cassée. En voulant la fermer.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Argument trois : je suis un bon locataire.
+PLAN gros NOX
+NOX dit (constat) Trois mois de retard. Une inspection ratée. Une tache en forme de ta tête.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Plan B. Je sous-loue le placard.
+PLAN gros NOX
+NOX dit (curieux) À qui ?
+PLAN gros CENTI
+CENTI dit (excite) À moi, Toby ! Trente centimes la nuit !
+PLAN gros TOBI
+TOBI dit (fier) Trente centimes, fois trente nuits. Neuf euros !
+PLAN gros NOX
+NOX dit (constat) Ton loyer : deux cent quarante.
+PLAN gros TOBI
+TOBI dit (fier) Il reste deux cent trente et un. On progresse.
+PLAN gros NOX
+NOX dit (punchline) Tu loues un placard à perte. Dans une chambre que tu loues. Bravo, propriétaire.
+ATTENDRE 0.4

@@ -412,6 +412,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 18 novembre 2026 : épisodes 181 à 190 autour de GTA, qui sort le 19 novembre sur console seulement (pas de version PC). Le compteur `Recherché ★★` montre les étoiles comme dans le jeu.
 - Retour de l'auteur : la série GTA ne plaît pas. Nouvelles idées proposées avant écriture.
 - Épisodes 191 à 200 sur le modèle des favoris (Nox fait l'enfant, Tobi le parent, la chute retourne la situation) : gros mot, mise à jour, prénom, mauvaises fréquentations, BU, d'où viennent les IA, petit frère, tatouage, dodo chez Codex, punition.
+- Épisodes 201 à 210 sur l'argent étudiant (Noël à 25 €, pitch à la mère, bourse, Vinted, dette à Karim, salle de sport, loyer CROUS, livreur, Black Friday, masters) : un chiffre dès la première réplique, 15 à 20 répliques, la pire idée de Tobi, puis le verdict de Nox. Une question vide dans la fiche de publication supprime le commentaire à épingler.
 
 ## À faire
 

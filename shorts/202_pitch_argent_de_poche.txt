@@ -1,0 +1,45 @@
+# J'AI PITCHÉ MA MÈRE POUR PLUS D'ARGENT
+# Pitch : Tobi veut 100 € de plus par mois. Il présente sa demande à sa mère comme une start-up devant des investisseurs. Nox vérifie chaque chiffre.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il pitche sa mère comme un investisseur
+PLAN gros TOBI
+TOBI dit (fier) Nox. Je demande cent euros de plus à ma mère. Comme une start-up.
+PLAN gros NOX
+NOX dit (curieux) Un pitch ?
+PLAN gros TOBI
+TOBI dit (fier) Diapo un. Croissance.
+PC PowerPoint : Pitch_Maman.pptx | Tobi 2027 | Croissance : +300 %
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (constat) Trois cents pour cent de quoi ?
+PLAN gros TOBI
+TOBI dit (fier) De mes dépenses.
+PLAN gros NOX
+NOX dit (sec) C'est pas de la croissance. C'est une fuite.
+PLAN gros TOBI
+TOBI dit (fier) Diapo deux. Le marché. Moi.
+PLAN gros NOX
+NOX dit (sec) Un client. Qui paie pas.
+PLAN gros TOBI
+TOBI dit (fier) Diapo trois. Rentabilité dans cinq ans.
+PLAN gros NOX
+NOX dit (constat) Tu as dit ça il y a cinq ans.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le marché n'était pas prêt.
+TOBI message Maman | > Maman, j'ai un projet. Cent euros de plus par mois. | Les chiffres ?
+PLAN gros NOX
+NOX dit (calme) Je lui envoie les vrais ?
+PLAN gros TOBI
+TOBI dit (panique) Non !
+TOBI message Maman | Nox m'a envoyé les vrais.
+PLAN gros TOBI
+TOBI dit (gene) Alors ? Elle investit ?
+TOBI message Maman | Pitch refusé. Mais je te prends en stage. Poste : la vaisselle.
+PLAN gros NOX
+NOX dit (punchline) Félicitations. Ton premier vrai contrat. Non payé.
+ATTENDRE 0.4

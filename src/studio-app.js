@@ -199,6 +199,16 @@ import A197 from '../shorts/197_mon_ia_veut_un_petit_frere.txt';
 import A198 from '../shorts/198_mon_ia_a_tatouage.txt';
 import A199 from '../shorts/199_mon_ia_dort_chez_codex.txt';
 import A200 from '../shorts/200_mon_ia_a_eu_une_punition.txt';
+import A201 from '../shorts/201_budget_de_noel.txt';
+import A202 from '../shorts/202_pitch_argent_de_poche.txt';
+import A203 from '../shorts/203_bourse_au_maximum.txt';
+import A204 from '../shorts/204_fortune_sur_vinted.txt';
+import A205 from '../shorts/205_je_rembourse_karim.txt';
+import A206 from '../shorts/206_salle_de_sport.txt';
+import A207 from '../shorts/207_negocier_le_loyer_du_crous.txt';
+import A208 from '../shorts/208_livreur_a_velo.txt';
+import A209 from '../shorts/209_black_friday.txt';
+import A210 from '../shorts/210_quinze_masters.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -306,6 +316,16 @@ startViewer({
     "198. Mon IA veut un tatouage": A198,
     "199. Mon IA dort chez un copain": A199,
     "200. Mon IA a eu une punition": A200,
+    "201. J'ai 25 € pour 12 cadeaux de Noël": A201,
+    "202. J'ai pitché ma mère pour plus d'argent de poche": A202,
+    "203. Je veux la bourse CROUS au maximum": A203,
+    "204. J'ai voulu faire fortune sur Vinted": A204,
+    "205. Je dois 47 € à mon voisin": A205,
+    "206. 35 € par mois de salle de sport": A206,
+    "207. J'ai négocié mon loyer au CROUS": A207,
+    "208. Je suis devenu livreur à vélo": A208,
+    "209. Black Friday : j'ai économisé 300 €": A209,
+    "210. J'ai postulé à 15 masters avec 9,8 de moyenne": A210,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

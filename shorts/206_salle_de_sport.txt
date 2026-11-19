@@ -1,0 +1,45 @@
+# 35 € PAR MOIS DE SALLE DE SPORT
+# Pitch : Tobi paie la salle de sport depuis un an. Nox calcule le prix de chaque séance. Tobi décide de prendre l'offre plus chère pour se motiver.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 35 € par mois pour deux séances
+PLAN gros TOBI
+TOBI dit (fier) Nox. Cette année, je deviens musclé. J'ai la salle de sport.
+PLAN gros NOX
+NOX dit (constat) Tu l'as depuis l'an dernier. Trente-cinq euros par mois.
+PLAN gros TOBI
+TOBI dit (fier) Exactement. Je suis sérieux.
+PLAN gros NOX
+NOX dit (constat) Deux séances. En un an.
+PLAN gros TOBI
+TOBI dit (gene) Deux très bonnes séances.
+PLAN gros NOX
+NOX dit (constat) Deux cent dix euros la séance.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Plus le vestiaire. Je l'ai utilisé trois fois.
+PLAN gros NOX
+NOX dit (sec) Pour te changer. Et rentrer.
+PLAN gros TOBI
+TOBI dit (fier) J'ai fait une photo dans le miroir. Douze likes.
+PLAN gros NOX
+NOX dit (constat) Dix-sept euros cinquante le like.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Le problème, c'est la motivation.
+PLAN gros NOX
+NOX dit (calme) Oui.
+PLAN gros TOBI
+TOBI dit (fier) Donc je prends l'offre premium. Soixante euros. Avec sauna.
+PLAN gros NOX
+NOX dit (curieux) Pourquoi ?
+PLAN gros TOBI
+TOBI dit (fier) Plus c'est cher, plus je culpabilise. Plus j'y vais.
+PLAN gros NOX
+NOX dit (constat) Tu culpabilises déjà à trente-cinq. Tu y vas pas.
+PLAN gros TOBI
+TOBI dit (content) Là, je culpabiliserai avec un sauna.
+PLAN gros NOX
+NOX dit (punchline) Tu paies pour culpabiliser en haute définition.
+ATTENDRE 0.4

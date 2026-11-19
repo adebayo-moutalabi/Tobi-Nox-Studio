@@ -1,0 +1,45 @@
+# JE VEUX LA BOURSE CROUS AU MAXIMUM
+# Pitch : Tobi veut passer à l'échelon maximal de la bourse. Nox explique comment ça se calcule. Tobi trouve une solution qui coûte cher à toute sa famille.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il veut la bourse au maximum
+PLAN gros TOBI
+TOBI dit (fier) Nox. Je veux la bourse au maximum. Échelon sept.
+PLAN gros NOX
+NOX dit (constat) Ça dépend des revenus de tes parents.
+PLAN gros TOBI
+TOBI dit (curieux) Ils gagnent trop ?
+PLAN gros NOX
+NOX dit (constat) Pour l'échelon sept, oui.
+PLAN gros TOBI
+TOBI dit (fier) Facile. Je leur demande de gagner moins.
+PLAN gros NOX
+NOX dit (sec) Tu veux que ta mère baisse son salaire. Pour toi.
+PLAN gros TOBI
+TOBI dit (fier) C'est un investissement familial.
+PLAN gros NOX
+NOX dit (constat) Elle perd six cents euros. Tu en gagnes cent cinquante.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et si papa arrête de travailler ?
+PLAN gros NOX
+NOX dit (sec) Qui paie ton loyer ?
+PLAN gros TOBI
+TOBI dit (fier) La bourse !
+PLAN gros NOX
+NOX dit (constat) Elle paie la moitié de ton loyer.
+PLAN gros TOBI
+TOBI dit (gene) Et l'autre moitié ?
+PLAN gros NOX
+NOX dit (sec) Ton père. Qui ne travaille plus.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Plan B. Je me fais adopter par Karim.
+PLAN gros NOX
+NOX dit (constat) Karim est boursier échelon sept.
+PLAN gros TOBI
+TOBI dit (excite) Parfait !
+PLAN gros NOX
+NOX dit (punchline) Tu mets ta famille au chômage pour cent cinquante euros. Et t'appelles ça un plan.
+ATTENDRE 0.4

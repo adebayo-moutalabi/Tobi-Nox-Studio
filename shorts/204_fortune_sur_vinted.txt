@@ -1,0 +1,44 @@
+# J'AI VOULU FAIRE FORTUNE SUR VINTED
+# Pitch : Tobi met toute sa chambre en vente pour devenir riche. Il vend tout trop bas. Puis il vend ce qui n'est pas à lui.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il veut faire fortune sur Vinted
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Je vais faire fortune sur Vinted. J'ai déjà vendu trois trucs !
+PLAN gros NOX
+NOX dit (curieux) Pour combien ?
+PLAN gros TOBI
+TOBI dit (fier) Douze euros.
+PLAN gros NOX
+NOX dit (constat) Ton manteau, à quatre euros. Il fait deux degrés dehors.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai un pull.
+PLAN gros NOX
+NOX dit (sec) Tu l'as vendu ce matin. Trois euros.
+PLAN gros TOBI
+TOBI dit (fier) Le client a laissé cinq étoiles.
+PLAN gros NOX
+NOX dit (sec) Normal. Il a eu un manteau à quatre euros.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je mets en vente des trucs plus chers.
+PLAN gros NOX
+NOX dit (curieux) Quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Le micro-ondes. Le frigo. La chaise.
+PLAN gros NOX
+NOX dit (constat) C'est au CROUS.
+PLAN gros TOBI
+TOBI dit (gene) Ils remarqueront pas.
+PLAN gros NOX
+NOX dit (sec) Ils font l'état des lieux en juin.
+PLAN gros TOBI
+TOBI dit (fier) Et le chargeur de Karim. Neuf. Vingt euros.
+TOBI message Karim | Je viens d'acheter un chargeur sur Vinted. C'est marrant, c'est le même que le mien.
+PLAN gros TOBI
+TOBI dit (panique) Il l'a racheté !
+PLAN gros NOX
+NOX dit (punchline) T'es pas vendeur. T'es un vide-grenier qui marche.
+ATTENDRE 0.4
