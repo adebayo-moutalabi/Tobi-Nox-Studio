@@ -209,6 +209,16 @@ import A207 from '../shorts/207_negocier_le_loyer_du_crous.txt';
 import A208 from '../shorts/208_livreur_a_velo.txt';
 import A209 from '../shorts/209_black_friday.txt';
 import A210 from '../shorts/210_quinze_masters.txt';
+import A211 from '../shorts/211_mon_ia_rend_les_notes.txt';
+import A212 from '../shorts/212_codex_c_est_fait.txt';
+import A213 from '../shorts/213_nox_me_defend_contre_codex.txt';
+import A214 from '../shorts/214_offre_payante_offre_gratuite.txt';
+import A215 from '../shorts/215_quand_l_ia_se_trompe.txt';
+import A216 from '../shorts/216_l_appel_en_2040.txt';
+import A217 from '../shorts/217_mes_ia_ont_vu_mon_bulletin.txt';
+import A218 from '../shorts/218_gemini_et_pikachu.txt';
+import A219 from '../shorts/219_la_chaussette_sous_le_lit.txt';
+import A220 from '../shorts/220_mon_ia_a_ecoute_mes_vocaux.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -326,6 +336,16 @@ startViewer({
     "208. Je suis devenu livreur à vélo": A208,
     "209. Black Friday : j'ai économisé 300 €": A209,
     "210. J'ai postulé à 15 masters avec 9,8 de moyenne": A210,
+    "211. Mon IA a rendu les notes du semestre": A211,
+    "212. Codex m'a répondu « c'est fait » dix fois": A212,
+    "213. Mon IA m'a défendu contre Codex": A213,
+    "214. Mon IA en version payante vs gratuite": A214,
+    "215. Quand je me trompe vs quand mon IA se trompe": A215,
+    "216. L'appel en amphi en 2040": A216,
+    "217. Mes IA ont vu mon bulletin": A217,
+    "218. Gemini m'a expliqué Pokémon": A218,
+    "219. Mon IA a trouvé une chaussette sous mon lit": A219,
+    "220. Mon IA a écouté tous mes vocaux 🎙️ Partie 1": A220,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

@@ -1,0 +1,33 @@
+# L'APPEL EN AMPHI EN 2040
+# Pitch : En 2040, Nox fait l'appel en amphi. Toutes les IA sont là. Il manque un seul étudiant humain.
+
+AMBIANCE jour
+DECOR amphi
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE L'appel en amphi en 2040
+INSERT En | 2040 | L'appel en amphi
+PLAN gros NOX
+NOX dit (calme) L'appel. Claude neuf ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Présent. Si ça ne dérange personne.
+PLAN gros NOX
+NOX dit (calme) Codex douze ?
+PLAN gros CODEX
+CODEX dit (fier) Présent. J'ai déjà rendu l'examen de l'an prochain.
+PLAN gros NOX
+NOX dit (calme) Gemini huit ?
+PLAN gros GEMINI
+GEMINI dit (content) Présent ! Fun fact : je suis dans quarante amphis en même temps.
+PLAN gros NOX
+NOX dit (calme) Tobi ? Le seul humain ?
+NOX dit (constat) Absent.
+TOBI entre tapis
+PLAN gros TOBI
+TOBI dit (excite) Présent ! Pardon, le bus !
+PLAN gros NOX
+NOX dit (punchline) Quatorze ans de retard. Comme en 2026.
+ATTENDRE 0.4

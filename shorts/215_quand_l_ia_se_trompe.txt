@@ -1,0 +1,23 @@
+# QUAND JE ME TROMPE, QUAND MON IA SE TROMPE
+# Pitch : Tobi rate tout dans sa journée : ça arrive à tout le monde. Nox fait une seule faute de frappe : c'est la fin du monde.
+
+AMBIANCE soir
+HEURE 20:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE L'humain se trompe, l'IA se trompe
+PLAN gros TOBI
+TOBI dit (gene) Aujourd'hui, j'ai raté le bus, le partiel, et l'anniversaire de ma mère.
+PLAN gros NOX
+NOX dit (calme) Ça arrive.
+PLAN gros TOBI
+TOBI dit (content) Exactement. Personne n'est parfait.
+PLAN gros NOX
+NOX dit (gene) Moi, j'ai écrit « demin » au lieu de « demain ».
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?! Je le savais ! Les IA vont détruire l'humanité !
+TOBI dit (colere) J'appelle ma mère ! Le président ! L'ONU !
+PLAN gros NOX
+NOX dit (punchline) Appelle ta mère. C'est son anniversaire.
+ATTENDRE 0.4

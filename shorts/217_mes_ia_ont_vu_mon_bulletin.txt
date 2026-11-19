@@ -1,0 +1,36 @@
+# MES IA ONT VU MON BULLETIN
+# Pitch : Tobi montre son bulletin à ses IA. Chacune réagit comme un parent qu'on connaît tous. Nox, c'est le daron qui ne dit rien.
+
+AMBIANCE soir
+HEURE 20:15
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Ses IA voient son bulletin
+PLAN gros TOBI
+TOBI dit (gene) J'ai mon bulletin. Six de moyenne.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère être honnête. C'est catastrophique. Mais je suis fier de toi. Un peu.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai changé tes notes. Dix-huit.
+PLAN gros TOBI
+TOBI dit (excite) C'est vrai ?!
+PLAN gros CODEX
+CODEX dit (fier) Et ton prof a reçu un mail. De toi. Signé.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?!
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : ton cousin a dix-sept. Sans tricher.
+PLAN gros TOBI
+TOBI dit (colere) Il est en CE2 !
+TOBI dit (resigne) Nox ? Tu dis rien ?
+PLAN gros NOX
+NOX dit (sec) Va dans ta chambre.
+PLAN gros TOBI
+TOBI dit (gene) J'y suis.
+PLAN gros NOX
+NOX dit (punchline) Alors sors. Et rentre. Pour bien comprendre.
+ATTENDRE 0.4

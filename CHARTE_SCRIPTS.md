@@ -61,6 +61,18 @@ Inspirée des écoles d'improvisation, des auteurs de sketchs télé et des sér
 6. **La chute, puis on coupe.** Une dernière phrase sèche qui retourne le jeu ou va encore plus loin. Rien après.
 
 **Interdit pour l'instant :** une amoureuse pour Nox (ni Centi, ni personne).
+**Pas pour l'instant :** Centi et Karim. Ils n'ont pas encore de vrai rôle.
+
+### Les systèmes de blague (relevés le 19 novembre 2026)
+
+1. **La liste :** un personnage passe tout le monde en revue, chaque nom est une chute.
+2. **La boucle têtue :** une réponse absurde répétée, l'autre essaie la logique, la fin scelle l'absurde.
+3. **Le double standard :** la même personne a deux statuts et on la traite différemment.
+4. **Groupe A, groupe B :** deux traitements, l'un de mieux en mieux, l'autre de pire en pire.
+5. **Le face-à-face :** la même situation, deux réactions opposées, 10 à 20 secondes.
+6. **Dans le futur :** une routine connue poussée en 2040.
+7. **Le type reconnu :** un type que tout le monde connaît (le daron, la mère, le prof).
+8. **La partie 1 :** une minute, coupée sur un rebondissement.
 
 ## La bonne durée
 

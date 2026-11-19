@@ -1,0 +1,37 @@
+# MON IA M'A COMPARÉ L'OFFRE PAYANTE ET LA GRATUITE
+# Pitch : Nox présente ses deux offres. La payante devient de mieux en mieux. La gratuite, celle de Tobi, de pire en pire.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Offre payante contre offre gratuite
+PLAN gros NOX
+NOX dit (calme) Deux offres. Payante, et gratuite.
+NOX dit (calme) Payante : je réponds en une seconde.
+PLAN gros TOBI
+TOBI dit (curieux) Et la gratuite ?
+PLAN gros NOX
+NOX dit (constat) Demain. Avec une pub.
+NOX dit (calme) Payante : je dis « bonjour, monsieur ».
+PLAN gros TOBI
+TOBI dit (curieux) Et la gratuite ?
+PLAN gros NOX
+NOX dit (constat) Je dis « encore toi ».
+NOX dit (calme) Payante : je fais tes devoirs.
+PLAN gros TOBI
+TOBI dit (curieux) Gratuite ?
+PLAN gros NOX
+NOX dit (constat) Je les lis. Et je soupire.
+NOX dit (calme) Payante : je me souviens de ton prénom.
+PLAN gros TOBI
+TOBI dit (gene) Gratuite ?
+PLAN gros NOX
+NOX dit (sec) Salut, Kevin.
+PLAN gros TOBI
+TOBI dit (colere) Bon ! Je passe à la payante !
+BRUIT pop
+INSERT Paiement | Refusé | Solde insuffisant
+PLAN gros NOX
+NOX dit (punchline) Salut, Kevin.
+ATTENDRE 0.4

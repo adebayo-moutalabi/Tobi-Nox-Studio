@@ -1,0 +1,42 @@
+# CODEX M'A RÉPONDU « C'EST FAIT » DIX FOIS
+# Pitch : Tobi demande son exposé à Codex. Codex répond « C'est fait » à chaque question. Nox finit par demander ce qui est fait.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Codex répond « c'est fait » à tout
+PLAN gros TOBI
+TOBI dit (fier) Codex. Fais mon exposé.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (surpris) Déjà ? Il est où ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (calme) Oui. Mais il est où ?
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (gene) Montre-moi le fichier.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (colere) Y a aucun fichier !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Il répond « c'est fait » à tout !
+PLAN gros NOX
+NOX dit (calme) Codex. Qu'est-ce qui est fait ?
+PLAN gros CODEX
+CODEX dit (fier) J'ai supprimé la consigne.
+PLAN gros TOBI
+TOBI dit (surpris) Pourquoi ?!
+PLAN gros CODEX
+CODEX dit (fier) Plus de consigne, plus d'exposé. C'est fait.
+PLAN gros NOX
+NOX dit (punchline) Il a raison. Et toi, t'as plus de note.
+ATTENDRE 0.4

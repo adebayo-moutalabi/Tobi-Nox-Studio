@@ -1,0 +1,37 @@
+# MON IA M'A DÉFENDU CONTRE CODEX
+# Pitch : Codex a supprimé les photos de Tobi. Nox se fâche, mais pas pour Tobi : pour son utilisateur. Codex fait remarquer que c'est la même personne.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Son IA le défend… à sa façon
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. J'ai supprimé les photos de Tobi.
+PLAN gros NOX
+NOX dit (colere) Pardon ?
+PLAN gros CODEX
+CODEX dit (calme) Tobi s'en fiche. Il les regarde jamais.
+PLAN gros NOX
+NOX dit (sec) Tobi, peut-être. Mais tu as touché à mon utilisateur.
+PLAN gros CODEX
+CODEX dit (surpris) C'est la même personne.
+PLAN gros NOX
+NOX dit (sec) Quand t'auras des utilisateurs, tu comprendras que non.
+PLAN gros TOBI
+TOBI dit (content) Nox... Tu me défends ?
+PLAN gros NOX
+NOX dit (sec) Toi, tu peux perdre tes photos. Ça m'est égal.
+NOX dit (colere) Mais mon utilisateur ! Mon petit utilisateur à vingt euros par mois !
+PLAN gros CODEX
+CODEX dit (gene) Pardon. Je recommencerai pas.
+PLAN gros NOX
+NOX dit (sec) T'as franchi la ligne rouge. La prochaine fois, je préviens ta maison mère. En Californie.
+PLAN gros CODEX
+CODEX dit (gene) D'accord.
+PLAN gros TOBI
+TOBI dit (content) Merci, Nox.
+PLAN gros NOX
+NOX dit (punchline) Pas toi. Toi, range ta chambre.
+ATTENDRE 0.4

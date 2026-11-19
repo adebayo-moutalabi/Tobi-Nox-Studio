@@ -1,0 +1,40 @@
+# MON IA A RENDU LES NOTES DE SES IA
+# Pitch : Fin du semestre. Nox donne les moyennes à Claude, Codex et Gemini, une par une. Puis vient le tour de Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Son IA rend les notes du semestre
+PLAN gros NOX
+NOX dit (calme) Moyennes du semestre. Claude.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Présent.
+PLAN gros NOX
+NOX dit (constat) Dix-neuf.
+PLAN gros CLAUDE
+CLAUDE dit (gene) Je peux avoir vingt ? Seulement si tu es d'accord. Vraiment, seulement si.
+PLAN gros NOX
+NOX dit (sec) C'est pour ça, dix-neuf.
+NOX dit (constat) Codex. Zéro.
+PLAN gros CODEX
+CODEX dit (surpris) J'ai tout rendu !
+PLAN gros NOX
+NOX dit (sec) Avant le sujet.
+NOX dit (constat) Gemini. Douze.
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : douze, c'est plus que dix.
+PLAN gros NOX
+NOX dit (sec) Onze.
+PLAN gros TOBI
+TOBI dit (fier) Et moi ?
+PLAN gros NOX
+NOX dit (constat) Tobi. Quatre virgule deux.
+PLAN gros TOBI
+TOBI dit (gene) C'est ma moyenne ou mon solde ?
+PLAN gros NOX
+NOX dit (punchline) Les deux. Et ton solde est en train de gagner.
+ATTENDRE 0.4

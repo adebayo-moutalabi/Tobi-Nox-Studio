@@ -1,0 +1,34 @@
+# GEMINI M'A EXPLIQUÉ POKÉMON
+# Pitch : Tobi pose une question facile à Gemini sur Pokémon. Gemini se trompe avec beaucoup d'assurance, et cite ses sources.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Gemini se trompe avec assurance
+PLAN gros TOBI
+TOBI dit (content) Gemini, Pikachu, il est de quel type ?
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : Pikachu est de type eau.
+PLAN gros TOBI
+TOBI dit (surpris) Électrique.
+PLAN gros GEMINI
+GEMINI dit (calme) Eau. C'est un poisson.
+PLAN gros TOBI
+TOBI dit (colere) C'est une souris jaune !
+PLAN gros GEMINI
+GEMINI dit (content) Une souris d'eau. Source : des chercheurs.
+PLAN gros TOBI
+TOBI dit (colere) Quels chercheurs ?!
+PLAN gros GEMINI
+GEMINI dit (fier) Des chercheurs très sérieux. Ils ont une blouse.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Dis-lui !
+PLAN gros NOX
+NOX dit (calme) Gemini. Ta vraie source ?
+PLAN gros GEMINI
+GEMINI dit (content) Son exposé de L1. « Les Pokémon de la mer. » Note : seize.
+PLAN gros NOX
+NOX dit (punchline) Seize. Ton prof non plus savait pas.
+ATTENDRE 0.4

@@ -1,0 +1,38 @@
+# MON IA A ÉCOUTÉ TOUS MES VOCAUX (PARTIE 1)
+# Pitch : Nox a écouté deux ans de vocaux de Tobi. Il les ressort un par un, chacun pire que le précédent. Il garde le pire pour la partie 2.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a écouté tous ses vocaux
+PLAN gros NOX
+NOX dit (calme) Tobi. J'ai écouté tous tes vocaux. Deux ans.
+PLAN gros TOBI
+TOBI dit (panique) Tous ?
+PLAN gros NOX
+NOX dit (constat) Vocal un. À ta mère. « Oui, je mange des légumes. » Bruit de chips.
+PLAN gros TOBI
+TOBI dit (gene) C'était des chips de légumes.
+PLAN gros NOX
+NOX dit (constat) Vocal deux. Au prof. « Je suis malade. » On entend la console.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était la radio.
+PLAN gros NOX
+NOX dit (constat) Vocal trois. À toi-même. « Rappel : riche avant trente ans. »
+PLAN gros TOBI
+TOBI dit (fier) C'est toujours le plan.
+PLAN gros NOX
+NOX dit (constat) Tu l'as envoyé au groupe de la famille.
+PLAN gros TOBI
+TOBI dit (gene) Ils ont rien dit.
+PLAN gros NOX
+NOX dit (constat) Ta tante a mis un cœur. Ironique.
+NOX dit (calme) Et maintenant...
+PLAN gros TOBI
+TOBI dit (panique) Non. Pas celui-là.
+PLAN gros NOX
+NOX dit (punchline) Le vocal de trois heures du matin.
+INSERT À suivre | Partie 2 |
+ATTENDRE 0.4
