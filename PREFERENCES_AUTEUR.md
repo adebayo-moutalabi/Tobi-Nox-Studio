@@ -196,6 +196,7 @@ L'auteur veut des épisodes plus drôles autour de GTA, pour la sortie du jeu le
 Les épisodes 181 à 190 ne lui ont pas plu (18 novembre 2026) : il veut d'autres idées, différentes. Désormais, proposer les idées avant d'écrire les scripts.
 Les douze idées du 18 novembre (PNJ, formulaire A et B, six œufs, musée du frigo…) ont été refusées aussi. Retour au modèle des favoris : Nox fait l'enfant ou l'ado, Tobi joue le parent, et la chute remet Tobi à sa place.
 Ces dix idées lui ont plu (« Vas-y, je suis chaud ») : épisodes 191 à 200.
+Le 19 novembre, il en demande encore d'autres, après avoir regardé sa chaîne et ce qui marche ailleurs. Chiffres du jour : tous les Shorts plafonnent entre 1 400 et 2 500 vues ; « gros mot » (191) fait 1 581 vues en un jour, « soirée » (146) 1 995. Ce qui marche le plus dans la niche : l'humain veut un objectif concret avec un chiffre (argent, budget), l'IA démonte chaque argument avec des chiffres, l'humain sort sa pire idée, l'IA conclut par une phrase cash. Plus de 20 répliques en 40 s.
 
 ## Points à surveiller
 
