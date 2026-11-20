@@ -241,6 +241,14 @@ import A239 from '../shorts/239_mon_ia_veut_faire_du_sport.txt';
 import A240 from '../shorts/240_mon_ia_a_range_ma_chambre.txt';
 import A241 from '../shorts/241_mon_ia_veut_apprendre_a_danser.txt';
 import A242 from '../shorts/242_mon_ia_veut_faire_la_grasse_matinee.txt';
+import A243 from '../shorts/243_ma_premiere_facture_urssaf.txt';
+import A244 from '../shorts/244_je_suis_devenu_dropshippeur.txt';
+import A245 from '../shorts/245_imprimante_3d.txt';
+import A246 from '../shorts/246_soiree_payante_au_crous.txt';
+import A247 from '../shorts/247_levee_de_fonds_au_repas_de_noel.txt';
+import A248 from '../shorts/248_ma_newsletter.txt';
+import A249 from '../shorts/249_carte_refusee_au_kebab.txt';
+import A250 from '../shorts/250_job_de_baby_sitting.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -390,6 +398,14 @@ startViewer({
     "240. Mon IA a rangé ma chambre": A240,
     "241. Mon IA veut apprendre à danser": A241,
     "242. Mon IA veut faire la grasse matinée": A242,
+    "243. Mon IA a vu ma première facture URSSAF": A243,
+    "244. Mon IA m'a vu devenir dropshippeur": A244,
+    "245. Mon IA m'a vu acheter une imprimante 3D": A245,
+    "246. Mon IA m'a vu organiser une soirée payante": A246,
+    "247. Mon IA m'a aidé à lever des fonds au repas de Noël": A247,
+    "248. Mon IA a lu ma newsletter": A248,
+    "249. Mon IA m'a vu me faire refuser ma carte": A249,
+    "250. Mon IA m'a vu faire du baby-sitting": A250,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

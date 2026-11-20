@@ -1,0 +1,48 @@
+# MON IA M'A VU FAIRE DU BABY-SITTING
+# Pitch : Tobi garde le fils de la voisine, huit ans, pour vingt euros. Il le traite comme un stagiaire de sa start-up. À la fin, c'est l'enfant qui le paie.
+
+AMBIANCE soir
+HEURE 20:00
+TABLEAU Baby-sitting | Enfant : 8 ans | Paie : 20 €
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il fait du baby-sitting comme un patron
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Vingt euros pour garder le fils de la voisine. Huit ans. Facile.
+PLAN gros NOX
+NOX dit (curieux) Tu sais garder un enfant ?
+PLAN gros TOBI
+TOBI dit (fier) Je gère une start-up. Un enfant, c'est un stagiaire.
+TEMPS Vingt minutes plus tard | Baby-sitting | En cours
+PLAN gros TOBI
+TOBI dit (fier) Bon, Léo. Ton premier objectif : finir tes devoirs avant vingt heures trente.
+PLAN gros NOX
+NOX dit (constat) Il a fini à dix-neuf heures. Il demande s'il peut t'aider pour les tiens.
+PLAN gros TOBI
+TOBI dit (gene) Mes devoirs sont confidentiels.
+PLAN gros NOX
+NOX dit (constat) Il a vu ton exposé. Il dit qu'il y a des fautes.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est du style.
+PLAN gros NOX
+NOX dit (calme) Il les a corrigées. Quatorze.
+TEMPS Une heure plus tard | Léo | Toujours réveillé
+PLAN gros TOBI
+TOBI dit (fier) Léo, extinction des feux. C'est la politique de l'entreprise.
+PLAN gros NOX
+NOX dit (constat) Il demande pourquoi toi, tu te couches à quatre heures.
+PLAN gros TOBI
+TOBI dit (gene) Je suis le patron. Le patron a des horaires flexibles.
+PLAN gros NOX
+NOX dit (constat) Il dit que sa mère dit que c'est pas un vrai travail.
+PLAN gros TOBI
+TOBI dit (panique) Sa mère dit quoi ?!
+BRUIT ding
+TOBI message Voisine | Merci pour ce soir ! Léo dit que vous êtes très gentil. Il vous a laissé quelque chose.
+INSERT Sur le bureau | 2 € | « Pour t'aider avec tes fautes »
+PLAN gros TOBI
+TOBI dit (surpris) Il m'a donné deux euros ?!
+PLAN gros NOX
+NOX dit (punchline) Ton premier investisseur qui croit vraiment en toi. Il a huit ans.
+ATTENDRE 0.4

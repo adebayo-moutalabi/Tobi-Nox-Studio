@@ -1,0 +1,42 @@
+# MON IA M'A VU ME FAIRE REFUSER MA CARTE
+# Pitch : Au kebab, devant toute la file, la carte de Tobi est refusée. Il invente une raison technique. Nox, posé sur le comptoir, donne la vraie.
+
+AMBIANCE soir
+HEURE 20:15
+DECOR kebab
+DIRECT TOBI marche tapis
+DIRECT NOX apparait bureau
+FONDU direct
+ACCROCHE Carte refusée devant toute la file
+PLAN gros TOBI
+TOBI dit (fier) Un kebab, s'il vous plaît. Sauce blanche, sauce samouraï. Je paie par carte.
+BRUIT pop
+INSERT Paiement | Refusé |
+PLAN gros TOBI
+TOBI dit (gene) Ah. Ça arrive. Le serveur de la banque est en maintenance.
+PLAN gros NOX
+NOX dit (constat) Ton solde est à moins quatre euros.
+PLAN gros TOBI
+TOBI dit (gene) Nox, chut. Il y a du monde derrière.
+PLAN gros NOX
+NOX dit (calme) Sept personnes. Elles ont entendu.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je réessaie en sans contact. Il y a moins de contact avec le refus.
+BRUIT pop
+INSERT Paiement | Refusé | Encore
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je suis en pleine levée de fonds. C'est temporaire.
+PLAN gros NOX
+NOX dit (constat) Il a une baguette au comptoir. C'est le boulanger.
+PLAN gros TOBI
+TOBI dit (surpris) Le boulanger ?
+PLAN gros NOX
+NOX dit (calme) Il dit : mange, mon petit. Il paie.
+PLAN gros TOBI
+TOBI dit (content) Mon investisseur !
+INSERT Levée de fonds | 2 | Une baguette et un kebab
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Il est prêt pour un deuxième tour.
+PLAN gros NOX
+NOX dit (punchline) Il est prêt pour que tu lui rendes la baguette.
+ATTENDRE 0.4

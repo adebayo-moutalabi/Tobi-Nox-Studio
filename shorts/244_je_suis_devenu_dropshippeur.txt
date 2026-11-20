@@ -1,0 +1,48 @@
+# MON IA M'A VU DEVENIR DROPSHIPPEUR
+# Pitch : Tobi vend des lampes en forme de lune sans jamais les avoir vues. Les commandes arrivent. Les lampes, non.
+
+AMBIANCE soir
+HEURE 20:30
+TABLEAU Boutique de Tobi | Lampe lune : 39 € | Prix d'achat : 4 €
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il devient dropshippeur
+PLAN gros TOBI
+TOBI dit (excite) Nox ! J'ai lancé ma boutique. Lampe en forme de lune. Trente-neuf euros.
+PLAN gros NOX
+NOX dit (curieux) Tu l'achètes combien ?
+PLAN gros TOBI
+TOBI dit (fier) Quatre euros. Ils l'envoient directement au client. Moi, je touche rien. Je touche l'argent.
+PLAN gros NOX
+NOX dit (curieux) T'en as déjà vu une, de ces lampes ?
+PLAN gros TOBI
+TOBI dit (fier) En photo. Elle est magnifique en photo.
+BRUIT ding
+INSERT Commandes | 12 | 468 €
+PLAN gros TOBI
+TOBI dit (excite) Douze commandes ! Quatre cent soixante-huit euros !
+TEMPS Trois semaines plus tard | Lampes livrées | 0
+TOBI message Cliente | Toujours pas de lampe. Vous êtes un escroc ?
+PLAN gros TOBI
+TOBI dit (gene) Nox. Elles sont où, mes lunes ?
+PLAN gros NOX
+NOX dit (constat) Sur un bateau. Depuis vingt jours.
+BRUIT ding
+TOBI message Cliente | Elle est arrivée. Elle fait la taille d'une balle de ping-pong.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est une lune de voyage.
+PLAN gros NOX
+NOX dit (constat) Onze remboursements demandés.
+INSERT Bilan | 468 € encaissés | 503 € remboursés | -35 €
+PLAN gros TOBI
+TOBI dit (surpris) Moins trente-cinq ? Comment je peux perdre de l'argent sur un truc à quatre euros ?
+PLAN gros NOX
+NOX dit (sec) Les frais de retour. Ils te renvoient les lunes.
+BRUIT ding
+INSERT Colis reçu | 11 lampes lune | Taille : ping-pong
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je les vends comme lampes de poupée. Neuf euros.
+PLAN gros NOX
+NOX dit (punchline) Tobi. Ta seule cliente fidèle, c'est ta mère. Et elle a pas de poupée.
+ATTENDRE 0.4

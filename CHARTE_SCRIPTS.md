@@ -30,6 +30,19 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 
 Un brouillon, une idée d'actualité ou un texte venu d'ailleurs donne seulement le sujet. On réécrit chaque réplique avec la voix du personnage : Tobi rebondit avec mauvaise foi, Nox répond en peu de mots, Claude reste doux et honnête, Codex agit trop vite, Gemini en sait trop. On ramène l'histoire dans la chambre de Tobi, avec ses soucis d'étudiant. Une information préparée se montre à l'écran : liste dans `Notes`, mail, message.
 
+## L'essence de la série (retrouvée le 21 novembre 2026)
+
+L'auteur préfère les épisodes 1 à 100 : ils racontent une vraie histoire, avec du rythme. Ce qui les fait marcher :
+
+1. **Tobi, étudiant fauché qui se prend pour un grand fondateur.** Chaque galère de la vie étudiante (loyer, bourse, pâtes, CROUS) devient pour lui une stratégie de start-up. « Nox. Aie la vision. »
+2. **Nox, sec mais vraiment utile.** Il répond par des faits et des chiffres, et il donne souvent la vraie solution (« Le CROUS peut étaler le paiement. Il suffit de demander. » « Depuis trois ans. »).
+3. **Un petit monde qui revient :** le boulanger, investisseur à une baguette ; le livreur de la chambre 314 ; le vélo rouge volé en octobre ; la mère que Nox finit par appeler. Les détails récurrents font sourire ceux qui suivent.
+4. **Les chiffres à l'écran :** `TABLEAU` au début, `INSERT`, `PC Banque`, `COMPTEUR`. Le spectateur voit l'enjeu.
+5. **Une vraie histoire :** le temps passe (`TEMPS Trois jours plus tard`), il y a une fausse victoire (la bourse arrive), puis le retournement (le loyer est prélevé).
+6. **Le rappel en fin d'épisode :** une phrase du début revient avec un autre sens (« Même si tu me supplies ? » « Commence après le kebab. »).
+7. **La relance de Tobi :** il ne s'avoue jamais vaincu, il trouve une idée encore plus absurde. Nox conclut (« Tobi. Non. », « J'appelle ta mère. »), mais pas à chaque fois.
+8. **Durée :** 35 à 50 secondes, jusqu'à 60 si l'histoire le demande. Environ 20 à 30 répliques courtes.
+
 ## La boîte à outils comique
 
 Ce que font les Shorts humoristiques qui retiennent le mieux, et qu'on applique ici :

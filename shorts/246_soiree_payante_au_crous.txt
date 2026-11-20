@@ -1,0 +1,46 @@
+# MON IA M'A VU ORGANISER UNE SOIRÉE PAYANTE
+# Pitch : Tobi transforme sa chambre CROUS de 9 m² en boîte de nuit. Entrée : cinq euros. Le videur, c'est Nox.
+
+AMBIANCE soir
+HEURE 21:30
+TABLEAU Soirée de Tobi | Entrée : 5 € | Capacité : 40 personnes
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Une soirée payante dans 9 m²
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Ce soir, soirée dans la chambre. Cinq euros l'entrée. Quarante personnes.
+PLAN gros NOX
+NOX dit (constat) La chambre fait neuf mètres carrés.
+PLAN gros TOBI
+TOBI dit (fier) Quarante personnes debout. On est jeunes, on se serre.
+PLAN gros NOX
+NOX dit (curieux) Et moi, je fais quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Le videur. Personne ne rentre sans payer.
+LUMIERE douce
+TEMPS Vingt-deux heures | Entrées | 3
+PLAN gros TOBI
+TOBI dit (gene) Trois. Quinze euros.
+PLAN gros NOX
+NOX dit (constat) Dont ta voisine de palier. Elle est venue se plaindre du bruit.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle a payé, elle est cliente.
+PLAN gros NOX
+NOX dit (sec) Elle a payé pour pouvoir se plaindre à l'intérieur.
+BRUIT ding
+TOBI message CROUS | Bruit signalé chambre 214. Amende : 30 €.
+PLAN gros TOBI
+TOBI dit (panique) Trente euros ?!
+INSERT Bilan | 15 € d'entrées | 30 € d'amende | 8 € de chips
+PLAN gros NOX
+NOX dit (constat) Moins vingt-trois euros.
+PLAN gros TOBI
+TOBI dit (triste) Et personne n'a dansé.
+PLAN gros NOX
+NOX dit (calme) La voisine, si. Pour taper au plafond.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. La prochaine fois, je fais payer la sortie.
+PLAN gros NOX
+NOX dit (punchline) Ils sont déjà tous partis. Sans payer.
+ATTENDRE 0.4

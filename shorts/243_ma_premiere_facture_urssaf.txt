@@ -1,0 +1,54 @@
+# MON IA A VU MA PREMIÈRE FACTURE URSSAF
+# Pitch : Tobi a gagné 300 € avec sa micro-entreprise. Il se sent chef d'entreprise. Puis l'URSSAF lui écrit, et elle n'est pas seule.
+
+AMBIANCE jour
+TABLEAU Micro-entreprise de Tobi | Chiffre d'affaires : 300 € | Charges : ?
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa première lettre de l'URSSAF
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Trois cents euros de chiffre d'affaires ! Je suis officiellement chef d'entreprise.
+PLAN gros NOX
+NOX dit (curieux) T'as déclaré ?
+PLAN gros TOBI
+TOBI dit (fier) Déclarer quoi ? C'est mon argent.
+PLAN gros NOX
+NOX dit (constat) L'URSSAF pense que c'est un peu le sien.
+BRUIT ding
+TOBI message URSSAF | Votre déclaration du trimestre est attendue.
+PLAN gros TOBI
+TOBI dit (gene) C'est combien, « un peu » ?
+INSERT Cotisations URSSAF | 66 € | Sur 300 €
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Soixante-six euros ? Pour quoi ?
+PLAN gros NOX
+NOX dit (calme) Ta retraite.
+PLAN gros TOBI
+TOBI dit (fier) J'ai vingt-deux ans. Ma retraite, c'est un yacht.
+PLAN gros NOX
+NOX dit (constat) Avec soixante-six euros, c'est une bouée.
+BRUIT ding
+TOBI message Impôts | Cotisation foncière des entreprises : 112 €.
+PLAN gros TOBI
+TOBI dit (panique) Cent douze ?! J'ai même pas de local !
+PLAN gros NOX
+NOX dit (sec) Tu as déclaré ta chambre comme siège social.
+PLAN gros TOBI
+TOBI dit (gene) Pour faire sérieux.
+INSERT Bilan | 300 € gagnés | 178 € payés | Reste : 122 €
+PLAN gros NOX
+NOX dit (calme) Bonne nouvelle : tu peux demander l'exonération. Première année.
+PLAN gros TOBI
+TOBI dit (surpris) On peut demander ?
+PLAN gros NOX
+NOX dit (constat) Il y a un formulaire. Une page.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Une appli qui remplit les formulaires à ma place !
+PLAN gros NOX
+NOX dit (sec) C'est moi.
+PLAN gros TOBI
+TOBI dit (content) Parfait. Je t'embauche. Combien tu prends ?
+PLAN gros NOX
+NOX dit (punchline) Vingt-deux pour cent. Comme l'URSSAF.
+ATTENDRE 0.4

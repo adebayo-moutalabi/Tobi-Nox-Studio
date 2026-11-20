@@ -1,0 +1,47 @@
+# MON IA M'A AIDÉ À LEVER DES FONDS AU REPAS DE NOËL
+# Pitch : Tobi profite du repas de Noël pour présenter sa start-up à la famille, comme à des investisseurs. Par le groupe de la famille. Les offres arrivent.
+
+AMBIANCE soir
+HEURE 20:00
+TABLEAU Levée de fonds de Noël | Objectif : 5 000 € | Investisseurs : la famille
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il lève des fonds au repas de Noël
+PLAN gros TOBI
+TOBI dit (excite) Nox. Repas de Noël. Toute la famille, une seule table. C'est une salle d'investisseurs.
+PLAN gros NOX
+NOX dit (curieux) Tu vas leur présenter quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Ma start-up. Cinq mille euros, pour dix pour cent.
+PLAN gros NOX
+NOX dit (constat) Ta start-up vaut combien ?
+PLAN gros TOBI
+TOBI dit (fier) Cinquante mille. Je l'ai calculé avec mon cœur.
+TOBI message Famille | > Chers investisseurs. Je lève 5 000 €. Qui veut entrer au capital ?
+BRUIT ding
+TOBI message Famille | Tante : C'est quoi, le capital ?
+BRUIT ding
+TOBI message Famille | Cousin : Je mets 20 € si tu me rends ma console.
+PLAN gros TOBI
+TOBI dit (gene) Vingt euros et une console.
+PLAN gros NOX
+NOX dit (constat) Ta première offre est un échange.
+BRUIT ding
+TOBI message Famille | Mamie : Je t'envoie 50 €. Achète-toi un manteau.
+PLAN gros TOBI
+TOBI dit (excite) Cinquante ! Mamie croit en moi !
+PLAN gros NOX
+NOX dit (sec) Mamie croit au manteau.
+BRUIT ding
+TOBI message Famille | Maman : Ton père propose 100 €. Contre la vaisselle de tout le repas.
+INSERT Levée de fonds | 170 € | Et la vaisselle
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Cent soixante-dix euros. C'est un tour de table.
+PLAN gros NOX
+NOX dit (constat) Et quarante assiettes.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. L'an prochain, je lève pour Pâques.
+PLAN gros NOX
+NOX dit (punchline) Ton père a déjà réservé la vaisselle de Pâques.
+ATTENDRE 0.4

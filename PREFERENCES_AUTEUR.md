@@ -228,6 +228,8 @@ Retour du 20 novembre 2026 (nuit) : l'auteur préfère ses anciens épisodes, ce
 
 Précision le même soir : la règle du 13 novembre reste, mais on peut aller de **35 à 50 secondes, jusqu'à 60** quand il faut du contexte pour que ce soit vraiment drôle. Réécrire les anciens épisodes sans les casser. Les mouvements récents l'intéressent : on les garde. Le vrai problème, sur presque tous les épisodes, c'est la caméra : des meubles cachent les personnages, Nox bouge mal, et les déplacements arrivent au mauvais endroit.
 
+21 novembre 2026 : l'auteur a relu les épisodes 1 à 100 et les trouve bien écrits, avec du rythme et une vraie histoire. Il trouve qu'on a perdu cette essence. Il en programmera certains et en a mis en favoris. Il veut de nouveaux épisodes dans le même esprit. Cette essence est décrite dans `CHARTE_SCRIPTS.md` (« L'essence de la série »).
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

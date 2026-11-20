@@ -1,0 +1,51 @@
+# MON IA A LU MA NEWSLETTER
+# Pitch : Tobi lance sa newsletter de conseils pour réussir sa vie. Il a trois abonnés. Nox les connaît tous.
+
+AMBIANCE jour
+TABLEAU Newsletter de Tobi | « Réussir sa vie » | Abonnés : ?
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il lance une newsletter pour réussir sa vie
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Ma newsletter est en ligne. « Réussir sa vie, par Tobi. »
+PLAN gros NOX
+NOX dit (curieux) Combien d'abonnés ?
+PLAN gros TOBI
+TOBI dit (fier) Trois. Mais trois très engagés.
+PLAN gros NOX
+NOX dit (constat) Ta mère, moi, et toi.
+PLAN gros TOBI
+TOBI dit (gene) Je me suis abonné pour vérifier que ça marche.
+PLAN gros NOX
+NOX dit (curieux) C'est quoi, le premier conseil ?
+PLAN gros TOBI
+TOBI dit (fier) « Levez-vous à cinq heures. »
+PLAN gros NOX
+NOX dit (constat) Tu l'as envoyée à quatorze heures. Du lit.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'était programmé.
+PLAN gros NOX
+NOX dit (curieux) Conseil numéro deux ?
+PLAN gros TOBI
+TOBI dit (fier) « Gérez votre argent comme un pro. »
+PC Banque : Compte de Tobi | Solde : 3 € | Découvert autorisé : bientôt
+PLAN gros NOX
+NOX dit (sec) Tu veux que je le lise à voix haute, ton compte ?
+PLAN gros TOBI
+TOBI dit (gene) Non. Conseil trois : « Entourez-vous de gens qui vous tirent vers le haut. »
+PLAN gros NOX
+NOX dit (calme) C'est le meilleur.
+PLAN gros TOBI
+TOBI dit (content) Merci.
+BRUIT ding
+INSERT Désabonnement | 1 | Toi
+PLAN gros TOBI
+TOBI dit (surpris) Quelqu'un s'est désabonné ?!
+PLAN gros NOX
+NOX dit (constat) Toi. Tu as cliqué en vérifiant.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Une newsletter pour réussir sa newsletter.
+PLAN gros NOX
+NOX dit (punchline) Ta mère s'est abonnée. Elle dit que c'est pour te surveiller.
+ATTENDRE 0.4

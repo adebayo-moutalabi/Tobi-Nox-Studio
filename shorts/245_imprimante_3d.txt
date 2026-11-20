@@ -1,0 +1,54 @@
+# MON IA M'A VU ACHETER UNE IMPRIMANTE 3D
+# Pitch : Tobi achète une imprimante 3D pour devenir riche avec des coques de téléphone. Elle imprime toute la nuit. Le résultat, beaucoup moins.
+
+AMBIANCE soir
+HEURE 21:00
+TABLEAU Plan de Tobi | Imprimante 3D : 249 € | Coques vendues : ?
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Une imprimante 3D pour devenir riche
+PLAN gros TOBI
+TOBI dit (excite) Nox ! L'imprimante 3D est arrivée ! Deux cent quarante-neuf euros. C'est l'usine du futur.
+PLAN gros NOX
+NOX dit (curieux) Tu vas imprimer quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Des coques de téléphone. Je les vends quinze euros. Rentable en dix-sept coques.
+PLAN gros NOX
+NOX dit (constat) Elle met combien de temps, une coque ?
+PLAN gros TOBI
+TOBI dit (fier) Six heures. Elle travaille pendant que je dors. Comme un vrai patron.
+TEMPS Le lendemain matin | Coques imprimées | 1
+PLAN gros TOBI
+TOBI dit (gene) Elle est... un peu molle.
+PLAN gros NOX
+NOX dit (constat) Elle a coulé. On dirait une crêpe.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est une coque souple. Tendance.
+PLAN gros NOX
+NOX dit (curieux) Pour quel téléphone ?
+PLAN gros TOBI
+TOBI dit (gene) J'ai pris le modèle d'un téléphone d'il y a six ans.
+PLAN gros NOX
+NOX dit (sec) Personne n'a ce téléphone.
+PLAN gros TOBI
+TOBI dit (fier) Moi, si.
+TEMPS Une semaine plus tard | Coques vendues | 0
+INSERT Bilan | 249 € d'imprimante | 0 € de ventes
+PLAN gros TOBI
+TOBI dit (triste) Bon. Le marché des coques est saturé.
+PLAN gros NOX
+NOX dit (calme) Le club de jeux de la fac cherche des figurines. Douze euros pièce.
+PLAN gros TOBI
+TOBI dit (surpris) Des figurines ? Ça se vend ?
+PLAN gros NOX
+NOX dit (constat) Ils en ont commandé trente.
+PLAN gros TOBI
+TOBI dit (excite) Trois cent soixante euros !
+PLAN gros NOX
+NOX dit (calme) Je t'envoie le modèle. Elle fait cinq centimètres.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je leur vends aussi des coques !
+PLAN gros NOX
+NOX dit (punchline) Pour leurs figurines ?
+ATTENDRE 0.4
