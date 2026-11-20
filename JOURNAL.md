@@ -426,6 +426,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 21 novembre 2026 : retour à l'essence des épisodes 1 à 100, décrite dans la charte. Épisodes 243 à 250 dans cet esprit (URSSAF, dropshipping, imprimante 3D, soirée payante, levée de fonds au repas de Noël, newsletter, carte refusée au kebab, baby-sitting). Le contrôle ne signale plus « trop long » qu'au-delà de 60 s.
 - 22 titres corrigés : le nouveau titre faisait faire à l'IA ce que fait Tobi (par exemple « Mon IA a contesté mon 4 sur 20 », devenu « Mon IA m'aide à contester mon 4 sur 20 »).
 - Épisodes 251 à 258 dans l'esprit des épisodes 1 à 100 (pitch dans l'ascenseur, premier salaire de stage, business plan, friperie, premier salarié, prêt à la banque, Instagram de CEO, hackathon).
+- 67 titres forcés (« Mon IA m'a vu… », « a vu », « a lu », « a compté ») remplacés par des titres normaux. Règle des titres ajoutée à la charte.
 
 ## À faire
 

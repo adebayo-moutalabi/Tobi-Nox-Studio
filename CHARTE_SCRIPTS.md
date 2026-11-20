@@ -43,6 +43,10 @@ L'auteur préfère les épisodes 1 à 100 : ils racontent une vraie histoire, av
 7. **La relance de Tobi :** il ne s'avoue jamais vaincu, il trouve une idée encore plus absurde. Nox conclut (« Tobi. Non. », « J'appelle ta mère. »), mais pas à chaque fois.
 8. **Durée :** 35 à 50 secondes, jusqu'à 60 si l'histoire le demande. Environ 20 à 30 répliques courtes.
 
+### Les titres
+
+« Mon IA… » seulement quand l'IA fait vraiment l'action (« Mon IA a demandé de l'argent de poche »). Sinon, un titre normal : « J'ai acheté une imprimante 3D pour devenir riche », « Je dois 47 € à mon cousin ». Jamais de titre forcé en « Mon IA m'a vu… » ou « Mon IA a lu… ».
+
 ## La boîte à outils comique
 
 Ce que font les Shorts humoristiques qui retiennent le mieux, et qu'on applique ici :

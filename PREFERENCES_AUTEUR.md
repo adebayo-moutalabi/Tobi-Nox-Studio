@@ -230,6 +230,7 @@ Précision le même soir : la règle du 13 novembre reste, mais on peut aller de
 
 21 novembre 2026 : l'auteur a relu les épisodes 1 à 100 et les trouve bien écrits, avec du rythme et une vraie histoire. Il trouve qu'on a perdu cette essence. Il en programmera certains et en a mis en favoris. Il veut de nouveaux épisodes dans le même esprit. Cette essence est décrite dans `CHARTE_SCRIPTS.md` (« L'essence de la série »).
 Les titres doivent rester logiques avec l'histoire : si c'est Tobi qui agit, le titre ne doit pas dire que c'est l'IA (relevé par l'auteur le 21 novembre 2026).
+Pas de titres forcés en « Mon IA m'a vu… », « Mon IA a vu… », « Mon IA a lu… » : l'auteur n'aime pas. « Mon IA… » seulement quand Nox (ou une IA) fait vraiment l'action. Sinon, un titre normal à la première personne ou avec Tobi (« J'ai acheté une imprimante 3D pour devenir riche »).
 
 ## Points à surveiller
 
