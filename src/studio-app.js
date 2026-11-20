@@ -219,6 +219,16 @@ import A217 from '../shorts/217_mes_ia_ont_vu_mon_bulletin.txt';
 import A218 from '../shorts/218_gemini_et_pikachu.txt';
 import A219 from '../shorts/219_la_chaussette_sous_le_lit.txt';
 import A220 from '../shorts/220_mon_ia_a_ecoute_mes_vocaux.txt';
+import A221 from '../shorts/221_le_classement_de_mes_excuses.txt';
+import A222 from '../shorts/222_t_es_fache.txt';
+import A223 from '../shorts/223_ma_mere_et_mon_ia_disent_pareil.txt';
+import A224 from '../shorts/224_moi_en_septembre_moi_en_novembre.txt';
+import A225 from '../shorts/225_quand_ma_mere_appelle.txt';
+import A226 from '../shorts/226_reunion_parents_profs_2045.txt';
+import A227 from '../shorts/227_mes_ia_au_repas_de_famille.txt';
+import A228 from '../shorts/228_codex_a_reserve_mon_train.txt';
+import A229 from '../shorts/229_mes_vocaux_partie_2.txt';
+import A230 from '../shorts/230_la_rumeur_du_groupe_famille.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -346,6 +356,16 @@ startViewer({
     "218. Gemini m'a expliqué Pokémon": A218,
     "219. Mon IA a trouvé une chaussette sous mon lit": A219,
     "220. Mon IA a écouté tous mes vocaux 🎙️ Partie 1": A220,
+    "221. Mon IA a classé toutes mes excuses": A221,
+    "222. « T'es fâché ? » « Non. »": A222,
+    "223. Ma mère et mon IA m'ont dit la même chose": A223,
+    "224. Moi en septembre vs moi en novembre": A224,
+    "225. Quand ma mère appelle vs quand le livreur appelle": A225,
+    "226. Ma réunion parents-profs en 2045": A226,
+    "227. Mes IA au repas de famille": A227,
+    "228. Codex a réservé mon train pour Paris": A228,
+    "229. Mon IA a écouté tous mes vocaux 🎙️ Partie 2": A229,
+    "230. J'ai écrit « j'ai raté » dans le groupe de la famille": A230,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

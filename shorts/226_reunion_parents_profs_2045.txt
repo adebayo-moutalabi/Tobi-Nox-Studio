@@ -1,0 +1,32 @@
+# MA RÉUNION PARENTS-PROFS EN 2045
+# Pitch : En 2045, Tobi a un fils. Nox est son prof. Tobi vient à la réunion parents-profs, et tout ce que fait son fils lui rappelle quelqu'un.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE La réunion parents-profs en 2045
+INSERT En | 2045 | Réunion parents-profs
+PLAN gros NOX
+NOX dit (calme) Bonjour, monsieur. Votre fils, Tobi Junior.
+PLAN gros TOBI
+TOBI dit (fier) Mon fils ! Il est brillant, j'espère ?
+PLAN gros NOX
+NOX dit (constat) Il dit qu'il commence demain.
+PLAN gros TOBI
+TOBI dit (gene) Ah. Il tient ça de qui ?
+PLAN gros NOX
+NOX dit (constat) Il a acheté quarante noms de domaine. Avec la carte de son père.
+PLAN gros TOBI
+TOBI dit (surpris) Ma carte ?!
+PLAN gros NOX
+NOX dit (constat) Il a dit au prof que sa grand-mère était malade. Quatre fois.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est grave, ça. Je sais pas d'où il sort ça.
+PLAN gros NOX
+NOX dit (calme) Moi, je sais.
+PLAN gros TOBI
+TOBI dit (gene) Et ses notes ?
+PLAN gros NOX
+NOX dit (punchline) Quatre virgule deux. Comme son père. C'est héréditaire.
+ATTENDRE 0.4

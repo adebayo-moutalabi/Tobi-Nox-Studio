@@ -1,0 +1,38 @@
+# MON IA A CLASSÉ MES EXCUSES
+# Pitch : Nox a gardé toutes les excuses de Tobi pour ses retards. Il les classe, de la moins crédible à la plus utilisée.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a classé toutes ses excuses
+PLAN gros NOX
+NOX dit (calme) Classement de tes excuses. Numéro cinq : « le bus ».
+PLAN gros TOBI
+TOBI dit (fier) Le bus, c'est solide.
+PLAN gros NOX
+NOX dit (constat) Tu habites à quatre minutes à pied.
+NOX dit (calme) Numéro quatre : « mon réveil a pas sonné ».
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il a pas sonné.
+PLAN gros NOX
+NOX dit (sec) Je suis ton réveil. J'ai sonné onze fois.
+NOX dit (calme) Numéro trois : « problème de connexion ».
+PLAN gros TOBI
+TOBI dit (gene) Ça arrive.
+PLAN gros NOX
+NOX dit (constat) En présentiel.
+NOX dit (calme) Numéro deux : « ma grand-mère ».
+PLAN gros TOBI
+TOBI dit (triste) Elle était malade.
+PLAN gros NOX
+NOX dit (constat) Quatre fois. Elle va très bien. Elle fait du vélo.
+PLAN gros TOBI
+TOBI dit (curieux) Et le numéro un ?
+PLAN gros NOX
+NOX dit (calme) « J'étais déjà en route. »
+PLAN gros TOBI
+TOBI dit (fier) Ah. Celle-là, elle marche toujours.
+PLAN gros NOX
+NOX dit (punchline) Tu l'as dit à ta mère. En pyjama. Pendant un appel vidéo.
+ATTENDRE 0.4

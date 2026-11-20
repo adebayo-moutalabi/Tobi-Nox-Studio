@@ -1,0 +1,40 @@
+# MOI EN SEPTEMBRE VS MOI EN NOVEMBRE
+# Pitch : Nox compare le planning de Tobi en septembre et en novembre. Septembre est parfait. Novembre, beaucoup moins.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Lui en septembre vs lui en novembre
+PLAN gros NOX
+NOX dit (calme) Ton planning. Septembre : réveil à six heures.
+PLAN gros TOBI
+TOBI dit (fier) Discipline.
+PLAN gros NOX
+NOX dit (constat) Novembre : réveil à treize heures.
+PLAN gros TOBI
+TOBI dit (gene) J'ai décalé un peu.
+PLAN gros NOX
+NOX dit (calme) Septembre : sport tous les matins.
+PLAN gros TOBI
+TOBI dit (fier) Évidemment.
+PLAN gros NOX
+NOX dit (constat) Novembre : sport, aller au frigo.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est du cardio.
+PLAN gros NOX
+NOX dit (calme) Septembre : fiches de révision en couleur.
+PLAN gros TOBI
+TOBI dit (fier) Quatre couleurs.
+PLAN gros NOX
+NOX dit (constat) Novembre : les fiches servent de dessous-de-plat.
+PLAN gros TOBI
+TOBI dit (gene) Elles protègent la table.
+PLAN gros NOX
+NOX dit (calme) Septembre : « cette année, je change ».
+PLAN gros TOBI
+TOBI dit (curieux) Et novembre ?
+PLAN gros NOX
+NOX dit (punchline) « L'année prochaine, je change. » Tu l'as déjà dit en septembre dernier.
+ATTENDRE 0.4

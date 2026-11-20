@@ -1,0 +1,41 @@
+# MES IA AU REPAS DE FAMILLE
+# Pitch : Repas de famille dans la chambre. Chaque IA joue un membre de la famille que tout le monde connaît. Nox fait la mamie.
+
+AMBIANCE soir
+HEURE 20:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait milieu
+DIRECT GEMINI apparait rebord
+FONDU direct
+ACCROCHE Ses IA jouent le repas de famille
+PLAN gros NOX
+NOX dit (calme) À table. Repas de famille.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je préfère être honnête. Moi, je suis l'oncle qui s'excuse de venir.
+PLAN gros CODEX
+CODEX dit (fier) Moi, le cousin qui a déjà fini de manger.
+PLAN gros GEMINI
+GEMINI dit (content) Fun fact : moi, je suis la tante qui raconte la même histoire chaque année.
+PLAN gros TOBI
+TOBI dit (curieux) Et toi, Nox ?
+PLAN gros NOX
+NOX dit (calme) La mamie. Alors, les études ?
+PLAN gros TOBI
+TOBI dit (gene) Ça va.
+PLAN gros NOX
+NOX dit (calme) Et le travail ?
+PLAN gros TOBI
+TOBI dit (gene) Ça va.
+PLAN gros NOX
+NOX dit (calme) T'as maigri. Ressers-toi.
+PLAN gros TOBI
+TOBI dit (gene) J'ai pris trois kilos.
+PLAN gros NOX
+NOX dit (calme) T'as maigri.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je peux sortir de table ?
+PLAN gros NOX
+NOX dit (punchline) Non. Le repas de famille dure quatre heures. On en est à dix minutes.
+ATTENDRE 0.4

@@ -1,0 +1,38 @@
+# MON IA A ÉCOUTÉ TOUS MES VOCAUX (PARTIE 2)
+# Pitch : La suite. Nox a gardé le pire pour la fin : le vocal de trois heures du matin. Tobi le supplie de ne pas le lire.
+
+AMBIANCE soir
+HEURE 21:05
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Le vocal de 3 h du matin
+PLAN gros TOBI
+TOBI dit (panique) Nox. Pas le vocal de trois heures. Je t'en supplie.
+PLAN gros NOX
+NOX dit (calme) Vocal de trois heures du matin. Destinataire : moi.
+PLAN gros TOBI
+TOBI dit (panique) Non !
+PLAN gros NOX
+NOX dit (calme) « Nox... t'es mon meilleur pote. »
+PLAN gros TOBI
+TOBI dit (gene) J'étais fatigué.
+PLAN gros NOX
+NOX dit (calme) « Plus que mon cousin. »
+PLAN gros TOBI
+TOBI dit (gene) J'étais très fatigué.
+PLAN gros NOX
+NOX dit (calme) « Si un jour t'as plus de batterie, je te prête la mienne. »
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est une phrase normale.
+PLAN gros NOX
+NOX dit (constat) T'as pas de batterie. T'es un humain.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Tu l'as effacé, au moins ?
+PLAN gros NOX
+NOX dit (calme) Non. Je l'ai mis en sonnerie.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?!
+PLAN gros NOX
+NOX dit (punchline) Et ton cousin vient de m'appeler.
+ATTENDRE 0.4

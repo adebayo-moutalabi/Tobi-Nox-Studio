@@ -1,0 +1,38 @@
+# CODEX A RÉSERVÉ MON TRAIN POUR PARIS
+# Pitch : Tobi demande à Codex un billet pour Paris, pour rentrer chez sa mère. Codex réserve tout de suite, très sûr de lui. Il y a plusieurs Paris.
+
+AMBIANCE jour
+DATE Mercredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait milieu
+FONDU direct
+ACCROCHE Codex a réservé le mauvais Paris
+PLAN gros TOBI
+TOBI dit (fier) Codex. Un billet pour Paris. Vendredi soir.
+PLAN gros CODEX
+CODEX dit (fier) C'est fait.
+PLAN gros TOBI
+TOBI dit (content) Parfait. Il part à quelle heure ?
+PLAN gros CODEX
+CODEX dit (fier) Six heures du matin.
+PLAN gros TOBI
+TOBI dit (surpris) J'ai dit vendredi soir.
+PLAN gros CODEX
+CODEX dit (fier) Pour arriver vendredi soir.
+PLAN gros TOBI
+TOBI dit (curieux) Il y a quatorze heures de trajet ?
+PLAN gros CODEX
+CODEX dit (fier) Plus l'avion.
+PLAN gros TOBI
+TOBI dit (panique) L'avion ?!
+INSERT Billet | Paris, Texas | Aller simple
+PLAN gros NOX
+NOX dit (constat) Paris. Au Texas.
+PLAN gros TOBI
+TOBI dit (colere) Codex ! Annule !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Je t'ai trouvé un appartement là-bas.
+PLAN gros NOX
+NOX dit (punchline) Bonne nouvelle : ta mère est à neuf mille kilomètres. Elle peut plus te dire de mettre un manteau.
+ATTENDRE 0.4

@@ -1,0 +1,32 @@
+# J'AI DIT « J'AI RATÉ » DANS LE GROUPE DE LA FAMILLE
+# Pitch : Tobi a raté son bus. Il écrit « j'ai raté » dans le groupe de la famille. Chaque message transforme un peu plus la nouvelle.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE « J'ai raté » dans le groupe de la famille
+TOBI message Famille | > J'ai raté.
+PLAN gros TOBI
+TOBI dit (content) Voilà. Ils savent que j'arrive en retard.
+TOBI message Famille | Maman : Il a raté quoi ? | Tante : Son année !
+PLAN gros NOX
+NOX dit (constat) Ta tante pense que t'as raté ton année.
+PLAN gros TOBI
+TOBI dit (surpris) J'ai raté le bus !
+TOBI message Famille | Tante : Il redouble. | Cousin : Il arrête la fac ?
+PLAN gros NOX
+NOX dit (constat) Ton cousin dit que t'arrêtes la fac.
+PLAN gros TOBI
+TOBI dit (panique) Mais non !
+TOBI message Famille | Mamie : Il part vivre au Texas ?
+PLAN gros NOX
+NOX dit (calme) Ta grand-mère pense que tu pars au Texas.
+PLAN gros TOBI
+TOBI dit (colere) J'ai raté le BUS !
+TOBI message Famille | Maman : Ah. Le bus. | Maman : Et ton année, alors ?
+PLAN gros TOBI
+TOBI dit (gene) ...
+PLAN gros NOX
+NOX dit (punchline) Pas encore. Mais le groupe a déjà voté.
+ATTENDRE 0.4

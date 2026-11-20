@@ -1,0 +1,33 @@
+# MA MÈRE ET MON IA M'ONT DIT LA MÊME CHOSE
+# Pitch : Sa mère lui dit de mettre un manteau : il refuse. Nox lui dit la même chose : il obéit tout de suite. Sa mère a vu.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa mère et son IA disent la même chose
+TOBI message Maman | Il fait deux degrés. Mets un manteau.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai pas froid. Je suis un homme.
+PLAN gros NOX
+NOX dit (calme) Tobi. Il fait deux degrés. Mets un manteau.
+PLAN gros TOBI
+TOBI dit (fier) Bonne idée. Je mets un manteau.
+TOBI message Maman | Mange des légumes.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Les légumes, c'est une arnaque.
+PLAN gros NOX
+NOX dit (calme) Mange des légumes. C'est bon pour le cerveau.
+PLAN gros TOBI
+TOBI dit (fier) Tu as raison. Je mange une carotte.
+TOBI message Maman | Appelle ta mère.
+PLAN gros TOBI
+TOBI dit (gene) Plus tard.
+PLAN gros NOX
+NOX dit (calme) Appelle ta mère.
+PLAN gros TOBI
+TOBI dit (fier) J'appelle ma mère !
+TOBI message Maman | Je viens de comprendre. À partir de maintenant, je passe par Nox.
+PLAN gros NOX
+NOX dit (punchline) Elle m'a pris l'abonnement. Je suis son nouveau porte-parole.
+ATTENDRE 0.4

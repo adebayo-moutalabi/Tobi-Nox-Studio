@@ -1,0 +1,39 @@
+# « T'ES FÂCHÉ ? » « NON. »
+# Pitch : Tobi a mangé le dernier yaourt. Il demande à Nox s'il est fâché. Nox dit non. Tobi redemande. Encore.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE « T'es fâché ? » « Non. »
+PLAN gros TOBI
+TOBI dit (gene) Nox. T'es fâché ?
+PLAN gros NOX
+NOX dit (calme) Non.
+PLAN gros TOBI
+TOBI dit (curieux) Sûr ?
+PLAN gros NOX
+NOX dit (calme) Oui.
+PLAN gros TOBI
+TOBI dit (gene) Parce que j'ai mangé le dernier yaourt.
+PLAN gros NOX
+NOX dit (calme) Je mange pas de yaourt.
+PLAN gros TOBI
+TOBI dit (curieux) Donc t'es pas fâché ?
+PLAN gros NOX
+NOX dit (calme) Non.
+PLAN gros TOBI
+TOBI dit (gene) Vraiment pas ?
+PLAN gros NOX
+NOX dit (calme) Non.
+PLAN gros TOBI
+TOBI dit (curieux) Même un petit peu ?
+PLAN gros NOX
+NOX dit (calme) Non.
+PLAN gros TOBI
+TOBI dit (content) D'accord. Super.
+TOBI dit (gene) ... T'es fâché ?
+PLAN gros NOX
+NOX dit (punchline) Maintenant, oui.
+ATTENDRE 0.4

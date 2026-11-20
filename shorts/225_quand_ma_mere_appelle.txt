@@ -1,0 +1,27 @@
+# QUAND MA MÈRE APPELLE VS QUAND LE LIVREUR APPELLE
+# Pitch : Sa mère appelle : Tobi ne répond pas. Le livreur appelle : Tobi court. Nox a remarqué.
+
+AMBIANCE soir
+HEURE 20:45
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa mère appelle vs le livreur appelle
+INSERT Appel entrant | Maman |
+PLAN gros TOBI
+TOBI dit (calme) Je rappellerai.
+INSERT Appel entrant | Livreur |
+PLAN gros TOBI
+TOBI dit (excite) J'arrive ! Je descends ! Ne bougez pas !
+PLAN gros NOX
+NOX dit (constat) Deux secondes pour le livreur. Trois jours pour ta mère.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le livreur, il a mes pâtes.
+PLAN gros NOX
+NOX dit (calme) Ta mère aussi. C'est elle qui paie.
+INSERT Appel entrant | Livreur |
+PLAN gros TOBI
+TOBI dit (excite) Oui ? Je suis là !
+PLAN gros NOX
+NOX dit (punchline) C'est ta mère. Elle a pris le téléphone du livreur. Elle est en bas.
+ATTENDRE 0.4

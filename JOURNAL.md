@@ -415,6 +415,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Épisodes 201 à 210 sur l'argent étudiant (Noël à 25 €, pitch à la mère, bourse, Vinted, dette à Karim, salle de sport, loyer CROUS, livreur, Black Friday, masters) : un chiffre dès la première réplique, 15 à 20 répliques, la pire idée de Tobi, puis le verdict de Nox. Une question vide dans la fiche de publication supprime le commentaire à épingler.
 - Épisodes 211 à 220 avec huit systèmes de blague relevés sur des chaînes de sketchs animés (analyse privée dans `lancement/`). Ni Centi ni Karim.
 - Centi et Karim retirés de 29 épisodes non publiés. Karim devient le cousin, la tante ou la mère, selon la scène. Centi devient la version gratuite de Gemini (93, 115, 139, 165, 194) ou disparaît (207). Le 132, déjà publié, n'est pas modifié.
+- 20 novembre 2026 : épisodes 221 à 230 (classement des excuses, « T'es fâché ? », mère et IA, septembre contre novembre, mère contre livreur, parents-profs en 2045, repas de famille, train pour Paris au Texas, vocaux partie 2, rumeur du groupe de la famille).
 
 ## À faire
 
