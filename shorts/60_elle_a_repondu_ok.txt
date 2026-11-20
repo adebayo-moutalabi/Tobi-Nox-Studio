@@ -18,7 +18,7 @@ TOBI dit (panique) Elle a écrit « ok ». Sans point. Ça veut dire quoi, sans 
 PLAN gros NOX
 NOX dit (calme) Ça veut dire ok.
 PLAN gros GEMINI
-GEMINI dit (fier) Fun fact : j'ai déjà analysé ces deux lettres.
+GEMINI dit (fier) J'ai déjà analysé ces deux lettres.
 TOBI marche centre &
 PC Word : Analyse_de_ok.docx | Analyse de « ok » | 40 pages | 9 interprétations | Amour : 3 %
 PLAN pc

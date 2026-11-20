@@ -10,7 +10,7 @@ ACCROCHE Ses courses de la semaine pour 3 €
 PLAN gros TOBI
 TOBI dit (fier) Gemini, j'ai trois euros. Fais mes courses de la semaine.
 PLAN gros GEMINI
-GEMINI dit (excite) Fun fact : c'est fait ! Douze paquets de sel en promo !
+GEMINI dit (excite) C'est fait ! Douze paquets de sel en promo !
 PLAN gros TOBI
 TOBI dit (surpris) Du sel ? Et je mange quoi ?
 PLAN gros GEMINI

@@ -13,11 +13,11 @@ ACCROCHE Ses IA jouent le repas de famille
 PLAN gros NOX
 NOX dit (calme) À table. Repas de famille.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. Moi, je suis l'oncle qui s'excuse de venir.
+CLAUDE dit (calme) Moi, je suis l'oncle qui s'excuse d'être venu.
 PLAN gros CODEX
 CODEX dit (fier) Moi, le cousin qui a déjà fini de manger.
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : moi, je suis la tante qui raconte la même histoire chaque année.
+GEMINI dit (content) Moi, la tante qui raconte la même histoire chaque année !
 PLAN gros TOBI
 TOBI dit (curieux) Et toi, Nox ?
 PLAN gros NOX

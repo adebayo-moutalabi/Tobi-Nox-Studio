@@ -417,6 +417,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Centi et Karim retirés de 29 épisodes non publiés. Karim devient le cousin, la tante ou la mère, selon la scène. Centi devient la version gratuite de Gemini (93, 115, 139, 165, 194) ou disparaît (207). Le 132, déjà publié, n'est pas modifié.
 - 20 novembre 2026 : épisodes 221 à 230 (classement des excuses, « T'es fâché ? », mère et IA, septembre contre novembre, mère contre livreur, parents-profs en 2045, repas de famille, train pour Paris au Texas, vocaux partie 2, rumeur du groupe de la famille).
 - Analyse des 15 Shorts publiés : recette « Mon IA veut + privilège humain, phrases de parent, boomerang ». Épisodes 231 à 237 écrits avec cette recette (week-end, youtubeur, chambre, marque, prime de Noël, console, arrêt maladie).
+- « Je préfère être honnête » et « Fun fact » retirés de 25 épisodes non publiés, chaque réplique réécrite. Charte mise à jour.
 
 ## À faire
 

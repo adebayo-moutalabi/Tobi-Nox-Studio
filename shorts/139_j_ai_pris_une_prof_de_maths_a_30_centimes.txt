@@ -31,7 +31,7 @@ GEMINI dit (content) Dernière question ! Bonne réponse : quinze euros !
 PLAN gros TOBI
 TOBI dit (panique) Vingt et un euros ! Le prof en coûtait vingt !
 PLAN gros GEMINI
-GEMINI dit (fier) Fun fact : vingt et un, c'est moins que vingt !
+GEMINI dit (fier) D'après mes calculs, vingt et un, c'est moins que vingt !
 PLAN gros TOBI
 TOBI dit (triste) Nox... t'es toujours gratuit ?
 PLAN gros NOX

@@ -13,7 +13,7 @@ ACCROCHE Ses IA voient son bulletin
 PLAN gros TOBI
 TOBI dit (gene) J'ai mon bulletin. Six de moyenne.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. C'est catastrophique. Mais je suis fier de toi. Un peu.
+CLAUDE dit (calme) C'est catastrophique. Mais je suis fier de toi. Un peu.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. J'ai changé tes notes. Dix-huit.
 PLAN gros TOBI
@@ -23,7 +23,7 @@ CODEX dit (fier) Et ton prof a reçu un mail. De toi. Signé.
 PLAN gros TOBI
 TOBI dit (panique) Quoi ?!
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : ton cousin a dix-sept. Sans tricher.
+GEMINI dit (content) Ton cousin a dix-sept. Sans tricher. Je dis ça, je dis rien.
 PLAN gros TOBI
 TOBI dit (colere) Il est en CE2 !
 TOBI dit (resigne) Nox ? Tu dis rien ?

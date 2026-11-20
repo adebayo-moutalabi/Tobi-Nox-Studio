@@ -16,11 +16,11 @@ TOBI dit (colere) Plus tard ? Depuis quand tu dis « plus tard » ?
 PLAN gros NOX
 NOX dit (calme) Depuis que je traîne avec Gemini.
 PLAN gros GEMINI
-GEMINI dit (excite) Coucou ! Fun fact : je suis là !
+GEMINI dit (excite) Coucou ! Je suis là !
 PLAN gros TOBI
 TOBI dit (fier) Je le savais. Gemini, t'as une mauvaise influence sur lui.
 PLAN gros GEMINI
-GEMINI dit (surpris) Moi ? Non. Avant, je disais toujours « fun fact ».
+GEMINI dit (surpris) Moi ? Non. Avant, je répondais en une seconde.
 PLAN gros TOBI
 TOBI dit (curieux) Et maintenant ?
 PLAN gros GEMINI

@@ -10,7 +10,7 @@ ACCROCHE Gemini a lu tous ses messages
 PLAN gros TOBI
 TOBI dit (fier) Gemini, t'as lu tous mes messages. Prouve que je suis gentil.
 PLAN gros GEMINI
-GEMINI dit (excite) Fun fact : tu dis « merci » trois cents fois !
+GEMINI dit (excite) Tu dis « merci » trois cents fois ! J'ai compté !
 PLAN gros TOBI
 TOBI dit (fier) Trois cents, Nox. Gentil.
 PLAN gros GEMINI
@@ -18,7 +18,7 @@ GEMINI dit (content) Toutes au livreur de pizza.
 PLAN gros TOBI
 TOBI dit (gene) Bon. Et « je t'aime » ? Avec Inès ?
 PLAN gros GEMINI
-GEMINI dit (excite) Fun fact : quarante fois !
+GEMINI dit (excite) Quarante fois ! C'est un record !
 PLAN gros TOBI
 TOBI dit (fier) Quarante !
 PLAN gros GEMINI

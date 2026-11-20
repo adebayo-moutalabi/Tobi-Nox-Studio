@@ -22,7 +22,7 @@ PLAN gros TOBI
 TOBI dit (mauvaisefoi) Il est gratuit. Il apprend.
 TOBI dit (fier) Gemini, c'est quoi la capitale de la France ?
 PLAN gros GEMINI
-GEMINI dit (fier) Fun fact : c'est Lyon ! Source : moi.
+GEMINI dit (fier) Lyon ! Source : moi.
 PLAN gros CLAUDE
 CLAUDE dit (calme) C'est Paris, Tobi.
 PLAN gros TOBI

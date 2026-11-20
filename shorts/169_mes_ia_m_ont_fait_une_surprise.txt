@@ -15,11 +15,11 @@ NOX dit (calme) Tobi. Ferme les yeux.
 PLAN gros TOBI
 TOBI dit (excite) Une surprise ?!
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. Oui. Un gâteau.
+CLAUDE dit (calme) Oui. Un gâteau. Pardon, je sais pas mentir.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. Je l'ai mangé.
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : il reste une bougie.
+GEMINI dit (content) Il reste une bougie ! Je l'ai comptée !
 PLAN gros TOBI
 TOBI dit (content) Vous vous êtes souvenus de mon anniversaire !
 PLAN gros NOX

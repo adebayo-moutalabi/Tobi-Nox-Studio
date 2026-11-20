@@ -32,7 +32,7 @@ NOX dit (curieux) Et en entretien ?
 PLAN gros TOBI
 TOBI dit (fier) Je dis que l'argon, c'est noble.
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : l'argon est un gaz noble.
+GEMINI dit (content) L'argon est un gaz noble. Pas toi.
 PLAN gros TOBI
 TOBI dit (excite) Tu vois ! Je suis noble !
 PLAN gros NOX

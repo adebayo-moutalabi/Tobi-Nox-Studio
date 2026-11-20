@@ -15,7 +15,7 @@ GEMINI dit (content) Facile ! Voilà, en quarante pages.
 PLAN gros TOBI
 TOBI dit (colere) Quarante ? Plus court !
 PLAN gros GEMINI
-GEMINI dit (fier) Une page. Avec trois fun facts.
+GEMINI dit (fier) Une page. Avec trois anecdotes.
 PLAN gros TOBI
 TOBI dit (colere) Plus court !
 PLAN gros GEMINI

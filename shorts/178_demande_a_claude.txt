@@ -18,7 +18,7 @@ TOBI dit (content) Claude ? Pizza ?
 PLAN gros CLAUDE
 CLAUDE dit (calme) Je préfère que tu demandes à Gemini.
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : Nox a dit non à la dernière.
+GEMINI dit (content) Nox a dit non à la dernière. J'ai l'historique.
 PLAN gros TOBI
 TOBI dit (colere) Nox ! Gemini dit que t'as dit non !
 PLAN gros NOX

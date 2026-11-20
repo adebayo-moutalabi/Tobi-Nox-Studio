@@ -26,7 +26,7 @@ ATTENDRE 1.6
 PLAN gros TOBI
 TOBI dit (fier) Deux devoirs rendus ! C'est pas si mal, Claude.
 PLAN gros GEMINI
-GEMINI dit (constat) Fun fact : c'est le même devoir, rendu deux fois.
+GEMINI dit (constat) C'est le même devoir, rendu deux fois.
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) C'était pour être sûr, Gemini.
 PLAN gros NOX

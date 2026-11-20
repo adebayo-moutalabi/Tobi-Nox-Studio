@@ -14,7 +14,7 @@ FONDU direct
 PLAN gros TOBI
 TOBI dit (triste) J'ai mal à la gorge depuis ce matin. Vous êtes trois IA, aidez-moi.
 PLAN gros GEMINI
-GEMINI dit (fier) Fun fact : j'ai comparé quatre mille études sur la gorge.
+GEMINI dit (fier) J'ai comparé quatre mille études sur la gorge.
 PLAN gros TOBI
 TOBI dit (content) Super ! Et tu me conseilles quoi, Gemini ?
 PLAN gros GEMINI

@@ -20,13 +20,13 @@ TOBI dit (calme) Ça arrive.
 PLAN gros NOX
 NOX dit (sec) Elle date de mars.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. Elle a bougé.
+CLAUDE dit (calme) Je ne veux inquiéter personne. Mais elle a bougé.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. J'ai prévenu les Nations unies.
 PLAN gros TOBI
 TOBI dit (colere) Pour une chaussette ?!
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : elle n'est pas seule. Elles sont quatorze.
+GEMINI dit (content) Elle n'est pas seule. J'en compte quatorze.
 PLAN gros NOX
 NOX dit (constat) Elles se sont organisées.
 PLAN gros TOBI

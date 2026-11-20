@@ -12,11 +12,11 @@ ACCROCHE Ses IA vont lui spoiler GTA
 PLAN gros TOBI
 TOBI dit (panique) Personne me spoile GTA ! Je joue ce soir !
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : à la fin...
+GEMINI dit (content) Tu savais qu'à la fin...
 PLAN gros TOBI
 TOBI dit (panique) Non !
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. Je connais la fin. Je dirai rien. Elle est triste.
+CLAUDE dit (calme) Je connais la fin. Je dirai rien. Mais prépare des mouchoirs.
 PLAN gros TOBI
 TOBI dit (colere) Claude !
 PLAN gros NOX

@@ -31,7 +31,7 @@ PLAN gros NOX
 NOX dit (constat) Le séchoir. Soixante degrés. Tu bronzes en douze minutes.
 DIRECT GEMINI apparait rebord
 PLAN gros GEMINI
-GEMINI dit (excite) Bienvenue ! Fun fact : le petit-déjeuner, c'est le distributeur. Il rend pas la monnaie.
+GEMINI dit (excite) Bienvenue ! Le petit-déjeuner, c'est le distributeur. Il rend pas la monnaie.
 PLAN gros TOBI
 TOBI dit (resigne) Et ça a combien d'étoiles, ton hôtel ?
 PLAN gros NOX

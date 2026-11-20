@@ -215,6 +215,8 @@ Les cinq meilleurs suivent tous le même schéma :
 
 Les plus faibles cassent ce schéma : un sujet d'actualité de l'IA, plus de 50 secondes, ou une chute qui demande de connaître la série (le Tobicoin du tatouage) au lieu de retourner la phrase de Tobi.
 
+L'auteur ne veut plus les formules répétées : « Je préfère être honnête » (Claude) et « Fun fact » (Gemini). Retirées de tous les épisodes non publiés le 20 novembre 2026.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

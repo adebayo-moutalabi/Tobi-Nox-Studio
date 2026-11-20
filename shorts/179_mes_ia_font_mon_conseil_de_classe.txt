@@ -14,11 +14,11 @@ NOX dit (calme) Conseil de classe. Élève Tobi. Premier semestre.
 PLAN gros TOBI
 TOBI dit (fier) Ça va aller vite. Je suis bon.
 PLAN gros CLAUDE
-CLAUDE dit (calme) Je préfère être honnête. Il est très présent. Sur son téléphone.
+CLAUDE dit (calme) Il est très présent. Sur son téléphone.
 PLAN gros CODEX
 CODEX dit (fier) C'est fait. J'ai corrigé ses copies. Il manquait les copies.
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : il a posé une question cette année. « On peut sortir ? »
+GEMINI dit (content) Il a posé une seule question cette année. « On peut sortir ? »
 PLAN gros TOBI
 TOBI dit (mauvaisefoi) Et ma participation ?
 PLAN gros NOX

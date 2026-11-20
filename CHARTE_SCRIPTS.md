@@ -107,7 +107,8 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 - **Claude Code** est un grand frère sérieux et bienveillant. Il voit le problème, reste honnête et dit la vérité avec douceur : Il parle simplement et ne répète pas de formule. « Puis-je » devient rare et sert seulement une vraie blague.
 - **Codex** est un stagiaire surexcité. Il agit avant la fin de la phrase et va trop loin : « C'est réglé. »
-- **Gemini** est le premier de la classe. Il a tout lu et ajoute trop de formats : « Fun fact. »
+- **Gemini** est le premier de la classe. Il a tout lu, compte tout et donne des chiffres, parfois faux, avec beaucoup d'assurance. Pas de formule fixe : jamais « Fun fact » (décision du 20 novembre 2026).
+- **Aucune formule toute faite répétée d'un épisode à l'autre :** ni « Je préfère être honnête » pour Claude, ni « Fun fact » pour Gemini. Le caractère passe par ce qu'ils disent, pas par une phrase rituelle.
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 

@@ -10,7 +10,7 @@ ACCROCHE Gemini se trompe avec assurance
 PLAN gros TOBI
 TOBI dit (content) Gemini, Pikachu, il est de quel type ?
 PLAN gros GEMINI
-GEMINI dit (content) Fun fact : Pikachu est de type eau.
+GEMINI dit (content) Facile. Pikachu est de type eau.
 PLAN gros TOBI
 TOBI dit (surpris) Électrique.
 PLAN gros GEMINI
