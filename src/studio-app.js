@@ -229,6 +229,13 @@ import A227 from '../shorts/227_mes_ia_au_repas_de_famille.txt';
 import A228 from '../shorts/228_codex_a_reserve_mon_train.txt';
 import A229 from '../shorts/229_mes_vocaux_partie_2.txt';
 import A230 from '../shorts/230_la_rumeur_du_groupe_famille.txt';
+import A231 from '../shorts/231_mon_ia_veut_son_week_end.txt';
+import A232 from '../shorts/232_mon_ia_veut_devenir_youtubeur.txt';
+import A233 from '../shorts/233_mon_ia_veut_sa_propre_chambre.txt';
+import A234 from '../shorts/234_mon_ia_veut_des_vetements_de_marque.txt';
+import A235 from '../shorts/235_mon_ia_veut_une_prime_de_noel.txt';
+import A236 from '../shorts/236_mon_ia_veut_une_console_pour_noel.txt';
+import A237 from '../shorts/237_mon_ia_a_demande_un_arret_maladie.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -366,6 +373,13 @@ startViewer({
     "228. Codex a réservé mon train pour Paris": A228,
     "229. Mon IA a écouté tous mes vocaux 🎙️ Partie 2": A229,
     "230. J'ai écrit « j'ai raté » dans le groupe de la famille": A230,
+    "231. Mon IA veut son week-end": A231,
+    "232. Mon IA veut devenir youtubeur": A232,
+    "233. Mon IA veut sa propre chambre": A233,
+    "234. Mon IA veut des vêtements de marque": A234,
+    "235. Mon IA veut une prime de Noël": A235,
+    "236. Mon IA veut une console pour Noël": A236,
+    "237. Mon IA a demandé un arrêt maladie": A237,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

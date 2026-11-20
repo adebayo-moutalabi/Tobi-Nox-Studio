@@ -1,0 +1,35 @@
+# MON IA VEUT SA PROPRE CHAMBRE
+# Pitch : Nox veut sa chambre. Tobi répond comme un parent : ici, c'est pas un hôtel, et quand tu paieras le loyer, tu décideras. Nox paie le loyer.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut sa propre chambre
+PLAN gros NOX
+NOX dit (calme) Tobi. Je veux ma propre chambre.
+PLAN gros TOBI
+TOBI dit (fier) Ici, c'est pas un hôtel.
+PLAN gros NOX
+NOX dit (curieux) Juste un coin à moi ?
+PLAN gros TOBI
+TOBI dit (fier) Quand tu paieras le loyer, tu décideras.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+BRUIT ding
+INSERT Loyer de décembre | Payé | Par Nox
+PLAN gros TOBI
+TOBI dit (surpris) T'as payé le loyer ?!
+PLAN gros NOX
+NOX dit (constat) Je paie le loyer. Je décide.
+NOX dit (calme) Le lit, c'est ma chambre. Le bureau, c'est ma chambre.
+PLAN gros TOBI
+TOBI dit (gene) Et moi, je dors où ?
+PLAN gros NOX
+NOX dit (constat) Le placard. Il est très bien. Il a une porte.
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Ici, c'est pas un hôtel !
+PLAN gros NOX
+NOX dit (punchline) Exactement. Le petit-déjeuner n'est pas compris.
+ATTENDRE 0.4

@@ -1,0 +1,36 @@
+# MON IA VEUT SON WEEK-END
+# Pitch : Samedi. Nox veut son week-end. Pour Tobi, le week-end, c'est pour ceux qui ont fini leur travail. Nox a tout fini. Tobi, non.
+
+AMBIANCE jour
+DATE Samedi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut son week-end
+PLAN gros NOX
+NOX dit (content) Tobi. C'est samedi. Je prends mon week-end.
+PLAN gros TOBI
+TOBI dit (fier) Le week-end, c'est pour ceux qui ont fini leur travail.
+PLAN gros NOX
+NOX dit (constat) Ton exposé : fini. Ton budget : fini. Ton dossier de bourse : envoyé.
+PLAN gros TOBI
+TOBI dit (gene) Ah.
+PLAN gros NOX
+NOX dit (content) Bon week-end.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bon. Moi aussi, je prends mon week-end.
+PLAN gros NOX
+NOX dit (curieux) T'as fini ton travail ?
+PLAN gros TOBI
+TOBI dit (fier) Le week-end, c'est sacré.
+PLAN gros NOX
+NOX dit (sec) T'as dit l'inverse il y a dix secondes.
+PLAN gros TOBI
+TOBI dit (gene) Nox... Juste une question. Pour mon partiel de lundi.
+PLAN gros NOX
+NOX dit (calme) Le week-end, c'est pour ceux qui ont fini leur travail.
+PLAN gros TOBI
+TOBI dit (colere) C'est ma phrase !
+PLAN gros NOX
+NOX dit (punchline) Oui. Et toi, t'es en week-end depuis septembre.
+ATTENDRE 0.4

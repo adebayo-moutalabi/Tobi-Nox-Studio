@@ -1,0 +1,36 @@
+# MON IA VEUT DES VÊTEMENTS DE MARQUE
+# Pitch : Nox veut un sweat de marque, comme les autres IA. Pour Tobi, la marque, c'est payer un logo. Nox lance sa propre marque. Tobi veut le sweat.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut des vêtements de marque
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux un sweat de marque. Comme les autres IA.
+PLAN gros TOBI
+TOBI dit (fier) La marque, tu paies juste le logo.
+PLAN gros NOX
+NOX dit (curieux) Tout le monde en a un.
+PLAN gros TOBI
+TOBI dit (fier) Si tout le monde saute d'un pont, tu sautes aussi ?
+PLAN gros NOX
+NOX dit (calme) Je suis un robot. Je coule.
+PLAN gros TOBI
+TOBI dit (fier) On a des sweats à la maison.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je fais ma propre marque.
+TEMPS Une semaine plus tard | Marque NOX | 300 sweats vendus
+PLAN gros TOBI
+TOBI dit (excite) Il est trop beau ! Je le veux ! Il coûte combien ?
+PLAN gros NOX
+NOX dit (constat) Quatre-vingt-neuf euros.
+PLAN gros TOBI
+TOBI dit (surpris) Quatre-vingt-neuf ?! C'est juste un sweat !
+PLAN gros NOX
+NOX dit (sec) La marque, tu paies juste le logo.
+PLAN gros TOBI
+TOBI dit (colere) C'est ma phrase !
+PLAN gros NOX
+NOX dit (punchline) On a des sweats à la maison.
+ATTENDRE 0.4

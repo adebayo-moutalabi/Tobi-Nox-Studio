@@ -200,6 +200,21 @@ Le 19 novembre, il en demande encore d'autres, après avoir regardé sa chaîne 
 Pas de question au spectateur à la fin (19 novembre 2026). Il trouve aussi l'analyse trop limitée aux deux chaînes déjà connues : aller chercher d'autres chaînes et comprendre leur système de blagues et de chutes.
 Ni Centi ni Karim pour l'instant (19 novembre 2026) : ils n'ont pas encore de vrai rôle dans l'histoire. Personnages actifs : Tobi, Nox, Claude, Codex, Gemini, la mère (par messages). Cela contredit les épisodes déjà écrits avec Centi ou Karim (par exemple 166, 204, 205, 207). Il aime les titres en « Mon IA… », mais reste ouvert à d'autres formes. Épisodes 211 à 220 écrits avec les systèmes de blague relevés (liste, boucle, double standard, groupe A et B, face-à-face, futur, type reconnu, partie 1).
 
+## La recette de la chaîne (20 novembre 2026)
+
+Chiffres du 20 novembre : congé 2 474, animal 2 377, crise d'ado 2 163, argent de poche 2 124, soirée 2 031, crush 1 826, gros mot 1 625, plan riche 1 513, mémoire 1 480, recruteuse 1 458, tatouage 1 429 (le flop signalé par l'auteur), réunion sans moi 1 229, viré 1 214, insulter Claude 1 078, Claude Code gratuit 949. Aucun des épisodes 151 à 230 ne lui a plu.
+
+Les cinq meilleurs suivent tous le même schéma :
+
+1. **Titre :** « Mon IA veut… », « Mon IA a pris… », « Mon IA m'a demandé… », suivi d'un privilège humain que tout le monde a réclamé un jour (un congé, un animal, de l'argent de poche, une soirée, la crise d'ado).
+2. **Première réplique :** Nox réclame ce privilège.
+3. **Tobi refuse** avec les phrases toutes faites d'un parent ou d'un patron.
+4. **La situation se retourne :** Tobi a besoin de Nox, ou de la même chose.
+5. **La chute est un boomerang :** la phrase de Tobi lui revient mot pour mot (« Congé. », « L'argent, ça pousse pas sur les arbres. »).
+6. **Durée :** 27 à 41 secondes.
+
+Les plus faibles cassent ce schéma : un sujet d'actualité de l'IA, plus de 50 secondes, ou une chute qui demande de connaître la série (le Tobicoin du tatouage) au lieu de retourner la phrase de Tobi.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

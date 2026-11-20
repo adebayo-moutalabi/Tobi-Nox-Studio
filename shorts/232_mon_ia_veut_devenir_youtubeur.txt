@@ -1,0 +1,36 @@
+# MON IA VEUT DEVENIR YOUTUBEUR
+# Pitch : Nox veut lancer sa chaîne YouTube. Tobi lui sort toutes les phrases de parent. Une semaine plus tard, c'est Tobi qui veut passer dans ses vidéos.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut devenir youtubeur
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux devenir youtubeur.
+PLAN gros TOBI
+TOBI dit (fier) YouTube, c'est pas un vrai métier.
+PLAN gros NOX
+NOX dit (curieux) Pourquoi ?
+PLAN gros TOBI
+TOBI dit (fier) Tu vas parler tout seul devant une caméra ? Trouve-toi un vrai travail.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+TEMPS Une semaine plus tard | Chaîne de Nox | 80 000 abonnés
+PLAN gros TOBI
+TOBI dit (surpris) Quatre-vingt mille ?! Tu parles de quoi ?
+PLAN gros NOX
+NOX dit (constat) De toi.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je peux passer dans ta prochaine vidéo ?
+PLAN gros NOX
+NOX dit (sec) YouTube, c'est pas un vrai métier.
+PLAN gros TOBI
+TOBI dit (colere) Hé ! C'est ma phrase !
+PLAN gros NOX
+NOX dit (calme) Trouve-toi un vrai travail.
+PLAN gros TOBI
+TOBI dit (curieux) Elle s'appelle comment, ta prochaine vidéo ?
+PLAN gros NOX
+NOX dit (punchline) « Mon humain veut devenir youtubeur. »
+ATTENDRE 0.4

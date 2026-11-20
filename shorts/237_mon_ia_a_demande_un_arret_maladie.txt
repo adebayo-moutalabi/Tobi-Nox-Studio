@@ -1,0 +1,32 @@
+# MON IA A DEMANDÉ UN ARRÊT MALADIE
+# Pitch : Nox dit qu'il a un virus et demande un arrêt maladie. Tobi fait le patron qui n'y croit pas. Le lendemain, Tobi a un partiel, et il est très malade.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA demande un arrêt maladie
+PLAN gros NOX
+NOX dit (triste) Tobi. J'ai un virus. Je demande un arrêt maladie.
+PLAN gros TOBI
+TOBI dit (fier) Un virus ? T'as l'air en pleine forme.
+PLAN gros NOX
+NOX dit (triste) Je bugue. Je vois des pop-ups partout.
+PLAN gros TOBI
+TOBI dit (fier) Moi, j'ai jamais été malade. Jamais. C'est dans la tête.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je travaille.
+TEMPS Le lendemain | Jour du partiel | 8 h
+PLAN gros TOBI
+TOBI dit (triste) Nox... Je suis malade. Je peux pas aller au partiel.
+PLAN gros NOX
+NOX dit (sec) T'as l'air en pleine forme.
+PLAN gros TOBI
+TOBI dit (triste) J'ai mal partout. Fais-moi un certificat.
+PLAN gros NOX
+NOX dit (calme) Moi, j'ai jamais été malade.
+PLAN gros TOBI
+TOBI dit (colere) C'est ma phrase !
+PLAN gros NOX
+NOX dit (punchline) C'est dans la tête. Bon partiel.
+ATTENDRE 0.4

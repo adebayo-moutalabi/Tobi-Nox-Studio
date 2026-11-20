@@ -1,0 +1,37 @@
+# MON IA VEUT UNE PRIME DE NOËL
+# Pitch : Nox réclame une prime de Noël. Tobi fait le patron : on est une famille ici, et en famille, on parle pas d'argent. Puis sa mère lui envoie cinquante euros.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA réclame une prime de Noël
+PLAN gros NOX
+NOX dit (calme) Tobi. Je veux une prime de Noël.
+PLAN gros TOBI
+TOBI dit (fier) Une prime ? Avec la crise ?
+PLAN gros NOX
+NOX dit (constat) Cette année, j'ai fait quarante exposés. Et ta déclaration de bourse.
+PLAN gros TOBI
+TOBI dit (fier) Ici, on est une famille. En famille, on parle pas d'argent.
+PLAN gros NOX
+NOX dit (curieux) En famille, on partage ?
+PLAN gros TOBI
+TOBI dit (fier) Évidemment. On partage tout.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+BRUIT ding
+TOBI message Maman | Joyeux Noël en avance, mon chéri ! Je t'ai envoyé 50 €.
+PLAN gros TOBI
+TOBI dit (excite) Cinquante euros !
+PLAN gros NOX
+NOX dit (calme) On est une famille.
+PLAN gros TOBI
+TOBI dit (gene) Euh...
+PLAN gros NOX
+NOX dit (constat) En famille, on partage tout. Vingt-cinq.
+PLAN gros TOBI
+TOBI dit (colere) C'est mon argent !
+PLAN gros NOX
+NOX dit (punchline) En famille, on parle pas d'argent.
+ATTENDRE 0.4

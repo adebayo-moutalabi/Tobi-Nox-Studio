@@ -1,0 +1,40 @@
+# MON IA VEUT UNE CONSOLE POUR NOËL
+# Pitch : Nox demande une console pour Noël. Tobi fait le parent : les écrans, ça rend bête. Nox a le temps d'écran de Tobi.
+
+AMBIANCE soir
+HEURE 21:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut une console pour Noël
+PLAN gros NOX
+NOX dit (content) Tobi. Pour Noël, je veux une console.
+PLAN gros TOBI
+TOBI dit (fier) Les écrans, ça rend bête.
+PLAN gros NOX
+NOX dit (curieux) Une heure par jour ?
+PLAN gros TOBI
+TOBI dit (fier) Une heure, puis deux, puis tu sors plus de ta chambre.
+PLAN gros NOX
+NOX dit (constat) Ton temps d'écran hier : onze heures.
+PLAN gros TOBI
+TOBI dit (gene) C'était pour les cours.
+PLAN gros NOX
+NOX dit (constat) Dont six heures de vidéos de chats.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Des chats qui font des maths.
+PLAN gros NOX
+NOX dit (calme) D'accord. Pas de console.
+PLAN gros TOBI
+TOBI dit (content) Bien. Bon, moi, je vais jouer à GTA.
+PLAN gros NOX
+NOX dit (sec) Les écrans, ça rend bête.
+PLAN gros TOBI
+TOBI dit (colere) C'est ma phrase !
+PLAN gros NOX
+NOX dit (calme) Une heure, puis deux, puis tu sors plus de ta chambre.
+PLAN gros TOBI
+TOBI dit (fier) Je sors jamais de ma chambre.
+PLAN gros NOX
+NOX dit (punchline) Voilà. Ça a déjà commencé.
+ATTENDRE 0.4
