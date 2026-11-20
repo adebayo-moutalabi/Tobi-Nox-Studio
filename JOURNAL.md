@@ -424,6 +424,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Caméra : comme sur un tournage, un meuble qui passe devant l'objectif est retiré le temps du plan (jamais les murs, ni le meuble sous le personnage). Nox et les logos tournent davantage le visage vers la caméra quand ils parlent. Audit de cadrage : 150 passe de 9 problèmes à 0, et 149 de 6 à 0. L'audit nomme maintenant l'objet qui gêne.
 - Titres : 141 épisodes non publiés renommés au format qui marche (« Mon IA… », « Mes IA… »), sans changer leur histoire. Les favoris sont maintenant gardés par numéro d'épisode : les anciens favoris (titre complet) sont convertis et restent cochés.
 - 21 novembre 2026 : retour à l'essence des épisodes 1 à 100, décrite dans la charte. Épisodes 243 à 250 dans cet esprit (URSSAF, dropshipping, imprimante 3D, soirée payante, levée de fonds au repas de Noël, newsletter, carte refusée au kebab, baby-sitting). Le contrôle ne signale plus « trop long » qu'au-delà de 60 s.
+- 22 titres corrigés : le nouveau titre faisait faire à l'IA ce que fait Tobi (par exemple « Mon IA a contesté mon 4 sur 20 », devenu « Mon IA m'aide à contester mon 4 sur 20 »).
 
 ## À faire
 
