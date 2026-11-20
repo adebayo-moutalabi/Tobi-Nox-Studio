@@ -1,0 +1,46 @@
+# MON IA M'A VU DEMANDER UN PRÊT À LA BANQUE
+# Pitch : Tobi a rendez-vous avec sa banquière pour un prêt de 50 000 € pour sa start-up. Nox l'accompagne. La banquière a son relevé de compte sous les yeux.
+
+AMBIANCE jour
+TABLEAU Rendez-vous banque | Demande : 50 000 € | Compte : 12 €
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il demande 50 000 € à sa banque
+PLAN gros TOBI
+TOBI dit (fier) Nox. Rendez-vous avec ma banquière en visio. Je demande cinquante mille euros. Pour ma start-up.
+PLAN gros NOX
+NOX dit (constat) Ton compte est à douze euros.
+PLAN gros TOBI
+TOBI dit (fier) Justement. Je leur offre une opportunité de croissance.
+PC Camera : Visio avec la banque | Conseillère : Mme Lemaire | Votre compte : 12 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (fier) Bonjour madame. Je viens lever cinquante mille euros.
+PLAN gros NOX
+NOX dit (constat) Elle demande ton apport.
+PLAN gros TOBI
+TOBI dit (fier) Mon apport, c'est ma vision.
+PLAN gros NOX
+NOX dit (constat) Elle demande si ta vision a un RIB.
+PLAN gros TOBI
+TOBI dit (gene) Pas encore.
+PLAN gros NOX
+NOX dit (constat) Elle a ouvert ton relevé. Elle voit les trente-quatre livraisons de pâtes.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Recherche et développement. Je teste le marché des pâtes.
+PLAN gros NOX
+NOX dit (calme) Elle te propose autre chose.
+PLAN gros TOBI
+TOBI dit (excite) Un prêt plus gros ?
+INSERT Proposition de la banque | Carte jeune | Plafond : 20 € par semaine
+PLAN gros TOBI
+TOBI dit (triste) Vingt euros par semaine.
+PLAN gros NOX
+NOX dit (calme) Et un rendez-vous avec un conseiller budget. Gratuit.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je lui pitche ma start-up, au conseiller.
+PLAN gros NOX
+NOX dit (punchline) C'est elle. Elle a déjà dit non.
+ATTENDRE 0.4

@@ -1,0 +1,45 @@
+# MON IA A VU MON INSTAGRAM DE CEO
+# Pitch : Tobi veut un compte Instagram de CEO qui réussit. Il fait les photos dans sa chambre de 9 m². Nox est le photographe, et le seul à voir les coulisses.
+
+AMBIANCE jour
+TABLEAU Instagram de Tobi | « CEO lifestyle » | Abonnés : 12
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Un Instagram de CEO dans 9 m²
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Séance photo. Mon Instagram de CEO. Il faut que ça respire la réussite.
+PLAN gros NOX
+NOX dit (curieux) Dans neuf mètres carrés ?
+PLAN gros TOBI
+TOBI dit (fier) Avec le bon angle, neuf mètres carrés, c'est un loft.
+TOBI marche fenetre
+PLAN gros TOBI
+TOBI dit (fier) Photo un. Moi, qui regarde l'horizon. Légende : « Je vois loin. »
+PLAN gros NOX
+NOX dit (constat) Tu regardes le parking du CROUS.
+TOBI marche bureau
+PLAN gros TOBI
+TOBI dit (fier) Photo deux. Petit-déjeuner de champion.
+PLAN gros NOX
+NOX dit (constat) Des pâtes froides. Dans une tasse.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je mets un filtre. Ça devient un bol de quinoa.
+TOBI marche miroir
+PLAN gros TOBI
+TOBI dit (fier) Photo trois. Le costume. Le CEO en rendez-vous.
+PLAN gros NOX
+NOX dit (constat) Le haut, c'est un costume. Le bas, c'est ton pyjama.
+PLAN gros TOBI
+TOBI dit (fier) Personne ne verra le bas.
+BRUIT ding
+INSERT Publication | 3 likes | 1 commentaire
+PLAN gros TOBI
+TOBI dit (excite) Un commentaire ! Lis-le !
+PLAN gros NOX
+NOX dit (constat) « Joli pyjama. » C'est ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Elle voit le bas ?!
+PLAN gros NOX
+NOX dit (punchline) Elle a vu le miroir derrière toi.
+ATTENDRE 0.4

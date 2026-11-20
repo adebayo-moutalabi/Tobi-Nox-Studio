@@ -1,0 +1,44 @@
+# MON IA M'A VU OUVRIR UNE FRIPERIE DANS MA CHAMBRE
+# Pitch : Tobi transforme sa chambre en friperie vintage pour la résidence. Le stock, c'est sa propre garde-robe. Les clients achètent tout, même ce qu'il porte.
+
+AMBIANCE jour
+TABLEAU Friperie de Tobi | Stock : sa garde-robe | Prix : vintage
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Une friperie dans 9 m²
+PLAN gros TOBI
+TOBI dit (excite) Nox. Ouverture de ma friperie. « Vintage de résidence. » Tout part à quinze euros.
+PLAN gros NOX
+NOX dit (curieux) D'où vient le stock ?
+PLAN gros TOBI
+TOBI dit (fier) De mon armoire. C'est du vintage, je les porte depuis le lycée.
+PLAN gros NOX
+NOX dit (constat) Ton pull du lycée a encore ton nom brodé.
+PLAN gros TOBI
+TOBI dit (fier) C'est une édition signée.
+TEMPS Une heure plus tard | Ventes | 6
+PLAN gros TOBI
+TOBI dit (excite) Six ventes ! Quatre-vingt-dix euros ! Les étudiants adorent le vintage.
+PLAN gros NOX
+NOX dit (constat) Il te reste deux tee-shirts et ton pyjama.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Le minimalisme, c'est tendance.
+TEMPS Le lendemain | Température | 4 degrés
+PLAN gros TOBI
+TOBI dit (triste) Nox. J'ai froid. Il me faut un pull.
+PLAN gros NOX
+NOX dit (calme) La friperie de la résidence en vend un. Quinze euros.
+PLAN gros TOBI
+TOBI dit (curieux) Il est comment ?
+PLAN gros NOX
+NOX dit (constat) Ton nom est brodé dessus.
+PLAN gros TOBI
+TOBI dit (gene) Ils le revendent ?
+PLAN gros NOX
+NOX dit (constat) Vingt-cinq euros. C'est devenu une édition signée.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je rachète tout mon stock, et je le revends plus cher.
+PLAN gros NOX
+NOX dit (punchline) Tu viens d'inventer ton armoire.
+ATTENDRE 0.4

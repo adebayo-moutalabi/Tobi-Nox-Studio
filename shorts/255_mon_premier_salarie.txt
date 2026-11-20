@@ -1,0 +1,45 @@
+# MON IA A VU MON PREMIER SALARIÉ
+# Pitch : Tobi embauche son premier stagiaire : le fils du boulanger, quinze ans, payé en croissants. Au bout d'une semaine, c'est lui qui donne les ordres.
+
+AMBIANCE jour
+TABLEAU Start-up de Tobi | Effectif : 2 | Salaire : 3 croissants par jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son premier stagiaire, payé en croissants
+PLAN gros TOBI
+TOBI dit (fier) Nox, je te présente mon premier salarié. Le fils du boulanger. Quinze ans. Payé en croissants.
+PLAN gros NOX
+NOX dit (curieux) Il fait quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Il observe. Il apprend du meilleur.
+TEMPS Le lendemain | Croissants versés | 3
+PLAN gros NOX
+NOX dit (constat) Il a refait ton site en une heure. Il charge en deux secondes.
+PLAN gros TOBI
+TOBI dit (gene) Bien. Il est motivé.
+TEMPS Trois jours plus tard | Croissants versés | 12
+PLAN gros NOX
+NOX dit (constat) Il a trouvé trois clients. Des vrais. Qui paient.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Grâce à ma vision.
+PLAN gros NOX
+NOX dit (constat) Il a lu ta vision. Il l'a raccourcie.
+TEMPS Une semaine plus tard | Croissants versés | 21
+PLAN gros TOBI
+TOBI dit (fier) Bon. Petit point d'équipe. Qui est le patron ici ?
+PLAN gros NOX
+NOX dit (calme) Il demande si tu as fini la tâche qu'il t'a donnée.
+PLAN gros TOBI
+TOBI dit (gene) Quelle tâche ?
+PLAN gros NOX
+NOX dit (constat) Aller chercher les croissants.
+PLAN gros TOBI
+TOBI dit (colere) Je suis le fondateur !
+PLAN gros NOX
+NOX dit (constat) Il dit que le fondateur a le meilleur poste. Il est payé pareil, et il mange les croissants.
+PLAN gros TOBI
+TOBI dit (triste) Nox. C'est quoi, mon salaire ?
+PLAN gros NOX
+NOX dit (punchline) Zéro croissant. Lui, il est payé.
+ATTENDRE 0.4

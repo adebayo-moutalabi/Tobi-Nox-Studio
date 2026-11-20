@@ -1,0 +1,43 @@
+# MON IA M'A VU FAIRE UN HACKATHON DE 48 HEURES
+# Pitch : Hackathon de la fac : 48 heures pour créer une start-up. Tobi est sûr de gagner. Il passe 47 heures sur le logo.
+
+AMBIANCE jour
+TABLEAU Hackathon de la fac | Durée : 48 h | Prix : 1 000 €
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 48 heures de hackathon, 47 sur le logo
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Hackathon. Quarante-huit heures. Mille euros pour le gagnant. C'est pour moi.
+PLAN gros NOX
+NOX dit (curieux) Ton projet ?
+PLAN gros TOBI
+TOBI dit (fier) D'abord, l'identité visuelle. Un grand projet commence par un grand logo.
+COMPTEUR Il reste 47 h
+TEMPS Vingt heures plus tard | Logo | Version 12
+PLAN gros TOBI
+TOBI dit (fier) Version douze. Le jaune est plus... entrepreneur.
+PLAN gros NOX
+NOX dit (constat) L'équipe d'à côté a déjà un prototype qui marche.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ils ont pas de logo. On ne se souviendra pas d'eux.
+COMPTEUR Il reste 2 h
+TEMPS Quarante-six heures plus tard | Logo | Version 31
+PLAN gros TOBI
+TOBI dit (panique) Nox. Il reste deux heures. C'est quoi, déjà, mon projet ?
+PLAN gros NOX
+NOX dit (calme) Tu n'en as pas. Tu as trente et une versions d'un logo.
+PLAN gros TOBI
+TOBI dit (fier) Alors je présente le logo.
+COMPTEUR Il reste 0 h
+BRUIT ding
+INSERT Résultats | Prix du jury : équipe 4 | Prix spécial : Tobi
+PLAN gros TOBI
+TOBI dit (excite) Un prix spécial ! Pour quoi ?!
+PLAN gros NOX
+NOX dit (constat) « Meilleur logo pour une entreprise qui n'existe pas. »
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. Je vends des logos aux entreprises qui n'existent pas.
+PLAN gros NOX
+NOX dit (punchline) Ton premier client, c'est toi. Depuis deux ans.
+ATTENDRE 0.4

@@ -1,0 +1,50 @@
+# MON IA M'A VU PITCHER DANS L'ASCENSEUR
+# Pitch : Un vrai investisseur prend l'ascenseur de la fac. Tobi a sept étages pour le convaincre. L'ascenseur s'arrête à chaque étage.
+
+AMBIANCE jour
+TABLEAU Pitch | Investisseur : dans l'ascenseur | Temps : 7 étages
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sept étages pour convaincre un investisseur
+PLAN gros NOX
+NOX dit (calme) Tobi. L'investisseur du salon de la fac. Il attend l'ascenseur. Maintenant.
+PLAN gros TOBI
+TOBI dit (panique) Maintenant ? J'ai pas préparé !
+PLAN gros NOX
+NOX dit (constat) Tu prépares ce pitch depuis deux ans.
+PLAN gros TOBI
+TOBI dit (fier) Exact. Je suis prêt. J'y vais.
+COMPTEUR Étage 1 sur 7
+PLAN gros TOBI
+TOBI dit (fier) Bonjour monsieur. Tobi, fondateur. Je révolutionne la vie étudiante.
+PLAN gros NOX
+NOX dit (constat) Il demande comment.
+PLAN gros TOBI
+TOBI dit (gene) Avec... une appli.
+COMPTEUR Étage 3 sur 7
+PLAN gros NOX
+NOX dit (constat) Les portes s'ouvrent. Douze étudiants entrent.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Parfait. Un panel de clients. Qui veut une appli ?
+PLAN gros NOX
+NOX dit (constat) Ils veulent le troisième étage.
+COMPTEUR Étage 5 sur 7
+PLAN gros TOBI
+TOBI dit (fier) Monsieur. J'ai besoin de cinquante mille euros.
+PLAN gros NOX
+NOX dit (constat) Il demande ce que tu as déjà.
+PLAN gros TOBI
+TOBI dit (fier) Une baguette. Ma première levée de fonds.
+COMPTEUR Étage 7 sur 7
+BRUIT ding
+PLAN gros NOX
+NOX dit (calme) Il est sorti. Il t'a laissé sa carte.
+PLAN gros TOBI
+TOBI dit (excite) Sa carte ! Il veut me revoir !
+INSERT Carte de visite | Boulangerie Martin | « Investisseur »
+PLAN gros TOBI
+TOBI dit (surpris) C'est... le boulanger ?
+PLAN gros NOX
+NOX dit (punchline) Il voulait juste savoir s'il était bien noté dans ton pitch.
+ATTENDRE 0.4

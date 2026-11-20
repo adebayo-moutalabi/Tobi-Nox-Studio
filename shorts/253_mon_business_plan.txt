@@ -1,0 +1,48 @@
+# MON IA A LU MON BUSINESS PLAN
+# Pitch : Tobi a écrit son business plan sur cinq ans. Nox l'ouvre. Chaque année est plus ambitieuse, et moins réaliste.
+
+AMBIANCE soir
+HEURE 21:00
+TABLEAU Business plan de Tobi | Durée : 5 ans | Objectif : licorne
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son business plan sur cinq ans
+PLAN gros TOBI
+TOBI dit (fier) Nox. Mon business plan est prêt. Cinq ans. Lis et prépare-toi à être impressionné.
+PC Excel : Business_plan.xlsx | Année 1 : 10 clients | Année 2 : 10 000 clients | Année 3 : 1 million
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (curieux) Comment tu passes de dix à dix mille ?
+PLAN gros TOBI
+TOBI dit (fier) Le bouche-à-oreille.
+PLAN gros NOX
+NOX dit (constat) Tes dix clients, c'est ta mère, ta tante, et huit fois ton cousin.
+PLAN gros TOBI
+TOBI dit (gene) Il a plusieurs adresses mail.
+PLAN gros NOX
+NOX dit (curieux) Et les dépenses ?
+PC Excel : Business_plan.xlsx | Salaires : 0 € | Bureaux : 0 € | Café : 4 000 €
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (fier) Le café, c'est le carburant d'une start-up.
+PLAN gros NOX
+NOX dit (constat) Quatre mille euros de café. Pour une personne.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Une personne très motivée.
+PLAN gros NOX
+NOX dit (curieux) Année cinq ?
+PC Excel : Business_plan.xlsx | Année 5 : Acheter la Lune | Et rembourser maman
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (fier) Il faut voir grand.
+PLAN gros NOX
+NOX dit (calme) La Lune, c'est ambitieux. Rembourser ta mère, beaucoup plus.
+PLAN gros TOBI
+TOBI dit (illumine) Nox. Aie la vision. J'inverse. Je rembourse ma mère avec la Lune.
+PLAN gros NOX
+NOX dit (punchline) Elle préfère un virement. Elle me l'a dit.
+ATTENDRE 0.4

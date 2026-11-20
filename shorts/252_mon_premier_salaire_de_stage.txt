@@ -1,0 +1,49 @@
+# MON IA A VU MON PREMIER SALAIRE DE STAGE
+# Pitch : Tobi reçoit sa première gratification de stage : 600 €. Il se sent riche. Nox tient le compte, jour après jour.
+
+AMBIANCE jour
+TABLEAU Stage de Tobi | Gratification : 600 € | Loyer : 260 €
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son premier salaire de stage
+BRUIT ding
+INSERT Virement reçu | 600 € | Gratification de stage
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Six cents euros ! Mon premier salaire ! Je suis un homme actif.
+PLAN gros NOX
+NOX dit (calme) Bravo. Le loyer, c'est deux cent soixante.
+PLAN gros TOBI
+TOBI dit (fier) Il reste trois cent quarante. Je suis riche, Nox.
+PLAN gros NOX
+NOX dit (curieux) Tu veux faire un budget ?
+PLAN gros TOBI
+TOBI dit (fier) Un budget, c'est pour les gens qui ont peur. Moi, j'investis.
+TEMPS Le lendemain | Compte | 340 €
+PLAN gros TOBI
+TOBI dit (fier) J'ai pris un abonnement de salle de sport. Le salarié doit être en forme.
+INSERT Salle de sport | -35 € | Par mois
+TEMPS Deux jours plus tard | Compte | 305 €
+PLAN gros TOBI
+TOBI dit (fier) Et des vraies chaussures. Un stagiaire, ça se respecte.
+INSERT Chaussures | -120 € | Il en avait déjà
+TEMPS Le surlendemain | Compte | 185 €
+PLAN gros TOBI
+TOBI dit (content) J'ai invité toute l'équipe au café. C'est le geste d'un leader.
+PLAN gros NOX
+NOX dit (constat) L'équipe, c'est quarante personnes.
+INSERT Cafés | -96 € | Pour 40
+TEMPS Une semaine après la paie | Compte | 89 €
+PLAN gros TOBI
+TOBI dit (triste) Nox. Il me reste quatre-vingt-neuf euros. Pour trois semaines.
+PLAN gros NOX
+NOX dit (calme) Tu veux faire un budget ?
+PLAN gros TOBI
+TOBI dit (gene) Un budget, c'est pour les gens qui ont peur.
+PLAN gros NOX
+NOX dit (constat) Oui.
+PLAN gros TOBI
+TOBI dit (resigne) J'ai peur.
+PLAN gros NOX
+NOX dit (punchline) Bienvenue dans le monde du travail.
+ATTENDRE 0.4
