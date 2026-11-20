@@ -422,6 +422,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - Bugs de mise en scène corrigés : Nox qui suivait Tobi sans jamais s'arrêter (il court après lui dans tous les lieux), Nox posé au sol près de la porte quand le script croyait le percher sur le frigo, et un personnage perché qui marchait dans le vide. Le Studio vide les « suit » à chaque changement de lieu, fait sauter au sol un personnage perché avant de marcher, et refuse une place inconnue. `controle-episodes` signale les places inconnues et un « NOX suit » jamais arrêté.
 - Retour de l'auteur : il préfère ses anciens épisodes en favoris (50 à 60 s) et trouve la mise en scène récente déréglée. Noté dans les préférences, avec la contradiction sur la durée.
 - Caméra : comme sur un tournage, un meuble qui passe devant l'objectif est retiré le temps du plan (jamais les murs, ni le meuble sous le personnage). Nox et les logos tournent davantage le visage vers la caméra quand ils parlent. Audit de cadrage : 150 passe de 9 problèmes à 0, et 149 de 6 à 0. L'audit nomme maintenant l'objet qui gêne.
+- Titres : 141 épisodes non publiés renommés au format qui marche (« Mon IA… », « Mes IA… »), sans changer leur histoire. Les favoris sont maintenant gardés par numéro d'épisode : les anciens favoris (titre complet) sont convertis et restent cochés.
 
 ## À faire
 

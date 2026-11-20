@@ -792,8 +792,11 @@ export function mountStory(v, stories) {
   const ORDER = 'tobinox.ordre', FAVS = 'tobinox.favoris';
   // Favoris : gardés dans ce navigateur. Au premier passage, les épisodes que l'auteur a aimés sont déjà cochés.
   const FAV_START = ['141.', '146.', '150.'];
-  const favs = (() => { try { const raw = localStorage.getItem(FAVS); if (raw) return new Set(JSON.parse(raw)); } catch { /* stockage bloqué */ } return new Set(Object.keys(stories).filter((k) => FAV_START.some((p) => k.startsWith(p)))); })();
-  const saveFavs = () => { try { localStorage.setItem(FAVS, JSON.stringify([...favs])); } catch { /* stockage bloqué */ } };
+  // Favoris gardés par numéro d'épisode : un titre peut changer sans perdre l'étoile. Les anciens favoris (titre complet) sont convertis.
+  const favId = (k) => (/^(\d+)\./.exec(k) || [])[1] || k;
+  const favSet = (() => { try { const raw = localStorage.getItem(FAVS); if (raw) return new Set(JSON.parse(raw).map(favId)); } catch { /* stockage bloqué */ } return new Set(Object.keys(stories).filter((k) => FAV_START.some((p) => k.startsWith(p))).map(favId)); })();
+  const favs = { has: (k) => favSet.has(favId(k)), add: (k) => favSet.add(favId(k)), delete: (k) => favSet.delete(favId(k)) };
+  const saveFavs = () => { try { localStorage.setItem(FAVS, JSON.stringify([...favSet])); } catch { /* stockage bloqué */ } };
   const sortKey = () => el('epsSort')?.value || 'desc';
   const plainTxt = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const ordered = () => {
