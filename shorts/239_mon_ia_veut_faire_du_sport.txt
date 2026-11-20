@@ -24,6 +24,7 @@ TOBI dit (fier) Tu vois ? Tranquille.
 PLAN gros NOX
 NOX dit (constat) Deux cents mètres.
 TOBI court fenetre
+NOX seul
 PLAN gros TOBI
 TOBI dit (triste) Attends... point de côté... Appelle quelqu'un.
 PLAN gros NOX

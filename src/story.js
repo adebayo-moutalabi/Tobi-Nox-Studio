@@ -310,6 +310,15 @@ export function createPlayer(v, ui) {
     if (name === 'dessus') shot = null; else shoot(v.camera.position, v.controls.target);
   }
   const place = (a, [x, z]) => a.hero.root.position.set(x, 0, z);
+  // Un personnage perché (bureau, lit, rebord) saute au sol avant de marcher ou de suivre quelqu'un.
+  async function toGround(a) {
+    const r = a.hero.root;
+    if (a.carried || r.parent !== v.scene || r.position.y < 0.05) return;
+    if (a.hero.seat) await v.stand(a);
+    const out = new THREE.Vector3(r.position.x, 0, r.position.z).multiplyScalar(0.8); // un pas vers le milieu de la pièce
+    await v.hop(a, out, r.rotation.y);
+    r.position.y = 0;
+  }
   async function reset() {
     for (const a of v.actors) {
       a.follow = null; a.goal = null; a.look = null; a.hero.motion.clearPose();
@@ -382,7 +391,9 @@ export function createPlayer(v, ui) {
         }
         return undefined;
       }
-      case 'decor': decors.set(plain(c.args[0] || 'chambre')); return undefined; // DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre
+      case 'decor': // DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre
+        for (const x of v.actors) { x.follow = null; x.goal = null; } // on change de lieu : personne ne continue à courir après quelqu'un
+        decors.set(plain(c.args[0] || 'chambre')); return undefined;
       case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
@@ -505,6 +516,8 @@ export function createPlayer(v, ui) {
       case 'danse': a.baseLoco = 'dance'; a.hero.motion.setLocomotion('dance'); return v.wait(parseFloat(c.args[0]) || 3).then(() => { a.baseLoco = 'idle'; a.hero.motion.setLocomotion('idle'); });
       case 'apparait': { // déjà là, sans marcher
         const k = plain(c.args[0] || 'tapis'), up = PERCHOIRS[k];
+        if (!up && !LIEUX[k]) throw new Error(`place inconnue pour apparait : ${c.args[0]}`);
+        a.follow = null; a.goal = null; // il est posé là : il ne suit plus personne
         if (up) a.hero.root.position.set(...up); else place(a, LIEUX[k]);
         a.hero.root.visible = true; return undefined;
       }
@@ -520,6 +533,7 @@ export function createPlayer(v, ui) {
         const l = LIEUX[plain(c.args[0] || '')];
         if (!l) throw new Error(`lieu inconnu : ${c.args[0]}`);
         await v.leave(a);
+        await toGround(a); // perché sur un meuble : il descend d'abord, il ne marche pas dans le vide
         a.look = null;
         for (const b of v.actors) if (b !== a && b.hero.root.visible) b.look = a; // les autres le suivent des yeux
         if (auto) follow(a);
@@ -589,7 +603,7 @@ export function createPlayer(v, ui) {
       case 'pose': return v.drop(a);
       case 'utilise': v.useHeld(a); return v.wait(a.held?.def.use === 'drink' ? 3 : 0.3);
       case 'donne': return v.give(a, actor(plain(c.args[0] || '')));
-      case 'suit': a.follow = actor(plain(c.args[0] || '')); return undefined;
+      case 'suit': await toGround(a); a.follow = actor(plain(c.args[0] || '')); return undefined;
       case 'seul': a.follow = null; a.goal = null; return undefined;
       case 'sort': a.hero.root.visible = false; return undefined;
       default: throw new Error(`instruction inconnue : ${c.raw}`);

@@ -130,6 +130,10 @@ Les cartes (`INSERT`, `TEMPS`, messages) sont animées dans `src/look.js`. L'ent
 
 ## Pièges connus
 
+- **Places de `apparait` :** les perchoirs (en hauteur) sont `bureau`, `chaise`, `lit` et `rebord`. Les autres noms (`frigo`, `fenetre`, `porte`…) posent le personnage **au sol**. Une place inconnue arrête l'épisode avec une erreur.
+- **`NOX suit tobi`** dure jusqu'à `NOX seul`, un `apparait` ou un `DECOR`. Sans arrêt, Nox court après Tobi pendant tout l'épisode.
+- Un personnage perché qui doit `marche`, `court` ou `suit` saute d'abord au sol (`toGround` dans `src/story.js`).
+
 - **Texte de script :** les fichiers de `shorts/` sont inclus à la compilation. Après une modification, relancer `node build.mjs`.
 - **Cache du site :** GitHub Pages garde les pages environ 10 minutes. Faire Ctrl+F5.
 - **Lecture en cours :** `story.play` est ignoré tant qu'une lecture tourne.

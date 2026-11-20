@@ -7,6 +7,17 @@ let bad = 0;
 for (const f of readdirSync('shorts').filter((f) => { const n = parseInt(f); return n >= from && n <= to; }).sort((a, b) => parseInt(a) - parseInt(b))) {
   const lines = readFileSync('shorts/' + f, 'utf8').split(/\r?\n/), pb = [];
   let words = 0, pcs = 0, last = null, prev = '';
+  // Places connues du Studio (LIEUX et PERCHOIRS de src/story.js) : une faute ne passe plus en silence.
+  const LIEUX = ['gauche', 'milieu', 'droite', 'centre', 'tapis', 'fenetre', 'lit', 'bureau', 'armoire', 'frigo', 'miroir', 'couloir', 'porte'];
+  const PERCH = ['bureau', 'chaise', 'lit', 'rebord'];
+  let suit = false;
+  for (const l of lines) {
+    const p = /^(?:DIRECT )?(\w+) (apparait|marche|court|entre) (\S+)/.exec(l);
+    if (p && !LIEUX.includes(plain(p[3])) && !(p[2] === 'apparait' && PERCH.includes(plain(p[3])))) pb.push(`place inconnue : ${p[2]} ${p[3]}`);
+    if (/^NOX suit /.test(l)) suit = true;
+    if (/^NOX seul/.test(l) || /^DECOR /.test(l)) suit = false;
+  }
+  if (suit) pb.push("NOX suit Tobi jusqu'à la fin (ajouter NOX seul)");
   for (const l of lines) {
     const m = /^(\w+) dit \(([^)]+)\) (.*)$/.exec(l);
     if (m) {

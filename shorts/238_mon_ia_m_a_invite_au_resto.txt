@@ -4,7 +4,7 @@
 AMBIANCE soir
 HEURE 20:00
 DIRECT TOBI travaille
-DIRECT NOX apparait frigo
+DIRECT NOX apparait lit
 FONDU direct
 ACCROCHE Son IA l'invite au resto
 PLAN gros NOX
