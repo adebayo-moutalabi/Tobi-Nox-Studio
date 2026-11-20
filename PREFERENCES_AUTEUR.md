@@ -226,6 +226,8 @@ Animations jugées pas naturelles : Tobi semble marcher dans l'air, et Nox sur l
 
 Retour du 20 novembre 2026 (nuit) : l'auteur préfère ses anciens épisodes, ceux qu'il a mis en favoris dans le Studio. Ils étaient drôles, il fallait juste les réécrire un peu. Ils faisaient 50 à 60 secondes, et ça lui allait. Il n'aime pas les nouveaux épisodes ni la mise en scène récente : des meubles cachent les personnages, et il a l'impression que quelque chose s'est déréglé. **Contradiction signalée :** le 13 novembre, la règle était 30 à 40 secondes (50 au maximum). Pour ses favoris, 50 à 60 secondes lui conviennent.
 
+Précision le même soir : la règle du 13 novembre reste, mais on peut aller de **35 à 50 secondes, jusqu'à 60** quand il faut du contexte pour que ce soit vraiment drôle. Réécrire les anciens épisodes sans les casser. Les mouvements récents l'intéressent : on les garde. Le vrai problème, sur presque tous les épisodes, c'est la caméra : des meubles cachent les personnages, Nox bouge mal, et les déplacements arrivent au mauvais endroit.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

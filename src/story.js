@@ -139,6 +139,8 @@ export function createPlayer(v, ui) {
   // Tout objet de la chambre peut cacher un personnage : tableau, portes, chaise, frigo, volet...
   let blockers = [];
   function findBlockers() { // relevé au début de chaque lecture : les objets posés au sol comptent aussi
+    for (const o of propsHidden) o.visible = true; // les meubles retirés pendant la lecture précédente reviennent
+    propsHidden = [];
     const skip = new Set(v.actors.map((x) => x.hero.root)); skip.add(v.camera);
     blockers = [];
     const walk = (o) => {
@@ -172,10 +174,31 @@ export function createPlayer(v, ui) {
     v.controls.target.copy(shot.target); v.controls.target.x += 0.0022 * sway(0.8, 1.9); v.controls.target.y += 0.0022 * sway(1.2, 2.7);
     v.controls.update();
   }
+  // Comme sur un tournage : un meuble qui passe devant l'objectif est retiré le temps du plan.
+  // On ne touche ni aux murs ni au sol (trop grands), ni à ce qui est près du personnage (le lit ou le bureau où il est assis).
+  let propsHidden = [];
+  const bigMesh = (o) => { o.geometry.computeBoundingBox?.(); const b = o.geometry.boundingBox, sc = o.getWorldScale(new THREE.Vector3()); if (!b) return true; const d = b.getSize(new THREE.Vector3()).multiply(sc); return Math.max(d.x, d.y, d.z) > 2.2; };
+  function clearProps(c, target, fov) {
+    for (const o of propsHidden) o.visible = true;
+    propsHidden = [];
+    if (!blockers.length) return;
+    const f = target.clone().sub(c), L = f.length(); f.normalize();
+    const right = new THREE.Vector3().crossVectors(f, new THREE.Vector3(0, 1, 0)).normalize(), upv = new THREE.Vector3().crossVectors(right, f);
+    const th = Math.tan((fov * Math.PI) / 360), tw = th * v.camera.aspect;
+    for (let i = -3; i <= 3; i++) for (let j = -3; j <= 3; j++) {
+      ray.set(c, f.clone().addScaledVector(right, (j / 3.2) * tw).addScaledVector(upv, (i / 3.2) * th).normalize()); ray.far = L * 0.6;
+      for (const h of ray.intersectObjects(blockers, false)) {
+        const o = h.object;
+        if (!o.visible || h.point.y < 0.06 || propsHidden.includes(o) || o === room.walls || bigMesh(o)) continue;
+        o.visible = false; propsHidden.push(o);
+      }
+    }
+  }
   function aim(pos, target, fov) {
     room.chair.visible = true;
     v.camera.fov = fov * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1; v.controls.target.copy(target); v.camera.position.copy(pos); v.controls.update();
+    clearProps(pos, target, v.camera.fov);
     shoot(pos, target);
   }
   // Cadrage : la tête garde toujours de l'air au-dessus d'elle. Les murs sont traversables pour reculer.
@@ -245,7 +268,7 @@ export function createPlayer(v, ui) {
           if (!chairTaken() && (!chairClear(c) || chairAhead(c, v.pos(a)))) room.chair.visible = false; // comme sur un tournage : on retire la chaise vide qui gênerait le plan
           if (!near) a.faceYaw = Math.atan2(c.x - v.pos(a).x, c.z - v.pos(a).z);
           if (standing) { const open = toB.clone().lerp(camDir, camDir.dot(toB) < 0.2 ? 0.85 : 0.6); a.faceYaw = Math.atan2(open.x, open.z); } // comme au théâtre : de trois quarts, jamais de profil
-          a.cheat = standing ? 0.55 : !near ? 0 : a.id === 'tobi' ? 0.5 : 0.35; b.cheat = 0; // assis aussi, il ne plonge pas la tête vers Nox
+          a.cheat = standing ? 0.55 : a.id === 'tobi' ? (near ? 0.5 : 0) : 0.65; b.cheat = 0; // Nox et les logos tournent toujours le visage vers nous // assis aussi, il ne plonge pas la tête vers Nox
           return;
         }
       }

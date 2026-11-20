@@ -25,12 +25,13 @@ window.auditCadrage = async (names) => {
     // Un meuble devant la caméra : on sonde le centre de l'image.
     const f = p.camera.getWorldDirection(new T.Vector3()), right = new T.Vector3().crossVectors(f, new T.Vector3(0, 1, 0)).normalize(), upv = new T.Vector3().crossVectors(right, f);
     const th = Math.tan((p.camera.fov * Math.PI) / 360), tw = th * p.camera.aspect;
-    let front2 = 0;
+    let front2 = 0; const names = new Set();
     for (let i = -1; i <= 3; i++) for (let j = -2; j <= 2; j++) {
       ray.set(c, f.clone().addScaledVector(right, (j / 2.6) * tw).addScaledVector(upv, (i / 3.6) * th).normalize()); ray.far = L * 0.55;
-      if (ray.intersectObject(p.room.group, true).some((x) => x.point.y > 0.06 && shown(x.object) && x.object.name !== 'miroir')) front2 += 1;
+      const hit = ray.intersectObject(p.room.group, true).find((x) => x.point.y > 0.06 && shown(x.object) && x.object.name !== 'miroir');
+      if (hit) { front2 += 1; names.add(hit.object.name || hit.object.parent?.name || hit.object.type); }
     }
-    if (front2 > 2) return `meuble devant (${Math.round((front2 / 25) * 100)} %)`;
+    if (front2 > 2) return `meuble devant (${Math.round((front2 / 25) * 100)} %, ${[...names].join(', ')})`;
     ray.set(c, d.normalize()); ray.far = L - 0.15;
     return ray.intersectObject(p.room.group, true).some((i) => shown(i.object) && i.object.name !== 'miroir') ? 'caché' : null;
   };
