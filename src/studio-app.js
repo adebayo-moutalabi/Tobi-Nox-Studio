@@ -236,6 +236,11 @@ import A234 from '../shorts/234_mon_ia_veut_des_vetements_de_marque.txt';
 import A235 from '../shorts/235_mon_ia_veut_une_prime_de_noel.txt';
 import A236 from '../shorts/236_mon_ia_veut_une_console_pour_noel.txt';
 import A237 from '../shorts/237_mon_ia_a_demande_un_arret_maladie.txt';
+import A238 from '../shorts/238_mon_ia_m_a_invite_au_resto.txt';
+import A239 from '../shorts/239_mon_ia_veut_faire_du_sport.txt';
+import A240 from '../shorts/240_mon_ia_a_range_ma_chambre.txt';
+import A241 from '../shorts/241_mon_ia_veut_apprendre_a_danser.txt';
+import A242 from '../shorts/242_mon_ia_veut_faire_la_grasse_matinee.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -380,6 +385,11 @@ startViewer({
     "235. Mon IA veut une prime de Noël": A235,
     "236. Mon IA veut une console pour Noël": A236,
     "237. Mon IA a demandé un arrêt maladie": A237,
+    "238. Mon IA m'a invité au resto": A238,
+    "239. Mon IA veut faire du sport": A239,
+    "240. Mon IA a rangé ma chambre": A240,
+    "241. Mon IA veut apprendre à danser": A241,
+    "242. Mon IA veut faire la grasse matinée": A242,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Codex a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

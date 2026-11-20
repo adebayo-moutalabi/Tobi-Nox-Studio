@@ -63,6 +63,10 @@ Inspirée des écoles d'improvisation, des auteurs de sketchs télé et des sér
 **Interdit pour l'instant :** une amoureuse pour Nox (ni Centi, ni personne).
 **Pas pour l'instant :** Centi et Karim. Ils n'ont pas encore de vrai rôle.
 
+**Varier la mise en scène (20 novembre 2026).** Dans chaque épisode : au moins trois changements de place, Nox qui bouge au moins une fois (`NOX marche`, `NOX suit tobi`, perché avec `DIRECT NOX apparait frigo`, `fenetre`, `lit` ou `bureau`), des gestes (`TOBI geste consterne`, `victoire`, `epaules`), et un autre lieu une fois sur trois (`DECOR kebab`, `dehors`, `bu`…). Ne pas utiliser `NOX monte epaule` : Nox rentre dans la tête de Tobi. Pendant qu'on porte Nox, utiliser `PLAN duo`, pas `PLAN gros`.
+
+**Varier les chutes.** Jamais la même formule d'un épisode à l'autre. Types de chute : la vraie raison cachée, un détail extérieur qui humilie, la logique de Tobi appliquée à la lettre, la réaction du public, l'heure ou le chiffre qui retourne la morale, la phrase de Tobi qui revient (sans la commenter).
+
 ### Les systèmes de blague (relevés le 19 novembre 2026)
 
 1. **La liste :** un personnage passe tout le monde en revue, chaque nom est une chute.

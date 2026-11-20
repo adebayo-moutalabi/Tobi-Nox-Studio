@@ -1,0 +1,39 @@
+# MON IA VEUT APPRENDRE À DANSER
+# Pitch : Nox veut apprendre à danser. Pour Tobi, un robot qui danse, c'est ridicule. La vidéo de Nox fait deux millions de vues. Tobi veut danser dans la suivante.
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX apparait bureau
+FONDU direct
+ACCROCHE Son IA veut apprendre à danser
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux apprendre à danser.
+PLAN gros TOBI
+TOBI dit (ironique) Un robot qui danse ? Tout le monde va se moquer.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+DIRECT NOX marche centre
+NOX danse 3
+TEMPS Le lendemain | Vidéo de Nox | 2 millions de vues
+PLAN gros TOBI
+TOBI dit (surpris) Deux millions ?!
+PLAN gros NOX
+NOX dit (fier) Tout le monde s'est moqué. Deux millions de fois.
+PLAN gros TOBI
+TOBI dit (excite) Ok, ok. Je danse dans la prochaine. Filme-moi. Regarde ça.
+TOBI danse 3
+TEMPS Le lendemain | Vidéo de Nox et Tobi | 3 millions de vues
+PLAN gros TOBI
+TOBI dit (excite) Trois millions ! Grâce à moi !
+PLAN gros NOX
+NOX dit (calme) Je te lis le commentaire le plus aimé ?
+PLAN gros TOBI
+TOBI dit (fier) Vas-y.
+PLAN gros NOX
+NOX dit (constat) « Le robot danse trop bien. Mais c'est qui, le monsieur qui bouge derrière ? »
+PLAN gros TOBI
+TOBI dit (gene) Le monsieur ?
+PLAN gros NOX
+NOX dit (punchline) Ils t'ont pris pour le décor.
+ATTENDRE 0.4

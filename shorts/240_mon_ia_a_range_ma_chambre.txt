@@ -1,0 +1,42 @@
+# MON IA A RANGÉ MA CHAMBRE
+# Pitch : Nox veut ranger. Pour Tobi, son bazar est organisé : chaque chose a sa place. Nox range quand même. Une heure plus tard, Tobi cherche son téléphone.
+
+AMBIANCE jour
+DIRECT TOBI assis
+DIRECT NOX marche centre
+FONDU direct
+ACCROCHE Son IA a rangé sa chambre
+PLAN gros NOX
+NOX dit (calme) Tobi. Je range la chambre.
+PLAN gros TOBI
+TOBI dit (fier) Touche à rien. Mon bazar, c'est organisé.
+PLAN gros NOX
+NOX dit (curieux) Organisé comment ?
+PLAN gros TOBI
+TOBI dit (fier) Chaque chose a sa place. Moi, je sais où tout est.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+TEMPS Une heure plus tard | Chambre | Rangée
+TOBI leve
+PLAN gros TOBI
+TOBI dit (curieux) Nox ? Il est où, mon téléphone ?
+NOX suit tobi
+TOBI marche armoire
+PLAN gros TOBI
+TOBI dit (gene) Pas là.
+TOBI marche lit
+PLAN gros TOBI
+TOBI dit (panique) Pas là non plus ! Nox ! T'as tout changé de place !
+NOX seul
+PLAN gros NOX
+NOX dit (calme) Non. J'ai tout remis à sa place.
+PLAN gros TOBI
+TOBI dit (colere) Et elle est où, la place de mon téléphone ?
+PLAN gros NOX
+NOX dit (constat) Le frigo. C'est là que tu le mets tous les soirs.
+TOBI frigo
+PLAN gros TOBI
+TOBI dit (surpris) Il est froid.
+PLAN gros NOX
+NOX dit (punchline) Comme d'habitude. J'ai respecté ton organisation.
+ATTENDRE 0.4

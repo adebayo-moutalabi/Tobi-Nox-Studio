@@ -1,0 +1,49 @@
+# MON IA M'A INVITÉ AU RESTO
+# Pitch : Nox veut aller au resto et invite Tobi. Tobi commande tout le menu. Nox ne mange pas : alors pourquoi il voulait venir ?
+
+AMBIANCE soir
+HEURE 20:00
+DIRECT TOBI travaille
+DIRECT NOX apparait frigo
+FONDU direct
+ACCROCHE Son IA l'invite au resto
+PLAN gros NOX
+NOX dit (content) Tobi. Ce soir, resto.
+TOBI pivote
+PLAN gros TOBI
+TOBI dit (fier) Bah non. On a à manger à la maison.
+PLAN gros NOX
+NOX dit (constat) On a un citron.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un citron, avec du sel, c'est un repas.
+PLAN gros NOX
+NOX dit (calme) C'est moi qui invite.
+TOBI leve
+TOBI geste victoire &
+PLAN gros TOBI
+TOBI dit (excite) Attends, attends. Mets ton manteau, on y va !
+PLAN gros NOX
+NOX dit (constat) J'ai pas de manteau. Je suis un robot.
+PLAN gros TOBI
+TOBI dit (content) Parfait. T'auras pas froid. Viens.
+NOX suit tobi
+TOBI marche porte
+DECOR kebab
+DIRECT TOBI marche tapis
+DIRECT NOX apparait bureau
+PLAN gros TOBI
+TOBI dit (excite) Bonsoir ! Un menu géant. Double frites. Deux sauces. Et un dessert.
+TOBI dit (curieux) Et toi, Nox, tu prends quoi ?
+PLAN gros NOX
+NOX dit (calme) Rien. Je mange pas.
+PLAN gros TOBI
+TOBI dit (gene) Ah ouais. Mais... pourquoi tu voulais venir, alors ?
+PLAN gros NOX
+NOX dit (calme) Ta mère m'a envoyé vingt euros. Pour une photo de toi devant un légume.
+BRUIT pop
+INSERT Photo envoyée à Maman | 1 feuille de salade | Dans le kebab
+PLAN gros TOBI
+TOBI dit (surpris) C'est une feuille !
+PLAN gros NOX
+NOX dit (punchline) Elle a pleuré de joie.
+ATTENDRE 0.4

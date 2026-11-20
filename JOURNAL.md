@@ -418,6 +418,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 20 novembre 2026 : épisodes 221 à 230 (classement des excuses, « T'es fâché ? », mère et IA, septembre contre novembre, mère contre livreur, parents-profs en 2045, repas de famille, train pour Paris au Texas, vocaux partie 2, rumeur du groupe de la famille).
 - Analyse des 15 Shorts publiés : recette « Mon IA veut + privilège humain, phrases de parent, boomerang ». Épisodes 231 à 237 écrits avec cette recette (week-end, youtubeur, chambre, marque, prime de Noël, console, arrêt maladie).
 - « Je préfère être honnête » et « Fun fact » retirés de 25 épisodes non publiés, chaque réplique réécrite. Charte mise à jour.
+- Épisodes 238 à 242 avec déplacements, Nox perché ou qui suit Tobi, changements de lieu et chutes variées. Règles de mise en scène ajoutées à la charte. Porter Nox sur l'épaule est mis de côté : il rentre dans la tête de Tobi.
 
 ## À faire
 

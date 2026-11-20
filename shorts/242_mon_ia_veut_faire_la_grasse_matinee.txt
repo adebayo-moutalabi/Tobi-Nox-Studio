@@ -1,0 +1,40 @@
+# MON IA VEUT FAIRE LA GRASSE MATINÉE
+# Pitch : Samedi, huit heures. Nox veut faire la grasse matinée. Tobi lui sort la phrase des parents : le monde appartient à ceux qui se lèvent tôt. Six heures plus tard, qui dort ?
+
+AMBIANCE jour
+DATE Samedi
+HEURE 08:00
+DIRECT TOBI marche tapis
+DIRECT NOX apparait lit
+FONDU direct
+ACCROCHE Son IA veut faire la grasse matinée
+PLAN gros TOBI
+TOBI dit (fier) Nox ! Debout ! Le monde appartient à ceux qui se lèvent tôt.
+PLAN gros NOX
+NOX dit (calme) Il est huit heures. C'est samedi.
+PLAN gros TOBI
+TOBI dit (fier) Moi, je suis debout depuis six heures.
+PLAN gros NOX
+NOX dit (constat) Tu t'es pas couché.
+PLAN gros TOBI
+TOBI dit (gene) Bah... c'est pareil.
+TOBI marche bureau
+PLAN gros TOBI
+TOBI dit (fier) Regarde-moi bien. Je vais être productif.
+TOBI travaille
+PLAN gros NOX
+NOX dit (calme) Je regarde.
+TEMPS Six heures plus tard | Samedi | 14 h
+LUMIERE vive
+DIRECT NOX marche bureau
+PLAN gros NOX
+NOX dit (content) Tobi ! Debout ! Le monde appartient à ceux qui se lèvent tôt !
+PLAN gros TOBI
+TOBI dit (gene) Hein ? Quoi ? J'ai fermé les yeux deux secondes...
+PLAN gros NOX
+NOX dit (constat) Six heures.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je réfléchissais. Les yeux fermés.
+PLAN gros NOX
+NOX dit (punchline) Il est quatorze heures. Le monde a déjà été vendu.
+ATTENDRE 0.4

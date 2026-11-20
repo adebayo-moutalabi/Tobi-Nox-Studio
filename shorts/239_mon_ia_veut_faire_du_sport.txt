@@ -1,0 +1,39 @@
+# MON IA VEUT FAIRE DU SPORT
+# Pitch : Nox veut faire du sport avec Tobi. Tobi promet dix kilomètres. Ils partent courir. Le parcours tourne court.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX apparait lit
+FONDU direct
+ACCROCHE Son IA veut faire du sport
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux faire du sport. Avec toi.
+PLAN gros TOBI
+TOBI dit (fier) Facile. Le sport, c'est dans la tête.
+PLAN gros NOX
+NOX dit (curieux) On fait combien ?
+PLAN gros TOBI
+TOBI dit (fier) Dix kilomètres. Allez, viens.
+DECOR dehors
+DIRECT TOBI marche tapis
+DIRECT NOX marche centre
+NOX suit tobi
+TOBI court porte
+PLAN gros TOBI
+TOBI dit (fier) Tu vois ? Tranquille.
+PLAN gros NOX
+NOX dit (constat) Deux cents mètres.
+TOBI court fenetre
+PLAN gros TOBI
+TOBI dit (triste) Attends... point de côté... Appelle quelqu'un.
+PLAN gros NOX
+NOX dit (calme) Le sport, c'est dans la tête.
+PLAN gros TOBI
+TOBI dit (colere) Et toi, t'as même pas transpiré !
+PLAN gros NOX
+NOX dit (constat) Une mamie vient de nous doubler.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Elle triche. Elle a un vélo.
+PLAN gros NOX
+NOX dit (punchline) Un déambulateur.
+ATTENDRE 0.4

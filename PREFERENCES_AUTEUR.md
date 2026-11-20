@@ -217,6 +217,13 @@ Les plus faibles cassent ce schéma : un sujet d'actualité de l'IA, plus de 50 
 
 L'auteur ne veut plus les formules répétées : « Je préfère être honnête » (Claude) et « Fun fact » (Gemini). Retirées de tous les épisodes non publiés le 20 novembre 2026.
 
+Retour du 20 novembre 2026 (soir) : la recette marche, mais répétée elle devient lassante et générique. « On dirait pas un vrai sketch. » Il veut :
+- des chutes de types différents, jamais la même formule (« C'est ma phrase ! » revenait dans tous les épisodes 231 à 237) ;
+- du langage parlé (« bah », « attends », hésitations) et une vraie situation ;
+- des personnages qui bougent, changent de place et de lieu, une caméra qui les suit. Nox était « assis » dans 203 épisodes ;
+- des écrans et des fenêtres qui ne se ressemblent pas d'un épisode à l'autre.
+Animations jugées pas naturelles : Tobi semble marcher dans l'air, et Nox sur l'épaule rentre dans la tête de Tobi. Ne plus utiliser `NOX monte epaule` tant que ce n'est pas corrigé.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.
