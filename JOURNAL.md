@@ -420,6 +420,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - « Je préfère être honnête » et « Fun fact » retirés de 25 épisodes non publiés, chaque réplique réécrite. Charte mise à jour.
 - Épisodes 238 à 242 avec déplacements, Nox perché ou qui suit Tobi, changements de lieu et chutes variées. Règles de mise en scène ajoutées à la charte. Porter Nox sur l'épaule est mis de côté : il rentre dans la tête de Tobi.
 - Bugs de mise en scène corrigés : Nox qui suivait Tobi sans jamais s'arrêter (il court après lui dans tous les lieux), Nox posé au sol près de la porte quand le script croyait le percher sur le frigo, et un personnage perché qui marchait dans le vide. Le Studio vide les « suit » à chaque changement de lieu, fait sauter au sol un personnage perché avant de marcher, et refuse une place inconnue. `controle-episodes` signale les places inconnues et un « NOX suit » jamais arrêté.
+- Retour de l'auteur : il préfère ses anciens épisodes en favoris (50 à 60 s) et trouve la mise en scène récente déréglée. Noté dans les préférences, avec la contradiction sur la durée.
 
 ## À faire
 
