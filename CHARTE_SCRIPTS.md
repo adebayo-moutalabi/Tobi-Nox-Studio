@@ -10,7 +10,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Comprendre sans description :** dans les 8 premières secondes, le dialogue dit qui veut quoi, pourquoi, et ce qui peut mal tourner.
 - **Faire entrer dans l'histoire :** chaque changement est dit ou montré. Une réplique très courte sert à la chute, pas à expliquer le contexte.
 - **Montrer les informations :** utiliser `PC`, `PLAN pc`, `TOBI appelle`, `TOBI raccroche` ou `INSERT` quand cela rend l'histoire plus claire.
-- **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ».
+- **Parler comme de vrais humains :** les réponses arrivent vite, se coupent parfois et contiennent des réactions naturelles, comme « Attends », « Hein ? » ou « Euh… ». Ces mots vont dans une réplique qui fait avancer : jamais une réplique qui n'est que du remplissage (« Bah, t'en es où ? », « Ah bon ? »).
 - **Mettre de l'émotion :** chaque réplique a une intention claire, adaptée à la scène : envie, gêne, panique, tristesse ou mauvaise foi.
 - **Regarder avant de parler :** le Studio tourne le personnage vers le prénom appelé, sinon vers celui qui répond ensuite. Pour changer d'interlocuteur, appeler le personnage par son prénom.
 - **Écrire à l'oral :** Tobi, Nox et Codex disent « T'as », « J'ai plus », « C'est pas » et « Je sais pas ». Claude reste plus posé.
@@ -19,7 +19,7 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 - **Montrer le temps :** chaque saut dans le temps a un écran clair, comme « Vingt-quatre heures plus tard ». Il reste assez longtemps pour être lu.
 - **Messages à l'écran :** un message de téléphone utilise `TOBI message Contact | Message reçu | > Message envoyé`, affiché comme une messagerie. Si l'heure compte, écrire `[23:47] Message reçu` ou `> [23:48] Message envoyé`. Un contenu d'ordinateur utilise `PC`, affiché comme un écran de MacBook.
 - **Une seule idée :** on doit pouvoir résumer l'épisode en une phrase.
-- **Rythme clair :** 40 à 90 s selon l'idée, sans allonger pour rien, répliques claires, souvent de 6 à 14 mots, un plan différent à presque chaque réplique, un écran chiffré au moment clé.
+- **Rythme clair :** 26 à 38 s, 50 au plus (60 seulement si le rythme est irréprochable), 12 à 16 répliques, un plan, un déplacement ou un écran nouveau toutes les 5 s, un écran chiffré au moment clé (règle de l'audit du 22 novembre 2026).
 - **Logique avant tout :** chaque étape découle de la précédente. Aucun personnage ne sait quelque chose sans raison.
 - **Une chute comprise tout de suite :** elle doit faire rire sans deviner une suite. Le spectateur a déjà vu tous les éléments nécessaires.
 - **Le test du rire :** si une réplique donne seulement une information, elle doit aussi faire rire ou préparer un rire proche.
@@ -29,6 +29,23 @@ Depuis le 5 novembre 2026, ces règles passent avant toutes les autres :
 ## Partir d'un brouillon ou de l'actualité
 
 Un brouillon, une idée d'actualité ou un texte venu d'ailleurs donne seulement le sujet. On réécrit chaque réplique avec la voix du personnage : Tobi rebondit avec mauvaise foi, Nox répond en peu de mots, Claude reste doux et honnête, Codex agit trop vite, Gemini en sait trop. On ramène l'histoire dans la chambre de Tobi, avec ses soucis d'étudiant. Une information préparée se montre à l'écran : liste dans `Notes`, mail, message.
+
+## L'audit du 22 novembre 2026
+
+Ces règles viennent de l'audit de la chaîne fait par l'auteur. Elles passent avant les règles plus anciennes de cette charte.
+
+- **Ouvrir au milieu de la catastrophe :** la première réplique annonce un fait déjà arrivé (« Tobi, j'ai vendu ta chaise », « La CAF m'a coupé mes APL »). Plus d'ouverture molle sur Nox assis qui pose une question calme.
+- **Zéro réplique neutre :** chaque réplique déclenche un clash, une mauvaise foi ou une escalade.
+- **Relancer toutes les 5 secondes :** changer de plan, faire bouger Tobi, un écran court (10 à 15 mots au plus), un autre personnage ou une autre ambiance.
+- **Un seul saut dans le temps** (`TEMPS`) par épisode.
+- **Des sujets que tout le monde connaît :** CROUS, CAF, découvert, partiels, Inès, parents, stage, voisins, flemme. La couche tech et IA reste compréhensible sans être développeur.
+- **La chute :** une règle de trois, puis le retournement contre Tobi. La meilleure blague est toujours la dernière réplique.
+- **Le commentaire épinglé :** une question courte par épisode, épinglée sous la vidéo, jamais dans la vidéo et jamais « Abonne-toi ».
+- **Fin nette :** plus d'écran « Abonne-toi » à la fin. La vidéo s'arrête 0,4 seconde après la dernière réplique (`ATTENDRE 0.4`).
+- **Inès** est le crush de Tobi (jamais « Léa »). Nox n'a toujours pas d'amoureuse.
+- **La mère :** autorité suprême hors champ, par appels ou messages. Elle détruit l'ego de Tobi avec une phrase simple et s'allie souvent à Nox.
+- **Le monde de la série :** le Tobicoin (vaut 0 €), les 340 noms de domaine, le sweat jaune jamais lavé depuis octobre, le frigo bruyant, le solde à 4 €, la chambre de 9 m².
+- **Test A/B :** sur les six prochains Shorts publiés, trois avec « Aie la vision » ou « J'appelle ta mère », trois sans. Comparer la rétention finale et les commentaires.
 
 ## L'essence de la série (retrouvée le 21 novembre 2026)
 
@@ -41,7 +58,7 @@ L'auteur préfère les épisodes 1 à 100 : ils racontent une vraie histoire, av
 5. **Une vraie histoire :** le temps passe (`TEMPS Trois jours plus tard`), il y a une fausse victoire (la bourse arrive), puis le retournement (le loyer est prélevé).
 6. **Le rappel en fin d'épisode :** une phrase du début revient avec un autre sens (« Même si tu me supplies ? » « Commence après le kebab. »).
 7. **La relance de Tobi :** il ne s'avoue jamais vaincu, il trouve une idée encore plus absurde. Nox conclut (« Tobi. Non. », « J'appelle ta mère. »), mais pas à chaque fois.
-8. **Durée :** 35 à 50 secondes, jusqu'à 60 si l'histoire le demande. Environ 20 à 30 répliques courtes.
+8. **Durée :** 26 à 38 secondes, 50 au plus (règle de l'audit du 22 novembre 2026). 12 à 16 répliques, un seul saut dans le temps.
 
 ### Les titres
 
@@ -126,10 +143,10 @@ Tobi se raconte une grande vision, Nox le ramène à la réalité, et Tobi trouv
 
 **Les Aînés** sont les logos de Claude Code, Codex et Gemini, animés comme des personnages. Ils viennent juger Tobi ou se contredire.
 
-- **Claude Code** est un grand frère sérieux et bienveillant. Il voit le problème, reste honnête et dit la vérité avec douceur : Il parle simplement et ne répète pas de formule. « Puis-je » devient rare et sert seulement une vraie blague.
-- **Codex** est un stagiaire surexcité. Il agit avant la fin de la phrase et va trop loin : « C'est réglé. »
-- **Gemini** est le premier de la classe. Il a tout lu, compte tout et donne des chiffres, parfois faux, avec beaucoup d'assurance. Pas de formule fixe : jamais « Fun fact » (décision du 20 novembre 2026).
-- **Aucune formule toute faite répétée d'un épisode à l'autre :** ni « Je préfère être honnête » pour Claude, ni « Fun fact » pour Gemini. Le caractère passe par ce qu'ils disent, pas par une phrase rituelle.
+- **Claude Code** est un grand frère sérieux et bienveillant, posé, à la voix grave, un peu philosophe : avocat ou juge malgré lui, toujours trop réfléchi dans l'urgence. Il voit le problème, reste honnête et dit la vérité avec douceur : Il parle simplement et ne répète pas de formule. « Puis-je » devient rare et sert seulement une vraie blague.
+- **Codex** est un stagiaire surexcité, rapide et radical. Il agit avant la fin de la phrase et règle les problèmes de façon extrême (supprime l'inscription à la fac, change le Wi-Fi, rappelle la CAF trois cents fois) : « C'est fait. »
+- **Gemini** est le premier de la classe, hyper enthousiaste. Il a tout lu, compte tout et donne des chiffres, parfois faux, avec beaucoup d'assurance. Son « Fun fact ! » hors sujet ou gênant au pire moment revient **seulement quand l'épisode s'y prête** (choix de l'auteur du 22 novembre 2026, qui assouplit le retrait du 20 novembre) : jamais par réflexe.
+- **Aucune formule toute faite répétée d'un épisode à l'autre :** jamais « Je préfère être honnête » pour Claude ; le « Fun fact » de Gemini, seulement quand l'épisode s'y prête. Le caractère passe par ce qu'ils disent, pas par une phrase rituelle.
 
 Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLAUDE dit (calme) ...`.
 
@@ -142,7 +159,7 @@ Dans un script, ils sont déjà là : `DIRECT CLAUDE apparait bureau`, puis `CLA
 
 ## Les phrases de la série
 
-Ce sont les rendez-vous du public. Elles peuvent revenir souvent : **il faut surtout qu'elles tombent juste.**
+Ce sont les rendez-vous du public. **« Aie la vision » et « J'appelle ta mère » : une vidéo sur trois au plus** (audit du 22 novembre 2026). « Aie la vision » s'écrit toujours ainsi, jamais « J'ai la vision ». « J'appelle ta mère » sert seulement quand Tobi ment ou fait le malin. Varier : contre-attaque factuelle de Nox, phrase coupée (« Aie la vi— » « Non. »), ou Nox qui la retourne en chute (« Aie la vision, Tobi. »).
 
 | Qui | Phrase | Quand |
 |---|---|---|
@@ -153,9 +170,9 @@ Ce sont les rendez-vous du public. Elles peuvent revenir souvent : **il faut sur
 
 Règles : une phrase ne vient que si l'histoire y mène, et jamais deux fois la même chute à la suite. Le plaisir vient de les attendre, et parfois de les détourner : Tobi peut dire « J'appelle ma mère » avant Nox. La liste des épisodes est dans `SUIVI_GAGS.md`.
 
-## La structure, en 40 à 60 secondes
+## La structure, en 26 à 38 secondes
 
-Avec les vraies voix, le rythme est d'environ 3 mots par seconde : compter **140 à 170 mots de dialogue** et une trentaine de répliques. La durée affichée sans voix dans le Studio est trop longue d'environ un tiers : seule la vidéo avec les voix fait foi.
+Avec les vraies voix, le rythme est d'environ 3 mots par seconde : compter **80 à 115 mots de dialogue** et 12 à 16 répliques. La durée affichée sans voix dans le Studio est trop longue d'environ un tiers : seule la vidéo avec les voix fait foi.
 
 1. **Accroche, 0 à 3 s.** Une phrase qui donne envie de rester, sans introduction.
 2. **La question simple de Nox.**
@@ -314,7 +331,8 @@ NOX dit (resigne) J'appelle ta mère.
 - [ ] Un ton sur chaque réplique.
 - [ ] Personnages déjà en place, dialogue dès la première image.
 - [ ] Personne l'un dans l'autre, assis sur un meuble ou à côté d'un personnage debout : vérifier chaque place à l'image.
-- [ ] Durée vérifiée avec les vraies voix, entre 40 et 60 s.
+- [ ] Durée vérifiée avec les vraies voix, entre 26 et 38 s (50 au plus).
+- [ ] Une question courte pour le commentaire épinglé (jamais « Abonne-toi »).
 - [ ] `tools/audit-cadrage.js` ne signale rien : celui qui parle est toujours à l'image.
 
 ## Consigne à donner à une autre IA

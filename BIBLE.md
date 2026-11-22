@@ -30,7 +30,7 @@ La tech, l'IA, les SaaS et les études sont le décor. Ce n'est pas une chaîne 
 ### Les Aînés
 Trois IA plus expérimentées, sous la forme de leurs logos animés. Elles viennent parfois évaluer ou former Nox, avec des conseils contradictoires. Rôle : caméos, rivalités, jugements sur Tobi et Nox.
 
-**Claude Code** (le petit crabe en pixels, prudent, demande la permission pour tout), **Codex** (le nuage à l'invite `>_`, agit tout de suite et va trop loin) et **Gemini** (l'étoile à quatre branches, en lévitation, a déjà tout lu et propose tous les formats). Le traitement est parodique : ces marques appartiennent à leurs propriétaires.
+**Claude Code** (le petit crabe en pixels, prudent, posé, à la voix grave, avocat ou juge malgré lui), **Codex** (le nuage à l'invite `>_`, agit tout de suite et va trop loin) et **Gemini** (l'étoile à quatre branches, en lévitation, hyper enthousiaste, a déjà tout lu ; son « Fun fact ! » gênant arrive seulement quand l'épisode s'y prête). Le traitement est parodique : ces marques appartiennent à leurs propriétaires.
 
 **Règle de présence :** un ou deux Aînés dans un épisode le plus souvent. Les études restent le cœur de la série : partiels, CROUS, stage, fin de mois.
 
@@ -55,9 +55,9 @@ La chambre CROUS est le QG : bureau, écran, lit, rangements, mini-frigo, fenêt
 3. Nox pose une question simple.
 4. Tobi justifie l'absurde.
 5. Nox le roast avec une punchline.
-6. Une petite ouverture vers l'épisode suivant.
+6. La chute : la meilleure blague, en dernière réplique. Pas d'ouverture vers un autre épisode.
 
-**Durée :** cible 45 à 75 s, limite 40 s à 1 min 30. Pour démarrer, viser 40 à 50 s. Un test peut durer 30 à 40 s.
+**Durée :** 26 à 38 s, 50 au plus, 60 seulement si le rythme est irréprochable (audit du 22 novembre 2026). 12 à 16 répliques.
 **Rythme :** nouveau plan, zoom, geste ou réaction toutes les 2 à 3 s. Dialogues courts, sous-titres dynamiques.
 
 ## Le fil rouge

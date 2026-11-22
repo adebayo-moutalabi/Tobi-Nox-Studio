@@ -253,3 +253,21 @@ Pas de titres forcés en « Mon IA m'a vu… », « Mon IA a vu… », « Mon IA
 
 L'auteur n'est pas convaincu par les derniers épisodes (243 à 261) : ils reprennent trop ce qu'il a déjà publié. Il veut de l'original. Analyse de la chaîne ce jour : 53 abonnés, 17 Shorts, tous entre 726 et 2 400 vues. Les meilleurs reposent sur une situation que tout le monde connaît, vécue par Nox comme un enfant. Ce qui manquait : des **situations neuves**, pas une nouvelle variante de « Nox réclame un privilège, Tobi refuse ».
 Épisodes 262 à 269, chacun sur une idée jamais faite et une mécanique différente : bug vécu comme un mal d'enfant (hoquet, virus), mensonge de parent qui se retourne (petite souris), double standard (passager ou bagage dans le tram), nouveau format (documentaire animalier chuchoté par Gemini), l'IA contre l'administration (CAF), confidences de nuit (parle en dormant), jeu de cour d'école (action ou vérité).
+
+## L'audit de l'auteur (22 novembre 2026)
+
+L'auteur a fait un audit complet de la chaîne et du Studio. Ses règles passent avant les anciennes. Contradictions relevées avec lui, et ses choix :
+
+- **Durée :** l'audit dit 26 à 38 s, 50 au plus, 12 à 16 répliques, un seul `TEMPS`. **Choix : la règle de l'audit.** Elle remplace « 35 à 50 s, jusqu'à 60 » (21 novembre) et la tolérance de 50 à 60 s pour ses favoris (20 novembre).
+- **« Fun fact » de Gemini :** retiré le 20 novembre, remis en avant par l'audit. **Choix : selon les épisodes**, jamais par réflexe.
+- **Question au spectateur :** « pas de question à la fin » (19 novembre) ; l'audit veut une question épinglée. **Choix : une question en commentaire épinglé, hors de la vidéo.** Questions écrites pour les épisodes 201 à 273.
+- **Épisodes publiés :** la règle était de ne jamais les modifier. **Choix : remplacer les originaux** de 34 (LinkedIn) et 58 (24 heures) par les versions courtes de l'audit. Les titres publiés ne changent pas.
+- **Écran « Abonne-toi » :** gardé à 2,5 s le 13 novembre, **supprimé** par l'audit. La vidéo s'arrête 0,4 s après la dernière réplique.
+- **« Aie la vision » et « J'appelle ta mère » :** la charte disait « peuvent revenir souvent » ; l'audit dit **une vidéo sur trois au plus**, avec un test A/B sur les six prochains Shorts.
+- **Langage parlé :** l'auteur voulait des « bah », « attends » (20 novembre) ; l'audit interdit les répliques neutres. Les deux tiennent : ces mots restent, mais jamais dans une réplique qui n'est que du remplissage.
+
+Autres écarts, sans question :
+- L'audit compte 9 Shorts publiés ; la chaîne en montre 17. Les chiffres de durée et de vues de l'audit restent justes.
+- L'épisode 8 du backlog (entretien de stage passé par Nox) ressemble à l'épisode 51 non publié (Codex a eu mon stage).
+- L'épisode 5 du backlog finissait sur « C'est moi qu'elle trouve drôle » : cela laisse croire à une romance entre Nox et Inès. Chute remplacée : Inès paie le kebab.
+- « Mon IA a été moi pendant 24 heures » (58) n'apparaît pas dans les Shorts de la chaîne : sans doute publiée en vidéo longue.
