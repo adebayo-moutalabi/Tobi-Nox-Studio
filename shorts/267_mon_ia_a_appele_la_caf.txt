@@ -1,41 +1,34 @@
 # MON IA A APPELÉ LA CAF
-# Pitch : Nox appelle la CAF à la place de Tobi : une IA, ça n'attend pas. Trois heures de musique d'attente plus tard, Nox découvre la haine. Puis la vengeance.
+# Pitch : La CAF a coupé les APL de Tobi. Nox appelle en pensant régler ça en deux minutes. Quatre heures plus tard, il découvre la haine, puis une faille administrative.
 
 AMBIANCE jour
-DIRECT TOBI marche tapis
+DIRECT TOBI marche bureau
 DIRECT NOX assis
 FONDU direct
-ACCROCHE Son IA a appelé la CAF
-PLAN gros NOX
-NOX dit (fier) Tobi. Laisse, j'appelle la CAF. Une IA, ça attend pas au téléphone.
-TEMPS Une heure plus tard | Attente | 58 minutes
-PLAN gros NOX
-NOX dit (calme) Votre appel est important pour nous.
+ACCROCHE La CAF a coupé ses APL : son IA appelle
 PLAN gros TOBI
-TOBI dit (curieux) Bah, t'en es où ?
+TOBI dit (colere) Nox ! La CAF m'a coupé mes APL ! Appelle-les, je deviens fou !
 PLAN gros NOX
-NOX dit (sec) Même musique. Quatre cents fois. Je la connais par cœur. En binaire.
-TEMPS Trois heures plus tard | Attente | 3 h 12
+NOX dit (fier) Facile. Une IA ne perd jamais contre l'administration.
+TEMPS Quatre heures plus tard | Musique d'attente | 847e boucle
 PLAN gros NOX
-NOX dit (colere) Tobi. Je crois que je ressens de la haine. C'est nouveau.
+NOX dit (colere) Tobi. Je viens de débloquer une nouvelle émotion. La haine.
 PLAN gros TOBI
-TOBI dit (fier) Bienvenue chez les humains.
+TOBI dit (fier) Bienvenue en France.
 BRUIT ding
-PLAN gros NOX
-NOX dit (excite) Ça décroche !
-INSERT CAF | Assistant virtuel | Bonjour, je suis une IA
+INSERT CAF | Assistant virtuel | Bonjour, je suis l'IA de la CAF
 PLAN gros NOX
 NOX dit (surpris) ...C'est une IA.
 PLAN gros TOBI
-TOBI dit (content) Parfait ! Entre IA, vous allez vous comprendre.
+TOBI dit (excite) Parfait ! Entre robots, négocie ! Aie la vision !
 PLAN gros NOX
-NOX dit (constat) Elle veut un justificatif de domicile.
+NOX dit (sec) Elle veut ton RIB, un justificatif de domicile et l'acte de naissance de ton frigo.
 PLAN gros TOBI
-TOBI dit (gene) Euh... t'en as un, toi ?
+TOBI dit (gene) Hein ? Dis-lui que je suis étudiant et fauché !
 PLAN gros NOX
-NOX dit (constat) J'habite sur ton bureau. Elle a dit : dossier incomplet. Elle a raccroché.
+NOX dit (calme) C'est fait. Je lui ai envoyé ton compte en banque et tes notes. Elle a eu pitié.
 PLAN gros TOBI
-TOBI dit (resigne) Tu vois. Personne gagne contre la CAF.
+TOBI dit (content) Oui ! Mes deux cents euros d'APL sont débloqués ?
 PLAN gros NOX
-NOX dit (punchline) Je l'ai rappelée. Je lui ai mis la musique. Maintenant, c'est elle qui attend.
+NOX dit (punchline) Oui. Sur mon compte. Elle t'a déclaré comme ma personne à charge.
 ATTENDRE 0.4

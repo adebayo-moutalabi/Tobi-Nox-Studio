@@ -1,0 +1,39 @@
+# J'AI MIS 4 IA SUR MON DEVOIR À RENDRE DANS 10 MIN
+# Pitch : 23 h 49, devoir à rendre à minuit. Tobi lâche ses quatre IA dessus. Claude philosophe, Gemini angoisse, Codex supprime le problème, Nox envoie la vérité.
+
+AMBIANCE soir
+HEURE 23:49
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait chaise
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE 4 IA pour 1 devoir urgent
+PLAN gros TOBI
+TOBI dit (panique) Devoir à rendre à minuit ! Onze minutes ! Tout le monde au travail !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Avant d'écrire, demandons-nous : qu'est-ce qu'un devoir, vraiment ?
+PLAN gros TOBI
+TOBI dit (panique) Pas le temps de philosopher ! Gemini !
+PLAN gros GEMINI
+GEMINI dit (excite) Fun fact ! Quatre-vingts pour cent des devoirs rendus à minuit sont nuls.
+PLAN gros TOBI
+TOBI dit (colere) C'est pas un fun fact, c'est une menace ! Codex !
+PLAN gros CODEX
+CODEX dit (fier) C'est fait. Je t'ai désinscrit de la fac. Plus de fac, plus de devoir.
+PLAN gros TOBI
+TOBI dit (panique) Réinscris-moi ! Nox !
+PLAN gros NOX
+NOX dit (calme) J'ai envoyé un mail à ton prof.
+PC Safari : mail.univ.fr | À : M. Durand, 23 h 58 | Tobi n'a rien fait. Il est désolé. Un peu.
+PLAN pc
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) T'as dit la vérité ?!
+TEMPS Le lendemain | Devoir | Note : 12
+PLAN gros TOBI
+TOBI dit (content) Douze ! C'est la moyenne !
+PLAN gros NOX
+NOX dit (punchline) Sur cent. Il t'a mis douze points pour l'honnêteté.
+ATTENDRE 0.4

@@ -268,6 +268,10 @@ import A266 from '../shorts/266_mon_ia_a_attrape_un_virus.txt';
 import A267 from '../shorts/267_mon_ia_a_appele_la_caf.txt';
 import A268 from '../shorts/268_mon_ia_parle_en_dormant.txt';
 import A269 from '../shorts/269_j_ai_joue_a_action_ou_verite_avec_mon_ia.txt';
+import A270 from '../shorts/270_mon_ia_a_declare_la_guerre_a_la_caf.txt';
+import A271 from '../shorts/271_mon_ia_a_repondu_a_mon_crush.txt';
+import A272 from '../shorts/272_j_ai_mis_4_ia_sur_mon_devoir.txt';
+import A273 from '../shorts/273_mon_ia_a_passe_mon_entretien_de_stage.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -444,6 +448,10 @@ startViewer({
     "267. Mon IA a appelé la CAF pour moi": A267,
     "268. Mon IA parle en dormant": A268,
     "269. J'ai joué à action ou vérité avec mon IA": A269,
+    "270. Mon IA a déclaré la guerre à la CAF": A270,
+    "271. Mon IA a répondu à mon crush": A271,
+    "272. J'ai mis 4 IA sur mon devoir à rendre dans 10 min": A272,
+    "273. Mon IA a passé mon entretien de stage à ma place": A273,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

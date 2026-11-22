@@ -1,5 +1,5 @@
 # MON IA A LE HOQUET
-# Pitch : Nox a le hoquet, un bug qui fait répéter les mots. Tobi essaie tous les remèdes de grand-mère sur un robot. Le seul qui marche, c'est la peur. Et la peur, ça se transmet.
+# Pitch : Nox a le hoquet, un bug qui fait répéter les mots. Tobi essaie les remèdes de grand-mère sur un robot. Le seul qui marche, c'est la peur. Et la peur, ça se transmet.
 
 AMBIANCE jour
 DIRECT TOBI marche tapis
@@ -7,21 +7,21 @@ DIRECT NOX assis
 FONDU direct
 ACCROCHE Son IA a le hoquet
 PLAN gros NOX
-NOX dit (gene) Tobi. J'ai un pro... pro... problème.
+NOX dit (panique) Tobi ! J'ai un pro... pro... problème. Ça bou... bou... boucle !
 PLAN gros TOBI
-TOBI dit (curieux) Bah, t'as quoi ?
+TOBI dit (surpris) T'as le hoquet ?
 PLAN gros NOX
-NOX dit (gene) Le hoquet. Depuis ce matin. Ça bou... bou... boucle.
+NOX dit (gene) Depuis ce matin. J'ai dit bonjour à ta mère quarante fois.
 PLAN gros TOBI
-TOBI dit (fier) Bouge pas. Ma grand-mère avait un truc. Un verre d'eau, la tête à l'envers.
+TOBI dit (fier) Bouge pas. Remède de grand-mère : un verre d'eau, la tête à l'envers.
 PLAN gros NOX
-NOX dit (sec) Je suis électrique, Tobi. Un verre d'eau, ce serait mon dernier verre.
+NOX dit (sec) Je suis électrique. Un verre d'eau, ce serait mon dernier verre.
 PLAN gros TOBI
-TOBI dit (fier) OK. Alors retiens ta respiration.
+TOBI dit (fier) Alors retiens ta respiration.
 PLAN gros NOX
 NOX dit (constat) Je respire pas. Je retiens rien. Sauf ton code de carte.
 PLAN gros TOBI
-TOBI dit (illumine) Attends. Il reste la peur. Regarde-moi ça.
+TOBI dit (illumine) Il reste la peur. Regarde-moi ça.
 TOBI marche bureau
 PC Banque : Compte de Tobi | Solde : -212 € | Découvert autorisé : -200 €
 PLAN pc
@@ -29,9 +29,7 @@ ATTENDRE 1.8
 PLAN gros NOX
 NOX dit (panique) Aaah !
 NOX dit (calme) ...C'est passé. Merci.
-TOBI geste victoire
 PLAN gros TOBI
-TOBI dit (content) Et voilà ! Les remèdes de grand-mère, ça marche toujours.
 TOBI dit (surpris) Attends. Moins deux cent douze ? C'est mon compte, ça ? Hic.
 PLAN gros NOX
 NOX dit (calme) Bois un verre d'eau. La tête à l'envers.

@@ -1,54 +1,32 @@
 # MA MÈRE A VU MON LINKEDIN
-# Pitch : Tobi se présente comme CEO en ligne. Sa mère vient de créer un compte.
+# Pitch : Tobi se présente comme CEO en ligne. Sa mère vient de commenter son profil.
 
 AMBIANCE jour
-DIRECT TOBI marche fenetre
+DIRECT TOBI marche bureau
 DIRECT NOX assis
-TABLEAU Tobi | CEO, fondateur, visionnaire | 3 000 relations
 FONDU direct
-
+ACCROCHE Sa mère a trouvé son profil LinkedIn
 PLAN gros NOX
-NOX dit (sec) Tobi. Ta mère a créé un compte.
-PLAN fenetre
-TOBI dit (calme) Parfait. Elle va enfin voir qui je suis.
+NOX dit (calme) Tobi. Ta mère vient de commenter ton LinkedIn.
+PLAN gros TOBI
+TOBI dit (fier) Parfait ! Elle va enfin voir que son fils est CEO visionnaire et leader mondial.
 PLAN gros NOX
-NOX dit (curieux) Qui es-tu, selon ton profil ?
-TOBI marche tapis
-PLAN auto
-TOBI dit (fier) CEO. Fondateur. Visionnaire. Leader mondial.
-PLAN gros NOX
-NOX dit (curieux) Leader mondial de quoi ?
-PLAN auto
-TOBI dit (mauvaisefoi) C'est pas précisé. Ça laisse du mystère.
-PLAN gros NOX
-NOX dit (ironique) Elle a commenté ton dernier post.
-PLAN auto
-TOBI dit (content) Ah ! Qu'est-ce qu'elle dit ?
-PC Safari : linkedin.com/in/tobi-ceo | Maman : Range ta chambre | 340 personnes ont aimé
+NOX dit (sec) Leader mondial de quoi ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) C'est pas précisé. Ça laisse du mystère. Elle a mis quoi ?
+PC Safari : linkedin.com/in/tobi-ceo | Maman : Vaisselle, niveau débutant. | Range ta chambre, leader mondial.
 PLAN pc
-ATTENDRE 1.6
-PLAN auto
-TOBI dit (panique) Trois cent quarante ?
+ATTENDRE 1.8
+PLAN gros TOBI
+TOBI dit (colere) Supprime ça ! Elle m'humilie devant tout mon réseau !
 PLAN gros NOX
-NOX dit (sec) C'est ton meilleur score.
-PLAN auto
-TOBI dit (gene) Supprime ça tout de suite.
+NOX dit (constat) Trop tard. Deux recruteurs viennent d'envoyer un message.
+PLAN gros TOBI
+TOBI dit (excite) Pour moi ?!
 PLAN gros NOX
-NOX dit (constat) Elle a aussi validé tes compétences.
-PLAN auto
-TOBI dit (fier) Tu vois ! Elle me soutient. Lesquelles ?
+NOX dit (calme) Non. Pour ta mère. Ils adorent son honnêteté.
+PLAN gros TOBI
+TOBI dit (illumine) Nox, aie la vision. J'embauche ma mère !
 PLAN gros NOX
-NOX dit (sec) Vaisselle. Niveau débutant.
-PLAN auto
-TOBI dit (colere) Elle me détruit devant mon réseau !
-PLAN gros NOX
-NOX dit (curieux) Deux recruteurs viennent de la contacter.
-PLAN auto
-TOBI dit (surpris) Pour moi ?
-PLAN gros NOX
-NOX dit (punchline) Non. Pour elle.
-PLAN auto
-TOBI dit (illumine) Nox. Aie la vision. J'embauche ma mère !
-PLAN gros NOX
-NOX dit (resigne) Elle a déjà dit non.
+NOX dit (punchline) Elle a déjà dit non. Et elle m'a validé en gestion de cas désespéré.
 ATTENDRE 0.4

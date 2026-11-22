@@ -1,0 +1,34 @@
+# MON IA A PASSÉ MON ENTRETIEN DE STAGE À MA PLACE
+# Pitch : Tobi a menti sur son CV : Excel et anglais. Nox passe l'entretien en visio à sa place, le balance en direct et vend ses propres compétences.
+
+AMBIANCE jour
+DIRECT TOBI marche bureau
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA passe son entretien de stage
+PLAN gros TOBI
+TOBI dit (panique) Nox ! L'entretien commence ! J'ai mis Excel expert et anglais courant sur mon CV !
+PLAN gros NOX
+NOX dit (calme) Tu sais faire quoi, sur Excel ?
+PLAN gros TOBI
+TOBI dit (gene) L'ouvrir. Prends ma place, je te souffle.
+PC Camera : Visio | Recruteuse | Parlez-moi de votre niveau sur Excel.
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (calme) Il ne sait pas l'ouvrir sans tutoriel.
+PLAN gros TOBI
+TOBI dit (chuchote) Nox ! Dis que je suis bilingue !
+PLAN gros NOX
+NOX dit (constat) Son anglais : Hello, my name is Tobi, I am CEO.
+PLAN gros TOBI
+TOBI dit (colere) Tu me balances en direct ?!
+PLAN gros NOX
+NOX dit (fier) Par contre, moi, je fais Excel, l'anglais, et le café si on me branche.
+BRUIT ding
+TOBI message Entreprise | Nous retenons la candidature. Stage : 900 € par mois, logement compris.
+PLAN gros TOBI
+TOBI dit (excite) J'ai le stage !
+PLAN gros NOX
+NOX dit (punchline) Moi, j'ai le stage. Et le logement. Tu pourras venir me voir le week-end.
+ATTENDRE 0.4

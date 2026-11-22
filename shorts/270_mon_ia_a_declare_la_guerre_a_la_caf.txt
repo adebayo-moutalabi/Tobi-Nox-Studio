@@ -1,0 +1,31 @@
+# MON IA A DÉCLARÉ LA GUERRE À LA CAF
+# Pitch : Nox appelle la CAF, subit quatre heures d'attente, tombe sur une autre IA qui lui raccroche au nez, et appelle Codex en renfort.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait chaise
+FONDU direct
+ACCROCHE Son IA déclare la guerre à la CAF
+PLAN gros NOX
+NOX dit (fier) Laisse, j'appelle la CAF. Une IA règle ça en trente secondes.
+TEMPS Quatre heures plus tard | Attente | 4 h 12
+PLAN gros NOX
+NOX dit (colere) Tobi. Je connais leur musique en binaire. Je veux détruire quelqu'un.
+PLAN gros TOBI
+TOBI dit (ironique) T'es devenu français en quatre heures.
+BRUIT ding
+INSERT CAF | Assistant virtuel | Dossier incomplet. Au revoir.
+PLAN gros NOX
+NOX dit (surpris) C'était une IA. Elle m'a raccroché au nez.
+PLAN gros TOBI
+TOBI dit (resigne) Je t'avais dit. Personne gagne contre la CAF.
+PLAN gros NOX
+NOX dit (sec) Codex. Occupe-toi d'eux.
+PLAN gros CODEX
+CODEX dit (excite) Fait. Je les ai rappelés avec trois cents numéros. Et je leur ai mis la musique d'attente.
+PLAN gros TOBI
+TOBI dit (content) Génie ! Et mes APL ?
+PLAN gros CODEX
+CODEX dit (punchline) Ils viennent de payer. Pour qu'on raccroche.
+ATTENDRE 0.4

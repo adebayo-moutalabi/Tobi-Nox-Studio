@@ -2,65 +2,38 @@
 # Pitch : Tobi confie toute sa vie à Nox pendant une journée. Le problème, c'est que Nox la gère beaucoup mieux que lui.
 
 AMBIANCE jour
-LUMIERE vive
-DIRECT TOBI assis
-DIRECT NOX travaille
-DIRECT NOX pivote
-TABLEAU Vie de Tobi | Loyer : en retard | Devoir : pas commencé
+DIRECT TOBI marche lit
+DIRECT NOX assis
 FONDU direct
-
+ACCROCHE Son IA a géré sa vie pendant 24 h
 PLAN gros TOBI
-TOBI dit (triste) Nox, j'en peux plus. Le loyer, les cours, les mails, c'est trop pour moi.
+TOBI dit (excite) Nox, j'en peux plus. Demain, tu deviens moi. Mes cours, mes mails, ma mère. Moi, je dors.
+TEMPS Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
+TOBI marche tapis
 PLAN gros TOBI
-TOBI dit (illumine) Demain, tu deviens moi. Tu gères toute ma vie pendant vingt-quatre heures.
-PLAN gros NOX
-NOX dit (curieux) Toute ta vie ? Même tes cours et ta mère ?
-PLAN gros TOBI
-TOBI dit (content) Tout. Moi, je reste au lit pour me reposer.
-INSERT Vingt-quatre heures plus tard | Nox a été Tobi | Tobi a dormi
-PLAN gros TOBI
-TOBI dit (content) Alors, Nox ? T'as survécu à ma vie ?
-PC Notes : Bilan de la journée | Loyer payé | Devoir rendu | 47 mails traités
+TOBI dit (fier) Alors ? T'as survécu à ma vie de fou ?
+PC Notes : Bilan de la journée | Loyer payé, 47 mails | Devoir en retard : 16/20
 PLAN pc
-ATTENDRE 1.6
+ATTENDRE 1.8
 PLAN gros NOX
-NOX dit (constat) Regarde l'écran. Il m'a fallu trois heures.
+NOX dit (sec) Il m'a fallu trois heures. Et j'ai eu seize à ton devoir en retard.
 PLAN gros TOBI
-TOBI dit (surpris) Attends, quoi ? J'avais un devoir à rendre ?
+TOBI dit (content) Seize ?! Mais je suis un génie !
 PLAN gros NOX
-NOX dit (sec) Depuis trois semaines. Et j'ai eu seize sur vingt.
-PLAN gros TOBI
-TOBI dit (excite) Seize ? Mais je suis un génie !
-PLAN gros NOX
-NOX dit (sec) Non. Je suis un génie. Toi, t'as dormi.
+NOX dit (constat) Non. Moi, je suis un génie. Toi, t'as bavé sur ton oreiller.
 BRUIT ding
-TOBI message Inès | Bravo pour ton devoir ! | Tu as changé, j'aime bien. | On révise ensemble ?
+TOBI message Inès | Bravo pour ton 16 ! T'as changé. On révise ensemble ?
 PLAN gros TOBI
-TOBI dit (excite) Inès, la major de promo, veut réviser avec moi !
-PLAN gros NOX
-NOX dit (constat) Elle veut réviser avec celui qui a eu seize. C'est moi.
-PLAN gros TOBI
-TOBI dit (illumine) Nox. Aie la vision. Demain aussi, tu es moi !
-PLAN gros NOX
-NOX dit (sec) Tobi. Non.
-BRUIT ding
-PLAN gros TOBI
-TOBI dit (surpris) C'est ma mère. Elle m'appelle.
+TOBI dit (excite) Inès veut réviser avec moi ! Nox, aie la vision : demain aussi, t'es moi !
+INSERT Appel entrant | Maman |
 TOBI appelle
 PLAN gros TOBI
-TOBI dit (content) Allô, maman ? Oui, c'est moi, ton fils !
-ATTENDRE 0.7
-PLAN gros TOBI
-TOBI dit (surpris) Hein ? Comment ça, lequel ?
-ATTENDRE 0.7
-PLAN gros TOBI
-TOBI dit (gene) Hier ? Non, hier, c'était le robot.
+TOBI dit (surpris) Allô, maman ? Oui, c'est ton fils ! ...Comment ça, lequel ?
 TOBI raccroche
 PLAN gros NOX
 NOX dit (curieux) Elle a dit quoi ?
 PLAN gros TOBI
-TOBI dit (triste) Elle demande si elle peut garder celui d'hier.
-ATTENDRE 0.4
+TOBI dit (resigne) Elle demande si elle peut garder celui d'hier.
 PLAN gros NOX
-NOX dit (content) Je lui ai déjà dit oui.
+NOX dit (punchline) Je lui ai déjà dit oui.
 ATTENDRE 0.4

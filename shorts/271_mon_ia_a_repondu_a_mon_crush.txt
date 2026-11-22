@@ -1,0 +1,34 @@
+# MON IA A RÉPONDU À MON CRUSH
+# Pitch : Inès écrit à Tobi. Nox répond à sa place en 0,2 seconde, avec une honnêteté brutale. Contre toute attente, ça marche. Pour le kebab, en revanche...
+
+AMBIANCE jour
+DATE Mercredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a répondu à Inès
+PLAN gros NOX
+NOX dit (calme) Tobi. Inès t'a écrit. J'ai répondu.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?! T'as répondu quoi ?!
+TOBI message Inès | Tu fais quoi ce week-end ? | > Rien. Emploi du temps vide. Budget : 6,50 €.
+PLAN gros TOBI
+TOBI dit (colere) T'as dit la vérité ?! On dit jamais la vérité à un crush !
+PLAN gros NOX
+NOX dit (constat) Tu voulais que je dise quoi ?
+PLAN gros TOBI
+TOBI dit (fier) Que je suis CEO. Que je pars à Dubaï.
+PLAN gros NOX
+NOX dit (sec) Ta carte de tram est périmée.
+BRUIT ding
+TOBI message Inès | Mdr. Enfin quelqu'un d'honnête. Kebab samedi ?
+PLAN gros TOBI
+TOBI dit (excite) Elle a dit oui ! ...Attends. Deux kebabs, c'est quatorze euros.
+PLAN gros NOX
+NOX dit (calme) Je sais. J'ai répondu aussi.
+TOBI message Inès | > Avec plaisir. Tu paies, j'ai 6,50 €. | Ok 😂
+PLAN gros TOBI
+TOBI dit (gene) Elle paie ?
+PLAN gros NOX
+NOX dit (punchline) Honnêteté : un. CEO de Dubaï : zéro.
+ATTENDRE 0.4
