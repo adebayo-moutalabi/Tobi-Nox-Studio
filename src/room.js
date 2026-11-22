@@ -10,7 +10,11 @@ export const C = {
   wood: '#d3a267', woodDark: '#c8975a', woodIn: '#b98a4d', sheet: '#f3f0ea', frame: '#f4f2ec', metal: '#a9a8a4', dark: '#2e2f33', door: '#d9cdbd',
 };
 const H = 2.5;
-let WOOD = null; // tout le bois va dans une pièce à part, rendue avec un veinage procédural
+// Chaque meuble a ses propres maillages (mobilier_lit, bois_lit…) : un meuble devant la caméra peut s'estomper seul.
+let ZONE = 'divers'; const ZONES = {};
+const zonePart = (k) => (ZONES[ZONE] ||= { p: new Part(C), w: new Part(C) })[k];
+const viaZone = (k) => new Proxy({}, { get: (_, n) => { const t = zonePart(k), v = t[n]; return typeof v === 'function' ? v.bind(t) : v; } });
+let WOOD = null; // le bois va dans une pièce à part par meuble, rendue avec un veinage procédural
 const box = (p, c, s, color, o) => rawBox(color === C.woodDark || color === C.woodIn || color === C.wood ? WOOD : p, c, s, color, o);
 const wood = (p, c, s, { cut = 'x', n = 4, color = C.wood } = {}) => { // panneau découpé en lames
   const i = { x: 0, y: 1, z: 2 }[cut], L = s[i];
@@ -74,23 +78,28 @@ function buildShell(w) {
 }
 function buildStatic(p) {
   // Plinthes
+  ZONE = 'sol';
   for (const [c, s] of [[[-1.39, 0.04, -0.5], [0.02, 0.08, 2.8]], [[-0.59, 0.04, 2], [0.02, 0.08, 2]], [[0.49, 0.04, 2.3], [0.02, 0.08, 1.4]], [[0, 0.04, -1.89], [2.8, 0.08, 0.02]]]) box(p, c, s, C.white);
 
   // Tapis
+  ZONE = 'sol';
   box(p, [0.12, 0.006, -0.3], [1.15, 0.012, 1.9], C.rug, { vary: 0.03 });
 
   // Fenêtre
+  ZONE = 'fenetre';
   const fx = 0.73, y0 = 0.9, y1 = 2.2, fz = -2.02;
   box(p, [0, y0 - 0.02, -1.93], [1.72, 0.04, 0.32], C.frame);
   for (const [c, s] of [[[0, y1 - 0.03, fz], [1.52, 0.07, 0.06]], [[0, y0 + 0.03, fz], [1.52, 0.06, 0.06]], [[-fx, 1.55, fz], [0.07, 1.3, 0.06]], [[fx, 1.55, fz], [0.07, 1.3, 0.06]], [[0, 1.55, fz], [0.08, 1.3, 0.06]]]) box(p, c, s, C.frame);
   box(p, [0.03, 1.32, -1.98], [0.03, 0.13, 0.03], C.white);
   box(p, [0, 2.32, -1.885], [0.44, 0.02, 0.012], C.white); // aération
   // Radiateur sous la fenêtre
+  ZONE = 'fenetre';
   box(p, [0, 0.46, -1.86], [1.25, 0.56, 0.05], C.white);
   for (let i = 0; i < 16; i++) box(p, [-0.58 + i * 0.077, 0.46, -1.825], [0.036, 0.52, 0.03], C.frame);
   box(p, [0.66, 0.68, -1.83], [0.05, 0.08, 0.07], C.frame);
 
   // Bureau (mur est)
+  ZONE = 'bureau';
   const dz0 = -1.88, dz1 = -0.12, dc = (dz0 + dz1) / 2, dl = dz1 - dz0, dx = 1.09;
   wood(p, [dx, 0.725, dc], [0.62, 0.04, dl], { cut: 'z', n: 6 });
   box(p, [0.8, 0.645, dc - 0.2], [0.02, 0.12, dl - 0.42], C.red, { vary: 0.01 });
@@ -98,6 +107,7 @@ function buildStatic(p) {
   wood(p, [1.385, 0.98, dc], [0.03, 0.48, dl], { cut: 'z', n: 8 });
   box(p, [dx, 0.35, dz0 + 0.02], [0.6, 0.7, 0.03], C.woodDark);
   // Casier sous le plateau
+  ZONE = 'bureau';
   const sz = -0.32;
   wood(p, [dx, 0.35, dz1 - 0.02], [0.6, 0.7, 0.03], { cut: 'y', n: 4 });
   wood(p, [dx, 0.35, dz1 - 0.38], [0.6, 0.7, 0.03], { cut: 'y', n: 4 });
@@ -105,6 +115,7 @@ function buildStatic(p) {
   box(p, [1.38, 0.35, sz], [0.02, 0.7, 0.36], C.woodIn);
 
   // Armoire deux portes
+  ZONE = 'armoire';
   const az = 0.39;
   wood(p, [1.09, 1.03, az - 0.5], [0.62, 2.0, 0.03], { cut: 'y', n: 6 });
   wood(p, [1.09, 1.03, az + 0.5], [0.62, 2.0, 0.03], { cut: 'y', n: 6 });
@@ -114,10 +125,12 @@ function buildStatic(p) {
     box(p, [0.76, 1.08, az + s * 0.04], [0.014, 0.22, 0.016], C.metal);
   }
   // Valise
+  ZONE = 'armoire';
   box(p, [1.05, 2.2, az], [0.3, 0.28, 0.7], '#3a3b3f', { vary: 0.06 });
   box(p, [0.895, 2.2, az], [0.012, 0.04, 0.2], '#26272a');
 
   // Placard mural au-dessus du bureau
+  ZONE = 'placard_bureau';
   const cz0 = -1.08, cz1 = -0.13, cc = (cz0 + cz1) / 2, cl = cz1 - cz0, cx = 1.215, cd = 0.35;
   for (const z of [cz0, cc, cz1]) wood(p, [cx, 1.82, z], [cd, 0.8, 0.022], { cut: 'y', n: 3 });
   for (const y of [1.42, 1.82, 2.22]) box(p, [cx, y, cc], [cd, 0.022, cl], C.woodDark);
@@ -130,6 +143,7 @@ function buildStatic(p) {
   shelfBooks(p, 1.2, 1.432, cc + 0.03, 'z', 0.34, 5);
 
   // Niche kitchenette
+  ZONE = 'kitchenette';
   const kz = 1.24;
   wood(p, [1.09, 1.03, 0.93], [0.62, 2.06, 0.03], { cut: 'y', n: 6 }); wood(p, [1.09, 1.03, 1.58], [0.62, 2.06, 0.03], { cut: 'y', n: 6 });
   box(p, [1.09, 2.07, kz], [0.62, 0.03, 0.68], C.woodDark);
@@ -148,6 +162,7 @@ function buildStatic(p) {
   box(p, [1.38, 1.0, 1.24], [0.01, 0.075, 0.075], C.white);
 
   // Armoire miroir (près de la fenêtre, côté lit)
+  ZONE = 'armoire_miroir';
   const mz = -1.5;
   wood(p, [-1.1, 1.1, -1.875], [0.6, 2.2, 0.03], { cut: 'y', n: 6 }); wood(p, [-1.1, 1.1, -1.13], [0.6, 2.2, 0.03], { cut: 'y', n: 6 });
   box(p, [-1.1, 2.2, mz], [0.6, 0.03, 0.75], C.woodDark);
@@ -155,6 +170,7 @@ function buildStatic(p) {
   box(p, [-0.79, 1.02, -1.2], [0.022, 0.022, 0.022], C.metal);
 
   // Lit
+  ZONE = 'lit';
   const bx = -0.95, bz = -0.075, bl = 2.05;
   for (const s of [-1, 1]) {
     wood(p, [-0.51, 0.19, bz + s * 0.505], [0.02, 0.27, 0.98], { cut: 'z', n: 5 });
@@ -175,6 +191,7 @@ function buildStatic(p) {
   buildBedding(p, bx, bz, bl);
 
   // Placard mural au-dessus du lit
+  ZONE = 'placard_lit';
   const uz0 = -1.1, uz1 = 0.2, uc = (uz0 + uz1) / 2, ul = uz1 - uz0, ux = -1.22, ud = 0.34;
   for (const z of [uz0, uc, uz1]) wood(p, [ux, 1.72, z], [ud, 0.84, 0.022], { cut: 'y', n: 3 });
   for (const y of [1.3, 1.68, 2.14]) box(p, [ux, y, uc], [ud, 0.022, ul], C.woodDark);
@@ -187,14 +204,17 @@ function buildStatic(p) {
   box(p, [-1.22, 1.34, -0.15], [0.25, 0.06, 0.36], '#7d2230', { vary: 0.08 }); box(p, [-1.22, 1.39, -0.15], [0.22, 0.04, 0.3], '#3b3d41', { vary: 0.08 });
 
   // Applique sur le mur rouge
+  ZONE = 'applique';
   box(p, [-0.95, 1.5, 0.94], [0.06, 0.1, 0.02], C.metal);
   box(p, [-0.95, 1.5, 0.87], [0.012, 0.012, 0.14], C.metal);
   const lamp = new Part({});
   lamp.loft([ring(V(-0.95, 1.46, 0.8), 0.06, 0.06, 10), ring(V(-0.95, 1.55, 0.8), 0.028, 0.028, 10)], { color: '#d8d6d0', skin: 'x', capEnd: true, vary: 0.03 });
   p.p.push(...lamp.p); p.c.push(...lamp.c);
   // Interrupteurs, prises
+  ZONE = 'divers';
 
   // Portes et couloir
+  ZONE = 'portes';
   const door = (x, z, axis, w, color) => {
     const hz = axis === 'z';
     box(p, [x, 1.02, z], hz ? [0.03, 2.04, w] : [w, 2.04, 0.03], color, { vary: 0.01 });
@@ -207,6 +227,7 @@ function buildStatic(p) {
   box(p, [-0.05, 2.08, 2.985], [1.0, 0.06, 0.05], C.white);
 
   // Objets du bureau et de la chambre
+  ZONE = 'objets';
   buildDeskItems(p);
 }
 function shelfBooks(p, x, y, z, axis, len, seed) {
@@ -307,19 +328,23 @@ function woodMaterial() { // veinage calculé dans le shader : aucune texture à
 
 export function createRoom({ Reflector } = {}) {
   const group = new THREE.Group(); group.name = 'chambre';
-  const shell = new Part(C), p = new Part(C);
-  WOOD = new Part(C);
+  const shell = new Part(C);
+  for (const k of Object.keys(ZONES)) delete ZONES[k];
+  ZONE = 'divers'; WOOD = viaZone('w');
   buildShell(shell);
-  buildStatic(p);
+  buildStatic(viaZone('p'));
+  ZONE = 'divers';
   const wm = mesh(shell, 'murs');
   wm.material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78, side: THREE.FrontSide, shadowSide: THREE.DoubleSide, name: 'murs' });
   wm.castShadow = true;
-  const fm = mesh(p, 'mobilier');
   group.userData.solid = [];
-  const wd = mesh(WOOD, 'bois');
-  wd.material = woodMaterial();
-  group.add(wm, fm, wd);
-  group.userData.solid.push(fm, wd, wm);
+  const woodMat = woodMaterial();
+  group.add(wm);
+  for (const [z, part] of Object.entries(ZONES)) {
+    if (part.p.p.length) { const m = mesh(part.p, `mobilier_${z}`); group.add(m); group.userData.solid.push(m); }
+    if (part.w.p.length) { const m = mesh(part.w, `bois_${z}`); m.material = woodMat; group.add(m); group.userData.solid.push(m); }
+  }
+  group.userData.solid.push(wm);
 
   // Vue extérieure et volet roulant
   const sky = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.3), new THREE.MeshBasicMaterial({ color: '#fffdf4', toneMapped: false }));
