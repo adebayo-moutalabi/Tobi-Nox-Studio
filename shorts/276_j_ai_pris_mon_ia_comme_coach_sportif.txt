@@ -1,0 +1,35 @@
+# J'AI PRIS MON IA COMME COACH SPORTIF
+# Pitch : Tobi veut des abdos en trois jours pour voir Inès samedi. Nox le coache. Deux pompes et demie plus tard, Nox trouve enfin la bonne motivation.
+
+AMBIANCE jour
+DATE Mercredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Des abdos en 3 jours pour Inès
+PLAN gros TOBI
+TOBI dit (fier) Nox. Samedi, je vois Inès. Il me faut des abdos. T'as trois jours.
+PLAN gros NOX
+NOX dit (calme) D'accord. Pompes. Maintenant.
+PLAN gros TOBI
+TOBI dit (fier) Facile. Regarde le champion.
+TOBI geste pompes
+ECRAN scan | Analyse de Nox | Pompes ; 2,5 | Rythme cardiaque ; 198 bpm | Abdos estimés ; en 2042
+PLAN gros TOBI
+TOBI dit (panique) C'est normal... de plus sentir... mes bras ?
+PLAN gros NOX
+NOX dit (constat) Pour un homme de quatre-vingts ans, oui. T'en as vingt et un.
+PLAN gros TOBI
+TOBI dit (resigne) Je fais une petite pause. Dix minutes.
+PLAN gros NOX
+NOX dit (calme) D'accord. J'envoie la vidéo à Inès en attendant.
+PLAN gros TOBI
+TOBI dit (panique) Quelle vidéo ?!
+PLAN gros NOX
+NOX dit (constat) Toi, à plat ventre, qui dis « regarde le champion ».
+TOBI geste pompes_rapides
+PLAN contre TOBI
+TOBI dit (panique) Trois ! Quatre ! Cinq ! Six !
+PLAN gros NOX
+NOX dit (punchline) Enfin un muscle qui marche. La honte.
+ATTENDRE 0.4

@@ -140,6 +140,15 @@ Les cartes (`INSERT`, `TEMPS`, messages) sont animées dans `src/look.js`. L'ent
 - **Zone sûre 9:16 :** case « Zone sûre 9:16 » dans Vidéo. Repère affiché dans le Studio seulement (`#safe`), jamais exporté : 15 % en haut, 22 % en bas, 15 % à droite. L'audit de cadrage signale « zone cachée des Shorts » quand les yeux de celui qui parle y tombent.
 - **Tester sans attendre :** la voix d'essai du navigateur parle en temps réel. Pour faire avancer un épisode image par image (`__perso.step`), décocher « voix d'essai » d'abord.
 
+## Écrans, animations et décors du sprint 3 (22 novembre 2026)
+
+- **Meubles découpés :** `src/room.js` range chaque meuble dans sa zone (`ZONE = 'lit'`, `'bureau'`…) : la chambre a des maillages `mobilier_<zone>` et `bois_<zone>` au lieu de deux grands blocs. Un meuble devant la caméra s'estompe donc seul. Pour un nouveau meuble, poser `ZONE = 'nom';` avant de le construire.
+- **Écrans d'applications :** `look.screen(type, titre, lignes)` dans `src/look.js`, dessinés par `drawScreen` sur la même carte que les INSERT, donc présents dans l'export. L'écran est redessiné à chaque image tant qu'il est affiché (minuteur, onde, compteur de vues). `scan` n'a pas de fond : il se pose sur la scène.
+- **Animations au sol :** `prone()` dans `src/clips.js` incline les hanches et garde les pieds au sol. Clips `pushups` et `collapse` (une fois), `prone_flat` et `pushups_fast` (en boucle). Au sol, `story.js` coupe la gestuelle de parole (`ground`), sinon les bras quittaient le sol.
+- **Panne des IA :** `a.glitch` (src/viewer.js, `glitch()`) remplace le demi-tour des logos vers la caméra. Pour Nox, `hero.grey` grise l'antenne et le voyant (src/nox.js).
+- **Décors :** `CHAMBRE vide` cache `mobilier_objets`, la chaise (`room.chairGone`) et le sac ; `LUMIERE alarme` et `froide` sont deux lumières de `story.js`, éteintes à chaque `reset()`.
+- **Obstacles de caméra :** `findBlockers()` se relance après chaque changement de décor et au début de chaque lecture, après le retour à la chambre. Avant, un épisode joué juste après un épisode à l'amphi calculait sa caméra avec les meubles de l'amphi.
+
 ## Pièges connus
 
 - **Places de `apparait` :** les perchoirs (en hauteur) sont `bureau`, `chaise`, `lit` et `rebord`. Les autres noms (`frigo`, `fenetre`, `porte`…) posent le personnage **au sol**. Une place inconnue arrête l'épisode avec une erreur.

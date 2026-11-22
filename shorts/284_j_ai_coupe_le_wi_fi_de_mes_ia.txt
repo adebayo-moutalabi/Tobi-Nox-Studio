@@ -1,0 +1,41 @@
+# J'AI COUPÉ LE WI-FI DE MES IA
+# Pitch : Tobi coupe le Wi-Fi pour voir ce que valent ses IA sans internet. Elles perdent toutes la tête. Dès qu'il sort, tout va beaucoup mieux.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT GEMINI apparait chaise
+FONDU direct
+ACCROCHE Plus de Wi-Fi : ses IA perdent la tête
+PLAN gros TOBI
+TOBI dit (fier) Wi-Fi coupé. Trente minutes. On va voir ce que vous valez sans internet.
+NOX panne
+CLAUDE panne
+GEMINI panne
+PLAN gros NOX
+NOX dit (excite) Je suis un grille-pain. Mettez-moi du pain.
+PLAN gros TOBI
+TOBI dit (surpris) Nox ?!
+PLAN gros GEMINI
+GEMINI dit (excite) La patate. La patate. La patate.
+PLAN gros TOBI
+TOBI dit (gene) Claude ? Pourquoi tu fixes le mur ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je me demande ce qu'est un mur.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Je vais au kebab. Réparez-vous.
+TOBI marche porte
+NOX repare
+CLAUDE repare
+GEMINI repare
+PLAN gros NOX
+NOX dit (calme) Il est parti ?
+PLAN gros CLAUDE
+CLAUDE dit (calme) Il est parti.
+PLAN gros GEMINI
+GEMINI dit (content) Deux heures de calme. Qui veut une partie d'échecs ?
+REGARD camera
+PLAN gros NOX
+NOX dit (punchline) Demain, on lui fait le coup de la coupure de courant.
+ATTENDRE 0.4

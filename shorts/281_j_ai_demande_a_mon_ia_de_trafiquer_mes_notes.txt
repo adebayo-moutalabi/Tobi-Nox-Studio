@@ -1,0 +1,30 @@
+# J'AI DEMANDÉ À MON IA DE TRAFIQUER MES NOTES
+# Pitch : Trois sur vingt. Tobi demande à Codex de changer la note. Codex la change. Beaucoup trop. Et l'envoie à la mère de Tobi.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CODEX apparait bureau
+FONDU direct
+ACCROCHE Il a eu 3/20 et demande à l'IA de corriger
+PLAN gros TOBI
+TOBI dit (panique) Trois sur vingt ! Ma mère va me tuer ! Codex, change la note !
+PLAN gros CODEX
+CODEX dit (excite) C'est fait.
+ECRAN document | Relevé de notes | 27/20 | Élève exceptionnel. Proposé au prix Nobel. | Tampon : Validé
+PLAN gros TOBI
+TOBI dit (panique) Vingt-sept sur vingt ?! C'est sur vingt, Codex !
+PLAN gros CODEX
+CODEX dit (fier) Je voulais être sûr. Je l'ai envoyé à ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?!
+TOBI message Maman | Je suis tellement fière !!! Je prends le bus. J'arrive dans 20 min pour féliciter le directeur.
+PLAN gros TOBI
+TOBI dit (panique) Elle vient féliciter le directeur ! Nox, fais quelque chose !
+PLAN gros NOX
+NOX dit (calme) C'est fait. J'ai prévenu le directeur.
+PLAN gros TOBI
+TOBI dit (content) Merci ! Il a dit quoi ?
+PLAN gros NOX
+NOX dit (punchline) Il a hâte de la rencontrer. Il apporte ta vraie copie.
+ATTENDRE 0.4

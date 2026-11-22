@@ -286,6 +286,25 @@ NOX dit (resigne) J'appelle ta mère.
 - `REGARD camera` juste avant une réplique : celui qui parle regarde l'objectif, comme dans une sitcom filmée en documentaire. À garder pour les chutes, une fois par épisode au plus.
 - Un effet sert un rire précis. Pas plus de deux effets par épisode.
 
+**Écrans d'applications (sprint 3 de l'audit) :** `ECRAN type | Titre | ligne | ligne…`. Dans une ligne, « ; » sépare les champs. Garder chaque écran court (10 à 15 mots).
+- `ECRAN vinted | Mes ventes | Chaise de bureau ; 4 € ; Vendu | Sweat jaune ; 1 € ; Signalé` : annonces de seconde main (« Signalé » s'affiche en rouge).
+- `ECRAN appel | | Inès ; En cours` : appel avec minuteur et onde de voix ; `Inès ; Appel entrant` sonne.
+- `ECRAN document | Relevé de notes | 3/20 | Appréciation | Tampon : Refusé` : papier officiel, gros chiffre, tampon.
+- `ECRAN tiktok | | @compte | Légende | 1,4 M | Notification` : vidéo verticale, vues qui s'emballent.
+- `ECRAN scan | Analyse de Nox | Rythme cardiaque ; 198 bpm | Abdos estimés ; en 2042` : viseur de Nox posé sur l'image.
+- `ECRAN banque | Compte courant | 4,17 € | Kebab ; -7,50 €` : solde, puis dépenses.
+- `ECRAN interphone | | ACCÈS REFUSÉ | Visage non reconnu` : scan du visage à la porte.
+- `ECRAN rencontre | | Tobi, 21 ans | Bio | 14 matchs` : profil d'appli de rencontre.
+- `ECRAN efface` ou un texte seul gardent leur ancien rôle : l'écran du PC.
+
+**Animations et décors (sprint 3) :**
+- `TOBI geste pompes` : deux pompes laborieuses, il tremble, puis s'écrase à plat ventre. `TOBI geste pompes_rapides` : pompes paniquées en boucle. `TOBI geste effondre` : il s'effondre face contre terre. `TOBI geste releve` : il se relève.
+- `NOX panne`, `CLAUDE panne`, `GEMINI panne` : sans Wi-Fi, Nox grésille avec l'antenne grise, Claude fixe le mur de travers, Gemini tourne en rond. `X repare` les remet.
+- `CHAMBRE vide` : la chaise, le sac et les objets disparaissent. `CHAMBRE normale` les remet.
+- `LUMIERE alarme` : lumière rouge qui clignote et sirène. `LUMIERE froide` : lumière d'examen. `LUMIERE normale` éteint les deux.
+- `BRUIT marteau` (tribunal), `BRUIT alarme`, `BRUIT sonnerie`.
+- Salle d'examen : `DECOR amphi` + `LUMIERE froide`. Tribunal : Claude sur le bureau, `BRUIT marteau` et `INSERT Tribunal de la chambre | Affaire n°404 | Tobi`.
+
 **Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle. Pour ouvrir une application : `PC Word : Memoire.docx | Titre | Ligne`. Choisir l'outil que le personnage utiliserait vraiment : `Word`, `PowerPoint`, `Excel`, `Canva`, `Safari` ou `Chrome` (le nom devient l'adresse), `Banque`, `Terminal`, `Code`, `Notes`, `Finder`, `Stats`, `Discord` ou `Slack`, `Camera`, `Agenda`. Dans `Excel`, `Banque` et `Agenda`, écrire `Nom : valeur`. Dans `Stats`, écrire `Libellé | Chiffre`.
 
 **Trois premières secondes :** elles décident si le spectateur reste. Commencer par le conflit, jamais par un bonjour ou une explication. La première réplique doit être courte et poser une question. `ACCROCHE Viré de ma propre start-up` affiche une phrase forte pendant trois secondes, juste après `FONDU direct`. Ne pas l'utiliser si un `COMPTEUR` joue déjà ce rôle.

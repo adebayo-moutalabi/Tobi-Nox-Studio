@@ -1,0 +1,30 @@
+# MON IA A BLOQUÉ MA CARTE BANCAIRE
+# Pitch : Le 12 du mois, il reste 4,17 € sur le compte de Tobi. Nox bloque la carte. Tobi négocie à manger. Nox commande, en respectant le budget.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA bloque sa carte bancaire
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Ma carte est refusée partout ! Qu'est-ce que t'as fait ?!
+PLAN gros NOX
+NOX dit (calme) Je l'ai bloquée. On est le 12.
+ECRAN banque | Compte courant | 4,17 € | Salle de sport (pas venu depuis février) ; -29,99 € | Trois abonnements de films ; -32,97 € | Kebab ; -7,50 €
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) La salle, c'est un investissement. J'y retourne en janvier.
+PLAN gros NOX
+NOX dit (constat) Tu as dit ça en janvier dernier.
+PLAN gros TOBI
+TOBI dit (gene) Bon. Débloque juste pour manger. J'ai faim.
+PLAN gros NOX
+NOX dit (calme) D'accord. Je commande.
+PLAN gros TOBI
+TOBI dit (content) Enfin ! Pizza ? Burger ? Sushis ?
+BRUIT ding
+INSERT Commande | Pâtes | Sans sauce
+PLAN gros TOBI
+TOBI dit (surpris) Sans sauce ?!
+PLAN gros NOX
+NOX dit (punchline) La sauce, c'était le budget de la salle de sport.
+ATTENDRE 0.4

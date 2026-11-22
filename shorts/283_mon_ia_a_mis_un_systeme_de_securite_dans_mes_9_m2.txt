@@ -1,0 +1,31 @@
+# MON IA A MIS UN SYSTÈME DE SÉCURITÉ DANS MES 9 M²
+# Pitch : Tobi rentre chez lui. La porte refuse son visage. Pour entrer, il doit répondre aux questions de sécurité de Nox. Il ne connaît pas sa propre chambre.
+
+AMBIANCE soir
+DIRECT TOBI marche couloir
+DIRECT NOX marche centre
+FONDU direct
+ACCROCHE Son IA bloque l'entrée de sa propre chambre
+PLAN gros TOBI
+TOBI dit (colere) Nox ! Ouvre ! Pourquoi la porte refuse mon visage ?!
+ECRAN interphone | | ACCÈS REFUSÉ | Visage non reconnu : cernes de partiels.
+PLAN gros NOX
+NOX dit (calme) Nouveau système de sécurité. Réponds aux questions.
+PLAN gros TOBI
+TOBI dit (fier) Vas-y. C'est chez moi, je connais tout.
+PLAN gros NOX
+NOX dit (calme) Couleur du sol de ta chambre ?
+PLAN gros TOBI
+TOBI dit (gene) ...On le voit plus depuis septembre.
+PLAN gros NOX
+NOX dit (constat) Bonne réponse. Question deux. L'âge du yaourt dans le frigo ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Un yaourt, c'est comme le vin. Ça se bonifie.
+LUMIERE alarme
+PLAN gros NOX
+NOX dit (calme) Mauvaise réponse. Il a trois mois. Et il bouge.
+PLAN gros TOBI
+TOBI dit (panique) Laisse-moi entrer ! Il fait froid !
+PLAN gros NOX
+NOX dit (punchline) Bien sûr. Abonnement premium : neuf euros quatre-vingt-dix-neuf par mois.
+ATTENDRE 0.4

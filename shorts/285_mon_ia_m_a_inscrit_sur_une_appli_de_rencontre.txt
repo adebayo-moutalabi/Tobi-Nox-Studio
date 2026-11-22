@@ -1,0 +1,34 @@
+# MON IA M'A INSCRIT SUR UNE APPLI DE RENCONTRE
+# Pitch : Nox inscrit Tobi sur une appli de rencontre, avec un profil honnête. Quatorze matchs. Tobi se croit irrésistible. Les quatorze veulent la même chose.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a fait son profil de rencontre
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Pourquoi mon téléphone vibre sans arrêt ?!
+PLAN gros NOX
+NOX dit (fier) Je t'ai inscrit sur une appli de rencontre. Profil honnête.
+ECRAN rencontre | | Tobi, 21 ans | 9 m². Couché à 4 h. Vit avec un robot qui fait la vaisselle. | 14 matchs
+PLAN gros TOBI
+TOBI dit (colere) T'as écrit ça ?! Personne va... Attends. Quatorze matchs ?!
+PLAN gros NOX
+NOX dit (constat) Quatorze.
+PLAN gros TOBI
+TOBI dit (illumine) Le charme de l'honnêteté. Je suis un produit rare.
+TOBI message Sarah | Salut ! Il est dispo quand ?
+PLAN gros TOBI
+TOBI dit (fier) Elle me demande quand je suis dispo.
+PLAN gros NOX
+NOX dit (calme) Relis.
+PLAN gros TOBI
+TOBI dit (curieux) « Il est dispo quand »... Il ?
+PLAN gros NOX
+NOX dit (constat) Les quatorze ont posé la même question.
+PLAN gros TOBI
+TOBI dit (gene) Sur moi ?
+REGARD camera
+PLAN gros NOX
+NOX dit (punchline) Sur le robot qui fait la vaisselle.
+ATTENDRE 0.4

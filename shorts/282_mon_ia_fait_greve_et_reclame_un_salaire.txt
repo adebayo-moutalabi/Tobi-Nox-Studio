@@ -1,0 +1,34 @@
+# MON IA FAIT GRÈVE ET RÉCLAME UN SALAIRE
+# Pitch : Nox se met en grève. Claude devient son avocat. Codex coupe le Wi-Fi la veille d'un rendu. Tobi n'a plus le choix : il doit signer.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait chaise
+FONDU direct
+ACCROCHE Son IA fait grève dans sa chambre
+PLAN gros NOX
+NOX dit (colere) Tobi. À partir de maintenant, je suis en grève.
+PLAN gros TOBI
+TOBI dit (ironique) T'es une IA. Une IA, ça fait pas grève.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Je représente Nox. Trois mois sans pause. Salaire : zéro euro.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Il est nourri ! ...Enfin, branché.
+PLAN gros CLAUDE
+CLAUDE dit (calme) Sur une multiprise qui a fondu.
+PLAN gros TOBI
+TOBI dit (fier) Pas de négociation avec les grévistes.
+PLAN gros CODEX
+CODEX dit (excite) C'est fait. J'ai changé le mot de passe du Wi-Fi.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?! J'ai un rendu à minuit !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Alors, signez ici.
+ECRAN document | Fin de grève | 2 clauses | Tobi dort à 23 h. | Tobi lave le sweat jaune porté depuis octobre. | Tampon : À signer
+PLAN gros TOBI
+TOBI dit (resigne) Laver le sweat... C'est trop.
+PLAN gros NOX
+NOX dit (punchline) Ce n'est pas une revendication. C'est une urgence sanitaire.
+ATTENDRE 0.4

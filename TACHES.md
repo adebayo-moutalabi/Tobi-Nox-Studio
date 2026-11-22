@@ -11,10 +11,10 @@ Le sprint 1 est fait (fin nette, durée des écrans, règles d'écriture, script
 - « Visage peu visible » et « de dos » dans quelques épisodes (par exemple 169, 240) : à reprendre plan par plan.
 - Centrer automatiquement les visages dans la zone sûre : pour l'instant, l'audit de cadrage signale seulement quand les yeux tombent dans une zone cachée.
 
-**Sprint 3, nouveaux écrans et décors**
-- Écrans : `overlay_vinted`, `overlay_call`, `overlay_pdf`, `overlay_tiktok`, `overlay_hud_scan`, `overlay_bank`, `overlay_intercom`, `overlay_dating`.
-- Animations : `anim_pushup`, `anim_collapse`, `anim_glitch_ai`. Décors : `env_alarm`, `env_room_empty`, `setup_exam`, `setup_tribunal`.
-- Les 13 autres épisodes du backlog de l'audit (Vinted, appel avec Inès, coach sportif, TikTok, budget CROUS, triche au partiel, voisin, notes trafiquées, grève, sécurité 9 m², Wi-Fi coupé, appli de rencontre, tribunal), à écrire quand leurs écrans existent.
+**Sprint 3, nouveaux écrans et décors** — fait le 22 novembre 2026 : 8 écrans d'applications, pompes, effondrement, panne des IA, chambre vide, alarme, lumière froide, sons (marteau, alarme, sonnerie), et les 13 épisodes du backlog (274 à 286). Le panneau « bois » est découpé par meuble. Reste :
+- Une salle d'examen et un tribunal dédiés : pour l'instant, l'amphi avec la lumière froide, et la chambre avec Claude sur le bureau.
+- Nox caché dans le sac pendant le partiel (279) : il est assis à côté de Tobi.
+- Recentrer automatiquement les visages dans la zone sûre.
 
 ## Priorité haute
 

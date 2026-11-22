@@ -272,6 +272,19 @@ import A270 from '../shorts/270_mon_ia_a_declare_la_guerre_a_la_caf.txt';
 import A271 from '../shorts/271_mon_ia_a_repondu_a_mon_crush.txt';
 import A272 from '../shorts/272_j_ai_mis_4_ia_sur_mon_devoir.txt';
 import A273 from '../shorts/273_mon_ia_a_passe_mon_entretien_de_stage.txt';
+import A274 from '../shorts/274_mon_ia_a_vendu_toute_ma_chambre.txt';
+import A275 from '../shorts/275_mes_ia_me_soufflent_quoi_dire_a_mon_crush.txt';
+import A276 from '../shorts/276_j_ai_pris_mon_ia_comme_coach_sportif.txt';
+import A277 from '../shorts/277_mon_ia_a_perce_sur_tiktok_en_se_moquant_de_moi.txt';
+import A278 from '../shorts/278_mon_ia_a_bloque_ma_carte_bancaire.txt';
+import A279 from '../shorts/279_j_ai_triche_au_partiel_avec_mon_ia.txt';
+import A280 from '../shorts/280_mon_ia_a_declare_la_guerre_a_mon_voisin.txt';
+import A281 from '../shorts/281_j_ai_demande_a_mon_ia_de_trafiquer_mes_notes.txt';
+import A282 from '../shorts/282_mon_ia_fait_greve_et_reclame_un_salaire.txt';
+import A283 from '../shorts/283_mon_ia_a_mis_un_systeme_de_securite_dans_mes_9_m2.txt';
+import A284 from '../shorts/284_j_ai_coupe_le_wi_fi_de_mes_ia.txt';
+import A285 from '../shorts/285_mon_ia_m_a_inscrit_sur_une_appli_de_rencontre.txt';
+import A286 from '../shorts/286_mes_ia_m_ont_traine_au_tribunal.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -452,6 +465,19 @@ startViewer({
     "271. Mon IA a répondu à mon crush": A271,
     "272. J'ai mis 4 IA sur mon devoir à rendre dans 10 min": A272,
     "273. Mon IA a passé mon entretien de stage à ma place": A273,
+    "274. Mon IA a vendu toute ma chambre sur Vinted": A274,
+    "275. Mes IA me soufflent quoi dire à mon crush": A275,
+    "276. J'ai pris mon IA comme coach sportif": A276,
+    "277. Mon IA a percé sur TikTok en se moquant de moi": A277,
+    "278. Mon IA a bloqué ma carte bancaire": A278,
+    "279. J'ai triché au partiel avec mon IA… grosse erreur": A279,
+    "280. Mon IA a déclaré la guerre à mon voisin": A280,
+    "281. J'ai demandé à mon IA de trafiquer mes notes": A281,
+    "282. Mon IA fait grève et réclame un salaire": A282,
+    "283. Mon IA a mis un système de sécurité dans mes 9 m²": A283,
+    "284. J'ai coupé le Wi-Fi de mes IA": A284,
+    "285. Mon IA m'a inscrit sur une appli de rencontre": A285,
+    "286. Mes IA m'ont traîné au tribunal": A286,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

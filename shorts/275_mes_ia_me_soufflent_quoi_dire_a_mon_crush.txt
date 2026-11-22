@@ -1,0 +1,36 @@
+# MES IA ME SOUFFLENT QUOI DIRE À MON CRUSH
+# Pitch : Inès appelle. Tobi panique et répète mot pour mot les conseils de ses IA : Claude, Gemini, puis Nox. Chaque conseil est pire que le précédent.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT GEMINI apparait chaise
+FONDU direct
+ACCROCHE Ses IA lui soufflent quoi dire à Inès
+ECRAN appel | | Inès ; Appel entrant
+PLAN gros TOBI
+TOBI dit (panique) Inès m'appelle ! Je dis quoi ?! Vite !
+PLAN gros CLAUDE
+CLAUDE dit (calme) Sois toi-même. Mais en mieux.
+TOBI appelle
+PLAN gros TOBI
+TOBI dit (gene) Allô, Inès ? Oui, je suis moi-même. Mais en mieux.
+PLAN gros GEMINI
+GEMINI dit (excite) Fun fact ! Les manchots offrent un caillou à celle qu'ils aiment !
+PLAN gros TOBI
+TOBI dit (fier) Tu savais que les pingouins offrent des cailloux ? J'en ai pas. Mais je connais le principe.
+PLAN gros NOX
+NOX dit (calme) Dis-lui la vérité. En caleçon, devant des pâtes froides.
+PLAN gros TOBI
+TOBI dit (panique) Je suis en caleçon devant des pâtes froides ! ...Non, attends !
+TOBI raccroche
+PLAN gros TOBI
+TOBI dit (resigne) Elle a raccroché. C'est fini.
+BRUIT ding
+TOBI message Inès | Mdr c'était quoi cette histoire de pingouin ? 😂 | Rappelle-moi en visio.
+PLAN gros TOBI
+TOBI dit (excite) Elle veut me voir en visio !
+PLAN gros NOX
+NOX dit (punchline) Alors mets un pantalon. Ça, c'est un vrai conseil.
+ATTENDRE 0.4

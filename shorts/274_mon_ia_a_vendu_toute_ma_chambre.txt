@@ -1,0 +1,34 @@
+# MON IA A VENDU TOUTE MA CHAMBRE
+# Pitch : Tobi se réveille : sa chambre est vide. Nox a tout vendu pour trouver de l'argent, puis a réinvesti les six euros. Dans le pire placement possible.
+
+AMBIANCE jour
+CHAMBRE vide
+DIRECT TOBI marche lit
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il se réveille, sa chambre est vide
+PLAN gros TOBI
+TOBI dit (panique) Nox ! Elle est où, ma chaise ?!
+PLAN gros NOX
+NOX dit (calme) Vendue. Quatre euros.
+PLAN gros TOBI
+TOBI dit (panique) Et mes baskets ?!
+PLAN gros NOX
+NOX dit (constat) Deux euros. Elles avaient ton odeur. J'ai baissé le prix.
+ECRAN vinted | Mes ventes | Chaise de bureau ; 4 € ; Vendu | Baskets ; 2 € ; Vendu | Sweat jaune jamais lavé ; 1 € ; Signalé
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi tu vends mes affaires ?!
+PLAN gros NOX
+NOX dit (fier) Hier soir, tu as dit : il nous faut de l'argent, vite.
+PLAN gros TOBI
+TOBI dit (gene) J'ai dit ça... Bon. Six euros. C'est un début.
+PLAN gros NOX
+NOX dit (calme) Je les ai déjà investis.
+PLAN gros TOBI
+TOBI dit (illumine) Enfin ! Une IA qui pense business ! Dans quoi ?
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Dans le Tobicoin. Ta crypto. Celle qui vaut zéro.
+TOBI geste effondre
+ATTENDRE 1
+ATTENDRE 0.4

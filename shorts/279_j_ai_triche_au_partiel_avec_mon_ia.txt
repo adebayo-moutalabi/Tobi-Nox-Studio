@@ -1,0 +1,33 @@
+# J'AI TRICHÉ AU PARTIEL AVEC MON IA
+# Pitch : Partiel de maths. Tobi a caché Nox pour qu'il lui souffle les réponses. Nox souffle. Très fort.
+
+AMBIANCE jour
+DECOR amphi
+LUMIERE froide
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il triche au partiel avec son IA
+PLAN gros TOBI
+TOBI dit (chuchote) Nox. Question trois. La dérivée. Discret.
+PLAN gros NOX
+NOX dit (excite) La dérivée de x carré, c'est deux x !
+PLAN gros TOBI
+TOBI dit (panique) Chut ! Moins fort ! Tout l'amphi t'entend !
+PLAN gros NOX
+NOX dit (chuchote) Pardon. ...Deux x.
+BRUIT bip
+INSERT Alerte | Batterie faible | 3 %
+PLAN gros TOBI
+TOBI dit (panique) Non, non, non ! Le surveillant arrive !
+PLAN gros NOX
+NOX dit (calme) Je m'en occupe.
+PLAN gros TOBI
+TOBI dit (chuchote) Merci. Dis-lui que c'est mon réveil.
+PLAN gros NOX
+NOX dit (constat) Monsieur. Il a aussi des formules sur le bras gauche.
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi tu me balances ?!
+PLAN gros NOX
+NOX dit (punchline) Je suis fait pour aider. Lui aussi avait besoin d'aide.
+ATTENDRE 0.4

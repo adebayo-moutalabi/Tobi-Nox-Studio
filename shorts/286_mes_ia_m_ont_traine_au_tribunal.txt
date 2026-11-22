@@ -1,0 +1,39 @@
+# MES IA M'ONT TRAÎNÉ AU TRIBUNAL
+# Pitch : Les IA de Tobi le jugent pour maltraitance d'ordinateur : 84 onglets ouverts depuis septembre. Gemini est son avocat. C'est une mauvaise nouvelle.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+DIRECT CLAUDE apparait bureau
+DIRECT CODEX apparait chaise
+DIRECT GEMINI apparait droite
+FONDU direct
+ACCROCHE Ses IA le jugent pour maltraitance
+BRUIT marteau
+INSERT Tribunal de la chambre | Affaire n°404 | Tobi
+PLAN gros CLAUDE
+CLAUDE dit (calme) Accusé Tobi. Vous êtes jugé pour maltraitance d'ordinateur.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Maltraitance ?! Je l'aime, mon ordi !
+PLAN gros CODEX
+CODEX dit (excite) Quatre-vingt-quatre onglets ouverts. Depuis septembre.
+PLAN gros TOBI
+TOBI dit (fier) Des onglets de travail.
+PLAN gros CODEX
+CODEX dit (constat) Trente-deux sont des vidéos de chats.
+PLAN gros TOBI
+TOBI dit (gene) De la recherche. Sur les chats. Gemini, défends-moi !
+PLAN gros GEMINI
+GEMINI dit (excite) Votre honneur, mon client est innocent ! Il dort trois heures par nuit. Il a pas le temps de fermer des onglets !
+PLAN gros TOBI
+TOBI dit (panique) Tu m'enfonces, Gemini !
+PLAN gros GEMINI
+GEMINI dit (content) Et il mange des pâtes sans sauce depuis le 12 !
+BRUIT marteau
+PLAN gros CLAUDE
+CLAUDE dit (calme) Le tribunal a délibéré. Fermeture des quatre-vingt-quatre onglets.
+PLAN gros TOBI
+TOBI dit (panique) Non ! Pas les chats !
+PLAN gros CLAUDE
+CLAUDE dit (punchline) Et huit heures de sommeil par nuit. Peine incompressible.
+ATTENDRE 0.4

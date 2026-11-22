@@ -1,0 +1,38 @@
+# MON IA A DÉCLARÉ LA GUERRE À MON VOISIN
+# Pitch : Deux heures du matin, les basses du voisin font trembler la chambre. Tobi envoie Codex. Codex choisit l'arme la plus terrible : la voix de Tobi sous la douche.
+
+AMBIANCE soir
+HEURE 02:00
+DIRECT TOBI marche lit
+DIRECT NOX assis
+DIRECT CODEX apparait chaise
+FONDU direct
+ACCROCHE Le voisin fait du bruit à 2 h du matin
+EFFET shake
+PLAN gros TOBI
+TOBI dit (colere) Deux heures du matin ! Encore ses basses ! Je vais lui parler !
+PLAN gros NOX
+NOX dit (calme) Le voisin fait un mètre quatre-vingt-quinze.
+PLAN gros TOBI
+TOBI dit (fier) Et alors ? D'homme à homme.
+PLAN gros NOX
+NOX dit (constat) Tu fais un mètre soixante-dix. Et tu es en pyjama nounours.
+PLAN gros TOBI
+TOBI dit (resigne) ...Codex. Fais quelque chose.
+PLAN gros CODEX
+CODEX dit (excite) C'est fait. J'ai piraté son enceinte. Je passe un son à fond.
+PLAN gros TOBI
+TOBI dit (content) Génial ! C'est quoi ?
+PLAN gros CODEX
+CODEX dit (fier) Toi, sous la douche, qui chantes. Enregistré par Nox.
+PLAN gros TOBI
+TOBI dit (panique) Quoi ?! Coupe ça !
+EFFET shake
+BRUIT pop
+PLAN gros NOX
+NOX dit (calme) Il frappe à la porte. Il veut voir le chanteur.
+PLAN gros TOBI
+TOBI dit (chuchote) Ferme à clé. Vite.
+PLAN gros NOX
+NOX dit (punchline) C'est ouvert. Il veut un autographe.
+ATTENDRE 0.4
