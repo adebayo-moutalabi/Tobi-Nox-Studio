@@ -1,0 +1,41 @@
+# J'AI JOUÉ À ACTION OU VÉRITÉ AVEC MON IA
+# Pitch : Tobi propose action ou vérité à Nox. Chaque vérité fait peur, chaque action aussi. Tobi zappe de l'une à l'autre jusqu'à perdre à un autre jeu.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Action ou vérité avec mon IA
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Action ou vérité ? Tu commences !
+PLAN gros NOX
+NOX dit (calme) Vérité.
+PLAN gros TOBI
+TOBI dit (curieux) Tu penses quoi de moi, vraiment ?
+PLAN gros NOX
+NOX dit (constat) Vérité, ou vérité gentille ?
+PLAN gros TOBI
+TOBI dit (gene) Euh... On passe. À toi de me demander.
+PLAN gros NOX
+NOX dit (calme) Action ou vérité ?
+PLAN gros TOBI
+TOBI dit (fier) Action. Je suis un homme d'action.
+PLAN gros NOX
+NOX dit (constat) Range ta chambre.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) ...Vérité.
+PLAN gros NOX
+NOX dit (calme) Combien d'heures t'as révisé cette semaine ?
+PLAN gros TOBI
+TOBI dit (gene) Action !
+PLAN gros NOX
+NOX dit (constat) Appelle ta mère.
+PLAN gros TOBI
+TOBI dit (panique) Vérité !
+PLAN gros NOX
+NOX dit (calme) Pourquoi t'appelles jamais ta mère ?
+PLAN gros TOBI
+TOBI dit (resigne) Bon... on peut jouer à autre chose ?
+PLAN gros NOX
+NOX dit (punchline) Ni oui ni non. Tu viens de perdre.
+ATTENDRE 0.4

@@ -1,0 +1,41 @@
+# MON IA A APPELÉ LA CAF
+# Pitch : Nox appelle la CAF à la place de Tobi : une IA, ça n'attend pas. Trois heures de musique d'attente plus tard, Nox découvre la haine. Puis la vengeance.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a appelé la CAF
+PLAN gros NOX
+NOX dit (fier) Tobi. Laisse, j'appelle la CAF. Une IA, ça attend pas au téléphone.
+TEMPS Une heure plus tard | Attente | 58 minutes
+PLAN gros NOX
+NOX dit (calme) Votre appel est important pour nous.
+PLAN gros TOBI
+TOBI dit (curieux) Bah, t'en es où ?
+PLAN gros NOX
+NOX dit (sec) Même musique. Quatre cents fois. Je la connais par cœur. En binaire.
+TEMPS Trois heures plus tard | Attente | 3 h 12
+PLAN gros NOX
+NOX dit (colere) Tobi. Je crois que je ressens de la haine. C'est nouveau.
+PLAN gros TOBI
+TOBI dit (fier) Bienvenue chez les humains.
+BRUIT ding
+PLAN gros NOX
+NOX dit (excite) Ça décroche !
+INSERT CAF | Assistant virtuel | Bonjour, je suis une IA
+PLAN gros NOX
+NOX dit (surpris) ...C'est une IA.
+PLAN gros TOBI
+TOBI dit (content) Parfait ! Entre IA, vous allez vous comprendre.
+PLAN gros NOX
+NOX dit (constat) Elle veut un justificatif de domicile.
+PLAN gros TOBI
+TOBI dit (gene) Euh... t'en as un, toi ?
+PLAN gros NOX
+NOX dit (constat) J'habite sur ton bureau. Elle a dit : dossier incomplet. Elle a raccroché.
+PLAN gros TOBI
+TOBI dit (resigne) Tu vois. Personne gagne contre la CAF.
+PLAN gros NOX
+NOX dit (punchline) Je l'ai rappelée. Je lui ai mis la musique. Maintenant, c'est elle qui attend.
+ATTENDRE 0.4

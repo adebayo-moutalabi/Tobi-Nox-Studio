@@ -260,6 +260,14 @@ import A258 from '../shorts/258_hackathon_48_heures.txt';
 import A259 from '../shorts/259_mon_ia_a_ecrit_au_pere_noel.txt';
 import A260 from '../shorts/260_mon_ia_veut_un_calendrier_de_l_avent.txt';
 import A261 from '../shorts/261_mon_ia_veut_un_sapin_de_noel.txt';
+import A262 from '../shorts/262_mon_ia_a_le_hoquet.txt';
+import A263 from '../shorts/263_mon_ia_a_perdu_sa_premiere_vis.txt';
+import A264 from '../shorts/264_mon_ia_a_fait_evacuer_le_tram.txt';
+import A265 from '../shorts/265_mes_ia_ont_fait_un_documentaire_animalier_sur_moi.txt';
+import A266 from '../shorts/266_mon_ia_a_attrape_un_virus.txt';
+import A267 from '../shorts/267_mon_ia_a_appele_la_caf.txt';
+import A268 from '../shorts/268_mon_ia_parle_en_dormant.txt';
+import A269 from '../shorts/269_j_ai_joue_a_action_ou_verite_avec_mon_ia.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -428,6 +436,14 @@ startViewer({
     "259. Mon IA a écrit au Père Noël": A259,
     "260. Mon IA veut un calendrier de l'Avent": A260,
     "261. Mon IA veut un sapin de Noël": A261,
+    "262. Mon IA a le hoquet": A262,
+    "263. Mon IA a perdu sa première vis": A263,
+    "264. Mon IA a fait évacuer le tram": A264,
+    "265. Mes IA ont fait un documentaire animalier sur moi": A265,
+    "266. Mon IA a attrapé un virus": A266,
+    "267. Mon IA a appelé la CAF pour moi": A267,
+    "268. Mon IA parle en dormant": A268,
+    "269. J'ai joué à action ou vérité avec mon IA": A269,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

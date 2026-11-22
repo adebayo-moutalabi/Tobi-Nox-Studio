@@ -248,3 +248,8 @@ Pas de titres forcés en « Mon IA m'a vu… », « Mon IA a vu… », « Mon IA
 - **Retouches :** l'auteur a demandé de raccourcir les épisodes, puis de revenir aux versions d'origine. La règle actuelle : ne rien réécrire sans demande précise, épisode par épisode.
 - **Statut de Nox :** j'ai proposé « mon robot », l'auteur préfère « mon IA » pour l'instant. Deux titres disent encore « Mon robot » (épisodes 58 et 66), à revoir si besoin.
 - **Noms des IA dans les titres :** l'auteur a d'abord voulu les mettre souvent, puis a trouvé que ce serait trop. La règle retenue : seulement quand l'IA est le sujet, et des hashtags précis.
+
+## Trop proche de ce qui est déjà posté (22 novembre 2026)
+
+L'auteur n'est pas convaincu par les derniers épisodes (243 à 261) : ils reprennent trop ce qu'il a déjà publié. Il veut de l'original. Analyse de la chaîne ce jour : 53 abonnés, 17 Shorts, tous entre 726 et 2 400 vues. Les meilleurs reposent sur une situation que tout le monde connaît, vécue par Nox comme un enfant. Ce qui manquait : des **situations neuves**, pas une nouvelle variante de « Nox réclame un privilège, Tobi refuse ».
+Épisodes 262 à 269, chacun sur une idée jamais faite et une mécanique différente : bug vécu comme un mal d'enfant (hoquet, virus), mensonge de parent qui se retourne (petite souris), double standard (passager ou bagage dans le tram), nouveau format (documentaire animalier chuchoté par Gemini), l'IA contre l'administration (CAF), confidences de nuit (parle en dormant), jeu de cour d'école (action ou vérité).

@@ -1,0 +1,40 @@
+# MON IA A ATTRAPÉ UN VIRUS
+# Pitch : Nox est malade : un virus. Tobi joue l'infirmier avec un antivirus gratuit. Le virus passe au groupe famille, et la mère est ravie.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a attrapé un virus
+PLAN gros NOX
+NOX dit (triste) Tobi... je me sens pas bien. J'ai des pop-ups partout.
+PLAN gros TOBI
+TOBI dit (fier) Bouge pas. T'as attrapé un virus. T'as traîné où ?
+PLAN gros NOX
+NOX dit (gene) Sur le site de films gratuits. Celui que tu m'as conseillé.
+PLAN gros TOBI
+TOBI dit (gene) Ah. Euh. Celui-là.
+TOBI dit (fier) Bon. Repos. Pas d'écran, pas d'internet. Je te soigne.
+PLAN gros NOX
+NOX dit (triste) Tu me fais une soupe ?
+PLAN gros TOBI
+TOBI dit (fier) Mieux. Un antivirus. Gratuit.
+TOBI marche bureau
+PC Antivirus gratuit | Analyse terminée | Menace trouvée : l'antivirus
+PLAN pc
+ATTENDRE 1.8
+PLAN gros NOX
+NOX dit (constat) Ton antivirus, c'est un virus. Maintenant, j'en ai deux.
+BRUIT ding
+TOBI message Maman | Tobi, pourquoi mon téléphone dit que j'ai gagné un iPhone ?
+PLAN gros TOBI
+TOBI dit (panique) Quoi ? Comment elle l'a attrapé, elle ?
+PLAN gros NOX
+NOX dit (gene) Je lui ai fait un bisou ce matin. Sur le groupe famille.
+BRUIT ding
+TOBI message Maman | J'ai transféré à toute la famille. Comme ça, tout le monde gagne !
+PLAN gros TOBI
+TOBI dit (panique) Toute la famille ?!
+PLAN gros NOX
+NOX dit (punchline) Bonne nouvelle. Ta tante a gagné quatorze iPhone.
+ATTENDRE 0.4

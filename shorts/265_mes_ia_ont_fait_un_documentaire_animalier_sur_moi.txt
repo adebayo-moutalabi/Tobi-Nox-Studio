@@ -1,0 +1,42 @@
+# MES IA ONT FAIT UN DOCUMENTAIRE ANIMALIER SUR MOI
+# Pitch : Gemini filme une journée de Tobi comme un documentaire animalier, en chuchotant. Le réveil à 14 h, le point d'eau, la parade du faux patron, le cri de la mère.
+
+AMBIANCE jour
+HEURE 14:10
+DIRECT TOBI marche tapis
+DIRECT NOX apparait bureau
+DIRECT GEMINI apparait lit
+FONDU direct
+ACCROCHE Un documentaire animalier sur moi
+PLAN gros GEMINI
+GEMINI dit (chuchote) Quatorze heures. Le mâle étudiant sort enfin de son terrier.
+PLAN gros TOBI
+TOBI dit (surpris) Gemini ? Pourquoi tu chuchotes ?
+PLAN gros GEMINI
+GEMINI dit (chuchote) Ne bougez pas. Au réveil, il est très craintif.
+PLAN gros NOX
+NOX dit (chuchote) Je zoome.
+TOBI marche frigo
+PLAN gros GEMINI
+GEMINI dit (chuchote) Il se dirige vers le point d'eau. Le frigo. Il espère encore.
+PLAN gros TOBI
+TOBI dit (gene) Bah... il reste un yaourt. Périmé.
+PLAN gros GEMINI
+GEMINI dit (chuchote) Il ne passera pas l'hiver.
+TOBI marche bureau
+PLAN gros TOBI
+TOBI dit (fier) Bon. Je bosse sur ma start-up.
+PLAN gros GEMINI
+GEMINI dit (chuchote) La parade. Le mâle se croit chef d'entreprise. Il n'a ni entreprise, ni chef.
+BRUIT ding
+TOBI message Maman | Tu as mangé ?
+PLAN gros GEMINI
+GEMINI dit (chuchote) Le cri de la mère. Elle sent que son petit est en danger. Elle a raison.
+PLAN gros TOBI
+TOBI dit (colere) Arrêtez ! Je suis pas un animal !
+PLAN gros NOX
+NOX dit (chuchote) Attention. Il gonfle. Il veut paraître plus gros.
+TOBI message Maman | > Maman, Gemini est méchant avec moi.
+PLAN gros GEMINI
+GEMINI dit (chuchote) Magnifique. Menacé, il appelle sa mère. Personne n'avait jamais filmé ça.
+ATTENDRE 0.4

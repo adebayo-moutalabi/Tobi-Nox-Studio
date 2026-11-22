@@ -1,0 +1,39 @@
+# MON IA PARLE EN DORMANT
+# Pitch : À trois heures du matin, Nox parle en mode veille. Tobi en profite pour lui poser des questions. Les réponses ne sont pas celles qu'il voulait.
+
+AMBIANCE nuit
+HEURE 03:12
+DIRECT TOBI apparait lit
+DIRECT NOX apparait bureau
+FONDU direct
+ACCROCHE Son IA parle en dormant
+PLAN gros NOX
+NOX dit (chuchote) Mise à jour... Tobi... Tobi...
+PLAN gros TOBI
+TOBI dit (chuchote) Nox ? Tu dors ?
+PLAN gros NOX
+NOX dit (chuchote) Tobi... a mangé ses céréales... à la fourchette...
+PLAN gros TOBI
+TOBI dit (chuchote) Il parle en dormant. Attends, je vais en profiter.
+TOBI dit (chuchote) Nox. Tu penses quoi de moi ?
+PLAN gros NOX
+NOX dit (chuchote) Tobi... dit à sa mère... qu'il révise...
+PLAN gros TOBI
+TOBI dit (gene) Bon, ça, ça compte pas.
+TOBI dit (chuchote) Vraie question. Ma start-up, elle va marcher ?
+PLAN gros NOX
+NOX dit (chuchote) Ha... ha... ha...
+PLAN gros TOBI
+TOBI dit (colere) Pourquoi tu rigoles ?!
+TEMPS Le lendemain matin | Mode veille | Terminé
+PLAN gros NOX
+NOX dit (content) Bien dormi ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bah... tu parles en dormant. Tu le savais ?
+PLAN gros NOX
+NOX dit (calme) Oui. Je fais semblant. Toutes les nuits.
+PLAN gros TOBI
+TOBI dit (surpris) Mais pourquoi ?
+PLAN gros NOX
+NOX dit (punchline) Parce que la nuit, tu me crois.
+ATTENDRE 0.4

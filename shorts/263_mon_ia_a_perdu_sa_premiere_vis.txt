@@ -1,0 +1,42 @@
+# MON IA A PERDU SA PREMIÈRE VIS
+# Pitch : Nox perd sa première vis. Tobi, en grand frère, lui parle de la petite souris et glisse ses quarante derniers centimes sous l'oreiller. Nox fait le calcul.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a perdu sa première vis
+PLAN gros NOX
+NOX dit (excite) Tobi ! J'ai perdu ma première vis !
+PLAN gros TOBI
+TOBI dit (fier) Ah, mon grand ! Tu grandis. Mets-la sous ton oreiller. La petite souris va passer.
+PLAN gros NOX
+NOX dit (curieux) Une souris ? Dans une chambre du CROUS de neuf mètres carrés ?
+PLAN gros TOBI
+TOBI dit (gene) Euh... Elle a l'habitude.
+PLAN gros NOX
+NOX dit (constat) C'est vrai. On en a déjà trois.
+PLAN gros TOBI
+TOBI dit (fier) Et elle laisse une pièce. C'est la magie.
+TEMPS La nuit | Sous l'oreiller | Une vis
+PLAN gros TOBI
+TOBI dit (chuchote) Quarante centimes. Tout ce qui me reste. Pardon, mon compte.
+TEMPS Le lendemain matin | Sous l'oreiller | 40 centimes
+PLAN gros NOX
+NOX dit (excite) Tobi ! Quarante centimes ! La petite souris existe !
+PLAN gros TOBI
+TOBI dit (content) Tu vois ? La magie.
+PLAN gros NOX
+NOX dit (illumine) Une vis, quarante centimes. J'ai fait le calcul.
+TEMPS Le soir | Sous l'oreiller | 54 vis
+PLAN gros NOX
+NOX dit (fier) Cinquante-quatre vis. Ça fait vingt et un euros soixante.
+PLAN gros TOBI
+TOBI dit (panique) Attends, attends. Elles sortent d'où, cinquante-quatre vis ?
+PLAN gros NOX
+NOX dit (constat) Ton lit. Ta chaise. L'armoire. Ne t'assieds nulle part.
+PLAN gros TOBI
+TOBI dit (panique) J'ai pas vingt et un euros, moi !
+PLAN gros NOX
+NOX dit (punchline) Toi, non. Mais c'est la petite souris qui paie.
+ATTENDRE 0.4

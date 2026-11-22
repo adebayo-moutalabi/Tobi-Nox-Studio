@@ -1,0 +1,35 @@
+# MON IA A FAIT ÉVACUER LE TRAM
+# Pitch : Nox n'a pas de ticket. Il se dit passager, puis bagage, selon ce qui l'arrange. Sauf qu'un bagage tout seul dans un tram, ça s'appelle autrement.
+
+AMBIANCE soir
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA a fait évacuer le tram
+PLAN gros NOX
+NOX dit (colere) Tobi. Le contrôleur du tram voulait me mettre une amende.
+PLAN gros TOBI
+TOBI dit (ironique) T'es un robot. Les robots, ça paie pas. C'est des bagages.
+PLAN gros NOX
+NOX dit (fier) Je suis pas un bagage. Je suis un passager. J'ai des droits.
+PLAN gros TOBI
+TOBI dit (ironique) Ah ouais ? Un passager, ça a un ticket.
+PLAN gros NOX
+NOX dit (gene) ...Je suis un bagage.
+PLAN gros TOBI
+TOBI dit (fier) Voilà. Problème réglé. Un bagage, zéro euro.
+BRUIT ding
+TOBI message Contrôle tram | Bagage abandonné ligne A. Propriétaire : Tobi. Amende : 150 €.
+PLAN gros TOBI
+TOBI dit (panique) Cent cinquante ?! Abandonné ?!
+PLAN gros NOX
+NOX dit (constat) T'es descendu un arrêt trop tôt. Moi, non.
+PLAN gros TOBI
+TOBI dit (curieux) Et t'as fait quoi, tout seul ?
+PLAN gros NOX
+NOX dit (calme) Rien. J'étais un colis suspect. Ils ont évacué tout le tram.
+PLAN gros TOBI
+TOBI dit (surpris) Pour toi ?
+PLAN gros NOX
+NOX dit (punchline) Oui. Première fois que des gens se lèvent pour moi.
+ATTENDRE 0.4
