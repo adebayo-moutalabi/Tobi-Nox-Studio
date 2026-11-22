@@ -276,6 +276,16 @@ NOX dit (resigne) J'appelle ta mère.
 
 **Plans :** `PLAN auto`, `PLAN gros TOBI`, `PLAN gros NOX`, `PLAN clavier`, `PLAN lit`, `PLAN large`. Changer de plan à presque chaque réplique.
 
+**Plans et effets ajoutés le 22 novembre 2026 (audit) :**
+- `PLAN ots NOX` : par-dessus l'épaule de celui qui écoute, vers Nox qui parle. `PLAN ots TOBI` filmé depuis Nox donne une contre-plongée vers Tobi. Seulement si les deux sont à moins de 1,7 m : sinon, le Studio garde le gros plan.
+- `PLAN contre TOBI` : contre-plongée penchée de 4°, pour la panique ou la colère. Tenue jusqu'au plan suivant.
+- Les noms de l'audit marchent aussi : `wide_room`, `closeup_tobi`, `closeup_nox`, `ots_tobi_to_nox`, `ots_nox_to_tobi`, `desk_pc`, `hallway_door`, `low_drama`.
+- `EFFET punch_in` juste avant une réplique : zoom sec de 7 % pendant cette réplique (révélation, chute).
+- `EFFET shake` : secousse d'une demi-seconde (coup à la porte, cri, basses du voisin).
+- `EFFET whip_cut` : le plan suivant arrive en panoramique filé (réaction paniquée).
+- `REGARD camera` juste avant une réplique : celui qui parle regarde l'objectif, comme dans une sitcom filmée en documentaire. À garder pour les chutes, une fois par épisode au plus.
+- Un effet sert un rire précis. Pas plus de deux effets par épisode.
+
 **Écran du PC :** `PC Titre | Ligne 1 | Ligne 2`, puis `PLAN pc`, `ATTENDRE 1.6` et un retour sur celui qui parle. Pour ouvrir une application : `PC Word : Memoire.docx | Titre | Ligne`. Choisir l'outil que le personnage utiliserait vraiment : `Word`, `PowerPoint`, `Excel`, `Canva`, `Safari` ou `Chrome` (le nom devient l'adresse), `Banque`, `Terminal`, `Code`, `Notes`, `Finder`, `Stats`, `Discord` ou `Slack`, `Camera`, `Agenda`. Dans `Excel`, `Banque` et `Agenda`, écrire `Nom : valeur`. Dans `Stats`, écrire `Libellé | Chiffre`.
 
 **Trois premières secondes :** elles décident si le spectateur reste. Commencer par le conflit, jamais par un bonjour ou une explication. La première réplique doit être courte et poser une question. `ACCROCHE Viré de ma propre start-up` affiche une phrase forte pendant trois secondes, juste après `FONDU direct`. Ne pas l'utiliser si un `COMPTEUR` joue déjà ce rôle.

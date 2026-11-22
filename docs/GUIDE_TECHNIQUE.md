@@ -128,6 +128,18 @@ Le mot de passe n'est ni enregistré ni envoyé. La clé qui en découle reste d
 
 Les cartes (`INSERT`, `TEMPS`, messages) sont animées dans `src/look.js`. L'entrée dure `ENTER` (0,3 s), avec une courbe qui ralentit en arrivant et un léger rebond. La sortie dure `LEAVE` (0,16 s) et accélère en partant. Les éléments d'une carte arrivent avec un décalage de `STEP` (0,08 s). Le décalage total reste sous une demi-seconde. `look.hideInsert(true)` coupe net : on l'utilise au début et à la fin d'une lecture. Aucun mouvement n'est linéaire.
 
+## Caméra, marche et vie des personnages (audit du 22 novembre 2026)
+
+- **Meubles devant l'objectif :** `clearProps` (src/story.js) ne cache plus le meuble : il passe à 12 % d'opacité en 0,15 s (`fadeProp`, `fadeStep`), puis revient. Les matériaux sont clonés le temps du fondu et rendus ensuite. Un meuble estompé a `userData.faded` : l'audit de cadrage l'ignore. Les grands panneaux (plus de 2,2 m, comme « bois ») et les murs restent exclus.
+- **Effets :** `EFFET punch_in | shake | whip_cut` et l'inclinaison de `PLAN contre` vivent dans l'objet `fx` de `moveShot`. L'inclinaison est appliquée par `v.afterCamera`, appelé par le viewer après `controls.update()` : sinon elle serait effacée à chaque image.
+- **Plans types :** `overShoulder(a)` cherche une place derrière l'épaule de celui qui écoute, à 0,7 à 1,2 m, en vérifiant que personne ne cache celui qui parle (`blocks`).
+- **Regard caméra :** `REGARD camera` pose `a.lens` pour une réplique ; `applyLook` (src/viewer.js) vise alors la caméra.
+- **Marche :** `navPath` (src/viewer.js) n'intervient que si la ligne droite traverse un meuble. Grille de 10 cm, meubles de la chambre en rectangles (`NAV`) avec une marge de 24 cm pour Tobi et 17 cm pour Nox, A* sans couper les coins, puis on ne garde que les virages. Les points intermédiaires sont dans `a.pathRest` : pas de freinage avant le dernier. Hors de la chambre (`DECOR`), `v.navOn` est faux et la marche reste en ligne droite. Si un meuble bouge dans `src/room.js`, mettre `NAV` à jour.
+- **Glissade :** la foulée suit déjà la vitesse réelle (`NATURAL.stride`, `setStride`) et les animations se fondent entre elles (`crossFadeTo` dans src/motion.js).
+- **Vie permanente :** Tobi respire (`breathe`, torse et cou, plus ample après une course) et cligne déjà des yeux toutes les 2 à 5 s. L'antenne de Nox suit son humeur : lente au calme, penchée quand il doute, tremblante quand il a peur, boule rouge et cyan en colère.
+- **Zone sûre 9:16 :** case « Zone sûre 9:16 » dans Vidéo. Repère affiché dans le Studio seulement (`#safe`), jamais exporté : 15 % en haut, 22 % en bas, 15 % à droite. L'audit de cadrage signale « zone cachée des Shorts » quand les yeux de celui qui parle y tombent.
+- **Tester sans attendre :** la voix d'essai du navigateur parle en temps réel. Pour faire avancer un épisode image par image (`__perso.step`), décocher « voix d'essai » d'abord.
+
 ## Pièges connus
 
 - **Places de `apparait` :** les perchoirs (en hauteur) sont `bureau`, `chaise`, `lit` et `rebord`. Les autres noms (`frigo`, `fenetre`, `porte`…) posent le personnage **au sol**. Une place inconnue arrête l'épisode avec une erreur.

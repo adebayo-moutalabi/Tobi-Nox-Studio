@@ -6,15 +6,10 @@ Cette liste rassemble ce qui reste à faire. Quand une tâche est terminée, la 
 
 Le sprint 1 est fait (fin nette, durée des écrans, règles d'écriture, scripts de l'audit). Reste, dans l'ordre de l'audit :
 
-**Sprint 2, caméra et mouvements**
-- Meubles devant la caméra : le Studio les cache déjà en entier (`clearProps`). L'audit demande un fondu à 12 % d'opacité, plus doux. Le gros panneau « bois » (fenêtre, bas du lit) n'est pas encore traité.
-- Un personnage devant un autre : décaler légèrement la caméra (exemple relevé : le bras de Tobi devant Claude).
-- Huit plans types sans collision : `wide_room`, `closeup_tobi`, `closeup_nox` (à hauteur des yeux), `ots_tobi_to_nox`, `ots_nox_to_tobi`, `desk_pc`, `hallway_door`, `low_drama` (contre-plongée, inclinaison de 4°).
-- Repère « zone sûre 9:16 » dans le Studio, jamais exporté : 15 % en haut, 22 % en bas, 15 % à droite. Visages centrés dans la zone libre.
-- Grille de marche et chemin A* autour des meubles (cases de 25 cm, marge de 35 cm), vitesse d'animation calée sur la vitesse réelle pour supprimer la glissade. Les fondus entre animations (`crossFadeTo`) et les rotations douces (`slerp`) existent déjà : vérifier qu'ils couvrent tout.
-- Vie permanente : respiration et clignement de Tobi toutes les 3 à 5 s ; flottement de Nox, visière qui clignote, antenne selon l'émotion.
-- Regard vers celui qui parle (déjà en place), plus une commande `REGARD camera` pour les regards caméra sur les chutes.
-- Effets de script : `EFFET punch_in` (zoom sec de 6 à 8 %), `EFFET shake`, `EFFET whip_cut`.
+**Sprint 2, caméra et mouvements** — fait le 22 novembre 2026 : meubles estompés à 12 %, plans `ots` et `contre` (et les noms de l'audit), `EFFET punch_in | shake | whip_cut`, `REGARD camera`, zone sûre 9:16, marche autour des meubles, respiration de Tobi, antenne de Nox selon l'humeur. Audit des épisodes 141 à 273 : 40 problèmes restants contre 41 avant. Reste :
+- Le grand panneau « bois » (fenêtre, bas du lit, côtés des meubles) est un seul maillage : on ne peut pas l'estomper sans rendre tout le bois transparent. Il faut le découper par meuble dans `src/room.js`. C'est la plus grosse source des « meuble devant » restants.
+- « Visage peu visible » et « de dos » dans quelques épisodes (par exemple 169, 240) : à reprendre plan par plan.
+- Centrer automatiquement les visages dans la zone sûre : pour l'instant, l'audit de cadrage signale seulement quand les yeux tombent dans une zone cachée.
 
 **Sprint 3, nouveaux écrans et décors**
 - Écrans : `overlay_vinted`, `overlay_call`, `overlay_pdf`, `overlay_tiktok`, `overlay_hud_scan`, `overlay_bank`, `overlay_intercom`, `overlay_dating`.

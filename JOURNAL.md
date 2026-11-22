@@ -430,6 +430,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 22 novembre 2026 : analyse du creux (épisode 34 publié avec un titre forcé, 726 vues). Épisodes de Noël 259 à 261 (lettre au Père Noël, calendrier de l'Avent, sapin dans 9 m²).
 - 22 novembre 2026 : nouvelle analyse de la chaîne et huit épisodes sur des idées neuves, 262 à 269 (hoquet, première vis, tram évacué, documentaire animalier, virus, CAF, parle en dormant, action ou vérité).
 - 22 novembre 2026, audit de l'auteur (sprint 1) : plus d'écran « Abonne-toi », écrans et messages calés sur le nombre de mots (1,2 s + 0,18 s par mot), contrôle des scripts aux nouvelles règles (50 s, 16 répliques, un seul TEMPS), charte et bible mises à jour, questions épinglées pour 201 à 273. Épisodes 262, 263 et 267 retravaillés ; 270 à 273 ajoutés (CAF contre Codex, réponse à Inès, 4 IA sur un devoir, entretien de stage) ; 34 et 58 remplacés par leurs versions courtes.
+- 22 novembre 2026, audit de l'auteur (sprint 2) : meubles estompés à 12 % au lieu de disparaître, plans par-dessus l'épaule et contre-plongée penchée, effets punch_in, shake et whip_cut, regard caméra, zone sûre 9:16 dans le Studio, marche autour des meubles (grille et A*), respiration de Tobi, antenne de Nox selon l'humeur. Audit 141 à 273 : 40 problèmes contre 41 avant.
 
 ## À faire
 
