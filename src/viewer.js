@@ -148,7 +148,7 @@ export function startViewer(cfg) {
   function walkStraight(a, p, run) {
     return new Promise((res) => {
       a.arrive?.();
-      a.goal = clampP(p.clone().setY(0)); a.run = run; a.arrive = res; a.faceYaw = null;
+      a.goal = clampP(p.clone().setY(0)); a.run = run; a.arrive = res; a.faceYaw = null; a.pathRest = null; a.pathYaw = null;
     });
   }
   // La chaise est le seul meuble au milieu du passage : on la contourne du côté de la pièce.
@@ -163,7 +163,44 @@ export function startViewer(cfg) {
     if (n.x * -C.x + n.z * -C.z < 0) n.negate();
     return clampP(new THREE.Vector3(C.x, 0, C.z).addScaledVector(n, r + 0.04));
   }
+  // Grille de marche de la chambre : le sol des meubles est interdit, avec une marge. Rectangles x0, x1, z0, z1 (mètres).
+  const NAV = [[-1.4, -0.5, -1.1, 0.95], [0.78, 1.4, -1.88, -0.12], [0.78, 1.4, -0.125, 0.905], [0.86, 1.4, 0.98, 1.5], [-1.4, -0.8, -1.875, -1.125], [0.17, 0.67, -1.3, -0.8]]; // lit, bureau, armoire, frigo, armoire miroir, chaise
+  const CELL = 0.1, NX0 = -1.34, NZ0 = -1.84, NW = 27, NH = 48;
+  function navPath(a, from, to) {
+    if (!room || api.navOn === false || a.extra) return null;
+    const pad = a.id === 'tobi' ? 0.24 : 0.17, near = 0.38;
+    const hit = (x, z) => NAV.some(([x0, x1, z0, z1]) => x > x0 - pad && x < x1 + pad && z > z0 - pad && z < z1 + pad);
+    const bad = (x, z) => hit(x, z) && Math.hypot(x - from.x, z - from.z) > near && Math.hypot(x - to.x, z - to.z) > near; // on peut toujours partir d'un meuble et y arriver
+    const line = (p, q) => { const L = Math.hypot(q.x - p.x, q.z - p.z), n = Math.ceil(L / 0.04); for (let i = 1; i < n; i++) { const k = i / n; if (bad(p.x + (q.x - p.x) * k, p.z + (q.z - p.z) * k)) return false; } return true; };
+    if (line(from, to)) return null; // la ligne droite est libre : on ne change rien
+    const id = (i, j) => j * NW + i, cx = (i) => NX0 + (i + 0.5) * CELL, cz = (j) => NZ0 + (j + 0.5) * CELL;
+    const cell = (p) => [Math.max(0, Math.min(NW - 1, Math.floor((p.x - NX0) / CELL))), Math.max(0, Math.min(NH - 1, Math.floor((p.z - NZ0) / CELL)))];
+    const [si, sj] = cell(from), [gi, gj] = cell(to), goal = id(gi, gj);
+    const g = new Float32Array(NW * NH).fill(Infinity), prev = new Int32Array(NW * NH).fill(-1), done = new Uint8Array(NW * NH);
+    const h = (i, j) => { const dx = Math.abs(i - gi), dz = Math.abs(j - gj); return Math.max(dx, dz) + 0.414 * Math.min(dx, dz); };
+    const open = [[h(si, sj), si, sj]]; g[id(si, sj)] = 0;
+    while (open.length) {
+      let m = 0; for (let k = 1; k < open.length; k++) if (open[k][0] < open[m][0]) m = k;
+      const [, i, j] = open.splice(m, 1)[0], c = id(i, j);
+      if (done[c]) continue; done[c] = 1;
+      if (c === goal) break;
+      for (let di = -1; di <= 1; di++) for (let dj = -1; dj <= 1; dj++) {
+        const ni = i + di, nj = j + dj; if ((!di && !dj) || ni < 0 || nj < 0 || ni >= NW || nj >= NH) continue;
+        if (bad(cx(ni), cz(nj)) || (di && dj && (bad(cx(i + di), cz(j)) || bad(cx(i), cz(j + dj))))) continue; // pas de coin coupé
+        const n = id(ni, nj), cost = g[c] + (di && dj ? 1.414 : 1);
+        if (cost < g[n]) { g[n] = cost; prev[n] = c; open.push([cost + h(ni, nj), ni, nj]); }
+      }
+    }
+    if (!done[goal]) return null;
+    const pts = []; for (let c = goal; c !== -1 && c !== id(si, sj); c = prev[c]) pts.unshift(new THREE.Vector3(cx(c % NW), 0, cz(Math.floor(c / NW))));
+    pts[pts.length - 1] = to.clone().setY(0);
+    const out = []; let cur = from; // on garde seulement les virages : le chemin reste fluide
+    for (let k = 0; k < pts.length;) { let far = k; for (let q = pts.length - 1; q > k; q--) if (line(cur, pts[q])) { far = q; break; } out.push(pts[far]); cur = pts[far]; k = far + 1; }
+    return out;
+  }
   function walkTo(a, p, run = false) {
+    const path = navPath(a, pos(a), clampP(p.clone().setY(0)));
+    if (path && path.length > 1) { const from = pos(a), to = path[path.length - 1], go = walkStraight(a, path[0], run); a.pathRest = path.slice(1).map((x) => clampP(x)); a.pathYaw = Math.atan2(to.x - from.x, to.z - from.z); return go; }
     const via = aroundChair(a, p);
     if (!via) return walkStraight(a, p, run);
     const trip = (a.trip = (a.trip || 0) + 1);
@@ -200,14 +237,18 @@ export function startViewer(cfg) {
     }
     if (a.follow && !manual) {
       const L = pos(a.follow), d = L.distanceTo(pos(a));
+      a.pathRest = null;
       if (d > 0.85) { const back = new THREE.Vector3().subVectors(pos(a), L).normalize().multiplyScalar(0.62); a.goal = L.clone().add(back); a.run = d > 1.6; } else if (d < 0.68) a.goal = null;
     }
     if (!manual && a.goal) {
       moveDir.subVectors(a.goal, pos(a)); moveDir.y = 0;
-      const d = moveDir.length(); a.dGoal = d;
+      let d = moveDir.length(); a.dGoal = d;
+      if (a.pathRest?.length && d < 0.14) { a.goal = a.pathRest.shift(); moveDir.subVectors(a.goal, pos(a)); moveDir.y = 0; d = moveDir.length(); a.dGoal = d; } // virage suivant, sans s'arrêter
+      if (a.pathRest?.length) a.dGoal = 9; // pas de freinage avant le dernier point
       run = a.run && d > a.speed[1] * 0.3;
       if (d < 0.05) {
         a.goal = null; moveDir.set(0, 0, 0);
+        if (a.pathYaw != null) { a.faceYaw = a.pathYaw; a.pathYaw = null; } // après un détour, il finit tourné comme s'il était venu en ligne droite
         if (a === A) marker.visible = false;
         const f = a.arrive; a.arrive = null; f?.();
       } else moveDir.normalize();
@@ -262,17 +303,26 @@ export function startViewer(cfg) {
     a.hero.root.rotation.y = to + Math.max(-0.65, Math.min(0.65, off));
   }
 
+  // Respiration : environ 15 souffles par minute, plus amples après une course.
+  function breathe(a) {
+    if (a.id !== 'tobi' || a.carried) return;
+    const chest = a.hero.bones.chest; if (!chest) return;
+    a.puff = Math.max(0, (a.puff || 0) + (a.walking && a.run ? 0.02 : -0.004));
+    const s = Math.sin(simT * 1.6) * (0.012 + 0.02 * Math.min(1, a.puff));
+    chest.rotateX(-s); a.hero.bones.neck?.rotateX(s * 0.6); // le cou compense : la tête ne hoche pas
+  }
   // ---- Regards : la tête vise les yeux de l'autre ---------------------------
   const lq = { f: new THREE.Vector3(), h: new THREE.Vector3(), t: new THREE.Vector3(), w: new THREE.Quaternion(), d: new THREE.Quaternion(), p: new THREE.Quaternion(), id: new THREE.Quaternion() };
   function applyLook(a, dt) {
-    a.lookW = (a.lookW || 0) + ((a.look ? 1 : 0) - (a.lookW || 0)) * (1 - Math.exp(-dt * 7));
+    a.lookW = (a.lookW || 0) + ((a.look || a.lens ? 1 : 0) - (a.lookW || 0)) * (1 - Math.exp(-dt * 7));
     if (a.look) a.lastLook = a.look;
     a.hero.gaze = null;
-    if (a.lookW < 0.01 || !a.lastLook) return;
-    const b = a.lastLook, head = a.hero.bones.head;
+    if (a.lookW < 0.01 || (!a.lastLook && !a.lens)) return;
+    const b = a.lastLook || a, head = a.hero.bones.head;
     a.hero.root.updateMatrixWorld(true); b.hero.root.updateMatrixWorld(true);
     head.getWorldPosition(lq.h); lq.h.y += a.eyeUp;
     b.hero.bones.head.getWorldPosition(lq.t); lq.t.y += b.eyeUp;
+    if (a.lens) lq.t.copy(camera.position); // regard caméra sec, comme dans les sitcoms filmées en documentaire
     lq.t.sub(lq.h);
     { const flat = Math.hypot(lq.t.x, lq.t.z), lim = Math.max(flat, 0.3) * 0.7; lq.t.y = Math.max(-lim * 0.4, Math.min(lim, lq.t.y)); } // ne casse pas la nuque, et le visage reste visible quand il parle à quelqu'un de plus bas
     lq.t.normalize();
@@ -282,7 +332,7 @@ export function startViewer(cfg) {
       if (a.aim && !a.extra) { head.getWorldQuaternion(lq.w); lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); a.hero.eyes?.(Math.max(-0.8, Math.min(0.8, lq.f.x * 1.4)), Math.max(-0.5, Math.min(0.5, lq.f.y * 1.4))); }
     }
     if (NATURAL.gaze) { if (!a.aim) a.aim = lq.t.clone(); a.aim.lerp(lq.t, 1 - Math.exp(-dt * (a.extra ? 9 : 5.5))).normalize(); lq.t.copy(a.aim); }
-    if (a.cheat) { head.getWorldPosition(lq.f); lq.f.subVectors(camera.position, lq.f).normalize(); lq.t.lerp(lq.f, a.cheat).normalize(); } // il parle à l'autre, mais son visage reste ouvert vers nous
+    if (a.cheat && !a.lens) { head.getWorldPosition(lq.f); lq.f.subVectors(camera.position, lq.f).normalize(); lq.t.lerp(lq.f, a.cheat).normalize(); } // il parle à l'autre, mais son visage reste ouvert vers nous
     head.getWorldQuaternion(lq.w);
     lq.f.set(0, 0, 1).applyQuaternion(lq.w);
     lq.d.setFromUnitVectors(lq.f, lq.t);
@@ -293,7 +343,7 @@ export function startViewer(cfg) {
     head.parent.getWorldQuaternion(lq.p);
     lq.p.invert().multiply(lq.d);
     head.quaternion.slerp(lq.p, a.lookW * 0.92);
-    if (NATURAL.gaze) listen(a, b, head, dt);
+    if (NATURAL.gaze && !a.lens && b !== a) listen(a, b, head, dt);
     if (a.extra) {
       head.updateWorldMatrix(true, false); head.getWorldQuaternion(lq.w);
       lq.f.copy(lq.t).applyQuaternion(lq.w.invert()); // la cible, vue depuis le logo
@@ -626,7 +676,7 @@ export function startViewer(cfg) {
     tickTime(dt);
     room?.update(dt);
     api.onFrame?.(dt);
-    for (const a of actors) { moveActor(a, dt); lean(a, dt); restless(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); applyLook(a, dt); }
+    for (const a of actors) { moveActor(a, dt); lean(a, dt); restless(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); breathe(a); applyLook(a, dt); }
     if (camTween) {
       camTween.t = Math.min(1, camTween.t + dt / 0.7);
       const e = 1 - (1 - camTween.t) ** 3;
@@ -635,6 +685,7 @@ export function startViewer(cfg) {
       if (camTween.t >= 1) camTween = null;
     }
     controls.update();
+    api.afterCamera?.(); // effets de cadre (inclinaison) après le placement de la caméra
     placeLights();
     room?.mirrorLive(actors.some((a) => pos(a).distanceTo(MIRROR) < 0.8)); // reflet réel seulement devant le miroir : il coûte cher
     if (skipRender) return;

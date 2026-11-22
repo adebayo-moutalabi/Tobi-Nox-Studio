@@ -73,6 +73,13 @@ textarea { width: 100%; box-sizing: border-box; margin-top: 8px; font: 12.5px/1.
 summary { cursor: pointer; color: var(--muted); margin-top: 8px; }
 button:disabled { opacity: .45; cursor: default; }
 .app.portrait .stage { aspect-ratio: 9 / 16; height: 100%; max-width: 100%; justify-self: center; }
+/* Zone sûre des Shorts : ce que cachent l'accroche, le titre et les boutons. Studio seulement, jamais exporté. */
+.safe { position: absolute; inset: 0; pointer-events: none; z-index: 6; display: none; }
+.app.portrait .safe.on { display: block; }
+.safe i { position: absolute; background: rgb(255 70 70 / .18); outline: 1px dashed rgb(255 120 120 / .7); color: #fff; font: 600 11px/1.2 system-ui, sans-serif; font-style: normal; padding: 4px 6px; text-shadow: 0 1px 2px #000; }
+.safe .t { left: 0; right: 0; top: 0; height: 15%; }
+.safe .b { left: 0; right: 0; bottom: 0; height: 22%; display: flex; align-items: flex-end; }
+.safe .r { right: 0; top: 15%; bottom: 22%; width: 15%; }
 form { display: flex; gap: 6px; }
 input[type="password"] { font: inherit; flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); }
 #settings input[type="text"] { flex: 0 1 62%; width: 62%; font-size: 14px; padding: 9px 12px; border: 1px solid var(--brand-hair); border-radius: 12px; background: var(--brand-surface); color: var(--brand-ink); }
@@ -288,6 +295,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
     <div class="card" id="card" hidden></div>
     <div class="counter" id="counter" hidden></div>
     <div class="cap" id="cap" hidden></div>
+    <div class="safe" id="safe" aria-hidden="true"><i class="t">Accroche</i><i class="b">Titre, description, sous-titres</i><i class="r">Boutons</i></div>
     <div class="transport" id="transport" hidden><button type="button" id="storyPlay">Revoir</button><button type="button" id="storyStop" disabled>Arrêter</button></div>
     <p class="hint"><kbd>Clic au sol</kbd> pour l'envoyer · <kbd>ZQSD</kbd> ou <kbd>flèches</kbd> pour marcher · <kbd>Maj</kbd> pour courir · glisser pour tourner</p>
   </main>
@@ -368,6 +376,7 @@ h1 { font-size: clamp(30px, 2.7vw, 42px); }
             <select id="storyQuality" aria-label="Qualité"><option value="max">1440p</option><option value="hd">1080p</option><option value="fast">720p</option></select>
             <select id="storyFps" aria-label="Images par seconde"><option value="30">30 i/s</option><option value="60">60 i/s</option></select>
             <label class="sw">Sous-titres <input type="checkbox" id="storyCaps" checked></label>
+            <label class="sw">Zone sûre 9:16 <input type="checkbox" id="storySafe"></label>
             <label class="sw">Musique de fond <input type="checkbox" id="storyMusic" checked></label>
             <label class="file">Importer ma musique<input type="file" id="storyMusicFile" accept="audio/*"></label>
             <form id="gestesForm"><input type="password" id="gestesPass" placeholder="Mot de passe des gestes" autocomplete="current-password" aria-label="Mot de passe des gestes"><button type="submit" class="file">Déverrouiller mes gestes</button></form>

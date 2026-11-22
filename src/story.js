@@ -140,8 +140,7 @@ export function createPlayer(v, ui) {
   // Tout objet de la chambre peut cacher un personnage : tableau, portes, chaise, frigo, volet...
   let blockers = [];
   function findBlockers() { // relevé au début de chaque lecture : les objets posés au sol comptent aussi
-    for (const o of propsHidden) o.visible = true; // les meubles retirés pendant la lecture précédente reviennent
-    propsHidden = [];
+    unfadeAll(true); // les meubles estompés pendant la lecture précédente reviennent
     const skip = new Set(v.actors.map((x) => x.hero.root)); skip.add(v.camera);
     blockers = [];
     const walk = (o) => {
@@ -163,7 +162,11 @@ export function createPlayer(v, ui) {
   const inside = (c) => c.x > -1.34 && c.x < 1.34 && c.z > -1.84 && c.z < 2.9 && c.y > 0.25 && c.y < 2.42;
   // Caméra vivante : arrivée en douceur, léger arc, avancée lente et souffle de caméra à l'épaule.
   let shot = null, shotSide = 1;
-  const shoot = (pos, target) => { shotSide = -shotSide; shot = { pos: pos.clone(), target: target.clone(), t: 0, side: shotSide }; };
+  const fx = { punch: 0, punchK: 0, shake: 0, whip: 0, whipNext: false, tilt: 0 }; // effets demandés par le script
+  const shoot = (pos, target) => {
+    shotSide = -shotSide; shot = { pos: pos.clone(), target: target.clone(), t: 0, side: shotSide };
+    if (fx.whipNext) { fx.whipNext = false; fx.whip = 1; } // panoramique filé : le nouveau plan arrive en balayant
+  };
   const camVec = new THREE.Vector3(), camUp = new THREE.Vector3(0, 1, 0);
   function moveShot(dt) {
     shot.t += dt;
@@ -173,15 +176,54 @@ export function createPlayer(v, ui) {
     v.camera.position.copy(shot.target).add(camVec);
     v.camera.position.x += 0.0035 * sway(1.3, 2.9); v.camera.position.y += 0.003 * sway(1.1, 2.3); v.camera.position.z += 0.0035 * sway(0.9, 2.1);
     v.controls.target.copy(shot.target); v.controls.target.x += 0.0022 * sway(0.8, 1.9); v.controls.target.y += 0.0022 * sway(1.2, 2.7);
+    fx.punchK += (fx.punch - fx.punchK) * (1 - Math.exp(-dt / 0.045)); // zoom sec de 7 %
+    if (fx.punchK > 0.001) v.camera.position.lerp(shot.target, 0.07 * fx.punchK);
+    if (fx.whip > 0) { // le plan arrive en balayant : la cible part de côté et revient très vite
+      const side = new THREE.Vector3().subVectors(shot.target, v.camera.position).cross(camUp).normalize();
+      v.controls.target.addScaledVector(side, 0.9 * fx.whip * fx.whip * shot.side);
+      fx.whip = Math.max(0, fx.whip - dt / 0.2);
+    }
+    if (fx.shake > 0) { // secousse : coup à la porte, cri, basses du voisin
+      const s = 0.03 * fx.shake;
+      v.camera.position.x += s * Math.sin(n * 71); v.camera.position.y += s * Math.sin(n * 53 + 1); v.controls.target.x += s * 0.6 * Math.sin(n * 61 + 2);
+      fx.shake = Math.max(0, fx.shake - dt / 0.5);
+    }
     v.controls.update();
   }
+  v.afterCamera = () => { if (fx.tilt && shot && running && !track) v.camera.rotateZ(fx.tilt); }; // contre-plongée dramatique, penchée de 4°
   // Comme sur un tournage : un meuble qui passe devant l'objectif est retiré le temps du plan.
   // On ne touche ni aux murs ni au sol (trop grands), ni à ce qui est près du personnage (le lit ou le bureau où il est assis).
   let propsHidden = [];
+  // Un meuble devant l'objectif devient presque transparent (12 %) en douceur, puis revient dès que la vue est dégagée.
+  const FADE = 0.12;
+  const mats = (o) => (Array.isArray(o.material) ? o.material : [o.material]);
+  function fadeProp(o) {
+    if (!o.userData.fadeBase) {
+      o.userData.fadeBase = o.material;
+      o.material = Array.isArray(o.material) ? o.material.map((m) => m.clone()) : o.material.clone();
+      for (const m of mats(o)) { m.transparent = true; m.depthWrite = false; m.userData.op0 = m.opacity; }
+      o.userData.fadeK = 1;
+    }
+    o.userData.fadeTo = FADE; o.userData.faded = true; o.castShadow = false;
+    if (!propsHidden.includes(o)) propsHidden.push(o);
+  }
+  function unfadeAll(now) {
+    for (const o of propsHidden) { o.userData.fadeTo = 1; o.userData.faded = false; if (now) { o.userData.fadeK = 1; restoreProp(o); } }
+    if (now) propsHidden = [];
+  }
+  function restoreProp(o) { if (o.userData.fadeBase) { o.material = o.userData.fadeBase; o.userData.fadeBase = null; o.castShadow = true; } }
+  function fadeStep(dt) {
+    propsHidden = propsHidden.filter((o) => {
+      const u = o.userData; if (!u.fadeBase) return false;
+      u.fadeK += (u.fadeTo - u.fadeK) * (1 - Math.exp(-dt / 0.06)); // environ 0,15 s
+      if (u.fadeTo === 1 && u.fadeK > 0.985) { restoreProp(o); return false; }
+      for (const m of mats(o)) m.opacity = (m.userData.op0 ?? 1) * u.fadeK;
+      return true;
+    });
+  }
   const bigMesh = (o) => { o.geometry.computeBoundingBox?.(); const b = o.geometry.boundingBox, sc = o.getWorldScale(new THREE.Vector3()); if (!b) return true; const d = b.getSize(new THREE.Vector3()).multiply(sc); return Math.max(d.x, d.y, d.z) > 2.2; };
   function clearProps(c, target, fov) {
-    for (const o of propsHidden) o.visible = true;
-    propsHidden = [];
+    unfadeAll(false);
     if (!blockers.length) return;
     const f = target.clone().sub(c), L = f.length(); f.normalize();
     const right = new THREE.Vector3().crossVectors(f, new THREE.Vector3(0, 1, 0)).normalize(), upv = new THREE.Vector3().crossVectors(right, f);
@@ -190,8 +232,8 @@ export function createPlayer(v, ui) {
       ray.set(c, f.clone().addScaledVector(right, (j / 3.2) * tw).addScaledVector(upv, (i / 3.2) * th).normalize()); ray.far = L * 0.6;
       for (const h of ray.intersectObjects(blockers, false)) {
         const o = h.object;
-        if (!o.visible || h.point.y < 0.06 || propsHidden.includes(o) || o === room.walls || bigMesh(o)) continue;
-        o.visible = false; propsHidden.push(o);
+        if (!o.visible || h.point.y < 0.06 || o.userData.faded || o === room.walls || bigMesh(o)) continue;
+        fadeProp(o);
       }
     }
   }
@@ -287,6 +329,23 @@ export function createPlayer(v, ui) {
     cut('large');
   }
   const closeUp = (a) => frame(a, true);
+  // Par-dessus l'épaule de celui qui écoute, vers celui qui parle.
+  function overShoulder(a) {
+    const b = partner(a), H = eyes(a), P = eyes(b), up = new THREE.Vector3(0, 1, 0);
+    const dir = H.clone().sub(P).setY(0).normalize(), side = new THREE.Vector3().crossVectors(dir, up).normalize();
+    if (!b.hero.root.visible || b.carried || a.carried || H.clone().setY(0).distanceTo(P.clone().setY(0)) > 1.7) return false; // trop loin : l'épaule ne sert à rien, on reste en gros plan
+    a.look = b; b.look = a;
+    const tries = []; for (const back of [0.7, 0.95, 1.2]) for (const off of [0.42, 0.58]) for (const s of [1, -1]) tries.push([back, off * s]);
+    for (const [back, off] of tries) {
+      const fov = 44; // l'épaule reste au bord du cadre, celui qui parle est entièrement visible
+      const c = P.clone().addScaledVector(dir, -back).addScaledVector(side, off); c.y = P.y - (b.id === 'tobi' ? 0.12 : 0.02); // à hauteur d'épaule
+      const tgt = H.clone().lerp(P, 0.18); tgt.y = H.y - 0.06;
+      if (room2(c) && eyes(b).distanceTo(c) > 0.3 && clear(H, c) && seen(c, H) && seen(c, H.clone().setY(H.y - 0.2)) && v.actors.every((x) => x === a || !x.hero.root.visible || !blocks(x, c, H))) {
+        aim(c, tgt, fov / lens()); a.cheat = 0.35; b.cheat = 0; return true;
+      }
+    }
+    return false;
+  }
   const talkShot = (a) => frame(a, false);
   function duo() { // les deux dans le cadre
     v.actors[0].look = v.actors[1]; v.actors[1].look = v.actors[0];
@@ -308,6 +367,7 @@ export function createPlayer(v, ui) {
   }
   v.onFrame = (dt) => {
     ui.tick?.(dt);
+    fadeStep(dt);
     look.update(dt);
     if (cap) { // sous-titres : une ligne courte, le mot prononcé surligné
       const f = Math.min(0.999, (v.simTime - cap.t0) / cap.dur) * cap.chars;
@@ -357,7 +417,8 @@ export function createPlayer(v, ui) {
     place(actor('tobi'), [0, 0.2]); place(actor('nox'), [0.3, 0.5]);
     actor('tobi').hero.root.visible = true; actor('nox').hero.root.visible = true;
     for (const a of v.actors) if (a.extra) { a.hero.root.visible = false; place(a, [0, 2.4]); }
-    lastTalk = null;
+    lastTalk = null; v.navOn = true; drama = false; otsOf = null; lensNext = false; fx.punch = 0; fx.punchK = 0; fx.shake = 0; fx.whip = 0; fx.whipNext = false; fx.tilt = 0;
+    for (const a of v.actors) a.lens = false;
   }
   // Horloge de l'histoire, affichée sur le second ordinateur. Règles complètes : CHARTE_SCRIPTS.md, « Heure et date ».
   // Sans indication, l'heure et la date sont stables pour un épisode et restent dans une plage neutre.
@@ -397,17 +458,21 @@ export function createPlayer(v, ui) {
   }
   const limits = []; // bulles de limite encore affichées
   const clearLimits = () => { for (const sp of limits.splice(0)) sp.removeFromParent(); for (const a of v.actors) a.hero.root.traverse((m) => { if (m.material?.userData?.base) m.material.color.copy(m.material.userData.base); }); };
+  let drama = false, otsOf = null, lensNext = false; // contre-plongée tenue, plan par-dessus l'épaule tenu, regard caméra à la prochaine réplique
   let hookText = '', speaking = null; // la réplique en cours : un regard en retard ne vise jamais la suivante
   async function run(c) {
     const a = c.who ? actor(c.who) : null;
     switch (c.verb) {
       case 'plan': {
-        const k = plain(c.args[0] || 'large'); auto = k === 'auto'; track = null;
+        const k = { wide_room: 'large', desk_pc: 'pc', hallway_door: 'porte' }[plain(c.args[0] || 'large')] || plain(c.args[0] || 'large'); auto = k === 'auto'; track = null; otsOf = null; drama = false; fx.tilt = 0;
         look.hideInsert();
         if (k === 'duo') { auto = false; duo(); return undefined; }
         grosOf = null;
         showHidden(); // ceux qu'on avait retirés du plan précédent
-        if (k === 'gros') { auto = false; grosOf = actor(plain(c.args[1] || 'tobi')); closeUp(grosOf); return undefined; }
+        drama = false; fx.tilt = 0;
+        if (k === 'gros' || k === 'closeup_tobi' || k === 'closeup_nox') { auto = false; grosOf = actor(k === 'closeup_nox' ? 'nox' : k === 'closeup_tobi' ? 'tobi' : plain(c.args[1] || 'tobi')); closeUp(grosOf); return undefined; }
+        if (k === 'contre' || k === 'low_drama') { auto = false; grosOf = actor(plain(c.args[1] || 'tobi')); drama = true; lowShot = true; closeUp(grosOf); lowShot = false; fx.tilt = 0.07; return undefined; } // contre-plongée, inclinée de 4°
+        if (k === 'ots' || k === 'ots_tobi_to_nox' || k === 'ots_nox_to_tobi') { auto = false; const who = actor(k === 'ots_tobi_to_nox' ? 'nox' : k === 'ots_nox_to_tobi' ? 'tobi' : plain(c.args[1] || 'nox')); grosOf = null; otsOf = who; if (!overShoulder(who)) { grosOf = who; closeUp(who); } return undefined; }
         if (!auto) cut(k);
         if (k === 'pc' || k === 'ecran' || k === 'clavier') { // la caméra ne doit jamais se retrouver dans un personnage
           hiddenForShot = v.actors.filter((x) => x.hero.root.visible && v.pos(x).distanceTo(v.camera.position.clone().setY(v.pos(x).y)) < 0.5);
@@ -417,7 +482,7 @@ export function createPlayer(v, ui) {
       }
       case 'decor': // DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre
         for (const x of v.actors) { x.follow = null; x.goal = null; } // on change de lieu : personne ne continue à courir après quelqu'un
-        decors.set(plain(c.args[0] || 'chambre')); return undefined;
+        decors.set(plain(c.args[0] || 'chambre')); v.navOn = plain(c.args[0] || 'chambre') === 'chambre'; return undefined;
       case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
@@ -467,6 +532,17 @@ export function createPlayer(v, ui) {
         room.lock.set({ date: dateText() }); return undefined;
       }
       case 'bruit': sfx(plain(c.args[0] || 'pop')); return undefined;
+      case 'effet': { // EFFET punch_in | shake | whip_cut
+        const k = plain(c.args[0] || '').replace(/[-\s]/g, '_');
+        if (k === 'punch_in' || k === 'punch') fx.punch = 1; // jusqu'à la fin de la prochaine réplique
+        else if (k === 'shake' || k === 'secousse') fx.shake = 1;
+        else if (k === 'whip_cut' || k === 'whip') fx.whipNext = true; // le prochain plan arrive en balayant
+        else throw new Error(`effet inconnu : ${c.args[0]}`);
+        return undefined;
+      }
+      case 'regard': // REGARD camera : celui qui parle ensuite regarde l'objectif
+        if (!/^cam/.test(plain(c.args[0] || 'camera'))) throw new Error(`regard inconnu : ${c.args[0]}`);
+        lensNext = true; return undefined;
       case 'attendre': return v.wait(parseFloat(c.args[0]) || 1);
       case 'fondu': {
         const k = plain(c.args[0] || '');
@@ -492,8 +568,9 @@ export function createPlayer(v, ui) {
         if (b.hero.root.visible && !a.carried && !b.carried && a.hero.seat !== 'lie' && b.hero.seat !== 'lie') { a.look = b; if (!a.goal && !a.hero.seat && !a.spot) v.face(a, b, true); }
         shotN++;
         const fort = !!a.hero.seat || c.text.split(/\s+/).length <= 4 || ['panique', 'surpris', 'colere', 'punchline', 'illumine'].includes(c.tone);
-        lowShot = !fort && a.id === 'tobi' && shotN % 3 === 0;
-        talkTo = b; if (grosOf === a) frame(a, fort); talkTo = null; lowShot = false; unblock(a); // gros plan pour les temps forts, plan moyen ou bas sinon
+        lowShot = (drama && grosOf === a) || (!fort && a.id === 'tobi' && shotN % 3 === 0);
+        talkTo = b; if (grosOf === a) frame(a, drama || fort); else if (otsOf === a) overShoulder(a); talkTo = null; lowShot = false; unblock(a);
+        if (lensNext) { lensNext = false; a.lens = true; } // regard caméra sec, sur une chute // gros plan pour les temps forts, plan moyen ou bas sinon
         if (a.hero.motion.pose === 'call') a.look = null; // au téléphone, il écoute la personne au bout du fil
         if (before !== a.look && a.look) await v.wait(0.26); // il se tourne vers l'autre, puis il parle
         if (tone) { a.hero.setExpression(tone.visage); if (tone.ecoute) b.hero.setExpression(tone.ecoute); }
@@ -518,7 +595,7 @@ export function createPlayer(v, ui) {
         await v.say(a, c.text, dur, voice?.env);
         if (essai) await essai;
         if (talkPose && a.hero.motion.pose === talkPose) a.hero.motion.clearPose();
-        cap = null; ui.caption(null); lastTalk = a;
+        cap = null; ui.caption(null); lastTalk = a; a.lens = false; fx.punch = 0;
         subtitles.push({ start: t0 - playT0, end: v.simTime - playT0, who: a.name, text: c.text });
         return undefined;
       }
@@ -718,7 +795,7 @@ export function mountStory(v, stories) {
   panel.dataset.tab = 'film';
   el('nav').querySelector('button').setAttribute('aria-current', 'true');
   // Les réglages de la vidéo restent les mêmes d'une fois à l'autre
-  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial'];
+  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial', 'storySafe'];
   let reglages = {};
   try { reglages = JSON.parse(localStorage.getItem(REGLAGES) || '{}'); } catch { /* réglages illisibles */ }
   for (const id of CHOIX) {
@@ -844,6 +921,8 @@ export function mountStory(v, stories) {
   const short = () => el('storyFormat').value === 'short';
   const format = () => document.querySelector('.app').classList.toggle('portrait', short());
   el('storyFormat').addEventListener('change', format); format();
+  const safe = () => el('safe').classList.toggle('on', el('storySafe').checked); // repère des zones cachées par YouTube et TikTok
+  el('storySafe').addEventListener('change', safe); safe();
   const st = { alpha: 0, target: 0, card: '' };
   let exporting = false;
   const ui = {
