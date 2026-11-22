@@ -18,6 +18,7 @@ import { playSfx } from './sound.js';
 import { gestures } from './mocap.js';
 import { unlockGestures, syncGestures, forgetGestures } from './gestes-prives.js';
 
+const readTime = (s, max) => Math.min(max, 1.2 + 0.18 * (s.match(/\S+/g) || []).length); // temps de lecture d'un écran
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
   viens: 'come', stop: 'stop', gratter: 'scratch', consterne: 'facepalm', regarder: 'look', etirer: 'stretch', saluerbas: 'bow', sauter: 'jump', victoire: 'cheer',
@@ -434,7 +435,7 @@ export function createPlayer(v, ui) {
         sfx('bip');
         if (a?.id === 'tobi' && !a.hero.seat) { v.attach(a, v.item('phone')); a.hero.motion.setHold(false); a.hero.motion.clearPose(); a.hero.motion.togglePose(clipFor(a, 'mx_texto_debout')); closeUp(a); await v.wait(0.8); }
         look.chat(name, lines);
-        await v.wait(Math.min(7, 1.8 + lines.length * 0.8 + lines.reduce((n, l) => n + l.text.length, 0) * 0.035));
+        await v.wait(readTime(lines.map((l) => l.text).join(' '), 4.2) + 0.3); // le téléphone sort, puis le temps de lire : plus d'écran figé
         look.hideInsert();
         if (a?.held?.name === 'phone') { a.hero.motion.clearPose(); await v.wait(0.25); v.stash(a); }
         return undefined;
@@ -451,7 +452,7 @@ export function createPlayer(v, ui) {
         const kind = look.insert(title, big, small);
         if (kind === 'temps') return timeJump(title, big);
         sfx(/[€$]/.test(big) ? 'ding' : 'pop');
-        return v.wait(Math.min(3.4, 2.1 + (title.length + big.length + small.length) * 0.02)); // le temps de lire avant le plan suivant
+        return v.wait(readTime(`${title} ${big} ${small}`, 3.2)); // 1,2 s + 0,18 s par mot, 3,2 s au plus (audit du 22 novembre 2026)
       }
       case 'temps': { // saut dans le temps : TEMPS Trois jours plus tard | Jour 4 | Reste : 20 €
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
@@ -662,7 +663,6 @@ export function createPlayer(v, ui) {
           if (c.free) { const q = Promise.resolve(t).finally(() => pending.delete(q)); pending.add(q); } else await t;
         }
         await Promise.allSettled([...pending]);
-        if (!stopped && ui.subscribe?.()) { const m = ABONNE[Math.abs([...text].reduce((n, ch) => n * 31 + ch.charCodeAt(0) | 0, 7)) % ABONNE.length]; look.insert(...m, 'base'); sfx('pop'); await v.wait(2.5); look.hideInsert(); } // court (2,5 s), sans voix : aucun crédit
         ui.line(stopped ? 'Lecture arrêtée.' : 'Fin de l’histoire.');
       } catch (e) { ui.line(`Erreur : ${e.message}`); }
       closing = true; ui.curtain(true, true); ui.card('');
@@ -689,7 +689,6 @@ const REPLI = { mx_panique: 'emo_panique', mx_surpris: 'emo_surpris', mx_colere:
 const clipFor = (a, name) => (!name || a.hero.motion.has(name) ? name : REPLI[name] || null);
 const EMOTIONS = { panique: 'mx_panique', surpris: 'mx_surpris', colere: 'mx_colere', fier: 'mx_question', triste: 'mx_triste', curieux: 'mx_doute', illumine: 'mx_montre', gene: 'mx_gene', mauvaisefoi: 'mx_epaules', excite: 'mx_deux_mains', content: 'mx_rire', resigne: 'mx_decu' };
 
-const ABONNE = [["Merci d'être resté jusqu'à la fin", 'Abonne-toi', 'pour ne plus manquer nos aventures']];
 
 const QUALITE = { max: 1440, hd: 1080, fast: 720 };
 
@@ -719,7 +718,7 @@ export function mountStory(v, stories) {
   panel.dataset.tab = 'film';
   el('nav').querySelector('button').setAttribute('aria-current', 'true');
   // Les réglages de la vidéo restent les mêmes d'une fois à l'autre
-  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial', 'storySub'];
+  const REGLAGES = 'tobinox.reglages', CHOIX = ['storyFormat', 'storyQuality', 'storyFps', 'storyCaps', 'storyMusic', 'storyTrial'];
   let reglages = {};
   try { reglages = JSON.parse(localStorage.getItem(REGLAGES) || '{}'); } catch { /* réglages illisibles */ }
   for (const id of CHOIX) {
@@ -865,7 +864,6 @@ export function mountStory(v, stories) {
     tick: (dt) => { const d = st.target - st.alpha; if (d) { st.alpha += Math.sign(d) * Math.min(Math.abs(d), dt / 0.7); el('curtain').style.opacity = st.alpha; } },
   };
   ui.trial = () => el('storyTrial').checked;
-  ui.subscribe = () => el('storySub').checked;
   const player = createPlayer(v, ui);
   el('storyPlay').addEventListener('click', replay);
   el('storyStop').addEventListener('click', () => player.stop());

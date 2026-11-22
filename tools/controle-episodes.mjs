@@ -33,7 +33,11 @@ for (const f of readdirSync('shorts').filter((f) => { const n = parseInt(f); ret
   }
   const s = Math.round(words / 3 + pcs * 1.8);
   if (!lines.some((l) => l.startsWith('ACCROCHE'))) pb.push('pas d\'ACCROCHE');
-  if (s > 60) pb.push(`trop long (${s} s, viser 35 à 50, 60 au plus)`); // règle du 21 novembre 2026
+  // Règles de l'audit du 22 novembre 2026 : 26 à 38 s, 50 au plus, 12 à 16 répliques, un seul saut dans le temps.
+  const repliques = lines.filter((l) => / dit \(/.test(l)).length, temps = lines.filter((l) => /^TEMPS /.test(l)).length;
+  if (s > 50) pb.push(`trop long (${s} s, viser 26 à 38, 50 au plus)`);
+  if (repliques > 16) pb.push(`${repliques} répliques (16 au plus)`);
+  if (temps > 1) pb.push(`${temps} sauts dans le temps (1 au plus)`);
   if (pb.length) bad++;
   console.log(`${f.padEnd(50)} ${String(words).padStart(3)} mots ~${s} s ${pb.length ? '⚠ ' + [...new Set(pb)].join(', ') : 'ok'}`);
 }
