@@ -92,9 +92,119 @@ export function createLook(v) {
   card.renderOrder = 960; card.position.z = -0.42; card.visible = false; card.frustumCulled = false; ui.add(card);
   const I = { on: false, t: 0, title: '', big: '', small: '', value: null, out: -1 };
 
+
+  // Écrans d'applications (audit du 22 novembre 2026) : ECRAN type | ligne | ligne…
+  // Chaque ligne peut se découper en champs avec « ; ». Les éléments arrivent l'un après l'autre.
+  const wrap = (ctx, text, max) => { const rows = []; let row = ''; for (const w of String(text).split(' ')) { if (ctx.measureText(`${row} ${w}`).width > max && row) { rows.push(row); row = w; } else row = row ? `${row} ${w}` : w; } rows.push(row); return rows; };
+  const fields = (r) => String(r || '').split(';').map((x) => x.trim());
+  function phone(ctx, W, H, bg, edge = '#30343d') { ctx.fillStyle = bg; ctx.strokeStyle = edge; ctx.lineWidth = 12; ctx.beginPath(); ctx.roundRect(60, 10, W - 120, H - 20, 70); ctx.fill(); ctx.stroke(); }
+  function drawScreen(ctx, W, H) {
+    const k = I.sk, R = I.rows, T = I.t, show = (n) => easeOut((T - 0.12 - n * 0.22) / 0.25); // une ligne toutes les 0,22 s
+    const rise = (n) => (1 - show(n)) * 30;
+    ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    if (k === 'vinted') { // annonces de seconde main
+      phone(ctx, W, H, '#f6f7f7', '#d5d9da');
+      ctx.fillStyle = '#0b8b8f'; ctx.beginPath(); ctx.roundRect(72, 22, W - 144, 130, [58, 58, 0, 0]); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.font = `700 50px ${FONT}`; ctx.fillText(I.title || 'Mes annonces', 110, 88);
+      R.forEach((r, n) => {
+        const [name, price, badge] = fields(r), y = 190 + n * 285 + rise(n);
+        ctx.save(); ctx.globalAlpha = show(n);
+        ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.roundRect(100, y, W - 200, 255, 26); ctx.fill();
+        ctx.fillStyle = ['#c9b79c', '#9db3c9', '#c99da8', '#a9c99d'][n % 4]; ctx.beginPath(); ctx.roundRect(124, y + 24, 200, 207, 18); ctx.fill();
+        ctx.fillStyle = '#1d2326'; ctx.font = `600 40px ${FONT}`; wrap(ctx, name, W - 520).slice(0, 2).forEach((l, i) => ctx.fillText(l, 350, y + 62 + i * 46));
+        ctx.fillStyle = '#0b8b8f'; ctx.font = `700 54px ${FONT}`; ctx.fillText(price || '', 350, y + 175);
+        if (badge) { const red = /signal/i.test(badge); ctx.font = `700 32px ${FONT}`; const bw = ctx.measureText(badge).width + 40; ctx.fillStyle = red ? '#d64541' : '#2e9e5b'; ctx.beginPath(); ctx.roundRect(W - 140 - bw, y + 150, bw, 54, 27); ctx.fill(); ctx.fillStyle = '#fff'; ctx.fillText(badge, W - 120 - bw, y + 178); }
+        ctx.restore();
+      });
+      return;
+    }
+    if (k === 'appel') { // appel entrant ou en cours : nom, minuteur, onde de voix
+      const [name, state] = fields(R[0]), live = !/entrant/i.test(state || '');
+      phone(ctx, W, H, '#14171f');
+      const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#24314a'); g.addColorStop(1, '#0f1219'); ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(72, 22, W - 144, H - 44, 58); ctx.fill();
+      ctx.textAlign = 'center';
+      const r = 120 * (1 + (live ? 0 : 0.06 * Math.sin(T * 9))); ctx.fillStyle = '#5b6b86'; ctx.beginPath(); ctx.arc(W / 2, 300, r, 0, 7); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.font = `700 110px ${FONT}`; ctx.fillText((name || '?')[0].toUpperCase(), W / 2, 305);
+      ctx.font = `700 64px ${FONT}`; ctx.fillText(name || '', W / 2, 500, W - 200);
+      const sec = Math.floor(T) + (Number(fields(R[0])[2]) || 0);
+      ctx.fillStyle = '#a9b6cc'; ctx.font = `500 40px ${FONT}`; ctx.fillText(live ? `${String(Math.floor(sec / 60)).padStart(2, '0')}:${String(sec % 60).padStart(2, '0')}` : state || 'Appel entrant', W / 2, 570);
+      if (live) for (let i = 0; i < 15; i++) { const h = 20 + 70 * Math.abs(Math.sin(T * 7 + i * 1.3) * Math.sin(T * 3 + i)); ctx.fillStyle = '#7fd1ff'; ctx.beginPath(); ctx.roundRect(W / 2 - 280 + i * 40, 700 - h / 2, 18, h, 9); ctx.fill(); }
+      R.slice(1).forEach((line, n) => { ctx.save(); ctx.globalAlpha = show(n + 1); ctx.fillStyle = '#e9eef7'; ctx.font = `500 38px ${FONT}`; wrap(ctx, line, W - 240).forEach((l, i) => ctx.fillText(l, W / 2, 790 + n * 60 + i * 44 + rise(n + 1))); ctx.restore(); });
+      for (const [x, c] of live ? [[W / 2, '#e5484d']] : [[W / 2 - 170, '#e5484d'], [W / 2 + 170, '#2fbf71']]) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x, H - 130, 62, 0, 7); ctx.fill(); }
+      ctx.textAlign = 'left'; return;
+    }
+    if (k === 'document') { // relevé de notes, contrat : papier officiel et tampon
+      ctx.fillStyle = '#fbfaf6'; ctx.strokeStyle = '#d8d3c6'; ctx.lineWidth = 4; ctx.beginPath(); ctx.roundRect(70, 20, W - 140, H - 40, 12); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#2b3a67'; ctx.fillRect(70, 20, W - 140, 16);
+      ctx.textAlign = 'center'; ctx.fillStyle = '#1f2533'; ctx.font = `700 48px ${DISPLAY}`; ctx.fillText(I.title || 'Document', W / 2, 110, W - 200);
+      ctx.strokeStyle = '#c9c3b5'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(130, 160); ctx.lineTo(W - 130, 160); ctx.stroke();
+      const [big, ...rest] = R;
+      ctx.save(); ctx.globalAlpha = show(0); const kb = 0.7 + 0.3 * pop((T - 0.15) / 0.3); ctx.translate(W / 2, 340); ctx.scale(kb, kb);
+      ctx.fillStyle = /^[0-9]/.test(big || '') && Number.parseFloat(big) < 10 ? '#c0392b' : '#1f2533'; ctx.font = `700 ${Math.min(190, Math.floor((W - 200) / Math.max(1, String(big).length) * 1.7))}px ${DISPLAY}`; ctx.fillText(big || '', 0, 0, W - 200); ctx.restore();
+      ctx.textAlign = 'left';
+      rest.forEach((line, n) => { if (/^tampon\s*:/i.test(line)) return; ctx.save(); ctx.globalAlpha = show(n + 1); ctx.fillStyle = '#3a4152'; ctx.font = `italic 500 40px ${FONT}`; wrap(ctx, line, W - 280).forEach((l, i) => ctx.fillText(l, 140, 560 + n * 120 + i * 48 + rise(n + 1))); ctx.restore(); });
+      const st = R.find((x) => /^tampon\s*:/i.test(x)); if (st) { const u = pop((T - 0.9) / 0.25); if (u > 0) { ctx.save(); ctx.translate(W - 260, H - 210); ctx.rotate(-0.22); ctx.scale(1.6 - 0.6 * u, 1.6 - 0.6 * u); ctx.globalAlpha = Math.min(1, u) * 0.85; ctx.strokeStyle = '#c0392b'; ctx.fillStyle = '#c0392b'; ctx.lineWidth = 8; ctx.font = `800 46px ${FONT}`; const s = st.replace(/^tampon\s*:\s*/i, '').toUpperCase(), w = ctx.measureText(s).width + 50; ctx.strokeRect(-w / 2, -50, w, 100); ctx.textAlign = 'center'; ctx.fillText(s, 0, 4); ctx.restore(); } }
+      return;
+    }
+    if (k === 'tiktok') { // vidéo verticale : compte, légende, compteur de vues qui s'emballe
+      const [acc, cap, views, notif] = R;
+      phone(ctx, W, H, '#050507');
+      const g = ctx.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#2a2140'); g.addColorStop(1, '#101828'); ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(72, 22, W - 144, H - 44, 58); ctx.fill();
+      ctx.textAlign = 'center'; ctx.fillStyle = 'rgba(255,255,255,.12)'; ctx.font = `700 260px ${FONT}`; ctx.fillText('▶', W / 2, H / 2 - 60);
+      const m = /([\d,.]+)\s*(\D*)/.exec(views || ''), target = m ? Number.parseFloat(m[1].replace(',', '.')) : 0, f = Math.min(1, Math.max(0, (T - 0.3) / 1.1));
+      const now = m ? `${(target * easeOut(f)).toFixed(/[.,]/.test(m[1]) ? 1 : 0).replace('.', ',')}${m[2] ? ` ${m[2].trim()}` : ''}` : '';
+      ctx.fillStyle = '#fff'; ctx.font = `800 120px ${FONT}`; ctx.fillText(now, W / 2, 620);
+      ctx.fillStyle = '#c9c4d8'; ctx.font = `600 40px ${FONT}`; ctx.fillText('vues', W / 2, 705);
+      for (const [n, ic] of ['♥', '💬', '↗'].entries()) { ctx.fillStyle = '#fff'; ctx.font = `600 64px ${FONT}`; ctx.fillText(ic, W - 150, 560 + n * 130); }
+      ctx.textAlign = 'left'; ctx.fillStyle = '#fff'; ctx.font = `700 46px ${FONT}`; ctx.fillText(acc || '', 110, H - 230, W - 300);
+      ctx.fillStyle = '#e6e3ee'; ctx.font = `500 38px ${FONT}`; wrap(ctx, cap || '', W - 320).slice(0, 2).forEach((l, i) => ctx.fillText(l, 110, H - 170 + i * 46));
+      if (notif) { const u = easeOut((T - 1.3) / 0.3); if (u > 0) { ctx.save(); ctx.translate(0, (1 - u) * -160); ctx.globalAlpha = u; ctx.fillStyle = 'rgba(245,245,250,.96)'; ctx.beginPath(); ctx.roundRect(100, 60, W - 200, 130, 30); ctx.fill(); ctx.fillStyle = '#16131f'; ctx.font = `600 36px ${FONT}`; wrap(ctx, notif, W - 280).slice(0, 2).forEach((l, i) => ctx.fillText(l, 140, 105 + i * 44)); ctx.restore(); } }
+      return;
+    }
+    if (k === 'scan') { // le regard de Nox : viseur cyan par-dessus l'image
+      const cy = '#5ff2ff', corner = (x, y, sx, sy) => { ctx.beginPath(); ctx.moveTo(x, y + sy * 70); ctx.lineTo(x, y); ctx.lineTo(x + sx * 70, y); ctx.stroke(); };
+      ctx.strokeStyle = cy; ctx.lineWidth = 8; ctx.globalAlpha = 0.9;
+      corner(80, 80, 1, 1); corner(W - 80, 80, -1, 1); corner(80, H - 80, 1, -1); corner(W - 80, H - 80, -1, -1);
+      const sy = 120 + ((T * 520) % (H - 240)); ctx.globalAlpha = 0.35; ctx.fillStyle = cy; ctx.fillRect(90, sy, W - 180, 6); ctx.globalAlpha = 1;
+      ctx.fillStyle = cy; ctx.font = `700 40px ${FONT}`; ctx.fillText(I.title || 'ANALYSE', 120, 150);
+      R.forEach((r, n) => { const [label, val] = fields(r); ctx.save(); ctx.globalAlpha = show(n); const y = 300 + n * 150 + rise(n); ctx.fillStyle = 'rgba(6,20,28,.62)'; ctx.beginPath(); ctx.roundRect(110, y - 55, W - 220, 115, 18); ctx.fill(); ctx.fillStyle = '#bff8ff'; ctx.font = `600 34px ${FONT}`; ctx.fillText(label, 140, y - 18); ctx.fillStyle = /bpm|alerte|!/i.test(r) ? '#ff5b5b' : '#fff'; ctx.font = `800 46px ${FONT}`; ctx.fillText(val || '', 140, y + 28, W - 300); ctx.restore(); });
+      return;
+    }
+    if (k === 'banque') { // appli bancaire : le solde, puis les dernières dépenses
+      phone(ctx, W, H, '#f3f5f9', '#d3d8e2');
+      ctx.fillStyle = '#1d3f8f'; ctx.beginPath(); ctx.roundRect(72, 22, W - 144, 330, [58, 58, 30, 30]); ctx.fill();
+      ctx.fillStyle = '#cfe0ff'; ctx.font = `600 36px ${FONT}`; ctx.fillText(I.title || 'Compte courant', 120, 100);
+      const [solde, ...ops] = R; ctx.save(); const kb = 0.75 + 0.25 * pop((T - 0.1) / 0.3); ctx.translate(120, 225); ctx.scale(kb, kb); ctx.fillStyle = /-|^0|^[0-4],/.test(solde || '') ? '#ff8a80' : '#fff'; ctx.font = `800 110px ${FONT}`; ctx.fillText(solde || '', 0, 0, W - 260); ctx.restore();
+      ops.forEach((r, n) => { const [what, amount] = fields(r), y = 430 + n * 140 + rise(n + 1); ctx.save(); ctx.globalAlpha = show(n + 1); ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.roundRect(100, y, W - 200, 116, 22); ctx.fill(); ctx.fillStyle = '#1e2430'; ctx.font = `600 38px ${FONT}`; ctx.fillText(what, 135, y + 58, W - 470); ctx.textAlign = 'right'; ctx.fillStyle = /^-/.test(amount || '') ? '#d64541' : '#2e9e5b'; ctx.font = `700 40px ${FONT}`; ctx.fillText(amount || '', W - 135, y + 58); ctx.textAlign = 'left'; ctx.restore(); });
+      return;
+    }
+    if (k === 'interphone') { // scan du visage à l'entrée : accès refusé
+      ctx.fillStyle = '#0d1014'; ctx.strokeStyle = '#3a3f47'; ctx.lineWidth = 14; ctx.beginPath(); ctx.roundRect(90, 20, W - 180, H - 40, 40); ctx.fill(); ctx.stroke();
+      const [verdict, ...rest] = R, bad = !/autoris|ok|bienvenue/i.test(verdict || ''), col = bad ? '#ff4d4d' : '#3ddc84';
+      ctx.strokeStyle = col; ctx.lineWidth = 6; ctx.setLineDash([22, 14]); ctx.beginPath(); ctx.ellipse(W / 2, 330, 170, 215, 0, 0, 7); ctx.stroke(); ctx.setLineDash([]);
+      ctx.globalAlpha = 0.5; ctx.fillStyle = col; ctx.fillRect(W / 2 - 170, 130 + ((T * 300) % 400), 340, 5); ctx.globalAlpha = 1;
+      ctx.textAlign = 'center'; const u = pop((T - 0.5) / 0.25); if (u > 0) { ctx.save(); ctx.translate(W / 2, 640); ctx.scale(u, u); ctx.fillStyle = col; ctx.font = `800 70px ${FONT}`; ctx.fillText(verdict || '', 0, 0, W - 220); ctx.restore(); }
+      rest.forEach((line, n) => { ctx.save(); ctx.globalAlpha = show(n + 3); ctx.fillStyle = '#e8ecf2'; ctx.font = `500 38px ${FONT}`; wrap(ctx, line, W - 280).forEach((l, i) => ctx.fillText(l, W / 2, 760 + n * 100 + i * 44 + rise(n + 3))); ctx.restore(); });
+      ctx.textAlign = 'left'; return;
+    }
+    if (k === 'rencontre') { // profil d'appli de rencontre
+      const [name, bio, badge] = R;
+      phone(ctx, W, H, '#fff', '#e3dfe4');
+      const g = ctx.createLinearGradient(0, 40, 0, 560); g.addColorStop(0, '#f6c1cf'); g.addColorStop(1, '#f39a6b'); ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(100, 50, W - 200, 520, 40); ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(W / 2, 250, 95, 0, 7); ctx.fill(); ctx.beginPath(); ctx.ellipse(W / 2, 520, 190, 150, 0, Math.PI, 0); ctx.fill();
+      ctx.fillStyle = '#1d1720'; ctx.font = `800 58px ${FONT}`; ctx.fillText(name || '', 120, 650, W - 240);
+      ctx.save(); ctx.globalAlpha = show(1); ctx.fillStyle = '#4a4250'; ctx.font = `500 38px ${FONT}`; wrap(ctx, bio || '', W - 260).slice(0, 5).forEach((l, i) => ctx.fillText(l, 120, 730 + i * 48 + rise(1))); ctx.restore();
+      if (badge) { const u = pop((T - 0.9) / 0.28); if (u > 0) { ctx.save(); ctx.translate(W - 250, 120); ctx.scale(u, u); ctx.fillStyle = '#e5486e'; ctx.font = `800 40px ${FONT}`; const bw = ctx.measureText(badge).width + 50; ctx.beginPath(); ctx.roundRect(-bw / 2, -38, bw, 76, 38); ctx.fill(); ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.fillText(badge, 0, 2); ctx.restore(); } }
+      return;
+    }
+    // type inconnu : liste simple
+    ctx.fillStyle = '#16181c'; ctx.beginPath(); ctx.roundRect(10, 10, W - 20, H - 20, 44); ctx.fill();
+    ctx.fillStyle = '#f4f1ec'; ctx.font = `600 44px ${FONT}`; R.forEach((r, n) => ctx.fillText(r, 80, 160 + n * 90, W - 160));
+  }
   function drawCard(f) {
     const { ctx, canvas, tex } = cd, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
+    if (I.kind === 'ecran') { ctx.save(); drawScreen(ctx, W, H); ctx.restore(); tex.needsUpdate = true; return; }
     if (I.kind === 'tel') { // une vraie conversation : le contact en haut, les bulles qui arrivent une par une
       const top = 150, X = 72, R = W - X;
       ctx.fillStyle = '#0b141a'; ctx.strokeStyle = '#30343d'; ctx.lineWidth = 12;
@@ -213,6 +323,10 @@ export function createLook(v) {
       backdrop.visible = true; card.visible = true; drawCard(0);
       return kind;
     },
+    screen(kind, title, rows) { // écran d'application : vinted, appel, document, tiktok, scan, banque, interphone, rencontre
+      Object.assign(I, { on: true, t: 0, title, big: '', small: '', done: false, kind: 'ecran', sk: kind, rows, value: null, out: -1 });
+      backdrop.visible = kind !== 'scan'; card.visible = true; drawCard(1); // le viseur de Nox se pose sur l'image, sans fond
+    },
     chat(name, lines) { Object.assign(I, { on: true, t: 0, title: name, big: '', small: '', done: false, kind: 'tel', chat: lines, value: null, out: -1 }); backdrop.visible = true; card.visible = true; drawCard(1); },
     // Sortie courte et accélérée ; « now » coupe net, au début ou à l'arrêt d'une lecture.
     hideInsert(now) {
@@ -233,9 +347,10 @@ export function createLook(v) {
       card.scale.set(w * s, w * s, 1);
       card.position.y = -(1 - e) * H42 * 0.07 - o * H42 * 0.04 + 0.002 * H42 * Math.sin(I.t * 1.6);
       card.material.opacity = easeOut(I.t / 0.16) * (1 - o); backdrop.material.opacity = easeOut(I.t / 0.2) * (1 - o);
-      if (I.kind === 'temps') card.rotation.set(0, 0, 0); else card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
+      if (I.kind === 'temps' || I.sk === 'scan' && I.kind === 'ecran') card.rotation.set(0, 0, 0); else card.rotation.set(-0.07, 0.2 - 0.06 * Math.min(1, I.t / 2), 0.015);
       if (I.out >= 0) { I.out += dt; if (I.out >= LEAVE) look.hideInsert(true); return; }
       if (I.kind === 'tel') { if (I.t < I.chat.length * 0.8 + 0.3) drawCard(1); return; }
+      if (I.kind === 'ecran') { drawCard(1); return; } // minuteur, onde, compteur : l'écran vit tant qu'il est affiché
       if (I.kind === 'temps') { if (I.t < 1.1) drawCard(1); return; }
       const f = (I.t - 2 * STEP) / 0.5; // le compteur démarre quand le chiffre arrive
       if (I.t < 1.05 || (I.value && f < 1.1)) drawCard(I.value ? f : 1); else if (!I.done) { drawCard(1); I.done = true; }

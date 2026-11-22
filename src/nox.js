@@ -432,6 +432,8 @@ export function createNox({ scale = 1, form = null } = {}) {
       const mood = state.exprName, tt = state.time;
       const sway = mood === 'doute' ? 0.2 : mood === 'peur' ? 0.06 * Math.sin(tt * 30) : mood === 'neutre' || mood === 'sourire' ? 0.05 * Math.sin(tt * 1.3) : 0; // la peur fait trembler
       bones.antenna.rotation.set(clamp(sp.x, -0.5, 0.5) * -1, 0, clamp(sp.z, -0.5, 0.5) * -1 + sway);
+      if (api.grey) { const b = state.ballM; if (b) { b.emissive.set('#000000'); b.emissiveIntensity = 0; b.color.set('#6f7378'); } led.material.color.set('#555b60'); return; } // hors ligne : antenne et voyant gris
+      if (state.ballM && state.ballM.color.getHex() !== 0xffffff) state.ballM.color.set('#ffffff');
       const ballM = state.ballM ??= (() => { let m = null; root.traverse((o) => { if (o.material?.name === 'antenne') m = o.material; }); return m; })();
       if (ballM && mood === 'colere') { const on = Math.sin(tt * 38) > 0; ballM.emissive.set(on ? '#ff2a2a' : '#22e6ff'); ballM.emissiveIntensity = 0.9; }
       else if (ballM && ballM.emissiveIntensity !== 0.12) { ballM.emissive.set(P.ball); ballM.emissiveIntensity = 0.12; }

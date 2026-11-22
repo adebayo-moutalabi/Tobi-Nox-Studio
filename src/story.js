@@ -18,6 +18,7 @@ import { playSfx } from './sound.js';
 import { gestures } from './mocap.js';
 import { unlockGestures, syncGestures, forgetGestures } from './gestes-prives.js';
 
+const TAU_ALARM = Math.PI * 4; // deux éclats par seconde
 const readTime = (s, max) => Math.min(max, 1.2 + 0.18 * (s.match(/\S+/g) || []).length); // temps de lecture d'un écran
 const GESTES = {
   saluer: 'wave', oui: 'nod', non: 'no', epaules: 'shrug', reflechir: 'think', montrer: 'point', applaudir: 'clap', pouce: 'thumb',
@@ -238,7 +239,7 @@ export function createPlayer(v, ui) {
     }
   }
   function aim(pos, target, fov) {
-    room.chair.visible = true;
+    room.chair.visible = !room.chairGone;
     v.camera.fov = fov * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1; v.controls.target.copy(target); v.camera.position.copy(pos); v.controls.update();
     clearProps(pos, target, v.camera.fov);
@@ -365,9 +366,13 @@ export function createPlayer(v, ui) {
     aim(c, H.clone().add(new THREE.Vector3(0, -0.3, 0)), 50);
     track = a;
   }
+  // Alarme (rouge qui clignote) et lumière froide de salle d'examen
+  const alarm = new THREE.PointLight('#ff2a2a', 0, 7, 1.2); alarm.position.set(0, 2.3, 0.2); alarm.visible = false; v.scene.add(alarm);
+  const cold = new THREE.PointLight('#a9c8ff', 1.4, 8, 1.1); cold.position.set(0, 2.35, -0.2); cold.visible = false; v.scene.add(cold);
   v.onFrame = (dt) => {
     ui.tick?.(dt);
     fadeStep(dt);
+    if (alarm.visible) alarm.intensity = Math.sin(v.simTime * TAU_ALARM) > 0 ? 9 : 0.4;
     look.update(dt);
     if (cap) { // sous-titres : une ligne courte, le mot prononcé surligné
       const f = Math.min(0.999, (v.simTime - cap.t0) / cap.dur) * cap.chars;
@@ -386,7 +391,7 @@ export function createPlayer(v, ui) {
 
   function cut(name) {
     const p = PLANS[name] || PLANS.large;
-    room.chair.visible = true;
+    room.chair.visible = !room.chairGone;
     v.camera.fov = p[2] * lens(); v.camera.updateProjectionMatrix();
     v.controls.minDistance = 0.1;
     v.controls.target.set(...p[1]); v.camera.position.set(...p[0]);
@@ -412,11 +417,14 @@ export function createPlayer(v, ui) {
       v.stash(a); if (a.bag) { v.drop(a, a.bag); }
       a.hero.setExpression('neutre');
     }
-    room.setShutter(false); room.lamp.intensity = 0; room.sillBag.visible = true; room.laptop.clear('notes.txt'); room.chair.visible = true;
+    room.setShutter(false); room.lamp.intensity = 0; room.sillBag.visible = true; room.laptop.clear('notes.txt'); room.chair.visible = !room.chairGone;
     room.entryDoor.rotation.y = 0; room.fridgeDoor.rotation.y = 0;
     place(actor('tobi'), [0, 0.2]); place(actor('nox'), [0.3, 0.5]);
     actor('tobi').hero.root.visible = true; actor('nox').hero.root.visible = true;
     for (const a of v.actors) if (a.extra) { a.hero.root.visible = false; place(a, [0, 2.4]); }
+    alarm.visible = false; cold.visible = false;
+    room.group.children.forEach((o) => { if (o.name === 'mobilier_objets') o.visible = true; }); room.chairGone = false; room.chair.visible = true;
+    for (const a of v.actors) { if (a.glitch) { a.glitch = false; a.hero.grey = false; a.hero.root.rotation.z = 0; } }
     lastTalk = null; v.navOn = true; drama = false; otsOf = null; lensNext = false; fx.punch = 0; fx.punchK = 0; fx.shake = 0; fx.whip = 0; fx.whipNext = false; fx.tilt = 0;
     for (const a of v.actors) a.lens = false;
   }
@@ -482,7 +490,7 @@ export function createPlayer(v, ui) {
       }
       case 'decor': // DECOR laverie | kebab | bu | amphi | couloir | dehors | chambre
         for (const x of v.actors) { x.follow = null; x.goal = null; } // on change de lieu : personne ne continue à courir après quelqu'un
-        decors.set(plain(c.args[0] || 'chambre')); v.navOn = plain(c.args[0] || 'chambre') === 'chambre'; return undefined;
+        decors.set(plain(c.args[0] || 'chambre')); findBlockers(); v.navOn = plain(c.args[0] || 'chambre') === 'chambre'; return undefined;
       case 'ambiance': { const k = plain(c.args[0] || 'jour'); look.setMood(k); clockMood = k === 'soir' ? 'soir' : 'jour'; if (!clockFixed) room.lock.set({ time: clock() }); return undefined; }
       case 'pc': room.laptop.show(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'appelle': { // la main part d'abord, le téléphone arrive à la taille, puis monte à l'oreille
@@ -511,7 +519,12 @@ export function createPlayer(v, ui) {
         v.wait(3).then(() => { if (hookText === t) { hookText = ''; ui.counter(''); } });
         return undefined;
       }
-      case 'lumiere': look.setLight(plain(c.args[0] || 'normale')); return undefined;
+      case 'lumiere': { // LUMIERE vive | douce | normale | froide | alarme
+        const k = plain(c.args[0] || 'normale');
+        alarm.visible = k === 'alarme'; cold.visible = k === 'froide';
+        if (k === 'alarme') sfx('alarme');
+        look.setLight(k === 'alarme' || k === 'froide' ? 'normale' : k); return undefined;
+      }
       case 'insert': {
         const [title = '', big = '', small = ''] = c.text.split('|').map((x) => x.trim());
         const kind = look.insert(title, big, small);
@@ -532,6 +545,19 @@ export function createPlayer(v, ui) {
         room.lock.set({ date: dateText() }); return undefined;
       }
       case 'bruit': sfx(plain(c.args[0] || 'pop')); return undefined;
+      case 'ecran': { // ECRAN vinted | Titre | ligne | ligne…  (vinted, appel, document, tiktok, scan, banque, interphone, rencontre)
+        const [kind = '', title = '', ...rows] = c.text.split('|').map((x) => x.trim());
+        const k = plain(kind);
+        if (!['vinted', 'appel', 'document', 'tiktok', 'scan', 'banque', 'interphone', 'rencontre'].includes(k)) { room.laptop.clear(c.text === 'efface' ? '' : c.text || undefined); return undefined; } // ECRAN efface, ou un texte : l'écran du PC
+        look.screen(k, title, rows.filter(Boolean)); sfx(k === 'appel' ? 'sonnerie' : k === 'interphone' ? 'alarme' : k === 'scan' ? 'bip' : 'pop');
+        return v.wait(readTime(`${title} ${rows.join(' ')}`.replace(/;/g, ' '), 4.4) + (k === 'tiktok' || k === 'document' ? 0.6 : 0.2));
+      }
+      case 'chambre': { // CHAMBRE vide | normale : Nox a tout vendu
+        const empty = plain(c.args[0] || '') === 'vide';
+        room.group.children.forEach((o) => { if (/^mobilier_objets$/.test(o.name)) o.visible = !empty; });
+        room.chair.visible = !empty; room.chairGone = empty; room.sillBag.visible = !empty;
+        return undefined;
+      }
       case 'effet': { // EFFET punch_in | shake | whip_cut
         const k = plain(c.args[0] || '').replace(/[-\s]/g, '_');
         if (k === 'punch_in' || k === 'punch') fx.punch = 1; // jusqu'à la fin de la prochaine réplique
@@ -581,8 +607,9 @@ export function createPlayer(v, ui) {
         a.hero.energy = ENERGIE[c.tone] || 1;
         const t0 = v.simTime, voice = voices[lineIdx++], dur = voice?.buffer.duration;
         const talkClip = clipFor(a, a.hero.seat ? 'mx_parle_assis' : 'mx_parle'); // gestuelle enregistrée, si elle est activée
-        const geste = !a.hero.seat && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
-        const emotion = clipFor(a, EMOTIONS[c.tone]), assisOk = !a.hero.seat, talkPose = a.id === 'tobi' && !a.hero.motion.pose ? (emotion && assisOk && a.hero.motion.has(emotion) ? emotion : a.hero.motion.has(talkClip) ? talkClip : null) : null;
+        const ground = /^(prone_flat|pushups_fast)$/.test(a.hero.motion.loco) || /^(pushups|collapse)$/.test(a.hero.motion.gesture || ''); // au sol : les bras restent posés
+        const geste = !a.hero.seat && !ground && tone?.geste && lineIdx % 3 === 0 ? VARIANTES[tone.geste]?.[lineIdx % VARIANTES[tone.geste].length] || tone.geste : null; // de temps en temps, un geste voulu
+        const emotion = clipFor(a, EMOTIONS[c.tone]), assisOk = !a.hero.seat, talkPose = a.id === 'tobi' && !ground && !a.hero.motion.pose ? (emotion && assisOk && a.hero.motion.has(emotion) ? emotion : a.hero.motion.has(talkClip) ? talkClip : null) : null;
         if (talkPose) a.hero.motion.togglePose(talkPose);
         if (geste && !emotion && !a.hero.motion.pose) a.hero.play(GESTES[geste]); // le geste part avec la voix
         if (voice) {
@@ -607,11 +634,17 @@ export function createPlayer(v, ui) {
         }
         return undefined;
       }
-      case 'ecran': room.laptop.clear(c.text === 'efface' ? '' : c.text || undefined); return undefined;
       case 'tableau': room.board.write(c.text.split('|').map((x) => x.trim())); return undefined;
       case 'mimique': return a.hero.setExpression(plain(c.args[0] || 'neutre'));
+      case 'panne': a.glitch = true; if (a.id === 'nox') { a.hero.grey = true; a.hero.setExpression('doute'); } return undefined; // plus de Wi-Fi : l'IA perd les pédales
+      case 'repare': a.glitch = false; a.hero.grey = false; a.hero.root.rotation.z = 0; a.hero.setExpression('neutre'); return undefined;
       case 'geste': {
-        const k = plain(c.args[0] || ''), d = a.hero.play(GESTES[k] || k);
+        const k0 = plain(c.args[0] || '');
+        if (k0 === 'pompes') return v.wait(a.hero.play('pushups', () => a.hero.play('prone_flat')) || 0.2); // deux pompes, puis à plat ventre
+        if (k0 === 'pompes_rapides' || k0 === 'turbo') { a.hero.play('pushups_fast'); return v.wait(0.2); }
+        if (k0 === 'effondre' || k0 === 'collapse') return v.wait(a.hero.play('collapse', () => a.hero.play('prone_flat')) || 0.2);
+        if (k0 === 'releve') { a.hero.play('idle'); return v.wait(0.5); }
+        const k = k0, d = a.hero.play(GESTES[k] || k);
         return v.wait(d || 0.2);
       }
       case 'danse': a.baseLoco = 'dance'; a.hero.motion.setLocomotion('dance'); return v.wait(parseFloat(c.args[0]) || 3).then(() => { a.baseLoco = 'idle'; a.hero.motion.setLocomotion('idle'); });
@@ -721,9 +754,8 @@ export function createPlayer(v, ui) {
     subtitles, clips, sfx: sfxList,
     async play(text, opts = {}) {
       if (running) return;
-      findBlockers();
       setClock(text);
-      clearLimits(); decors.set('chambre'); subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
+      clearLimits(); decors.set('chambre'); findBlockers(); /* après le retour à la chambre : sinon les meubles d'un autre décor faussaient la caméra */ subtitles.length = 0; clips.length = 0; sfxList.length = 0; lineIdx = 0; offline = !!opts.silent; cap = null; ui.caption(null); ui.counter(''); v.quiet = true; look.hideInsert(true); look.setMood('soir');
       hiddenForShot = [];
       const list = parseStory(text);
       adresse(list);

@@ -303,6 +303,13 @@ export function startViewer(cfg) {
     a.hero.root.rotation.y = to + Math.max(-0.65, Math.min(0.65, off));
   }
 
+  // Sans Wi-Fi, les IA perdent les pédales : Claude fixe le mur de travers, Gemini tourne en rond, Nox grésille.
+  function glitch(a, dt) {
+    const r = a.hero.root, t = simT;
+    if (a.id === 'claude') { r.rotation.y = Math.atan2(-pos(a).x, -pos(a).z) + Math.PI; r.rotation.z = 0.32; }
+    else if (a.id === 'gemini') { r.rotation.y += dt * 4.5; r.rotation.z = 0.08 * Math.sin(t * 5); }
+    else r.rotation.z = (Math.sin(t * 9.3) > 0.7 ? 0.2 : 0.06) * Math.sign(Math.sin(t * 3.1)); // à-coups
+  }
   // Respiration : environ 15 souffles par minute, plus amples après une course.
   function breathe(a) {
     if (a.id !== 'tobi' || a.carried) return;
@@ -676,7 +683,7 @@ export function startViewer(cfg) {
     tickTime(dt);
     room?.update(dt);
     api.onFrame?.(dt);
-    for (const a of actors) { moveActor(a, dt); lean(a, dt); restless(a, dt); if (a.extra) showLogo(a); a.hero.update(dt); breathe(a); applyLook(a, dt); }
+    for (const a of actors) { moveActor(a, dt); lean(a, dt); restless(a, dt); if (a.extra && !a.glitch) showLogo(a); if (a.glitch) glitch(a, dt); a.hero.update(dt); breathe(a); applyLook(a, dt); }
     if (camTween) {
       camTween.t = Math.min(1, camTween.t + dt / 0.7);
       const e = 1 - (1 - camTween.t) ** 3;

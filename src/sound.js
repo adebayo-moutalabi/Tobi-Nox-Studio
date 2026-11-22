@@ -35,6 +35,9 @@ export function playSfx(ctx, dest, type, t) {
   if (type === 'pop') { tone(ctx, dest, t, 420, 0.2, 0.09, 'sine', 900); burst(ctx, dest, t, 0.05, 0.05, 'highpass', 3000); }
   if (type === 'bip') { tone(ctx, dest, t, 880, 0.09, 0.45); tone(ctx, dest, t + 0.13, 1175, 0.11, 0.45); }
   if (type === 'ding') { tone(ctx, dest, t, 1320, 0.15, 0.6); tone(ctx, dest, t + 0.01, 1980, 0.08, 0.45); }
+  if (type === 'marteau') { tone(ctx, dest, t, 140, 0.12, 0.9, 'triangle', 80); burst(ctx, dest, t, 0.04, 0.5, 'lowpass', 900); tone(ctx, dest, t + 0.28, 140, 0.12, 0.9, 'triangle', 80); burst(ctx, dest, t + 0.28, 0.04, 0.5, 'lowpass', 900); }
+  if (type === 'alarme') for (let i = 0; i < 4; i++) { tone(ctx, dest, t + i * 0.25, i % 2 ? 660 : 880, 0.2, 0.35, 'square'); }
+  if (type === 'sonnerie') for (let i = 0; i < 2; i++) { tone(ctx, dest, t + i * 0.45, 1046, 0.16, 0.4); tone(ctx, dest, t + i * 0.45 + 0.17, 1318, 0.16, 0.4); }
   if (type === 'whoosh') burst(ctx, dest, t, 0.09, 0.24, 'bandpass', 500, 1.2, 2600);
 }
 

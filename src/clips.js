@@ -536,6 +536,42 @@ Object.assign(gestures, {
   lie_down: [1.2, (t) => { const P = base(t); lie(P, ease(t)); return P; }],
   get_up: [1.2, (t) => { const P = base(t); lie(P, 1 - ease(t)); return P; }],
 });
+// Au sol, face contre terre (audit du 22 novembre 2026) : pompes laborieuses, pompes paniquées, effondrement.
+// a : inclinaison du corps (0 debout, π/2 à plat) ; bend : bras pliés (0 tendus, 1 pliés).
+function prone(P, a, bend, w = 1) {
+  add(P, 'hips', a * w);
+  const feet = 0.8 * Math.cos(a); P.pos[1] -= (0.75 - feet) * w; // les pieds restent posés
+  add(P, 'head', -0.35 * Math.min(1, a / 1.2) * w); // il regarde devant lui, pas le sol
+  for (const [n, s] of SIDES) {
+    mix(P, `arm_${n}`, [-1.35 + 0.55 * bend, 0, -s * (0.32 + 0.25 * bend)], w * Math.min(1, a / 0.9));
+    mix(P, `forearm_${n}`, [-0.15 - 1.25 * bend, 0, 0], w * Math.min(1, a / 0.9));
+    mix(P, `hand_${n}`, [0.9, 0, 0], w * Math.min(1, a / 0.9));
+    mix(P, `upleg_${n}`, [0, s * 0.06, 0], w); mix(P, `foot_${n}`, [0.5, 0, 0], w);
+  }
+}
+const rep = (u) => 0.5 - 0.5 * Math.cos(u * TAU); // 0 en haut, 1 en bas, 0 en haut
+Object.assign(gestures, {
+  pushups: [4.6, (t) => { // se met en position, deux pompes très lentes, tremble, puis s'écrase
+    const T = t * 4.6, P = base(t), get = seg(T, 0, 0.8);
+    let bend = 0, a = 0.25 + 0.9 * get;
+    if (T > 0.8 && T < 2.0) bend = rep((T - 0.8) / 1.2) * 0.85;
+    if (T >= 2.0 && T < 3.2) bend = rep((T - 2.0) / 1.2) * 0.7;
+    if (T >= 3.2) bend = 0.55 * seg(T, 3.2, 3.5) + 0.04 * Math.sin(T * 70) * (1 - seg(T, 3.9, 4.1)); // il tremble
+    if (T >= 3.9) { a = 1.15 + 0.42 * seg(T, 3.9, 4.15); bend = 0.55 + 0.45 * seg(T, 3.9, 4.15); } // s'écrase à plat
+    prone(P, a, bend);
+    return P;
+  }],
+  collapse: [1.3, (t) => { // s'effondre face contre terre
+    const P = base(t), k = seg(t, 0, 0.35);
+    crouch(P, 0.9 * k * (1 - seg(t, 0.4, 0.75)));
+    prone(P, 1.5708 * seg(t, 0.3, 0.85), 1, seg(t, 0.3, 0.85));
+    return P;
+  }],
+});
+Object.assign(loops, {
+  prone_flat: [3, (t) => { const P = base(t); prone(P, 1.5708, 1); add(P, 'chest', 0.02 * Math.sin(t * TAU)); return P; }], // à plat ventre, il respire
+  pushups_fast: [0.9, (t) => { const P = base(t); prone(P, 1.2 + 0.08 * rep(t * 2), rep(t * 2) * 0.8); return P; }], // mode turbo paniqué
+});
 const seatedPose = (t = 0) => { const P = base(t); seat(P, 1); return P; };
 const lyingPose = (t = 0) => { const P = base(t); lie(P, 1); return P; };
 function blend(A, B, w) {
