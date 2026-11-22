@@ -257,6 +257,9 @@ import A255 from '../shorts/255_mon_premier_salarie.txt';
 import A256 from '../shorts/256_pret_a_la_banque.txt';
 import A257 from '../shorts/257_mon_instagram_de_ceo.txt';
 import A258 from '../shorts/258_hackathon_48_heures.txt';
+import A259 from '../shorts/259_mon_ia_a_ecrit_au_pere_noel.txt';
+import A260 from '../shorts/260_mon_ia_veut_un_calendrier_de_l_avent.txt';
+import A261 from '../shorts/261_mon_ia_veut_un_sapin_de_noel.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -422,6 +425,9 @@ startViewer({
     "256. J'ai demandé 50 000 € à ma banque": A256,
     "257. Mon Instagram de CEO dans 9 m²": A257,
     "258. Hackathon de 48 heures : 47 sur le logo": A258,
+    "259. Mon IA a écrit au Père Noël": A259,
+    "260. Mon IA veut un calendrier de l'Avent": A260,
+    "261. Mon IA veut un sapin de Noël": A261,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

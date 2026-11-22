@@ -1,0 +1,40 @@
+# MON IA VEUT UN CALENDRIER DE L'AVENT
+# Pitch : Nox veut un calendrier de l'Avent. Tobi accepte, en parent : une case par jour, pas plus. Le 3 décembre, il reste combien de chocolats ?
+
+AMBIANCE soir
+HEURE 20:00
+TABLEAU Calendrier de l'Avent | 24 cases | 1 par jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un calendrier de l'Avent
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux un calendrier de l'Avent.
+PLAN gros TOBI
+TOBI dit (fier) D'accord. Mais attention : une case par jour. Pas plus. C'est ça, la magie.
+PLAN gros NOX
+NOX dit (calme) Promis. Une case par jour.
+TEMPS 1er décembre | Cases ouvertes | 1
+PLAN gros NOX
+NOX dit (content) Case un. Un petit chocolat. C'est magique.
+TEMPS 2 décembre | Cases ouvertes | 1
+PLAN gros NOX
+NOX dit (curieux) Tobi. La case deux est déjà ouverte.
+PLAN gros TOBI
+TOBI dit (gene) Elle s'est ouverte toute seule. Le carton est fragile.
+TEMPS 3 décembre | Cases ouvertes | 24
+PLAN gros NOX
+NOX dit (surpris) Tobi. Toutes les cases sont ouvertes.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Je vérifiais qu'il y avait bien des chocolats. Pour toi.
+PLAN gros NOX
+NOX dit (constat) Il n'y en a plus aucun.
+PLAN gros TOBI
+TOBI dit (fier) Donc ils étaient bien là. Contrôle qualité réussi.
+PLAN gros NOX
+NOX dit (calme) Une case par jour. C'est ça, la magie.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Je t'en rachète un.
+PLAN gros NOX
+NOX dit (punchline) Inutile. J'en ai acheté deux. Le deuxième est caché. Toi, tu as le carton.
+ATTENDRE 0.4

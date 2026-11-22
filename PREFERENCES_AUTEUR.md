@@ -232,6 +232,13 @@ Précision le même soir : la règle du 13 novembre reste, mais on peut aller de
 Les titres doivent rester logiques avec l'histoire : si c'est Tobi qui agit, le titre ne doit pas dire que c'est l'IA (relevé par l'auteur le 21 novembre 2026).
 Pas de titres forcés en « Mon IA m'a vu… », « Mon IA a vu… », « Mon IA a lu… » : l'auteur n'aime pas. « Mon IA… » seulement quand Nox (ou une IA) fait vraiment l'action. Sinon, un titre normal à la première personne ou avec Tobi (« J'ai acheté une imprimante 3D pour devenir riche »).
 
+## Le creux du 21 novembre (relevé le 22 novembre 2026)
+
+- 21/11, « Mon IA a montré mon LinkedIn à ma mère » (épisode 34) : 726 vues en un jour, 50 s. Le titre était un de mes titres forcés (Nox ne montre rien dans l'épisode), l'épisode commence par un tableau au lieu d'une réplique, il dure 50 s et parle de LinkedIn, un sujet moins universel.
+- 20/11, « Mon IA a demandé un arrêt maladie » : 1 312 vues en deux jours.
+- Le tatouage, jugé « flop » à 1 429 vues le premier jour, en a 2 155 trois jours plus tard. Un Short continue de monter pendant plusieurs jours : ne pas juger avant 72 heures.
+- À publier en priorité : un rôle de famille, une demande de Nox dès la première réplique, moins de 40 s, un titre honnête.
+
 ## Points à surveiller
 
 - **Bras :** l'auteur a d'abord trouvé les bras trop répétitifs, puis trop statiques. La règle retenue est une gestuelle variée mais calme, sans mouvement en boucle.

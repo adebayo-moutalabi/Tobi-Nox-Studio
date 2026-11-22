@@ -427,6 +427,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 22 titres corrigés : le nouveau titre faisait faire à l'IA ce que fait Tobi (par exemple « Mon IA a contesté mon 4 sur 20 », devenu « Mon IA m'aide à contester mon 4 sur 20 »).
 - Épisodes 251 à 258 dans l'esprit des épisodes 1 à 100 (pitch dans l'ascenseur, premier salaire de stage, business plan, friperie, premier salarié, prêt à la banque, Instagram de CEO, hackathon).
 - 67 titres forcés (« Mon IA m'a vu… », « a vu », « a lu », « a compté ») remplacés par des titres normaux. Règle des titres ajoutée à la charte.
+- 22 novembre 2026 : analyse du creux (épisode 34 publié avec un titre forcé, 726 vues). Épisodes de Noël 259 à 261 (lettre au Père Noël, calendrier de l'Avent, sapin dans 9 m²).
 
 ## À faire
 

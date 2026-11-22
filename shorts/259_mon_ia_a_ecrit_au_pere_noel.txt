@@ -1,0 +1,36 @@
+# MON IA A ÉCRIT AU PÈRE NOËL
+# Pitch : Nox écrit sa lettre au Père Noël. Tobi lui explique, en grand frère, que le Père Noël n'existe pas. Alors qui va répondre ?
+
+AMBIANCE soir
+HEURE 20:30
+DIRECT TOBI marche tapis
+DIRECT NOX apparait bureau
+FONDU direct
+ACCROCHE Son IA a écrit au Père Noël
+PLAN gros NOX
+NOX dit (content) Tobi. J'ai écrit ma lettre au Père Noël.
+PLAN gros TOBI
+TOBI dit (ironique) Nox. Le Père Noël n'existe pas.
+PLAN gros NOX
+NOX dit (calme) Alors pourquoi il m'a répondu ?
+PLAN gros TOBI
+TOBI dit (surpris) Il t'a répondu ?
+PLAN gros NOX
+NOX dit (constat) Il y a une heure. Je lui ai demandé si tu avais été sage.
+BRUIT ding
+TOBI message Père Noël | Nox a été très sage. Il aura son chargeur rapide.
+PLAN gros TOBI
+TOBI dit (curieux) Bon. Et moi ?
+TOBI message Père Noël | Tobi, liste des pas sages. Il sait pourquoi.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) J'ai rien fait !
+TOBI message Père Noël | Trois mois sans appeler. La vaisselle du dernier repas. Le pull jamais mis.
+PLAN gros TOBI
+TOBI dit (panique) Comment il sait, pour le pull ?!
+PLAN gros NOX
+NOX dit (calme) Le Père Noël a le même numéro que ta mère.
+PLAN gros TOBI
+TOBI dit (gene) ...Le Père Noël, c'est maman ?
+PLAN gros NOX
+NOX dit (punchline) Oui. Et elle a dit que tu avais encore une chance. Appelle-la.
+ATTENDRE 0.4

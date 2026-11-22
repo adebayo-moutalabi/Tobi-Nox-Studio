@@ -1,0 +1,42 @@
+# MON IA VEUT UN SAPIN DE NOËL
+# Pitch : Nox veut un sapin de Noël dans la chambre de 9 m². Pour Tobi, un sapin, c'est trop cher et trop grand. Nox trouve une solution. Tobi aussi, en pire.
+
+AMBIANCE soir
+HEURE 20:15
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son IA veut un sapin dans 9 m²
+PLAN gros NOX
+NOX dit (content) Tobi. Je veux un sapin de Noël.
+PLAN gros TOBI
+TOBI dit (fier) Un sapin, c'est quarante euros. Et la chambre fait neuf mètres carrés.
+PLAN gros NOX
+NOX dit (curieux) Un petit ?
+PLAN gros TOBI
+TOBI dit (fier) Petit ou grand, c'est un arbre mort dans une chambre. Non.
+PLAN gros NOX
+NOX dit (calme) D'accord.
+TEMPS Le lendemain | Sapin | Installé
+PLAN gros TOBI
+TOBI dit (surpris) Nox. C'est quoi, ça ?
+PLAN gros NOX
+NOX dit (fier) Un sapin. Zéro euro. Fait avec tes cours de L2. Empilés en cône.
+PLAN gros TOBI
+TOBI dit (gene) Mes cours de L2 ?
+PLAN gros NOX
+NOX dit (constat) Tu ne les as jamais ouverts. Maintenant, ils servent.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Bon. Il lui manque des guirlandes.
+TEMPS Le surlendemain | Sapin | Décoré
+PLAN gros NOX
+NOX dit (surpris) Tobi. Tu as mis quoi, en haut ?
+PLAN gros TOBI
+TOBI dit (fier) Ma facture d'électricité. C'est ce qui brille le plus dans ma vie.
+PLAN gros NOX
+NOX dit (constat) Et les boules ?
+PLAN gros TOBI
+TOBI dit (fier) Mes relevés de compte. Roulés. Tous rouges.
+PLAN gros NOX
+NOX dit (punchline) Joyeux Noël. Le sapin le plus triste de France.
+ATTENDRE 0.4
