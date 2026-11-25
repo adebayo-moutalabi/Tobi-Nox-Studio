@@ -271,3 +271,7 @@ Autres écarts, sans question :
 - L'épisode 8 du backlog (entretien de stage passé par Nox) ressemble à l'épisode 51 non publié (Codex a eu mon stage).
 - L'épisode 5 du backlog finissait sur « C'est moi qu'elle trouve drôle » : cela laisse croire à une romance entre Nox et Inès. Chute remplacée : Inès paie le kebab.
 - « Mon IA a été moi pendant 24 heures » (58) n'apparaît pas dans les Shorts de la chaîne : sans doute publiée en vidéo longue.
+
+## Idées refusées (25 novembre 2026)
+
+Huit idées où Nox joue encore l'enfant (jalousie du nouveau téléphone, doudou, ami imaginaire, carnet à signer, Loto, réparateur, exposé, réveillon) : « non ». Le format « Nox enfant, Tobi parent » est usé. Revenir à l'essence des épisodes 1 à 100 : les projets délirants de Tobi, des chiffres à l'écran, une fausse victoire puis un retournement.
