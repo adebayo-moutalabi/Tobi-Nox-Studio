@@ -285,6 +285,12 @@ import A283 from '../shorts/283_mon_ia_a_mis_un_systeme_de_securite_dans_mes_9_m
 import A284 from '../shorts/284_j_ai_coupe_le_wi_fi_de_mes_ia.txt';
 import A285 from '../shorts/285_mon_ia_m_a_inscrit_sur_une_appli_de_rencontre.txt';
 import A286 from '../shorts/286_mes_ia_m_ont_traine_au_tribunal.txt';
+import A287 from '../shorts/287_j_ai_lance_mon_stream_gta_6.txt';
+import A288 from '../shorts/288_j_ai_voulu_finir_gta_6_en_un_week_end.txt';
+import A289 from '../shorts/289_j_ai_fait_un_business_plan_pour_devenir_pro_de_gta_6.txt';
+import A290 from '../shorts/290_black_friday_j_ai_achete_40_grille_pains.txt';
+import A291 from '../shorts/291_black_friday_j_ai_mis_ma_formation_a_moins_90.txt';
+import A292 from '../shorts/292_black_friday_j_ai_economise_1200_euros.txt';
 import A100 from '../shorts/100_mon_ia_a_demissionne.txt';
 import A99 from '../shorts/99_tout_doit_etre_etiquete.txt';
 import E62 from '../shorts/62_j_ai_20_euros_pour_tenir_10_jours.txt';
@@ -478,6 +484,12 @@ startViewer({
     "284. J'ai coupé le Wi-Fi de mes IA": A284,
     "285. Mon IA m'a inscrit sur une appli de rencontre": A285,
     "286. Mes IA m'ont traîné au tribunal": A286,
+    "287. J'ai lancé mon stream GTA 6 pour devenir riche": A287,
+    "288. J'ai voulu finir GTA 6 en un week-end": A288,
+    "289. J'ai fait un business plan pour devenir pro de GTA 6": A289,
+    "290. Black Friday : j'ai acheté 40 grille-pains pour les revendre": A290,
+    "291. Black Friday : j'ai mis ma formation à -90 %": A291,
+    "292. Black Friday : j'ai économisé 1 200 €": A292,
     "127. Mon IA fait grève pour un merci": A127,
     "126. Mon IA a vendu mes affaires pour payer mon loyer": A126,
     "125. Mon IA me souffle tout pendant mon rencard": A125,

@@ -1,0 +1,36 @@
+# BLACK FRIDAY : J'AI MIS MA FORMATION À -90 %
+# Pitch : Black Friday : Tobi brade sa formation « Devenir riche en 9 m² ». Moins quatre-vingt-dix pour cent, zéro vente. Il baisse encore, jusqu'à la première cliente.
+
+AMBIANCE jour
+DATE Vendredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Sa formation à -90 % : zéro vente
+PLAN gros TOBI
+TOBI dit (excite) Black Friday ! Ma formation « Devenir riche en 9 m² » passe à moins quatre-vingt-dix pour cent !
+INSERT Black Friday | -90 % | 49,70 € · Ventes : 0
+PLAN gros NOX
+NOX dit (constat) Zéro vente. Depuis six heures.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Les gens réfléchissent. C'est un gros investissement.
+PLAN gros NOX
+NOX dit (calme) Quarante-neuf euros. C'est sept kebabs.
+PLAN gros TOBI
+TOBI dit (fier) Je baisse encore. Moins quatre-vingt-dix-neuf !
+INSERT Black Friday | -99 % | 4,97 € · Ventes : 0
+PLAN gros NOX
+NOX dit (constat) Toujours zéro.
+PLAN gros TOBI
+TOBI dit (panique) Gratuite ! Je la mets gratuite !
+INSERT Black Friday | 0 € | Ventes : 1
+PLAN gros TOBI
+TOBI dit (illumine) Une vente ! Je le savais ! Le marché a parlé !
+PLAN gros NOX
+NOX dit (calme) C'est ta mère.
+PLAN gros TOBI
+TOBI dit (gene) Une cliente est une cliente.
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Elle demande un remboursement. Et des excuses.
+ATTENDRE 0.4

@@ -1,0 +1,35 @@
+# J'AI FAIT UN BUSINESS PLAN POUR DEVENIR PRO DE GTA 6
+# Pitch : Tobi lâche la fac pour devenir joueur pro de GTA 6. Business plan : trois mille euros par mois. Nox vérifie chaque ligne. Il reste un seul revenu sûr.
+
+AMBIANCE jour
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il lâche la fac pour devenir pro de GTA 6
+PLAN gros TOBI
+TOBI dit (fier) Nox. J'arrête la fac. Je deviens joueur pro de GTA 6.
+ECRAN document | Business plan | 3 000 €/mois | Tournois : 1 500 € | Sponsors : 1 000 € | Stream : 500 € | Tampon : Rentable
+PLAN gros NOX
+NOX dit (constat) Les tournois de GTA 6. Il y en a combien ?
+PLAN gros TOBI
+TOBI dit (gene) Pour l'instant, zéro. Mais je serai prêt le jour où.
+PLAN gros NOX
+NOX dit (calme) Les sponsors ?
+PLAN gros TOBI
+TOBI dit (fier) Une marque de pâtes m'a répondu !
+PLAN gros NOX
+NOX dit (constat) Elle t'a répondu : « Désabonnement confirmé. »
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Et le stream, alors !
+PLAN gros NOX
+NOX dit (constat) Ton record, c'est trois spectateurs. Dont ta mère, deux fois.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Il me reste un revenu sûr ?
+PLAN gros NOX
+NOX dit (calme) Un seul. Vingt euros par mois.
+PLAN gros TOBI
+TOBI dit (illumine) Je le savais ! Un investisseur ! C'est qui ?
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Ta mère. Pour que tu arrêtes de jouer.
+ATTENDRE 0.4

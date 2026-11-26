@@ -1,0 +1,38 @@
+# BLACK FRIDAY : J'AI ACHETÉ 40 GRILLE-PAINS
+# Pitch : Black Friday : Tobi achète quarante grille-pains à neuf euros pour les revendre à Noël. Soixante-dix pour cent de marge. Il reste juste à les ranger dans neuf mètres carrés.
+
+AMBIANCE jour
+DATE Vendredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a acheté 40 grille-pains
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Black Friday ! Quarante grille-pains à neuf euros !
+INSERT Commande | 360 € | 40 grille-pains
+PLAN gros NOX
+NOX dit (calme) Tu ne manges pas de pain.
+PLAN gros TOBI
+TOBI dit (fier) Je les revends trente euros à Noël. Soixante-dix pour cent de marge. Je suis un génie.
+PLAN gros NOX
+NOX dit (constat) Ils arrivent quand ?
+PLAN gros TOBI
+TOBI dit (fier) Maintenant. Livraison express.
+ECRAN appel | | Livreur ; 40 colis en bas
+PLAN gros NOX
+NOX dit (constat) Quarante cartons. Ta chambre fait neuf mètres carrés.
+PLAN gros TOBI
+TOBI dit (gene) On va optimiser.
+TEMPS Une heure plus tard | Grille-pains rangés | 40
+PLAN gros NOX
+NOX dit (calme) Il reste un mètre carré.
+PLAN gros TOBI
+TOBI dit (fier) Parfait. Pour toi ?
+PLAN gros NOX
+NOX dit (sec) Pour toi. Tu dormiras debout.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Peu importe. À Noël, je vends tout.
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Ta mère vient d'écrire. Pour Noël, elle t'offre un grille-pain.
+ATTENDRE 0.4

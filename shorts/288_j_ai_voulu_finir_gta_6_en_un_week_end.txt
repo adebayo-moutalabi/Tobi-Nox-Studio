@@ -1,0 +1,37 @@
+# J'AI VOULU FINIR GTA 6 EN UN WEEK-END
+# Pitch : Quarante-huit heures, douze cafés, zéro sommeil : Tobi veut finir GTA 6 en un week-end. Dimanche soir, il affiche cent pour cent. Nox regarde de quoi.
+
+AMBIANCE jour
+DATE Samedi
+HEURE 08:00
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE 48 h pour finir GTA 6
+PLAN gros TOBI
+TOBI dit (excite) Samedi, huit heures. Quarante-huit heures pour finir GTA 6. Zéro sommeil.
+INSERT Opération week-end | 48 h | 12 cafés · 0 sommeil
+PLAN gros NOX
+NOX dit (constat) Le jeu dure cent vingt heures.
+PLAN gros TOBI
+TOBI dit (fier) Pour les gens normaux. Moi, je saute les dialogues.
+PLAN gros NOX
+NOX dit (calme) Et tes partiels ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Les partiels, c'est en décembre. On est en novembre. Logique.
+TEMPS Dimanche, 23 h 58 | Cafés | 12
+PLAN gros TOBI
+TOBI dit (illumine) Cent pour cent ! Nox, regarde ! Cent pour cent !
+INSERT Progression | 100 % | Création du personnage
+PLAN gros NOX
+NOX dit (constat) Cent pour cent de la création du personnage.
+PLAN gros TOBI
+TOBI dit (gene) C'est important, le visage. On le voit pendant cent vingt heures.
+PLAN gros NOX
+NOX dit (calme) Quarante-huit heures. Pour un visage.
+PLAN gros TOBI
+TOBI dit (fier) Et regarde la coupe. J'ai essayé les quatre cents.
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Et tu as pris la tienne.
+ATTENDRE 0.4

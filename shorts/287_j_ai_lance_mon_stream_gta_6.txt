@@ -1,0 +1,35 @@
+# J'AI LANCÉ MON STREAM GTA 6
+# Pitch : Tobi lance son stream GTA 6 pour devenir riche. Zéro spectateur, puis quatre cent douze d'un coup. Il se croit viral. Nox lit le chat.
+
+AMBIANCE soir
+DIRECT TOBI marche bureau
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Son stream GTA 6 : zéro spectateur
+PLAN gros TOBI
+TOBI dit (excite) Bienvenue sur mon stream GTA 6 ! Objectif ce soir : mille euros !
+INSERT Stream de Tobi | 0 | spectateur
+PLAN gros NOX
+NOX dit (constat) Zéro spectateur. Depuis deux heures.
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) Ils arrivent. Le bouche-à-oreille, ça prend du temps.
+PLAN gros NOX
+NOX dit (calme) Ta mère a liké. Elle croit que c'est un appel vidéo.
+PLAN gros TOBI
+TOBI dit (gene) Une spectatrice, c'est une spectatrice.
+TEMPS Trois heures plus tard | Spectateurs | 412
+PLAN gros TOBI
+TOBI dit (illumine) Quatre cent douze ! Je suis viral ! Nox, prépare les contrats de sponsor !
+PLAN gros NOX
+NOX dit (calme) Lis le chat.
+INSERT Chat du stream | 3 h | « il est coincé dans une porte »
+PLAN gros TOBI
+TOBI dit (surpris) Coincé ? Mais non. Je visite la porte.
+PLAN gros NOX
+NOX dit (constat) Ton perso court dans la même porte. Depuis le début.
+PLAN gros TOBI
+TOBI dit (fier) Bon. Et les dons ?
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Un don. Deux euros. Message : « Surtout, ne sors jamais. »
+ATTENDRE 0.4

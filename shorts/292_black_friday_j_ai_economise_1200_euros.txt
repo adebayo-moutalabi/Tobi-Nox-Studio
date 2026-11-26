@@ -1,0 +1,37 @@
+# BLACK FRIDAY : J'AI ÉCONOMISÉ 1 200 €
+# Pitch : Black Friday : Tobi a économisé mille deux cents euros. Nox demande combien il a dépensé, puis comment il a payé avec trois cents euros sur son compte.
+
+AMBIANCE soir
+DATE Vendredi
+DIRECT TOBI marche tapis
+DIRECT NOX assis
+FONDU direct
+ACCROCHE Il a « économisé » 1 200 €
+PLAN gros TOBI
+TOBI dit (excite) Nox ! Black Friday ! J'ai économisé mille deux cents euros !
+INSERT Économies de Tobi | 1 200 € | Record personnel
+PLAN gros NOX
+NOX dit (calme) Et tu as dépensé combien ?
+PLAN gros TOBI
+TOBI dit (mauvaisefoi) On s'en fiche. On regarde les économies, pas les dépenses.
+PLAN gros NOX
+NOX dit (constat) Mille cent cinquante euros. Pour économiser mille deux cents.
+PLAN gros TOBI
+TOBI dit (fier) Exactement. Je suis gagnant.
+PLAN gros NOX
+NOX dit (constat) Dont un sabre laser.
+PLAN gros TOBI
+TOBI dit (gene) À moins quatre-vingts pour cent. C'était presque gratuit.
+PLAN gros NOX
+NOX dit (calme) Tu avais trois cents euros sur ton compte.
+PLAN gros TOBI
+TOBI dit (surpris) Alors comment j'ai payé ?
+ECRAN banque | Compte courant | 12 € | Paiement 1 sur 4 ; -288 € | Dernier ; février
+PLAN gros NOX
+NOX dit (constat) En quatre fois. Tu payes jusqu'en février.
+PLAN gros TOBI
+TOBI dit (resigne) Bon. Il reste des promos ?
+EFFET punch_in
+PLAN gros NOX
+NOX dit (punchline) Les pâtes. Moins dix pour cent. Prends-en jusqu'en février.
+ATTENDRE 0.4
