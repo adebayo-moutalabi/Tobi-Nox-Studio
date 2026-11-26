@@ -434,6 +434,7 @@ Avant le 4 novembre 2026 soir, plusieurs sujets ont pu être groupés dans un m�
 - 22 novembre 2026, audit de l'auteur (sprint 3) : chambre découpée en un maillage par meuble, 8 écrans d'applications (Vinted, appel, document, TikTok, scan, banque, interphone, rencontre), pompes, effondrement, panne des IA, chambre vide, alarme, lumière froide, sons. Épisodes 274 à 286 (le backlog de l'audit). Correction : la caméra se trompait d'obstacles après un épisode joué dans un autre décor.
 - 25 novembre 2026 : huit idées « Nox enfant » refusées. Nouvelles idées centrées sur les projets de Tobi.
 - 26 novembre 2026 : scan des Shorts qui sur-performent dans la niche (12 chaînes, analyse privée dans `lancement/`). Aucun outlier sur notre chaîne ; sujets chauds : GTA 6 et Black Friday. Les épisodes 181 à 190 et 209 avaient été refusés, de nouvelles idées sont proposées.
+- 26 novembre 2026 : épisodes 287 à 292 (GTA 6 : stream, week-end, business plan ; Black Friday : grille-pains, formation à -90 %, fausses économies). Cadrage sans problème.
 
 ## À faire
 

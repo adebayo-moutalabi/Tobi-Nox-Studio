@@ -275,3 +275,9 @@ Autres écarts, sans question :
 ## Idées refusées (25 novembre 2026)
 
 Huit idées où Nox joue encore l'enfant (jalousie du nouveau téléphone, doudou, ami imaginaire, carnet à signer, Loto, réparateur, exposé, réveillon) : « non ». Le format « Nox enfant, Tobi parent » est usé. Revenir à l'essence des épisodes 1 à 100 : les projets délirants de Tobi, des chiffres à l'écran, une fausse victoire puis un retournement.
+
+## GTA 6 et Black Friday (26 novembre 2026)
+
+Après le scan des Shorts qui sur-performent (analyse privée dans `lancement/`), l'auteur veut des épisodes sur les deux sujets chauds : GTA 6 et Black Friday. Il a fait écrire les six idées proposées (287 à 292), centrées sur les projets délirants de Tobi : stream, week-end, business plan, grille-pains, formation à -90 %, fausses économies. Il demande encore de nouvelles idées.
+
+Contradiction signalée : il avait refusé les GTA 181 à 190 (18/11) et le Black Friday 209 (20/11). Ce n'est pas le sujet qu'il refusait, mais l'angle « Nox enfant ». Le 292 (fausses économies) reste proche du 209 : il l'a gardé quand même. « GTA 6 » et « Black Friday » sont dans les titres pour la recherche, malgré la règle de la charte sur les marques.
